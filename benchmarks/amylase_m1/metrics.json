@@ -1,0 +1,214 @@
+{
+  "test": {
+    "training_mean": {
+      "spearman_rho": null,
+      "pearson_r": null,
+      "mae": 0.04896784474290276,
+      "rmse": 0.053985421967479456
+    },
+    "one_hot_ridge": {
+      "spearman_rho": 0.6488374617336031,
+      "pearson_r": 0.6838099463108522,
+      "mae": 0.0336514842032903,
+      "rmse": 0.04284510388159668
+    },
+    "mutation_count_ridge": {
+      "spearman_rho": 0.22954283462051098,
+      "pearson_r": 0.23712257278195062,
+      "mae": 0.04263464646503105,
+      "rmse": 0.053047725682587414
+    },
+    "esm_mean": {
+      "spearman_rho": 0.49837881308597004,
+      "pearson_r": 0.5153275407325429,
+      "mae": 0.04019979236692118,
+      "rmse": 0.04646192578137427
+    },
+    "esm_delta": {
+      "spearman_rho": 0.49837881308597004,
+      "pearson_r": 0.5153275486277054,
+      "mae": 0.04019979214592763,
+      "rmse": 0.046461925544582526
+    },
+    "esm_sites": {
+      "spearman_rho": 0.6340508298511619,
+      "pearson_r": 0.6878881623238873,
+      "mae": 0.03140683449426474,
+      "rmse": 0.039955552062173445
+    }
+  },
+  "selection": {
+    "one_hot_ridge": {
+      "alpha": 1.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.05149437862150898
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.04708470714585098
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.03968294691367329
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.0398397057450372
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.04906455824431856
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.05579020401537182
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "mutation_count_ridge": {
+      "alpha": 10.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.05318189051264849
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.05318188789073654
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.05318186197808749
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.05318163333113109
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.053182233930116854
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.053364455621117905
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "esm_mean": {
+      "alpha": 0.01,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.04771572141038691
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.05162417345360359
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.054802430276555056
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.05666167669983669
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.057189213832461304
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.0572554365212592
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "esm_delta": {
+      "alpha": 0.01,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.04771572136810938
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.05162417341620178
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.05480243027655506
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.0566616766998367
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.057189213832461304
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.0572554365212592
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "esm_sites": {
+      "alpha": 1.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.043644722497942656
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.03991003779222893
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.037029411210690116
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.03755295662359529
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.041110822438003236
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.04710399061307785
+        }
+      ],
+      "fit_partition": "train only"
+    }
+  },
+  "m0_reproduction": {
+    "passed": true,
+    "max_absolute_prediction_difference": {
+      "training_mean": 0.0,
+      "one_hot_ridge": 0.0,
+      "mutation_count_ridge": 0.0
+    },
+    "historical_sha256": {
+      "download_manifest.json": "916070cdf2d80ea9adc81b8d0a2adb36286af4832eb9fa9cf9cabeefceee1542",
+      "manifest.json": "8054e8b392da2a3baf9abb3f96dbab34e93692b908fb271dde396fa3ed8a2640",
+      "metrics.json": "7c1ce523f9692182a1b47c9f5120728e6906bf6928ecbbe1add160ab144e60d0",
+      "qc.json": "3ca78f1975f895cbde8ca33fc78567385c2d51054e8d19cde218c1e81732760c",
+      "report.md": "a56d9444fbf27211cfa2893c3efed7fb735daa88146867f534d8fe7ca0bbb091",
+      "test_predictions.csv": "86bc4cdb583396127533323bd6fc2d6095081d71a216358d22d89ff89fc51948",
+      "verification.md": "05be9fe39fe8b310886098efbf3b3d0bbe97c14210746c299ed2bae18ddff182"
+    }
+  }
+}

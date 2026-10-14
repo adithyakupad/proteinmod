@@ -1,0 +1,141 @@
+{
+  "config": {
+    "dataset": {
+      "name": "FLIP2 Alpha Amylase by-mutation",
+      "path": "data/cache/by_mutation.csv.gz",
+      "url": "https://zenodo.org/records/18433203/files/amylase/by_mutation.csv.gz?download=1",
+      "md5": "3acf90685dae45a534c4f12bc9dec6b6",
+      "source": "https://zenodo.org/records/18433203 (v3); https://flip.protein.properties/",
+      "attribution": "FLIP2, Didi et al. (2026); Enzyme structure correlates with variant effect predictability, Van der Flier et al. (2024), CSBJ 23:3489\u20133497; assay data MIT"
+    },
+    "reference": {
+      "sequence": "LTAPSIKSGTILHAWNWSFNTLKHNMKDIHDAGYTAIQTSPINQVKEGNQGDKSMSNWYWLYQPTSYQIGNRYLGTEQEFKEMCAAAEEYGIKVIVDAVINHTTSDYAAISNEVKSIPNWTHGNTPIKNWSDRWDVTQNSLSGLYDWNTQNTQVQSYLKRFLDRALNDGADGFRFDAAKHIELPDDGSYGSQFWPNITNTSAEFQYGEILQDSVSRDAAYANYMDVTASNYGHSIRSALKNRNLGVSNISHYAVDVSADKLVTWVESHDTYANDDEESTWMSDDDIRLGWAVIASRSGSTPLFFSRPEGGGNGVRFPGKSQIGDRGSALFEDQAITAVNRFHNVMAGQPEELSNPNGNNQIFMNQRGSHGVVLANAGSSSVSINTATKLPDGRYDNKAGAGSFQVNDGKLTGTINARSVAVLYPD",
+      "source": "https://github.com/florisvdf/mutation-predictability/blob/main/data/AMY_BACSU/reference.fasta",
+      "git_blob": "920b6c14b659029dd1f5497329dab98c0c8755e2"
+    },
+    "run": {
+      "seed": 0,
+      "alphas": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0,
+        1000.0
+      ],
+      "output": "runs/amylase"
+    },
+    "embedding": {
+      "model": "facebook/esm2_t12_35M_UR50D",
+      "revision": "6fbf070e65b0b7291e7bbcd451118c216cff79d8",
+      "dimension": 480,
+      "device": "auto",
+      "batch_size": 8,
+      "cpu_threads": 4,
+      "model_cache": "data/cache/models",
+      "cache": "data/cache/embeddings"
+    },
+    "learning_curve": {
+      "fractions": [
+        0.01,
+        0.05,
+        0.1,
+        0.25,
+        0.5,
+        1.0
+      ],
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "runs/amylase_m1",
+      "historical": "benchmarks/amylase"
+    }
+  },
+  "dataset_sha256": "2e76acc9da3ef04a8ccecd8a3f631b84ee2e4e1f0cdea406f18153387b986d04",
+  "embedding": {
+    "contract": {
+      "schema": "proteinmod-esm2-v1",
+      "dataset_sha256": "2e76acc9da3ef04a8ccecd8a3f631b84ee2e4e1f0cdea406f18153387b986d04",
+      "settings": {
+        "model": "facebook/esm2_t12_35M_UR50D",
+        "revision": "6fbf070e65b0b7291e7bbcd451118c216cff79d8",
+        "dimension": 480,
+        "device": "auto",
+        "batch_size": 8,
+        "cpu_threads": 4,
+        "model_cache": "data/cache/models",
+        "cache": "data/cache/embeddings"
+      },
+      "sequences_sha256": "869e396f431d4709a416f6417013a5723aaaee14818d556e2961253af661ad3f",
+      "reference_sha256": "57d77f95406fa616d8f5e28ff0e7e4139a5cb1158d7bf66352f1b72b1b34fa62",
+      "extractor_sha256": "0b00ff2aac096e133a09c8d824ab158ef3c24c79ee3e5361f96dd24339f700c5"
+    },
+    "encoder": {
+      "device": "mps",
+      "dtype": "float32",
+      "frozen": true,
+      "eval": true,
+      "deterministic_algorithms": true,
+      "layer": "last_hidden_state",
+      "tokenizer": "EsmTokenizer",
+      "tokenizer_revision": "6fbf070e65b0b7291e7bbcd451118c216cff79d8",
+      "vocabulary_sha256": "cb2fbbe0a8bd52848feb028b306033a25f71b8514f378098ba515621a21e342e",
+      "parameters": 33269521,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "4.57.6",
+        "numpy": "2.5.4",
+        "safetensors": "0.8.0",
+        "huggingface-hub": "0.36.2"
+      }
+    },
+    "created_at_utc": "2026-10-14T18:38:04.176770+00:00",
+    "elapsed_seconds": 224.1225607090164,
+    "sha256": "1982b5df887be1f22fdec5afea9e93296fbbf696dab91d2ffbbaff59032720e0",
+    "pooling": "mean over residues only; no BOS/EOS/pad; mutant-minus-WT delta",
+    "sites": "concat(mean mutant at changed sites, mean mutant-minus-WT at sites, site count); WT zeros",
+    "label_free": true
+  },
+  "created_at_utc": "2026-10-14T18:40:40.998459+00:00",
+  "python": "3.12.15",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "git_revision": "1b410cb1ce84d806f36404b7394f824817038904",
+  "git_dirty": false,
+  "elapsed_seconds": 10.935741082997993,
+  "source_sha256": {
+    "__init__.py": "2ba3408e090d882b309c397a9af8c57448223d771a6f4346739247b8689db135",
+    "benchmark.py": "612f88149ff86d96d81f45e8b6fcfe06b900724fbfa16ad7ecb43eb6b6bf249a",
+    "cli.py": "54d760a38d9ce1784fcccd681e4d7435c8a60134d7fbf18a06dcb28f1d530b28",
+    "data.py": "da870c4a406ea0ae9fcb9ecddbe6f49b98cb99f567fc3796659102ef2e576620",
+    "embeddings.py": "0b00ff2aac096e133a09c8d824ab158ef3c24c79ee3e5361f96dd24339f700c5",
+    "experiments.py": "22d4c8751d0514feccef816dd97d8b5a4126fb8938b62ddf3c52386d1ba180bd",
+    "models.py": "81256a2cf7729d8cbc50b0da17295f0812b62d8c618adfce87d0e0ef0a11ee6c"
+  },
+  "versions": {
+    "proteinmod": "0.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2"
+  },
+  "partition_ids_sha256": {
+    "train": "198d5597f7d5f0207ac0f24c8f857659332b6da9fb6586e752cdc6c4f7c46b56",
+    "validation": "e4c3ef6a6bd03c897a20b86edcdb4010ec09ce8175a8568b4e4407fab9d5ec89",
+    "test": "e50b4b5208a6ec77a3c7e90f3dc61b468041351a9b38fdb1a91ab6532d447c50"
+  },
+  "protocol": "Nested seeded train subsets; immutable validation/test; validation-only RMSE selection; no scaling/refit",
+  "uncertainty": "Sample SD across train subset seeds; not test uncertainty",
+  "artifacts_sha256": {
+    "learning_curve_runs.json": "2650b176b845222a7636dde4b1095751c937fb769c968dbe65c938f87804f8aa",
+    "learning_curve_summary.csv": "0fd63ca3757574eb97dd21d3b675bf56265092063f49218eb4f087ec74a1f27c",
+    "learning_curves.png": "ed1f3dd109fb085279f52d84887dd08a03b90234ce80a64747f6bdc6aa9505ba",
+    "learning_curves.svg": "4ccd70ea1b09b1564d9cba623fe0785d19fbbf771185f70e0768a375f33d8c79",
+    "metrics.json": "e3dbf0e0e589ddc9b78dce7f5fdb26b88832cefe0e80ed7b6911a42b32cc390a",
+    "qc.json": "3ca78f1975f895cbde8ca33fc78567385c2d51054e8d19cde218c1e81732760c",
+    "report.md": "68015058bb3f2bdd5bfcb392bddd0887519c0a48d13f571f1e4062665fc7b562",
+    "subset_ids.json": "88b276b50d77f8268dd99560fbd9d6c470415a425905b5a9d8979db8c09446ef",
+    "test_predictions.csv": "09e28eb7b513da6e7f37152ab1c6a650b6408c9d822b8ef6fbd209e729f22e14"
+  }
+}
