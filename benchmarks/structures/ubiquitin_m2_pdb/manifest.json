@@ -1,0 +1,94 @@
+{
+  "config": {
+    "structure": {
+      "name": "1UBQ pdb experimental context",
+      "kind": "pdb",
+      "format": "pdb",
+      "path": "data/cache/structures/1UBQ.pdb",
+      "sha256": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+      "source": "https://www.rcsb.org/structure/1UBQ",
+      "license": "wwPDB CC0; cite PDB deposition and primary publication",
+      "confidence": "experimental_bfactor",
+      "id": "1UBQ"
+    },
+    "reference": {
+      "sequence": "MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG",
+      "source": "https://www.rcsb.org/structure/1UBQ ; deposited entity 1 sequence in pinned mmCIF (reference protein, not a fitness assay)",
+      "sha256": "233b4b0b8c4616095bc3249f9375fc345d32af7deaef07117d0383c51d6f19aa"
+    },
+    "mapping": {
+      "chain": "A",
+      "model_index": 0,
+      "min_coverage": 0.95,
+      "min_identity": 0.98,
+      "allowed_mismatches": []
+    },
+    "geometry": {
+      "contact_cutoff_a": 8.0,
+      "sasa_points": 960,
+      "dssp": "auto"
+    },
+    "structure_run": {
+      "output": "runs/m2_verification/ubiquitin_m2_pdb"
+    },
+    "variants": [
+      {
+        "id": "reference",
+        "mutations": []
+      },
+      {
+        "id": "synthetic-multi",
+        "mutations": [
+          "F4A",
+          "K48R"
+        ]
+      },
+      {
+        "id": "synthetic-single",
+        "mutations": [
+          "I44A"
+        ]
+      }
+    ]
+  },
+  "coordinate_sha256": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+  "dataset_variants": null,
+  "created_at_utc": "2026-10-14T19:16:33.307655+00:00",
+  "elapsed_seconds": 1.0079168330412358,
+  "python": "3.12.15",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "plotter_version": "3.11.2",
+  "versions": {
+    "proteinmod": "0.1.0",
+    "biopython": "1.88",
+    "numpy": "2.5.4"
+  },
+  "git_revision": "57d014da32bb4fc9526582291d0b006cee07e8b5",
+  "git_dirty": false,
+  "source_sha256": {
+    "__init__.py": "2ba3408e090d882b309c397a9af8c57448223d771a6f4346739247b8689db135",
+    "benchmark.py": "612f88149ff86d96d81f45e8b6fcfe06b900724fbfa16ad7ecb43eb6b6bf249a",
+    "cli.py": "a2cb5f6019d02a5747d3d89fd8368a2267d8d0214c10a1ea85abda76779f66e7",
+    "data.py": "da870c4a406ea0ae9fcb9ecddbe6f49b98cb99f567fc3796659102ef2e576620",
+    "embeddings.py": "0b00ff2aac096e133a09c8d824ab158ef3c24c79ee3e5361f96dd24339f700c5",
+    "experiments.py": "22d4c8751d0514feccef816dd97d8b5a4126fb8938b62ddf3c52386d1ba180bd",
+    "models.py": "81256a2cf7729d8cbc50b0da17295f0812b62d8c618adfce87d0e0ef0a11ee6c",
+    "structure_features.py": "f43f3eda8d540c2f67a3bdb03d184650101d3474d59aaeb7034b7f9aa02dbb57",
+    "structure_mapping.py": "e091f318fa1e880c78aa7517a931e4012179ce7ae863525e30e6d3124ec61436",
+    "structure_pipeline.py": "d5ba103dbf3457fa469831506a50dd3cd5733d829d51981c6034a7a521c116de",
+    "structure_sources.py": "185e43de09eae94bb65befad6761695a40c639ead660c5f310b6b0548422d0d9"
+  },
+  "artifact_sha256": {
+    "audit.json": "7e25f9466b51fa5f9434a2d89161c6ae0a8ff73b49bb7ed568054dc93dd8cdea",
+    "contacts.csv": "9857e8bd58e4753bf66decaa17042cb5af8105e3f48dc22712f11aa1dc46b861",
+    "report.md": "7325053a0a0de04187e4d0435db97356e1bb0f7a5798b33dd170d64dd4f44d4e",
+    "residues.csv": "5a703141555047d979538ef2d79b791875bea4d706758bbff0a31bc7f448f0c3",
+    "residues.json": "2cfafdfd2acb2a6a58484843007fed03be885fcf1603760e7607311e1e756766",
+    "structure_context.png": "a1664308f0066919b35ad93d4c554fb7fa98b7c2a8c4ad8b31f09c3b92187ee5",
+    "structure_context.svg": "fbe32b8e6fb8627dd203fc664b4de4e1df75e19597334a0b279ea131f912689d",
+    "variants.csv": "8ee88754211c5d8e9958a72624ca7a3fa43c43bc902e3a5c5772a91d0f6fba13",
+    "variants.json": "48abc2b7602cbdddbb0d7fe6899ba2d7cc3f9a7bf6e147d56d5cc7bf0f9647a8"
+  },
+  "confidence_semantics": "experimental_bfactor",
+  "context": "reference-structure context only"
+}

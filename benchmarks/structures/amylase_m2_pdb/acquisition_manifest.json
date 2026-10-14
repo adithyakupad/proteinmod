@@ -1,0 +1,18 @@
+{
+  "specification": {
+    "name": "1UA7 pdb experimental context",
+    "kind": "pdb",
+    "format": "pdb",
+    "path": "data/cache/structures/1UA7.pdb",
+    "sha256": "73ee024893a3ea3727da1d08089b828e3754bbd856c083c33652d41d5fc78f06",
+    "source": "https://www.rcsb.org/structure/1UA7",
+    "license": "wwPDB CC0; cite PDB deposition and primary publication",
+    "confidence": "experimental_bfactor",
+    "id": "1UA7"
+  },
+  "url": "https://files.rcsb.org/download/1UA7.pdb",
+  "sha256": "73ee024893a3ea3727da1d08089b828e3754bbd856c083c33652d41d5fc78f06",
+  "license": "wwPDB CC0; cite deposition and primary publication",
+  "acquired_at_utc": "2026-10-14T19:02:17.314011+00:00",
+  "provider_metadata": null
+}

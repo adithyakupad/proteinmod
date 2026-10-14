@@ -1,0 +1,18 @@
+{
+  "specification": {
+    "name": "1UBQ cif experimental context",
+    "kind": "pdb",
+    "format": "cif",
+    "path": "data/cache/structures/1UBQ.cif",
+    "sha256": "056f98710cb2b36f633c45e41902a02eb446e82871da21ff2dd44f74a56ca0f6",
+    "source": "https://www.rcsb.org/structure/1UBQ",
+    "license": "wwPDB CC0; cite PDB deposition and primary publication",
+    "confidence": "experimental_bfactor",
+    "id": "1UBQ"
+  },
+  "url": "https://files.rcsb.org/download/1UBQ.cif",
+  "sha256": "056f98710cb2b36f633c45e41902a02eb446e82871da21ff2dd44f74a56ca0f6",
+  "license": "wwPDB CC0; cite deposition and primary publication",
+  "acquired_at_utc": "2026-10-14T19:02:18.569595+00:00",
+  "provider_metadata": null
+}

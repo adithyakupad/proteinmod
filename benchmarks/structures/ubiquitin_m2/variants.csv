@@ -1,0 +1,4 @@
+id,mutation_set,n_sites,n_mapped,n_unmapped,n_low_plddt,spatial_neighborhood_union,mean_rsa,mean_contact_degree,mean_nonlocal_contact_degree,mean_plddt,mean_bfactor_a2,mean_pair_distance_a,min_pair_distance_a
+reference,,0,0,0,0,[],,,,,,,
+synthetic-multi,F4A;K48R,2,2,0,0,"[2, 3, 5, 6, 12, 13, 14, 15, 44, 45, 46, 47, 49, 50, 64, 65, 66, 67]",0.30940150983567,9.0,5.0,,6.75,16.296349127459038,16.296349127459038
+synthetic-single,I44A,1,1,0,0,"[42, 43, 45, 46, 47, 48, 49, 50, 67, 68, 69, 70]",0.15069810648552254,12.0,8.0,,5.55,,

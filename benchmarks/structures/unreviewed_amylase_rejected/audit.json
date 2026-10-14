@@ -1,0 +1,74 @@
+{
+  "accepted": false,
+  "errors": [
+    "Unapproved reference/construct difference: S105F",
+    "Unapproved reference/construct difference: P126Q",
+    "Unapproved reference/construct difference: S142L",
+    "Unapproved reference/construct difference: D163E",
+    "Unapproved reference/construct difference: V214A",
+    "Unapproved reference/construct difference: V254S",
+    "Unapproved reference/construct difference: N356Q"
+  ],
+  "chains": [
+    {
+      "chain": "A",
+      "identity": 0.9834123222748815,
+      "aligned_coverage": 0.9929411764705882,
+      "score": 1217.0,
+      "sequence_source": "mmCIF polymer scheme + atom_site label/auth mapping"
+    }
+  ],
+  "selected_chain": "A",
+  "reference_length": 425,
+  "coordinate_coverage": 0.9929411764705882,
+  "aligned_coverage": 0.9929411764705882,
+  "aligned_identity": 0.9834123222748815,
+  "exact_compatible_positions": 415,
+  "differences": [
+    "S105F",
+    "P126Q",
+    "S142L",
+    "D163E",
+    "V214A",
+    "V254S",
+    "N356Q"
+  ],
+  "missing_positions": [
+    1,
+    2,
+    3
+  ],
+  "alignment": "target            0 LTAPSIKSGTILHAWNWSFNTLKHNMKDIHDAGYTAIQTSPINQVKEGNQGDKSMSNWYW\n                  0 ---|||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery             0 ---PSIKSGTILHAWNWSFNTLKHNMKDIHDAGYTAIQTSPINQVKEGNQGDKSMSNWYW\n\ntarget           60 LYQPTSYQIGNRYLGTEQEFKEMCAAAEEYGIKVIVDAVINHTTSDYAAISNEVKSIPNW\n                 60 ||||||||||||||||||||||||||||||||||||||||||||.|||||||||||||||\nquery            57 LYQPTSYQIGNRYLGTEQEFKEMCAAAEEYGIKVIVDAVINHTTFDYAAISNEVKSIPNW\n\ntarget          120 THGNTPIKNWSDRWDVTQNSLSGLYDWNTQNTQVQSYLKRFLDRALNDGADGFRFDAAKH\n                120 |||||.|||||||||||||||.||||||||||||||||||||.|||||||||||||||||\nquery           117 THGNTQIKNWSDRWDVTQNSLLGLYDWNTQNTQVQSYLKRFLERALNDGADGFRFDAAKH\n\ntarget          180 IELPDDGSYGSQFWPNITNTSAEFQYGEILQDSVSRDAAYANYMDVTASNYGHSIRSALK\n                180 |||||||||||||||||||||||||||||||||.||||||||||||||||||||||||||\nquery           177 IELPDDGSYGSQFWPNITNTSAEFQYGEILQDSASRDAAYANYMDVTASNYGHSIRSALK\n\ntarget          240 NRNLGVSNISHYAVDVSADKLVTWVESHDTYANDDEESTWMSDDDIRLGWAVIASRSGST\n                240 |||||||||||||.||||||||||||||||||||||||||||||||||||||||||||||\nquery           237 NRNLGVSNISHYASDVSADKLVTWVESHDTYANDDEESTWMSDDDIRLGWAVIASRSGST\n\ntarget          300 PLFFSRPEGGGNGVRFPGKSQIGDRGSALFEDQAITAVNRFHNVMAGQPEELSNPNGNNQ\n                300 |||||||||||||||||||||||||||||||||||||||||||||||||||||||.||||\nquery           297 PLFFSRPEGGGNGVRFPGKSQIGDRGSALFEDQAITAVNRFHNVMAGQPEELSNPQGNNQ\n\ntarget          360 IFMNQRGSHGVVLANAGSSSVSINTATKLPDGRYDNKAGAGSFQVNDGKLTGTINARSVA\n                360 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery           357 IFMNQRGSHGVVLANAGSSSVSINTATKLPDGRYDNKAGAGSFQVNDGKLTGTINARSVA\n\ntarget          420 VLYPD 425\n                420 ||||| 425\nquery           417 VLYPD 422\n",
+  "construct_insertions": [],
+  "parser_warnings": [
+    "WARNING: Chain A is discontinuous at line 3345."
+  ],
+  "altlocs": [],
+  "skipped": [],
+  "model_count": 1,
+  "model_index": 0,
+  "format": "mmCIF",
+  "deposition": {
+    "_entry.id": [
+      "1UA7"
+    ],
+    "_exptl.method": [
+      "X-RAY DIFFRACTION"
+    ],
+    "_refine.ls_d_res_high": [
+      "2.21"
+    ],
+    "_pdbx_audit_revision_history.revision_date": [
+      "2004-05-18",
+      "2008-04-27",
+      "2011-07-13",
+      "2017-10-04",
+      "2017-10-25",
+      "2020-07-29",
+      "2021-11-10",
+      "2023-12-27"
+    ]
+  },
+  "pipeline_status": "failed",
+  "pipeline_error": "Structure mapping rejected; inspect runs/m2_verification/unreviewed_amylase_rejected/audit.json"
+}
