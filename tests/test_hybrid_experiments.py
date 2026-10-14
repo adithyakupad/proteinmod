@@ -70,6 +70,12 @@ def test_held_out_labels_and_reproducibility():
 
 
 def test_history_output_protected():
-    for output in ("benchmarks", "benchmarks/m4", "benchmarks/amylase_m3", "."):
+    for output in (
+        "benchmarks",
+        "benchmarks/m4",
+        "benchmarks/amylase_m3",
+        "benchmarks/m4/new",
+        ".",
+    ):
         with pytest.raises(ValueError, match="historical"):
             output_path({"output": output})

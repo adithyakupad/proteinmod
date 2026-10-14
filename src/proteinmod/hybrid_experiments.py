@@ -35,7 +35,14 @@ def history():
 
 def output_path(config):
     output = Path(config["output"])
-    for protected in [Path(p).resolve() for p in history()]:
+    for name in (
+        "benchmarks/amylase",
+        "benchmarks/amylase_m1",
+        "benchmarks/structures",
+        "benchmarks/amylase_m3",
+        "benchmarks/m4",
+    ):
+        protected = Path(name).resolve()
         if (
             output.resolve() == protected
             or output.resolve() in protected.parents
