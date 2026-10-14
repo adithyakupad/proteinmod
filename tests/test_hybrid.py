@@ -90,3 +90,41 @@ def test_reference_mutation_correspondence_and_masked_sequence_tokens():
     sm[:, 2] = False
     with pytest.raises(ValueError, match="Mutation"):
         model(residues, dynamic, None, positions, sequence_mask=sm)
+
+
+def test_graph_node_permutation_and_query_reference_positions():
+    torch.manual_seed(7)
+    g = graph()
+    model = HybridRegressor(g, 6, dimension=4, heads=2)
+    residues = torch.randn(1, 5, 6)
+    dynamic = torch.zeros(1, 3, 25)
+    dynamic[0, 1, 0] = 1
+    positions = torch.tensor([0, 2, 4])
+    seen = []
+    hook = model.s_to_g.q.register_forward_pre_hook(lambda _, args: seen.append(args[0].detach()))
+    a = model(residues, dynamic, None, positions)
+    hook.remove()
+    torch.testing.assert_close(seen[0][:, 0], model.sequence(residues)[:, 2])
+    order = np.array([2, 0, 1])
+    inverse = np.argsort(order)
+    permuted = HybridRegressor(
+        {
+            "static": g["static"][order],
+            "edge_index": inverse[g["edge_index"]],
+            "edge_features": g["edge_features"],
+        },
+        6,
+        dimension=4,
+        heads=2,
+    )
+    state = {
+        k: v
+        for k, v in model.state_dict().items()
+        if k
+        not in {
+            "structure." + name
+            for name in ("static", "source", "target", "edge_features", "degree")
+        }
+    }
+    permuted.load_state_dict(state, strict=False)
+    torch.testing.assert_close(a, permuted(residues, dynamic[:, order], None, positions[order]))
