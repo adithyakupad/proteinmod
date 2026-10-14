@@ -1,0 +1,216 @@
+[
+  {
+    "id": "reference",
+    "context": "reference-structure context; no mutant coordinate relaxation",
+    "mutation_set": [],
+    "sites": [],
+    "mutation_distance_matrix_a": [],
+    "summary": {
+      "n_sites": 0,
+      "n_mapped": 0,
+      "n_unmapped": 0,
+      "n_low_plddt": 0,
+      "spatial_neighborhood_union": [],
+      "mean_rsa": null,
+      "mean_contact_degree": null,
+      "mean_nonlocal_contact_degree": null,
+      "mean_plddt": null,
+      "mean_bfactor_a2": null,
+      "mean_pair_distance_a": null,
+      "min_pair_distance_a": null
+    }
+  },
+  {
+    "id": "synthetic-multi",
+    "context": "reference-structure context; no mutant coordinate relaxation",
+    "mutation_set": [
+      "F4A",
+      "K48R"
+    ],
+    "sites": [
+      {
+        "mutation": "F4A",
+        "reference_position": 4,
+        "chain": "A",
+        "author_number": 4,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          2,
+          3,
+          5,
+          6,
+          12,
+          13,
+          14,
+          15,
+          64,
+          65,
+          66,
+          67
+        ],
+        "sequence_neighbors": [
+          2,
+          3,
+          5,
+          6
+        ],
+        "rsa": 0.23062344403540067,
+        "contact_degree": 12,
+        "nonlocal_contact_degree": 8,
+        "plddt": null,
+        "bfactor_a2": 4.68,
+        "low_confidence": null
+      },
+      {
+        "mutation": "K48R",
+        "reference_position": 48,
+        "chain": "A",
+        "author_number": 48,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          44,
+          45,
+          46,
+          47,
+          49,
+          50
+        ],
+        "sequence_neighbors": [
+          46,
+          47,
+          49,
+          50
+        ],
+        "rsa": 0.38817957563593936,
+        "contact_degree": 6,
+        "nonlocal_contact_degree": 2,
+        "plddt": null,
+        "bfactor_a2": 8.82,
+        "low_confidence": null
+      }
+    ],
+    "mutation_distance_matrix_a": [
+      [
+        0.0,
+        16.296349127459038
+      ],
+      [
+        16.296349127459038,
+        0.0
+      ]
+    ],
+    "summary": {
+      "n_sites": 2,
+      "n_mapped": 2,
+      "n_unmapped": 0,
+      "n_low_plddt": 0,
+      "spatial_neighborhood_union": [
+        2,
+        3,
+        5,
+        6,
+        12,
+        13,
+        14,
+        15,
+        44,
+        45,
+        46,
+        47,
+        49,
+        50,
+        64,
+        65,
+        66,
+        67
+      ],
+      "mean_rsa": 0.30940150983567,
+      "mean_contact_degree": 9.0,
+      "mean_nonlocal_contact_degree": 5.0,
+      "mean_plddt": null,
+      "mean_bfactor_a2": 6.75,
+      "mean_pair_distance_a": 16.296349127459038,
+      "min_pair_distance_a": 16.296349127459038
+    }
+  },
+  {
+    "id": "synthetic-single",
+    "context": "reference-structure context; no mutant coordinate relaxation",
+    "mutation_set": [
+      "I44A"
+    ],
+    "sites": [
+      {
+        "mutation": "I44A",
+        "reference_position": 44,
+        "chain": "A",
+        "author_number": 44,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          42,
+          43,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          67,
+          68,
+          69,
+          70
+        ],
+        "sequence_neighbors": [
+          42,
+          43,
+          45,
+          46
+        ],
+        "rsa": 0.15069810648552254,
+        "contact_degree": 12,
+        "nonlocal_contact_degree": 8,
+        "plddt": null,
+        "bfactor_a2": 5.55,
+        "low_confidence": null
+      }
+    ],
+    "mutation_distance_matrix_a": [
+      [
+        0.0
+      ]
+    ],
+    "summary": {
+      "n_sites": 1,
+      "n_mapped": 1,
+      "n_unmapped": 0,
+      "n_low_plddt": 0,
+      "spatial_neighborhood_union": [
+        42,
+        43,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        67,
+        68,
+        69,
+        70
+      ],
+      "mean_rsa": 0.15069810648552254,
+      "mean_contact_degree": 12.0,
+      "mean_nonlocal_contact_degree": 8.0,
+      "mean_plddt": null,
+      "mean_bfactor_a2": 5.55,
+      "mean_pair_distance_a": null,
+      "min_pair_distance_a": null
+    }
+  }
+]

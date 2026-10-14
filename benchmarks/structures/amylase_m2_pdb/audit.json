@@ -1,0 +1,146 @@
+{
+  "accepted": true,
+  "errors": [],
+  "chains": [
+    {
+      "chain": "A",
+      "identity": 0.9834123222748815,
+      "aligned_coverage": 0.9929411764705882,
+      "score": 1217.0,
+      "sequence_source": "PDB SEQRES uniquely aligned to observed residues"
+    }
+  ],
+  "selected_chain": "A",
+  "reference_length": 425,
+  "coordinate_coverage": 0.9929411764705882,
+  "aligned_coverage": 0.9929411764705882,
+  "aligned_identity": 0.9834123222748815,
+  "exact_compatible_positions": 415,
+  "differences": [
+    "S105F",
+    "P126Q",
+    "S142L",
+    "D163E",
+    "V214A",
+    "V254S",
+    "N356Q"
+  ],
+  "missing_positions": [
+    1,
+    2,
+    3
+  ],
+  "alignment": "target            0 LTAPSIKSGTILHAWNWSFNTLKHNMKDIHDAGYTAIQTSPINQVKEGNQGDKSMSNWYW\n                  0 ---|||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery             0 ---PSIKSGTILHAWNWSFNTLKHNMKDIHDAGYTAIQTSPINQVKEGNQGDKSMSNWYW\n\ntarget           60 LYQPTSYQIGNRYLGTEQEFKEMCAAAEEYGIKVIVDAVINHTTSDYAAISNEVKSIPNW\n                 60 ||||||||||||||||||||||||||||||||||||||||||||.|||||||||||||||\nquery            57 LYQPTSYQIGNRYLGTEQEFKEMCAAAEEYGIKVIVDAVINHTTFDYAAISNEVKSIPNW\n\ntarget          120 THGNTPIKNWSDRWDVTQNSLSGLYDWNTQNTQVQSYLKRFLDRALNDGADGFRFDAAKH\n                120 |||||.|||||||||||||||.||||||||||||||||||||.|||||||||||||||||\nquery           117 THGNTQIKNWSDRWDVTQNSLLGLYDWNTQNTQVQSYLKRFLERALNDGADGFRFDAAKH\n\ntarget          180 IELPDDGSYGSQFWPNITNTSAEFQYGEILQDSVSRDAAYANYMDVTASNYGHSIRSALK\n                180 |||||||||||||||||||||||||||||||||.||||||||||||||||||||||||||\nquery           177 IELPDDGSYGSQFWPNITNTSAEFQYGEILQDSASRDAAYANYMDVTASNYGHSIRSALK\n\ntarget          240 NRNLGVSNISHYAVDVSADKLVTWVESHDTYANDDEESTWMSDDDIRLGWAVIASRSGST\n                240 |||||||||||||.||||||||||||||||||||||||||||||||||||||||||||||\nquery           237 NRNLGVSNISHYASDVSADKLVTWVESHDTYANDDEESTWMSDDDIRLGWAVIASRSGST\n\ntarget          300 PLFFSRPEGGGNGVRFPGKSQIGDRGSALFEDQAITAVNRFHNVMAGQPEELSNPNGNNQ\n                300 |||||||||||||||||||||||||||||||||||||||||||||||||||||||.||||\nquery           297 PLFFSRPEGGGNGVRFPGKSQIGDRGSALFEDQAITAVNRFHNVMAGQPEELSNPQGNNQ\n\ntarget          360 IFMNQRGSHGVVLANAGSSSVSINTATKLPDGRYDNKAGAGSFQVNDGKLTGTINARSVA\n                360 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery           357 IFMNQRGSHGVVLANAGSSSVSINTATKLPDGRYDNKAGAGSFQVNDGKLTGTINARSVA\n\ntarget          420 VLYPD 425\n                420 ||||| 425\nquery           417 VLYPD 422\n",
+  "construct_insertions": [],
+  "parser_warnings": [
+    "WARNING: Chain A is discontinuous at line 3838."
+  ],
+  "altlocs": [],
+  "skipped": [],
+  "model_count": 1,
+  "model_index": 0,
+  "format": "PDB",
+  "deposition": {
+    "name": "crystal structure analysis of alpha-amylase from bacillus subtilis complexed with acarbose",
+    "head": "hydrolase",
+    "idcode": "1UA7",
+    "deposition_date": "2003-03-03",
+    "release_date": "2004-05-18",
+    "structure_method": "x-ray diffraction",
+    "resolution": 2.21,
+    "structure_reference": [
+      "z.fujimoto,k.takase,n.doui,m.momma,t.matsumoto,h.mizucrystal structure of a catalytic-site mutant alpha-amfrom bacillus subtilis complexed with maltopentaose j.mol.biol. v. 277 393 1998 issn 0022-2836 10.1006/jmbi.1997.1599 ",
+      "h.mizuno,y.morimoto,t.tsukihara,t.matsumoto,k.takase crystallization and preliminary x-ray studies of wildand catalytic-site mutant alpha-amylase from bacillussubtilis j.mol.biol. v. 234 1282 1993 issn 0022-2836 10.1006/jmbi.1993.1683 ",
+      "k.takase,t.matsumoto,h.mizuno,k.yamane site-directed mutagenesis of active site residues in bacillus subtilis alpha-amylase biochim.biophys.acta v.1120 281 1992 issn 0006-3002 10.1016/0167-4838(92)90249-d ",
+      "k.yamane,y.hirata,t.furusato,h.yamazaki,a.nakayama changes in the properties and molecular weights of basubtilis m-type and n-type alpha-amylases resulting fspontaneous deletion j.biochem.(tokyo) v. 96 1849 1984 issn 0021-924x "
+    ],
+    "journal_reference": "m.kagawa,z.fujimoto,m.momma,k.takase,h.mizuno crystal structure of bacillus subtilis alpha-amylase complex with acarbose j.bacteriol. v. 185 6981 2003 issn 0021-9193 14617662 10.1128/jb.185.23.6981-6984.2003 ",
+    "author": "M.Kagawa,Z.Fujimoto,M.Momma,K.Takase,H.Mizuno",
+    "compound": {
+      "1": {
+        "misc": "",
+        "molecule": "alpha-amylase",
+        "chain": "a",
+        "fragment": "residues 4-425",
+        "synonym": "alpha-1,4-glucan-4-glucanohydrolase",
+        "ec_number": "3.2.1.1",
+        "ec": "3.2.1.1",
+        "engineered": "yes",
+        "mutation": "yes"
+      }
+    },
+    "source": {
+      "1": {
+        "misc": "",
+        "organism_scientific": "bacillus subtilis",
+        "organism_taxid": "1423",
+        "expression_system": "bacillus subtilis",
+        "expression_system_taxid": "1423",
+        "expression_system_strain": "207-25",
+        "expression_system_vector_type": "plasmid",
+        "expression_system_plasmid": "pnq356"
+      }
+    },
+    "has_missing_residues": false,
+    "missing_residues": [],
+    "biomoltrans": {
+      "1": [
+        [
+          "A",
+          "B",
+          "C"
+        ],
+        "  1.000000  0.000000  0.000000        0.00000            \n",
+        "  0.000000  1.000000  0.000000        0.00000            \n",
+        "  0.000000  0.000000  1.000000        0.00000            \n"
+      ]
+    },
+    "keywords": "beta-alpha-barrels, acarbose, greek-key motif, hydrolase",
+    "journal": "AUTH   M.KAGAWA,Z.FUJIMOTO,M.MOMMA,K.TAKASE,H.MIZUNOTITL   CRYSTAL STRUCTURE OF BACILLUS SUBTILIS ALPHA-AMYLASE INTITL 2 COMPLEX WITH ACARBOSEREF    J.BACTERIOL.                  V. 185  6981 2003REFN                   ISSN 0021-9193PMID   14617662DOI    10.1128/JB.185.23.6981-6984.2003"
+  },
+  "chain_breaks": [],
+  "spatial_contact_cutoff_a": 8.0,
+  "sasa": {
+    "algorithm": "Biopython Shrake-Rupley",
+    "probe_radius_a": 1.4,
+    "sphere_points": 960,
+    "environment": "entire selected deposited model, occupied heavy atoms including ligands/other chains; no waters/H/D; no symmetry mates",
+    "rsa_table": "Tien et al. 2013 theoretical maxima (Wilke), doi:10.1371/journal.pone.0080635",
+    "max_asa_a2": {
+      "A": 129,
+      "C": 167,
+      "D": 193,
+      "E": 223,
+      "F": 240,
+      "G": 104,
+      "H": 224,
+      "I": 197,
+      "K": 236,
+      "L": 201,
+      "M": 224,
+      "N": 195,
+      "P": 159,
+      "Q": 225,
+      "R": 274,
+      "S": 155,
+      "T": 172,
+      "V": 174,
+      "W": 285,
+      "Y": 263
+    },
+    "rsa_clipped": false,
+    "secondary_structure": {
+      "status": "unavailable",
+      "reason": "mkdssp/dssp not installed; no SS invented"
+    }
+  },
+  "confidence_summary": {
+    "field": "bfactor_a2",
+    "n_available": 422,
+    "mean": 19.712890995260665,
+    "min": 8.85,
+    "max": 52.33,
+    "n_low_plddt": null
+  },
+  "pipeline_status": "complete"
+}

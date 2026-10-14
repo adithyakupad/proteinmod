@@ -1,0 +1,1058 @@
+[
+  {
+    "id": "reference",
+    "context": "reference-structure context; no mutant coordinate relaxation",
+    "mutation_set": [],
+    "sites": [],
+    "mutation_distance_matrix_a": [],
+    "summary": {
+      "n_sites": 0,
+      "n_mapped": 0,
+      "n_unmapped": 0,
+      "n_low_plddt": 0,
+      "spatial_neighborhood_union": [],
+      "mean_rsa": null,
+      "mean_contact_degree": null,
+      "mean_nonlocal_contact_degree": null,
+      "mean_plddt": null,
+      "mean_bfactor_a2": null,
+      "mean_pair_distance_a": null,
+      "min_pair_distance_a": null
+    }
+  },
+  {
+    "id": "synthetic-multi",
+    "context": "reference-structure context; no mutant coordinate relaxation",
+    "mutation_set": [
+      "T10A",
+      "T200A"
+    ],
+    "sites": [
+      {
+        "mutation": "T10A",
+        "reference_position": 10,
+        "chain": "A",
+        "author_number": 51,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          6,
+          7,
+          8,
+          9,
+          11,
+          12,
+          33,
+          34,
+          35,
+          36,
+          294,
+          300,
+          301,
+          302,
+          303,
+          339,
+          342,
+          343
+        ],
+        "sequence_neighbors": [
+          8,
+          9,
+          11,
+          12
+        ],
+        "rsa": 0.0012977943605410856,
+        "contact_degree": 18,
+        "nonlocal_contact_degree": 14,
+        "plddt": 98.88,
+        "bfactor_a2": null,
+        "low_confidence": false
+      },
+      {
+        "mutation": "T200A",
+        "reference_position": 200,
+        "chain": "A",
+        "author_number": 241,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          162,
+          163,
+          197,
+          198,
+          199,
+          201,
+          202
+        ],
+        "sequence_neighbors": [
+          198,
+          199,
+          201,
+          202
+        ],
+        "rsa": 0.20101909823223116,
+        "contact_degree": 7,
+        "nonlocal_contact_degree": 3,
+        "plddt": 98.06,
+        "bfactor_a2": null,
+        "low_confidence": false
+      }
+    ],
+    "mutation_distance_matrix_a": [
+      [
+        0.0,
+        22.214470659566526
+      ],
+      [
+        22.214470659566526,
+        0.0
+      ]
+    ],
+    "summary": {
+      "n_sites": 2,
+      "n_mapped": 2,
+      "n_unmapped": 0,
+      "n_low_plddt": 0,
+      "spatial_neighborhood_union": [
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        33,
+        34,
+        35,
+        36,
+        162,
+        163,
+        197,
+        198,
+        199,
+        201,
+        202,
+        294,
+        300,
+        301,
+        302,
+        303,
+        339,
+        342,
+        343
+      ],
+      "mean_rsa": 0.10115844629638612,
+      "mean_contact_degree": 12.5,
+      "mean_nonlocal_contact_degree": 8.5,
+      "mean_plddt": 98.47,
+      "mean_bfactor_a2": null,
+      "mean_pair_distance_a": 22.214470659566526,
+      "min_pair_distance_a": 22.214470659566526
+    }
+  },
+  {
+    "id": "synthetic-N-terminus",
+    "context": "reference-structure context; no mutant coordinate relaxation",
+    "mutation_set": [
+      "L1A"
+    ],
+    "sites": [
+      {
+        "mutation": "L1A",
+        "reference_position": 1,
+        "chain": "A",
+        "author_number": 42,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          2,
+          3,
+          30,
+          31,
+          33,
+          34,
+          340,
+          343
+        ],
+        "sequence_neighbors": [
+          2,
+          3
+        ],
+        "rsa": 0.240093769879709,
+        "contact_degree": 8,
+        "nonlocal_contact_degree": 6,
+        "plddt": 87.25,
+        "bfactor_a2": null,
+        "low_confidence": false
+      }
+    ],
+    "mutation_distance_matrix_a": [
+      [
+        0.0
+      ]
+    ],
+    "summary": {
+      "n_sites": 1,
+      "n_mapped": 1,
+      "n_unmapped": 0,
+      "n_low_plddt": 0,
+      "spatial_neighborhood_union": [
+        2,
+        3,
+        30,
+        31,
+        33,
+        34,
+        340,
+        343
+      ],
+      "mean_rsa": 0.240093769879709,
+      "mean_contact_degree": 8.0,
+      "mean_nonlocal_contact_degree": 6.0,
+      "mean_plddt": 87.25,
+      "mean_bfactor_a2": null,
+      "mean_pair_distance_a": null,
+      "min_pair_distance_a": null
+    }
+  },
+  {
+    "id": "synthetic-construct-mismatch",
+    "context": "reference-structure context; no mutant coordinate relaxation",
+    "mutation_set": [
+      "P126A"
+    ],
+    "sites": [
+      {
+        "mutation": "P126A",
+        "reference_position": 126,
+        "chain": "A",
+        "author_number": 167,
+        "insertion_code": "",
+        "mapping_status": "sequence_mismatch",
+        "usable": false,
+        "spatial_neighbors": [],
+        "sequence_neighbors": [
+          124,
+          125,
+          127,
+          128
+        ],
+        "rsa": null,
+        "contact_degree": null,
+        "nonlocal_contact_degree": null,
+        "plddt": null,
+        "bfactor_a2": null,
+        "low_confidence": null
+      }
+    ],
+    "mutation_distance_matrix_a": [
+      [
+        null
+      ]
+    ],
+    "summary": {
+      "n_sites": 1,
+      "n_mapped": 0,
+      "n_unmapped": 1,
+      "n_low_plddt": 0,
+      "spatial_neighborhood_union": [],
+      "mean_rsa": null,
+      "mean_contact_degree": null,
+      "mean_nonlocal_contact_degree": null,
+      "mean_plddt": null,
+      "mean_bfactor_a2": null,
+      "mean_pair_distance_a": null,
+      "min_pair_distance_a": null
+    }
+  },
+  {
+    "id": "FLIP2-row-1",
+    "context": "reference-structure context; no mutant coordinate relaxation",
+    "mutation_set": [
+      "T10V",
+      "T103P",
+      "I209W"
+    ],
+    "sites": [
+      {
+        "mutation": "T10V",
+        "reference_position": 10,
+        "chain": "A",
+        "author_number": 51,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          6,
+          7,
+          8,
+          9,
+          11,
+          12,
+          33,
+          34,
+          35,
+          36,
+          294,
+          300,
+          301,
+          302,
+          303,
+          339,
+          342,
+          343
+        ],
+        "sequence_neighbors": [
+          8,
+          9,
+          11,
+          12
+        ],
+        "rsa": 0.0012977943605410856,
+        "contact_degree": 18,
+        "nonlocal_contact_degree": 14,
+        "plddt": 98.88,
+        "bfactor_a2": null,
+        "low_confidence": false
+      },
+      {
+        "mutation": "T103P",
+        "reference_position": 103,
+        "chain": "A",
+        "author_number": 144,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          62,
+          63,
+          64,
+          65,
+          66,
+          99,
+          100,
+          101,
+          102,
+          104,
+          105,
+          110,
+          144,
+          145,
+          146,
+          147
+        ],
+        "sequence_neighbors": [
+          101,
+          102,
+          104,
+          105
+        ],
+        "rsa": 0.0007313639874272749,
+        "contact_degree": 16,
+        "nonlocal_contact_degree": 12,
+        "plddt": 98.94,
+        "bfactor_a2": null,
+        "low_confidence": false
+      },
+      {
+        "mutation": "I209W",
+        "reference_position": 209,
+        "chain": "A",
+        "author_number": 250,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          177,
+          178,
+          179,
+          207,
+          208,
+          210,
+          211,
+          215,
+          217,
+          226,
+          227,
+          229
+        ],
+        "sequence_neighbors": [
+          207,
+          208,
+          210,
+          211
+        ],
+        "rsa": 0.0029047505881402273,
+        "contact_degree": 12,
+        "nonlocal_contact_degree": 8,
+        "plddt": 98.69,
+        "bfactor_a2": null,
+        "low_confidence": false
+      }
+    ],
+    "mutation_distance_matrix_a": [
+      [
+        0.0,
+        29.884879028687482,
+        19.320475992388776
+      ],
+      [
+        29.884879028687482,
+        0.0,
+        18.35757819583652
+      ],
+      [
+        19.320475992388776,
+        18.35757819583652,
+        0.0
+      ]
+    ],
+    "summary": {
+      "n_sites": 3,
+      "n_mapped": 3,
+      "n_unmapped": 0,
+      "n_low_plddt": 0,
+      "spatial_neighborhood_union": [
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        33,
+        34,
+        35,
+        36,
+        62,
+        63,
+        64,
+        65,
+        66,
+        99,
+        100,
+        101,
+        102,
+        104,
+        105,
+        110,
+        144,
+        145,
+        146,
+        147,
+        177,
+        178,
+        179,
+        207,
+        208,
+        210,
+        211,
+        215,
+        217,
+        226,
+        227,
+        229,
+        294,
+        300,
+        301,
+        302,
+        303,
+        339,
+        342,
+        343
+      ],
+      "mean_rsa": 0.0016446363120361958,
+      "mean_contact_degree": 15.333333333333334,
+      "mean_nonlocal_contact_degree": 11.333333333333334,
+      "mean_plddt": 98.83666666666666,
+      "mean_bfactor_a2": null,
+      "mean_pair_distance_a": 22.520977738970927,
+      "min_pair_distance_a": 18.35757819583652
+    }
+  },
+  {
+    "id": "FLIP2-row-2",
+    "context": "reference-structure context; no mutant coordinate relaxation",
+    "mutation_set": [
+      "A98V"
+    ],
+    "sites": [
+      {
+        "mutation": "A98V",
+        "reference_position": 98,
+        "chain": "A",
+        "author_number": 139,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          41,
+          42,
+          96,
+          97,
+          99,
+          100,
+          162,
+          173,
+          174,
+          175,
+          176
+        ],
+        "sequence_neighbors": [
+          96,
+          97,
+          99,
+          100
+        ],
+        "rsa": 0.0,
+        "contact_degree": 11,
+        "nonlocal_contact_degree": 7,
+        "plddt": 98.94,
+        "bfactor_a2": null,
+        "low_confidence": false
+      }
+    ],
+    "mutation_distance_matrix_a": [
+      [
+        0.0
+      ]
+    ],
+    "summary": {
+      "n_sites": 1,
+      "n_mapped": 1,
+      "n_unmapped": 0,
+      "n_low_plddt": 0,
+      "spatial_neighborhood_union": [
+        41,
+        42,
+        96,
+        97,
+        99,
+        100,
+        162,
+        173,
+        174,
+        175,
+        176
+      ],
+      "mean_rsa": 0.0,
+      "mean_contact_degree": 11.0,
+      "mean_nonlocal_contact_degree": 7.0,
+      "mean_plddt": 98.94,
+      "mean_bfactor_a2": null,
+      "mean_pair_distance_a": null,
+      "min_pair_distance_a": null
+    }
+  },
+  {
+    "id": "FLIP2-row-3",
+    "context": "reference-structure context; no mutant coordinate relaxation",
+    "mutation_set": [
+      "R296H",
+      "P307Q",
+      "G326N"
+    ],
+    "sites": [
+      {
+        "mutation": "R296H",
+        "reference_position": 296,
+        "chain": "A",
+        "author_number": 337,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          292,
+          293,
+          294,
+          295,
+          297,
+          298,
+          299,
+          342,
+          350,
+          364
+        ],
+        "sequence_neighbors": [
+          294,
+          295,
+          297,
+          298
+        ],
+        "rsa": 0.02661185999617263,
+        "contact_degree": 10,
+        "nonlocal_contact_degree": 6,
+        "plddt": 97.38,
+        "bfactor_a2": null,
+        "low_confidence": false
+      },
+      {
+        "mutation": "P307Q",
+        "reference_position": 307,
+        "chain": "A",
+        "author_number": 348,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          55,
+          305,
+          306,
+          308,
+          309,
+          310,
+          315,
+          316,
+          317,
+          319,
+          320,
+          325,
+          326,
+          327
+        ],
+        "sequence_neighbors": [
+          305,
+          306,
+          308,
+          309
+        ],
+        "rsa": 0.03213875629214841,
+        "contact_degree": 14,
+        "nonlocal_contact_degree": 10,
+        "plddt": 98.81,
+        "bfactor_a2": null,
+        "low_confidence": false
+      },
+      {
+        "mutation": "G326N",
+        "reference_position": 326,
+        "chain": "A",
+        "author_number": 367,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          14,
+          15,
+          17,
+          305,
+          306,
+          307,
+          308,
+          320,
+          324,
+          325,
+          327,
+          328
+        ],
+        "sequence_neighbors": [
+          324,
+          325,
+          327,
+          328
+        ],
+        "rsa": 0.05861732345604556,
+        "contact_degree": 12,
+        "nonlocal_contact_degree": 8,
+        "plddt": 98.81,
+        "bfactor_a2": null,
+        "low_confidence": false
+      }
+    ],
+    "mutation_distance_matrix_a": [
+      [
+        0.0,
+        26.302194976282014,
+        25.183757439538415
+      ],
+      [
+        26.302194976282014,
+        0.0,
+        4.5619709803320125
+      ],
+      [
+        25.183757439538415,
+        4.5619709803320125,
+        0.0
+      ]
+    ],
+    "summary": {
+      "n_sites": 3,
+      "n_mapped": 3,
+      "n_unmapped": 0,
+      "n_low_plddt": 0,
+      "spatial_neighborhood_union": [
+        14,
+        15,
+        17,
+        55,
+        292,
+        293,
+        294,
+        295,
+        297,
+        298,
+        299,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        315,
+        316,
+        317,
+        319,
+        320,
+        324,
+        325,
+        326,
+        327,
+        328,
+        342,
+        350,
+        364
+      ],
+      "mean_rsa": 0.039122646581455534,
+      "mean_contact_degree": 12.0,
+      "mean_nonlocal_contact_degree": 8.0,
+      "mean_plddt": 98.33333333333333,
+      "mean_bfactor_a2": null,
+      "mean_pair_distance_a": 18.682641132050815,
+      "min_pair_distance_a": 4.5619709803320125
+    }
+  },
+  {
+    "id": "FLIP2-row-4",
+    "context": "reference-structure context; no mutant coordinate relaxation",
+    "mutation_set": [
+      "R133D",
+      "R164K"
+    ],
+    "sites": [
+      {
+        "mutation": "R133D",
+        "reference_position": 133,
+        "chain": "A",
+        "author_number": 174,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          130,
+          131,
+          132,
+          134,
+          135,
+          136,
+          137,
+          186,
+          214
+        ],
+        "sequence_neighbors": [
+          131,
+          132,
+          134,
+          135
+        ],
+        "rsa": 0.09486895598358035,
+        "contact_degree": 9,
+        "nonlocal_contact_degree": 5,
+        "plddt": 97.81,
+        "bfactor_a2": null,
+        "low_confidence": false
+      },
+      {
+        "mutation": "R164K",
+        "reference_position": 164,
+        "chain": "A",
+        "author_number": 205,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          160,
+          161,
+          162,
+          163,
+          165,
+          166,
+          167,
+          168
+        ],
+        "sequence_neighbors": [
+          162,
+          163,
+          165,
+          166
+        ],
+        "rsa": 0.2827390391980993,
+        "contact_degree": 8,
+        "nonlocal_contact_degree": 4,
+        "plddt": 98.81,
+        "bfactor_a2": null,
+        "low_confidence": false
+      }
+    ],
+    "mutation_distance_matrix_a": [
+      [
+        0.0,
+        30.818534619633365
+      ],
+      [
+        30.818534619633365,
+        0.0
+      ]
+    ],
+    "summary": {
+      "n_sites": 2,
+      "n_mapped": 2,
+      "n_unmapped": 0,
+      "n_low_plddt": 0,
+      "spatial_neighborhood_union": [
+        130,
+        131,
+        132,
+        134,
+        135,
+        136,
+        137,
+        160,
+        161,
+        162,
+        163,
+        165,
+        166,
+        167,
+        168,
+        186,
+        214
+      ],
+      "mean_rsa": 0.18880399759083982,
+      "mean_contact_degree": 8.5,
+      "mean_nonlocal_contact_degree": 4.5,
+      "mean_plddt": 98.31,
+      "mean_bfactor_a2": null,
+      "mean_pair_distance_a": 30.818534619633365,
+      "min_pair_distance_a": 30.818534619633365
+    }
+  },
+  {
+    "id": "FLIP2-row-5",
+    "context": "reference-structure context; no mutant coordinate relaxation",
+    "mutation_set": [
+      "W130Y",
+      "L141W",
+      "G143S",
+      "Y252W"
+    ],
+    "sites": [
+      {
+        "mutation": "W130Y",
+        "reference_position": 130,
+        "chain": "A",
+        "author_number": 171,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          127,
+          128,
+          129,
+          131,
+          132,
+          133,
+          135,
+          136,
+          214
+        ],
+        "sequence_neighbors": [
+          128,
+          129,
+          131,
+          132
+        ],
+        "rsa": 0.40649588187790897,
+        "contact_degree": 9,
+        "nonlocal_contact_degree": 5,
+        "plddt": 97.25,
+        "bfactor_a2": null,
+        "low_confidence": false
+      },
+      {
+        "mutation": "L141W",
+        "reference_position": 141,
+        "chain": "A",
+        "author_number": 182,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          102,
+          124,
+          126,
+          127,
+          136,
+          139,
+          140,
+          142,
+          143,
+          144,
+          145,
+          146,
+          180
+        ],
+        "sequence_neighbors": [
+          139,
+          140,
+          142,
+          143
+        ],
+        "rsa": 0.14096789921145242,
+        "contact_degree": 13,
+        "nonlocal_contact_degree": 9,
+        "plddt": 98.5,
+        "bfactor_a2": null,
+        "low_confidence": false
+      },
+      {
+        "mutation": "G143S",
+        "reference_position": 143,
+        "chain": "A",
+        "author_number": 184,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          105,
+          124,
+          125,
+          126,
+          140,
+          141,
+          142,
+          144,
+          145
+        ],
+        "sequence_neighbors": [
+          141,
+          142,
+          144,
+          145
+        ],
+        "rsa": 0.14068268390730387,
+        "contact_degree": 9,
+        "nonlocal_contact_degree": 5,
+        "plddt": 98.12,
+        "bfactor_a2": null,
+        "low_confidence": false
+      },
+      {
+        "mutation": "Y252W",
+        "reference_position": 252,
+        "chain": "A",
+        "author_number": 293,
+        "insertion_code": "",
+        "mapping_status": "mapped",
+        "usable": true,
+        "spatial_neighbors": [
+          228,
+          230,
+          231,
+          249,
+          250,
+          251,
+          253,
+          254,
+          258
+        ],
+        "sequence_neighbors": [
+          250,
+          251,
+          253,
+          254
+        ],
+        "rsa": 0.08716874407030348,
+        "contact_degree": 9,
+        "nonlocal_contact_degree": 5,
+        "plddt": 83.81,
+        "bfactor_a2": null,
+        "low_confidence": false
+      }
+    ],
+    "mutation_distance_matrix_a": [
+      [
+        0.0,
+        10.2922043118141,
+        14.445484629940308,
+        22.641131950578853
+      ],
+      [
+        10.2922043118141,
+        0.0,
+        5.596658961795308,
+        26.563260279273067
+      ],
+      [
+        14.445484629940308,
+        5.596658961795308,
+        0.0,
+        31.85040239267644
+      ],
+      [
+        22.641131950578853,
+        26.563260279273067,
+        31.85040239267644,
+        0.0
+      ]
+    ],
+    "summary": {
+      "n_sites": 4,
+      "n_mapped": 4,
+      "n_unmapped": 0,
+      "n_low_plddt": 0,
+      "spatial_neighborhood_union": [
+        102,
+        105,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        131,
+        132,
+        133,
+        135,
+        136,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        180,
+        214,
+        228,
+        230,
+        231,
+        249,
+        250,
+        251,
+        253,
+        254,
+        258
+      ],
+      "mean_rsa": 0.1938288022667422,
+      "mean_contact_degree": 10.0,
+      "mean_nonlocal_contact_degree": 6.0,
+      "mean_plddt": 94.42,
+      "mean_bfactor_a2": null,
+      "mean_pair_distance_a": 18.56485708767968,
+      "min_pair_distance_a": 5.596658961795308
+    }
+  }
+]

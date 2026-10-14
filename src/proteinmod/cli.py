@@ -11,7 +11,18 @@ from proteinmod.data import download, load_dataset, verified_reference, verify_f
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=("download", "validate", "run", "extract", "run-m1"))
+    parser.add_argument(
+        "command",
+        choices=(
+            "download",
+            "validate",
+            "run",
+            "extract",
+            "run-m1",
+            "structure-download",
+            "structure-run",
+        ),
+    )
     parser.add_argument("--config", default="configs/amylase.toml")
     parser.add_argument("--data", help="Exact local file; configured checksum still enforced")
     parser.add_argument("--output", help="Override output directory")
@@ -22,12 +33,27 @@ def main():
     with open(args.config, "rb") as handle:
         config = tomllib.load(handle)
     if args.data:
-        config["dataset"]["path"] = args.data
+        section = "structure" if args.command.startswith("structure-") else "dataset"
+        config[section]["path"] = args.data
     if args.output:
-        section = "learning_curve" if args.command in ("extract", "run-m1") else "run"
+        section = (
+            "learning_curve"
+            if args.command in ("extract", "run-m1", "structure-download", "structure-run")
+            else "run"
+        )
+        if args.command.startswith("structure-"):
+            section = "structure_run"
         config[section]["output"] = args.output
     try:
-        if args.command == "download":
+        if args.command == "structure-download":
+            from proteinmod.structure_sources import acquire_structure
+
+            print(acquire_structure(config["structure"]))
+        elif args.command == "structure-run":
+            from proteinmod.structure_pipeline import run_structure
+
+            print(json.dumps(run_structure(config), indent=2, allow_nan=False))
+        elif args.command == "download":
             print(download(config["dataset"]))
         elif args.command == "validate":
             verify_file(config["dataset"]["path"], config["dataset"])

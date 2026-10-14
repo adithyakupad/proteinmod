@@ -1,0 +1,18 @@
+{
+  "specification": {
+    "name": "1UA7 cif experimental context",
+    "kind": "pdb",
+    "format": "cif",
+    "path": "data/cache/structures/1UA7.cif",
+    "sha256": "40c6c7750dba6496cb207d977831e250382eee93207afaca88af659aac184f22",
+    "source": "https://www.rcsb.org/structure/1UA7",
+    "license": "wwPDB CC0; cite PDB deposition and primary publication",
+    "confidence": "experimental_bfactor",
+    "id": "1UA7"
+  },
+  "url": "https://files.rcsb.org/download/1UA7.cif",
+  "sha256": "40c6c7750dba6496cb207d977831e250382eee93207afaca88af659aac184f22",
+  "license": "wwPDB CC0; cite deposition and primary publication",
+  "acquired_at_utc": "2026-10-14T19:02:15.807050+00:00",
+  "provider_metadata": null
+}
