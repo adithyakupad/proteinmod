@@ -1,0 +1,53 @@
+# M2: pinned reference-structure context; no predictive baseline.
+
+[structure]
+name = "AF-P00691-F1 cif predicted native-chain context"
+kind = "alphafold"
+format = "cif"
+path = "data/cache/structures/AF-P00691-F1.cif"
+sha256 = "620d7a84c0ece14e8a355aaf2681e65365d55bb5f92f5f01396184a1ae8dcddc"
+source = "https://alphafold.ebi.ac.uk/entry/P00691"
+license = "AlphaFold DB CC-BY-4.0"
+confidence = "alphafold_plddt"
+accession = "P00691"
+entry_id = "AF-P00691-F1"
+
+[reference]
+sequence = "LTAPSIKSGTILHAWNWSFNTLKHNMKDIHDAGYTAIQTSPINQVKEGNQGDKSMSNWYWLYQPTSYQIGNRYLGTEQEFKEMCAAAEEYGIKVIVDAVINHTTSDYAAISNEVKSIPNWTHGNTPIKNWSDRWDVTQNSLSGLYDWNTQNTQVQSYLKRFLDRALNDGADGFRFDAAKHIELPDDGSYGSQFWPNITNTSAEFQYGEILQDSVSRDAAYANYMDVTASNYGHSIRSALKNRNLGVSNISHYAVDVSADKLVTWVESHDTYANDDEESTWMSDDDIRLGWAVIASRSGSTPLFFSRPEGGGNGVRFPGKSQIGDRGSALFEDQAITAVNRFHNVMAGQPEELSNPNGNNQIFMNQRGSHGVVLANAGSSSVSINTATKLPDGRYDNKAGAGSFQVNDGKLTGTINARSVAVLYPD"
+source = "https://github.com/florisvdf/mutation-predictability/blob/main/data/AMY_BACSU/reference.fasta"
+git_blob = "920b6c14b659029dd1f5497329dab98c0c8755e2"
+
+[mapping]
+chain = "A"
+model_index = 0
+min_coverage = 0.95
+min_identity = 0.98
+allowed_mismatches = ["P126Q", "S142L", "V214A", "V254S"]
+
+[geometry]
+contact_cutoff_a = 8.0
+sasa_points = 960
+dssp = "auto"
+
+[structure_run]
+output = "runs/amylase_m2_alphafold"
+
+[dataset_variants]
+config = "configs/amylase.toml"
+first_n = 5
+
+[[variants]]
+id = "reference"
+mutations = []
+
+[[variants]]
+id = "synthetic-multi"
+mutations = ["T10A", "T200A"]
+
+[[variants]]
+id = "synthetic-N-terminus"
+mutations = ["L1A"]
+
+[[variants]]
+id = "synthetic-construct-mismatch"
+mutations = ["P126A"]

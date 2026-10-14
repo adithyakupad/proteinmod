@@ -1,0 +1,52 @@
+# M2: pinned reference-structure context; no predictive baseline.
+
+[structure]
+name = "1UA7 pdb experimental context"
+kind = "pdb"
+format = "pdb"
+path = "data/cache/structures/1UA7.pdb"
+sha256 = "73ee024893a3ea3727da1d08089b828e3754bbd856c083c33652d41d5fc78f06"
+source = "https://www.rcsb.org/structure/1UA7"
+license = "wwPDB CC0; cite PDB deposition and primary publication"
+confidence = "experimental_bfactor"
+id = "1UA7"
+
+[reference]
+sequence = "LTAPSIKSGTILHAWNWSFNTLKHNMKDIHDAGYTAIQTSPINQVKEGNQGDKSMSNWYWLYQPTSYQIGNRYLGTEQEFKEMCAAAEEYGIKVIVDAVINHTTSDYAAISNEVKSIPNWTHGNTPIKNWSDRWDVTQNSLSGLYDWNTQNTQVQSYLKRFLDRALNDGADGFRFDAAKHIELPDDGSYGSQFWPNITNTSAEFQYGEILQDSVSRDAAYANYMDVTASNYGHSIRSALKNRNLGVSNISHYAVDVSADKLVTWVESHDTYANDDEESTWMSDDDIRLGWAVIASRSGSTPLFFSRPEGGGNGVRFPGKSQIGDRGSALFEDQAITAVNRFHNVMAGQPEELSNPNGNNQIFMNQRGSHGVVLANAGSSSVSINTATKLPDGRYDNKAGAGSFQVNDGKLTGTINARSVAVLYPD"
+source = "https://github.com/florisvdf/mutation-predictability/blob/main/data/AMY_BACSU/reference.fasta"
+git_blob = "920b6c14b659029dd1f5497329dab98c0c8755e2"
+
+[mapping]
+chain = "A"
+model_index = 0
+min_coverage = 0.95
+min_identity = 0.98
+allowed_mismatches = ["S105F", "P126Q", "S142L", "D163E", "V214A", "V254S", "N356Q"]
+
+[geometry]
+contact_cutoff_a = 8.0
+sasa_points = 960
+dssp = "auto"
+
+[structure_run]
+output = "runs/amylase_m2_pdb"
+
+[dataset_variants]
+config = "configs/amylase.toml"
+first_n = 5
+
+[[variants]]
+id = "reference"
+mutations = []
+
+[[variants]]
+id = "synthetic-multi"
+mutations = ["T10A", "T200A"]
+
+[[variants]]
+id = "synthetic-N-terminus"
+mutations = ["L1A"]
+
+[[variants]]
+id = "synthetic-construct-mismatch"
+mutations = ["P126A"]

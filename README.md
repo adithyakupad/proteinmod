@@ -204,6 +204,93 @@ seeds, and unknown pretraining-corpus overlap. Extracting held-out sequence feat
 is **label-free transductive evaluation**, not cross-protein generalization.
 M1 adds no GNN, structural integration, cross-attention, multitask head or fine-tuning.
 
+## M2: audited residue-level structure context (implemented)
+
+M2 adds explicit PDB/mmCIF acquisition, unique reference/chain alignment, mutation
+mapping, Cα contact graphs, solvent accessibility and separate experimental/predicted
+confidence semantics. It extracts **reference-structure context**, not mutant
+rearrangements. No GNN, cross-attention or new fitness predictor is trained.
+
+```sh
+source .venv/bin/activate
+python -m pip install -e '.[dev,structure]'
+# Optional exact measured M2 dependencies, without Torch:
+# python -m pip install -r requirements-m2.txt
+
+# Explicit network acquisition; all later steps are offline.
+proteinmod download --config configs/amylase.toml
+proteinmod structure-download --config configs/amylase_m2.toml
+proteinmod structure-download --config configs/amylase_m2_pdb.toml
+proteinmod structure-download --config configs/ubiquitin_m2.toml
+proteinmod structure-download --config configs/ubiquitin_m2_pdb.toml
+proteinmod structure-download --config configs/amylase_m2_alphafold.toml
+
+# One audited extraction, or all five real cases plus format/history checks:
+MPLCONFIGDIR=/tmp/proteinmod-mpl XDG_CACHE_HOME=/tmp/proteinmod-cache proteinmod structure-run --config configs/amylase_m2.toml
+MPLCONFIGDIR=/tmp/proteinmod-mpl XDG_CACHE_HOME=/tmp/proteinmod-cache python scripts/verify_structures.py
+ruff check .
+pytest
+```
+
+For an exact verified local copy, use `--data /absolute/path/1UA7.cif`; the pinned
+SHA256 is still enforced. For another protein, supply a TOML with `structure.kind
+= "local"`, file path/SHA/source/license/confidence semantics, a checksum-bound
+reference, mapping thresholds/chain, geometry and output settings. Copy a provided
+config as a template. Structures/download manifests stay under ignored `data/cache/`.
+No import, ordinary test or structural extraction command downloads anything.
+
+Actual local verification on October 14, 2026:
+
+| Structural source | Reference Cα coverage | Aligned identity | Identity-compatible sites | Cα edges |
+|---|---:|---:|---:|---:|
+| Experimental 1UA7, PDB and mmCIF | 422/425 (99.29%) | 98.34% | 415 | 2,195 |
+| Experimental ubiquitin 1UBQ, PDB and mmCIF | 76/76 (100%) | 100% | 76 | 326 |
+| Predicted AF-P00691-F1 v6, mmCIF | 425/425 (100%) | 99.06% | 421 | 2,235 |
+
+For both experimental proteins, author/reference mapping, Cα coordinates, RSA and
+all contact edge records agree between PDB and mmCIF: **maximum coordinate and RSA
+differences are 0**. All **19 historical M0/M1 artifact files** remained hash-identical.
+Five real structural extractions completed; no fitness improvement score is claimed.
+
+The assay-linked [1UA7 structure](https://www.rcsb.org/structure/1UA7) was identified
+through the original assay repository, not guessed by protein name. It lacks assay
+positions 1–3 and differs at `S105F;P126Q;S142L;D163E;V214A;V254S;N356Q`. Unreviewed
+mapping is rejected; the checked-in config explicitly approves these differences
+for related-construct context. Mutation sites on mismatches still produce null
+features. The predicted native P00691 model likewise differs at four sites and is
+an explicitly labeled alternative context, not the exact assay WT. Its aligned
+span has mean pLDDT **97.274**, range **78.81–99.00**; this says nothing about mutant
+stability or inter-domain accuracy. Ubiquitin uses its traceable deposited entity
+reference, not a fabricated second mutation assay.
+
+SASA uses Shrake–Rupley, probe 1.4 Å, 960 sphere points/atom and Tien 2013 theoretical
+maxima for RSA. RSA is unclipped and values above 1 are flagged. Heavy ligands and
+other chains in the selected model can occlude surface; waters/H/D and crystal
+symmetry copies are excluded. Graph nodes are mapped reference Cα atoms; spatial
+contacts use ≤8 Å, with separately verified backbone links and nonlocal contact
+counts. Density is contact count divided by sphere volume. Missing loops are not
+interpolated; alternate conformers, author numbering/insertion codes, noncanonical
+parents, missing atoms and construct differences are audited.
+
+Experimental Cα B-factors remain **Å²**, separate from **0–100 AlphaFold pLDDT**.
+B-factor magnitude is never converted into pLDDT or given its thresholds. Low pLDDT
+can reflect flexibility/disorder or insufficient information; it is not measured
+stability. DSSP is optional (`auto`, `required` or `off`): it was **unavailable** for
+these runs, so secondary structure is explicitly null. No SS assignments are invented.
+
+Per-variant outputs include validated mutation identity, author mapping, sequence
+versus spatial neighborhoods, symmetric mutation-site distances, confidence and
+site aggregates with explicit missing counts. Nine amylase examples include WT,
+synthetic diagnostics and the first five actual FLIP2 variants; synthetic examples
+have no fitness labels. Geometry always comes from the reference structure.
+
+Reproducible evidence lives in `benchmarks/structures/`: mapping audits, residue and
+variant CSV/JSON, contacts, PNG/SVG views, checksums/manifests and a summary report.
+Re-runs go to ignored `runs/m2_verification/`. See [the M2 protocol](docs/m2_protocol.md)
+for alignment scoring, missingness, confidence interpretation, licenses, sources
+and limitations. Source code is modular across acquisition, mapping and geometry;
+original M0/M1 data/model/experiment modules and artifacts are preserved.
+
 ## Roadmap (not implemented)
 
 Sequence PLM + structural GNN + bidirectional cross-attention; stability/function
