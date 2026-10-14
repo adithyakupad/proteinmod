@@ -20,6 +20,16 @@ def report(output):
             raise ValueError(f"Changed experiment artifact: {name}")
     runs = json.loads((output / "runs.json").read_text())
     audit = json.loads((output / "audit.json").read_text())
+    extraction = {}
+    candidates = list(Path(manifest["config"]["embedding"]["cache"]).glob("*/manifest.json"))
+    for protein, item in audit["data"].items():
+        cached = next(
+            (p for p in candidates if checksum(p) == item["embedding_manifest_sha256"]), None
+        )
+        if cached is None:
+            raise ValueError("Missing verified embedding provenance; retain or reproduce the cache")
+        extraction[protein] = json.loads(cached.read_text())
+    write_json(output / "embedding_provenance.json", extraction)
     with (output / "predictions.csv").open() as f:
         predictions = list(csv.DictReader(f))
     groups = defaultdict(list)
@@ -94,6 +104,14 @@ def report(output):
             r for r in per if (r["protocol"], r["cohort"], r["model"]) == (protocol, cohort, model)
         ]
         values = [r["rho_mean"] for r in selected if r["rho_mean"] is not None]
+        seeded = defaultdict(list)
+        for run in runs:
+            if (run["protocol"], run["cohort"], run["model"]) == (protocol, cohort, model):
+                seeded[run["seed"]].extend(
+                    v["spearman_rho"] if v["spearman_rho"] is not None else 0
+                    for v in run["test"].values()
+                )
+        seed_means = [np.mean(v) for v in seeded.values()]
         aggregate.append(
             {
                 "protocol": protocol,
@@ -104,6 +122,7 @@ def report(output):
                 ),
                 "proteins_with_defined_rho": len(values),
                 "proteins_total": len(selected),
+                "macro_seed_sd": float(np.std(seed_means, ddof=1)) if len(seed_means) > 1 else None,
             }
         )
     write_csv(output / "per_protein.csv", per)
@@ -117,13 +136,14 @@ def report(output):
         "",
         "## Macro Spearman (equal protein weight)",
         "",
-        "| Protocol | Cohort | Model | Macro rho | Defined proteins |",
-        "|---|---|---|---:|---:|",
+        "| Protocol | Cohort | Model | Macro rho | Seed SD | Defined proteins |",
+        "|---|---|---|---:|---:|---:|",
     ]
     for r in aggregate:
         value = "undefined" if r["macro_rho"] is None else f"{r['macro_rho']:.5f}"
+        sd = "—" if r["macro_seed_sd"] is None else f"{r['macro_seed_sd']:.5f}"
         lines.append(
-            f"| {r['protocol']} | {r['cohort']} | {r['model']} | {value} | {r['proteins_with_defined_rho']}/{r['proteins_total']} |"
+            f"| {r['protocol']} | {r['cohort']} | {r['model']} | {value} | {sd} | {r['proteins_with_defined_rho']}/{r['proteins_total']} |"
         )
     lines += [
         "",

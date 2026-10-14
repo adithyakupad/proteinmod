@@ -64,6 +64,15 @@ def test_variable_graph_training_ignores_test_targets():
 def test_full_runner_small_collection(tmp_path, monkeypatch):
     from proteinmod import multiprotein_experiments as experiment
 
+    version = experiment.importlib.metadata.version
+
+    def without_transformers(name):
+        if name == "transformers":
+            raise experiment.importlib.metadata.PackageNotFoundError(name)
+        return version(name)
+
+    monkeypatch.setattr(experiment.importlib.metadata, "version", without_transformers)
+
     rows, groups = [], {}
     for k, p in enumerate(["a", "b", "c"]):
         ix = np.arange(len(rows), len(rows) + 8)

@@ -340,6 +340,14 @@ def run_collection(config):
             ],
         },
     )
+    versions = {
+        p: importlib.metadata.version(p)
+        for p in ("numpy", "scipy", "scikit-learn", "torch", "biopython")
+    }
+    try:
+        versions["transformers"] = importlib.metadata.version("transformers")
+    except importlib.metadata.PackageNotFoundError:
+        versions["transformers"] = "not installed; using cached frozen features"
     write_json(
         output / "manifest.json",
         {
@@ -355,10 +363,7 @@ def run_collection(config):
             * (1 if platform.system() == "Darwin" else 1024),
             "python": platform.python_version(),
             "platform": platform.platform(),
-            "versions": {
-                p: importlib.metadata.version(p)
-                for p in ["numpy", "scipy", "scikit-learn", "torch", "transformers", "biopython"]
-            },
+            "versions": versions,
             "source_sha256": {p.name: checksum(p) for p in Path(__file__).parent.glob("*.py")},
             "historical_files_unchanged": len(before),
             "artifacts_sha256": {
