@@ -313,3 +313,15 @@ python scripts/report_m3.py --output runs/amylase_m3
 Requires the original pinned dataset and frozen ESM cache (see M1 extraction instructions above); committed validated M2 graph artifacts supply reference geometry. No new structure/model downloads occur during training. Execution uses deterministic CPU operations on Apple Silicon. A real MPS smoke test encountered nondeterministic index aggregation, so this milestone explicitly requires CPU.
 
 See [M3 protocol](docs/m3_protocol.md) for features, architecture, filtering, leakage controls and exact reproduction. Verified numerical results, predictions, fit gaps and failure slices are under [M3 benchmark evidence](benchmarks/amylase_m3/report.md). Geometry describes the reference construct, not mutant rearrangements. This single-protein experiment makes no cross-protein claim. No cross-attention, fusion, multitask learning or LM fine-tuning is included.
+
+Actual M3 full-training results on the **same 700 test variants** (2,296 train / 577 validation; mean over three seeds):
+
+| Model | Test Spearman rho | Test RMSE |
+|---|---:|---:|
+| M0 one-hot ridge | 0.64516 | 0.04289 |
+| M1 ESM mutation-site ridge | 0.62444 | 0.04045 |
+| M3 structural ridge | 0.63127 | 0.03857 |
+| M3 zero-layer neural control | 0.64313 ± 0.01221 | 0.03710 ± 0.00088 |
+| M3 two-layer GNN | 0.65489 ± 0.02355 | 0.03649 ± 0.00121 |
+
+The GNN's mean gain over the zero-layer control is smaller than its seed spread and costs about 138 seconds per full-data grid fit versus 9 seconds for the control and 0.30 seconds for structural ridge. At 10% training data, structural ridge beats the GNN (RMSE 0.04340 versus 0.04616). The GNN also underperforms the control on the 50 test variants with six or more mutations. These limitations are retained in the report; no architecture was retuned on test results. The final local experiment took 538 seconds and about 435 MiB peak process memory. All 78 historical artifacts were verified unchanged.

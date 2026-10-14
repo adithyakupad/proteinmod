@@ -63,6 +63,7 @@ def test_permutation_wt_and_multi_mutations(graph):
     assert not reasons
     np.testing.assert_array_equal(a, b)
     np.testing.assert_array_equal(fa, fb)
+    np.testing.assert_allclose(fa[-6:], [2, 1, 1, 0.38, 0.38, 0.38])
     wt, fw, _ = variant_inputs([], "ACDE", graph)
     assert not wt.any() and not fw.any()
     _, _, reasons = variant_inputs(["D3A"], "ACDE", graph)

@@ -1,0 +1,82 @@
+{
+  "config": {
+    "m3": {
+      "sequence_config": "configs/amylase_m1.toml",
+      "structure_artifacts": "benchmarks/structures/amylase_m2",
+      "output": "runs/amylase_m3",
+      "cache": "data/cache/m3",
+      "alphas": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0,
+        1000.0
+      ],
+      "fractions": [
+        0.1,
+        1.0
+      ],
+      "seeds": [
+        0,
+        1,
+        2
+      ]
+    },
+    "gnn": {
+      "device": "cpu",
+      "cpu_threads": 4,
+      "hidden": 16,
+      "layers": [
+        0,
+        2
+      ],
+      "learning_rate": 0.003,
+      "weight_decays": [
+        0.001,
+        0.01
+      ],
+      "batch_size": 64,
+      "max_epochs": 80,
+      "patience": 12
+    }
+  },
+  "baseline_only": true,
+  "created_at_utc": "2026-10-14T20:32:59.864021+00:00",
+  "git_revision": "b1265b64e7864b307ca4efe0eb826e94adb297dd",
+  "python": "3.12.15",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "elapsed_seconds": 11.818507416872308,
+  "source_sha256": {
+    "__init__.py": "2ba3408e090d882b309c397a9af8c57448223d771a6f4346739247b8689db135",
+    "benchmark.py": "612f88149ff86d96d81f45e8b6fcfe06b900724fbfa16ad7ecb43eb6b6bf249a",
+    "cli.py": "a2cb5f6019d02a5747d3d89fd8368a2267d8d0214c10a1ea85abda76779f66e7",
+    "data.py": "da870c4a406ea0ae9fcb9ecddbe6f49b98cb99f567fc3796659102ef2e576620",
+    "embeddings.py": "0b00ff2aac096e133a09c8d824ab158ef3c24c79ee3e5361f96dd24339f700c5",
+    "experiments.py": "22d4c8751d0514feccef816dd97d8b5a4126fb8938b62ddf3c52386d1ba180bd",
+    "models.py": "81256a2cf7729d8cbc50b0da17295f0812b62d8c618adfce87d0e0ef0a11ee6c",
+    "structural_experiments.py": "1e0538fe7aabe166dfdd279736bce397ffd85f8fd74bfb0a31f61a213a0b2076",
+    "structural_graph.py": "aa4b9ca3038b03271402cac1f07be082668eb62545cb778ece929cd2e9e69217",
+    "structure_features.py": "f43f3eda8d540c2f67a3bdb03d184650101d3474d59aaeb7034b7f9aa02dbb57",
+    "structure_mapping.py": "e091f318fa1e880c78aa7517a931e4012179ce7ae863525e30e6d3124ec61436",
+    "structure_pipeline.py": "d5ba103dbf3457fa469831506a50dd3cd5733d829d51981c6034a7a521c116de",
+    "structure_sources.py": "185e43de09eae94bb65befad6761695a40c639ead660c5f310b6b0548422d0d9"
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "biopython": "1.88",
+    "torch": "2.14.1"
+  },
+  "historical_files_unchanged": 78,
+  "artifacts_sha256": {
+    "audit.json": "e9d74fe145515e223501fec25298c1bc4155313f59a1deaee8a4390354336ad4",
+    "learning_curve_summary.csv": "aab278bf18c3966be77faa470d598d881f58f2f2fea703aff4eaf7f8b3e8064a",
+    "baseline_predictions.csv": "923483c8b43a9d234d832efe289aa97a392305ba53797949021fea741b094569",
+    "test_predictions.csv": "923483c8b43a9d234d832efe289aa97a392305ba53797949021fea741b094569",
+    "subset_ids.json": "559f99a637127bd4b3dacc72f5e270edad3cd2d9a84b490b0cb26c4807ce27f2",
+    "baseline_runs.json": "cad92f316f2f373d0e9ddb4eb284e846264dfaa393e84e1c016f08fbf3e1d676",
+    "runs.json": "cad92f316f2f373d0e9ddb4eb284e846264dfaa393e84e1c016f08fbf3e1d676"
+  }
+}

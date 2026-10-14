@@ -1,0 +1,1006 @@
+[
+  {
+    "model": "one_hot_ridge",
+    "seed": 0,
+    "id": "3198",
+    "mutations": [
+      "S111N",
+      "K240D",
+      "Q333F",
+      "G357Q",
+      "N358Q",
+      "G392A"
+    ],
+    "measured": 0.0042499999999999,
+    "prediction": 0.1513747140929711,
+    "absolute_error": 0.1471247140929712
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 0,
+    "id": "3199",
+    "mutations": [
+      "D52L",
+      "S111N",
+      "K240D",
+      "Q333F",
+      "N358Q",
+      "G392A"
+    ],
+    "measured": 0.0102833333333333,
+    "prediction": 0.15137471409297198,
+    "absolute_error": 0.14109138075963867
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 0,
+    "id": "1434",
+    "mutations": [
+      "T152P",
+      "V246L",
+      "E331A",
+      "R393K"
+    ],
+    "measured": 0.0036,
+    "prediction": 0.14009354597378376,
+    "absolute_error": 0.13649354597378377
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 0,
+    "id": "1386",
+    "mutations": [
+      "Y189I",
+      "E331A",
+      "M345L",
+      "V381K"
+    ],
+    "measured": 0.0134333333333333,
+    "prediction": 0.1430956805654242,
+    "absolute_error": 0.1296623472320909
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 0,
+    "id": "3189",
+    "mutations": [
+      "D52L",
+      "S111N",
+      "K240D",
+      "Q333F",
+      "G357Q",
+      "N358Q"
+    ],
+    "measured": 0.01115,
+    "prediction": 0.13891246666962065,
+    "absolute_error": 0.12776246666962066
+  },
+  {
+    "model": "esm_sites",
+    "seed": 0,
+    "id": "3181",
+    "mutations": [
+      "D168Y",
+      "G357Q",
+      "N358Q"
+    ],
+    "measured": 0.14605,
+    "prediction": -0.024233844853413095,
+    "absolute_error": 0.1702838448534131
+  },
+  {
+    "model": "esm_sites",
+    "seed": 0,
+    "id": "1686",
+    "mutations": [
+      "N243R",
+      "P349N",
+      "H369R"
+    ],
+    "measured": 0.1879166666666667,
+    "prediction": 0.05205081103627669,
+    "absolute_error": 0.13586585563039
+  },
+  {
+    "model": "esm_sites",
+    "seed": 0,
+    "id": "2433",
+    "mutations": [
+      "I95V"
+    ],
+    "measured": 0.1450666666666666,
+    "prediction": 0.009657409821145463,
+    "absolute_error": 0.13540925684552113
+  },
+  {
+    "model": "esm_sites",
+    "seed": 0,
+    "id": "74",
+    "mutations": [
+      "S8D",
+      "E47T",
+      "N129D",
+      "E203A",
+      "D275G"
+    ],
+    "measured": 0.17335,
+    "prediction": 0.051048203599559416,
+    "absolute_error": 0.12230179640044059
+  },
+  {
+    "model": "esm_sites",
+    "seed": 0,
+    "id": "1470",
+    "mutations": [
+      "G143A"
+    ],
+    "measured": 0.1289333333333333,
+    "prediction": 0.01121858080285687,
+    "absolute_error": 0.11771475253047642
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 0,
+    "id": "1434",
+    "mutations": [
+      "T152P",
+      "V246L",
+      "E331A",
+      "R393K"
+    ],
+    "measured": 0.0036,
+    "prediction": 0.11444295092309545,
+    "absolute_error": 0.11084295092309544
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 0,
+    "id": "1856",
+    "mutations": [
+      "R72P",
+      "N243R",
+      "H369R",
+      "D425K"
+    ],
+    "measured": 0.1795166666666666,
+    "prediction": 0.06886544729901889,
+    "absolute_error": 0.11065121936764771
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 0,
+    "id": "625",
+    "mutations": [
+      "Y34F",
+      "G310A"
+    ],
+    "measured": 0.1519,
+    "prediction": 0.04304565011799238,
+    "absolute_error": 0.10885434988200762
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 0,
+    "id": "2362",
+    "mutations": [
+      "Q365T"
+    ],
+    "measured": 0.0003333333333333,
+    "prediction": 0.10805950008882076,
+    "absolute_error": 0.10772616675548746
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 0,
+    "id": "1998",
+    "mutations": [
+      "N57Q",
+      "A98C",
+      "A165V"
+    ],
+    "measured": 0.1339833333333333,
+    "prediction": 0.027162497652822554,
+    "absolute_error": 0.10682083568051073
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 1,
+    "id": "3198",
+    "mutations": [
+      "S111N",
+      "K240D",
+      "Q333F",
+      "G357Q",
+      "N358Q",
+      "G392A"
+    ],
+    "measured": 0.0042499999999999,
+    "prediction": 0.1513747140929711,
+    "absolute_error": 0.1471247140929712
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 1,
+    "id": "3199",
+    "mutations": [
+      "D52L",
+      "S111N",
+      "K240D",
+      "Q333F",
+      "N358Q",
+      "G392A"
+    ],
+    "measured": 0.0102833333333333,
+    "prediction": 0.15137471409297198,
+    "absolute_error": 0.14109138075963867
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 1,
+    "id": "1434",
+    "mutations": [
+      "T152P",
+      "V246L",
+      "E331A",
+      "R393K"
+    ],
+    "measured": 0.0036,
+    "prediction": 0.14009354597378376,
+    "absolute_error": 0.13649354597378377
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 1,
+    "id": "1386",
+    "mutations": [
+      "Y189I",
+      "E331A",
+      "M345L",
+      "V381K"
+    ],
+    "measured": 0.0134333333333333,
+    "prediction": 0.1430956805654242,
+    "absolute_error": 0.1296623472320909
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 1,
+    "id": "3189",
+    "mutations": [
+      "D52L",
+      "S111N",
+      "K240D",
+      "Q333F",
+      "G357Q",
+      "N358Q"
+    ],
+    "measured": 0.01115,
+    "prediction": 0.13891246666962065,
+    "absolute_error": 0.12776246666962066
+  },
+  {
+    "model": "esm_sites",
+    "seed": 1,
+    "id": "3181",
+    "mutations": [
+      "D168Y",
+      "G357Q",
+      "N358Q"
+    ],
+    "measured": 0.14605,
+    "prediction": -0.024233844853413095,
+    "absolute_error": 0.1702838448534131
+  },
+  {
+    "model": "esm_sites",
+    "seed": 1,
+    "id": "1686",
+    "mutations": [
+      "N243R",
+      "P349N",
+      "H369R"
+    ],
+    "measured": 0.1879166666666667,
+    "prediction": 0.05205081103627669,
+    "absolute_error": 0.13586585563039
+  },
+  {
+    "model": "esm_sites",
+    "seed": 1,
+    "id": "2433",
+    "mutations": [
+      "I95V"
+    ],
+    "measured": 0.1450666666666666,
+    "prediction": 0.009657409821145463,
+    "absolute_error": 0.13540925684552113
+  },
+  {
+    "model": "esm_sites",
+    "seed": 1,
+    "id": "74",
+    "mutations": [
+      "S8D",
+      "E47T",
+      "N129D",
+      "E203A",
+      "D275G"
+    ],
+    "measured": 0.17335,
+    "prediction": 0.051048203599559416,
+    "absolute_error": 0.12230179640044059
+  },
+  {
+    "model": "esm_sites",
+    "seed": 1,
+    "id": "1470",
+    "mutations": [
+      "G143A"
+    ],
+    "measured": 0.1289333333333333,
+    "prediction": 0.01121858080285687,
+    "absolute_error": 0.11771475253047642
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 1,
+    "id": "1434",
+    "mutations": [
+      "T152P",
+      "V246L",
+      "E331A",
+      "R393K"
+    ],
+    "measured": 0.0036,
+    "prediction": 0.11444295092309545,
+    "absolute_error": 0.11084295092309544
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 1,
+    "id": "1856",
+    "mutations": [
+      "R72P",
+      "N243R",
+      "H369R",
+      "D425K"
+    ],
+    "measured": 0.1795166666666666,
+    "prediction": 0.06886544729901889,
+    "absolute_error": 0.11065121936764771
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 1,
+    "id": "625",
+    "mutations": [
+      "Y34F",
+      "G310A"
+    ],
+    "measured": 0.1519,
+    "prediction": 0.04304565011799238,
+    "absolute_error": 0.10885434988200762
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 1,
+    "id": "2362",
+    "mutations": [
+      "Q365T"
+    ],
+    "measured": 0.0003333333333333,
+    "prediction": 0.10805950008882076,
+    "absolute_error": 0.10772616675548746
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 1,
+    "id": "1998",
+    "mutations": [
+      "N57Q",
+      "A98C",
+      "A165V"
+    ],
+    "measured": 0.1339833333333333,
+    "prediction": 0.027162497652822554,
+    "absolute_error": 0.10682083568051073
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 2,
+    "id": "3198",
+    "mutations": [
+      "S111N",
+      "K240D",
+      "Q333F",
+      "G357Q",
+      "N358Q",
+      "G392A"
+    ],
+    "measured": 0.0042499999999999,
+    "prediction": 0.1513747140929711,
+    "absolute_error": 0.1471247140929712
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 2,
+    "id": "3199",
+    "mutations": [
+      "D52L",
+      "S111N",
+      "K240D",
+      "Q333F",
+      "N358Q",
+      "G392A"
+    ],
+    "measured": 0.0102833333333333,
+    "prediction": 0.15137471409297198,
+    "absolute_error": 0.14109138075963867
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 2,
+    "id": "1434",
+    "mutations": [
+      "T152P",
+      "V246L",
+      "E331A",
+      "R393K"
+    ],
+    "measured": 0.0036,
+    "prediction": 0.14009354597378376,
+    "absolute_error": 0.13649354597378377
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 2,
+    "id": "1386",
+    "mutations": [
+      "Y189I",
+      "E331A",
+      "M345L",
+      "V381K"
+    ],
+    "measured": 0.0134333333333333,
+    "prediction": 0.1430956805654242,
+    "absolute_error": 0.1296623472320909
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 2,
+    "id": "3189",
+    "mutations": [
+      "D52L",
+      "S111N",
+      "K240D",
+      "Q333F",
+      "G357Q",
+      "N358Q"
+    ],
+    "measured": 0.01115,
+    "prediction": 0.13891246666962065,
+    "absolute_error": 0.12776246666962066
+  },
+  {
+    "model": "esm_sites",
+    "seed": 2,
+    "id": "3181",
+    "mutations": [
+      "D168Y",
+      "G357Q",
+      "N358Q"
+    ],
+    "measured": 0.14605,
+    "prediction": -0.024233844853413095,
+    "absolute_error": 0.1702838448534131
+  },
+  {
+    "model": "esm_sites",
+    "seed": 2,
+    "id": "1686",
+    "mutations": [
+      "N243R",
+      "P349N",
+      "H369R"
+    ],
+    "measured": 0.1879166666666667,
+    "prediction": 0.05205081103627669,
+    "absolute_error": 0.13586585563039
+  },
+  {
+    "model": "esm_sites",
+    "seed": 2,
+    "id": "2433",
+    "mutations": [
+      "I95V"
+    ],
+    "measured": 0.1450666666666666,
+    "prediction": 0.009657409821145463,
+    "absolute_error": 0.13540925684552113
+  },
+  {
+    "model": "esm_sites",
+    "seed": 2,
+    "id": "74",
+    "mutations": [
+      "S8D",
+      "E47T",
+      "N129D",
+      "E203A",
+      "D275G"
+    ],
+    "measured": 0.17335,
+    "prediction": 0.051048203599559416,
+    "absolute_error": 0.12230179640044059
+  },
+  {
+    "model": "esm_sites",
+    "seed": 2,
+    "id": "1470",
+    "mutations": [
+      "G143A"
+    ],
+    "measured": 0.1289333333333333,
+    "prediction": 0.01121858080285687,
+    "absolute_error": 0.11771475253047642
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 2,
+    "id": "1434",
+    "mutations": [
+      "T152P",
+      "V246L",
+      "E331A",
+      "R393K"
+    ],
+    "measured": 0.0036,
+    "prediction": 0.11444295092309545,
+    "absolute_error": 0.11084295092309544
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 2,
+    "id": "1856",
+    "mutations": [
+      "R72P",
+      "N243R",
+      "H369R",
+      "D425K"
+    ],
+    "measured": 0.1795166666666666,
+    "prediction": 0.06886544729901889,
+    "absolute_error": 0.11065121936764771
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 2,
+    "id": "625",
+    "mutations": [
+      "Y34F",
+      "G310A"
+    ],
+    "measured": 0.1519,
+    "prediction": 0.04304565011799238,
+    "absolute_error": 0.10885434988200762
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 2,
+    "id": "2362",
+    "mutations": [
+      "Q365T"
+    ],
+    "measured": 0.0003333333333333,
+    "prediction": 0.10805950008882076,
+    "absolute_error": 0.10772616675548746
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 2,
+    "id": "1998",
+    "mutations": [
+      "N57Q",
+      "A98C",
+      "A165V"
+    ],
+    "measured": 0.1339833333333333,
+    "prediction": 0.027162497652822554,
+    "absolute_error": 0.10682083568051073
+  },
+  {
+    "model": "structural_mlp",
+    "seed": 0,
+    "id": "1434",
+    "mutations": [
+      "T152P",
+      "V246L",
+      "E331A",
+      "R393K"
+    ],
+    "measured": 0.0036,
+    "prediction": 0.17513616782252786,
+    "absolute_error": 0.17153616782252787
+  },
+  {
+    "model": "structural_mlp",
+    "seed": 0,
+    "id": "187",
+    "mutations": [
+      "S8D",
+      "D275G"
+    ],
+    "measured": 0.0015833333333333,
+    "prediction": 0.1482289817504517,
+    "absolute_error": 0.1466456484171184
+  },
+  {
+    "model": "structural_mlp",
+    "seed": 0,
+    "id": "1437",
+    "mutations": [
+      "K23R",
+      "V405I"
+    ],
+    "measured": -0.0002,
+    "prediction": 0.1329071834739573,
+    "absolute_error": 0.1331071834739573
+  },
+  {
+    "model": "structural_mlp",
+    "seed": 0,
+    "id": "2598",
+    "mutations": [
+      "D31S",
+      "G51Y",
+      "E113Y",
+      "N241K"
+    ],
+    "measured": 0.1368166666666666,
+    "prediction": 0.013929934387185969,
+    "absolute_error": 0.12288673227948062
+  },
+  {
+    "model": "structural_mlp",
+    "seed": 0,
+    "id": "2634",
+    "mutations": [
+      "D31S",
+      "G51Y",
+      "N241K"
+    ],
+    "measured": 0.1566833333333333,
+    "prediction": 0.03572421230105956,
+    "absolute_error": 0.12095912103227376
+  },
+  {
+    "model": "structural_gnn",
+    "seed": 0,
+    "id": "1434",
+    "mutations": [
+      "T152P",
+      "V246L",
+      "E331A",
+      "R393K"
+    ],
+    "measured": 0.0036,
+    "prediction": 0.16969436999617538,
+    "absolute_error": 0.16609436999617538
+  },
+  {
+    "model": "structural_gnn",
+    "seed": 0,
+    "id": "1386",
+    "mutations": [
+      "Y189I",
+      "E331A",
+      "M345L",
+      "V381K"
+    ],
+    "measured": 0.0134333333333333,
+    "prediction": 0.17486395461224558,
+    "absolute_error": 0.16143062127891228
+  },
+  {
+    "model": "structural_gnn",
+    "seed": 0,
+    "id": "3198",
+    "mutations": [
+      "S111N",
+      "K240D",
+      "Q333F",
+      "G357Q",
+      "N358Q",
+      "G392A"
+    ],
+    "measured": 0.0042499999999999,
+    "prediction": 0.15104553998877962,
+    "absolute_error": 0.14679553998877973
+  },
+  {
+    "model": "structural_gnn",
+    "seed": 0,
+    "id": "1437",
+    "mutations": [
+      "K23R",
+      "V405I"
+    ],
+    "measured": -0.0002,
+    "prediction": 0.14578177051343974,
+    "absolute_error": 0.14598177051343975
+  },
+  {
+    "model": "structural_gnn",
+    "seed": 0,
+    "id": "187",
+    "mutations": [
+      "S8D",
+      "D275G"
+    ],
+    "measured": 0.0015833333333333,
+    "prediction": 0.1410838474266589,
+    "absolute_error": 0.1395005140933256
+  },
+  {
+    "model": "structural_mlp",
+    "seed": 1,
+    "id": "1434",
+    "mutations": [
+      "T152P",
+      "V246L",
+      "E331A",
+      "R393K"
+    ],
+    "measured": 0.0036,
+    "prediction": 0.16677294372305115,
+    "absolute_error": 0.16317294372305116
+  },
+  {
+    "model": "structural_mlp",
+    "seed": 1,
+    "id": "187",
+    "mutations": [
+      "S8D",
+      "D275G"
+    ],
+    "measured": 0.0015833333333333,
+    "prediction": 0.13188674584975152,
+    "absolute_error": 0.13030341251641822
+  },
+  {
+    "model": "structural_mlp",
+    "seed": 1,
+    "id": "1929",
+    "mutations": [
+      "N20K",
+      "G51R",
+      "M345V",
+      "S382N",
+      "N384E"
+    ],
+    "measured": 0.1848166666666666,
+    "prediction": 0.06248938468905491,
+    "absolute_error": 0.1223272819776117
+  },
+  {
+    "model": "structural_mlp",
+    "seed": 1,
+    "id": "1437",
+    "mutations": [
+      "K23R",
+      "V405I"
+    ],
+    "measured": -0.0002,
+    "prediction": 0.12011584343774737,
+    "absolute_error": 0.12031584343774737
+  },
+  {
+    "model": "structural_mlp",
+    "seed": 1,
+    "id": "276",
+    "mutations": [
+      "Q211G",
+      "D212G",
+      "M224L"
+    ],
+    "measured": 0.13115,
+    "prediction": 0.018475504935653413,
+    "absolute_error": 0.11267449506434657
+  },
+  {
+    "model": "structural_gnn",
+    "seed": 1,
+    "id": "1434",
+    "mutations": [
+      "T152P",
+      "V246L",
+      "E331A",
+      "R393K"
+    ],
+    "measured": 0.0036,
+    "prediction": 0.1542654986881793,
+    "absolute_error": 0.1506654986881793
+  },
+  {
+    "model": "structural_gnn",
+    "seed": 1,
+    "id": "3209",
+    "mutations": [
+      "A108K",
+      "P390V",
+      "N415P",
+      "D425E"
+    ],
+    "measured": 0.1777333333333333,
+    "prediction": 0.033466577163763084,
+    "absolute_error": 0.14426675616957021
+  },
+  {
+    "model": "structural_gnn",
+    "seed": 1,
+    "id": "1437",
+    "mutations": [
+      "K23R",
+      "V405I"
+    ],
+    "measured": -0.0002,
+    "prediction": 0.1367054813092069,
+    "absolute_error": 0.1369054813092069
+  },
+  {
+    "model": "structural_gnn",
+    "seed": 1,
+    "id": "1648",
+    "mutations": [
+      "D135N",
+      "L166I"
+    ],
+    "measured": 0.1799166666666666,
+    "prediction": 0.04824435617333987,
+    "absolute_error": 0.13167231049332673
+  },
+  {
+    "model": "structural_gnn",
+    "seed": 1,
+    "id": "187",
+    "mutations": [
+      "S8D",
+      "D275G"
+    ],
+    "measured": 0.0015833333333333,
+    "prediction": 0.13163652898958114,
+    "absolute_error": 0.13005319565624784
+  },
+  {
+    "model": "structural_mlp",
+    "seed": 2,
+    "id": "1434",
+    "mutations": [
+      "T152P",
+      "V246L",
+      "E331A",
+      "R393K"
+    ],
+    "measured": 0.0036,
+    "prediction": 0.14633903819141278,
+    "absolute_error": 0.1427390381914128
+  },
+  {
+    "model": "structural_mlp",
+    "seed": 2,
+    "id": "1437",
+    "mutations": [
+      "K23R",
+      "V405I"
+    ],
+    "measured": -0.0002,
+    "prediction": 0.13961503813198123,
+    "absolute_error": 0.13981503813198123
+  },
+  {
+    "model": "structural_mlp",
+    "seed": 2,
+    "id": "187",
+    "mutations": [
+      "S8D",
+      "D275G"
+    ],
+    "measured": 0.0015833333333333,
+    "prediction": 0.13510251572562287,
+    "absolute_error": 0.13351918239228958
+  },
+  {
+    "model": "structural_mlp",
+    "seed": 2,
+    "id": "1929",
+    "mutations": [
+      "N20K",
+      "G51R",
+      "M345V",
+      "S382N",
+      "N384E"
+    ],
+    "measured": 0.1848166666666666,
+    "prediction": 0.057982963723047905,
+    "absolute_error": 0.1268337029436187
+  },
+  {
+    "model": "structural_mlp",
+    "seed": 2,
+    "id": "2981",
+    "mutations": [
+      "D52L",
+      "D168Y"
+    ],
+    "measured": 0.13925,
+    "prediction": 0.018775856986869587,
+    "absolute_error": 0.12047414301313042
+  },
+  {
+    "model": "structural_gnn",
+    "seed": 2,
+    "id": "1434",
+    "mutations": [
+      "T152P",
+      "V246L",
+      "E331A",
+      "R393K"
+    ],
+    "measured": 0.0036,
+    "prediction": 0.15479634661839448,
+    "absolute_error": 0.15119634661839448
+  },
+  {
+    "model": "structural_gnn",
+    "seed": 2,
+    "id": "1437",
+    "mutations": [
+      "K23R",
+      "V405I"
+    ],
+    "measured": -0.0002,
+    "prediction": 0.14373951462879325,
+    "absolute_error": 0.14393951462879326
+  },
+  {
+    "model": "structural_gnn",
+    "seed": 2,
+    "id": "265",
+    "mutations": [
+      "M224V"
+    ],
+    "measured": 0.0002833333333333,
+    "prediction": 0.12955767954259123,
+    "absolute_error": 0.12927434620925793
+  },
+  {
+    "model": "structural_gnn",
+    "seed": 2,
+    "id": "1386",
+    "mutations": [
+      "Y189I",
+      "E331A",
+      "M345L",
+      "V381K"
+    ],
+    "measured": 0.0134333333333333,
+    "prediction": 0.14179163796482816,
+    "absolute_error": 0.12835830463149486
+  },
+  {
+    "model": "structural_gnn",
+    "seed": 2,
+    "id": "3406",
+    "mutations": [
+      "P4T",
+      "A108K",
+      "G318F",
+      "S378P",
+      "P390V",
+      "N415P"
+    ],
+    "measured": 0.16085,
+    "prediction": 0.03308165444103944,
+    "absolute_error": 0.12776834555896055
+  }
+]

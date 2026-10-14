@@ -78,6 +78,8 @@ def test_no_message_passing_control_and_disjoint_contract():
     model = ResidueGNN(**graph, hidden=4, layers=0)
     assert len(model.messages) == 0
     assert model(torch.zeros(1, 3, 25)).shape == (1,)
+    with pytest.raises(ValueError, match="CPU"):
+        train_gnn(graph, None, None, None, None, None, {"device": "mps"}, 0, 2)
     with pytest.raises(ValueError, match="disjoint"):
         train_gnn(
             graph,

@@ -166,6 +166,7 @@ def report(output):
         lines += [
             "",
             f"Two-layer GNN minus zero-layer control RMSE: {difference:+.6f} (negative favors message passing).",
+            "The mean message-passing gain must be read alongside the seed SD; three initializations do not establish statistical significance or generalization to other proteins.",
             "The zero-layer control already sees RSA, contacts, residue chemistry and mutation identity; this ablation tests learned propagation.",
             f"Same-seed repeated GNN run: {audit['gnn_reproducibility']}.",
         ]
@@ -175,7 +176,7 @@ def report(output):
         "The test subset has the official mutation-burden distribution, which differs from training; ranking and squared-error metrics can disagree.",
         "Training/validation gaps and seed spread limit conclusions about overfitting. Validation stopping controls selection but does not prove generalization.",
         "This compact network has limited propagation range and receives reference-construct geometry, not true mutant conformational changes.",
-        "A negative neural result is retained without test-driven architecture changes. No model is promoted based on one assay.",
+        "All results, including low-data and high-mutation-burden failures, are retained without test-driven architecture changes. No model is promoted based on one assay.",
         "",
         "## Mapping, confidence and leakage",
         "",
@@ -196,6 +197,40 @@ def report(output):
         "Weights and dense feature arrays remain in the ignored cache; predictions, traces, hashes and numerical evidence are committed.",
         "",
         "Reproduce with docs/m3_protocol.md and the exact config/environment recorded in manifest.json.",
+    ]
+    lines += [
+        "",
+        "## Mutation-burden slices (mean RMSE over seeds)",
+        "",
+        "| Model | Burden | Test n | RMSE |",
+        "|---|---|---:|---:|",
+    ]
+    for model in sorted(scores):
+        for burden in ("single", "2_to_5", "6_plus"):
+            group = [r for r in slices if r["model"] == model and r["burden"] == burden]
+            if group:
+                lines.append(
+                    f"| {model} | {burden} | {group[0]['n_test']} | {np.mean([r['rmse'] for r in group]):.6f} |"
+                )
+    lines += [
+        "",
+        "Only 35 single mutants and 50 variants with ≥6 mutations are held out; small slice sizes limit interpretation.",
+        "The low-data GNN trails structural ridge, and its ≥6-mutation RMSE exceeds the zero-layer control. Limited labels, propagation range and reference/mutant geometry differences are plausible limitations, not established causal explanations.",
+        "",
+        "## Full-data compute (mean per seed, including hyperparameter selection)",
+        "",
+        "| Model | Seconds | Neural parameters |",
+        "|---|---:|---:|",
+    ]
+    for model in sorted(scores):
+        group = [r for r in runs if r["model"] == model and r["fraction"] == 1]
+        lines.append(
+            f"| {model} | {np.mean([r['elapsed_seconds'] for r in group]):.3f} | {group[0].get('parameters', '—')} |"
+        )
+    lines += [
+        "",
+        "Historical M1 encoder extraction took 224.123 seconds on MPS, separate from these cached-feature probe fits. The final experiment duration excludes development runs, tests and the failed MPS smoke test.",
+        "The deterministic MPS smoke test failed on index aggregation; M3 therefore requires CPU. See local_verification.json for the recorded failure and full-dataset mutation-order checks.",
     ]
     (output / "report.md").write_text("\n".join(lines) + "\n")
     import matplotlib
