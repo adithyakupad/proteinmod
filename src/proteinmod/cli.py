@@ -1,4 +1,4 @@
-"""Download is always explicit; validate and run operate offline."""
+"""Explicit data/model extraction; validation and regression operate offline."""
 
 import argparse
 import json
@@ -11,17 +11,21 @@ from proteinmod.data import download, load_dataset, verified_reference, verify_f
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=("download", "validate", "run"))
+    parser.add_argument("command", choices=("download", "validate", "run", "extract", "run-m1"))
     parser.add_argument("--config", default="configs/amylase.toml")
     parser.add_argument("--data", help="Exact local file; configured checksum still enforced")
     parser.add_argument("--output", help="Override output directory")
+    parser.add_argument(
+        "--local-only", action="store_true", help="Extract using cached model files only"
+    )
     args = parser.parse_args()
     with open(args.config, "rb") as handle:
         config = tomllib.load(handle)
     if args.data:
         config["dataset"]["path"] = args.data
     if args.output:
-        config["run"]["output"] = args.output
+        section = "learning_curve" if args.command in ("extract", "run-m1") else "run"
+        config[section]["output"] = args.output
     try:
         if args.command == "download":
             print(download(config["dataset"]))
@@ -34,9 +38,32 @@ def main():
             output.mkdir(parents=True, exist_ok=True)
             write_json(output / "qc.json", qc)
             print(json.dumps(qc, indent=2))
+        elif args.command == "extract":
+            from proteinmod.embeddings import extract
+
+            verify_file(config["dataset"]["path"], config["dataset"])
+            reference = verified_reference(config.get("reference"))
+            if reference is None:
+                raise ValueError("M1 mutation-aware extraction requires a verified WT")
+            rows, _ = load_dataset(config["dataset"]["path"], reference)
+            from proteinmod.data import checksum
+
+            print(
+                extract(
+                    config,
+                    [row["sequence"] for row in rows],
+                    reference,
+                    checksum(config["dataset"]["path"]),
+                    local_only=args.local_only,
+                )
+            )
+        elif args.command == "run-m1":
+            from proteinmod.experiments import run_experiments
+
+            print(json.dumps(run_experiments(config), indent=2, allow_nan=False))
         else:
             print(json.dumps(run(config), indent=2, allow_nan=False))
-    except (ValueError, OSError) as error:
+    except (ValueError, OSError, RuntimeError, ImportError) as error:
         parser.exit(1, f"proteinmod: {error}\n")
 
 
