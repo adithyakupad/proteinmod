@@ -1,6 +1,7 @@
 import copy
 import csv
 import hashlib
+import importlib.metadata
 import json
 
 import numpy as np
@@ -95,6 +96,13 @@ def test_matched_pipeline_and_m0_preservation(tmp_path, embedding_config, monkey
     before = {p.name: checksum(p) for p in historical.iterdir()}
     extract(config, sequences, "ACDE", checksum(path), encoder=MockEncoder())
     monkeypatch.setattr("proteinmod.experiments.plot_curves", lambda *args: None)
+    # The plotter is mocked, including its optional package metadata. Core CI
+    # deliberately has neither Matplotlib nor Torch installed.
+    installed_version = importlib.metadata.version
+    monkeypatch.setattr(
+        "proteinmod.experiments.importlib.metadata.version",
+        lambda name: "mocked-plotter" if name == "matplotlib" else installed_version(name),
+    )
     scores = run_experiments(config)
     assert len(scores) == 6
     assert before == {p.name: checksum(p) for p in historical.iterdir()}

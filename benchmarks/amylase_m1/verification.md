@@ -34,3 +34,9 @@ M0 history is not overwritten. This evidence commit follows the clean code commi
 used for the final experiment. No test-result-driven architecture tuning occurred.
 Seed SD describes training-subset variability, not test uncertainty; the full
 601-label validation set remains available even for 25 training labels.
+
+A fresh core-only Python 3.12 environment was also created and installed with
+`.[dev]`; Torch, Transformers and Matplotlib were confirmed absent. All **48 tests
+passed** there. The plot test mocks optional plotter metadata as well as rendering;
+this fixes an isolation issue revealed by the first CI run and changes no experiment
+or prediction code. All recorded package source hashes remain current.
