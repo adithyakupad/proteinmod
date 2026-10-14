@@ -49,10 +49,10 @@ class ResidueGNN(nn.Module):
 def train_gnn(graph, dynamic, targets, train, validation, test, settings, seed, layers):
     """Select weight decay and epoch using validation only; return selected train-only fit."""
     started = time.perf_counter()
-    if settings["device"] not in ("cpu", "mps"):
-        raise ValueError("M3 supports cpu or mps devices")
-    if settings["device"] == "mps" and not torch.backends.mps.is_available():
-        raise ValueError("MPS unavailable; select cpu")
+    if settings["device"] != "cpu":
+        raise ValueError(
+            "M3 uses deterministic CPU execution; MPS index aggregation is nondeterministic"
+        )
     if settings["max_epochs"] < 1 or settings["batch_size"] < 1 or settings["patience"] < 1:
         raise ValueError("Epochs, batch size and patience must be positive")
     if layers not in (0, 2, 3) or settings["hidden"] < 1 or settings["learning_rate"] <= 0:

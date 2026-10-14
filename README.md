@@ -310,6 +310,6 @@ proteinmod run-m3 --config configs/amylase_m3.toml
 python scripts/report_m3.py --output runs/amylase_m3
 ```
 
-Requires the original pinned dataset and frozen ESM cache (see M1 extraction instructions above); committed validated M2 graph artifacts supply reference geometry. No new structure/model downloads occur during training. Default execution uses deterministic CPU operations on Apple Silicon; `gnn.device = "mps"` is an explicit optional backend.
+Requires the original pinned dataset and frozen ESM cache (see M1 extraction instructions above); committed validated M2 graph artifacts supply reference geometry. No new structure/model downloads occur during training. Execution uses deterministic CPU operations on Apple Silicon. A real MPS smoke test encountered nondeterministic index aggregation, so this milestone explicitly requires CPU.
 
 See [M3 protocol](docs/m3_protocol.md) for features, architecture, filtering, leakage controls and exact reproduction. Verified numerical results, predictions, fit gaps and failure slices are under [M3 benchmark evidence](benchmarks/amylase_m3/report.md). Geometry describes the reference construct, not mutant rearrangements. This single-protein experiment makes no cross-protein claim. No cross-attention, fusion, multitask learning or LM fine-tuning is included.

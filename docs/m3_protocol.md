@@ -53,7 +53,7 @@ python -m venv .venv
 
 M3 reads committed, validated M2 feature/graph artifacts; it does not need to reacquire raw structures. To independently re-extract them, follow `docs/m2_protocol.md` and verify their numerical agreement. Frozen ESM extraction requires the pinned model; subsequent runs can use `extract --local-only`. M3 execution itself is offline. Torch is required for neural experiments; base-only CI still tests M0/M1/M2 and structural inputs, while a dedicated CPU job tests tiny neural/integration cases.
 
-CPU runs work on Apple Silicon without optional native graph extensions. `gnn.device = "mps"` is supported explicitly, with unavailable-device errors and no silent fallback; CPU is the measured deterministic reference. Backend support and numerical reproducibility are version/device specific; do not expect bitwise equivalence between CPU and MPS.
+CPU runs work on Apple Silicon without optional native graph extensions. An actual MPS smoke test on the real 415-node graph failed because PyTorch 2.14.1 index aggregation has no deterministic MPS implementation. M3 therefore explicitly supports CPU only and rejects other devices, preserving the reproducibility requirement instead of silently relaxing determinism. No MPS benchmark result is claimed. Numerical reproducibility remains version/hardware specific.
 
 ## Artifacts and interpretation
 
