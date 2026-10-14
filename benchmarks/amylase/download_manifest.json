@@ -1,0 +1,12 @@
+{
+  "source": {
+    "name": "FLIP2 Alpha Amylase by-mutation",
+    "path": "data/cache/by_mutation.csv.gz",
+    "url": "https://zenodo.org/records/18433203/files/amylase/by_mutation.csv.gz?download=1",
+    "md5": "3acf90685dae45a534c4f12bc9dec6b6",
+    "source": "https://zenodo.org/records/18433203 (v3); https://flip.protein.properties/",
+    "attribution": "FLIP2, Didi et al. (2026); Enzyme structure correlates with variant effect predictability, Van der Flier et al. (2024), CSBJ 23:3489\u20133497; assay data MIT"
+  },
+  "sha256": "2e76acc9da3ef04a8ccecd8a3f631b84ee2e4e1f0cdea406f18153387b986d04",
+  "bytes": 51507
+}
