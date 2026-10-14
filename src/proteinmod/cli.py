@@ -19,6 +19,7 @@ def main():
             "run",
             "extract",
             "run-m1",
+            "run-m3",
             "structure-download",
             "structure-run",
         ),
@@ -26,13 +27,14 @@ def main():
     parser.add_argument("--config", default="configs/amylase.toml")
     parser.add_argument("--data", help="Exact local file; configured checksum still enforced")
     parser.add_argument("--output", help="Override output directory")
+    parser.add_argument("--baseline-only", action="store_true", help="M3 ridge comparisons only")
     parser.add_argument(
         "--local-only", action="store_true", help="Extract using cached model files only"
     )
     args = parser.parse_args()
     with open(args.config, "rb") as handle:
         config = tomllib.load(handle)
-    if args.data:
+    if args.data and args.command != "run-m3":
         section = "structure" if args.command.startswith("structure-") else "dataset"
         config[section]["path"] = args.data
     if args.output:
@@ -43,9 +45,17 @@ def main():
         )
         if args.command.startswith("structure-"):
             section = "structure_run"
+        if args.command == "run-m3":
+            section = "m3"
         config[section]["output"] = args.output
     try:
-        if args.command == "structure-download":
+        if args.command == "run-m3":
+            from proteinmod.structural_experiments import run_structural
+
+            if args.data:
+                raise ValueError("M3 dataset is pinned by its sequence_config; use that config")
+            print(json.dumps(run_structural(config, args.baseline_only), indent=2, allow_nan=False))
+        elif args.command == "structure-download":
             from proteinmod.structure_sources import acquire_structure
 
             print(acquire_structure(config["structure"]))

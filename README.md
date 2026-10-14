@@ -293,8 +293,23 @@ original M0/M1 data/model/experiment modules and artifacts are preserved.
 
 ## Roadmap (not implemented)
 
-Sequence PLM + structural GNN + bidirectional cross-attention; stability/function
+Sequence PLM/structural GNN fusion with bidirectional cross-attention; stability/function
 heads; advanced multi-mutation modeling; progressive protein/family-held-out evaluation.
 M0 already annotates multiple substitutions but implements only elementary supervised
 baselines. Data validation, features, fitting and artifact output are separate modules
 under `src/proteinmod` so later features can be added without changing split handling.
+
+## M3: structural ridge and compact residue GNN
+
+M3 compares mutation-centered structural ridge, a two-layer residue GNN and a zero-message-passing neural control against M0 one-hot and M1 frozen ESM-2 mutation-site ridge. All are refitted on identical structurally valid training subsets and evaluated on the same held-out variants, with validation-only selection. M0/M1/M2 configurations and historical evidence remain unchanged.
+
+```sh
+python -m pip install -e '.[dev,m3,esm]' -r requirements-m3.txt
+proteinmod run-m3 --config configs/amylase_m3.toml --baseline-only --output runs/m3_baseline
+proteinmod run-m3 --config configs/amylase_m3.toml
+python scripts/report_m3.py --output runs/amylase_m3
+```
+
+Requires the original pinned dataset and frozen ESM cache (see M1 extraction instructions above); committed validated M2 graph artifacts supply reference geometry. No new structure/model downloads occur during training. Default execution uses deterministic CPU operations on Apple Silicon; `gnn.device = "mps"` is an explicit optional backend.
+
+See [M3 protocol](docs/m3_protocol.md) for features, architecture, filtering, leakage controls and exact reproduction. Verified numerical results, predictions, fit gaps and failure slices are under [M3 benchmark evidence](benchmarks/amylase_m3/report.md). Geometry describes the reference construct, not mutant rearrangements. This single-protein experiment makes no cross-protein claim. No cross-attention, fusion, multitask learning or LM fine-tuning is included.
