@@ -1,0 +1,88 @@
+{
+  "test": {
+    "training_mean": {
+      "spearman_rho": null,
+      "pearson_r": null,
+      "mae": 0.04896784474290276,
+      "rmse": 0.053985421967479456
+    },
+    "one_hot_ridge": {
+      "spearman_rho": 0.6488374617336031,
+      "pearson_r": 0.6838099463108522,
+      "mae": 0.0336514842032903,
+      "rmse": 0.04284510388159668
+    },
+    "mutation_count_ridge": {
+      "spearman_rho": 0.22954283462051098,
+      "pearson_r": 0.23712257278195062,
+      "mae": 0.04263464646503105,
+      "rmse": 0.053047725682587414
+    }
+  },
+  "selection": {
+    "one_hot_ridge": {
+      "alpha": 1.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.05149437862150898
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.04708470714585098
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.03968294691367329
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.0398397057450372
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.04906455824431856
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.05579020401537182
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "mutation_count_ridge": {
+      "alpha": 10.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.05318189051264849
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.05318188789073654
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.05318186197808749
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.05318163333113109
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.053182233930116854
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.053364455621117905
+        }
+      ],
+      "fit_partition": "train only"
+    }
+  },
+  "skipped": {},
+  "undefined_correlations": "null for constant arrays"
+}

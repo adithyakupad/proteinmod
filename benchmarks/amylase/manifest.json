@@ -1,0 +1,57 @@
+{
+  "config": {
+    "dataset": {
+      "name": "FLIP2 Alpha Amylase by-mutation",
+      "path": "data/cache/by_mutation.csv.gz",
+      "url": "https://zenodo.org/records/18433203/files/amylase/by_mutation.csv.gz?download=1",
+      "md5": "3acf90685dae45a534c4f12bc9dec6b6",
+      "source": "https://zenodo.org/records/18433203 (v3); https://flip.protein.properties/",
+      "attribution": "FLIP2, Didi et al. (2026); Enzyme structure correlates with variant effect predictability, Van der Flier et al. (2024), CSBJ 23:3489\u20133497; assay data MIT"
+    },
+    "reference": {
+      "sequence": "LTAPSIKSGTILHAWNWSFNTLKHNMKDIHDAGYTAIQTSPINQVKEGNQGDKSMSNWYWLYQPTSYQIGNRYLGTEQEFKEMCAAAEEYGIKVIVDAVINHTTSDYAAISNEVKSIPNWTHGNTPIKNWSDRWDVTQNSLSGLYDWNTQNTQVQSYLKRFLDRALNDGADGFRFDAAKHIELPDDGSYGSQFWPNITNTSAEFQYGEILQDSVSRDAAYANYMDVTASNYGHSIRSALKNRNLGVSNISHYAVDVSADKLVTWVESHDTYANDDEESTWMSDDDIRLGWAVIASRSGSTPLFFSRPEGGGNGVRFPGKSQIGDRGSALFEDQAITAVNRFHNVMAGQPEELSNPNGNNQIFMNQRGSHGVVLANAGSSSVSINTATKLPDGRYDNKAGAGSFQVNDGKLTGTINARSVAVLYPD",
+      "source": "https://github.com/florisvdf/mutation-predictability/blob/main/data/AMY_BACSU/reference.fasta",
+      "git_blob": "920b6c14b659029dd1f5497329dab98c0c8755e2"
+    },
+    "run": {
+      "seed": 0,
+      "alphas": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0,
+        1000.0
+      ],
+      "output": "runs/amylase"
+    }
+  },
+  "created_at_utc": "2026-10-14T15:42:20.722769+00:00",
+  "source_sha256": {
+    "__init__.py": "2ba3408e090d882b309c397a9af8c57448223d771a6f4346739247b8689db135",
+    "benchmark.py": "612f88149ff86d96d81f45e8b6fcfe06b900724fbfa16ad7ecb43eb6b6bf249a",
+    "cli.py": "a663740ffa5585ce9961d36e7b9cd806418fa804fa8690354e3e6330297c7d4c",
+    "data.py": "da870c4a406ea0ae9fcb9ecddbe6f49b98cb99f567fc3796659102ef2e576620",
+    "models.py": "81256a2cf7729d8cbc50b0da17295f0812b62d8c618adfce87d0e0ef0a11ee6c"
+  },
+  "dataset_sha256": "2e76acc9da3ef04a8ccecd8a3f631b84ee2e4e1f0cdea406f18153387b986d04",
+  "python": "3.12.15",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "versions": {
+    "proteinmod": "0.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1"
+  },
+  "git_revision": "8464ac5ede1672b4b18081793e17e1e1a42c5e46",
+  "git_dirty": false,
+  "elapsed_seconds": 1.7292371671646833,
+  "selection": "validation RMSE only; no refit on validation; no scaling",
+  "artifacts": [
+    "qc.json",
+    "metrics.json",
+    "manifest.json",
+    "test_predictions.csv",
+    "report.md"
+  ]
+}

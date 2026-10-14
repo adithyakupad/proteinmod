@@ -1,0 +1,17 @@
+[dataset]
+name = "FLIP2 Alpha Amylase by-mutation"
+path = "data/cache/by_mutation.csv.gz"
+url = "https://zenodo.org/records/18433203/files/amylase/by_mutation.csv.gz?download=1"
+md5 = "3acf90685dae45a534c4f12bc9dec6b6"
+source = "https://zenodo.org/records/18433203 (v3); https://flip.protein.properties/"
+attribution = "FLIP2, Didi et al. (2026); Enzyme structure correlates with variant effect predictability, Van der Flier et al. (2024), CSBJ 23:3489–3497; assay data MIT"
+
+[reference]
+sequence = "LTAPSIKSGTILHAWNWSFNTLKHNMKDIHDAGYTAIQTSPINQVKEGNQGDKSMSNWYWLYQPTSYQIGNRYLGTEQEFKEMCAAAEEYGIKVIVDAVINHTTSDYAAISNEVKSIPNWTHGNTPIKNWSDRWDVTQNSLSGLYDWNTQNTQVQSYLKRFLDRALNDGADGFRFDAAKHIELPDDGSYGSQFWPNITNTSAEFQYGEILQDSVSRDAAYANYMDVTASNYGHSIRSALKNRNLGVSNISHYAVDVSADKLVTWVESHDTYANDDEESTWMSDDDIRLGWAVIASRSGSTPLFFSRPEGGGNGVRFPGKSQIGDRGSALFEDQAITAVNRFHNVMAGQPEELSNPNGNNQIFMNQRGSHGVVLANAGSSSVSINTATKLPDGRYDNKAGAGSFQVNDGKLTGTINARSVAVLYPD"
+source = "https://github.com/florisvdf/mutation-predictability/blob/main/data/AMY_BACSU/reference.fasta"
+git_blob = "920b6c14b659029dd1f5497329dab98c0c8755e2"
+
+[run]
+seed = 0
+alphas = [0.01, 0.1, 1.0, 10.0, 100.0, 1000.0]
+output = "runs/amylase"

@@ -1,0 +1,57 @@
+{
+  "rows": 3706,
+  "lengths": {
+    "425": 3706
+  },
+  "counts": {
+    "train": 2403,
+    "validation": 601,
+    "test": 702
+  },
+  "ids": "generated 1-based source row IDs",
+  "missing_ids": 0,
+  "duplicate_ids": 0,
+  "duplicate_sequences": 0,
+  "cross_partition_sequence_overlap": false,
+  "validation_flag_set_overlap_counts": {
+    "train": 601
+  },
+  "split_semantics": "validation=True overrides set=train; test overlap rejected",
+  "reference_verified": true,
+  "mutation_burden": {
+    "train": {
+      "0": 1,
+      "1": 355,
+      "2": 753,
+      "3": 698,
+      "4": 382,
+      "5": 167,
+      "6": 37,
+      "7": 8,
+      "8": 2
+    },
+    "validation": {
+      "1": 98,
+      "2": 167,
+      "3": 170,
+      "4": 102,
+      "5": 40,
+      "6": 18,
+      "7": 6
+    },
+    "test": {
+      "1": 35,
+      "2": 127,
+      "3": 197,
+      "4": 190,
+      "5": 103,
+      "6": 38,
+      "7": 12
+    }
+  },
+  "unique_substitution_overlap_counts": {
+    "train/validation": 867,
+    "train/test": 410,
+    "validation/test": 272
+  }
+}
