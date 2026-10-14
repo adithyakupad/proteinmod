@@ -1,0 +1,9 @@
+{
+  "protocol": "G1",
+  "model": "bidirectional",
+  "seed": 0,
+  "all_checkpoint_tensors_exact": true,
+  "selection_exact": true,
+  "n_predictions": 262,
+  "max_prediction_difference": 0.0
+}

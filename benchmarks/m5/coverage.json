@@ -1,0 +1,29 @@
+{
+  "amylase": {
+    "reference_length": 425,
+    "mapped_nodes": 415,
+    "reference_coverage": 0.9764705882352941,
+    "reference_bfactor_median_a2": 18.38,
+    "confidence_kind": "experimental B factors; not calibrated confidence or pLDDT",
+    "selected_variants": 600,
+    "excluded_variants": 22
+  },
+  "gb1": {
+    "reference_length": 56,
+    "mapped_nodes": 55,
+    "reference_coverage": 0.9821428571428571,
+    "reference_bfactor_median_a2": 8.87,
+    "confidence_kind": "experimental B factors; not calibrated confidence or pLDDT",
+    "selected_variants": 600,
+    "excluded_variants": 0
+  },
+  "nucb": {
+    "reference_length": 110,
+    "mapped_nodes": 109,
+    "reference_coverage": 0.990909090909091,
+    "reference_bfactor_median_a2": 12.74,
+    "confidence_kind": "experimental B factors; not calibrated confidence or pLDDT",
+    "selected_variants": 600,
+    "excluded_variants": 47
+  }
+}

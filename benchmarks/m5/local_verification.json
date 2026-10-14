@@ -1,0 +1,25 @@
+{
+  "local_full_pytest": "108 passed",
+  "local_core_pytest": "90 passed, 5 skipped (optional torch and DSSP unavailable)",
+  "ruff_check": "passed",
+  "ruff_format": "60 files already formatted",
+  "historical_files_unchanged_vs_stacked_base": 121,
+  "historical_base_commit": "d24e28086c73f2222300b3f8674cddd5d12649d9",
+  "M3_replay": {
+    "M3_checkpoint_replay_max_prediction_difference": 0.0,
+    "n_test": 700,
+    "parameters_unchanged": true
+  },
+  "M4_replay": {
+    "M4_G1_GNN_replay_max_prediction_difference": 0.0,
+    "n_test": 262
+  },
+  "CI": {
+    "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38645006772",
+    "head": "c0282c98a09a004817887f7b7bc4dbd76d16f7bd",
+    "jobs": "all five successful: Python 3.11,3.12,3.13,3.14 offline and neural CPU"
+  },
+  "benchmark_launch_commit": "f96a3cd",
+  "scientific_code_changed_after_launch": false,
+  "post_launch_changes": "reporting, additional offline tests, stricter historical output guard only"
+}
