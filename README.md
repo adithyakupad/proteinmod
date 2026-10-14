@@ -340,3 +340,17 @@ python scripts/report_m4.py --output runs/m4
 Requires the original M1 amylase embedding cache and the pinned frozen ESM checkpoint; fresh-machine commands, licenses, domain crops, leakage controls and limitations are in [the M4 protocol](docs/m4_protocol.md). No ProteinGym-wide download is needed. Each assay contributes at most 600 variants selected without labels. The shared structural GNN uses the M2/M3 graph definitions and one scalar head; no cross-attention, fusion, LoRA or multitask heads are added.
 
 Verified predictions, per-protein and macro scores, cohort exclusions and plots are in [M4 benchmark evidence](benchmarks/m4/report.md). Family annotations and sequence-alignment audits do **not** establish unseen-family generalization. M0–M3 historical artifacts remain unchanged.
+
+Actual M4 results (equal-protein macro Spearman, **structure-matched cohort**, two GNN seeds):
+
+| Model | G1 known proteins | G2 held-out proteins |
+|---|---:|---:|
+| Mutation-count ridge | 0.1663 | 0.1965 |
+| Transferable sequence ridge | 0.3938 | 0.1428 |
+| Frozen ESM mutation-site probe | 0.4932 | 0.1258 |
+| Structural ridge | 0.4612 | 0.1669 |
+| Structural GNN | 0.4704 ± 0.0227 | 0.1300 ± 0.0010 |
+
+G1 evaluates original held-out variants; primary G2 evaluates all selected variants of a held-out protein. The report additionally evaluates G2 on exactly the G1 test IDs, preserving the transfer drop (ESM 0.4932→0.1182; GNN 0.4704→0.1497). G1-only per-protein one-hot ridge reaches 0.6254; its position-specific coefficients are not transferred across unaligned proteins.
+
+Transfer is weak and does not establish a structural-model advantage. NucB G2 correlations are near zero or negative; protein and assay-endpoint shifts are confounded. The repeated local experiment took about 60 seconds and reproduced all 18,700 predictions exactly; all 103 historical M0–M3 files remained unchanged. See the report for per-protein scores, explicit exclusions, seed variation, computational costs and limitations.

@@ -1,0 +1,13 @@
+{
+  "full_experiment_reproduction_max_prediction_difference": 0.0,
+  "predictions_checked": 18700,
+  "first_revision": "1a54ef0",
+  "repeat_revision": "e6c3b7d",
+  "first_prediction_sha256": "29067079d8d9629067ed46359dd6d64bb0d41e42d358225245d12e249c718bd1",
+  "repeat_prediction_sha256": "29067079d8d9629067ed46359dd6d64bb0d41e42d358225245d12e249c718bd1",
+  "m3_replay": {
+    "M3_checkpoint_replay_max_prediction_difference": 0.0,
+    "n_test": 700,
+    "parameters_unchanged": true
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "amylase": {
+    "config": {
+      "structure": {
+        "name": "1UA7 cif experimental context",
+        "kind": "pdb",
+        "format": "cif",
+        "path": "data/cache/structures/1UA7.cif",
+        "sha256": "40c6c7750dba6496cb207d977831e250382eee93207afaca88af659aac184f22",
+        "source": "https://www.rcsb.org/structure/1UA7",
+        "license": "wwPDB CC0; cite PDB deposition and primary publication",
+        "confidence": "experimental_bfactor",
+        "id": "1UA7"
+      },
+      "reference": {
+        "sequence": "LTAPSIKSGTILHAWNWSFNTLKHNMKDIHDAGYTAIQTSPINQVKEGNQGDKSMSNWYWLYQPTSYQIGNRYLGTEQEFKEMCAAAEEYGIKVIVDAVINHTTSDYAAISNEVKSIPNWTHGNTPIKNWSDRWDVTQNSLSGLYDWNTQNTQVQSYLKRFLDRALNDGADGFRFDAAKHIELPDDGSYGSQFWPNITNTSAEFQYGEILQDSVSRDAAYANYMDVTASNYGHSIRSALKNRNLGVSNISHYAVDVSADKLVTWVESHDTYANDDEESTWMSDDDIRLGWAVIASRSGSTPLFFSRPEGGGNGVRFPGKSQIGDRGSALFEDQAITAVNRFHNVMAGQPEELSNPNGNNQIFMNQRGSHGVVLANAGSSSVSINTATKLPDGRYDNKAGAGSFQVNDGKLTGTINARSVAVLYPD",
+        "source": "https://github.com/florisvdf/mutation-predictability/blob/main/data/AMY_BACSU/reference.fasta",
+        "git_blob": "920b6c14b659029dd1f5497329dab98c0c8755e2"
+      },
+      "mapping": {
+        "chain": "A",
+        "model_index": 0,
+        "min_coverage": 0.95,
+        "min_identity": 0.98,
+        "allowed_mismatches": [
+          "S105F",
+          "P126Q",
+          "S142L",
+          "D163E",
+          "V214A",
+          "V254S",
+          "N356Q"
+        ]
+      },
+      "geometry": {
+        "contact_cutoff_a": 8.0,
+        "sasa_points": 960,
+        "dssp": "auto"
+      },
+      "structure_run": {
+        "output": "runs/m2_verification/amylase_m2"
+      },
+      "dataset_variants": {
+        "config": "configs/amylase.toml",
+        "first_n": 5
+      },
+      "variants": [
+        {
+          "id": "reference",
+          "mutations": []
+        },
+        {
+          "id": "synthetic-multi",
+          "mutations": [
+            "T10A",
+            "T200A"
+          ]
+        },
+        {
+          "id": "synthetic-N-terminus",
+          "mutations": [
+            "L1A"
+          ]
+        },
+        {
+          "id": "synthetic-construct-mismatch",
+          "mutations": [
+            "P126A"
+          ]
+        }
+      ]
+    },
+    "coordinate_sha256": "40c6c7750dba6496cb207d977831e250382eee93207afaca88af659aac184f22",
+    "dataset_variants": {
+      "dataset_sha256": "2e76acc9da3ef04a8ccecd8a3f631b84ee2e4e1f0cdea406f18153387b986d04",
+      "selected_source_row_ids": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "fitness_labels_used": false
+    },
+    "created_at_utc": "2026-10-14T19:16:26.941801+00:00",
+    "elapsed_seconds": 4.957226667087525,
+    "python": "3.12.15",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "plotter_version": "3.11.2",
+    "versions": {
+      "proteinmod": "0.1.0",
+      "biopython": "1.88",
+      "numpy": "2.5.4"
+    },
+    "git_revision": "57d014da32bb4fc9526582291d0b006cee07e8b5",
+    "git_dirty": false,
+    "source_sha256": {
+      "__init__.py": "2ba3408e090d882b309c397a9af8c57448223d771a6f4346739247b8689db135",
+      "benchmark.py": "612f88149ff86d96d81f45e8b6fcfe06b900724fbfa16ad7ecb43eb6b6bf249a",
+      "cli.py": "a2cb5f6019d02a5747d3d89fd8368a2267d8d0214c10a1ea85abda76779f66e7",
+      "data.py": "da870c4a406ea0ae9fcb9ecddbe6f49b98cb99f567fc3796659102ef2e576620",
+      "embeddings.py": "0b00ff2aac096e133a09c8d824ab158ef3c24c79ee3e5361f96dd24339f700c5",
+      "experiments.py": "22d4c8751d0514feccef816dd97d8b5a4126fb8938b62ddf3c52386d1ba180bd",
+      "models.py": "81256a2cf7729d8cbc50b0da17295f0812b62d8c618adfce87d0e0ef0a11ee6c",
+      "structure_features.py": "f43f3eda8d540c2f67a3bdb03d184650101d3474d59aaeb7034b7f9aa02dbb57",
+      "structure_mapping.py": "e091f318fa1e880c78aa7517a931e4012179ce7ae863525e30e6d3124ec61436",
+      "structure_pipeline.py": "d5ba103dbf3457fa469831506a50dd3cd5733d829d51981c6034a7a521c116de",
+      "structure_sources.py": "185e43de09eae94bb65befad6761695a40c639ead660c5f310b6b0548422d0d9"
+    },
+    "artifact_sha256": {
+      "audit.json": "1c80894fd4f8368bce65351c77a25fc6df3dee2c37cb0dc22ffdcb809fb5379f",
+      "contacts.csv": "98032a38039d87e2aee8fe62793b4daf8849d6a146a6ae34e87852c20552e131",
+      "report.md": "b1ae23f8a4b86168273b410e2bcd3318f9135b8ed33c410b09b0bd7331311a0f",
+      "residues.csv": "d627dd374c18cbdb3c3c6386f073ed29ae9a21bef7d01e31235ed0b5b1f8805f",
+      "residues.json": "202adbf4290638639bd6ff2cdd91a616ed8bb6bc1b111b8e65285cf557fdc335",
+      "structure_context.png": "a14093f9c26e0ecc4fe933a9cf9cd7b823b1d24b3aa8e152cf57535d92f403eb",
+      "structure_context.svg": "3bacb11ad9d369fd92134dc2f5e78e6d2dfe3895d15210aca3f5dfae82651487",
+      "variants.csv": "03f3514c916f5ae9d4ea1b562b82e156a8b5f1785ea435dbdd2d8ce709902611",
+      "variants.json": "690de78cfa0e27030c13dc754dc15a1abc38fea4330e68e6874cf3fc1f8f7a66"
+    },
+    "confidence_semantics": "experimental_bfactor",
+    "context": "reference-structure context only"
+  },
+  "gb1": {
+    "config": {
+      "structure": {
+        "name": "1PGA experimental reference context",
+        "kind": "pdb",
+        "format": "cif",
+        "path": "data/cache/m4/1PGA.cif",
+        "id": "1PGA",
+        "sha256": "e8d9e171a9ca2b7e66b10568bf6d0122da8450e57ad632a7b4c13c6a71f7edf2",
+        "source": "https://www.rcsb.org/structure/1PGA",
+        "license": "wwPDB CC0; cite deposition and primary publication",
+        "confidence": "experimental_bfactor"
+      },
+      "reference": {
+        "sequence": "MQYKLILNGKTLKGETTTEAVDAATAEKVFKQYANDNGVDGEWTYDDATKTFTVTE",
+        "source": "https://zenodo.org/records/18433203/files/gb1/sampled.csv.gz (designated WT first row; GB1 core agrees with Wu 2016 reference)",
+        "sha256": "6d140c4f60bede5a68db37a9b38a43c4227c4cdf198675dae4ab09d57e871234"
+      },
+      "mapping": {
+        "chain": "A",
+        "model_index": 0,
+        "min_coverage": 0.95,
+        "min_identity": 0.98,
+        "allowed_mismatches": [
+          "Q2T"
+        ]
+      },
+      "geometry": {
+        "contact_cutoff_a": 8.0,
+        "sasa_points": 960,
+        "dssp": "off"
+      },
+      "structure_run": {
+        "output": "data/cache/m4/graphs/gb1"
+      }
+    },
+    "coordinate_sha256": "e8d9e171a9ca2b7e66b10568bf6d0122da8450e57ad632a7b4c13c6a71f7edf2",
+    "dataset_variants": null,
+    "created_at_utc": "2026-10-14T21:27:19.161364+00:00",
+    "elapsed_seconds": 0.5455412499140948,
+    "python": "3.12.15",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "plotter_version": "not used",
+    "versions": {
+      "proteinmod": "0.1.0",
+      "biopython": "1.88",
+      "numpy": "2.5.4"
+    },
+    "git_revision": "e6c3b7d0d8174f4c46c22652d2358f7e4da316c9",
+    "git_dirty": false,
+    "source_sha256": {
+      "__init__.py": "2ba3408e090d882b309c397a9af8c57448223d771a6f4346739247b8689db135",
+      "benchmark.py": "612f88149ff86d96d81f45e8b6fcfe06b900724fbfa16ad7ecb43eb6b6bf249a",
+      "cli.py": "9bff0b7c80cc043dd6e7e2f84287c4f6d52e648aa4c6e419cce928c6920b0f2e",
+      "data.py": "da870c4a406ea0ae9fcb9ecddbe6f49b98cb99f567fc3796659102ef2e576620",
+      "embeddings.py": "0b00ff2aac096e133a09c8d824ab158ef3c24c79ee3e5361f96dd24339f700c5",
+      "experiments.py": "22d4c8751d0514feccef816dd97d8b5a4126fb8938b62ddf3c52386d1ba180bd",
+      "models.py": "81256a2cf7729d8cbc50b0da17295f0812b62d8c618adfce87d0e0ef0a11ee6c",
+      "multiprotein_data.py": "a11932cfba7546c0a43182fc7ebeaa7cc6b42a3b849b6e67bdd97738f0e5a261",
+      "multiprotein_experiments.py": "b7172eaea59629521361364a1fe7d04116a672ae19808d5295436549019dbbea",
+      "structural_experiments.py": "388b40b400e007ec17131535858cdb90cb3f34a0eccaa817470617921325c12f",
+      "structural_gnn.py": "f8e8d69807a5fa208e340b30f4f9f6a903cbaaf1683f9bd5d98b9307eea7d1cb",
+      "structural_graph.py": "6f45050e99fb23d9b889f7b6bbe41558b30c6b8e2534f7618328473e853771e4",
+      "structure_features.py": "f43f3eda8d540c2f67a3bdb03d184650101d3474d59aaeb7034b7f9aa02dbb57",
+      "structure_mapping.py": "e091f318fa1e880c78aa7517a931e4012179ce7ae863525e30e6d3124ec61436",
+      "structure_pipeline.py": "d5ba103dbf3457fa469831506a50dd3cd5733d829d51981c6034a7a521c116de",
+      "structure_sources.py": "185e43de09eae94bb65befad6761695a40c639ead660c5f310b6b0548422d0d9"
+    },
+    "artifact_sha256": {
+      "audit.json": "d400042db4d48fbf15356bc786eaef8ba2230997cea8b96194b2ca33c0a18d98",
+      "contacts.csv": "2df62909f40724bce5043c7b006228ddfe85ab292fdb2f7c66ffa5c4b5b7234e",
+      "report.md": "5c761ab2ea98219475c651c911ec0307777fc842c54645c1c94de4b7640b93ef",
+      "residues.csv": "df85670621bd0e8bbb8b5c6c9212a380333c74549040c35cacc0684c4b849104",
+      "residues.json": "b98deca48903d9fd917ae5d78c1ac9682599809fe322f11df2a815bd36bfb458",
+      "variants.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "variants.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "confidence_semantics": "experimental_bfactor",
+    "context": "reference-structure context only"
+  },
+  "nucb": {
+    "config": {
+      "structure": {
+        "name": "5OMT experimental reference context",
+        "kind": "pdb",
+        "format": "cif",
+        "path": "data/cache/m4/5OMT.cif",
+        "id": "5OMT",
+        "sha256": "26ea37a4d39da38fa731decdea2afe68554fceca4238c6e97765f9f4886b4553",
+        "source": "https://www.rcsb.org/structure/5OMT",
+        "license": "wwPDB CC0; cite deposition and primary publication",
+        "confidence": "experimental_bfactor"
+      },
+      "reference": {
+        "sequence": "AARYDDVLYFPASRYPETGAHISDAIKAGHADVCTIERSGADKRRQESLKGIPTKPGFDRDEWPMAMCEEGGKGASVRYVSSSDNRGAGSWVGNRLNGYADGTRILFIVQ",
+        "source": "https://github.com/google-deepmind/nuclease_design/blob/702284847c4558567d8288169a86dc147cfaab32/nuclease_design/constants.py#L21",
+        "sha256": "3d2330d61bc81dee4ce014a75498aa6c1a1c63fe59a7a8e575463e04f345ae35"
+      },
+      "mapping": {
+        "chain": "A",
+        "model_index": 0,
+        "min_coverage": 0.95,
+        "min_identity": 0.98,
+        "allowed_mismatches": []
+      },
+      "geometry": {
+        "contact_cutoff_a": 8.0,
+        "sasa_points": 960,
+        "dssp": "off"
+      },
+      "structure_run": {
+        "output": "data/cache/m4/graphs/nucb"
+      }
+    },
+    "coordinate_sha256": "26ea37a4d39da38fa731decdea2afe68554fceca4238c6e97765f9f4886b4553",
+    "dataset_variants": null,
+    "created_at_utc": "2026-10-14T21:27:25.347602+00:00",
+    "elapsed_seconds": 1.047205625101924,
+    "python": "3.12.15",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "plotter_version": "not used",
+    "versions": {
+      "proteinmod": "0.1.0",
+      "biopython": "1.88",
+      "numpy": "2.5.4"
+    },
+    "git_revision": "e6c3b7d0d8174f4c46c22652d2358f7e4da316c9",
+    "git_dirty": false,
+    "source_sha256": {
+      "__init__.py": "2ba3408e090d882b309c397a9af8c57448223d771a6f4346739247b8689db135",
+      "benchmark.py": "612f88149ff86d96d81f45e8b6fcfe06b900724fbfa16ad7ecb43eb6b6bf249a",
+      "cli.py": "9bff0b7c80cc043dd6e7e2f84287c4f6d52e648aa4c6e419cce928c6920b0f2e",
+      "data.py": "da870c4a406ea0ae9fcb9ecddbe6f49b98cb99f567fc3796659102ef2e576620",
+      "embeddings.py": "0b00ff2aac096e133a09c8d824ab158ef3c24c79ee3e5361f96dd24339f700c5",
+      "experiments.py": "22d4c8751d0514feccef816dd97d8b5a4126fb8938b62ddf3c52386d1ba180bd",
+      "models.py": "81256a2cf7729d8cbc50b0da17295f0812b62d8c618adfce87d0e0ef0a11ee6c",
+      "multiprotein_data.py": "a11932cfba7546c0a43182fc7ebeaa7cc6b42a3b849b6e67bdd97738f0e5a261",
+      "multiprotein_experiments.py": "b7172eaea59629521361364a1fe7d04116a672ae19808d5295436549019dbbea",
+      "structural_experiments.py": "388b40b400e007ec17131535858cdb90cb3f34a0eccaa817470617921325c12f",
+      "structural_gnn.py": "f8e8d69807a5fa208e340b30f4f9f6a903cbaaf1683f9bd5d98b9307eea7d1cb",
+      "structural_graph.py": "6f45050e99fb23d9b889f7b6bbe41558b30c6b8e2534f7618328473e853771e4",
+      "structure_features.py": "f43f3eda8d540c2f67a3bdb03d184650101d3474d59aaeb7034b7f9aa02dbb57",
+      "structure_mapping.py": "e091f318fa1e880c78aa7517a931e4012179ce7ae863525e30e6d3124ec61436",
+      "structure_pipeline.py": "d5ba103dbf3457fa469831506a50dd3cd5733d829d51981c6034a7a521c116de",
+      "structure_sources.py": "185e43de09eae94bb65befad6761695a40c639ead660c5f310b6b0548422d0d9"
+    },
+    "artifact_sha256": {
+      "audit.json": "9ea3555203bdc9a4e41d60bc552bcd205839997ebd3a32ea532ddab6d54eae0e",
+      "contacts.csv": "21ed7354ce14d462ba2854aaff1abe2e82f3c2bccdb8adce570da852385d4514",
+      "report.md": "22bb47954ae4377e7dceeda59e92a47878e78d1894a2b2e69a22e3ce5e7107c6",
+      "residues.csv": "b32f525e1a585a75446bbfc6c19b6824a3ab7a5a06388ee25e1b78d2d1ddad10",
+      "residues.json": "4edb608e7b1ebd47e6dec2ba0b42ae7c761001eaf08265b6fc6f1a38ac232a2f",
+      "variants.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "variants.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "confidence_semantics": "experimental_bfactor",
+    "context": "reference-structure context only"
+  }
+}

@@ -127,6 +127,38 @@ def report(output):
         )
     write_csv(output / "per_protein.csv", per)
     write_csv(output / "aggregate.csv", aggregate)
+    paired = []
+    for run in runs:
+        if run["protocol"] != "G2":
+            continue
+        role = next(
+            a for a in audit["roles"] if a["protocol"] == "G1" and a["cohort"] == run["cohort"]
+        )
+        allowed = set(role["ids"]["test"])
+        group = [
+            p
+            for p in predictions
+            if p["protocol"] == "G2"
+            and p["fold"] == run["fold"]
+            and p["model"] == run["model"]
+            and p["cohort"] == run["cohort"]
+            and int(p["seed"]) == run["seed"]
+            and p["id"] in allowed
+        ]
+        score = metrics(
+            [float(p["measured"]) for p in group], [float(p["prediction"]) for p in group]
+        )["spearman_rho"]
+        paired.append(
+            {
+                "cohort": run["cohort"],
+                "model": run["model"],
+                "seed": run["seed"],
+                "protein_id": run["fold"],
+                "n_test": len(group),
+                "g2_rho_on_g1_test_ids": score,
+            }
+        )
+    write_csv(output / "g2_on_g1_test_ids.csv", paired)
     lines = [
         "# M4 cross-protein pilot",
         "",
@@ -158,7 +190,33 @@ def report(output):
         lines.append(
             f"| {r['protocol']} | {r['cohort']} | {r['model']} | {r['protein_id']} | {r['n_test']} | {mean} | {sd} |"
         )
-    lines += ["", "## G2 roles and leakage controls", ""]
+    lines += [
+        "",
+        "## Same-test-ID comparison",
+        "",
+        "Primary G2 evaluates every selected variant of a held-out protein, whereas G1 evaluates only its original held-out variant partition. The following additional descriptive comparison restricts G2 predictions to exactly the G1 test IDs; it does not retrain/select models.",
+        "",
+        "| Cohort | Model | G1 macro rho | G2 macro rho on same test IDs |",
+        "|---|---|---:|---:|",
+    ]
+    for row in aggregate:
+        if row["protocol"] != "G1" or row["model"] == "within_one_hot":
+            continue
+        group = [p for p in paired if p["cohort"] == row["cohort"] and p["model"] == row["model"]]
+        value = np.mean(
+            [
+                p["g2_rho_on_g1_test_ids"] if p["g2_rho_on_g1_test_ids"] is not None else 0
+                for p in group
+            ]
+        )
+        lines.append(f"| {row['cohort']} | {row['model']} | {row['macro_rho']:.5f} | {value:.5f} |")
+    lines += [
+        "",
+        "G1 and G2 still use different training/validation protein sets and budgets, so this is a protocol comparison, not a causal ablation. With one assay per protein, protein shift and assay-endpoint shift are confounded.",
+        "",
+        "## G2 roles and leakage controls",
+        "",
+    ]
     for r in audit["roles"]:
         if r["protocol"] == "G2" and r["cohort"] == "sequence_all":
             lines.append(
@@ -201,7 +259,7 @@ def report(output):
         "",
         "Compare G1 with G2 on the same cohort rather than selecting a model after seeing held-out test scores. Negative correlations and undefined constant-prediction correlations are retained. Undefined validation correlations count as zero during selection; reports disclose undefined test correlations and their denominators.",
         "NucB is a tied four-level ordinal activity label, GB1 measures binding in a fusion assay, and Alpha Amylase measures activity. Rank alignment removes scale differences but does not make these biological endpoints identical. Source/assay shift, sparse GB1 mutated sites, mutation-burden differences and structure exclusions can dominate transfer.",
-        "Two GNN seeds measure initialization/training variation, not uncertainty over future proteins. Three protein folds are too few for a broad generalization claim.",
+        "Two GNN seeds measure initialization/training variation, not uncertainty over future proteins. Small macro seed SD can hide opposing per-protein variation; inspect the per-protein table. Three protein folds are too few for a broad generalization claim.",
         "",
         "## Compute and reproducibility",
         "",
@@ -219,9 +277,17 @@ def report(output):
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.5), constrained_layout=True)
     for ax, protocol in zip(axes, ["G1", "G2"], strict=True):
         selected = [
-            r for r in aggregate if r["protocol"] == protocol and r["cohort"] == "structure_matched"
+            r
+            for r in aggregate
+            if r["protocol"] == protocol
+            and r["cohort"] == "structure_matched"
+            and r["model"] != "within_one_hot"
         ]
-        ax.barh([r["model"] for r in selected], [r["macro_rho"] or 0 for r in selected])
+        ax.barh(
+            [r["model"] for r in selected],
+            [r["macro_rho"] or 0 for r in selected],
+            xerr=[r["macro_seed_sd"] or 0 for r in selected],
+        )
         ax.axvline(0, color="gray", linewidth=0.8)
         ax.set(
             title=protocol + " matched structural cohort",

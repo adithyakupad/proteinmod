@@ -1,0 +1,241 @@
+{
+  "config": {
+    "collection": [
+      {
+        "protein_id": "amylase",
+        "assay_id": "FLIP2_amylase_by_mutation_v3",
+        "family": "alpha-amylase (GH13; annotation only)",
+        "target_type": "continuous activity",
+        "dataset": {
+          "name": "FLIP2 Alpha Amylase by-mutation",
+          "path": "data/cache/by_mutation.csv.gz",
+          "url": "https://zenodo.org/records/18433203/files/amylase/by_mutation.csv.gz?download=1",
+          "md5": "3acf90685dae45a534c4f12bc9dec6b6",
+          "source": "https://zenodo.org/records/18433203 (v3); https://flip.protein.properties/",
+          "attribution": "FLIP2, Didi et al. (2026); Enzyme structure correlates with variant effect predictability, Van der Flier et al. (2024), CSBJ 23:3489\u20133497; assay data MIT",
+          "license": "MIT original assay (FLIP2 README); CC-BY-4.0 Zenodo record"
+        },
+        "reference": {
+          "sequence": "LTAPSIKSGTILHAWNWSFNTLKHNMKDIHDAGYTAIQTSPINQVKEGNQGDKSMSNWYWLYQPTSYQIGNRYLGTEQEFKEMCAAAEEYGIKVIVDAVINHTTSDYAAISNEVKSIPNWTHGNTPIKNWSDRWDVTQNSLSGLYDWNTQNTQVQSYLKRFLDRALNDGADGFRFDAAKHIELPDDGSYGSQFWPNITNTSAEFQYGEILQDSVSRDAAYANYMDVTASNYGHSIRSALKNRNLGVSNISHYAVDVSADKLVTWVESHDTYANDDEESTWMSDDDIRLGWAVIASRSGSTPLFFSRPEGGGNGVRFPGKSQIGDRGSALFEDQAITAVNRFHNVMAGQPEELSNPNGNNQIFMNQRGSHGVVLANAGSSSVSINTATKLPDGRYDNKAGAGSFQVNDGKLTGTINARSVAVLYPD",
+          "source": "https://github.com/florisvdf/mutation-predictability/blob/main/data/AMY_BACSU/reference.fasta",
+          "git_blob": "920b6c14b659029dd1f5497329dab98c0c8755e2"
+        },
+        "crop": [
+          0,
+          425
+        ],
+        "structure_artifacts": "benchmarks/structures/amylase_m2",
+        "existing_embedding_config": "configs/amylase_m1.toml"
+      },
+      {
+        "protein_id": "gb1",
+        "assay_id": "FLIP2_gb1_sampled_v3",
+        "family": "Protein G immunoglobulin-binding domain; annotation only",
+        "target_type": "continuous IgG binding",
+        "citation": "https://doi.org/10.7554/eLife.16965",
+        "dataset": {
+          "path": "data/cache/m4/gb1/sampled.csv.gz",
+          "url": "https://zenodo.org/records/18433203/files/gb1/sampled.csv.gz?download=1",
+          "sha256": "eda3778dcb7028978130f1d5ef856f17783f236587b7be9fc72301e2e1cf0ea0",
+          "license": "CC-BY-4.0 (dataset-specific README; Zenodo v3)",
+          "source": "https://zenodo.org/records/18433203"
+        },
+        "full_reference": {
+          "sequence": "MQYKLILNGKTLKGETTTEAVDAATAEKVFKQYANDNGVDGEWTYDDATKTFTVTELEVLFQGPLDPNSMATYEVLCEVARKLGTDDREVVLFLLNVFIPQPTLAQLIGALRALKEEGRLTFPLLAECLFRAGRRDLLRDLLHLDPRFLERHLAGTMSYFSPYQLTVLHVDGELCARDIRSLIFLSKDTIGSRSTPQTFLHWVYCMENLDLLGPTDVDALMSMLRSLSRVDLQRQVQTLMGLHLSGPSHSQHYRHTPLEHHHHHH",
+          "source": "https://zenodo.org/records/18433203/files/gb1/sampled.csv.gz (designated WT first row; GB1 core agrees with Wu 2016 reference)",
+          "sha256": "eeb5c7b9a3a11ecee612b5bb28aea8f7104b417824d932da46703f17e87d3e85"
+        },
+        "reference": {
+          "sequence": "MQYKLILNGKTLKGETTTEAVDAATAEKVFKQYANDNGVDGEWTYDDATKTFTVTE",
+          "source": "https://zenodo.org/records/18433203/files/gb1/sampled.csv.gz (designated WT first row; GB1 core agrees with Wu 2016 reference)",
+          "sha256": "6d140c4f60bede5a68db37a9b38a43c4227c4cdf198675dae4ab09d57e871234"
+        },
+        "crop": [
+          0,
+          56
+        ],
+        "structure_config": {
+          "structure": {
+            "name": "1PGA experimental reference context",
+            "kind": "pdb",
+            "format": "cif",
+            "path": "data/cache/m4/1PGA.cif",
+            "id": "1PGA",
+            "sha256": "e8d9e171a9ca2b7e66b10568bf6d0122da8450e57ad632a7b4c13c6a71f7edf2",
+            "source": "https://www.rcsb.org/structure/1PGA",
+            "license": "wwPDB CC0; cite deposition and primary publication",
+            "confidence": "experimental_bfactor"
+          },
+          "reference": {
+            "sequence": "MQYKLILNGKTLKGETTTEAVDAATAEKVFKQYANDNGVDGEWTYDDATKTFTVTE",
+            "source": "https://zenodo.org/records/18433203/files/gb1/sampled.csv.gz (designated WT first row; GB1 core agrees with Wu 2016 reference)",
+            "sha256": "6d140c4f60bede5a68db37a9b38a43c4227c4cdf198675dae4ab09d57e871234"
+          },
+          "mapping": {
+            "chain": "A",
+            "model_index": 0,
+            "min_coverage": 0.95,
+            "min_identity": 0.98,
+            "allowed_mismatches": [
+              "Q2T"
+            ]
+          },
+          "geometry": {
+            "contact_cutoff_a": 8.0,
+            "sasa_points": 960,
+            "dssp": "off"
+          },
+          "structure_run": {
+            "output": "data/cache/m4/graphs/gb1"
+          }
+        },
+        "structure_artifacts": "data/cache/m4/graphs/gb1",
+        "adapter": "flip2_blank_validation_false"
+      },
+      {
+        "protein_id": "nucb",
+        "assay_id": "FLIP2_nucb_random_v3",
+        "family": "NucB beta-beta-alpha nuclease; annotation only",
+        "target_type": "ordinal activity levels 0/1/2/3",
+        "citation": "https://doi.org/10.1101/2024.03.21.585615",
+        "dataset": {
+          "path": "data/cache/m4/nucb/random.csv.gz",
+          "url": "https://zenodo.org/records/18433203/files/nucb/random.csv.gz?download=1",
+          "sha256": "ecb3a205f82c1127c136382b8c3456c7206be951c655a2850dd7eecd961b3e9f",
+          "license": "CC-BY-4.0 (dataset-specific README; Zenodo v3)",
+          "source": "https://zenodo.org/records/18433203"
+        },
+        "full_reference": {
+          "sequence": "MIKKWAVHLLFSALVLLGLSGGAAYSPQHAEGAARYDDVLYFPASRYPETGAHISDAIKAGHADVCTIERSGADKRRQESLKGIPTKPGFDRDEWPMAMCEEGGKGASVRYVSSSDNRGAGSWVGNRLNGYADGTRILFIVQ",
+          "source": "https://github.com/google-deepmind/nuclease_design/blob/702284847c4558567d8288169a86dc147cfaab32/nuclease_design/constants.py#L21",
+          "sha256": "5ce46bb493dbedbebac11e8f358ab1405919032bade046c66360b8b6c7ca89a5"
+        },
+        "reference": {
+          "sequence": "AARYDDVLYFPASRYPETGAHISDAIKAGHADVCTIERSGADKRRQESLKGIPTKPGFDRDEWPMAMCEEGGKGASVRYVSSSDNRGAGSWVGNRLNGYADGTRILFIVQ",
+          "source": "https://github.com/google-deepmind/nuclease_design/blob/702284847c4558567d8288169a86dc147cfaab32/nuclease_design/constants.py#L21",
+          "sha256": "3d2330d61bc81dee4ce014a75498aa6c1a1c63fe59a7a8e575463e04f345ae35"
+        },
+        "crop": [
+          32,
+          142
+        ],
+        "structure_config": {
+          "structure": {
+            "name": "5OMT experimental reference context",
+            "kind": "pdb",
+            "format": "cif",
+            "path": "data/cache/m4/5OMT.cif",
+            "id": "5OMT",
+            "sha256": "26ea37a4d39da38fa731decdea2afe68554fceca4238c6e97765f9f4886b4553",
+            "source": "https://www.rcsb.org/structure/5OMT",
+            "license": "wwPDB CC0; cite deposition and primary publication",
+            "confidence": "experimental_bfactor"
+          },
+          "reference": {
+            "sequence": "AARYDDVLYFPASRYPETGAHISDAIKAGHADVCTIERSGADKRRQESLKGIPTKPGFDRDEWPMAMCEEGGKGASVRYVSSSDNRGAGSWVGNRLNGYADGTRILFIVQ",
+            "source": "https://github.com/google-deepmind/nuclease_design/blob/702284847c4558567d8288169a86dc147cfaab32/nuclease_design/constants.py#L21",
+            "sha256": "3d2330d61bc81dee4ce014a75498aa6c1a1c63fe59a7a8e575463e04f345ae35"
+          },
+          "mapping": {
+            "chain": "A",
+            "model_index": 0,
+            "min_coverage": 0.95,
+            "min_identity": 0.98,
+            "allowed_mismatches": []
+          },
+          "geometry": {
+            "contact_cutoff_a": 8.0,
+            "sasa_points": 960,
+            "dssp": "off"
+          },
+          "structure_run": {
+            "output": "data/cache/m4/graphs/nucb"
+          }
+        },
+        "structure_artifacts": "data/cache/m4/graphs/nucb"
+      }
+    ],
+    "embedding": {
+      "model": "facebook/esm2_t12_35M_UR50D",
+      "revision": "6fbf070e65b0b7291e7bbcd451118c216cff79d8",
+      "dimension": 480,
+      "device": "auto",
+      "batch_size": 8,
+      "cpu_threads": 4,
+      "model_cache": "data/cache/models",
+      "cache": "data/cache/embeddings"
+    },
+    "experiment": {
+      "output": "runs/m4",
+      "cap_per_partition": {
+        "train": 420,
+        "validation": 90,
+        "test": 90
+      },
+      "seeds": [
+        0,
+        1
+      ],
+      "alphas": [
+        0.1,
+        10.0,
+        100.0
+      ],
+      "fold_order": [
+        "amylase",
+        "gb1",
+        "nucb"
+      ],
+      "cpu_threads": 4
+    },
+    "gnn": {
+      "hidden": 16,
+      "layers": 2,
+      "learning_rate": 0.003,
+      "weight_decay": 0.01,
+      "max_epochs": 30,
+      "patience": 8,
+      "batch_size": 64,
+      "device": "cpu"
+    }
+  },
+  "git_revision": "e6c3b7d0d8174f4c46c22652d2358f7e4da316c9",
+  "git_dirty": false,
+  "elapsed_seconds": 59.92242750013247,
+  "peak_rss_bytes": 640221184,
+  "python": "3.12.15",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.14.1",
+    "biopython": "1.88",
+    "transformers": "4.57.6"
+  },
+  "source_sha256": {
+    "structure_features.py": "f43f3eda8d540c2f67a3bdb03d184650101d3474d59aaeb7034b7f9aa02dbb57",
+    "benchmark.py": "612f88149ff86d96d81f45e8b6fcfe06b900724fbfa16ad7ecb43eb6b6bf249a",
+    "models.py": "81256a2cf7729d8cbc50b0da17295f0812b62d8c618adfce87d0e0ef0a11ee6c",
+    "structural_experiments.py": "388b40b400e007ec17131535858cdb90cb3f34a0eccaa817470617921325c12f",
+    "structural_gnn.py": "f8e8d69807a5fa208e340b30f4f9f6a903cbaaf1683f9bd5d98b9307eea7d1cb",
+    "__init__.py": "2ba3408e090d882b309c397a9af8c57448223d771a6f4346739247b8689db135",
+    "multiprotein_data.py": "a11932cfba7546c0a43182fc7ebeaa7cc6b42a3b849b6e67bdd97738f0e5a261",
+    "structure_sources.py": "185e43de09eae94bb65befad6761695a40c639ead660c5f310b6b0548422d0d9",
+    "embeddings.py": "0b00ff2aac096e133a09c8d824ab158ef3c24c79ee3e5361f96dd24339f700c5",
+    "experiments.py": "22d4c8751d0514feccef816dd97d8b5a4126fb8938b62ddf3c52386d1ba180bd",
+    "cli.py": "9bff0b7c80cc043dd6e7e2f84287c4f6d52e648aa4c6e419cce928c6920b0f2e",
+    "structure_pipeline.py": "d5ba103dbf3457fa469831506a50dd3cd5733d829d51981c6034a7a521c116de",
+    "structural_graph.py": "6f45050e99fb23d9b889f7b6bbe41558b30c6b8e2534f7618328473e853771e4",
+    "structure_mapping.py": "e091f318fa1e880c78aa7517a931e4012179ce7ae863525e30e6d3124ec61436",
+    "multiprotein_experiments.py": "b7172eaea59629521361364a1fe7d04116a672ae19808d5295436549019dbbea",
+    "data.py": "da870c4a406ea0ae9fcb9ecddbe6f49b98cb99f567fc3796659102ef2e576620"
+  },
+  "historical_files_unchanged": 103,
+  "artifacts_sha256": {
+    "preparation.json": "c62d98fad17935b8b9fae234f0b3b068a32ea191e3e53fd42e4890b6d45c19bc",
+    "audit.json": "9f30913bb3eba05aeaf61ae2ee807442b4c1457a83131786208fc94c56d66cdc",
+    "predictions.csv": "29067079d8d9629067ed46359dd6d64bb0d41e42d358225245d12e249c718bd1",
+    "runs.json": "5a509ac7277240373bd074a86e1c3178f64aee0cde403122ad14f8f19018a43a"
+  }
+}

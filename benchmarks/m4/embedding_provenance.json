@@ -1,0 +1,134 @@
+{
+  "amylase": {
+    "contract": {
+      "schema": "proteinmod-esm2-v1",
+      "dataset_sha256": "2e76acc9da3ef04a8ccecd8a3f631b84ee2e4e1f0cdea406f18153387b986d04",
+      "settings": {
+        "model": "facebook/esm2_t12_35M_UR50D",
+        "revision": "6fbf070e65b0b7291e7bbcd451118c216cff79d8",
+        "dimension": 480,
+        "device": "auto",
+        "batch_size": 8,
+        "cpu_threads": 4,
+        "model_cache": "data/cache/models",
+        "cache": "data/cache/embeddings"
+      },
+      "sequences_sha256": "869e396f431d4709a416f6417013a5723aaaee14818d556e2961253af661ad3f",
+      "reference_sha256": "57d77f95406fa616d8f5e28ff0e7e4139a5cb1158d7bf66352f1b72b1b34fa62",
+      "extractor_sha256": "0b00ff2aac096e133a09c8d824ab158ef3c24c79ee3e5361f96dd24339f700c5"
+    },
+    "encoder": {
+      "device": "mps",
+      "dtype": "float32",
+      "frozen": true,
+      "eval": true,
+      "deterministic_algorithms": true,
+      "layer": "last_hidden_state",
+      "tokenizer": "EsmTokenizer",
+      "tokenizer_revision": "6fbf070e65b0b7291e7bbcd451118c216cff79d8",
+      "vocabulary_sha256": "cb2fbbe0a8bd52848feb028b306033a25f71b8514f378098ba515621a21e342e",
+      "parameters": 33269521,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "4.57.6",
+        "numpy": "2.5.4",
+        "safetensors": "0.8.0",
+        "huggingface-hub": "0.36.2"
+      }
+    },
+    "created_at_utc": "2026-10-14T18:38:04.176770+00:00",
+    "elapsed_seconds": 224.1225607090164,
+    "sha256": "1982b5df887be1f22fdec5afea9e93296fbbf696dab91d2ffbbaff59032720e0",
+    "pooling": "mean over residues only; no BOS/EOS/pad; mutant-minus-WT delta",
+    "sites": "concat(mean mutant at changed sites, mean mutant-minus-WT at sites, site count); WT zeros",
+    "label_free": true
+  },
+  "gb1": {
+    "contract": {
+      "schema": "proteinmod-esm2-v1",
+      "dataset_sha256": "eda3778dcb7028978130f1d5ef856f17783f236587b7be9fc72301e2e1cf0ea0",
+      "settings": {
+        "model": "facebook/esm2_t12_35M_UR50D",
+        "revision": "6fbf070e65b0b7291e7bbcd451118c216cff79d8",
+        "dimension": 480,
+        "device": "auto",
+        "batch_size": 8,
+        "cpu_threads": 4,
+        "model_cache": "data/cache/models",
+        "cache": "data/cache/embeddings"
+      },
+      "sequences_sha256": "5aafcb763bf659ace59fb4af36b499cb80f459ab3d27d7b1bebb89cf5c7cfde1",
+      "reference_sha256": "f119873b9979f7063de5ebe073008d372de007298129af0c9f4962547dc15998",
+      "extractor_sha256": "0b00ff2aac096e133a09c8d824ab158ef3c24c79ee3e5361f96dd24339f700c5"
+    },
+    "encoder": {
+      "device": "mps",
+      "dtype": "float32",
+      "frozen": true,
+      "eval": true,
+      "deterministic_algorithms": true,
+      "layer": "last_hidden_state",
+      "tokenizer": "EsmTokenizer",
+      "tokenizer_revision": "6fbf070e65b0b7291e7bbcd451118c216cff79d8",
+      "vocabulary_sha256": "cb2fbbe0a8bd52848feb028b306033a25f71b8514f378098ba515621a21e342e",
+      "parameters": 33269521,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "4.57.6",
+        "numpy": "2.5.4",
+        "safetensors": "0.8.0",
+        "huggingface-hub": "0.36.2"
+      }
+    },
+    "created_at_utc": "2026-10-14T21:18:31.531585+00:00",
+    "elapsed_seconds": 4.505951875122264,
+    "sha256": "0dfa24e29e8f6f36fa7169c23e7f6054c044444529ce54cae0b30c9a66f9688b",
+    "pooling": "mean over residues only; no BOS/EOS/pad; mutant-minus-WT delta",
+    "sites": "concat(mean mutant at changed sites, mean mutant-minus-WT at sites, site count); WT zeros",
+    "label_free": true
+  },
+  "nucb": {
+    "contract": {
+      "schema": "proteinmod-esm2-v1",
+      "dataset_sha256": "ecb3a205f82c1127c136382b8c3456c7206be951c655a2850dd7eecd961b3e9f",
+      "settings": {
+        "model": "facebook/esm2_t12_35M_UR50D",
+        "revision": "6fbf070e65b0b7291e7bbcd451118c216cff79d8",
+        "dimension": 480,
+        "device": "auto",
+        "batch_size": 8,
+        "cpu_threads": 4,
+        "model_cache": "data/cache/models",
+        "cache": "data/cache/embeddings"
+      },
+      "sequences_sha256": "a877eca9f74869f5759938e723f8ad9edc34dd47b6eed56ea9296f8532accd14",
+      "reference_sha256": "4dbed052ca8901c6063ab9487281cec767e21ab11c9b1768161afe649e98b555",
+      "extractor_sha256": "0b00ff2aac096e133a09c8d824ab158ef3c24c79ee3e5361f96dd24339f700c5"
+    },
+    "encoder": {
+      "device": "mps",
+      "dtype": "float32",
+      "frozen": true,
+      "eval": true,
+      "deterministic_algorithms": true,
+      "layer": "last_hidden_state",
+      "tokenizer": "EsmTokenizer",
+      "tokenizer_revision": "6fbf070e65b0b7291e7bbcd451118c216cff79d8",
+      "vocabulary_sha256": "cb2fbbe0a8bd52848feb028b306033a25f71b8514f378098ba515621a21e342e",
+      "parameters": 33269521,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "4.57.6",
+        "numpy": "2.5.4",
+        "safetensors": "0.8.0",
+        "huggingface-hub": "0.36.2"
+      }
+    },
+    "created_at_utc": "2026-10-14T21:18:43.197783+00:00",
+    "elapsed_seconds": 8.960446125129238,
+    "sha256": "2b31ca2d158a29e7ab16fab6f9279e2e34d5cc32317e821928c2a891a086d5b9",
+    "pooling": "mean over residues only; no BOS/EOS/pad; mutant-minus-WT delta",
+    "sites": "concat(mean mutant at changed sites, mean mutant-minus-WT at sites, site count); WT zeros",
+    "label_free": true
+  }
+}
