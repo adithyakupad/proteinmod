@@ -29,15 +29,20 @@ class ResidueGNN(nn.Module):
             nn.Linear(3 * hidden + 1, hidden), nn.ReLU(), nn.Linear(hidden, 1)
         )
 
-    def forward(self, dynamic):
-        static = self.static.unsqueeze(0).expand(len(dynamic), -1, -1)
+    def forward(self, dynamic, graph=None):
+        static, source, target, edge_features, degree = (
+            (self.static, self.source, self.target, self.edge_features, self.degree)
+            if graph is None
+            else graph
+        )
+        static = static.unsqueeze(0).expand(len(dynamic), -1, -1)
         h = torch.relu(self.input(torch.cat([static, dynamic], dim=-1)))
         for message, gate, update in zip(self.messages, self.edge_gates, self.updates, strict=True):
             # Shared topology avoids a graph framework and duplicated batch edge storage.
-            m = message(h)[:, self.source] * torch.sigmoid(gate(self.edge_features))[None]
+            m = message(h)[:, source] * torch.sigmoid(gate(edge_features))[None]
             aggregate = torch.zeros_like(h)
-            aggregate.index_add_(1, self.target, m)
-            h = h + torch.relu(update(torch.cat([h, aggregate / self.degree], dim=-1)))
+            aggregate.index_add_(1, target, m)
+            h = h + torch.relu(update(torch.cat([h, aggregate / degree], dim=-1)))
         mask = dynamic[:, :, :1]
         count = mask.sum(dim=1)
         pooled = (h * mask).sum(dim=1)
