@@ -1,38 +1,113 @@
 # ProteinMod
 
-> Evaluate learned protein representations for functional prediction and mutation-effect modeling.
+M0 implements reproducible supervised activity prediction on **FLIP2 Alpha Amylase,
+by-mutation**, a single-protein assay. It does **not** demonstrate cross-protein
+or family generalization. No pretrained protein model is loaded.
 
-## Thesis
+## Install and reproduce
 
-Evaluate learned protein representations for functional prediction and mutation-effect modeling.
+Python **3.11–3.14** is supported; the measured run used Python 3.12.15 on Apple
+silicon. From the repository root:
 
-## Planned stack
+```sh
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e '.[dev]'
+proteinmod download --config configs/amylase.toml
+proteinmod validate --config configs/amylase.toml
+proteinmod run --config configs/amylase.toml
+ruff check .
+pytest
+```
 
-- Python
-- PyTorch
-- protein language models
-- sequence embeddings
-- mutation datasets
-- protein bioinformatics
+Only `download` accesses the network. `validate`, `run`, and tests work offline
+once dependencies and data are present. CI uses synthetic fixtures, never downloads
+the benchmark. For an existing exact official file:
 
-## Milestones
+```sh
+proteinmod run --config configs/amylase.toml --data /absolute/path/by_mutation.csv.gz --output runs/local
+```
 
-- [ ] Choose protein and mutation benchmarks
-- [ ] Establish evolutionary / physicochemical baselines
-- [ ] Extract protein-model embeddings
-- [ ] Predict functional or mutational effects
-- [ ] Compare representations quantitatively
+The configured checksum is enforced for local files too. Paths in TOML are relative
+to the working directory. `data/cache/`, virtual environments and `runs/` are ignored.
+The download stores a source/checksum manifest beside the cached file. To reproduce
+the recorded dependency versions, install `requirements-benchmark.txt` before the
+editable package; these pins describe the Python 3.12 measured environment.
 
-## Status
+## Provenance and scientific controls
 
-**Concept / architecture phase.**
+- Official [FLIP2 catalog](https://flip.protein.properties/), versioned
+  [Zenodo record 18433203, v3](https://zenodo.org/records/18433203), and
+  [Didi et al. (2026)](https://proceedings.mlr.press/v306/didi26a.html).
+- Zenodo's amylase README attributes the assay to Van der Flier et al., *Enzyme
+  structure correlates with variant effect predictability*, CSBJ 23 (2024),
+  3489–3497, and links the [original MIT-licensed data](https://github.com/florisvdf/mutation-predictability/tree/main/data/AMY_BACSU).
+- The config records the published compressed-file MD5. Every run records SHA256,
+  complete config, reference provenance, package versions, Git revision/dirty state
+  and elapsed time. The original assay `reference.fasta` is bound to Git blob
+  `920b6c14b659029dd1f5497329dab98c0c8755e2`; its 425-residue sequence is embedded in
+  the config. The blob check uses the exact original FASTA header `> 0` and newline.
+  A custom reference requires source attribution plus a Git blob or sequence SHA256.
+  A checksum binds bytes; the source must independently establish biological WT identity.
+- Canonical uppercase residues, equal lengths, finite numeric targets, missing/duplicate
+  IDs, duplicate sequences and assignments are checked. Official CSVs have no IDs:
+  stable 1-based source row IDs are generated and explicitly identified in QC.
+  Invalid inputs fail instead of silently being dropped or deduplicated.
+- The official CSV has `set=train, validation=True` for 601 rows. These become the
+  effective validation partition and are **excluded from fitting**. Test/validation
+  overlap is rejected. No random split, resampling or test-label model selection occurs.
+- QC reports lengths, effective counts, validation/raw-set overlap, sequence leakage,
+  per-partition mutation burdens and pairwise unique-substitution overlap. The actual
+  official distribution has **410 shared substitutions between effective train and
+  test**, despite no shared full sequences. We preserve the official file and report
+  this observation; do not interpret its name as strict substitution disjointness.
+- Ridge uses fixed full-sequence 20-letter position features or a single mutation-count
+  feature. No scaling is used. All candidates fit only training rows, choose minimum
+  validation RMSE (tie: smallest alpha), and remain fit on training rows only. Seed 0,
+  deterministic LSQR solver, tolerance 1e-8, at most 10,000 iterations. Test labels
+  are used only for the final evaluation. Constant predictions have undefined
+  correlations, serialized as JSON null rather than invented zeros.
+- Removing `[reference]` permits mean and one-hot models while explicitly skipping
+  mutation-count ridge and mutation annotations. An invalid supplied reference fails
+  clearly. WT is never guessed from variant frequency.
 
-This repository is part of an ongoing research-engineering project backlog. Claims, results, and benchmarks will be added only when supported by reproducible experiments.
+## Actual M0 result
 
-## Principles
+Measured on the official downloaded file on October 14, 2026: **3,706** variants,
+length **425**; **2,403 train / 601 validation / 702 test**. No duplicate sequences
+or IDs. Source SHA256:
+`2e76acc9da3ef04a8ccecd8a3f631b84ee2e4e1f0cdea406f18153387b986d04`.
 
-- Start with explicit scientific or engineering questions.
-- Establish simple baselines before adding complex models.
-- Use quantitative evaluation and documented failure modes.
-- Preserve reproducibility through versioned data, configuration, and experiment outputs.
-- Separate demonstrated results from planned capabilities.
+| Baseline | Test Spearman rho | Test Pearson r | MAE | RMSE |
+|---|---:|---:|---:|---:|
+| Training mean | undefined | undefined | 0.048968 | 0.053985 |
+| Mutation-count ridge | 0.229543 | 0.237123 | 0.042635 | 0.053048 |
+| Full-sequence one-hot ridge | 0.648837 | 0.683810 | 0.033651 | 0.042845 |
+
+Selected alpha: **1** for one-hot, **10** for mutation count, chosen only on validation.
+These are ProteinMod M0 scores, not a claim to replicate the paper's entire protocol.
+Checked-in evidence lives in `benchmarks/amylase/`: `metrics.json`, `qc.json`,
+`manifest.json`, `test_predictions.csv` and `report.md`. New runs generate the same
+artifact set under `runs/amylase/`. Scores use the distributed target units directly.
+
+## How to interpret the baseline
+
+A held-out mutation split evaluates unseen variants/substitutions on the same protein;
+positions can still be familiar. A held-out position split tests previously unperturbed
+positions. A held-out protein split tests transfer to different protein backbones.
+The overlap statistics above qualify what is actually held out in this distribution.
+
+Given WT `ACDE` and variant `CCDF`, compare aligned residues: position 1 changes
+A to C and position 4 changes E to F, giving the sorted set `A1C;E4F` and burden 2.
+Length mismatches cannot be represented as substitutions and are rejected. Full-sequence
+one-hot ridge learns regularized additive contributions of residue identity at each
+position. It is a meaningful inexpensive control for learned representations, although
+it cannot explicitly model epistasis or establish transfer to other proteins.
+
+## Roadmap (not implemented)
+
+Sequence PLM + structural GNN + bidirectional cross-attention; stability/function
+heads; advanced multi-mutation modeling; progressive protein/family-held-out evaluation.
+M0 already annotates multiple substitutions but implements only elementary supervised
+baselines. Data validation, features, fitting and artifact output are separate modules
+under `src/proteinmod` so later features can be added without changing split handling.
