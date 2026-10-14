@@ -1,0 +1,1010 @@
+[
+  {
+    "model": "one_hot_ridge",
+    "seed": 0,
+    "fraction": 0.1,
+    "n_train": 230,
+    "train": {
+      "spearman_rho": 0.8172502857177246,
+      "pearson_r": 0.9028768412736468,
+      "mae": 0.03041372633360619,
+      "rmse": 0.034944024358138336
+    },
+    "validation": {
+      "spearman_rho": 0.48405068553738584,
+      "pearson_r": 0.48136809701127703,
+      "mae": 0.04500156729231043,
+      "rmse": 0.05131421532305372
+    },
+    "test": {
+      "spearman_rho": 0.44986298352839477,
+      "pearson_r": 0.4608403519720686,
+      "mae": 0.044653711405026324,
+      "rmse": 0.0497317616012831
+    },
+    "selection": {
+      "alpha": 10.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.055978157132215774
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.05462754295011837
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.05138620605131619
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.05131421532305372
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.05551595091583877
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.05684240482172982
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "elapsed_seconds": 0.10877354093827307
+  },
+  {
+    "model": "esm_sites",
+    "seed": 0,
+    "fraction": 0.1,
+    "n_train": 230,
+    "train": {
+      "spearman_rho": 0.7820267606282225,
+      "pearson_r": 0.8852618393262827,
+      "mae": 0.022068412879903174,
+      "rmse": 0.027275936196843667
+    },
+    "validation": {
+      "spearman_rho": 0.5867914929494331,
+      "pearson_r": 0.6130115825065026,
+      "mae": 0.035382910094768606,
+      "rmse": 0.04540652228521396
+    },
+    "test": {
+      "spearman_rho": 0.4492247160902214,
+      "pearson_r": 0.5177959935564327,
+      "mae": 0.037056633311569054,
+      "rmse": 0.04653715981659761
+    },
+    "selection": {
+      "alpha": 10.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.06750311910419472
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.06302700290242326
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.05199412559024317
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.04540652228521396
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.04704231286542299
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.05347194670394439
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "elapsed_seconds": 0.048654082929715514
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 0,
+    "fraction": 0.1,
+    "n_train": 230,
+    "train": {
+      "spearman_rho": 0.6794107385252913,
+      "pearson_r": 0.6942501398219756,
+      "mae": 0.03513210366100947,
+      "rmse": 0.04140371278931125
+    },
+    "validation": {
+      "spearman_rho": 0.6289021852077151,
+      "pearson_r": 0.631617417349685,
+      "mae": 0.038186461466874724,
+      "rmse": 0.04491741163205999
+    },
+    "test": {
+      "spearman_rho": 0.5561847535926254,
+      "pearson_r": 0.5887831940721074,
+      "mae": 0.035444049036998306,
+      "rmse": 0.04348581700465041
+    },
+    "selection": {
+      "alpha": 1000.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.15150543948766987
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.11894018127979748
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.07710019269523584
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.053820501938356774
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.045814654137059485
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.04491741163205999
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "elapsed_seconds": 0.08212737506255507
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 0,
+    "fraction": 1.0,
+    "n_train": 2296,
+    "train": {
+      "spearman_rho": 0.8219648778622419,
+      "pearson_r": 0.899654748424282,
+      "mae": 0.01970966067785187,
+      "rmse": 0.024899333450271968
+    },
+    "validation": {
+      "spearman_rho": 0.7207675230948954,
+      "pearson_r": 0.7265680631879841,
+      "mae": 0.031924737517652804,
+      "rmse": 0.039581270326657106
+    },
+    "test": {
+      "spearman_rho": 0.6451559420524049,
+      "pearson_r": 0.6826933188566272,
+      "mae": 0.03362581446787341,
+      "rmse": 0.042894363920704795
+    },
+    "selection": {
+      "alpha": 1.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.05117445424698774
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.046801400555713885
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.039581270326657106
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.039813379922709814
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.048925559463390625
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.05556161333527913
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "elapsed_seconds": 1.293315083021298
+  },
+  {
+    "model": "esm_sites",
+    "seed": 0,
+    "fraction": 1.0,
+    "n_train": 2296,
+    "train": {
+      "spearman_rho": 0.7898828068010424,
+      "pearson_r": 0.8665509122038584,
+      "mae": 0.022230212803814948,
+      "rmse": 0.02820238018621247
+    },
+    "validation": {
+      "spearman_rho": 0.7157245371989749,
+      "pearson_r": 0.763814421934562,
+      "mae": 0.028892335006621205,
+      "rmse": 0.037169157159442086
+    },
+    "test": {
+      "spearman_rho": 0.624443617639607,
+      "pearson_r": 0.679105435251863,
+      "mae": 0.0318874223798373,
+      "rmse": 0.04044895368525148
+    },
+    "selection": {
+      "alpha": 1.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.045791549605662785
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.04099079748467436
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.037169157159442086
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.03746710353599789
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.04093185322549146
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.04700267554291254
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "elapsed_seconds": 1.8808307910803705
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 0,
+    "fraction": 1.0,
+    "n_train": 2296,
+    "train": {
+      "spearman_rho": 0.6946913500173765,
+      "pearson_r": 0.737004453449015,
+      "mae": 0.02981482790756245,
+      "rmse": 0.03804352758236811
+    },
+    "validation": {
+      "spearman_rho": 0.6913596681318819,
+      "pearson_r": 0.7256387888832315,
+      "mae": 0.030996573881369366,
+      "rmse": 0.03929961146895364
+    },
+    "test": {
+      "spearman_rho": 0.6312747326301085,
+      "pearson_r": 0.6973703585997455,
+      "mae": 0.02970006920277911,
+      "rmse": 0.038570524948424924
+    },
+    "selection": {
+      "alpha": 100.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.039887931807631644
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.03988717142844288
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.03987926266504693
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.03969557326812936
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.03929961146895364
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.04004480215524399
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "elapsed_seconds": 0.176876958925277
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 1,
+    "fraction": 0.1,
+    "n_train": 230,
+    "train": {
+      "spearman_rho": 0.9194448937573678,
+      "pearson_r": 0.983575862105602,
+      "mae": 0.01070169061033738,
+      "rmse": 0.013734105993440458
+    },
+    "validation": {
+      "spearman_rho": 0.4510034604733377,
+      "pearson_r": 0.47834939565732226,
+      "mae": 0.04349510971365049,
+      "rmse": 0.05175705982949458
+    },
+    "test": {
+      "spearman_rho": 0.4846458825750873,
+      "pearson_r": 0.4863424776153775,
+      "mae": 0.04400228816532341,
+      "rmse": 0.05204695679609047
+    },
+    "selection": {
+      "alpha": 1.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.056145940988176005
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.054668526502877283
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.05175705982949458
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.0519969638887084
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.055841063580781225
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.056948499923297535
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "elapsed_seconds": 0.09229583409614861
+  },
+  {
+    "model": "esm_sites",
+    "seed": 1,
+    "fraction": 0.1,
+    "n_train": 230,
+    "train": {
+      "spearman_rho": 0.7013431357858974,
+      "pearson_r": 0.7366551779098834,
+      "mae": 0.03813399638739421,
+      "rmse": 0.044238803475195584
+    },
+    "validation": {
+      "spearman_rho": 0.5859649516246154,
+      "pearson_r": 0.583899761278538,
+      "mae": 0.04060933595664753,
+      "rmse": 0.04720711701881205
+    },
+    "test": {
+      "spearman_rho": 0.4799488413755065,
+      "pearson_r": 0.5030154252293334,
+      "mae": 0.03854964307325875,
+      "rmse": 0.04656592394461079
+    },
+    "selection": {
+      "alpha": 100.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.07252254304381806
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.06672206437870612
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.05654439087934815
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.04725711671407661
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.04720711701881205
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.05378827885407577
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "elapsed_seconds": 0.05174845806322992
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 1,
+    "fraction": 0.1,
+    "n_train": 230,
+    "train": {
+      "spearman_rho": 0.7091373276951353,
+      "pearson_r": 0.7329104679458948,
+      "mae": 0.036108186383544065,
+      "rmse": 0.042591918776738395
+    },
+    "validation": {
+      "spearman_rho": 0.643945593385267,
+      "pearson_r": 0.6395392382426821,
+      "mae": 0.0382688983842177,
+      "rmse": 0.0446733992698818
+    },
+    "test": {
+      "spearman_rho": 0.5897134755097906,
+      "pearson_r": 0.5844853035186925,
+      "mae": 0.03637241824876312,
+      "rmse": 0.043742573228176
+    },
+    "selection": {
+      "alpha": 1000.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.128718726090414
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.10342875419129159
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.07676941387850635
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.05529813767785305
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.04685263381647196
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.0446733992698818
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "elapsed_seconds": 0.07973345904611051
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 1,
+    "fraction": 1.0,
+    "n_train": 2296,
+    "train": {
+      "spearman_rho": 0.8219648778622419,
+      "pearson_r": 0.899654748424282,
+      "mae": 0.01970966067785187,
+      "rmse": 0.024899333450271968
+    },
+    "validation": {
+      "spearman_rho": 0.7207675230948954,
+      "pearson_r": 0.7265680631879841,
+      "mae": 0.031924737517652804,
+      "rmse": 0.039581270326657106
+    },
+    "test": {
+      "spearman_rho": 0.6451559420524049,
+      "pearson_r": 0.6826933188566272,
+      "mae": 0.03362581446787341,
+      "rmse": 0.042894363920704795
+    },
+    "selection": {
+      "alpha": 1.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.05117445424698774
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.046801400555713885
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.039581270326657106
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.039813379922709814
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.048925559463390625
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.05556161333527913
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "elapsed_seconds": 1.2423970829695463
+  },
+  {
+    "model": "esm_sites",
+    "seed": 1,
+    "fraction": 1.0,
+    "n_train": 2296,
+    "train": {
+      "spearman_rho": 0.7898828068010424,
+      "pearson_r": 0.8665509122038584,
+      "mae": 0.022230212803814948,
+      "rmse": 0.02820238018621247
+    },
+    "validation": {
+      "spearman_rho": 0.7157245371989749,
+      "pearson_r": 0.763814421934562,
+      "mae": 0.028892335006621205,
+      "rmse": 0.037169157159442086
+    },
+    "test": {
+      "spearman_rho": 0.624443617639607,
+      "pearson_r": 0.679105435251863,
+      "mae": 0.0318874223798373,
+      "rmse": 0.04044895368525148
+    },
+    "selection": {
+      "alpha": 1.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.045791549605662785
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.04099079748467436
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.037169157159442086
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.03746710353599789
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.04093185322549146
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.04700267554291254
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "elapsed_seconds": 1.5625637080520391
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 1,
+    "fraction": 1.0,
+    "n_train": 2296,
+    "train": {
+      "spearman_rho": 0.6946913500173765,
+      "pearson_r": 0.737004453449015,
+      "mae": 0.02981482790756245,
+      "rmse": 0.03804352758236811
+    },
+    "validation": {
+      "spearman_rho": 0.6913596681318819,
+      "pearson_r": 0.7256387888832315,
+      "mae": 0.030996573881369366,
+      "rmse": 0.03929961146895364
+    },
+    "test": {
+      "spearman_rho": 0.6312747326301085,
+      "pearson_r": 0.6973703585997455,
+      "mae": 0.02970006920277911,
+      "rmse": 0.038570524948424924
+    },
+    "selection": {
+      "alpha": 100.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.039887931807631644
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.03988717142844288
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.03987926266504693
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.03969557326812936
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.03929961146895364
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.04004480215524399
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "elapsed_seconds": 0.19326954195275903
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 2,
+    "fraction": 0.1,
+    "n_train": 230,
+    "train": {
+      "spearman_rho": 0.9209327189386504,
+      "pearson_r": 0.9788702530375517,
+      "mae": 0.009859241153496057,
+      "rmse": 0.01388882546239397
+    },
+    "validation": {
+      "spearman_rho": 0.5069286587320493,
+      "pearson_r": 0.5024572771244264,
+      "mae": 0.04156428789055499,
+      "rmse": 0.04999587377398922
+    },
+    "test": {
+      "spearman_rho": 0.4447527207371761,
+      "pearson_r": 0.5163137408016698,
+      "mae": 0.042165027591010255,
+      "rmse": 0.04896368318711036
+    },
+    "selection": {
+      "alpha": 1.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.06333713818556813
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.05366139131018255
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.04999587377398922
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.05077556186197792
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.05551558011332634
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.05684199610507717
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "elapsed_seconds": 0.0898470829706639
+  },
+  {
+    "model": "esm_sites",
+    "seed": 2,
+    "fraction": 0.1,
+    "n_train": 230,
+    "train": {
+      "spearman_rho": 0.8200372622053049,
+      "pearson_r": 0.8939263669698043,
+      "mae": 0.020674532742107014,
+      "rmse": 0.026425459221138252
+    },
+    "validation": {
+      "spearman_rho": 0.563126855525052,
+      "pearson_r": 0.5826189132272095,
+      "mae": 0.03721739780148151,
+      "rmse": 0.046355033601519526
+    },
+    "test": {
+      "spearman_rho": 0.5073070973487944,
+      "pearson_r": 0.550349786865986,
+      "mae": 0.035655882832100964,
+      "rmse": 0.044764753860442
+    },
+    "selection": {
+      "alpha": 10.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.06733668329324088
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.06010371241594896
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.051915561314408776
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.046355033601519526
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.048141181618720455
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.05388075034888369
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "elapsed_seconds": 0.05898345890454948
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 2,
+    "fraction": 0.1,
+    "n_train": 230,
+    "train": {
+      "spearman_rho": 0.7390358577219163,
+      "pearson_r": 0.7442619097573575,
+      "mae": 0.03300117681414662,
+      "rmse": 0.039621167370329564
+    },
+    "validation": {
+      "spearman_rho": 0.6479604547001112,
+      "pearson_r": 0.6374674579245121,
+      "mae": 0.03829446590510459,
+      "rmse": 0.045252225298756006
+    },
+    "test": {
+      "spearman_rho": 0.5914368621720465,
+      "pearson_r": 0.6130040166734977,
+      "mae": 0.035045642617702745,
+      "rmse": 0.04295887807339661
+    },
+    "selection": {
+      "alpha": 1000.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.13001011103446683
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.09806152940629462
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.0640533696426575
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.05206197027112737
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.04681676250070463
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.045252225298756006
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "elapsed_seconds": 0.08044091705232859
+  },
+  {
+    "model": "one_hot_ridge",
+    "seed": 2,
+    "fraction": 1.0,
+    "n_train": 2296,
+    "train": {
+      "spearman_rho": 0.8219648778622419,
+      "pearson_r": 0.899654748424282,
+      "mae": 0.01970966067785187,
+      "rmse": 0.024899333450271968
+    },
+    "validation": {
+      "spearman_rho": 0.7207675230948954,
+      "pearson_r": 0.7265680631879841,
+      "mae": 0.031924737517652804,
+      "rmse": 0.039581270326657106
+    },
+    "test": {
+      "spearman_rho": 0.6451559420524049,
+      "pearson_r": 0.6826933188566272,
+      "mae": 0.03362581446787341,
+      "rmse": 0.042894363920704795
+    },
+    "selection": {
+      "alpha": 1.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.05117445424698774
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.046801400555713885
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.039581270326657106
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.039813379922709814
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.048925559463390625
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.05556161333527913
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "elapsed_seconds": 1.3331897498574108
+  },
+  {
+    "model": "esm_sites",
+    "seed": 2,
+    "fraction": 1.0,
+    "n_train": 2296,
+    "train": {
+      "spearman_rho": 0.7898828068010424,
+      "pearson_r": 0.8665509122038584,
+      "mae": 0.022230212803814948,
+      "rmse": 0.02820238018621247
+    },
+    "validation": {
+      "spearman_rho": 0.7157245371989749,
+      "pearson_r": 0.763814421934562,
+      "mae": 0.028892335006621205,
+      "rmse": 0.037169157159442086
+    },
+    "test": {
+      "spearman_rho": 0.624443617639607,
+      "pearson_r": 0.679105435251863,
+      "mae": 0.0318874223798373,
+      "rmse": 0.04044895368525148
+    },
+    "selection": {
+      "alpha": 1.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.045791549605662785
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.04099079748467436
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.037169157159442086
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.03746710353599789
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.04093185322549146
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.04700267554291254
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "elapsed_seconds": 1.4407963338308036
+  },
+  {
+    "model": "structural_ridge",
+    "seed": 2,
+    "fraction": 1.0,
+    "n_train": 2296,
+    "train": {
+      "spearman_rho": 0.6946913500173765,
+      "pearson_r": 0.737004453449015,
+      "mae": 0.02981482790756245,
+      "rmse": 0.03804352758236811
+    },
+    "validation": {
+      "spearman_rho": 0.6913596681318819,
+      "pearson_r": 0.7256387888832315,
+      "mae": 0.030996573881369366,
+      "rmse": 0.03929961146895364
+    },
+    "test": {
+      "spearman_rho": 0.6312747326301085,
+      "pearson_r": 0.6973703585997455,
+      "mae": 0.02970006920277911,
+      "rmse": 0.038570524948424924
+    },
+    "selection": {
+      "alpha": 100.0,
+      "selection": "minimum validation RMSE; ties smallest alpha",
+      "candidates": [
+        {
+          "alpha": 0.01,
+          "validation_rmse": 0.039887931807631644
+        },
+        {
+          "alpha": 0.1,
+          "validation_rmse": 0.03988717142844288
+        },
+        {
+          "alpha": 1.0,
+          "validation_rmse": 0.03987926266504693
+        },
+        {
+          "alpha": 10.0,
+          "validation_rmse": 0.03969557326812936
+        },
+        {
+          "alpha": 100.0,
+          "validation_rmse": 0.03929961146895364
+        },
+        {
+          "alpha": 1000.0,
+          "validation_rmse": 0.04004480215524399
+        }
+      ],
+      "fit_partition": "train only"
+    },
+    "elapsed_seconds": 0.2601719577796757
+  }
+]

@@ -1,0 +1,20 @@
+# Predeclared M3 experiment; M0/M1 settings and all historical artifacts stay unchanged.
+[m3]
+sequence_config = "configs/amylase_m1.toml"
+structure_artifacts = "benchmarks/structures/amylase_m2"
+output = "runs/amylase_m3"
+cache = "data/cache/m3"
+alphas = [0.01, 0.1, 1.0, 10.0, 100.0, 1000.0]
+fractions = [0.1, 1.0]
+seeds = [0, 1, 2]
+
+[gnn]
+device = "cpu"
+cpu_threads = 4
+hidden = 16
+layers = [0, 2]
+learning_rate = 0.003
+weight_decays = [0.001, 0.01]
+batch_size = 64
+max_epochs = 80
+patience = 12
