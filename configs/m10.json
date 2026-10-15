@@ -1,0 +1,18 @@
+{
+  "schema": "m10-structure-reliability-v1",
+  "m9_config": "configs/m9.json",
+  "output": "runs/m10",
+  "cache": "data/cache/m10",
+  "seeds": [0, 1, 2],
+  "modes": ["unconditioned", "confidence_input", "weighted_late", "gate", "combined", "gate_zero", "input_shuffled", "combined_shuffled"],
+  "training": {
+    "hidden": 16,
+    "max_epochs": 60,
+    "patience": 10,
+    "batch_size": 64,
+    "learning_rate": 0.003,
+    "weight_decay": 0.01,
+    "cpu_threads": 4,
+    "device": "cpu"
+  }
+}

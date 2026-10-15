@@ -25,7 +25,12 @@ def history():
     return {
         str(p): checksum(p)
         for p in sorted(Path("benchmarks").rglob("*"))
-        if p.is_file() and "m9" not in p.parts
+        if p.is_file()
+        and (
+            not p.parts[1].startswith("m")
+            or not p.parts[1][1:].isdigit()
+            or int(p.parts[1][1:]) < 9
+        )
     }
 
 
