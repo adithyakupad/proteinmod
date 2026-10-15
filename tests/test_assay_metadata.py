@@ -134,6 +134,8 @@ def test_assay_local_scores_do_not_mix_native_scales():
     result = evaluate(rows, ix, pred)
     assert result["macro"] == pytest.approx(1)
     assert len(result["assays"]) == 2
+    all_scores = evaluate(rows, np.arange(len(rows)), np.arange(len(rows)))
+    assert list(all_scores["proteins"]) == sorted(all_scores["proteins"])
 
 
 def test_test_labels_do_not_affect_training_selection_and_saved_head_replays(tmp_path):

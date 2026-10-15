@@ -58,3 +58,7 @@ pytest -q
 ```
 
 ESM uses MPS when available; fitted heads use deterministic CPU. For a full repeat copy config changing only output to runs/m9_repeat. For report-only reproduction pass --input benchmarks/m9 --output runs/m9-report; raw downloads and neural weights are unnecessary.
+
+### Repeat audit correction
+
+The first full run and repeat produced byte-identical prediction CSVs, but the replay audit found1e-16 differences in macro reductions because Python set iteration ordered proteins differently between processes. Sort protein IDs before aggregation; retain the first run/repeat locally under runs/m9_reduction_pilot and runs/m9_reduction_pilot_repeat. Rerun the identical cohort/config/seeds/selection rules after this deterministic reduction fix. No model budget or metadata definition changed in response to test performance.

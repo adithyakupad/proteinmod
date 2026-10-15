@@ -27,7 +27,7 @@ def evaluate(rows, indices, prediction):
         }
     proteins = {
         p: float(np.mean([v["spearman"] or 0 for v in assays.values() if v["protein_id"] == p]))
-        for p in {v["protein_id"] for v in assays.values()}
+        for p in sorted({v["protein_id"] for v in assays.values()})
     }
     return {
         "assays": assays,
