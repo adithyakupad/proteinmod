@@ -407,3 +407,38 @@ All 72 fits and 73,134 predictions are retained in [results](benchmarks/m7/repor
 with [failure analysis](benchmarks/m7/interpretation.md) and per-protein negative transfer.
 The CPU run took 506.79 seconds. Both historical reference replays and a repeated M7
 held-out fit matched exactly; all 156 historical benchmark files remain unchanged.
+
+## M8 stability-informed functional prediction
+
+M8 uses experimentally trained M6 ESM-site/structural ridge predictions to condition
+functional models on the exact M7 G1/G2 cohorts. It compares scalar-only regression,
+feature ridge, additive correction of a fixed M7 model, and new heads over frozen M7
+multimodal representations. Shuffled predictions and matched-scale dummy scalars
+control for nuisance information and extra capacity. No paired stability labels are
+invented; every function-protein stability value is an unverified OOD prediction.
+
+Actual G2 macro Spearman, three seeds:
+
+| Model | Matched independent baseline | ESM-conditioned | Structure-conditioned |
+|---|---:|---:|---:|
+| Feature ridge | .191013 | .196131 | .192179 |
+| M7 + residual correction | .102592 | .122329 | .166501 |
+| New frozen-representation head | .092811 | .099704 | .118238 |
+
+The structural stability source has catastrophic absolute extrapolation caused by
+nearly constant descriptor scaling; its outputs cannot be interpreted as usable
+thermodynamic estimates. Gains are source/protein-dependent, and neural dummy controls
+explain some gains. See [results](benchmarks/m8/report.md),
+[failure analysis](benchmarks/m8/interpretation.md) and [protocol](docs/m8_protocol.md).
+
+```sh
+python -m proteinmod.conditioning_experiments --config configs/m8.json
+MPLCONFIGDIR=/tmp/proteinmod-m8-matplotlib python scripts/report_m8.py --input runs/m8 --output runs/m8
+ruff check .
+ruff format --check .
+pytest -q
+```
+
+All 176 M0–M7 evidence files remain unchanged. The corrected 312-fit local run took
+35.01 seconds; a full repeat reproduces all 161,433 held-out predictions exactly.
+M9 remains outside this milestone.

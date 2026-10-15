@@ -1,0 +1,21 @@
+{
+  "full_tests": "128 passed",
+  "lightweight_tests": "96 passed, 8 optional skips",
+  "ruff": "passed",
+  "format": "passed",
+  "commands": [
+    ".venv/bin/ruff check .",
+    ".venv/bin/ruff format --check .",
+    ".venv/bin/pytest -q",
+    "/tmp/proteinmod-m1-core/bin/pytest -q",
+    "python scripts/audit_m8.py",
+    "python scripts/verify_m8.py"
+  ],
+  "python": "3.12.15",
+  "machine": "arm64",
+  "experiment_revision": "ad26d68",
+  "initial_protocol_revision": "b7e4661",
+  "historical_files_unchanged": 176,
+  "full_repeat": "exact predictions and all selections/metrics",
+  "neural_head_replay": "84 heads, 41853 predictions, max difference 0"
+}

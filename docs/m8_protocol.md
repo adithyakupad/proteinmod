@@ -56,3 +56,11 @@ The experiment protocol/config/code is committed before inspecting M8 test resul
 ### Numerical fidelity correction before the final benchmark
 
 The first local pilot reconstructed the source feature arrays as float64. A subsequent M6 prediction replay detected micro-kcal numerical differences and exposed the importance of preserving M6 precision under severe extrapolation. Both source arrays now explicitly retain M6's float32 contract, and stability WT tokens are read from the original M6 cache. A regression test asserts that dtype. Source checkpoints record input/coefficient dtypes as well as weights/calibration. The original pilot and its repeat remain locally under runs/m8_float64_pilot*; final benchmark and repeat are rerun after this correction. No cohort, model family, alpha grid, seed, control, selection criterion or training budget changed. This is a numerical fidelity correction, not test-led model optimization; raw OOD extrapolation failures remain visible.
+
+After a run, `python scripts/verify_m8.py` reloads all 84 saved neural heads, restores preprocessing/calibration and compares all 41,853 neural test predictions. `python scripts/audit_m8.py` reconstructs the posthoc descriptor-shift decomposition and compares all 4,140 native M6 source predictions. Its additional legacy feature-array comparison requires the original M6 transfer checkpoint (rebuild it with the M6 protocol if absent); M8 training itself never loads that function-pretrained checkpoint. A full repeat can use a copy of configs/m8.json changing only output to runs/m8_repeat; both prediction CSVs and all runs.json metrics/selections should match exactly. The archived reproducibility.json records the actual complete repeat.
+
+For report-only reproduction without checkpoints or data preparation:
+
+```
+MPLCONFIGDIR=/tmp/proteinmod-m8-matplotlib python scripts/report_m8.py --input benchmarks/m8 --output runs/m8-report
+```

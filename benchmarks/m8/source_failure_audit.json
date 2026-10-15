@@ -1,0 +1,826 @@
+{
+  "posthoc_only": true,
+  "no_model_changes": true,
+  "diagnosis": "Nearly constant neighborhood missing-B-factor fractions (float32 summation noise around 1) are scaled by ~6e-8 in M6. Function experimental B-factor availability changes fraction to 0, causing huge OOD linear offsets. No clipping/retraining performed.",
+  "feature_indices_zero_based": [
+    86,
+    174,
+    262
+  ],
+  "decomposition": [
+    {
+      "function_fold": "within",
+      "protein_id": "amylase",
+      "variant_id": "FLIP2_amylase_by_mutation_v3:3",
+      "linear_decomposition_float64_kcal_mol": -286631.37690667965,
+      "top_terms": [
+        {
+          "feature_index_zero_based": 262,
+          "semantic": "neighborhood B-factor missing fraction; mutation max",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000174083408,
+          "source_train_scale": 6.452300596670309e-08,
+          "standardized_coefficient": 0.006311098113656044,
+          "contribution_kcal_mol": -97811.59648356456
+        },
+        {
+          "feature_index_zero_based": 174,
+          "semantic": "neighborhood B-factor missing fraction; mutation sum",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000174083408,
+          "source_train_scale": 6.452300596670309e-08,
+          "standardized_coefficient": 0.006091564893722534,
+          "contribution_kcal_mol": -94409.19418587079
+        },
+        {
+          "feature_index_zero_based": 86,
+          "semantic": "neighborhood B-factor missing fraction; mutation mean",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000174083408,
+          "source_train_scale": 6.452300596670309e-08,
+          "standardized_coefficient": 0.006091564893722534,
+          "contribution_kcal_mol": -94409.19418587079
+        },
+        {
+          "feature_index_zero_based": 168,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 1.0731818675994873,
+          "source_train_mean": 0.25865625584172824,
+          "source_train_scale": 0.05484842093966531,
+          "standardized_coefficient": 0.4543720483779907,
+          "contribution_kcal_mol": 6.747644951854239
+        },
+        {
+          "feature_index_zero_based": 167,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 1.6731820106506348,
+          "source_train_mean": 0.45499930999108723,
+          "source_train_scale": 0.056739394830524086,
+          "standardized_coefficient": -0.2516089379787445,
+          "contribution_kcal_mol": -5.401990213193757
+        },
+        {
+          "feature_index_zero_based": 82,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9558225715444202,
+          "source_train_scale": 0.05021880166565038,
+          "standardized_coefficient": 0.1636458784341812,
+          "contribution_kcal_mol": -3.11469846271926
+        }
+      ]
+    },
+    {
+      "function_fold": "within",
+      "protein_id": "gb1",
+      "variant_id": "FLIP2_gb1_sampled_v3:4",
+      "linear_decomposition_float64_kcal_mol": -286633.98333884386,
+      "top_terms": [
+        {
+          "feature_index_zero_based": 262,
+          "semantic": "neighborhood B-factor missing fraction; mutation max",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000174083408,
+          "source_train_scale": 6.452300596670309e-08,
+          "standardized_coefficient": 0.006311098113656044,
+          "contribution_kcal_mol": -97811.59648356456
+        },
+        {
+          "feature_index_zero_based": 174,
+          "semantic": "neighborhood B-factor missing fraction; mutation sum",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000174083408,
+          "source_train_scale": 6.452300596670309e-08,
+          "standardized_coefficient": 0.006091564893722534,
+          "contribution_kcal_mol": -94409.19418587079
+        },
+        {
+          "feature_index_zero_based": 86,
+          "semantic": "neighborhood B-factor missing fraction; mutation mean",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000174083408,
+          "source_train_scale": 6.452300596670309e-08,
+          "standardized_coefficient": 0.006091564893722534,
+          "contribution_kcal_mol": -94409.19418587079
+        },
+        {
+          "feature_index_zero_based": 170,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9558225715444202,
+          "source_train_scale": 0.05021880166565038,
+          "standardized_coefficient": 0.1636458784341812,
+          "contribution_kcal_mol": -3.11469846271926
+        },
+        {
+          "feature_index_zero_based": 82,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9558225715444202,
+          "source_train_scale": 0.05021880166565038,
+          "standardized_coefficient": 0.1636458784341812,
+          "contribution_kcal_mol": -3.11469846271926
+        },
+        {
+          "feature_index_zero_based": 258,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9558225715444202,
+          "source_train_scale": 0.05021880166565038,
+          "standardized_coefficient": 0.1633741706609726,
+          "contribution_kcal_mol": -3.109527004741709
+        }
+      ]
+    },
+    {
+      "function_fold": "within",
+      "protein_id": "nucb",
+      "variant_id": "FLIP2_nucb_random_v3:303",
+      "linear_decomposition_float64_kcal_mol": -286634.6765686128,
+      "top_terms": [
+        {
+          "feature_index_zero_based": 262,
+          "semantic": "neighborhood B-factor missing fraction; mutation max",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000174083408,
+          "source_train_scale": 6.452300596670309e-08,
+          "standardized_coefficient": 0.006311098113656044,
+          "contribution_kcal_mol": -97811.59648356456
+        },
+        {
+          "feature_index_zero_based": 86,
+          "semantic": "neighborhood B-factor missing fraction; mutation mean",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000174083408,
+          "source_train_scale": 6.452300596670309e-08,
+          "standardized_coefficient": 0.006091564893722534,
+          "contribution_kcal_mol": -94409.19418587079
+        },
+        {
+          "feature_index_zero_based": 174,
+          "semantic": "neighborhood B-factor missing fraction; mutation sum",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000174083408,
+          "source_train_scale": 6.452300596670309e-08,
+          "standardized_coefficient": 0.006091564893722534,
+          "contribution_kcal_mol": -94409.19418587079
+        },
+        {
+          "feature_index_zero_based": 168,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.7604166865348816,
+          "source_train_mean": 0.25865625584172824,
+          "source_train_scale": 0.05484842093966531,
+          "standardized_coefficient": 0.4543720483779907,
+          "contribution_kcal_mol": 4.1566541166219055
+        },
+        {
+          "feature_index_zero_based": 167,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 1.3604166507720947,
+          "source_train_mean": 0.45499930999108723,
+          "source_train_scale": 0.056739394830524086,
+          "standardized_coefficient": -0.2516089379787445,
+          "contribution_kcal_mol": -4.015042744497035
+        },
+        {
+          "feature_index_zero_based": 82,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9558225715444202,
+          "source_train_scale": 0.05021880166565038,
+          "standardized_coefficient": 0.1636458784341812,
+          "contribution_kcal_mol": -3.11469846271926
+        }
+      ]
+    },
+    {
+      "function_fold": "amylase",
+      "protein_id": "amylase",
+      "variant_id": "FLIP2_amylase_by_mutation_v3:3",
+      "linear_decomposition_float64_kcal_mol": -1372628.7794172047,
+      "top_terms": [
+        {
+          "feature_index_zero_based": 262,
+          "semantic": "neighborhood B-factor missing fraction; mutation max",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000296036402,
+          "source_train_scale": 6.778498026838665e-08,
+          "standardized_coefficient": 0.03101474791765213,
+          "contribution_kcal_mol": -457546.03325105825
+        },
+        {
+          "feature_index_zero_based": 174,
+          "semantic": "neighborhood B-factor missing fraction; mutation sum",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000296036402,
+          "source_train_scale": 6.778498026838665e-08,
+          "standardized_coefficient": 0.031014520674943924,
+          "contribution_kcal_mol": -457542.6808459379
+        },
+        {
+          "feature_index_zero_based": 86,
+          "semantic": "neighborhood B-factor missing fraction; mutation mean",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000296036402,
+          "source_train_scale": 6.778498026838665e-08,
+          "standardized_coefficient": 0.031014520674943924,
+          "contribution_kcal_mol": -457542.6808459379
+        },
+        {
+          "feature_index_zero_based": 170,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9635073839624723,
+          "source_train_scale": 0.039912335253429444,
+          "standardized_coefficient": 0.09108935296535492,
+          "contribution_kcal_mol": -2.1989508663225164
+        },
+        {
+          "feature_index_zero_based": 82,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9635073839624723,
+          "source_train_scale": 0.039912335253429444,
+          "standardized_coefficient": 0.09108935296535492,
+          "contribution_kcal_mol": -2.1989508663225164
+        },
+        {
+          "feature_index_zero_based": 258,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9635073839624723,
+          "source_train_scale": 0.039912335253429444,
+          "standardized_coefficient": 0.09108893573284149,
+          "contribution_kcal_mol": -2.19894079408282
+        }
+      ]
+    },
+    {
+      "function_fold": "amylase",
+      "protein_id": "gb1",
+      "variant_id": "FLIP2_gb1_sampled_v3:4",
+      "linear_decomposition_float64_kcal_mol": -1372631.6198427742,
+      "top_terms": [
+        {
+          "feature_index_zero_based": 262,
+          "semantic": "neighborhood B-factor missing fraction; mutation max",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000296036402,
+          "source_train_scale": 6.778498026838665e-08,
+          "standardized_coefficient": 0.03101474791765213,
+          "contribution_kcal_mol": -457546.03325105825
+        },
+        {
+          "feature_index_zero_based": 86,
+          "semantic": "neighborhood B-factor missing fraction; mutation mean",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000296036402,
+          "source_train_scale": 6.778498026838665e-08,
+          "standardized_coefficient": 0.031014520674943924,
+          "contribution_kcal_mol": -457542.6808459379
+        },
+        {
+          "feature_index_zero_based": 174,
+          "semantic": "neighborhood B-factor missing fraction; mutation sum",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000296036402,
+          "source_train_scale": 6.778498026838665e-08,
+          "standardized_coefficient": 0.031014520674943924,
+          "contribution_kcal_mol": -457542.6808459379
+        },
+        {
+          "feature_index_zero_based": 82,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9635073839624723,
+          "source_train_scale": 0.039912335253429444,
+          "standardized_coefficient": 0.09108935296535492,
+          "contribution_kcal_mol": -2.1989508663225164
+        },
+        {
+          "feature_index_zero_based": 170,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9635073839624723,
+          "source_train_scale": 0.039912335253429444,
+          "standardized_coefficient": 0.09108935296535492,
+          "contribution_kcal_mol": -2.1989508663225164
+        },
+        {
+          "feature_index_zero_based": 258,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9635073839624723,
+          "source_train_scale": 0.039912335253429444,
+          "standardized_coefficient": 0.09108893573284149,
+          "contribution_kcal_mol": -2.19894079408282
+        }
+      ]
+    },
+    {
+      "function_fold": "amylase",
+      "protein_id": "nucb",
+      "variant_id": "FLIP2_nucb_random_v3:303",
+      "linear_decomposition_float64_kcal_mol": -1372634.6679453906,
+      "top_terms": [
+        {
+          "feature_index_zero_based": 262,
+          "semantic": "neighborhood B-factor missing fraction; mutation max",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000296036402,
+          "source_train_scale": 6.778498026838665e-08,
+          "standardized_coefficient": 0.03101474791765213,
+          "contribution_kcal_mol": -457546.03325105825
+        },
+        {
+          "feature_index_zero_based": 86,
+          "semantic": "neighborhood B-factor missing fraction; mutation mean",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000296036402,
+          "source_train_scale": 6.778498026838665e-08,
+          "standardized_coefficient": 0.031014520674943924,
+          "contribution_kcal_mol": -457542.6808459379
+        },
+        {
+          "feature_index_zero_based": 174,
+          "semantic": "neighborhood B-factor missing fraction; mutation sum",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000296036402,
+          "source_train_scale": 6.778498026838665e-08,
+          "standardized_coefficient": 0.031014520674943924,
+          "contribution_kcal_mol": -457542.6808459379
+        },
+        {
+          "feature_index_zero_based": 82,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9635073839624723,
+          "source_train_scale": 0.039912335253429444,
+          "standardized_coefficient": 0.09108935296535492,
+          "contribution_kcal_mol": -2.1989508663225164
+        },
+        {
+          "feature_index_zero_based": 170,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9635073839624723,
+          "source_train_scale": 0.039912335253429444,
+          "standardized_coefficient": 0.09108935296535492,
+          "contribution_kcal_mol": -2.1989508663225164
+        },
+        {
+          "feature_index_zero_based": 258,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9635073839624723,
+          "source_train_scale": 0.039912335253429444,
+          "standardized_coefficient": 0.09108893573284149,
+          "contribution_kcal_mol": -2.19894079408282
+        }
+      ]
+    },
+    {
+      "function_fold": "gb1",
+      "protein_id": "amylase",
+      "variant_id": "FLIP2_amylase_by_mutation_v3:3",
+      "linear_decomposition_float64_kcal_mol": -593812.6739383335,
+      "top_terms": [
+        {
+          "feature_index_zero_based": 174,
+          "semantic": "neighborhood B-factor missing fraction; mutation sum",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000085433325,
+          "source_train_scale": 6.45490753450491e-08,
+          "standardized_coefficient": 0.012776702642440796,
+          "contribution_kcal_mol": -197937.81217311247
+        },
+        {
+          "feature_index_zero_based": 86,
+          "semantic": "neighborhood B-factor missing fraction; mutation mean",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000085433325,
+          "source_train_scale": 6.45490753450491e-08,
+          "standardized_coefficient": 0.012776702642440796,
+          "contribution_kcal_mol": -197937.81217311247
+        },
+        {
+          "feature_index_zero_based": 262,
+          "semantic": "neighborhood B-factor missing fraction; mutation max",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000085433325,
+          "source_train_scale": 6.45490753450491e-08,
+          "standardized_coefficient": 0.012776663526892662,
+          "contribution_kcal_mol": -197937.2061915665
+        },
+        {
+          "feature_index_zero_based": 170,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9302737559874853,
+          "source_train_scale": 0.06817545559162262,
+          "standardized_coefficient": -0.03336413949728012,
+          "contribution_kcal_mol": 0.45526330694941625
+        },
+        {
+          "feature_index_zero_based": 82,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9302737559874853,
+          "source_train_scale": 0.06817545559162262,
+          "standardized_coefficient": -0.03336413949728012,
+          "contribution_kcal_mol": 0.45526330694941625
+        },
+        {
+          "feature_index_zero_based": 258,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9302737559874853,
+          "source_train_scale": 0.06817545559162262,
+          "standardized_coefficient": -0.03336407244205475,
+          "contribution_kcal_mol": 0.45526239196152474
+        }
+      ]
+    },
+    {
+      "function_fold": "gb1",
+      "protein_id": "gb1",
+      "variant_id": "FLIP2_gb1_sampled_v3:4",
+      "linear_decomposition_float64_kcal_mol": -593812.5796529022,
+      "top_terms": [
+        {
+          "feature_index_zero_based": 174,
+          "semantic": "neighborhood B-factor missing fraction; mutation sum",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000085433325,
+          "source_train_scale": 6.45490753450491e-08,
+          "standardized_coefficient": 0.012776702642440796,
+          "contribution_kcal_mol": -197937.81217311247
+        },
+        {
+          "feature_index_zero_based": 86,
+          "semantic": "neighborhood B-factor missing fraction; mutation mean",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000085433325,
+          "source_train_scale": 6.45490753450491e-08,
+          "standardized_coefficient": 0.012776702642440796,
+          "contribution_kcal_mol": -197937.81217311247
+        },
+        {
+          "feature_index_zero_based": 262,
+          "semantic": "neighborhood B-factor missing fraction; mutation max",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000085433325,
+          "source_train_scale": 6.45490753450491e-08,
+          "standardized_coefficient": 0.012776663526892662,
+          "contribution_kcal_mol": -197937.2061915665
+        },
+        {
+          "feature_index_zero_based": 82,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9302737559874853,
+          "source_train_scale": 0.06817545559162262,
+          "standardized_coefficient": -0.03336413949728012,
+          "contribution_kcal_mol": 0.45526330694941625
+        },
+        {
+          "feature_index_zero_based": 170,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9302737559874853,
+          "source_train_scale": 0.06817545559162262,
+          "standardized_coefficient": -0.03336413949728012,
+          "contribution_kcal_mol": 0.45526330694941625
+        },
+        {
+          "feature_index_zero_based": 258,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9302737559874853,
+          "source_train_scale": 0.06817545559162262,
+          "standardized_coefficient": -0.03336407244205475,
+          "contribution_kcal_mol": 0.45526239196152474
+        }
+      ]
+    },
+    {
+      "function_fold": "gb1",
+      "protein_id": "nucb",
+      "variant_id": "FLIP2_nucb_random_v3:303",
+      "linear_decomposition_float64_kcal_mol": -593813.739061691,
+      "top_terms": [
+        {
+          "feature_index_zero_based": 174,
+          "semantic": "neighborhood B-factor missing fraction; mutation sum",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000085433325,
+          "source_train_scale": 6.45490753450491e-08,
+          "standardized_coefficient": 0.012776702642440796,
+          "contribution_kcal_mol": -197937.81217311247
+        },
+        {
+          "feature_index_zero_based": 86,
+          "semantic": "neighborhood B-factor missing fraction; mutation mean",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000085433325,
+          "source_train_scale": 6.45490753450491e-08,
+          "standardized_coefficient": 0.012776702642440796,
+          "contribution_kcal_mol": -197937.81217311247
+        },
+        {
+          "feature_index_zero_based": 262,
+          "semantic": "neighborhood B-factor missing fraction; mutation max",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000085433325,
+          "source_train_scale": 6.45490753450491e-08,
+          "standardized_coefficient": 0.012776663526892662,
+          "contribution_kcal_mol": -197937.2061915665
+        },
+        {
+          "feature_index_zero_based": 170,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9302737559874853,
+          "source_train_scale": 0.06817545559162262,
+          "standardized_coefficient": -0.03336413949728012,
+          "contribution_kcal_mol": 0.45526330694941625
+        },
+        {
+          "feature_index_zero_based": 82,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9302737559874853,
+          "source_train_scale": 0.06817545559162262,
+          "standardized_coefficient": -0.03336413949728012,
+          "contribution_kcal_mol": 0.45526330694941625
+        },
+        {
+          "feature_index_zero_based": 258,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.9302737559874853,
+          "source_train_scale": 0.06817545559162262,
+          "standardized_coefficient": -0.03336407244205475,
+          "contribution_kcal_mol": 0.45526239196152474
+        }
+      ]
+    },
+    {
+      "function_fold": "nucb",
+      "protein_id": "amylase",
+      "variant_id": "FLIP2_amylase_by_mutation_v3:3",
+      "linear_decomposition_float64_kcal_mol": -1335658.7814965788,
+      "top_terms": [
+        {
+          "feature_index_zero_based": 86,
+          "semantic": "neighborhood B-factor missing fraction; mutation mean",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000166893006,
+          "source_train_scale": 5.6805029800759515e-08,
+          "standardized_coefficient": 0.02529085800051689,
+          "contribution_kcal_mol": -445222.1662643238
+        },
+        {
+          "feature_index_zero_based": 174,
+          "semantic": "neighborhood B-factor missing fraction; mutation sum",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000166893006,
+          "source_train_scale": 5.6805029800759515e-08,
+          "standardized_coefficient": 0.02529085800051689,
+          "contribution_kcal_mol": -445222.1662643238
+        },
+        {
+          "feature_index_zero_based": 262,
+          "semantic": "neighborhood B-factor missing fraction; mutation max",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000166893006,
+          "source_train_scale": 5.6805029800759515e-08,
+          "standardized_coefficient": 0.025290800258517265,
+          "contribution_kcal_mol": -445221.1497698199
+        },
+        {
+          "feature_index_zero_based": 116,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.971699165503184,
+          "source_train_scale": 0.026187110474792247,
+          "standardized_coefficient": -0.03017399087548256,
+          "contribution_kcal_mol": 1.1196363868335382
+        },
+        {
+          "feature_index_zero_based": 28,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.971699165503184,
+          "source_train_scale": 0.026187110474792247,
+          "standardized_coefficient": -0.03017399087548256,
+          "contribution_kcal_mol": 1.1196363868335382
+        },
+        {
+          "feature_index_zero_based": 204,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.971699165503184,
+          "source_train_scale": 0.026187110474792247,
+          "standardized_coefficient": -0.03017399087548256,
+          "contribution_kcal_mol": 1.1196363868335382
+        }
+      ]
+    },
+    {
+      "function_fold": "nucb",
+      "protein_id": "gb1",
+      "variant_id": "FLIP2_gb1_sampled_v3:4",
+      "linear_decomposition_float64_kcal_mol": -1335659.6032150427,
+      "top_terms": [
+        {
+          "feature_index_zero_based": 86,
+          "semantic": "neighborhood B-factor missing fraction; mutation mean",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000166893006,
+          "source_train_scale": 5.6805029800759515e-08,
+          "standardized_coefficient": 0.02529085800051689,
+          "contribution_kcal_mol": -445222.1662643238
+        },
+        {
+          "feature_index_zero_based": 174,
+          "semantic": "neighborhood B-factor missing fraction; mutation sum",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000166893006,
+          "source_train_scale": 5.6805029800759515e-08,
+          "standardized_coefficient": 0.02529085800051689,
+          "contribution_kcal_mol": -445222.1662643238
+        },
+        {
+          "feature_index_zero_based": 262,
+          "semantic": "neighborhood B-factor missing fraction; mutation max",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000166893006,
+          "source_train_scale": 5.6805029800759515e-08,
+          "standardized_coefficient": 0.025290800258517265,
+          "contribution_kcal_mol": -445221.1497698199
+        },
+        {
+          "feature_index_zero_based": 204,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.971699165503184,
+          "source_train_scale": 0.026187110474792247,
+          "standardized_coefficient": -0.03017399087548256,
+          "contribution_kcal_mol": 1.1196363868335382
+        },
+        {
+          "feature_index_zero_based": 28,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.971699165503184,
+          "source_train_scale": 0.026187110474792247,
+          "standardized_coefficient": -0.03017399087548256,
+          "contribution_kcal_mol": 1.1196363868335382
+        },
+        {
+          "feature_index_zero_based": 116,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.971699165503184,
+          "source_train_scale": 0.026187110474792247,
+          "standardized_coefficient": -0.03017399087548256,
+          "contribution_kcal_mol": 1.1196363868335382
+        }
+      ]
+    },
+    {
+      "function_fold": "nucb",
+      "protein_id": "nucb",
+      "variant_id": "FLIP2_nucb_random_v3:303",
+      "linear_decomposition_float64_kcal_mol": -1335659.3496899516,
+      "top_terms": [
+        {
+          "feature_index_zero_based": 174,
+          "semantic": "neighborhood B-factor missing fraction; mutation sum",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000166893006,
+          "source_train_scale": 5.6805029800759515e-08,
+          "standardized_coefficient": 0.02529085800051689,
+          "contribution_kcal_mol": -445222.1662643238
+        },
+        {
+          "feature_index_zero_based": 86,
+          "semantic": "neighborhood B-factor missing fraction; mutation mean",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000166893006,
+          "source_train_scale": 5.6805029800759515e-08,
+          "standardized_coefficient": 0.02529085800051689,
+          "contribution_kcal_mol": -445222.1662643238
+        },
+        {
+          "feature_index_zero_based": 262,
+          "semantic": "neighborhood B-factor missing fraction; mutation max",
+          "function_value": 0.0,
+          "source_train_mean": 1.0000000166893006,
+          "source_train_scale": 5.6805029800759515e-08,
+          "standardized_coefficient": 0.025290800258517265,
+          "contribution_kcal_mol": -445221.1497698199
+        },
+        {
+          "feature_index_zero_based": 204,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.971699165503184,
+          "source_train_scale": 0.026187110474792247,
+          "standardized_coefficient": -0.03017399087548256,
+          "contribution_kcal_mol": 1.1196363868335382
+        },
+        {
+          "feature_index_zero_based": 116,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.971699165503184,
+          "source_train_scale": 0.026187110474792247,
+          "standardized_coefficient": -0.03017399087548256,
+          "contribution_kcal_mol": 1.1196363868335382
+        },
+        {
+          "feature_index_zero_based": 28,
+          "semantic": "other M3 structural descriptor",
+          "function_value": 0.0,
+          "source_train_mean": 0.971699165503184,
+          "source_train_scale": 0.026187110474792247,
+          "standardized_coefficient": -0.03017399087548256,
+          "contribution_kcal_mol": 1.1196363868335382
+        }
+      ]
+    }
+  ],
+  "m6_source_prediction_replay": [
+    {
+      "protocol": "S1",
+      "fold": "within",
+      "source": "esm_sites_ridge",
+      "predictions": 270,
+      "max_absolute_difference_kcal_mol": 0.0
+    },
+    {
+      "protocol": "S1",
+      "fold": "within",
+      "source": "structural_ridge",
+      "predictions": 270,
+      "max_absolute_difference_kcal_mol": 0.0
+    },
+    {
+      "protocol": "S2",
+      "fold": "1LP1",
+      "source": "esm_sites_ridge",
+      "predictions": 600,
+      "max_absolute_difference_kcal_mol": 0.0
+    },
+    {
+      "protocol": "S2",
+      "fold": "1LP1",
+      "source": "structural_ridge",
+      "predictions": 600,
+      "max_absolute_difference_kcal_mol": 0.0
+    },
+    {
+      "protocol": "S2",
+      "fold": "1A32",
+      "source": "esm_sites_ridge",
+      "predictions": 600,
+      "max_absolute_difference_kcal_mol": 0.0
+    },
+    {
+      "protocol": "S2",
+      "fold": "1A32",
+      "source": "structural_ridge",
+      "predictions": 600,
+      "max_absolute_difference_kcal_mol": 0.0
+    },
+    {
+      "protocol": "S2",
+      "fold": "1TUD",
+      "source": "esm_sites_ridge",
+      "predictions": 600,
+      "max_absolute_difference_kcal_mol": 0.0
+    },
+    {
+      "protocol": "S2",
+      "fold": "1TUD",
+      "source": "structural_ridge",
+      "predictions": 600,
+      "max_absolute_difference_kcal_mol": 0.0
+    }
+  ],
+  "m6_source_feature_replay": {
+    "esm_sites_ridge": {
+      "dtype": "float32",
+      "rows": 1800,
+      "exact": true
+    },
+    "structural_ridge": {
+      "dtype": "float32",
+      "rows": 1800,
+      "exact": true
+    }
+  }
+}
