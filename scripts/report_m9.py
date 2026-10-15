@@ -22,6 +22,22 @@ def report(root, output):
     manifest = json.loads((root / "manifest.json").read_text())
     with (root / "predictions.csv").open() as handle:
         predictions = list(csv.DictReader(handle))
+    assert len(predictions) == 28566 and len(runs) == 92
+    shift = json.loads((root / "feature_shift.json").read_text())
+    with (root / "saturation.csv").open() as handle:
+        saturation = list(csv.DictReader(handle))
+    collapsed = [
+        s
+        for s in saturation
+        if s["protocol"] == "G2"
+        and s["model"] == "multimodal_ridge"
+        and int(s["unique_predictions"]) == 1
+    ]
+    structured_cyp = [
+        s
+        for s in saturation
+        if s["protocol"] == "G2" and s["fold"] == "CYP2C9" and s["model"] == "structured"
+    ]
     models = list(dict.fromkeys(r["model"] for r in runs))
     summary, assays, differences = [], [], []
     for protocol in ("G1", "G2"):
@@ -185,6 +201,16 @@ def report(root, output):
         "",
         "Conditioning is not uniformly beneficial. Interpret changes alongside the shuffled control and the stronger classical baselines; an improvement over the same neural head alone does not establish a general benefit over existing representations. Individual assay IDs remain protein-specific and map to UNK in G2. The protein-proxy control is diagnostic, not a deployable input. Separate assay-ID ridge heads fall back to the global head for all unseen test assays.",
         "",
+        f"The bounded multimodal ridge collapses to a constant in {len(collapsed)}/3 G2 folds; its undefined per-assay correlations are null in runs.json and contribute zero to the macro. The conditioned neural head also collapses on CYP2C9 in {sum(int(s['unique_predictions']) == 1 for s in structured_cyp)}/3 seeds. Do not interpret these zero macros as measured zero correlation. The clipping/sigmoid contract was fixed before fitting; it was not relaxed after this failure.",
+        "",
+        "Frozen multimodal feature shift is substantial: "
+        + "; ".join(
+            f"{s['fold']} maximum absolute standardized coordinate {s['max_abs_standardized_test']:.1f}, {100 * s['test_fraction_abs_standardized_above_10']:.1f}% of test coordinates above10 SD"
+            for s in shift
+            if s["protocol"] == "G2" and s["features"] == "multimodal"
+        )
+        + ". Only one protein supplies training labels in each G2 fold. Reference-global encoder features vary little within that protein and can shift strongly across proteins, consistent with saturation. The 1e-6 scaling guard prevents roundoff amplification but does not solve genuine distribution shift. feature_shift.json, saturation.csv and generalization_gaps.csv retain the evidence; no posthoc scaler retuning was performed.",
+        "",
         "Shuffling swaps complete endpoint records within each training protein (two families, so every nonidentity permutation is a swap). Correct validation/test metadata stay unchanged. This is an adversarial mismatch control, not a null distribution from many independent random annotations. Structured metadata includes endpoint-specific technologies/substrates that can be unseen at test; explicit UNK handling limits transfer.",
         "",
         "## Data, mapping and provenance",
@@ -204,6 +230,14 @@ def report(root, output):
         "Both endpoint observations of a genotype stay together in G1. G2 proteins are entirely disjoint. Vocabularies, standardization and target midranks fit training only; alpha/epoch selection uses validation only. Primary metadata excludes protein/assay IDs and all outcomes. Per-assay native correlations are aggregated only after evaluation. Test-label perturbation tests reproduce both model fits and selections unchanged.",
         "",
         "Frozen ESM-2 t12 35M revision6fbf070e65b0b7291e7bbcd451118c216cff79d8 and M7 function-only GNN/bidirectional encoder are reused; only the new heads train. Fixed encoder supervision was old amylase training/NucB validation; similarity audits screen the new proteins against both. PLM pretraining exposure is unknown. No M6 stability prediction head or M8 OOD stability scalar is read; no thermodynamic inference. The pretrained frozen encoder may underfit new human proteins; end-to-end adaptation is outside this bounded first test.",
+        "",
+        "All metadata/zero/proxy heads have identical registered capacity within a fold: "
+        + "; ".join(
+            f"{r['protocol']}/{r['fold']} {r['selection']['parameters']} parameters"
+            for r in runs
+            if r["model"] == "structured" and r["seed"] == 0
+        )
+        + ". Category vocabularies change with training proteins, so capacity can differ across folds. Unused control parameters remain registered but receive no task gradients. ESM/structural/multimodal ridge coefficient counts including intercept are962/271/101; group-head counts are retained per run.",
         "",
         f"Head experiment: {manifest['elapsed_seconds']:.2f}s, CPU {manifest['machine']}, four threads; peak process RSS {manifest['peak_rss_bytes'] / 1024**3:.3f} GiB. Feature preparation {audit['features']['elapsed_seconds']:.2f}s with graph/token cache hits (not a cold-start timing); original token extraction used the recorded encoder device. Environment: "
         + ", ".join(f"{k} {v}" for k, v in manifest["versions"].items())

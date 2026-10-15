@@ -12,6 +12,7 @@ from sklearn.preprocessing import StandardScaler
 from proteinmod.assay_experiments import history
 from proteinmod.assay_features import load
 from proteinmod.assay_metadata import AssayHead, AssayMetadata, MetadataVocabulary
+from proteinmod.assay_models import evaluate
 from proteinmod.data import checksum, write_json
 
 
@@ -90,6 +91,20 @@ def verify(root):
                     and int(r["seed"]) == run["seed"]
                 }
                 assert ids == set(role["ids"]["test"])
+                targets = [
+                    r
+                    for r in expected
+                    if r["protocol"] == run["protocol"]
+                    and r["fold"] == run["fold"]
+                    and r["model"] == run["model"]
+                    and int(r["seed"]) == run["seed"]
+                ]
+                recomputed = evaluate(
+                    rows,
+                    [lookup[r["id"]] for r in targets],
+                    np.array([float(r["predicted_train_percentile"]) for r in targets]),
+                )
+                assert recomputed == run["test"]
                 sets.append(ids)
         assert len(sets) == 23
     result = {

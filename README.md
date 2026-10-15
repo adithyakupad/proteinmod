@@ -442,3 +442,46 @@ pytest -q
 All 176 M0–M7 evidence files remain unchanged. The corrected 312-fit local run took
 35.01 seconds; a full repeat reproduces all 161,433 held-out predictions exactly.
 M9 remains outside this milestone.
+
+## M9 assay-aware mutation-effect prediction
+
+M9 crosses three new proteins (PTEN, CYP2C9, VKOR1) with abundance and activity
+assays: 540 shared genotypes, 1,080 measured observations. Paired endpoints stay
+together in G1; G2 holds out entire proteins with both endpoint families known
+in training. Metadata carries endpoint, technology, biological context, substrate,
+units/direction and explicit condition missingness. Train-only vocabulary/scaling,
+unknown-category handling and identical-capacity controls prevent label/protein
+identity shortcuts. No M8 stability scalar is used.
+
+Actual equal-protein macro Spearman:
+
+| Model | G1 | G2 |
+|---|---:|---:|
+| ESM mutation-site ridge | .3545 | .2810 |
+| Structural ridge | .3352 | .2650 |
+| Unconditioned neural head | .3050 | .2278 |
+| Structured metadata head | .2772 | .2008 |
+| Shuffled training metadata | .2775 | .2810 |
+
+This is a negative conditioning result. Frozen multimodal features shift strongly
+between proteins; bounded ridge predictions collapse in all three G2 folds, and
+conditioned neural predictions saturate on CYP2C9. Temperature/pH are unavailable
+in the curated records, so numeric condition effects remain untested. Activity
+proxies differ, assay IDs still identify proteins, and unseen-assay/family transfer
+is not established. The new cohort is not directly comparable to M4/M8 metrics.
+
+See [results and failures](benchmarks/m9/REPORT.md), [protocol](docs/m9_protocol.md)
+and [configuration](configs/m9.json). Reproduction after frozen M7 encoder setup:
+
+```sh
+python -m proteinmod.assay_experiments download --config configs/m9.json
+python -m proteinmod.assay_experiments prepare --config configs/m9.json
+python -m proteinmod.assay_experiments run --config configs/m9.json
+python scripts/verify_m9.py --input runs/m9
+python scripts/audit_m9.py --input runs/m9
+MPLCONFIGDIR=/tmp/proteinmod-m9-matplotlib python scripts/report_m9.py --input runs/m9 --output runs/m9
+```
+
+All 199 M0–M8 evidence files remain unchanged. The full repeated experiment produces
+identical predictions and metrics; all 60 saved heads replay exactly. Work is stacked
+on draft PR #16 → #14 → #12, leaving main unchanged. M10 is outside this milestone.

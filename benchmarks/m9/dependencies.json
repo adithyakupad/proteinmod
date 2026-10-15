@@ -1,0 +1,226 @@
+{
+  "dependencies": [
+    {
+      "number": 12,
+      "url": "https://github.com/adithyakupad/proteinmod/pull/12",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "1753cbbbe7a3cc86b72d0b53e8bceb7cda6133b8",
+      "branch": "codex/m6-experimental-stability",
+      "base": "main",
+      "checks": [
+        {
+          "name": "offline-tests (3.12)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38669893536/job/116210295783"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38669893536/job/116210295674"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38669893536/job/116210295647"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38669893536/job/116210295642"
+        },
+        {
+          "name": "m3-neural-tests",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38669893536/job/116210295368"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38669745977/job/116209806787"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38669745977/job/116209806624"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38669745977/job/116209806557"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38669745977/job/116209806550"
+        },
+        {
+          "name": "m3-neural-tests",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38669745977/job/116209806498"
+        }
+      ],
+      "safe_action": "Preserve draft; stack M9 on verified M8 head; main unchanged."
+    },
+    {
+      "number": 14,
+      "url": "https://github.com/adithyakupad/proteinmod/pull/14",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "dd9e8bceb333c18cb1db57d49210bbbc865846d9",
+      "branch": "codex/m7-progressive-multitask",
+      "base": "codex/m6-experimental-stability",
+      "checks": [
+        {
+          "name": "offline-tests (3.11)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38674691783/job/116225502516"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38674691783/job/116225502513"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38674691783/job/116225502442"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38674691783/job/116225502412"
+        },
+        {
+          "name": "m3-neural-tests",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38674691783/job/116225502206"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38674639693/job/116225333854"
+        },
+        {
+          "name": "m3-neural-tests",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38674639693/job/116225333846"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38674639693/job/116225333763"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38674639693/job/116225333730"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38674639693/job/116225333626"
+        }
+      ],
+      "safe_action": "Preserve draft; stack M9 on verified M8 head; main unchanged."
+    },
+    {
+      "number": 16,
+      "url": "https://github.com/adithyakupad/proteinmod/pull/16",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "16a53a1f76426a7133491b786b13bdc4773f9209",
+      "branch": "codex/m8-stability-informed-function",
+      "base": "codex/m7-progressive-multitask",
+      "checks": [
+        {
+          "name": "offline-tests (3.14)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38753295285/job/116485029767"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38753295285/job/116485029657"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38753295285/job/116485029522"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38753295285/job/116485029372"
+        },
+        {
+          "name": "m3-neural-tests",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38753295285/job/116485029095"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38753061484/job/116484196847"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38753061484/job/116484196796"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38753061484/job/116484196766"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38753061484/job/116484196358"
+        },
+        {
+          "name": "m3-neural-tests",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/adithyakupad/proteinmod/actions/runs/38753061484/job/116484196317"
+        }
+      ],
+      "safe_action": "Preserve draft; stack M9 on verified M8 head; main unchanged."
+    }
+  ],
+  "historical_benchmark_files_preserved": 199,
+  "main_unchanged": "ad2e56478ec1c23c18ad9e46932259f865f7ff55",
+  "stacked_base": "16a53a1f76426a7133491b786b13bdc4773f9209"
+}

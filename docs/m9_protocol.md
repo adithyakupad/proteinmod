@@ -51,6 +51,7 @@ python -m proteinmod.assay_experiments download --config configs/m9.json
 python -m proteinmod.assay_experiments prepare --config configs/m9.json
 python -m proteinmod.assay_experiments run --config configs/m9.json
 python scripts/verify_m9.py --input runs/m9
+python scripts/audit_m9.py --input runs/m9
 MPLCONFIGDIR=/tmp/proteinmod-m9-matplotlib python scripts/report_m9.py --input runs/m9 --output runs/m9
 ruff check .
 ruff format --check .

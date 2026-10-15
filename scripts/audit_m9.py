@@ -24,6 +24,7 @@ def audit(root):
             train, test = x[roles["train"]], x[roles["test"]]
             scaler = scale_fit(x, roles["train"], config["training"]["scale_floor"])
             z = scaler.transform(test)
+            assert np.isfinite(z).all()
             shifts.append(
                 {
                     "protocol": protocol,

@@ -1,0 +1,16 @@
+{
+  "pytest_passed": 137,
+  "ruff_check": "passed",
+  "ruff_format": "passed",
+  "lightweight_pytest_passed": 96,
+  "lightweight_optional_skips": 9,
+  "report_only_reproduction": "all six tables/text/plots byte-identical",
+  "preserved_historical_files": 199,
+  "mapped_observations": 1080,
+  "mapping_exclusions": 0,
+  "full_repeat": "predictions, metrics and selections identical",
+  "saved_head_replay": "60 heads; 22356 test predictions; error 0",
+  "experiment_commit": "c0caab2",
+  "initial_prespecified_commit": "480959d",
+  "m10_implemented": false
+}

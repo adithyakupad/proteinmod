@@ -1,0 +1,13 @@
+{
+  "input_prediction_sha256": "44f3621c1dfbd0d62434a22de10a8f1e9b6bf1a2247fdbf29b3c70bcdd8d5e60",
+  "cases": 92,
+  "test_predictions": 28566,
+  "files": {
+    "REPORT.md": "9b29263952ffcfe1502ab4cc7f4e6c3ae41c36d872ff780dacda1a1253b5c6ee",
+    "metrics.json": "80adaabff00b0009c1bf655905e46ff56911a717d8ef2ed09db5e9d5ad58cf5b",
+    "per_assay.csv": "4e50c386a4d919ea180985f30e1c1c5d1e6fd947ecd55ffa9365a7bf6c894346",
+    "paired_seed_changes.csv": "ba4576bf67fab923a37b083274dea60b1fad6da930b4a94f74007acaaacf9591",
+    "comparison.png": "037906cae780de7119fe1316e4749e96673ad35e15af1309571ecb730bcd8895",
+    "validation_curves.png": "2031e744531987ceee4979485b866a37cebe5c8fc99ce0fb7404775c3842fd3c"
+  }
+}
