@@ -1,0 +1,200 @@
+{
+  "collection": [
+    {
+      "protein_id": "amylase",
+      "assay_id": "FLIP2_amylase_by_mutation_v3",
+      "family": "alpha-amylase (GH13; annotation only)",
+      "target_type": "continuous activity",
+      "dataset": {
+        "name": "FLIP2 Alpha Amylase by-mutation",
+        "path": "data/cache/by_mutation.csv.gz",
+        "url": "https://zenodo.org/records/18433203/files/amylase/by_mutation.csv.gz?download=1",
+        "md5": "3acf90685dae45a534c4f12bc9dec6b6",
+        "source": "https://zenodo.org/records/18433203 (v3); https://flip.protein.properties/",
+        "attribution": "FLIP2, Didi et al. (2026); Enzyme structure correlates with variant effect predictability, Van der Flier et al. (2024), CSBJ 23:3489\u20133497; assay data MIT",
+        "license": "MIT original assay (FLIP2 README); CC-BY-4.0 Zenodo record"
+      },
+      "reference": {
+        "sequence": "LTAPSIKSGTILHAWNWSFNTLKHNMKDIHDAGYTAIQTSPINQVKEGNQGDKSMSNWYWLYQPTSYQIGNRYLGTEQEFKEMCAAAEEYGIKVIVDAVINHTTSDYAAISNEVKSIPNWTHGNTPIKNWSDRWDVTQNSLSGLYDWNTQNTQVQSYLKRFLDRALNDGADGFRFDAAKHIELPDDGSYGSQFWPNITNTSAEFQYGEILQDSVSRDAAYANYMDVTASNYGHSIRSALKNRNLGVSNISHYAVDVSADKLVTWVESHDTYANDDEESTWMSDDDIRLGWAVIASRSGSTPLFFSRPEGGGNGVRFPGKSQIGDRGSALFEDQAITAVNRFHNVMAGQPEELSNPNGNNQIFMNQRGSHGVVLANAGSSSVSINTATKLPDGRYDNKAGAGSFQVNDGKLTGTINARSVAVLYPD",
+        "source": "https://github.com/florisvdf/mutation-predictability/blob/main/data/AMY_BACSU/reference.fasta",
+        "git_blob": "920b6c14b659029dd1f5497329dab98c0c8755e2"
+      },
+      "crop": [
+        0,
+        425
+      ],
+      "structure_artifacts": "benchmarks/structures/amylase_m2",
+      "existing_embedding_config": "configs/amylase_m1.toml"
+    },
+    {
+      "protein_id": "gb1",
+      "assay_id": "FLIP2_gb1_sampled_v3",
+      "family": "Protein G immunoglobulin-binding domain; annotation only",
+      "target_type": "continuous IgG binding",
+      "citation": "https://doi.org/10.7554/eLife.16965",
+      "dataset": {
+        "path": "data/cache/m4/gb1/sampled.csv.gz",
+        "url": "https://zenodo.org/records/18433203/files/gb1/sampled.csv.gz?download=1",
+        "sha256": "eda3778dcb7028978130f1d5ef856f17783f236587b7be9fc72301e2e1cf0ea0",
+        "license": "CC-BY-4.0 (dataset-specific README; Zenodo v3)",
+        "source": "https://zenodo.org/records/18433203"
+      },
+      "full_reference": {
+        "sequence": "MQYKLILNGKTLKGETTTEAVDAATAEKVFKQYANDNGVDGEWTYDDATKTFTVTELEVLFQGPLDPNSMATYEVLCEVARKLGTDDREVVLFLLNVFIPQPTLAQLIGALRALKEEGRLTFPLLAECLFRAGRRDLLRDLLHLDPRFLERHLAGTMSYFSPYQLTVLHVDGELCARDIRSLIFLSKDTIGSRSTPQTFLHWVYCMENLDLLGPTDVDALMSMLRSLSRVDLQRQVQTLMGLHLSGPSHSQHYRHTPLEHHHHHH",
+        "source": "https://zenodo.org/records/18433203/files/gb1/sampled.csv.gz (designated WT first row; GB1 core agrees with Wu 2016 reference)",
+        "sha256": "eeb5c7b9a3a11ecee612b5bb28aea8f7104b417824d932da46703f17e87d3e85"
+      },
+      "reference": {
+        "sequence": "MQYKLILNGKTLKGETTTEAVDAATAEKVFKQYANDNGVDGEWTYDDATKTFTVTE",
+        "source": "https://zenodo.org/records/18433203/files/gb1/sampled.csv.gz (designated WT first row; GB1 core agrees with Wu 2016 reference)",
+        "sha256": "6d140c4f60bede5a68db37a9b38a43c4227c4cdf198675dae4ab09d57e871234"
+      },
+      "crop": [
+        0,
+        56
+      ],
+      "structure_config": {
+        "structure": {
+          "name": "1PGA experimental reference context",
+          "kind": "pdb",
+          "format": "cif",
+          "path": "data/cache/m4/1PGA.cif",
+          "id": "1PGA",
+          "sha256": "e8d9e171a9ca2b7e66b10568bf6d0122da8450e57ad632a7b4c13c6a71f7edf2",
+          "source": "https://www.rcsb.org/structure/1PGA",
+          "license": "wwPDB CC0; cite deposition and primary publication",
+          "confidence": "experimental_bfactor"
+        },
+        "reference": {
+          "sequence": "MQYKLILNGKTLKGETTTEAVDAATAEKVFKQYANDNGVDGEWTYDDATKTFTVTE",
+          "source": "https://zenodo.org/records/18433203/files/gb1/sampled.csv.gz (designated WT first row; GB1 core agrees with Wu 2016 reference)",
+          "sha256": "6d140c4f60bede5a68db37a9b38a43c4227c4cdf198675dae4ab09d57e871234"
+        },
+        "mapping": {
+          "chain": "A",
+          "model_index": 0,
+          "min_coverage": 0.95,
+          "min_identity": 0.98,
+          "allowed_mismatches": [
+            "Q2T"
+          ]
+        },
+        "geometry": {
+          "contact_cutoff_a": 8.0,
+          "sasa_points": 960,
+          "dssp": "off"
+        },
+        "structure_run": {
+          "output": "data/cache/m4/graphs/gb1"
+        }
+      },
+      "structure_artifacts": "data/cache/m4/graphs/gb1",
+      "adapter": "flip2_blank_validation_false"
+    },
+    {
+      "protein_id": "nucb",
+      "assay_id": "FLIP2_nucb_random_v3",
+      "family": "NucB beta-beta-alpha nuclease; annotation only",
+      "target_type": "ordinal activity levels 0/1/2/3",
+      "citation": "https://doi.org/10.1101/2024.03.21.585615",
+      "dataset": {
+        "path": "data/cache/m4/nucb/random.csv.gz",
+        "url": "https://zenodo.org/records/18433203/files/nucb/random.csv.gz?download=1",
+        "sha256": "ecb3a205f82c1127c136382b8c3456c7206be951c655a2850dd7eecd961b3e9f",
+        "license": "CC-BY-4.0 (dataset-specific README; Zenodo v3)",
+        "source": "https://zenodo.org/records/18433203"
+      },
+      "full_reference": {
+        "sequence": "MIKKWAVHLLFSALVLLGLSGGAAYSPQHAEGAARYDDVLYFPASRYPETGAHISDAIKAGHADVCTIERSGADKRRQESLKGIPTKPGFDRDEWPMAMCEEGGKGASVRYVSSSDNRGAGSWVGNRLNGYADGTRILFIVQ",
+        "source": "https://github.com/google-deepmind/nuclease_design/blob/702284847c4558567d8288169a86dc147cfaab32/nuclease_design/constants.py#L21",
+        "sha256": "5ce46bb493dbedbebac11e8f358ab1405919032bade046c66360b8b6c7ca89a5"
+      },
+      "reference": {
+        "sequence": "AARYDDVLYFPASRYPETGAHISDAIKAGHADVCTIERSGADKRRQESLKGIPTKPGFDRDEWPMAMCEEGGKGASVRYVSSSDNRGAGSWVGNRLNGYADGTRILFIVQ",
+        "source": "https://github.com/google-deepmind/nuclease_design/blob/702284847c4558567d8288169a86dc147cfaab32/nuclease_design/constants.py#L21",
+        "sha256": "3d2330d61bc81dee4ce014a75498aa6c1a1c63fe59a7a8e575463e04f345ae35"
+      },
+      "crop": [
+        32,
+        142
+      ],
+      "structure_config": {
+        "structure": {
+          "name": "5OMT experimental reference context",
+          "kind": "pdb",
+          "format": "cif",
+          "path": "data/cache/m4/5OMT.cif",
+          "id": "5OMT",
+          "sha256": "26ea37a4d39da38fa731decdea2afe68554fceca4238c6e97765f9f4886b4553",
+          "source": "https://www.rcsb.org/structure/5OMT",
+          "license": "wwPDB CC0; cite deposition and primary publication",
+          "confidence": "experimental_bfactor"
+        },
+        "reference": {
+          "sequence": "AARYDDVLYFPASRYPETGAHISDAIKAGHADVCTIERSGADKRRQESLKGIPTKPGFDRDEWPMAMCEEGGKGASVRYVSSSDNRGAGSWVGNRLNGYADGTRILFIVQ",
+          "source": "https://github.com/google-deepmind/nuclease_design/blob/702284847c4558567d8288169a86dc147cfaab32/nuclease_design/constants.py#L21",
+          "sha256": "3d2330d61bc81dee4ce014a75498aa6c1a1c63fe59a7a8e575463e04f345ae35"
+        },
+        "mapping": {
+          "chain": "A",
+          "model_index": 0,
+          "min_coverage": 0.95,
+          "min_identity": 0.98,
+          "allowed_mismatches": []
+        },
+        "geometry": {
+          "contact_cutoff_a": 8.0,
+          "sasa_points": 960,
+          "dssp": "off"
+        },
+        "structure_run": {
+          "output": "data/cache/m4/graphs/nucb"
+        }
+      },
+      "structure_artifacts": "data/cache/m4/graphs/nucb"
+    }
+  ],
+  "embedding": {
+    "model": "facebook/esm2_t12_35M_UR50D",
+    "revision": "6fbf070e65b0b7291e7bbcd451118c216cff79d8",
+    "dimension": 480,
+    "device": "auto",
+    "batch_size": 8,
+    "cpu_threads": 4,
+    "model_cache": "data/cache/models",
+    "cache": "data/cache/embeddings"
+  },
+  "experiment": {
+    "output": "runs/m4",
+    "cap_per_partition": {
+      "train": 420,
+      "validation": 90,
+      "test": 90
+    },
+    "seeds": [
+      0,
+      1
+    ],
+    "alphas": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "fold_order": [
+      "amylase",
+      "gb1",
+      "nucb"
+    ],
+    "cpu_threads": 4
+  },
+  "gnn": {
+    "hidden": 16,
+    "layers": 2,
+    "learning_rate": 0.003,
+    "weight_decay": 0.01,
+    "max_epochs": 30,
+    "patience": 8,
+    "batch_size": 64,
+    "device": "cpu"
+  }
+}

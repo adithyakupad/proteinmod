@@ -1,0 +1,2378 @@
+[
+  {
+    "protocol": "G1",
+    "fold": "within",
+    "cohort": "sequence_all",
+    "model": "mutation_count_ridge",
+    "seed": 0,
+    "n_train": 1260,
+    "n_validation": 270,
+    "test": {
+      "amylase": {
+        "n": 90,
+        "spearman_rho": 0.2729663507457122
+      },
+      "gb1": {
+        "n": 90,
+        "spearman_rho": 0.20465344971051974
+      },
+      "nucb": {
+        "n": 90,
+        "spearman_rho": -0.008273340778202442
+      }
+    },
+    "macro_spearman": 0.15644881989267648,
+    "selection": {
+      "alpha": 0.1,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.19291760446365325
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.19291760446365325
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.19291760446365325
+        }
+      ],
+      "train_macro_spearman": 0.1947409179814645,
+      "validation_macro_spearman": 0.19291760446365325,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.08809229196049273
+  },
+  {
+    "protocol": "G1",
+    "fold": "within",
+    "cohort": "sequence_all",
+    "model": "sequence_ridge",
+    "seed": 0,
+    "n_train": 1260,
+    "n_validation": 270,
+    "test": {
+      "amylase": {
+        "n": 90,
+        "spearman_rho": 0.4074099988098827
+      },
+      "gb1": {
+        "n": 90,
+        "spearman_rho": 0.49357721423046996
+      },
+      "nucb": {
+        "n": 90,
+        "spearman_rho": 0.13915225792120278
+      }
+    },
+    "macro_spearman": 0.34671315698718513,
+    "selection": {
+      "alpha": 0.1,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.45844185190296693
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.4528941580453128
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.4432070296819193
+        }
+      ],
+      "train_macro_spearman": 0.480686109359066,
+      "validation_macro_spearman": 0.45844185190296693,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.024850333109498024
+  },
+  {
+    "protocol": "G1",
+    "fold": "within",
+    "cohort": "sequence_all",
+    "model": "esm_sites",
+    "seed": 0,
+    "n_train": 1260,
+    "n_validation": 270,
+    "test": {
+      "amylase": {
+        "n": 90,
+        "spearman_rho": 0.36124773119510467
+      },
+      "gb1": {
+        "n": 90,
+        "spearman_rho": 0.750122704746449
+      },
+      "nucb": {
+        "n": 90,
+        "spearman_rho": 0.3473831862155714
+      }
+    },
+    "macro_spearman": 0.4862512073857084,
+    "selection": {
+      "alpha": 100.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.4780026601444618
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.5775655925992846
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.6153483062737565
+        }
+      ],
+      "train_macro_spearman": 0.8220743320661641,
+      "validation_macro_spearman": 0.6153483062737565,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.4037378339562565
+  },
+  {
+    "protocol": "G1",
+    "fold": "within",
+    "cohort": "sequence_all",
+    "model": "within_one_hot",
+    "seed": 0,
+    "test": {
+      "amylase": {
+        "n": 90,
+        "spearman_rho": 0.5835031094807146
+      }
+    },
+    "selection": {
+      "alpha": 10.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.5422524777109067
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.5762651872046671
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.5155576043110361
+        }
+      ],
+      "train_macro_spearman": 0.9924692969487591,
+      "validation_macro_spearman": 0.5762651872046671,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "macro_spearman": 0.5835031094807146,
+    "n_train": 420,
+    "n_validation": 90
+  },
+  {
+    "protocol": "G1",
+    "fold": "within",
+    "cohort": "sequence_all",
+    "model": "within_one_hot",
+    "seed": 0,
+    "test": {
+      "gb1": {
+        "n": 90,
+        "spearman_rho": 0.7641093556662157
+      }
+    },
+    "selection": {
+      "alpha": 100.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.8511988891929351
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.8520550853036588
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.8549776777969949
+        }
+      ],
+      "train_macro_spearman": 0.8477229929451587,
+      "validation_macro_spearman": 0.8549776777969949,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "macro_spearman": 0.7641093556662157,
+    "n_train": 420,
+    "n_validation": 90
+  },
+  {
+    "protocol": "G1",
+    "fold": "within",
+    "cohort": "sequence_all",
+    "model": "within_one_hot",
+    "seed": 0,
+    "test": {
+      "nucb": {
+        "n": 90,
+        "spearman_rho": 0.4944424174739088
+      }
+    },
+    "selection": {
+      "alpha": 100.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.36408746889878424
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.4638056928646933
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.5436465299935441
+        }
+      ],
+      "train_macro_spearman": 0.8439968263897105,
+      "validation_macro_spearman": 0.5436465299935441,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "macro_spearman": 0.4944424174739088,
+    "n_train": 420,
+    "n_validation": 90
+  },
+  {
+    "protocol": "G1",
+    "fold": "within",
+    "cohort": "structure_matched",
+    "model": "mutation_count_ridge",
+    "seed": 0,
+    "n_train": 1208,
+    "n_validation": 261,
+    "test": {
+      "amylase": {
+        "n": 90,
+        "spearman_rho": 0.2729663507457122
+      },
+      "gb1": {
+        "n": 90,
+        "spearman_rho": 0.20465344971051974
+      },
+      "nucb": {
+        "n": 82,
+        "spearman_rho": 0.021235839914175953
+      }
+    },
+    "macro_spearman": 0.1662852134568026,
+    "selection": {
+      "alpha": 0.1,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.1825116484139558
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.1825116484139558
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.1825116484139558
+        }
+      ],
+      "train_macro_spearman": 0.20045599748762352,
+      "validation_macro_spearman": 0.1825116484139558,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.011566832894459367
+  },
+  {
+    "protocol": "G1",
+    "fold": "within",
+    "cohort": "structure_matched",
+    "model": "sequence_ridge",
+    "seed": 0,
+    "n_train": 1208,
+    "n_validation": 261,
+    "test": {
+      "amylase": {
+        "n": 90,
+        "spearman_rho": 0.4374796784812065
+      },
+      "gb1": {
+        "n": 90,
+        "spearman_rho": 0.5337249978482219
+      },
+      "nucb": {
+        "n": 82,
+        "spearman_rho": 0.21034279787959895
+      }
+    },
+    "macro_spearman": 0.39384915806967574,
+    "selection": {
+      "alpha": 10.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.46096419835411545
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.4641291524588003
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.45270897649775965
+        }
+      ],
+      "train_macro_spearman": 0.48881937040442686,
+      "validation_macro_spearman": 0.4641291524588003,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.019958583172410727
+  },
+  {
+    "protocol": "G1",
+    "fold": "within",
+    "cohort": "structure_matched",
+    "model": "esm_sites",
+    "seed": 0,
+    "n_train": 1208,
+    "n_validation": 261,
+    "test": {
+      "amylase": {
+        "n": 90,
+        "spearman_rho": 0.3317707197242559
+      },
+      "gb1": {
+        "n": 90,
+        "spearman_rho": 0.7537882286918531
+      },
+      "nucb": {
+        "n": 82,
+        "spearman_rho": 0.39397228467454193
+      }
+    },
+    "macro_spearman": 0.4931770776968836,
+    "selection": {
+      "alpha": 100.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.4716497086718275
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.591973926641668
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.6144617345526594
+        }
+      ],
+      "train_macro_spearman": 0.822642799230619,
+      "validation_macro_spearman": 0.6144617345526594,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.3019982499536127
+  },
+  {
+    "protocol": "G1",
+    "fold": "within",
+    "cohort": "structure_matched",
+    "model": "structural_ridge",
+    "seed": 0,
+    "n_train": 1208,
+    "n_validation": 261,
+    "test": {
+      "amylase": {
+        "n": 90,
+        "spearman_rho": 0.5681136276692462
+      },
+      "gb1": {
+        "n": 90,
+        "spearman_rho": 0.54594890242121
+      },
+      "nucb": {
+        "n": 82,
+        "spearman_rho": 0.2694316328916185
+      }
+    },
+    "macro_spearman": 0.46116472099402483,
+    "selection": {
+      "alpha": 100.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.5432098660669404
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.5623486765491313
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.58823796143567
+        }
+      ],
+      "train_macro_spearman": 0.6098316630377031,
+      "validation_macro_spearman": 0.58823796143567,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.07020595902577043
+  },
+  {
+    "protocol": "G1",
+    "fold": "within",
+    "cohort": "structure_matched",
+    "model": "structural_gnn",
+    "seed": 0,
+    "n_train": 1208,
+    "n_validation": 261,
+    "test": {
+      "amylase": {
+        "n": 90,
+        "spearman_rho": 0.6128683083078961
+      },
+      "gb1": {
+        "n": 90,
+        "spearman_rho": 0.6406512143320211
+      },
+      "nucb": {
+        "n": 82,
+        "spearman_rho": 0.20588590757271513
+      }
+    },
+    "macro_spearman": 0.48646847673754406,
+    "selection": {
+      "epoch": 30,
+      "validation_macro_spearman": 0.6604216585639571,
+      "trace": [
+        {
+          "epoch": 1,
+          "validation_macro_spearman": -0.15501618685626675
+        },
+        {
+          "epoch": 2,
+          "validation_macro_spearman": -0.1183036072781571
+        },
+        {
+          "epoch": 3,
+          "validation_macro_spearman": 0.23363068869532413
+        },
+        {
+          "epoch": 4,
+          "validation_macro_spearman": 0.33870039845047967
+        },
+        {
+          "epoch": 5,
+          "validation_macro_spearman": 0.3197874028387694
+        },
+        {
+          "epoch": 6,
+          "validation_macro_spearman": 0.4167099244906071
+        },
+        {
+          "epoch": 7,
+          "validation_macro_spearman": 0.447928738247619
+        },
+        {
+          "epoch": 8,
+          "validation_macro_spearman": 0.4759005964209913
+        },
+        {
+          "epoch": 9,
+          "validation_macro_spearman": 0.5302151505589962
+        },
+        {
+          "epoch": 10,
+          "validation_macro_spearman": 0.5237575028626118
+        },
+        {
+          "epoch": 11,
+          "validation_macro_spearman": 0.5334415791908566
+        },
+        {
+          "epoch": 12,
+          "validation_macro_spearman": 0.5559077310847232
+        },
+        {
+          "epoch": 13,
+          "validation_macro_spearman": 0.5696216457619342
+        },
+        {
+          "epoch": 14,
+          "validation_macro_spearman": 0.5685928031920587
+        },
+        {
+          "epoch": 15,
+          "validation_macro_spearman": 0.5955224426041976
+        },
+        {
+          "epoch": 16,
+          "validation_macro_spearman": 0.5945802442874122
+        },
+        {
+          "epoch": 17,
+          "validation_macro_spearman": 0.6081620493906151
+        },
+        {
+          "epoch": 18,
+          "validation_macro_spearman": 0.640829254529932
+        },
+        {
+          "epoch": 19,
+          "validation_macro_spearman": 0.4911736006517176
+        },
+        {
+          "epoch": 20,
+          "validation_macro_spearman": 0.6035006059143582
+        },
+        {
+          "epoch": 21,
+          "validation_macro_spearman": 0.6258404885678591
+        },
+        {
+          "epoch": 22,
+          "validation_macro_spearman": 0.631802892217068
+        },
+        {
+          "epoch": 23,
+          "validation_macro_spearman": 0.6175739206022682
+        },
+        {
+          "epoch": 24,
+          "validation_macro_spearman": 0.6219209813450549
+        },
+        {
+          "epoch": 25,
+          "validation_macro_spearman": 0.6332068591388073
+        },
+        {
+          "epoch": 26,
+          "validation_macro_spearman": 0.6515530175803826
+        },
+        {
+          "epoch": 27,
+          "validation_macro_spearman": 0.6482171111694708
+        },
+        {
+          "epoch": 28,
+          "validation_macro_spearman": 0.6374726926425561
+        },
+        {
+          "epoch": 29,
+          "validation_macro_spearman": 0.6519843646806297
+        },
+        {
+          "epoch": 30,
+          "validation_macro_spearman": 0.6604216585639571
+        }
+      ],
+      "train_macro_spearman": 0.6881913406688112,
+      "parameters": 3473,
+      "device": "cpu"
+    },
+    "elapsed_seconds": 11.907438792055473
+  },
+  {
+    "protocol": "G1",
+    "fold": "within",
+    "cohort": "structure_matched",
+    "model": "structural_gnn",
+    "seed": 1,
+    "n_train": 1208,
+    "n_validation": 261,
+    "test": {
+      "amylase": {
+        "n": 90,
+        "spearman_rho": 0.5581699723057206
+      },
+      "gb1": {
+        "n": 90,
+        "spearman_rho": 0.6525126850766996
+      },
+      "nucb": {
+        "n": 82,
+        "spearman_rho": 0.15247330078172686
+      }
+    },
+    "macro_spearman": 0.4543853193880491,
+    "selection": {
+      "epoch": 26,
+      "validation_macro_spearman": 0.6166913450566047,
+      "trace": [
+        {
+          "epoch": 1,
+          "validation_macro_spearman": -0.13808884325024418
+        },
+        {
+          "epoch": 2,
+          "validation_macro_spearman": 0.0823328287058788
+        },
+        {
+          "epoch": 3,
+          "validation_macro_spearman": 0.3449991652973838
+        },
+        {
+          "epoch": 4,
+          "validation_macro_spearman": 0.2668149786748182
+        },
+        {
+          "epoch": 5,
+          "validation_macro_spearman": 0.351664969364412
+        },
+        {
+          "epoch": 6,
+          "validation_macro_spearman": 0.3881968751179338
+        },
+        {
+          "epoch": 7,
+          "validation_macro_spearman": 0.38772658902438123
+        },
+        {
+          "epoch": 8,
+          "validation_macro_spearman": 0.4197350918653943
+        },
+        {
+          "epoch": 9,
+          "validation_macro_spearman": 0.4367786974094064
+        },
+        {
+          "epoch": 10,
+          "validation_macro_spearman": 0.4649356952217036
+        },
+        {
+          "epoch": 11,
+          "validation_macro_spearman": 0.48445133005484936
+        },
+        {
+          "epoch": 12,
+          "validation_macro_spearman": 0.4910777017863135
+        },
+        {
+          "epoch": 13,
+          "validation_macro_spearman": 0.49948413230818045
+        },
+        {
+          "epoch": 14,
+          "validation_macro_spearman": 0.49311147338647476
+        },
+        {
+          "epoch": 15,
+          "validation_macro_spearman": 0.5434625868755422
+        },
+        {
+          "epoch": 16,
+          "validation_macro_spearman": 0.5029804005123859
+        },
+        {
+          "epoch": 17,
+          "validation_macro_spearman": 0.5460314419768619
+        },
+        {
+          "epoch": 18,
+          "validation_macro_spearman": 0.5423179970741412
+        },
+        {
+          "epoch": 19,
+          "validation_macro_spearman": 0.5643308177486881
+        },
+        {
+          "epoch": 20,
+          "validation_macro_spearman": 0.5688401836021922
+        },
+        {
+          "epoch": 21,
+          "validation_macro_spearman": 0.5484838679070533
+        },
+        {
+          "epoch": 22,
+          "validation_macro_spearman": 0.5539320536273554
+        },
+        {
+          "epoch": 23,
+          "validation_macro_spearman": 0.6055721212164711
+        },
+        {
+          "epoch": 24,
+          "validation_macro_spearman": 0.5806228271270029
+        },
+        {
+          "epoch": 25,
+          "validation_macro_spearman": 0.5861314806200372
+        },
+        {
+          "epoch": 26,
+          "validation_macro_spearman": 0.6166913450566047
+        },
+        {
+          "epoch": 27,
+          "validation_macro_spearman": 0.5567599917633856
+        },
+        {
+          "epoch": 28,
+          "validation_macro_spearman": 0.6010699211952695
+        },
+        {
+          "epoch": 29,
+          "validation_macro_spearman": 0.5809117976065651
+        },
+        {
+          "epoch": 30,
+          "validation_macro_spearman": 0.5997647824766047
+        }
+      ],
+      "train_macro_spearman": 0.6493508031246156,
+      "parameters": 3473,
+      "device": "cpu"
+    },
+    "elapsed_seconds": 8.881466249935329
+  },
+  {
+    "protocol": "G1",
+    "fold": "within",
+    "cohort": "structure_matched",
+    "model": "within_one_hot",
+    "seed": 0,
+    "test": {
+      "amylase": {
+        "n": 90,
+        "spearman_rho": 0.579979997288494
+      }
+    },
+    "selection": {
+      "alpha": 10.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.5349762013767911
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.5810356295497858
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.5147579804479243
+        }
+      ],
+      "train_macro_spearman": 0.9922233328835418,
+      "validation_macro_spearman": 0.5810356295497858,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "macro_spearman": 0.579979997288494,
+    "n_train": 402,
+    "n_validation": 86
+  },
+  {
+    "protocol": "G1",
+    "fold": "within",
+    "cohort": "structure_matched",
+    "model": "within_one_hot",
+    "seed": 0,
+    "test": {
+      "gb1": {
+        "n": 90,
+        "spearman_rho": 0.7641093556662157
+      }
+    },
+    "selection": {
+      "alpha": 100.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.8511988891929351
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.8520550853036588
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.8549776777969949
+        }
+      ],
+      "train_macro_spearman": 0.8477229929451587,
+      "validation_macro_spearman": 0.8549776777969949,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "macro_spearman": 0.7641093556662157,
+    "n_train": 420,
+    "n_validation": 90
+  },
+  {
+    "protocol": "G1",
+    "fold": "within",
+    "cohort": "structure_matched",
+    "model": "within_one_hot",
+    "seed": 0,
+    "test": {
+      "nucb": {
+        "n": 82,
+        "spearman_rho": 0.5320938380529701
+      }
+    },
+    "selection": {
+      "alpha": 100.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.3224630347535062
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.4064082716803443
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.5325826697824426
+        }
+      ],
+      "train_macro_spearman": 0.8413465370286659,
+      "validation_macro_spearman": 0.5325826697824426,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "macro_spearman": 0.5320938380529701,
+    "n_train": 386,
+    "n_validation": 85
+  },
+  {
+    "protocol": "G2",
+    "fold": "amylase",
+    "cohort": "sequence_all",
+    "model": "mutation_count_ridge",
+    "seed": 0,
+    "n_train": 600,
+    "n_validation": 600,
+    "test": {
+      "amylase": {
+        "n": 600,
+        "spearman_rho": 0.36427714380615045
+      }
+    },
+    "macro_spearman": 0.36427714380615045,
+    "selection": {
+      "alpha": 0.1,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.19097505219134417
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.19097505219134417
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.19097505219134417
+        }
+      ],
+      "train_macro_spearman": 0.024624921136037432,
+      "validation_macro_spearman": 0.19097505219134417,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.007539208047091961
+  },
+  {
+    "protocol": "G2",
+    "fold": "amylase",
+    "cohort": "sequence_all",
+    "model": "sequence_ridge",
+    "seed": 0,
+    "n_train": 600,
+    "n_validation": 600,
+    "test": {
+      "amylase": {
+        "n": 600,
+        "spearman_rho": 0.19678787455644814
+      }
+    },
+    "macro_spearman": 0.19678787455644814,
+    "selection": {
+      "alpha": 100.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": -0.15134338858355945
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": -0.14890017712863807
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": -0.13258693831651835
+        }
+      ],
+      "train_macro_spearman": 0.5256137954714231,
+      "validation_macro_spearman": -0.13258693831651835,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.011914457892999053
+  },
+  {
+    "protocol": "G2",
+    "fold": "amylase",
+    "cohort": "sequence_all",
+    "model": "esm_sites",
+    "seed": 0,
+    "n_train": 600,
+    "n_validation": 600,
+    "test": {
+      "amylase": {
+        "n": 600,
+        "spearman_rho": 0.12469044853929424
+      }
+    },
+    "macro_spearman": 0.12469044853929424,
+    "selection": {
+      "alpha": 10.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.15689500188154812
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.3217438451280561
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.24706509822081585
+        }
+      ],
+      "train_macro_spearman": 0.8391990235869725,
+      "validation_macro_spearman": 0.3217438451280561,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.18166595906950533
+  },
+  {
+    "protocol": "G2",
+    "fold": "amylase",
+    "cohort": "structure_matched",
+    "model": "mutation_count_ridge",
+    "seed": 0,
+    "n_train": 553,
+    "n_validation": 600,
+    "test": {
+      "amylase": {
+        "n": 578,
+        "spearman_rho": 0.36278821280136286
+      }
+    },
+    "macro_spearman": 0.36278821280136286,
+    "selection": {
+      "alpha": 0.1,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.19097505219134417
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.19097505219134417
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.19097505219134417
+        }
+      ],
+      "train_macro_spearman": 0.035813476793940376,
+      "validation_macro_spearman": 0.19097505219134417,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.0066922500263899565
+  },
+  {
+    "protocol": "G2",
+    "fold": "amylase",
+    "cohort": "structure_matched",
+    "model": "sequence_ridge",
+    "seed": 0,
+    "n_train": 553,
+    "n_validation": 600,
+    "test": {
+      "amylase": {
+        "n": 578,
+        "spearman_rho": 0.20434585004199815
+      }
+    },
+    "macro_spearman": 0.20434585004199815,
+    "selection": {
+      "alpha": 100.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": -0.18617294624507505
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": -0.18178573440919382
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": -0.15272080328824503
+        }
+      ],
+      "train_macro_spearman": 0.5394495938506093,
+      "validation_macro_spearman": -0.15272080328824503,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.010941999964416027
+  },
+  {
+    "protocol": "G2",
+    "fold": "amylase",
+    "cohort": "structure_matched",
+    "model": "esm_sites",
+    "seed": 0,
+    "n_train": 553,
+    "n_validation": 600,
+    "test": {
+      "amylase": {
+        "n": 578,
+        "spearman_rho": 0.15581701827298255
+      }
+    },
+    "macro_spearman": 0.15581701827298255,
+    "selection": {
+      "alpha": 10.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.15093028071207074
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.22266938391448624
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.14710726582229516
+        }
+      ],
+      "train_macro_spearman": 0.8381813221329402,
+      "validation_macro_spearman": 0.22266938391448624,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.1618462500628084
+  },
+  {
+    "protocol": "G2",
+    "fold": "amylase",
+    "cohort": "structure_matched",
+    "model": "structural_ridge",
+    "seed": 0,
+    "n_train": 553,
+    "n_validation": 600,
+    "test": {
+      "amylase": {
+        "n": 578,
+        "spearman_rho": 0.3457839517457893
+      }
+    },
+    "macro_spearman": 0.3457839517457893,
+    "selection": {
+      "alpha": 100.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": -0.2981678267405834
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": -0.21138574038574107
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": -0.08355463502208414
+        }
+      ],
+      "train_macro_spearman": 0.718329042550904,
+      "validation_macro_spearman": -0.08355463502208414,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.04806766705587506
+  },
+  {
+    "protocol": "G2",
+    "fold": "amylase",
+    "cohort": "structure_matched",
+    "model": "structural_gnn",
+    "seed": 0,
+    "n_train": 553,
+    "n_validation": 600,
+    "test": {
+      "amylase": {
+        "n": 578,
+        "spearman_rho": 0.1987709091743703
+      }
+    },
+    "macro_spearman": 0.1987709091743703,
+    "selection": {
+      "epoch": 7,
+      "validation_macro_spearman": 0.15167923611489253,
+      "trace": [
+        {
+          "epoch": 1,
+          "validation_macro_spearman": -0.08345678095034346
+        },
+        {
+          "epoch": 2,
+          "validation_macro_spearman": -0.06247174903635732
+        },
+        {
+          "epoch": 3,
+          "validation_macro_spearman": -0.07409115712298098
+        },
+        {
+          "epoch": 4,
+          "validation_macro_spearman": -0.09609467058746018
+        },
+        {
+          "epoch": 5,
+          "validation_macro_spearman": -0.11949396331250105
+        },
+        {
+          "epoch": 6,
+          "validation_macro_spearman": 0.026727819791267045
+        },
+        {
+          "epoch": 7,
+          "validation_macro_spearman": 0.15167923611489253
+        },
+        {
+          "epoch": 8,
+          "validation_macro_spearman": 0.04394415384872966
+        },
+        {
+          "epoch": 9,
+          "validation_macro_spearman": -0.06358986251483963
+        },
+        {
+          "epoch": 10,
+          "validation_macro_spearman": 0.0025035286713235346
+        },
+        {
+          "epoch": 11,
+          "validation_macro_spearman": 0.03384015945942589
+        },
+        {
+          "epoch": 12,
+          "validation_macro_spearman": 0.028035720358386373
+        },
+        {
+          "epoch": 13,
+          "validation_macro_spearman": -0.014952658320059821
+        },
+        {
+          "epoch": 14,
+          "validation_macro_spearman": -0.018069531928605366
+        },
+        {
+          "epoch": 15,
+          "validation_macro_spearman": -0.03819500297704638
+        }
+      ],
+      "train_macro_spearman": 0.12085326362086533,
+      "parameters": 3473,
+      "device": "cpu"
+    },
+    "elapsed_seconds": 1.4490629171486944
+  },
+  {
+    "protocol": "G2",
+    "fold": "amylase",
+    "cohort": "structure_matched",
+    "model": "structural_gnn",
+    "seed": 1,
+    "n_train": 553,
+    "n_validation": 600,
+    "test": {
+      "amylase": {
+        "n": 578,
+        "spearman_rho": 0.2843097418752496
+      }
+    },
+    "macro_spearman": 0.2843097418752496,
+    "selection": {
+      "epoch": 10,
+      "validation_macro_spearman": 0.034697942191433157,
+      "trace": [
+        {
+          "epoch": 1,
+          "validation_macro_spearman": -0.1077327490762316
+        },
+        {
+          "epoch": 2,
+          "validation_macro_spearman": -0.10817694906066289
+        },
+        {
+          "epoch": 3,
+          "validation_macro_spearman": -0.09803430866058395
+        },
+        {
+          "epoch": 4,
+          "validation_macro_spearman": -0.08240320904581384
+        },
+        {
+          "epoch": 5,
+          "validation_macro_spearman": -0.06251278502441115
+        },
+        {
+          "epoch": 6,
+          "validation_macro_spearman": 0.030548250830745412
+        },
+        {
+          "epoch": 7,
+          "validation_macro_spearman": 0.03280786959067775
+        },
+        {
+          "epoch": 8,
+          "validation_macro_spearman": 0.018826266665655372
+        },
+        {
+          "epoch": 9,
+          "validation_macro_spearman": -0.06310934882636945
+        },
+        {
+          "epoch": 10,
+          "validation_macro_spearman": 0.034697942191433157
+        },
+        {
+          "epoch": 11,
+          "validation_macro_spearman": -0.08045945903888373
+        },
+        {
+          "epoch": 12,
+          "validation_macro_spearman": -0.12038280781474815
+        },
+        {
+          "epoch": 13,
+          "validation_macro_spearman": -0.05112303399753914
+        },
+        {
+          "epoch": 14,
+          "validation_macro_spearman": -0.10614543149363653
+        },
+        {
+          "epoch": 15,
+          "validation_macro_spearman": -0.1342320787078812
+        },
+        {
+          "epoch": 16,
+          "validation_macro_spearman": -0.11778739964952205
+        },
+        {
+          "epoch": 17,
+          "validation_macro_spearman": -0.15323993726109245
+        },
+        {
+          "epoch": 18,
+          "validation_macro_spearman": -0.18217214253927147
+        }
+      ],
+      "train_macro_spearman": 0.4332316785214827,
+      "parameters": 3473,
+      "device": "cpu"
+    },
+    "elapsed_seconds": 1.7738529997877777
+  },
+  {
+    "protocol": "G2",
+    "fold": "gb1",
+    "cohort": "sequence_all",
+    "model": "mutation_count_ridge",
+    "seed": 0,
+    "n_train": 600,
+    "n_validation": 600,
+    "test": {
+      "gb1": {
+        "n": 600,
+        "spearman_rho": 0.19097505219134417
+      }
+    },
+    "macro_spearman": 0.19097505219134417,
+    "selection": {
+      "alpha": 0.1,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.024624921136037432
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.024624921136037432
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.024624921136037432
+        }
+      ],
+      "train_macro_spearman": 0.36427714380615045,
+      "validation_macro_spearman": 0.024624921136037432,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.007718666922301054
+  },
+  {
+    "protocol": "G2",
+    "fold": "gb1",
+    "cohort": "sequence_all",
+    "model": "sequence_ridge",
+    "seed": 0,
+    "n_train": 600,
+    "n_validation": 600,
+    "test": {
+      "gb1": {
+        "n": 600,
+        "spearman_rho": 0.15791784395225572
+      }
+    },
+    "macro_spearman": 0.15791784395225572,
+    "selection": {
+      "alpha": 0.1,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.08771215304114176
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.08252884408445316
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.06428188446515679
+        }
+      ],
+      "train_macro_spearman": 0.5658470076998426,
+      "validation_macro_spearman": 0.08771215304114176,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.012360083172097802
+  },
+  {
+    "protocol": "G2",
+    "fold": "gb1",
+    "cohort": "sequence_all",
+    "model": "esm_sites",
+    "seed": 0,
+    "n_train": 600,
+    "n_validation": 600,
+    "test": {
+      "gb1": {
+        "n": 600,
+        "spearman_rho": 0.14859573029351875
+      }
+    },
+    "macro_spearman": 0.14859573029351875,
+    "selection": {
+      "alpha": 0.1,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.0570395085073057
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.004760168409500613
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.036486758398563385
+        }
+      ],
+      "train_macro_spearman": 0.9959375270533831,
+      "validation_macro_spearman": 0.0570395085073057,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 1.2506690409500152
+  },
+  {
+    "protocol": "G2",
+    "fold": "gb1",
+    "cohort": "structure_matched",
+    "model": "mutation_count_ridge",
+    "seed": 0,
+    "n_train": 578,
+    "n_validation": 553,
+    "test": {
+      "gb1": {
+        "n": 600,
+        "spearman_rho": 0.19097505219134417
+      }
+    },
+    "macro_spearman": 0.19097505219134417,
+    "selection": {
+      "alpha": 0.1,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.035813476793940376
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.035813476793940376
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.035813476793940376
+        }
+      ],
+      "train_macro_spearman": 0.36278821280136286,
+      "validation_macro_spearman": 0.035813476793940376,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.020703749964013696
+  },
+  {
+    "protocol": "G2",
+    "fold": "gb1",
+    "cohort": "structure_matched",
+    "model": "sequence_ridge",
+    "seed": 0,
+    "n_train": 578,
+    "n_validation": 553,
+    "test": {
+      "gb1": {
+        "n": 600,
+        "spearman_rho": 0.17322401999735168
+      }
+    },
+    "macro_spearman": 0.17322401999735168,
+    "selection": {
+      "alpha": 0.1,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.09175174978364704
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.0886709086616841
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.08367198313177528
+        }
+      ],
+      "train_macro_spearman": 0.5697711369013061,
+      "validation_macro_spearman": 0.09175174978364704,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.021918082842603326
+  },
+  {
+    "protocol": "G2",
+    "fold": "gb1",
+    "cohort": "structure_matched",
+    "model": "esm_sites",
+    "seed": 0,
+    "n_train": 578,
+    "n_validation": 553,
+    "test": {
+      "gb1": {
+        "n": 600,
+        "spearman_rho": 0.2063774576403654
+      }
+    },
+    "macro_spearman": 0.2063774576403654,
+    "selection": {
+      "alpha": 100.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.03991909360190544
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": -0.00973883160922104
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.04405424629664402
+        }
+      ],
+      "train_macro_spearman": 0.8995562015223657,
+      "validation_macro_spearman": 0.04405424629664402,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.26471775001846254
+  },
+  {
+    "protocol": "G2",
+    "fold": "gb1",
+    "cohort": "structure_matched",
+    "model": "structural_ridge",
+    "seed": 0,
+    "n_train": 578,
+    "n_validation": 553,
+    "test": {
+      "gb1": {
+        "n": 600,
+        "spearman_rho": 0.1875539441299496
+      }
+    },
+    "macro_spearman": 0.1875539441299496,
+    "selection": {
+      "alpha": 100.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.13666623039837666
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.1610837050966075
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.18874196188902756
+        }
+      ],
+      "train_macro_spearman": 0.7671236396791411,
+      "validation_macro_spearman": 0.18874196188902756,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.09529691701754928
+  },
+  {
+    "protocol": "G2",
+    "fold": "gb1",
+    "cohort": "structure_matched",
+    "model": "structural_gnn",
+    "seed": 0,
+    "n_train": 578,
+    "n_validation": 553,
+    "test": {
+      "gb1": {
+        "n": 600,
+        "spearman_rho": 0.16853027425333003
+      }
+    },
+    "macro_spearman": 0.16853027425333003,
+    "selection": {
+      "epoch": 29,
+      "validation_macro_spearman": 0.3191076752849216,
+      "trace": [
+        {
+          "epoch": 1,
+          "validation_macro_spearman": -0.04975787791136474
+        },
+        {
+          "epoch": 2,
+          "validation_macro_spearman": -0.037710184719213814
+        },
+        {
+          "epoch": 3,
+          "validation_macro_spearman": -0.03379175578850705
+        },
+        {
+          "epoch": 4,
+          "validation_macro_spearman": -0.027566338607444636
+        },
+        {
+          "epoch": 5,
+          "validation_macro_spearman": -0.02321795903614612
+        },
+        {
+          "epoch": 6,
+          "validation_macro_spearman": -0.01674284743774546
+        },
+        {
+          "epoch": 7,
+          "validation_macro_spearman": -0.004228278138484107
+        },
+        {
+          "epoch": 8,
+          "validation_macro_spearman": 0.12779308658651287
+        },
+        {
+          "epoch": 9,
+          "validation_macro_spearman": 0.10596688876418002
+        },
+        {
+          "epoch": 10,
+          "validation_macro_spearman": 0.08831289399194271
+        },
+        {
+          "epoch": 11,
+          "validation_macro_spearman": 0.09974151321273036
+        },
+        {
+          "epoch": 12,
+          "validation_macro_spearman": 0.1329533268658691
+        },
+        {
+          "epoch": 13,
+          "validation_macro_spearman": 0.17694313052195967
+        },
+        {
+          "epoch": 14,
+          "validation_macro_spearman": 0.18340746005065534
+        },
+        {
+          "epoch": 15,
+          "validation_macro_spearman": 0.18176854382588223
+        },
+        {
+          "epoch": 16,
+          "validation_macro_spearman": 0.21458083808535725
+        },
+        {
+          "epoch": 17,
+          "validation_macro_spearman": 0.2300695101794633
+        },
+        {
+          "epoch": 18,
+          "validation_macro_spearman": 0.19350634618064302
+        },
+        {
+          "epoch": 19,
+          "validation_macro_spearman": 0.2373029884335243
+        },
+        {
+          "epoch": 20,
+          "validation_macro_spearman": 0.2512259291620904
+        },
+        {
+          "epoch": 21,
+          "validation_macro_spearman": 0.19854919095201434
+        },
+        {
+          "epoch": 22,
+          "validation_macro_spearman": 0.2164055889014938
+        },
+        {
+          "epoch": 23,
+          "validation_macro_spearman": 0.2247777203237835
+        },
+        {
+          "epoch": 24,
+          "validation_macro_spearman": 0.2879646036083095
+        },
+        {
+          "epoch": 25,
+          "validation_macro_spearman": 0.2701381789800177
+        },
+        {
+          "epoch": 26,
+          "validation_macro_spearman": 0.2932450285797057
+        },
+        {
+          "epoch": 27,
+          "validation_macro_spearman": 0.28010589020019666
+        },
+        {
+          "epoch": 28,
+          "validation_macro_spearman": 0.2832354795987023
+        },
+        {
+          "epoch": 29,
+          "validation_macro_spearman": 0.3191076752849216
+        },
+        {
+          "epoch": 30,
+          "validation_macro_spearman": 0.31779638411257466
+        }
+      ],
+      "train_macro_spearman": 0.6985487598058543,
+      "parameters": 3473,
+      "device": "cpu"
+    },
+    "elapsed_seconds": 10.931455083889887
+  },
+  {
+    "protocol": "G2",
+    "fold": "gb1",
+    "cohort": "structure_matched",
+    "model": "structural_gnn",
+    "seed": 1,
+    "n_train": 578,
+    "n_validation": 553,
+    "test": {
+      "gb1": {
+        "n": 600,
+        "spearman_rho": 0.19387956823602015
+      }
+    },
+    "macro_spearman": 0.19387956823602015,
+    "selection": {
+      "epoch": 29,
+      "validation_macro_spearman": 0.34642731680714683,
+      "trace": [
+        {
+          "epoch": 1,
+          "validation_macro_spearman": -0.022530279462953325
+        },
+        {
+          "epoch": 2,
+          "validation_macro_spearman": -0.026867835334934077
+        },
+        {
+          "epoch": 3,
+          "validation_macro_spearman": -0.03348573650510368
+        },
+        {
+          "epoch": 4,
+          "validation_macro_spearman": -0.02604444322414164
+        },
+        {
+          "epoch": 5,
+          "validation_macro_spearman": 0.03954259538409833
+        },
+        {
+          "epoch": 6,
+          "validation_macro_spearman": 0.03540036565519043
+        },
+        {
+          "epoch": 7,
+          "validation_macro_spearman": 0.05715462750667291
+        },
+        {
+          "epoch": 8,
+          "validation_macro_spearman": 0.066731020366902
+        },
+        {
+          "epoch": 9,
+          "validation_macro_spearman": 0.09464517438896167
+        },
+        {
+          "epoch": 10,
+          "validation_macro_spearman": 0.08397025930720517
+        },
+        {
+          "epoch": 11,
+          "validation_macro_spearman": 0.1067254219382914
+        },
+        {
+          "epoch": 12,
+          "validation_macro_spearman": 0.12595667947880332
+        },
+        {
+          "epoch": 13,
+          "validation_macro_spearman": 0.1928652085145166
+        },
+        {
+          "epoch": 14,
+          "validation_macro_spearman": 0.20856323593119586
+        },
+        {
+          "epoch": 15,
+          "validation_macro_spearman": 0.18469273271502692
+        },
+        {
+          "epoch": 16,
+          "validation_macro_spearman": 0.22967336278443315
+        },
+        {
+          "epoch": 17,
+          "validation_macro_spearman": 0.23105746414949851
+        },
+        {
+          "epoch": 18,
+          "validation_macro_spearman": 0.2638857441802736
+        },
+        {
+          "epoch": 19,
+          "validation_macro_spearman": 0.25383685521521143
+        },
+        {
+          "epoch": 20,
+          "validation_macro_spearman": 0.262864986075383
+        },
+        {
+          "epoch": 21,
+          "validation_macro_spearman": 0.28897058320067004
+        },
+        {
+          "epoch": 22,
+          "validation_macro_spearman": 0.2908952034578194
+        },
+        {
+          "epoch": 23,
+          "validation_macro_spearman": 0.2979253210535447
+        },
+        {
+          "epoch": 24,
+          "validation_macro_spearman": 0.3102688759035854
+        },
+        {
+          "epoch": 25,
+          "validation_macro_spearman": 0.3128153024209964
+        },
+        {
+          "epoch": 26,
+          "validation_macro_spearman": 0.31694689023458134
+        },
+        {
+          "epoch": 27,
+          "validation_macro_spearman": 0.2851095615059602
+        },
+        {
+          "epoch": 28,
+          "validation_macro_spearman": 0.30427217181502986
+        },
+        {
+          "epoch": 29,
+          "validation_macro_spearman": 0.34642731680714683
+        },
+        {
+          "epoch": 30,
+          "validation_macro_spearman": 0.32648177837088804
+        }
+      ],
+      "train_macro_spearman": 0.7353709304091882,
+      "parameters": 3473,
+      "device": "cpu"
+    },
+    "elapsed_seconds": 9.952545125037432
+  },
+  {
+    "protocol": "G2",
+    "fold": "nucb",
+    "cohort": "sequence_all",
+    "model": "mutation_count_ridge",
+    "seed": 0,
+    "n_train": 600,
+    "n_validation": 600,
+    "test": {
+      "nucb": {
+        "n": 600,
+        "spearman_rho": 0.024624921136037432
+      }
+    },
+    "macro_spearman": 0.024624921136037432,
+    "selection": {
+      "alpha": 0.1,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.36427714380615045
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.36427714380615045
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.36427714380615045
+        }
+      ],
+      "train_macro_spearman": 0.19097505219134417,
+      "validation_macro_spearman": 0.36427714380615045,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.010261291870847344
+  },
+  {
+    "protocol": "G2",
+    "fold": "nucb",
+    "cohort": "sequence_all",
+    "model": "sequence_ridge",
+    "seed": 0,
+    "n_train": 600,
+    "n_validation": 600,
+    "test": {
+      "nucb": {
+        "n": 600,
+        "spearman_rho": 0.03949724064544165
+      }
+    },
+    "macro_spearman": 0.03949724064544165,
+    "selection": {
+      "alpha": 100.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": -0.04748669859800118
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.02473336674920258
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.10834738974967449
+        }
+      ],
+      "train_macro_spearman": 0.6611562243482627,
+      "validation_macro_spearman": 0.10834738974967449,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.012970541836693883
+  },
+  {
+    "protocol": "G2",
+    "fold": "nucb",
+    "cohort": "sequence_all",
+    "model": "esm_sites",
+    "seed": 0,
+    "n_train": 600,
+    "n_validation": 600,
+    "test": {
+      "nucb": {
+        "n": 600,
+        "spearman_rho": 0.006372984879744077
+      }
+    },
+    "macro_spearman": 0.006372984879744077,
+    "selection": {
+      "alpha": 0.1,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.08244068544638226
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.004640072246928113
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": -0.048915398181795994
+        }
+      ],
+      "train_macro_spearman": 0.97794599589676,
+      "validation_macro_spearman": 0.08244068544638226,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.21900537493638694
+  },
+  {
+    "protocol": "G2",
+    "fold": "nucb",
+    "cohort": "structure_matched",
+    "model": "mutation_count_ridge",
+    "seed": 0,
+    "n_train": 600,
+    "n_validation": 578,
+    "test": {
+      "nucb": {
+        "n": 553,
+        "spearman_rho": 0.035813476793940376
+      }
+    },
+    "macro_spearman": 0.035813476793940376,
+    "selection": {
+      "alpha": 0.1,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.36278821280136286
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.36278821280136286
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.36278821280136286
+        }
+      ],
+      "train_macro_spearman": 0.19097505219134417,
+      "validation_macro_spearman": 0.36278821280136286,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.00696124997921288
+  },
+  {
+    "protocol": "G2",
+    "fold": "nucb",
+    "cohort": "structure_matched",
+    "model": "sequence_ridge",
+    "seed": 0,
+    "n_train": 600,
+    "n_validation": 578,
+    "test": {
+      "nucb": {
+        "n": 553,
+        "spearman_rho": 0.05077068476021803
+      }
+    },
+    "macro_spearman": 0.05077068476021803,
+    "selection": {
+      "alpha": 100.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": -0.03890930889906147
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.03192133709343205
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.10698641509773353
+        }
+      ],
+      "train_macro_spearman": 0.6611562243482627,
+      "validation_macro_spearman": 0.10698641509773353,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.012274000095203519
+  },
+  {
+    "protocol": "G2",
+    "fold": "nucb",
+    "cohort": "structure_matched",
+    "model": "esm_sites",
+    "seed": 0,
+    "n_train": 600,
+    "n_validation": 578,
+    "test": {
+      "nucb": {
+        "n": 553,
+        "spearman_rho": 0.015120791206140398
+      }
+    },
+    "macro_spearman": 0.015120791206140398,
+    "selection": {
+      "alpha": 0.1,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": 0.07484542993277513
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": 0.0046191346251292335
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": -0.05021162993816612
+        }
+      ],
+      "train_macro_spearman": 0.97794599589676,
+      "validation_macro_spearman": 0.07484542993277513,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.16457691602408886
+  },
+  {
+    "protocol": "G2",
+    "fold": "nucb",
+    "cohort": "structure_matched",
+    "model": "structural_ridge",
+    "seed": 0,
+    "n_train": 600,
+    "n_validation": 578,
+    "test": {
+      "nucb": {
+        "n": 553,
+        "spearman_rho": -0.03264515136424111
+      }
+    },
+    "macro_spearman": -0.03264515136424111,
+    "selection": {
+      "alpha": 100.0,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_spearman": -0.08969285033878571
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_spearman": -0.023152628128490674
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_spearman": 0.07994605773888665
+        }
+      ],
+      "train_macro_spearman": 0.6944129721088869,
+      "validation_macro_spearman": 0.07994605773888665,
+      "target_handling": "Empirical midrank percentile per training assay; no held-out label normalization"
+    },
+    "elapsed_seconds": 0.025175708113238215
+  },
+  {
+    "protocol": "G2",
+    "fold": "nucb",
+    "cohort": "structure_matched",
+    "model": "structural_gnn",
+    "seed": 0,
+    "n_train": 600,
+    "n_validation": 578,
+    "test": {
+      "nucb": {
+        "n": 553,
+        "spearman_rho": 0.024943589744299624
+      }
+    },
+    "macro_spearman": 0.024943589744299624,
+    "selection": {
+      "epoch": 30,
+      "validation_macro_spearman": 0.16212793087949476,
+      "trace": [
+        {
+          "epoch": 1,
+          "validation_macro_spearman": -0.385416896793921
+        },
+        {
+          "epoch": 2,
+          "validation_macro_spearman": -0.3718110519491002
+        },
+        {
+          "epoch": 3,
+          "validation_macro_spearman": -0.36741507653315225
+        },
+        {
+          "epoch": 4,
+          "validation_macro_spearman": -0.35811534683792573
+        },
+        {
+          "epoch": 5,
+          "validation_macro_spearman": -0.3465631135850304
+        },
+        {
+          "epoch": 6,
+          "validation_macro_spearman": -0.3320199503464248
+        },
+        {
+          "epoch": 7,
+          "validation_macro_spearman": -0.3162872571711601
+        },
+        {
+          "epoch": 8,
+          "validation_macro_spearman": -0.29681514024939876
+        },
+        {
+          "epoch": 9,
+          "validation_macro_spearman": -0.276277408585383
+        },
+        {
+          "epoch": 10,
+          "validation_macro_spearman": -0.2549093394740056
+        },
+        {
+          "epoch": 11,
+          "validation_macro_spearman": -0.2331257132387644
+        },
+        {
+          "epoch": 12,
+          "validation_macro_spearman": -0.20222366251375096
+        },
+        {
+          "epoch": 13,
+          "validation_macro_spearman": -0.14882457209724426
+        },
+        {
+          "epoch": 14,
+          "validation_macro_spearman": -0.046321631208699324
+        },
+        {
+          "epoch": 15,
+          "validation_macro_spearman": 0.07546711880179474
+        },
+        {
+          "epoch": 16,
+          "validation_macro_spearman": 0.06501781778074263
+        },
+        {
+          "epoch": 17,
+          "validation_macro_spearman": 0.057673449967133646
+        },
+        {
+          "epoch": 18,
+          "validation_macro_spearman": 0.04147230020738511
+        },
+        {
+          "epoch": 19,
+          "validation_macro_spearman": 0.02394232338069645
+        },
+        {
+          "epoch": 20,
+          "validation_macro_spearman": 0.06004934049495829
+        },
+        {
+          "epoch": 21,
+          "validation_macro_spearman": 0.08292589377332706
+        },
+        {
+          "epoch": 22,
+          "validation_macro_spearman": 0.12132298051096368
+        },
+        {
+          "epoch": 23,
+          "validation_macro_spearman": 0.1154936219874216
+        },
+        {
+          "epoch": 24,
+          "validation_macro_spearman": 0.14152187185527437
+        },
+        {
+          "epoch": 25,
+          "validation_macro_spearman": 0.1360827156916457
+        },
+        {
+          "epoch": 26,
+          "validation_macro_spearman": 0.13326181177007365
+        },
+        {
+          "epoch": 27,
+          "validation_macro_spearman": 0.1232848675156567
+        },
+        {
+          "epoch": 28,
+          "validation_macro_spearman": 0.11552323361737839
+        },
+        {
+          "epoch": 29,
+          "validation_macro_spearman": 0.14730179480351607
+        },
+        {
+          "epoch": 30,
+          "validation_macro_spearman": 0.16212793087949476
+        }
+      ],
+      "train_macro_spearman": 0.7858587584835849,
+      "parameters": 3473,
+      "device": "cpu"
+    },
+    "elapsed_seconds": 3.8133298750035465
+  },
+  {
+    "protocol": "G2",
+    "fold": "nucb",
+    "cohort": "structure_matched",
+    "model": "structural_gnn",
+    "seed": 1,
+    "n_train": 600,
+    "n_validation": 578,
+    "test": {
+      "nucb": {
+        "n": 553,
+        "spearman_rho": -0.09020645855797259
+      }
+    },
+    "macro_spearman": -0.09020645855797259,
+    "selection": {
+      "epoch": 20,
+      "validation_macro_spearman": 0.09351828142181993,
+      "trace": [
+        {
+          "epoch": 1,
+          "validation_macro_spearman": -0.3394171716569451
+        },
+        {
+          "epoch": 2,
+          "validation_macro_spearman": -0.33893664295045833
+        },
+        {
+          "epoch": 3,
+          "validation_macro_spearman": -0.3361783180663816
+        },
+        {
+          "epoch": 4,
+          "validation_macro_spearman": -0.3221974029327795
+        },
+        {
+          "epoch": 5,
+          "validation_macro_spearman": -0.30824746659777863
+        },
+        {
+          "epoch": 6,
+          "validation_macro_spearman": -0.28490949390192977
+        },
+        {
+          "epoch": 7,
+          "validation_macro_spearman": -0.24510618099749884
+        },
+        {
+          "epoch": 8,
+          "validation_macro_spearman": -0.1992468702947043
+        },
+        {
+          "epoch": 9,
+          "validation_macro_spearman": -0.13288720756151207
+        },
+        {
+          "epoch": 10,
+          "validation_macro_spearman": -0.07009824753529334
+        },
+        {
+          "epoch": 11,
+          "validation_macro_spearman": -0.02755581225183631
+        },
+        {
+          "epoch": 12,
+          "validation_macro_spearman": 0.02353531106086
+        },
+        {
+          "epoch": 13,
+          "validation_macro_spearman": 0.04658114467501539
+        },
+        {
+          "epoch": 14,
+          "validation_macro_spearman": 0.07276354280752265
+        },
+        {
+          "epoch": 15,
+          "validation_macro_spearman": 0.08233453119060108
+        },
+        {
+          "epoch": 16,
+          "validation_macro_spearman": 0.09085332794175174
+        },
+        {
+          "epoch": 17,
+          "validation_macro_spearman": 0.09017455978182903
+        },
+        {
+          "epoch": 18,
+          "validation_macro_spearman": 0.09019559553574379
+        },
+        {
+          "epoch": 19,
+          "validation_macro_spearman": 0.0911985069524444
+        },
+        {
+          "epoch": 20,
+          "validation_macro_spearman": 0.09351828142181993
+        },
+        {
+          "epoch": 21,
+          "validation_macro_spearman": 0.0901213644927566
+        },
+        {
+          "epoch": 22,
+          "validation_macro_spearman": 0.08787035239179071
+        },
+        {
+          "epoch": 23,
+          "validation_macro_spearman": 0.08690391952028348
+        },
+        {
+          "epoch": 24,
+          "validation_macro_spearman": 0.0814761046420003
+        },
+        {
+          "epoch": 25,
+          "validation_macro_spearman": 0.08030745634683877
+        },
+        {
+          "epoch": 26,
+          "validation_macro_spearman": 0.07822410758924178
+        },
+        {
+          "epoch": 27,
+          "validation_macro_spearman": 0.07853703384873281
+        },
+        {
+          "epoch": 28,
+          "validation_macro_spearman": 0.07874894498861254
+        }
+      ],
+      "train_macro_spearman": 0.7819870116215369,
+      "parameters": 3473,
+      "device": "cpu"
+    },
+    "elapsed_seconds": 3.4792607079725713
+  }
+]

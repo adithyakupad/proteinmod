@@ -1,0 +1,15 @@
+{
+  "dependency_merges": {
+    "6": "09d306b19814b110964c7591212ccc900aac9cc1",
+    "7": "5068e747f2d0023b071e397d410a5a56df11fae2"
+  },
+  "dependency_checks": "PR6 all successful; PR7 retargeted, history merged without conflicts, all checks on cf8aced passed before merge",
+  "local_checks": {
+    "pytest": "95 passed",
+    "lightweight_pytest": "89 passed, 3 skipped (Torch-dependent files)",
+    "ruff": "passed",
+    "ruff_format": "passed"
+  },
+  "ci_regression": "Missing optional Transformers metadata fixed; all five checks passed on e6c3b7d",
+  "prediction_reproduction": "See reproducibility.json; 18,700 values exactly match across two complete real runs"
+}

@@ -20,6 +20,9 @@ def main():
             "extract",
             "run-m1",
             "run-m3",
+            "download-m4",
+            "prepare-m4",
+            "run-m4",
             "structure-download",
             "structure-run",
         ),
@@ -33,8 +36,8 @@ def main():
     )
     args = parser.parse_args()
     with open(args.config, "rb") as handle:
-        config = tomllib.load(handle)
-    if args.data and args.command != "run-m3":
+        config = json.load(handle) if args.config.endswith(".json") else tomllib.load(handle)
+    if args.data and args.command != "run-m3" and not args.command.endswith("m4"):
         section = "structure" if args.command.startswith("structure-") else "dataset"
         config[section]["path"] = args.data
     if args.output:
@@ -47,9 +50,24 @@ def main():
             section = "structure_run"
         if args.command == "run-m3":
             section = "m3"
+        if args.command.endswith("m4"):
+            section = "experiment"
         config[section]["output"] = args.output
     try:
-        if args.command == "run-m3":
+        if args.command.endswith("m4"):
+            from proteinmod.multiprotein_data import acquire_collection, prepare_collection
+
+            if args.data:
+                raise ValueError("M4 datasets are pinned individually in the collection config")
+            if args.command == "download-m4":
+                acquire_collection(config)
+            elif args.command == "prepare-m4":
+                prepare_collection(config, args.local_only)
+            else:
+                from proteinmod.multiprotein_experiments import run_collection
+
+                run_collection(config)
+        elif args.command == "run-m3":
             from proteinmod.structural_experiments import run_structural
 
             if args.data:

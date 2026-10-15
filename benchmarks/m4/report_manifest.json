@@ -1,0 +1,23 @@
+{
+  "script_sha256": "0bac6fa24ae8b576185a40155fe0ae4b00b85d2ba859ffec3294c958c5d1ab7d",
+  "experiment_manifest_sha256": "db300a67f3d5ea64225b6674a8b9e2d93a6945f9ea4c106c43c94cbfa4d8299a",
+  "artifacts_sha256": {
+    "preparation.json": "c62d98fad17935b8b9fae234f0b3b068a32ea191e3e53fd42e4890b6d45c19bc",
+    "audit.json": "9f30913bb3eba05aeaf61ae2ee807442b4c1457a83131786208fc94c56d66cdc",
+    "aggregate.csv": "1fc5ac224fb18e344a5a817c00102f940ed10f2e3bbad6f812c28f129a4782f7",
+    "gb1_source_README.md": "5f96f164419e0e5a2f8e6b03f139b0f80d2dd76ecb05e5f3ad3010d61bc529ea",
+    "g2_on_g1_test_ids.csv": "005f44cb57d9f86a25427a880eb7b8ee3f9c9b67f73e1c50f0a7aceed30a0316",
+    "report.md": "3533b5ba35061cfa94ef8bf153935dd53aa71c1c1c834ef14c2bbd5cd01d9be5",
+    "predictions.csv": "29067079d8d9629067ed46359dd6d64bb0d41e42d358225245d12e249c718bd1",
+    "embedding_provenance.json": "0b17086b9ca6e9d10a8b7a40030cd3a2ab5e23b9bdc67c166bc4f63785a80084",
+    "per_protein.csv": "20f0e86f639bda0d689bb7a494e05ec0eb6a5f85343c7013ee8f83eb04e4358f",
+    "nucb_source_README.md": "4490bac832fc374a94f2e679d0e1a917330a9361587ed347b9cd2bab9a0ada3f",
+    "manifest.json": "db300a67f3d5ea64225b6674a8b9e2d93a6945f9ea4c106c43c94cbfa4d8299a",
+    "structure_provenance.json": "1179ec12fe462820d225af275da07b7c982a12fada84e5569686e08e91149ad3",
+    "generalization.png": "2ae8c06c313f776c746646f1a0a5b68d9db0030a594ecf847d01e1d5dfd4d7c4",
+    "verification.json": "e6c77c71adc9e16f89d1e1b424309d3d173ad9b54f0c6afa79826d23a8b25c66",
+    "generalization.svg": "2e4f3c14d12f77d023006a45b61815c8f8b5d428ceac5829edb94b4d04b9aeed",
+    "reproducibility.json": "8a299115436d452f9013f8ce5f043e7ffc8b2df5da9553ed0c941e98dd0f8045",
+    "runs.json": "5a509ac7277240373bd074a86e1c3178f64aee0cde403122ad14f8f19018a43a"
+  }
+}
