@@ -54,6 +54,8 @@ def infer_stability(x, fx, rows, roles, alphas, identity, root):
     scaler, model, selection = fit_stability(x, rows, roles, alphas)
     weights = {
         "coefficient": model.coef_.tolist(),
+        "coefficient_dtype": str(model.coef_.dtype),
+        "input_dtype": str(x.dtype),
         "intercept": float(model.intercept_),
         "mean": scaler.mean_.tolist(),
         "scale": scaler.scale_.tolist(),
@@ -130,7 +132,7 @@ def run(config):
         groups["stability"],
         m6["proteins"],
         m6["embedding"],
-        Path(config["cache"]) / "wt",
+        m6["residue_cache"],
         m6["sources"]["measurements"],
     )
     references = {s["protein_id"]: s["reference"]["sequence"] for s in m4["collection"]}

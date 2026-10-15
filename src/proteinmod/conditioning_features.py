@@ -22,8 +22,8 @@ def array_hash(x):
 
 def mutation_features(rows, groups, specs, embedding, cache_root, source=None):
     """Same 961/272 features as M6, with independently cached frozen WT tokens."""
-    sites = np.full((len(rows), 961), np.nan)
-    structural = np.full((len(rows), 272), np.nan)
+    sites = np.full((len(rows), 961), np.nan, dtype=np.float32)
+    structural = np.full((len(rows), 272), np.nan, dtype=np.float32)
     evidence, encoder = {}, None
     for spec in specs:
         pid = spec["protein_id"]

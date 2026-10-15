@@ -52,3 +52,7 @@ pytest -q
 ```
 
 The experiment protocol/config/code is committed before inspecting M8 test results. Historical checksums are checked before/after. Source-model caches serialize coefficients, intercepts, preprocessing, unit/sign convention, role IDs and input/weight fingerprints; neural checkpoints record function calibration, frozen function checkpoint identity and stability-source identity. Cache hashes fail closed on corruption. Run manifests record source/config revisions, dependency versions, seed, device, runtime and peak process RSS.
+
+### Numerical fidelity correction before the final benchmark
+
+The first local pilot reconstructed the source feature arrays as float64. A subsequent M6 prediction replay detected micro-kcal numerical differences and exposed the importance of preserving M6 precision under severe extrapolation. Both source arrays now explicitly retain M6's float32 contract, and stability WT tokens are read from the original M6 cache. A regression test asserts that dtype. Source checkpoints record input/coefficient dtypes as well as weights/calibration. The original pilot and its repeat remain locally under runs/m8_float64_pilot*; final benchmark and repeat are rerun after this correction. No cohort, model family, alpha grid, seed, control, selection criterion or training budget changed. This is a numerical fidelity correction, not test-led model optimization; raw OOD extrapolation failures remain visible.

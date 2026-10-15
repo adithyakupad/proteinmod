@@ -157,6 +157,7 @@ def test_mutation_feature_order_wt_and_historical_guard(monkeypatch, tmp_path):
     rows[0]["mutations"] = tuple(reversed(rows[0]["mutations"]))
     b, _ = mutation_features(rows, group, spec, {}, tmp_path)
     for key in a:
+        assert a[key].dtype == np.float32
         np.testing.assert_array_equal(a[key], b[key])
     assert a["structural_ridge"][1, -2] == 0
     assert a["esm_sites_ridge"][1, -1] == 0
