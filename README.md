@@ -354,3 +354,7 @@ Actual M4 results (equal-protein macro Spearman, **structure-matched cohort**, t
 G1 evaluates original held-out variants; primary G2 evaluates all selected variants of a held-out protein. The report additionally evaluates G2 on exactly the G1 test IDs, preserving the transfer drop (ESM 0.4932→0.1182; GNN 0.4704→0.1497). G1-only per-protein one-hot ridge reaches 0.6254; its position-specific coefficients are not transferred across unaligned proteins.
 
 Transfer is weak and does not establish a structural-model advantage. NucB G2 correlations are near zero or negative; protein and assay-endpoint shifts are confounded. The repeated local experiment took about 60 seconds and reproduced all 18,700 predictions exactly; all 103 historical M0–M3 files remained unchanged. See the report for per-protein scores, explicit exclusions, seed variation, computational costs and limitations.
+
+### M5: hybrid sequence–structure pilot (stacked on M4)
+
+M5 compares frozen ESM-2 residue tokens and the existing structural GNN using weighted fusion, concatenation, either cross-attention direction and bidirectional attention, with neural single-modality controls. It reuses the exact M4 matched G1/G2 role IDs and training-only assay targets. See [the protocol](docs/m5_protocol.md) for architecture, masks, reproducible local commands and scope. Results and limitations are recorded in `benchmarks/m5/report.md`; historical M0–M4 artifacts are retained.

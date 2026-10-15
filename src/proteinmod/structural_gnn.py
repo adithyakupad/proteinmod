@@ -29,7 +29,7 @@ class ResidueGNN(nn.Module):
             nn.Linear(3 * hidden + 1, hidden), nn.ReLU(), nn.Linear(hidden, 1)
         )
 
-    def forward(self, dynamic, graph=None):
+    def encode(self, dynamic, graph=None):
         static, source, target, edge_features, degree = (
             (self.static, self.source, self.target, self.edge_features, self.degree)
             if graph is None
@@ -43,6 +43,10 @@ class ResidueGNN(nn.Module):
             aggregate = torch.zeros_like(h)
             aggregate.index_add_(1, target, m)
             h = h + torch.relu(update(torch.cat([h, aggregate / degree], dim=-1)))
+        return h
+
+    def forward(self, dynamic, graph=None):
+        h = self.encode(dynamic, graph)
         mask = dynamic[:, :, :1]
         count = mask.sum(dim=1)
         pooled = (h * mask).sum(dim=1)

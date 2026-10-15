@@ -1,0 +1,1465 @@
+{
+  "macro": [
+    {
+      "protocol": "G1",
+      "model": "bidirectional",
+      "mean": 0.5155736152417244,
+      "seed_sd": 0.00964590770515139,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G1",
+      "model": "concat_fusion",
+      "mean": 0.556302722643544,
+      "seed_sd": 0.006026412364732947,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G1",
+      "model": "esm_sites",
+      "mean": 0.4931770776968836,
+      "seed_sd": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "protocol": "G1",
+      "model": "mutation_count_ridge",
+      "mean": 0.1662852134568026,
+      "seed_sd": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "protocol": "G1",
+      "model": "seq_queries_struct",
+      "mean": 0.5470585532363554,
+      "seed_sd": 0.0029440517265569843,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G1",
+      "model": "sequence_only",
+      "mean": 0.5414073744666134,
+      "seed_sd": 0.0020606465001478114,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G1",
+      "model": "sequence_ridge",
+      "mean": 0.39384915806967574,
+      "seed_sd": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "protocol": "G1",
+      "model": "struct_queries_seq",
+      "mean": 0.586066259909264,
+      "seed_sd": 0.00284442823754516,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G1",
+      "model": "structural_gnn",
+      "mean": 0.4704268980627966,
+      "seed_sd": 0.01604157867474748,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G1",
+      "model": "structural_ridge",
+      "mean": 0.46116472099402483,
+      "seed_sd": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "protocol": "G1",
+      "model": "structure_only",
+      "mean": 0.5542117680191416,
+      "seed_sd": 0.002775201780653158,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G1",
+      "model": "weighted_fusion",
+      "mean": 0.5586332732692454,
+      "seed_sd": 0.014093704084585601,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G1",
+      "model": "within_one_hot",
+      "mean": 0.6253943970025599,
+      "seed_sd": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "protocol": "G2",
+      "model": "bidirectional",
+      "mean": 0.13673617968699914,
+      "seed_sd": 0.017888049508184102,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G2",
+      "model": "concat_fusion",
+      "mean": 0.09275143377323641,
+      "seed_sd": 0.0206346986877088,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G2",
+      "model": "esm_sites",
+      "mean": 0.12577175570649612,
+      "seed_sd": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "protocol": "G2",
+      "model": "mutation_count_ridge",
+      "mean": 0.19652558059554914,
+      "seed_sd": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "protocol": "G2",
+      "model": "seq_queries_struct",
+      "mean": 0.14374967399899632,
+      "seed_sd": 0.008065466453559711,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G2",
+      "model": "sequence_only",
+      "mean": 0.05161610072068563,
+      "seed_sd": 0.014132871801034376,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G2",
+      "model": "sequence_ridge",
+      "mean": 0.14278018493318928,
+      "seed_sd": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "protocol": "G2",
+      "model": "struct_queries_seq",
+      "mean": 0.1158314562375078,
+      "seed_sd": 0.00604948004145911,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G2",
+      "model": "structural_gnn",
+      "mean": 0.13003793745421618,
+      "seed_sd": 0.0007103202697837929,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G2",
+      "model": "structural_ridge",
+      "mean": 0.1668975815038326,
+      "seed_sd": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "protocol": "G2",
+      "model": "structure_only",
+      "mean": 0.14044562250191486,
+      "seed_sd": 0.04043621849001364,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G2",
+      "model": "weighted_fusion",
+      "mean": 0.10676169593826293,
+      "seed_sd": 0.0064258516536339835,
+      "n_seeds": 2
+    }
+  ],
+  "same_g1_test_ids": [
+    {
+      "protocol": "G1",
+      "model": "bidirectional",
+      "mean": 0.5155736152417244,
+      "seed_sd": 0.00964590770515139,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G1",
+      "model": "concat_fusion",
+      "mean": 0.556302722643544,
+      "seed_sd": 0.006026412364732947,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G1",
+      "model": "esm_sites",
+      "mean": 0.4931770776968836,
+      "seed_sd": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "protocol": "G1",
+      "model": "mutation_count_ridge",
+      "mean": 0.1662852134568026,
+      "seed_sd": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "protocol": "G1",
+      "model": "seq_queries_struct",
+      "mean": 0.5470585532363554,
+      "seed_sd": 0.0029440517265569843,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G1",
+      "model": "sequence_only",
+      "mean": 0.5414073744666134,
+      "seed_sd": 0.0020606465001478114,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G1",
+      "model": "sequence_ridge",
+      "mean": 0.39384915806967574,
+      "seed_sd": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "protocol": "G1",
+      "model": "struct_queries_seq",
+      "mean": 0.586066259909264,
+      "seed_sd": 0.00284442823754516,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G1",
+      "model": "structural_gnn",
+      "mean": 0.4704268980627966,
+      "seed_sd": 0.01604157867474748,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G1",
+      "model": "structural_ridge",
+      "mean": 0.46116472099402483,
+      "seed_sd": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "protocol": "G1",
+      "model": "structure_only",
+      "mean": 0.5542117680191416,
+      "seed_sd": 0.002775201780653158,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G1",
+      "model": "weighted_fusion",
+      "mean": 0.5586332732692454,
+      "seed_sd": 0.014093704084585601,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G1",
+      "model": "within_one_hot",
+      "mean": 0.6253943970025599,
+      "seed_sd": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "protocol": "G2",
+      "model": "bidirectional",
+      "mean": 0.06779820162719896,
+      "seed_sd": 0.013694877727026048,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G2",
+      "model": "concat_fusion",
+      "mean": 0.05273949495217162,
+      "seed_sd": 0.04070988717393171,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G2",
+      "model": "esm_sites",
+      "mean": 0.11823251655240836,
+      "seed_sd": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "protocol": "G2",
+      "model": "mutation_count_ridge",
+      "mean": 0.1662852134568026,
+      "seed_sd": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "protocol": "G2",
+      "model": "seq_queries_struct",
+      "mean": 0.07516733195907208,
+      "seed_sd": 0.05505505001908265,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G2",
+      "model": "sequence_only",
+      "mean": 0.03846713495391588,
+      "seed_sd": 0.022397405651719462,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G2",
+      "model": "sequence_ridge",
+      "mean": 0.16492035825628,
+      "seed_sd": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "protocol": "G2",
+      "model": "struct_queries_seq",
+      "mean": 0.03246952580326956,
+      "seed_sd": 0.0339487775107527,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G2",
+      "model": "structural_gnn",
+      "mean": 0.1497110627856495,
+      "seed_sd": 0.010233394742613991,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G2",
+      "model": "structural_ridge",
+      "mean": 0.14922052283238554,
+      "seed_sd": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "protocol": "G2",
+      "model": "structure_only",
+      "mean": 0.10541148159457922,
+      "seed_sd": 0.020696474809972602,
+      "n_seeds": 2
+    },
+    {
+      "protocol": "G2",
+      "model": "weighted_fusion",
+      "mean": 0.1011996991055783,
+      "seed_sd": 0.017001775713145588,
+      "n_seeds": 2
+    }
+  ],
+  "per_protein": [
+    {
+      "protocol": "G1",
+      "model": "bidirectional",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.5936395178035948,
+      "training_cdf_rmse": 0.2362997188555168
+    },
+    {
+      "protocol": "G1",
+      "model": "bidirectional",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.6453216684377381,
+      "training_cdf_rmse": 0.22331301061401174
+    },
+    {
+      "protocol": "G1",
+      "model": "bidirectional",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.2788219363683863,
+      "training_cdf_rmse": 0.23756188902325484
+    },
+    {
+      "protocol": "G1",
+      "model": "bidirectional",
+      "seed": 1,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.5745918203605498,
+      "training_cdf_rmse": 0.21852987396758564
+    },
+    {
+      "protocol": "G1",
+      "model": "bidirectional",
+      "seed": 1,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.7242910573469273,
+      "training_cdf_rmse": 0.2086241476748357
+    },
+    {
+      "protocol": "G1",
+      "model": "bidirectional",
+      "seed": 1,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.2767756911331503,
+      "training_cdf_rmse": 0.22902563813540208
+    },
+    {
+      "protocol": "G1",
+      "model": "concat_fusion",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.5044924166416719,
+      "training_cdf_rmse": 0.2417716167844327
+    },
+    {
+      "protocol": "G1",
+      "model": "concat_fusion",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.7662943136874917,
+      "training_cdf_rmse": 0.21438583773692463
+    },
+    {
+      "protocol": "G1",
+      "model": "concat_fusion",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.41620067469566696,
+      "training_cdf_rmse": 0.19771927863898392
+    },
+    {
+      "protocol": "G1",
+      "model": "concat_fusion",
+      "seed": 1,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.5764603714926031,
+      "training_cdf_rmse": 0.22099268985547332
+    },
+    {
+      "protocol": "G1",
+      "model": "concat_fusion",
+      "seed": 1,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.7764156315638197,
+      "training_cdf_rmse": 0.19342818961345593
+    },
+    {
+      "protocol": "G1",
+      "model": "concat_fusion",
+      "seed": 1,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.2979529277800102,
+      "training_cdf_rmse": 0.2215556323737997
+    },
+    {
+      "protocol": "G1",
+      "model": "esm_sites",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.3317707197242559,
+      "training_cdf_rmse": 0.2824684203121214
+    },
+    {
+      "protocol": "G1",
+      "model": "esm_sites",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.7537882286918531,
+      "training_cdf_rmse": 0.1976615309920356
+    },
+    {
+      "protocol": "G1",
+      "model": "esm_sites",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.39397228467454193,
+      "training_cdf_rmse": 0.22886312811250567
+    },
+    {
+      "protocol": "G1",
+      "model": "mutation_count_ridge",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.2729663507457122,
+      "training_cdf_rmse": 0.27948301977045553
+    },
+    {
+      "protocol": "G1",
+      "model": "mutation_count_ridge",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.20465344971051974,
+      "training_cdf_rmse": 0.29838668406680996
+    },
+    {
+      "protocol": "G1",
+      "model": "mutation_count_ridge",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.021235839914175953,
+      "training_cdf_rmse": 0.22284265974676687
+    },
+    {
+      "protocol": "G1",
+      "model": "seq_queries_struct",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.6018216315712641,
+      "training_cdf_rmse": 0.21490786829098646
+    },
+    {
+      "protocol": "G1",
+      "model": "seq_queries_struct",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.717058855045658,
+      "training_cdf_rmse": 0.34856605995352075
+    },
+    {
+      "protocol": "G1",
+      "model": "seq_queries_struct",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.3311273282718153,
+      "training_cdf_rmse": 0.2274834919836496
+    },
+    {
+      "protocol": "G1",
+      "model": "seq_queries_struct",
+      "seed": 1,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.5590919006175706,
+      "training_cdf_rmse": 0.2348480381328035
+    },
+    {
+      "protocol": "G1",
+      "model": "seq_queries_struct",
+      "seed": 1,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.7668193722460763,
+      "training_cdf_rmse": 0.19991576123871588
+    },
+    {
+      "protocol": "G1",
+      "model": "seq_queries_struct",
+      "seed": 1,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.30643223166574834,
+      "training_cdf_rmse": 0.2218386692518296
+    },
+    {
+      "protocol": "G1",
+      "model": "sequence_only",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.5265198440997967,
+      "training_cdf_rmse": 0.25552686953230025
+    },
+    {
+      "protocol": "G1",
+      "model": "sequence_only",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.7450321568851914,
+      "training_cdf_rmse": 0.20272215072232985
+    },
+    {
+      "protocol": "G1",
+      "model": "sequence_only",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.34648818291440864,
+      "training_cdf_rmse": 0.21141256449138882
+    },
+    {
+      "protocol": "G1",
+      "model": "sequence_only",
+      "seed": 1,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.4936102959678633,
+      "training_cdf_rmse": 0.24868857151738397
+    },
+    {
+      "protocol": "G1",
+      "model": "sequence_only",
+      "seed": 1,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.7766709826701287,
+      "training_cdf_rmse": 0.2174567109508376
+    },
+    {
+      "protocol": "G1",
+      "model": "sequence_only",
+      "seed": 1,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.3601227842622917,
+      "training_cdf_rmse": 0.21194371693511546
+    },
+    {
+      "protocol": "G1",
+      "model": "sequence_ridge",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.4374796784812065,
+      "training_cdf_rmse": 0.25382891316793355
+    },
+    {
+      "protocol": "G1",
+      "model": "sequence_ridge",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.5337249978482219,
+      "training_cdf_rmse": 0.26090937580861945
+    },
+    {
+      "protocol": "G1",
+      "model": "sequence_ridge",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.21034279787959895,
+      "training_cdf_rmse": 0.23354778505946294
+    },
+    {
+      "protocol": "G1",
+      "model": "struct_queries_seq",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.5740732356851341,
+      "training_cdf_rmse": 0.21565530833561428
+    },
+    {
+      "protocol": "G1",
+      "model": "struct_queries_seq",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.7711603410533302,
+      "training_cdf_rmse": 0.18713066692582286
+    },
+    {
+      "protocol": "G1",
+      "model": "struct_queries_seq",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.42149848770196285,
+      "training_cdf_rmse": 0.21483666517831215
+    },
+    {
+      "protocol": "G1",
+      "model": "struct_queries_seq",
+      "seed": 1,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.5776210133852,
+      "training_cdf_rmse": 0.22739433544084373
+    },
+    {
+      "protocol": "G1",
+      "model": "struct_queries_seq",
+      "seed": 1,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.7921156060355955,
+      "training_cdf_rmse": 0.18830860236774197
+    },
+    {
+      "protocol": "G1",
+      "model": "struct_queries_seq",
+      "seed": 1,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.3799288755943609,
+      "training_cdf_rmse": 0.20884209022126704
+    },
+    {
+      "protocol": "G1",
+      "model": "structural_gnn",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.6128683083078961,
+      "training_cdf_rmse": 0.22636659240869572
+    },
+    {
+      "protocol": "G1",
+      "model": "structural_gnn",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.6406512143320211,
+      "training_cdf_rmse": 0.23985991664180975
+    },
+    {
+      "protocol": "G1",
+      "model": "structural_gnn",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.20588590757271513,
+      "training_cdf_rmse": 0.26989561086632047
+    },
+    {
+      "protocol": "G1",
+      "model": "structural_gnn",
+      "seed": 1,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.5581699723057206,
+      "training_cdf_rmse": 0.22994195571453374
+    },
+    {
+      "protocol": "G1",
+      "model": "structural_gnn",
+      "seed": 1,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.6525126850766996,
+      "training_cdf_rmse": 0.2254069101537225
+    },
+    {
+      "protocol": "G1",
+      "model": "structural_gnn",
+      "seed": 1,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.15247330078172686,
+      "training_cdf_rmse": 0.24671900006055655
+    },
+    {
+      "protocol": "G1",
+      "model": "structural_ridge",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.5681136276692462,
+      "training_cdf_rmse": 0.2407208852945479
+    },
+    {
+      "protocol": "G1",
+      "model": "structural_ridge",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.54594890242121,
+      "training_cdf_rmse": 0.2589499295115644
+    },
+    {
+      "protocol": "G1",
+      "model": "structural_ridge",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.2694316328916185,
+      "training_cdf_rmse": 0.22989977086331687
+    },
+    {
+      "protocol": "G1",
+      "model": "structure_only",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.5755055171696155,
+      "training_cdf_rmse": 0.22225607151539423
+    },
+    {
+      "protocol": "G1",
+      "model": "structure_only",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.7347686898380599,
+      "training_cdf_rmse": 0.219607004011906
+    },
+    {
+      "protocol": "G1",
+      "model": "structure_only",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.3440354917077902,
+      "training_cdf_rmse": 0.23315469655743645
+    },
+    {
+      "protocol": "G1",
+      "model": "structure_only",
+      "seed": 1,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.5438935958465979,
+      "training_cdf_rmse": 0.24769014216665558
+    },
+    {
+      "protocol": "G1",
+      "model": "structure_only",
+      "seed": 1,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.7321410445828151,
+      "training_cdf_rmse": 0.21163359017627256
+    },
+    {
+      "protocol": "G1",
+      "model": "structure_only",
+      "seed": 1,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.39492626896997113,
+      "training_cdf_rmse": 0.21355499754223997
+    },
+    {
+      "protocol": "G1",
+      "model": "weighted_fusion",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.5468516559772043,
+      "training_cdf_rmse": 0.2265757062768514
+    },
+    {
+      "protocol": "G1",
+      "model": "weighted_fusion",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.7322975500995851,
+      "training_cdf_rmse": 0.2075582939163848
+    },
+    {
+      "protocol": "G1",
+      "model": "weighted_fusion",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.4390317259847039,
+      "training_cdf_rmse": 0.20272397677123194
+    },
+    {
+      "protocol": "G1",
+      "model": "weighted_fusion",
+      "seed": 1,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.6013771304209078,
+      "training_cdf_rmse": 0.2195201642151193
+    },
+    {
+      "protocol": "G1",
+      "model": "weighted_fusion",
+      "seed": 1,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.7510370264496847,
+      "training_cdf_rmse": 0.19243235298065672
+    },
+    {
+      "protocol": "G1",
+      "model": "weighted_fusion",
+      "seed": 1,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.28120455068338707,
+      "training_cdf_rmse": 0.2286029951691071
+    },
+    {
+      "protocol": "G1",
+      "model": "within_one_hot",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 90,
+      "spearman_rho": 0.579979997288494,
+      "training_cdf_rmse": 0.2800586656832366
+    },
+    {
+      "protocol": "G1",
+      "model": "within_one_hot",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 90,
+      "spearman_rho": 0.7641093556662157,
+      "training_cdf_rmse": 0.19092188838976307
+    },
+    {
+      "protocol": "G1",
+      "model": "within_one_hot",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 82,
+      "spearman_rho": 0.5320938380529701,
+      "training_cdf_rmse": 0.2136640707501201
+    },
+    {
+      "protocol": "G2",
+      "model": "bidirectional",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.2239991478811552,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "bidirectional",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.17020213652898392,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "bidirectional",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": 0.0696714031754106,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "bidirectional",
+      "seed": 1,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.27882034659569105,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "bidirectional",
+      "seed": 1,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.0409750869801831,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "bidirectional",
+      "seed": 1,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": 0.03674895696057094,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "concat_fusion",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.16977630728439164,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "concat_fusion",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.044082291987616436,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "concat_fusion",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": 0.002491605984574756,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "concat_fusion",
+      "seed": 1,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.28858599681876995,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "concat_fusion",
+      "seed": 1,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.03890758999235125,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "concat_fusion",
+      "seed": 1,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": 0.012664810571714459,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "esm_sites",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.15581701827298255,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "esm_sites",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.2063774576403654,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "esm_sites",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": 0.015120791206140398,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "mutation_count_ridge",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.36278821280136286,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "mutation_count_ridge",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.19097505219134417,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "mutation_count_ridge",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": 0.035813476793940376,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "seq_queries_struct",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.2270519733200384,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "seq_queries_struct",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.14665653675377943,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "seq_queries_struct",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": 0.033344112562492034,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "seq_queries_struct",
+      "seed": 1,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.422244846791979,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "seq_queries_struct",
+      "seed": 1,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.1481314429567767,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "seq_queries_struct",
+      "seed": 1,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": -0.1149308683910875,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "sequence_only",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.17480329317375273,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "sequence_only",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.02901377715422921,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "sequence_only",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": -0.09136738356902818,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "sequence_only",
+      "seed": 1,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.1553798840489286,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "sequence_only",
+      "seed": 1,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.1139550773420091,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "sequence_only",
+      "seed": 1,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": -0.07208804382577773,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "sequence_ridge",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.20434585004199815,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "sequence_ridge",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.17322401999735168,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "sequence_ridge",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": 0.05077068476021803,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "struct_queries_seq",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.2702038861707595,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "struct_queries_seq",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.03328051971171512,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "struct_queries_seq",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": 0.025861522705671446,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "struct_queries_seq",
+      "seed": 1,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.31575169992673674,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "struct_queries_seq",
+      "seed": 1,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.1201042798660414,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "struct_queries_seq",
+      "seed": 1,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": -0.07021317095587738,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "structural_gnn",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.1987709091743703,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "structural_gnn",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.16853027425333003,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "structural_gnn",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": 0.024943589744299624,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "structural_gnn",
+      "seed": 1,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.2843097418752496,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "structural_gnn",
+      "seed": 1,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.19387956823602015,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "structural_gnn",
+      "seed": 1,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": -0.09020645855797259,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "structural_ridge",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.3457839517457893,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "structural_ridge",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.1875539441299496,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "structural_ridge",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": -0.03264515136424111,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "structure_only",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.03766434648827535,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "structure_only",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.24237958079821542,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "structure_only",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": 0.019984284749212912,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "structure_only",
+      "seed": 1,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.42032804528053597,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "structure_only",
+      "seed": 1,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.12513767581171828,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "structure_only",
+      "seed": 1,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": -0.0028201981164686645,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "weighted_fusion",
+      "seed": 0,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.18581263618676852,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "weighted_fusion",
+      "seed": 0,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.11343841841590925,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "weighted_fusion",
+      "seed": 0,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": 0.0017564782512091276,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "weighted_fusion",
+      "seed": 1,
+      "protein_id": "amylase",
+      "n": 578,
+      "spearman_rho": 0.27033758904977745,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "weighted_fusion",
+      "seed": 1,
+      "protein_id": "gb1",
+      "n": 600,
+      "spearman_rho": 0.09803903182779396,
+      "training_cdf_rmse": null
+    },
+    {
+      "protocol": "G2",
+      "model": "weighted_fusion",
+      "seed": 1,
+      "protein_id": "nucb",
+      "n": 553,
+      "spearman_rho": -0.02881397810188062,
+      "training_cdf_rmse": null
+    }
+  ]
+}

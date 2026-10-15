@@ -1,0 +1,13 @@
+{
+  "m4_config": "configs/m4.json",
+  "output": "runs/m5",
+  "residue_cache": "data/cache/m5/residues",
+  "seeds": [0, 1],
+  "modes": ["sequence_only", "structure_only", "weighted_fusion", "concat_fusion", "seq_queries_struct", "struct_queries_seq", "bidirectional"],
+  "training": {
+    "dimension": 16, "heads": 2, "layers": 2,
+    "learning_rate": 0.003, "weight_decay": 0.01,
+    "max_epochs": 20, "patience": 6, "batch_size": 32,
+    "cpu_threads": 4, "device": "cpu"
+  }
+}
