@@ -54,9 +54,12 @@ def prepare(config):
             "geometry": {"contact_cutoff_a": 8.0, "sasa_points": 960, "dssp": "off"},
             "structure_run": {"output": spec["structure_artifacts"]},
         }
+        output_directory(spec["structure_artifacts"])
         manifest = Path(spec["structure_artifacts"]) / "manifest.json"
         if not manifest.exists():
             run_structure(settings, render=False)
+        elif json.loads(manifest.read_text())["config"] != settings:
+            raise ValueError("M6 graph cache configuration mismatch; cached artifacts preserved")
         graph = load_graph(spec["structure_artifacts"], spec["reference"]["sequence"])
         part = [r for r in rows if r["protein_id"] == p]
         # No labels enter the residue cache identity or encoder inputs.
@@ -107,6 +110,10 @@ def transfer_state(config):
 
 
 def rebuild_transfer(config):
+    checkpoint = Path(config["transfer"]["checkpoint"])
+    if checkpoint.exists():
+        transfer_state(config)
+        return checksum(checkpoint)
     import torch
 
     from proteinmod import hybrid_experiments as m5

@@ -168,3 +168,16 @@ def test_physical_ridge_ignores_test_targets_and_task_masks():
     for path in ("benchmarks/m5/new", "benchmarks/m4", "benchmarks", "."):
         with pytest.raises(ValueError, match="historical"):
             output_directory(path)
+
+
+def test_rebuild_preserves_existing_pretrained_checkpoint(tmp_path, monkeypatch):
+    from proteinmod import stability_features
+    from proteinmod.data import checksum
+
+    checkpoint = tmp_path / "old-checkpoint.pt"
+    checkpoint.write_bytes(b"existing archival weights")
+    called = []
+    monkeypatch.setattr(stability_features, "transfer_state", lambda config: called.append(config))
+    config = {"transfer": {"checkpoint": str(checkpoint)}}
+    assert stability_features.rebuild_transfer(config) == checksum(checkpoint)
+    assert checkpoint.read_bytes() == b"existing archival weights" and called == [config]

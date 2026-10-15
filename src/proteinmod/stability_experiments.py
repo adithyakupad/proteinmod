@@ -296,7 +296,7 @@ def run(config):
         output / "manifest.json",
         {
             "config": config,
-            "config_sha256": checksum("configs/m6.json"),
+            "config_fingerprint": fingerprint(config),
             "git_revision": subprocess.check_output(
                 ["git", "rev-parse", "HEAD"], text=True
             ).strip(),
