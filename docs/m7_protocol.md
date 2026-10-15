@@ -38,3 +38,18 @@ pytest -q
 ```
 
 Checkpoint cache: data/cache/m7/checkpoints/<config+data+source fingerprint>; no weights or dense embeddings committed. Run manifest records source/config/data/encoder hashes, versions, seed, CPU runtime and process peak memory. Historical benchmark checksums are checked before/after. Saved model contains schema, task order, calibrators and configuration; load only trusted checkpoints with weights_only=True.
+
+For a fresh cache, the ordered preparation commands (after installing the pinned Python3.12 environment) are:
+
+```
+python -m pip install -r requirements-m3.txt
+python -m pip install -e '.[dev,m3,esm,structure]'
+proteinmod download-m4 --config configs/m4.json
+proteinmod extract --config configs/amylase_m1.toml
+proteinmod prepare-m4 --config configs/m4.json --local-only
+python -m proteinmod.hybrid_experiments prepare --config configs/m5.json
+python -m proteinmod.stability_experiments download --config configs/m6.json
+python -m proteinmod.stability_experiments prepare --config configs/m6.json
+```
+
+Preparation downloads only the pinned source/model files described by the M1/M4/M5/M6 protocols. M7 itself does not need any M5/M6 supervised weights. The optional `scripts/replay_m7_references.py` additionally needs the original ignored M5/M6 checkpoint caches; regenerate those with their original run protocols if absent. The main M7 run creates its own fingerprinted checkpoints, which `scripts/verify_m7.py` then checks. `report_m7.py --input benchmarks/m7 --output runs/m7-report` reproduces the report directly from committed predictions without training or checkpoint caches. Tests are offline and use synthetic fixtures.
