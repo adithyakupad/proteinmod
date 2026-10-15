@@ -1,0 +1,122 @@
+{
+  "output": "runs/m6",
+  "sources": {
+    "measurements": {
+      "path": "data/cache/m6/source/figure_data.zip",
+      "url": "https://zenodo.org/records/7992926/files/Data_tables_for_figs.zip",
+      "md5": "c4b6a64345e30e1b9e2e40a266d14a68",
+      "sha256": "69f6d5a68ba961759879ab60b3f168b8fad1bce0b0b810ac490fe85001515890"
+    },
+    "structures": {
+      "path": "data/cache/m6/source/structures.zip",
+      "url": "https://zenodo.org/records/7992926/files/AlphaFold_model_PDBs.zip",
+      "md5": "c29317a75f28d008b2718316995902ef",
+      "sha256": "70c6da80c91493b603d4319a16b1f59be0f261dfd2079f0c8710ccb49829575d"
+    }
+  },
+  "table_member": "Data_tables_for_figs/dG_site_feature_Fig3.csv",
+  "table_sha256": "79ff1e8676c50e9cdfefd1976a0bdcbbefdd42cc4c7f354fd5d146165f5a04aa",
+  "source_record": "https://zenodo.org/records/7992926",
+  "source_version": "v2_230420",
+  "license": "CC-BY-4.0",
+  "citation": "https://doi.org/10.1038/s41586-023-06328-6",
+  "assay": {
+    "id": "Tsuboyama2023_Fig3_cdna_ddg",
+    "unit": "kcal/mol",
+    "source_convention": "positive_stabilizing",
+    "task_type": "ddg",
+    "conditions": {
+      "pH": 7.4,
+      "buffer": "PBS",
+      "measurement_temperature_c_approx": 22.0,
+      "inference_temperature_k": 298.0,
+      "method": "cDNA display proteolysis; two-state thermodynamic inference",
+      "replicate_count": null
+    }
+  },
+  "proteins": [
+    {
+      "protein_id": "1LP1",
+      "structure_member": "AlphaFold_model_PDBs/1LP1.pdb",
+      "structure_sha256": "34514b7c8c2918af86bab29690084f5d7193a28f2e10d46ce7a0246f134a6f98",
+      "reference": {
+        "sequence": "KFNKELSVAGREIVTLPNLNDPQKKAFIFSLWDDPSQSANLLAEAKKLNDAQAPK",
+        "sha256": "5fd7bb16a69b9446c49b8cbe0e283cb065424c7b8b542181420d682c704ed3fd",
+        "source": "https://zenodo.org/records/7992926/files/AlphaFold_model_PDBs.zip (author assay construct; every measured WT site checked against primary \u0394\u0394G table)"
+      },
+      "structure_artifacts": "data/cache/m6/graphs/1LP1"
+    },
+    {
+      "protein_id": "1A32",
+      "structure_member": "AlphaFold_model_PDBs/1A32.pdb",
+      "structure_sha256": "f054283550aad67078d46e7c0e95f8e759ae544871dc6e6987b1321de294a485",
+      "reference": {
+        "sequence": "SPEVQIAILTEQINNLNEHLRVHKKDHHSRRGLLKMVGKRRRLLAYLRNKDVARYREIVEKLG",
+        "sha256": "23260d892b2f1c7be955c13686082906af03865240d0a6da8e5a7bea65e592ce",
+        "source": "https://zenodo.org/records/7992926/files/AlphaFold_model_PDBs.zip (author assay construct; every measured WT site checked against primary \u0394\u0394G table)"
+      },
+      "structure_artifacts": "data/cache/m6/graphs/1A32"
+    },
+    {
+      "protein_id": "1TUD",
+      "structure_member": "AlphaFold_model_PDBs/1TUD.pdb",
+      "structure_sha256": "4a1a85b36596d3496b7418ec8317bc035411acac84a3ffd5a5711b264b7ded11",
+      "reference": {
+        "sequence": "RQGFVPAAYVKKLDSGTGKELVLALYDYQEKSPREVTMKKGDILTLLNSTNKDWWKVEVN",
+        "sha256": "5fe7d9ad6e17486d30f09a64b0e4317afde6f028bb243c91b9636b2becd865b2",
+        "source": "https://zenodo.org/records/7992926/files/AlphaFold_model_PDBs.zip (author assay construct; every measured WT site checked against primary \u0394\u0394G table)"
+      },
+      "structure_artifacts": "data/cache/m6/graphs/1TUD"
+    }
+  ],
+  "cap_per_protein": 600,
+  "embedding": {
+    "model": "facebook/esm2_t12_35M_UR50D",
+    "revision": "6fbf070e65b0b7291e7bbcd451118c216cff79d8",
+    "dimension": 480,
+    "device": "auto",
+    "batch_size": 8,
+    "cpu_threads": 4,
+    "model_cache": "data/cache/models",
+    "cache": "data/cache/embeddings"
+  },
+  "residue_cache": "data/cache/m6/residues",
+  "seeds": [
+    0,
+    1
+  ],
+  "alphas": [
+    0.1,
+    10.0,
+    100.0
+  ],
+  "transfer": {
+    "checkpoint": "data/cache/m5/checkpoints/d11364d64e37d773d8b444f8d641108ae27f411adb711edb59a234597ced9527/G2-gb1-bidirectional-0.pt",
+    "checkpoint_sha256": "647b1834a058a5d1d60867fcfdcf970355baaa1a294231af1551e1fae55b2c0c",
+    "encoder_tensor_sha256": "cd746d8cc05e177328454ebab1367a662b05af9d563744328cd1707faeb09a03",
+    "m5_config": "configs/m5.json",
+    "protocol": "G2",
+    "fold": "gb1",
+    "seed": 0,
+    "mode": "bidirectional",
+    "supervised_function_training_proteins": [
+      "amylase"
+    ],
+    "supervised_function_validation_proteins": [
+      "nucb"
+    ],
+    "frozen": true
+  },
+  "head": {
+    "dimension": 16,
+    "heads": 2,
+    "layers": 2,
+    "learning_rate": 0.003,
+    "weight_decay": 0.01,
+    "max_epochs": 100,
+    "patience": 15,
+    "batch_size": 64,
+    "cpu_threads": 4,
+    "device": "cpu"
+  }
+}
