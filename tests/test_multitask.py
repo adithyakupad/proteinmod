@@ -44,6 +44,13 @@ def test_mask_before_arithmetic_and_reject_all_missing():
         masked_loss(p, y, torch.zeros_like(mask))
     with pytest.raises(ValueError, match="Nonfinite"):
         masked_loss(p, torch.full_like(y, float("nan")), mask)
+    for weights in ((0, 1), (1, float("nan")), (1,)):
+        with pytest.raises(ValueError, match="weights"):
+            masked_loss(p, y, mask, weights)
+    with pytest.raises(ValueError, match="dimensions"):
+        masked_loss(p, y[:1], mask)
+    with pytest.raises(ValueError, match="boolean"):
+        masked_loss(p, y, mask.float())
 
 
 def test_both_tasks_backpropagate_shared_encoder_but_not_other_head():

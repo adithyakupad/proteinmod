@@ -30,10 +30,11 @@ Use the pinned local environment in requirements-m3.txt and the M4/M5/M6 prepara
 
 ```
 python -m proteinmod.multitask_experiments --config configs/m7.json
+python scripts/verify_m7.py
 python scripts/report_m7.py --input runs/m7 --output runs/m7
 ruff check .
 ruff format --check .
 pytest -q
 ```
 
-Checkpoint cache: data/cache/m7/checkpoints/<config fingerprint>; no weights or dense embeddings committed. Run manifest records source/config/data/encoder hashes, versions, seed, CPU runtime and process peak memory. Historical benchmark checksums are checked before/after. Saved model contains schema, task order, calibrators and configuration; load only trusted checkpoints with weights_only=True.
+Checkpoint cache: data/cache/m7/checkpoints/<config+data+source fingerprint>; no weights or dense embeddings committed. Run manifest records source/config/data/encoder hashes, versions, seed, CPU runtime and process peak memory. Historical benchmark checksums are checked before/after. Saved model contains schema, task order, calibrators and configuration; load only trusted checkpoints with weights_only=True.

@@ -362,3 +362,48 @@ M5 compares frozen ESM-2 residue tokens and the existing structural GNN using we
 ### M6: experimental stability prediction
 
 M6 adds an independent, continuous ΔΔG head over the frozen M5 sequence–structure encoder, with real experimental folding-stability labels. It preserves kcal/mol units and explicit sign conversion, verifies mutation coordinates, and evaluates protein-held-out predictions against stability baselines. See [the data and evaluation protocol](docs/m6_protocol.md) and [the benchmark report](benchmarks/m6/report.md). Function and stability objectives are trained separately; no multitask or stability-informed function prediction is included.
+
+## M7 progressive stability–function multitask learning
+
+M7 compares independent task training with a shared bidirectional sequence–structure
+representation and separate function/stability heads. ESM-2 stays frozen. Unpaired
+examples carry explicit observed-task masks; absent labels never enter arithmetic.
+Two head-only epochs precede shared GNN/attention updates. Native stability predictions
+remain folding ΔΔG in kcal/mol, positive destabilization; function evaluation retains
+per-assay training-only ranks and native-measurement Spearman.
+
+The exact M5 G1/G2 and M6 S1/S2 IDs are retained. Three fixed seeds compare independent,
+shared-frozen, equal-weight joint and validation-selected joint models. All new pathways
+start from matched fresh initialization to avoid leaking function labels through M6's
+fixed pretrained checkpoint. See [M7 protocol](docs/m7_protocol.md) for fold pairing,
+validation criteria, masked losses, compute controls and dataset limitations.
+
+```sh
+python -m proteinmod.multitask_experiments --config configs/m7.json
+python scripts/replay_m7_references.py
+python scripts/verify_m7.py
+python scripts/report_m7.py --input runs/m7 --output runs/m7
+ruff check .
+ruff format --check .
+pytest -q
+```
+
+Use the M4/M5/M6 preparation instructions first; M7 reuses their checksum-validated
+frozen residue caches and structures. Large arrays/checkpoints remain ignored. M7
+results and scientific interpretation are archived under `benchmarks/m7/`.
+No paired observations or mechanistic stability–function link are inferred from shared
+training. Stability-conditioned function prediction remains outside M7.
+
+Actual M7 held-out-protein means over three seeds:
+
+| Model | Function macro Spearman ↑ | Stability macro RMSE kcal/mol ↓ |
+|---|---:|---:|
+| Independent | .102592 | 1.247250 |
+| Equal joint | .098700 | 1.250014 |
+| Validation-selected joint | .078303 | 1.218225 |
+
+Mean changes are smaller than seed variation; there is no consistent multitask benefit.
+All 72 fits and 73,134 predictions are retained in [results](benchmarks/m7/report.md),
+with [failure analysis](benchmarks/m7/interpretation.md) and per-protein negative transfer.
+The CPU run took 506.79 seconds. Both historical reference replays and a repeated M7
+held-out fit matched exactly; all 156 historical benchmark files remain unchanged.

@@ -1,0 +1,25 @@
+{
+  "source_predictions_sha256": "80f485d230994a51b65dd4ae878c4295116a08d81fc1be0a2785e17efdb41737",
+  "script_sha256": "4235377faedcf4cd017d273b6f15cbb6a174c3939d26f363e6f1f40aca91f088",
+  "files": {
+    "fit_diagnostics.csv": "2566264a6cb4556b8a0db8e8956403d8f9ebaea5e0c5a9dc3aac59e20e5bc500",
+    "summary.csv": "0076f6b4830d078edeb7e87c87f9f99021386f7ca119cf566b1b2a1ccc68ddbe",
+    "audit.json": "a30de69c4dde92ca1875f43f27a9f00e4e982c38486738b62497426ffc61150f",
+    "interpretation.md": "5b396456755f8a426151e78d243ab32fc10bab375252076ce4ffa0c75ac190d3",
+    "local_verification.json": "0d5b72a6e1a2ceb737984a00cb75c18fc04c4c7dd1d5ccdefc3f2bd899ebe020",
+    "historical_replay.json": "402b797cd69ee85e187bf29a874e210d76e22abcc718b8bb982062785f124634",
+    "report.md": "4a27ae7d34029939910e67fc78bd93547962b070f1bfa83e5d7285ecc1e29bfb",
+    "predictions.csv": "80f485d230994a51b65dd4ae878c4295116a08d81fc1be0a2785e17efdb41737",
+    "task_contracts.json": "f0064d315cce33eb4cc35a740b53f09fc3026aa1cb5c3b96d1b8ee244bc74dea",
+    "comparison.png": "224f173efb8c19dcd3d9d32d16aa91abd43c0ee12299200b4a8e759ca7d317c8",
+    "largest_stability_errors.csv": "9c53a273209631534521547e2904b6aac9fe8c20fda9bc1f864f5ca4420ebd50",
+    "transfer.csv": "48cf42b22db85c64be1ca250bebb73e89a46d6eba359b8cd903df357211f7540",
+    "per_protein.csv": "ad5347421979708a229a19b14454b91d1478d9c1e0de5428784683ad1b7f95ca",
+    "manifest.json": "d5ccedda1afa161594741ff07dd8df100f04855617a4d055b66948cb6ffec0ae",
+    "validation_curves.png": "3972a52f98b55ed01bd0c566d96a663084dc5527a41b1aaf663831381af3c264",
+    "rows.json": "8e35df2dbb856d8e7843382ba30d5be42fcac7214ff1f9c2335d9f60618e877a",
+    "reproducibility.json": "4cc650aad61b7b90e91c6332f043d4bd50f7e9ec80918cb0d52b22db2bc9168f",
+    "dependency_review.json": "73f27f84b888329931cf467c4548d42d1169d754480c85f78211630d8a2dfe6b",
+    "runs.json": "918d9a30649367188e972220bb1c0de056d67ab88db3b62cc877ccda6c040046"
+  }
+}

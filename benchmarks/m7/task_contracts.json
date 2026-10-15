@@ -1,0 +1,30 @@
+{
+  "schema": "m7-unpaired-bidirectional-v1",
+  "ordered_tasks": [
+    "function",
+    "stability"
+  ],
+  "function": {
+    "observed_task_mask": [
+      true,
+      false
+    ],
+    "training_target": "per-training-assay midrank percentile, standardized with train-only mean/SD",
+    "prediction_unit": "training percentile score after inverse standardization, not native assay units",
+    "evaluation": "per-protein native-measurement Spearman; equal protein macro",
+    "cohort": "M5 structure_matched, unchanged"
+  },
+  "stability": {
+    "observed_task_mask": [
+      false,
+      true
+    ],
+    "training_target": "train-only standardized canonical folding mutant-minus-WT delta-delta-G",
+    "prediction_unit": "kcal/mol",
+    "positive_means": "destabilization",
+    "source_convention": "unfolding, positive stabilizing; explicitly negated in M6 adapter",
+    "cohort": "M6 measured cohort, unchanged"
+  },
+  "no_paired_examples": true,
+  "no_predicted_stability_input_to_function": true
+}

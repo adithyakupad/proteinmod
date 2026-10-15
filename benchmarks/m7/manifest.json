@@ -1,0 +1,98 @@
+{
+  "config": {
+    "output": "runs/m7",
+    "function_config": "configs/m5.json",
+    "stability_config": "configs/m6.json",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "stability_weights": [
+      0.25,
+      1.0,
+      4.0
+    ],
+    "fold_pairs": [
+      [
+        "within",
+        "within"
+      ],
+      [
+        "amylase",
+        "1LP1"
+      ],
+      [
+        "gb1",
+        "1A32"
+      ],
+      [
+        "nucb",
+        "1TUD"
+      ]
+    ],
+    "training": {
+      "dimension": 16,
+      "heads": 2,
+      "layers": 2,
+      "learning_rate": 0.003,
+      "weight_decay": 0.01,
+      "warmup_epochs": 2,
+      "max_epochs": 20,
+      "batch_size": 32,
+      "cpu_threads": 4,
+      "device": "cpu"
+    },
+    "selection": "Minimize mean of (1-function validation macro Spearman)/2 and stability validation macro RMSE divided by stability training target SD. Independent tasks select their own validation optimum. No test selection.",
+    "initialization": "Seed-matched fresh non-PLM pathways; never the fixed M6 function-supervised checkpoint. Frozen cached ESM-2 only.",
+    "schema": "m7-unpaired-bidirectional-v1"
+  },
+  "config_sha256": "4803842d9599d40ebc310768183cb0968922b92a265871bec728e2e54e5a2ba8",
+  "git_head": "62b9a48615a0ef3683b3fa55ee63290dcfbe4bd4",
+  "device": "cpu",
+  "python": "3.12.15",
+  "versions": {
+    "torch": "2.14.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "biopython": "1.88"
+  },
+  "elapsed_seconds": 506.7944760408718,
+  "peak_rss_bytes": 1427390464,
+  "source_hashes": {
+    "src/proteinmod/stability_model.py": "7d97a555b0906be9aaa2ef65612a8696b6551911e65427c0e4d534cf7d017c87",
+    "src/proteinmod/structure_features.py": "f43f3eda8d540c2f67a3bdb03d184650101d3474d59aaeb7034b7f9aa02dbb57",
+    "src/proteinmod/benchmark.py": "612f88149ff86d96d81f45e8b6fcfe06b900724fbfa16ad7ecb43eb6b6bf249a",
+    "src/proteinmod/residue_cache.py": "27436fc96b48ec239f8b110e0798955f2165569f65954ded29f8a8c433dba0a1",
+    "src/proteinmod/models.py": "81256a2cf7729d8cbc50b0da17295f0812b62d8c618adfce87d0e0ef0a11ee6c",
+    "src/proteinmod/structural_experiments.py": "388b40b400e007ec17131535858cdb90cb3f34a0eccaa817470617921325c12f",
+    "src/proteinmod/structural_gnn.py": "299cc321d4d35d310a152cdb0d0b0021ebffc48661c52fa60412662d42365a27",
+    "src/proteinmod/hybrid.py": "f19cd19a5759ff324c99d81bee98d4ebaea62b30f88c1283b0ad465ba727e5f5",
+    "src/proteinmod/stability_features.py": "b05c8635e6b2f5a18a821fe3b2a0e47eb4b218a32f4e05abf2b0ba6e57a52bfa",
+    "src/proteinmod/stability_experiments.py": "b9e99e914534df997df7510479707101d919a2dcc965b5da998492ef5b9d7875",
+    "src/proteinmod/__init__.py": "2ba3408e090d882b309c397a9af8c57448223d771a6f4346739247b8689db135",
+    "src/proteinmod/hybrid_experiments.py": "e581dedf380b6ffe48e5c4281068e28bed850d353da7d1c1b2ec9d5a7fd3cfe1",
+    "src/proteinmod/multiprotein_data.py": "a11932cfba7546c0a43182fc7ebeaa7cc6b42a3b849b6e67bdd97738f0e5a261",
+    "src/proteinmod/structure_sources.py": "185e43de09eae94bb65befad6761695a40c639ead660c5f310b6b0548422d0d9",
+    "src/proteinmod/embeddings.py": "0b00ff2aac096e133a09c8d824ab158ef3c24c79ee3e5361f96dd24339f700c5",
+    "src/proteinmod/experiments.py": "22d4c8751d0514feccef816dd97d8b5a4126fb8938b62ddf3c52386d1ba180bd",
+    "src/proteinmod/cli.py": "9bff0b7c80cc043dd6e7e2f84287c4f6d52e648aa4c6e419cce928c6920b0f2e",
+    "src/proteinmod/multitask_experiments.py": "96f3f872c932cb5c64c7b536a3b1ed5a5cd86627d0a2b3358db7a544f5feeb25",
+    "src/proteinmod/structure_pipeline.py": "d5ba103dbf3457fa469831506a50dd3cd5733d829d51981c6034a7a521c116de",
+    "src/proteinmod/multitask.py": "999459e11059e4dd7c4db69d4c7c17942b4ec2f06bdb7a17a76745c06e261fad",
+    "src/proteinmod/structural_graph.py": "6f45050e99fb23d9b889f7b6bbe41558b30c6b8e2534f7618328473e853771e4",
+    "src/proteinmod/structure_mapping.py": "e091f318fa1e880c78aa7517a931e4012179ce7ae863525e30e6d3124ec61436",
+    "src/proteinmod/stability_data.py": "149affc130ade1ba6499fdd69ebc2045a85bb56ae6776ff6b02ca108f828c6ff",
+    "src/proteinmod/multiprotein_experiments.py": "b7172eaea59629521361364a1fe7d04116a672ae19808d5295436549019dbbea",
+    "src/proteinmod/data.py": "da870c4a406ea0ae9fcb9ecddbe6f49b98cb99f567fc3796659102ef2e576620"
+  },
+  "files": {
+    "audit.json": "a30de69c4dde92ca1875f43f27a9f00e4e982c38486738b62497426ffc61150f",
+    "local_verification.json": "0d5b72a6e1a2ceb737984a00cb75c18fc04c4c7dd1d5ccdefc3f2bd899ebe020",
+    "historical_replay.json": "402b797cd69ee85e187bf29a874e210d76e22abcc718b8bb982062785f124634",
+    "predictions.csv": "80f485d230994a51b65dd4ae878c4295116a08d81fc1be0a2785e17efdb41737",
+    "rows.json": "8e35df2dbb856d8e7843382ba30d5be42fcac7214ff1f9c2335d9f60618e877a",
+    "runs.json": "918d9a30649367188e972220bb1c0de056d67ab88db3b62cc877ccda6c040046"
+  }
+}
