@@ -121,6 +121,12 @@ class StabilityModel(nn.Module):
             raise ValueError("Stability head belongs to a different frozen encoder")
         if state.get("feature_schema") != "m6-frozen-hybrid-v1":
             raise ValueError("Stability feature schema mismatch")
+        if (state.get("task_type"), state.get("target_unit"), state.get("target_convention")) != (
+            "ddg",
+            "kcal/mol",
+            "positive_destabilizing",
+        ):
+            raise ValueError("Stability head target units/sign convention mismatch")
         mean, scale = float(state["target_mean"]), float(state["target_scale"])
         if not torch.isfinite(torch.tensor([mean, scale])).all() or scale <= 0:
             raise ValueError("Invalid physical target calibration")

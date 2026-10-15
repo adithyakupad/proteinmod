@@ -126,6 +126,9 @@ def test_head_loading_checks_encoder_schema_and_physical_calibration():
         "encoder_tensor_sha256": encoder_digest(model.backbone.state_dict()),
         "feature_schema": "m6-frozen-hybrid-v1",
         "stability_head": model.stability_head.state_dict(),
+        "task_type": "ddg",
+        "target_unit": "kcal/mol",
+        "target_convention": "positive_destabilizing",
         "target_mean": 1.2345678901,
         "target_scale": 0.12345678901,
     }
@@ -137,3 +140,6 @@ def test_head_loading_checks_encoder_schema_and_physical_calibration():
         model.load_head({**state, "encoder_tensor_sha256": "bad"})
     with pytest.raises(ValueError, match="calibration"):
         model.load_head({**state, "target_scale": 0})
+
+    with pytest.raises(ValueError, match="units/sign"):
+        model.load_head({**state, "target_unit": "kJ/mol"})

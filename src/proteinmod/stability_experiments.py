@@ -160,7 +160,15 @@ def train_head(features, rows, roles, settings, seed):
             "train_only_target_scale": scale,
             "trainable_parameters": sum(p.numel() for p in model.parameters()),
         },
-        {"stability_head": best[2], "target_mean": mean, "target_scale": scale, "seed": seed},
+        {
+            "stability_head": best[2],
+            "target_mean": mean,
+            "target_scale": scale,
+            "seed": seed,
+            "task_type": "ddg",
+            "target_unit": "kcal/mol",
+            "target_convention": "positive_destabilizing",
+        },
     )
 
 
