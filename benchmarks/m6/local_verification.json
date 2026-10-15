@@ -1,0 +1,24 @@
+{
+  "pytest": "118 passed",
+  "core_pytest": "96 passed, 6 optional skips",
+  "ruff": "passed",
+  "ruff_format": "70 files formatted",
+  "historical_files_unchanged_vs_main": 136,
+  "historical_base": "ad2e56478ec1c23c18ad9e46932259f865f7ff55",
+  "pretrained_M5_checkpoint_bytes_unchanged": true,
+  "full_stability_model_replay": {
+    "protocol": "S2",
+    "test_protein": "1LP1",
+    "seed": 0,
+    "n": 600,
+    "max_abs_prediction_difference_kcal_mol": 2.0116508525624965e-07,
+    "tolerance_kcal_mol": 1e-05
+  },
+  "all_mutation_sites_mapped": true,
+  "graph_nodes": {
+    "1LP1": 55,
+    "1A32": 63,
+    "1TUD": 60
+  },
+  "feature_audit_is_posthoc_label_free": true
+}

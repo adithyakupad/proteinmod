@@ -1,0 +1,4218 @@
+[
+  {
+    "protocol": "S1",
+    "fold": "within",
+    "model": "training_mean",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 90,
+          "spearman_rho": null,
+          "pearson_r": null,
+          "mae": 0.7453489916425026,
+          "rmse": 0.8355569297133189
+        },
+        "1LP1": {
+          "n": 90,
+          "spearman_rho": null,
+          "pearson_r": null,
+          "mae": 0.7064256534653797,
+          "rmse": 0.8051660844835948
+        },
+        "1TUD": {
+          "n": 90,
+          "spearman_rho": null,
+          "pearson_r": null,
+          "mae": 1.4346986306634837,
+          "rmse": 1.8634011814403872
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.0,
+        "pearson_r": 0.0,
+        "mae": 0.9621577585904553,
+        "rmse": 1.168041398545767
+      },
+      "pooled": {
+        "spearman_rho": null,
+        "pearson_r": null,
+        "mae": 0.9621577585904555,
+        "rmse": 1.267374158038057
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "rule": "training labels only"
+    },
+    "elapsed_seconds": 0.0002532079815864563
+  },
+  {
+    "protocol": "S1",
+    "fold": "within",
+    "model": "physicochemical_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 90,
+          "spearman_rho": 0.640383586451002,
+          "pearson_r": 0.6680146109280922,
+          "mae": 0.4345988222701633,
+          "rmse": 0.5285082176746063
+        },
+        "1LP1": {
+          "n": 90,
+          "spearman_rho": 0.5233485615508087,
+          "pearson_r": 0.5205219927575357,
+          "mae": 0.5330674917112113,
+          "rmse": 0.672529302098148
+        },
+        "1TUD": {
+          "n": 90,
+          "spearman_rho": 0.537007187275839,
+          "pearson_r": 0.5895971953481635,
+          "mae": 1.1806396415853087,
+          "rmse": 1.4478282562016958
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.5669131117592165,
+        "pearson_r": 0.5927112663445971,
+        "mae": 0.7161019851888945,
+        "rmse": 0.8829552586581499
+      },
+      "pooled": {
+        "spearman_rho": 0.5767652913193083,
+        "pearson_r": 0.6440895902879469,
+        "mae": 0.7161019851888943,
+        "rmse": 0.9708798857713646
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 100.0,
+      "validation_macro_rmse_kcal_mol": 0.8575991914109377,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 0.8669019192029778
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 0.8612398596979958
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 0.8575991914109377
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1A32": {
+            "n": 420,
+            "spearman_rho": 0.5177732624010664,
+            "pearson_r": 0.6174623391938217,
+            "mae": 0.42911651042435073,
+            "rmse": 0.5424168027270793
+          },
+          "1LP1": {
+            "n": 420,
+            "spearman_rho": 0.4959715093831961,
+            "pearson_r": 0.5191972972478506,
+            "mae": 0.5292434670926844,
+            "rmse": 0.6820748291408626
+          },
+          "1TUD": {
+            "n": 420,
+            "spearman_rho": 0.5090279578471197,
+            "pearson_r": 0.5695184487450484,
+            "mae": 1.2003626885245409,
+            "rmse": 1.4280828533560643
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.5075909098771274,
+          "pearson_r": 0.5687260283955735,
+          "mae": 0.7195742220138587,
+          "rmse": 0.8841914950746688
+        },
+        "pooled": {
+          "spearman_rho": 0.6249270695033056,
+          "pearson_r": 0.6803288840851932,
+          "mae": 0.7195742220138587,
+          "rmse": 0.9658955596539761
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.01613050000742078
+  },
+  {
+    "protocol": "S1",
+    "fold": "within",
+    "model": "substitution_one_hot_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 90,
+          "spearman_rho": 0.3873846458210848,
+          "pearson_r": 0.514661106218411,
+          "mae": 0.7348333369241967,
+          "rmse": 0.9151190544430577
+        },
+        "1LP1": {
+          "n": 90,
+          "spearman_rho": 0.26612883399498316,
+          "pearson_r": 0.2745814380751516,
+          "mae": 0.7207104529591378,
+          "rmse": 0.9124364317902391
+        },
+        "1TUD": {
+          "n": 90,
+          "spearman_rho": 0.1539447172163903,
+          "pearson_r": 0.20154505892613797,
+          "mae": 1.4741104636886482,
+          "rmse": 1.9346308934737186
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.26915273234415277,
+        "pearson_r": 0.3302625344065669,
+        "mae": 0.9765514178573276,
+        "rmse": 1.2540621265690053
+      },
+      "pooled": {
+        "spearman_rho": 0.19107583944862694,
+        "pearson_r": 0.21777050457793207,
+        "mae": 0.9765514178573277,
+        "rmse": 1.3432274341855115
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 100.0,
+      "validation_macro_rmse_kcal_mol": 1.2920068973905623,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 1.3240698048316863
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 1.3205582696284397
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 1.2920068973905623
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1A32": {
+            "n": 420,
+            "spearman_rho": 0.5415694710115825,
+            "pearson_r": 0.6095748889209369,
+            "mae": 0.5730880114409974,
+            "rmse": 0.7820262548711195
+          },
+          "1LP1": {
+            "n": 420,
+            "spearman_rho": 0.5252583866731685,
+            "pearson_r": 0.5420098774017403,
+            "mae": 0.576424670177748,
+            "rmse": 0.7370934855769747
+          },
+          "1TUD": {
+            "n": 420,
+            "spearman_rho": 0.7198233026010731,
+            "pearson_r": 0.7192092341888148,
+            "mae": 1.0526151433952178,
+            "rmse": 1.4335160291911777
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.5955503867619414,
+          "pearson_r": 0.6235980001704974,
+          "mae": 0.7340426083379877,
+          "rmse": 0.9842119232130907
+        },
+        "pooled": {
+          "spearman_rho": 0.5852815972571302,
+          "pearson_r": 0.6210489175910734,
+          "mae": 0.7340426083379877,
+          "rmse": 1.0343822755209675
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.014171249931678176
+  },
+  {
+    "protocol": "S1",
+    "fold": "within",
+    "model": "esm_sites_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 90,
+          "spearman_rho": 0.8346627155615919,
+          "pearson_r": 0.8848080704611885,
+          "mae": 0.2507378802393644,
+          "rmse": 0.33022017251929003
+        },
+        "1LP1": {
+          "n": 90,
+          "spearman_rho": 0.8742396180598426,
+          "pearson_r": 0.8410181507374141,
+          "mae": 0.3200385823982511,
+          "rmse": 0.42041146432383
+        },
+        "1TUD": {
+          "n": 90,
+          "spearman_rho": 0.8158482969433191,
+          "pearson_r": 0.8460413084392922,
+          "mae": 0.7003813756899976,
+          "rmse": 0.9331006903509584
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.8415835435215846,
+        "pearson_r": 0.8572891765459648,
+        "mae": 0.42371927944253773,
+        "rmse": 0.5612441090646928
+      },
+      "pooled": {
+        "spearman_rho": 0.8181445859727087,
+        "pearson_r": 0.87384260996175,
+        "mae": 0.4237192794425377,
+        "rmse": 0.6208778892307817
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 100.0,
+      "validation_macro_rmse_kcal_mol": 0.5170191751123802,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 0.6864430856745037
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 0.5857350474678255
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 0.5170191751123802
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1A32": {
+            "n": 420,
+            "spearman_rho": 0.8800121153910007,
+            "pearson_r": 0.9146289289178309,
+            "mae": 0.2135239216611969,
+            "rmse": 0.2688708486925297
+          },
+          "1LP1": {
+            "n": 420,
+            "spearman_rho": 0.8906613054420804,
+            "pearson_r": 0.9004501439291217,
+            "mae": 0.2556061113415904,
+            "rmse": 0.3390016143156163
+          },
+          "1TUD": {
+            "n": 420,
+            "spearman_rho": 0.9400549409558688,
+            "pearson_r": 0.957634607153372,
+            "mae": 0.3759424747744249,
+            "rmse": 0.4953414868263332
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.9035761205963166,
+          "pearson_r": 0.9242378933334415,
+          "mae": 0.2816908359257374,
+          "rmse": 0.36773798327815976
+        },
+        "pooled": {
+          "spearman_rho": 0.9154270082443664,
+          "pearson_r": 0.9581937550921256,
+          "mae": 0.2816908359257374,
+          "rmse": 0.37972657547089395
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.08625258295796812
+  },
+  {
+    "protocol": "S1",
+    "fold": "within",
+    "model": "structural_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 90,
+          "spearman_rho": 0.7530065440177799,
+          "pearson_r": 0.8053121541472856,
+          "mae": 0.35531023025953057,
+          "rmse": 0.43743556123894134
+        },
+        "1LP1": {
+          "n": 90,
+          "spearman_rho": 0.6721241305510969,
+          "pearson_r": 0.6856217051282223,
+          "mae": 0.507491321261144,
+          "rmse": 0.6356248544399024
+        },
+        "1TUD": {
+          "n": 90,
+          "spearman_rho": 0.6768231212087176,
+          "pearson_r": 0.6814613925476909,
+          "mae": 1.0579562636511193,
+          "rmse": 1.2451953711537074
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.7006512652591982,
+        "pearson_r": 0.7241317506077328,
+        "mae": 0.6402526050572647,
+        "rmse": 0.7727519289441837
+      },
+      "pooled": {
+        "spearman_rho": 0.6851721872167905,
+        "pearson_r": 0.7504155257395762,
+        "mae": 0.6402526050572647,
+        "rmse": 0.8457502267535008
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 0.1,
+      "validation_macro_rmse_kcal_mol": 0.7861450785319839,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 0.7861450785319839
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 0.7903498196423516
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 0.7957716854778889
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1A32": {
+            "n": 420,
+            "spearman_rho": 0.63701705468042,
+            "pearson_r": 0.7385259764038663,
+            "mae": 0.3739050521166525,
+            "rmse": 0.4695114751459245
+          },
+          "1LP1": {
+            "n": 420,
+            "spearman_rho": 0.6280910355384112,
+            "pearson_r": 0.6343476075909164,
+            "mae": 0.5073874602369486,
+            "rmse": 0.6601550322274894
+          },
+          "1TUD": {
+            "n": 420,
+            "spearman_rho": 0.7305424219644666,
+            "pearson_r": 0.728503730728058,
+            "mae": 0.9725049482138318,
+            "rmse": 1.166654331340882
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.6652168373944326,
+          "pearson_r": 0.7004591049076135,
+          "mae": 0.6179324868558109,
+          "rmse": 0.765440279571432
+        },
+        "pooled": {
+          "spearman_rho": 0.719448617331296,
+          "pearson_r": 0.782702078458348,
+          "mae": 0.6179324868558109,
+          "rmse": 0.82002602005575
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.01648791693150997
+  },
+  {
+    "protocol": "S1",
+    "fold": "within",
+    "model": "frozen_hybrid_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 90,
+          "spearman_rho": 0.6655224924887845,
+          "pearson_r": 0.775513374248324,
+          "mae": 0.39580953376434563,
+          "rmse": 0.4868800323520259
+        },
+        "1LP1": {
+          "n": 90,
+          "spearman_rho": 0.5638144626908671,
+          "pearson_r": 0.5813334847742739,
+          "mae": 0.5435165049657744,
+          "rmse": 0.6689502263585202
+        },
+        "1TUD": {
+          "n": 90,
+          "spearman_rho": 0.6552667232410998,
+          "pearson_r": 0.6969608632257889,
+          "mae": 0.9717704513112163,
+          "rmse": 1.2353043037541194
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.6282012261402504,
+        "pearson_r": 0.6846025740827956,
+        "mae": 0.6370321633471122,
+        "rmse": 0.7970448541548886
+      },
+      "pooled": {
+        "spearman_rho": 0.6508184667061963,
+        "pearson_r": 0.740192893604305,
+        "mae": 0.6370321633471121,
+        "rmse": 0.8583944885893421
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 0.1,
+      "validation_macro_rmse_kcal_mol": 0.7509763524898947,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 0.7509763524898947
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 0.7557595667956688
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 0.7755090273726876
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1A32": {
+            "n": 420,
+            "spearman_rho": 0.6324851209878903,
+            "pearson_r": 0.739084971110385,
+            "mae": 0.39378302990469455,
+            "rmse": 0.5142126563592536
+          },
+          "1LP1": {
+            "n": 420,
+            "spearman_rho": 0.5901608569861411,
+            "pearson_r": 0.6565574584558453,
+            "mae": 0.46372059384122066,
+            "rmse": 0.5985348467150035
+          },
+          "1TUD": {
+            "n": 420,
+            "spearman_rho": 0.7453347784111308,
+            "pearson_r": 0.7926789253524826,
+            "mae": 0.8617605057019017,
+            "rmse": 1.0535721091218178
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.6559935854617208,
+          "pearson_r": 0.7294404516395709,
+          "mae": 0.5730880431492723,
+          "rmse": 0.7221065373986916
+        },
+        "pooled": {
+          "spearman_rho": 0.7241803795286209,
+          "pearson_r": 0.8168750737014931,
+          "mae": 0.5730880431492722,
+          "rmse": 0.759972106464351
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.021719207987189293
+  },
+  {
+    "protocol": "S1",
+    "fold": "within",
+    "model": "mutation_count_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 90,
+          "spearman_rho": null,
+          "pearson_r": null,
+          "mae": 0.7453489916425026,
+          "rmse": 0.8355569297133189
+        },
+        "1LP1": {
+          "n": 90,
+          "spearman_rho": null,
+          "pearson_r": null,
+          "mae": 0.7064256534653797,
+          "rmse": 0.8051660844835948
+        },
+        "1TUD": {
+          "n": 90,
+          "spearman_rho": null,
+          "pearson_r": null,
+          "mae": 1.4346986306634837,
+          "rmse": 1.8634011814403872
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.0,
+        "pearson_r": 0.0,
+        "mae": 0.9621577585904553,
+        "rmse": 1.168041398545767
+      },
+      "pooled": {
+        "spearman_rho": null,
+        "pearson_r": null,
+        "mae": 0.9621577585904555,
+        "rmse": 1.267374158038057
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 0.1,
+      "validation_macro_rmse_kcal_mol": 1.1867447962785531,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 1.1867447962785531
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 1.1867447962785531
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 1.1867447962785531
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1A32": {
+            "n": 420,
+            "spearman_rho": null,
+            "pearson_r": null,
+            "mae": 0.7825415223208408,
+            "rmse": 0.8769275465128656
+          },
+          "1LP1": {
+            "n": 420,
+            "spearman_rho": null,
+            "pearson_r": null,
+            "mae": 0.7414759533114827,
+            "rmse": 0.8566239680224751
+          },
+          "1TUD": {
+            "n": 420,
+            "spearman_rho": null,
+            "pearson_r": null,
+            "mae": 1.4240174705712612,
+            "rmse": 1.924798187644526
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.0,
+          "pearson_r": 0.0,
+          "mae": 0.9826783154011949,
+          "rmse": 1.2194499007266222
+        },
+        "pooled": {
+          "spearman_rho": null,
+          "pearson_r": null,
+          "mae": 0.982678315401195,
+          "rmse": 1.3175298361685903
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.006099124904721975
+  },
+  {
+    "protocol": "S1",
+    "fold": "within",
+    "model": "stability_head",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 90,
+          "spearman_rho": 0.6498827015680948,
+          "pearson_r": 0.7099860344839115,
+          "mae": 0.37540160470987866,
+          "rmse": 0.49174267394537696
+        },
+        "1LP1": {
+          "n": 90,
+          "spearman_rho": 0.6646828826604108,
+          "pearson_r": 0.6198811405236302,
+          "mae": 0.46645709301373295,
+          "rmse": 0.6099294355936103
+        },
+        "1TUD": {
+          "n": 90,
+          "spearman_rho": 0.6944092540558188,
+          "pearson_r": 0.7097661318077089,
+          "mae": 0.9646583470971908,
+          "rmse": 1.2198953855140353
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.6696582794281082,
+        "pearson_r": 0.6798777689384169,
+        "mae": 0.6021723482736008,
+        "rmse": 0.7738558316843408
+      },
+      "pooled": {
+        "spearman_rho": 0.6823188527241497,
+        "pearson_r": 0.7572097771113935,
+        "mae": 0.6021723482736009,
+        "rmse": 0.8370522734335705
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "epoch": 50,
+      "validation_macro_rmse_kcal_mol": 0.6923288724389872,
+      "trace": [
+        {
+          "epoch": 1,
+          "validation_macro_rmse_kcal_mol": 0.8889414191016431
+        },
+        {
+          "epoch": 2,
+          "validation_macro_rmse_kcal_mol": 0.7880642204649732
+        },
+        {
+          "epoch": 3,
+          "validation_macro_rmse_kcal_mol": 0.7651754551651294
+        },
+        {
+          "epoch": 4,
+          "validation_macro_rmse_kcal_mol": 0.7514563023969564
+        },
+        {
+          "epoch": 5,
+          "validation_macro_rmse_kcal_mol": 0.7393404237902196
+        },
+        {
+          "epoch": 6,
+          "validation_macro_rmse_kcal_mol": 0.756865795304841
+        },
+        {
+          "epoch": 7,
+          "validation_macro_rmse_kcal_mol": 0.7309892956171463
+        },
+        {
+          "epoch": 8,
+          "validation_macro_rmse_kcal_mol": 0.7437069652791678
+        },
+        {
+          "epoch": 9,
+          "validation_macro_rmse_kcal_mol": 0.7196081992050427
+        },
+        {
+          "epoch": 10,
+          "validation_macro_rmse_kcal_mol": 0.7209844716657905
+        },
+        {
+          "epoch": 11,
+          "validation_macro_rmse_kcal_mol": 0.7292024094867395
+        },
+        {
+          "epoch": 12,
+          "validation_macro_rmse_kcal_mol": 0.719352653732142
+        },
+        {
+          "epoch": 13,
+          "validation_macro_rmse_kcal_mol": 0.7229245016012392
+        },
+        {
+          "epoch": 14,
+          "validation_macro_rmse_kcal_mol": 0.7248430495594119
+        },
+        {
+          "epoch": 15,
+          "validation_macro_rmse_kcal_mol": 0.7078354285857262
+        },
+        {
+          "epoch": 16,
+          "validation_macro_rmse_kcal_mol": 0.7275858481260599
+        },
+        {
+          "epoch": 17,
+          "validation_macro_rmse_kcal_mol": 0.7271813064334154
+        },
+        {
+          "epoch": 18,
+          "validation_macro_rmse_kcal_mol": 0.7204001927993486
+        },
+        {
+          "epoch": 19,
+          "validation_macro_rmse_kcal_mol": 0.7114767541633791
+        },
+        {
+          "epoch": 20,
+          "validation_macro_rmse_kcal_mol": 0.7098523626571778
+        },
+        {
+          "epoch": 21,
+          "validation_macro_rmse_kcal_mol": 0.7405646466035068
+        },
+        {
+          "epoch": 22,
+          "validation_macro_rmse_kcal_mol": 0.7047018156193238
+        },
+        {
+          "epoch": 23,
+          "validation_macro_rmse_kcal_mol": 0.7080422590720623
+        },
+        {
+          "epoch": 24,
+          "validation_macro_rmse_kcal_mol": 0.7274763388308001
+        },
+        {
+          "epoch": 25,
+          "validation_macro_rmse_kcal_mol": 0.7099502164394762
+        },
+        {
+          "epoch": 26,
+          "validation_macro_rmse_kcal_mol": 0.7269204203172892
+        },
+        {
+          "epoch": 27,
+          "validation_macro_rmse_kcal_mol": 0.7401112810905596
+        },
+        {
+          "epoch": 28,
+          "validation_macro_rmse_kcal_mol": 0.7082065602930566
+        },
+        {
+          "epoch": 29,
+          "validation_macro_rmse_kcal_mol": 0.7181964954523502
+        },
+        {
+          "epoch": 30,
+          "validation_macro_rmse_kcal_mol": 0.7250285124504675
+        },
+        {
+          "epoch": 31,
+          "validation_macro_rmse_kcal_mol": 0.7068481792994868
+        },
+        {
+          "epoch": 32,
+          "validation_macro_rmse_kcal_mol": 0.7250996083507196
+        },
+        {
+          "epoch": 33,
+          "validation_macro_rmse_kcal_mol": 0.6991816571204871
+        },
+        {
+          "epoch": 34,
+          "validation_macro_rmse_kcal_mol": 0.7203594960192309
+        },
+        {
+          "epoch": 35,
+          "validation_macro_rmse_kcal_mol": 0.7143012818416133
+        },
+        {
+          "epoch": 36,
+          "validation_macro_rmse_kcal_mol": 0.7167755614814748
+        },
+        {
+          "epoch": 37,
+          "validation_macro_rmse_kcal_mol": 0.7120759069774291
+        },
+        {
+          "epoch": 38,
+          "validation_macro_rmse_kcal_mol": 0.709565665731866
+        },
+        {
+          "epoch": 39,
+          "validation_macro_rmse_kcal_mol": 0.7231099778581558
+        },
+        {
+          "epoch": 40,
+          "validation_macro_rmse_kcal_mol": 0.722857824326378
+        },
+        {
+          "epoch": 41,
+          "validation_macro_rmse_kcal_mol": 0.7061773980124334
+        },
+        {
+          "epoch": 42,
+          "validation_macro_rmse_kcal_mol": 0.6948003890265678
+        },
+        {
+          "epoch": 43,
+          "validation_macro_rmse_kcal_mol": 0.7016628951839744
+        },
+        {
+          "epoch": 44,
+          "validation_macro_rmse_kcal_mol": 0.7072794119632849
+        },
+        {
+          "epoch": 45,
+          "validation_macro_rmse_kcal_mol": 0.7153806874696366
+        },
+        {
+          "epoch": 46,
+          "validation_macro_rmse_kcal_mol": 0.6969350718974542
+        },
+        {
+          "epoch": 47,
+          "validation_macro_rmse_kcal_mol": 0.7099354851145542
+        },
+        {
+          "epoch": 48,
+          "validation_macro_rmse_kcal_mol": 0.710784883663902
+        },
+        {
+          "epoch": 49,
+          "validation_macro_rmse_kcal_mol": 0.7366092650704222
+        },
+        {
+          "epoch": 50,
+          "validation_macro_rmse_kcal_mol": 0.6923288724389872
+        },
+        {
+          "epoch": 51,
+          "validation_macro_rmse_kcal_mol": 0.7199847164745737
+        },
+        {
+          "epoch": 52,
+          "validation_macro_rmse_kcal_mol": 0.7227761000575422
+        },
+        {
+          "epoch": 53,
+          "validation_macro_rmse_kcal_mol": 0.6932891940277789
+        },
+        {
+          "epoch": 54,
+          "validation_macro_rmse_kcal_mol": 0.7345483305370731
+        },
+        {
+          "epoch": 55,
+          "validation_macro_rmse_kcal_mol": 0.7401896699378191
+        },
+        {
+          "epoch": 56,
+          "validation_macro_rmse_kcal_mol": 0.7135168707095025
+        },
+        {
+          "epoch": 57,
+          "validation_macro_rmse_kcal_mol": 0.7300371914971837
+        },
+        {
+          "epoch": 58,
+          "validation_macro_rmse_kcal_mol": 0.7168457813562165
+        },
+        {
+          "epoch": 59,
+          "validation_macro_rmse_kcal_mol": 0.714526423178618
+        },
+        {
+          "epoch": 60,
+          "validation_macro_rmse_kcal_mol": 0.7225305715588591
+        },
+        {
+          "epoch": 61,
+          "validation_macro_rmse_kcal_mol": 0.7016953722492983
+        },
+        {
+          "epoch": 62,
+          "validation_macro_rmse_kcal_mol": 0.7227518893364971
+        },
+        {
+          "epoch": 63,
+          "validation_macro_rmse_kcal_mol": 0.7071353937443249
+        },
+        {
+          "epoch": 64,
+          "validation_macro_rmse_kcal_mol": 0.7031543638717812
+        },
+        {
+          "epoch": 65,
+          "validation_macro_rmse_kcal_mol": 0.7046552589523968
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1A32": {
+            "n": 420,
+            "spearman_rho": 0.6535487324596105,
+            "pearson_r": 0.7656972888118007,
+            "mae": 0.3305965184037892,
+            "rmse": 0.428223726196387
+          },
+          "1LP1": {
+            "n": 420,
+            "spearman_rho": 0.7018141914532774,
+            "pearson_r": 0.7486453695157803,
+            "mae": 0.4025849163930202,
+            "rmse": 0.5185626813053447
+          },
+          "1TUD": {
+            "n": 420,
+            "spearman_rho": 0.8885081772943161,
+            "pearson_r": 0.9163562055015937,
+            "mae": 0.5594710590253891,
+            "rmse": 0.7189336243930892
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.7479570337357346,
+          "pearson_r": 0.810232954609725,
+          "mae": 0.4308841646073995,
+          "rmse": 0.555240010631607
+        },
+        "pooled": {
+          "spearman_rho": 0.799228084373299,
+          "pearson_r": 0.9086251185910728,
+          "mae": 0.4308841646073995,
+          "rmse": 0.5683743984391186
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      },
+      "train_only_target_mean": 0.8673608383319485,
+      "train_only_target_scale": 1.3175298361685903,
+      "trainable_parameters": 1633
+    },
+    "elapsed_seconds": 0.33829691587015986
+  },
+  {
+    "protocol": "S1",
+    "fold": "within",
+    "model": "stability_head",
+    "seed": 1,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 90,
+          "spearman_rho": 0.6742643124665596,
+          "pearson_r": 0.7583742443769721,
+          "mae": 0.3492064180480969,
+          "rmse": 0.45258061615324763
+        },
+        "1LP1": {
+          "n": 90,
+          "spearman_rho": 0.6270156809482652,
+          "pearson_r": 0.59983918568136,
+          "mae": 0.47033523770102775,
+          "rmse": 0.6271418661952921
+        },
+        "1TUD": {
+          "n": 90,
+          "spearman_rho": 0.7068636956786838,
+          "pearson_r": 0.7120955959165163,
+          "mae": 0.9204471122865351,
+          "rmse": 1.210562963917608
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.6693812296978362,
+        "pearson_r": 0.6901030086582828,
+        "mae": 0.5799962560118866,
+        "rmse": 0.7634284820887158
+      },
+      "pooled": {
+        "spearman_rho": 0.6999433755544942,
+        "pearson_r": 0.7637597678157517,
+        "mae": 0.5799962560118865,
+        "rmse": 0.8293770401254087
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "epoch": 33,
+      "validation_macro_rmse_kcal_mol": 0.679339600016626,
+      "trace": [
+        {
+          "epoch": 1,
+          "validation_macro_rmse_kcal_mol": 0.8934932995609088
+        },
+        {
+          "epoch": 2,
+          "validation_macro_rmse_kcal_mol": 0.861127510583506
+        },
+        {
+          "epoch": 3,
+          "validation_macro_rmse_kcal_mol": 0.7708516294710627
+        },
+        {
+          "epoch": 4,
+          "validation_macro_rmse_kcal_mol": 0.7570164266196349
+        },
+        {
+          "epoch": 5,
+          "validation_macro_rmse_kcal_mol": 0.7489333549718221
+        },
+        {
+          "epoch": 6,
+          "validation_macro_rmse_kcal_mol": 0.7381320803397066
+        },
+        {
+          "epoch": 7,
+          "validation_macro_rmse_kcal_mol": 0.737034214998982
+        },
+        {
+          "epoch": 8,
+          "validation_macro_rmse_kcal_mol": 0.7498191114708973
+        },
+        {
+          "epoch": 9,
+          "validation_macro_rmse_kcal_mol": 0.7351896819671127
+        },
+        {
+          "epoch": 10,
+          "validation_macro_rmse_kcal_mol": 0.7107902631149298
+        },
+        {
+          "epoch": 11,
+          "validation_macro_rmse_kcal_mol": 0.7058755095939171
+        },
+        {
+          "epoch": 12,
+          "validation_macro_rmse_kcal_mol": 0.7052029984717455
+        },
+        {
+          "epoch": 13,
+          "validation_macro_rmse_kcal_mol": 0.6963056463516875
+        },
+        {
+          "epoch": 14,
+          "validation_macro_rmse_kcal_mol": 0.7003817310976109
+        },
+        {
+          "epoch": 15,
+          "validation_macro_rmse_kcal_mol": 0.693950887930678
+        },
+        {
+          "epoch": 16,
+          "validation_macro_rmse_kcal_mol": 0.6956402761664644
+        },
+        {
+          "epoch": 17,
+          "validation_macro_rmse_kcal_mol": 0.7043176424288585
+        },
+        {
+          "epoch": 18,
+          "validation_macro_rmse_kcal_mol": 0.6930216200218977
+        },
+        {
+          "epoch": 19,
+          "validation_macro_rmse_kcal_mol": 0.6972137821755494
+        },
+        {
+          "epoch": 20,
+          "validation_macro_rmse_kcal_mol": 0.7010962104593487
+        },
+        {
+          "epoch": 21,
+          "validation_macro_rmse_kcal_mol": 0.7013417594861625
+        },
+        {
+          "epoch": 22,
+          "validation_macro_rmse_kcal_mol": 0.6855829690339004
+        },
+        {
+          "epoch": 23,
+          "validation_macro_rmse_kcal_mol": 0.6949562407474197
+        },
+        {
+          "epoch": 24,
+          "validation_macro_rmse_kcal_mol": 0.6934996477059405
+        },
+        {
+          "epoch": 25,
+          "validation_macro_rmse_kcal_mol": 0.6894545045182877
+        },
+        {
+          "epoch": 26,
+          "validation_macro_rmse_kcal_mol": 0.6825366794230439
+        },
+        {
+          "epoch": 27,
+          "validation_macro_rmse_kcal_mol": 0.6894079270908984
+        },
+        {
+          "epoch": 28,
+          "validation_macro_rmse_kcal_mol": 0.7088916240435167
+        },
+        {
+          "epoch": 29,
+          "validation_macro_rmse_kcal_mol": 0.713216086956406
+        },
+        {
+          "epoch": 30,
+          "validation_macro_rmse_kcal_mol": 0.690076646902915
+        },
+        {
+          "epoch": 31,
+          "validation_macro_rmse_kcal_mol": 0.6806737970851948
+        },
+        {
+          "epoch": 32,
+          "validation_macro_rmse_kcal_mol": 0.6892210391583342
+        },
+        {
+          "epoch": 33,
+          "validation_macro_rmse_kcal_mol": 0.679339600016626
+        },
+        {
+          "epoch": 34,
+          "validation_macro_rmse_kcal_mol": 0.6836207947869566
+        },
+        {
+          "epoch": 35,
+          "validation_macro_rmse_kcal_mol": 0.6987245563070954
+        },
+        {
+          "epoch": 36,
+          "validation_macro_rmse_kcal_mol": 0.6937059437540283
+        },
+        {
+          "epoch": 37,
+          "validation_macro_rmse_kcal_mol": 0.6816702625790384
+        },
+        {
+          "epoch": 38,
+          "validation_macro_rmse_kcal_mol": 0.6897319017402938
+        },
+        {
+          "epoch": 39,
+          "validation_macro_rmse_kcal_mol": 0.6864908255308598
+        },
+        {
+          "epoch": 40,
+          "validation_macro_rmse_kcal_mol": 0.6908947027417783
+        },
+        {
+          "epoch": 41,
+          "validation_macro_rmse_kcal_mol": 0.6848894731375742
+        },
+        {
+          "epoch": 42,
+          "validation_macro_rmse_kcal_mol": 0.684827092355413
+        },
+        {
+          "epoch": 43,
+          "validation_macro_rmse_kcal_mol": 0.6806196427218193
+        },
+        {
+          "epoch": 44,
+          "validation_macro_rmse_kcal_mol": 0.6814345893357592
+        },
+        {
+          "epoch": 45,
+          "validation_macro_rmse_kcal_mol": 0.7002572104784193
+        },
+        {
+          "epoch": 46,
+          "validation_macro_rmse_kcal_mol": 0.6924849389714133
+        },
+        {
+          "epoch": 47,
+          "validation_macro_rmse_kcal_mol": 0.6920490886835137
+        },
+        {
+          "epoch": 48,
+          "validation_macro_rmse_kcal_mol": 0.6860089456823856
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1A32": {
+            "n": 420,
+            "spearman_rho": 0.5889709449276113,
+            "pearson_r": 0.7281377842818156,
+            "mae": 0.3591204256160104,
+            "rmse": 0.4587731839164552
+          },
+          "1LP1": {
+            "n": 420,
+            "spearman_rho": 0.6213566246961031,
+            "pearson_r": 0.6766185347214977,
+            "mae": 0.4357816694437973,
+            "rmse": 0.5722392049199849
+          },
+          "1TUD": {
+            "n": 420,
+            "spearman_rho": 0.8448583684260236,
+            "pearson_r": 0.8735853472595869,
+            "mae": 0.6449149485303587,
+            "rmse": 0.8229591827324658
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.6850619793499128,
+          "pearson_r": 0.7594472220876334,
+          "mae": 0.47993901453005544,
+          "rmse": 0.617990523856302
+        },
+        "pooled": {
+          "spearman_rho": 0.7562042613298336,
+          "pearson_r": 0.87573220031654,
+          "mae": 0.47993901453005544,
+          "rmse": 0.636446478077559
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      },
+      "train_only_target_mean": 0.8673608383319485,
+      "train_only_target_scale": 1.3175298361685903,
+      "trainable_parameters": 1633
+    },
+    "elapsed_seconds": 0.20058041694574058
+  },
+  {
+    "protocol": "S1",
+    "fold": "1A32",
+    "model": "within_position_one_hot",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 90,
+          "spearman_rho": 0.7684884284904698,
+          "pearson_r": 0.848943661002699,
+          "mae": 0.36692736014900484,
+          "rmse": 0.4726097777204793
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.7684884284904698,
+        "pearson_r": 0.848943661002699,
+        "mae": 0.36692736014900484,
+        "rmse": 0.4726097777204793
+      },
+      "pooled": {
+        "spearman_rho": 0.7684884284904698,
+        "pearson_r": 0.848943661002699,
+        "mae": 0.36692736014900484,
+        "rmse": 0.4726097777204793
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 0.1,
+      "validation_macro_rmse_kcal_mol": 0.4413463788173937,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 0.4413463788173937
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 0.44264121108151144
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 0.4537361041106383
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1A32": {
+            "n": 420,
+            "spearman_rho": 0.999999676059064,
+            "pearson_r": 0.9999999984006603,
+            "mae": 8.405673437048831e-05,
+            "rmse": 0.00011154236374147391
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.999999676059064,
+          "pearson_r": 0.9999999984006603,
+          "mae": 8.405673437048831e-05,
+          "rmse": 0.00011154236374147391
+        },
+        "pooled": {
+          "spearman_rho": 0.999999676059064,
+          "pearson_r": 0.9999999984006603,
+          "mae": 8.405673437048831e-05,
+          "rmse": 0.00011154236374147391
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    }
+  },
+  {
+    "protocol": "S1",
+    "fold": "1LP1",
+    "model": "within_position_one_hot",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1LP1": {
+          "n": 90,
+          "spearman_rho": 0.6475562424604409,
+          "pearson_r": 0.6814816589130073,
+          "mae": 0.468404070915837,
+          "rmse": 0.6092272036243944
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.6475562424604409,
+        "pearson_r": 0.6814816589130073,
+        "mae": 0.468404070915837,
+        "rmse": 0.6092272036243944
+      },
+      "pooled": {
+        "spearman_rho": 0.6475562424604409,
+        "pearson_r": 0.6814816589130073,
+        "mae": 0.468404070915837,
+        "rmse": 0.6092272036243944
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 0.1,
+      "validation_macro_rmse_kcal_mol": 0.5343399999551246,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 0.5343399999551246
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 0.5361749479711282
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 0.5516917553248508
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1LP1": {
+            "n": 420,
+            "spearman_rho": 1.0,
+            "pearson_r": 0.9999999984225398,
+            "mae": 0.0001014177429350017,
+            "rmse": 0.00012935084637923775
+          }
+        },
+        "macro": {
+          "spearman_rho": 1.0,
+          "pearson_r": 0.9999999984225398,
+          "mae": 0.0001014177429350017,
+          "rmse": 0.00012935084637923775
+        },
+        "pooled": {
+          "spearman_rho": 1.0,
+          "pearson_r": 0.9999999984225398,
+          "mae": 0.0001014177429350017,
+          "rmse": 0.00012935084637923775
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    }
+  },
+  {
+    "protocol": "S1",
+    "fold": "1TUD",
+    "model": "within_position_one_hot",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1TUD": {
+          "n": 90,
+          "spearman_rho": 0.6827802480762567,
+          "pearson_r": 0.6990820856683836,
+          "mae": 1.064558036761651,
+          "rmse": 1.3176128581637163
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.6827802480762567,
+        "pearson_r": 0.6990820856683836,
+        "mae": 1.064558036761651,
+        "rmse": 1.3176128581637163
+      },
+      "pooled": {
+        "spearman_rho": 0.6827802480762567,
+        "pearson_r": 0.6990820856683836,
+        "mae": 1.064558036761651,
+        "rmse": 1.3176128581637163
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 0.1,
+      "validation_macro_rmse_kcal_mol": 1.2197272109451378,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 1.2197272109451378
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 1.2237061248267884
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 1.25770939084464
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1TUD": {
+            "n": 420,
+            "spearman_rho": 0.9994306265059572,
+            "pearson_r": 0.9999999984118382,
+            "mae": 0.00023252995336448494,
+            "rmse": 0.0002815969590799156
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.9994306265059572,
+          "pearson_r": 0.9999999984118382,
+          "mae": 0.00023252995336448494,
+          "rmse": 0.0002815969590799156
+        },
+        "pooled": {
+          "spearman_rho": 0.9994306265059572,
+          "pearson_r": 0.9999999984118382,
+          "mae": 0.00023252995336448494,
+          "rmse": 0.0002815969590799156
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    }
+  },
+  {
+    "protocol": "S2",
+    "fold": "1LP1",
+    "model": "training_mean",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1LP1": {
+          "n": 600,
+          "spearman_rho": null,
+          "pearson_r": null,
+          "mae": 1.2841285440297974,
+          "rmse": 1.4606315388759308
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.0,
+        "pearson_r": 0.0,
+        "mae": 1.2841285440297974,
+        "rmse": 1.4606315388759308
+      },
+      "pooled": {
+        "spearman_rho": null,
+        "pearson_r": null,
+        "mae": 1.2841285440297974,
+        "rmse": 1.4606315388759308
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "rule": "training labels only"
+    },
+    "elapsed_seconds": 0.00021612504497170448
+  },
+  {
+    "protocol": "S2",
+    "fold": "1LP1",
+    "model": "physicochemical_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1LP1": {
+          "n": 600,
+          "spearman_rho": 0.37790632444900546,
+          "pearson_r": 0.38594352966409934,
+          "mae": 3.0856740482310534,
+          "rmse": 3.22976090413641
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.37790632444900546,
+        "pearson_r": 0.38594352966409934,
+        "mae": 3.0856740482310534,
+        "rmse": 3.22976090413641
+      },
+      "pooled": {
+        "spearman_rho": 0.37790632444900546,
+        "pearson_r": 0.38594352966409934,
+        "mae": 3.0856740482310534,
+        "rmse": 3.22976090413641
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 100.0,
+      "validation_macro_rmse_kcal_mol": 0.9167700300801127,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 1.0308288906291254
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 1.0179517790142358
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 0.9167700300801127
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1TUD": {
+            "n": 600,
+            "spearman_rho": 0.5739525348268811,
+            "pearson_r": 0.6299866164545844,
+            "mae": 1.0881377212272547,
+            "rmse": 1.312967738852914
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.5739525348268811,
+          "pearson_r": 0.6299866164545844,
+          "mae": 1.0881377212272547,
+          "rmse": 1.312967738852914
+        },
+        "pooled": {
+          "spearman_rho": 0.5739525348268811,
+          "pearson_r": 0.6299866164545844,
+          "mae": 1.0881377212272547,
+          "rmse": 1.312967738852914
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.009847333189100027
+  },
+  {
+    "protocol": "S2",
+    "fold": "1LP1",
+    "model": "substitution_one_hot_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1LP1": {
+          "n": 600,
+          "spearman_rho": 0.33081630030672315,
+          "pearson_r": 0.3432112699643798,
+          "mae": 1.3137508700011908,
+          "rmse": 1.5947208053261812
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.33081630030672315,
+        "pearson_r": 0.3432112699643798,
+        "mae": 1.3137508700011908,
+        "rmse": 1.5947208053261812
+      },
+      "pooled": {
+        "spearman_rho": 0.33081630030672315,
+        "pearson_r": 0.3432112699643798,
+        "mae": 1.3137508700011908,
+        "rmse": 1.5947208053261812
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 100.0,
+      "validation_macro_rmse_kcal_mol": 1.7932034809797002,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 1.885266358922009
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 1.8741460859982513
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 1.7932034809797002
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1TUD": {
+            "n": 600,
+            "spearman_rho": 0.7431281769977806,
+            "pearson_r": 0.785477429620794,
+            "mae": 0.8062127325252008,
+            "rmse": 1.06128120049435
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.7431281769977806,
+          "pearson_r": 0.785477429620794,
+          "mae": 0.8062127325252008,
+          "rmse": 1.06128120049435
+        },
+        "pooled": {
+          "spearman_rho": 0.7431281769977806,
+          "pearson_r": 0.785477429620794,
+          "mae": 0.8062127325252008,
+          "rmse": 1.06128120049435
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.01045212522149086
+  },
+  {
+    "protocol": "S2",
+    "fold": "1LP1",
+    "model": "esm_sites_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1LP1": {
+          "n": 600,
+          "spearman_rho": 0.3196197655576526,
+          "pearson_r": 0.3444152666806836,
+          "mae": 0.9988811141487939,
+          "rmse": 1.2072577372479822
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.3196197655576526,
+        "pearson_r": 0.3444152666806836,
+        "mae": 0.9988811141487939,
+        "rmse": 1.2072577372479822
+      },
+      "pooled": {
+        "spearman_rho": 0.3196197655576526,
+        "pearson_r": 0.3444152666806836,
+        "mae": 0.9988811141487939,
+        "rmse": 1.2072577372479822
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 100.0,
+      "validation_macro_rmse_kcal_mol": 1.2676363983197798,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 2.4511691443806205
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 1.4413389901780855
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 1.2676363983197798
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1TUD": {
+            "n": 600,
+            "spearman_rho": 0.9386958034575452,
+            "pearson_r": 0.9567620269302579,
+            "mae": 0.3846746670543277,
+            "rmse": 0.496668790868791
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.9386958034575452,
+          "pearson_r": 0.9567620269302579,
+          "mae": 0.3846746670543277,
+          "rmse": 0.496668790868791
+        },
+        "pooled": {
+          "spearman_rho": 0.9386958034575452,
+          "pearson_r": 0.9567620269302579,
+          "mae": 0.3846746670543277,
+          "rmse": 0.496668790868791
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.08305520890280604
+  },
+  {
+    "protocol": "S2",
+    "fold": "1LP1",
+    "model": "structural_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1LP1": {
+          "n": 600,
+          "spearman_rho": 0.5235132213580117,
+          "pearson_r": 0.5247849235378376,
+          "mae": 1.2837123988681731,
+          "rmse": 1.5638427172657232
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.5235132213580117,
+        "pearson_r": 0.5247849235378376,
+        "mae": 1.2837123988681731,
+        "rmse": 1.5638427172657232
+      },
+      "pooled": {
+        "spearman_rho": 0.5235132213580117,
+        "pearson_r": 0.5247849235378376,
+        "mae": 1.2837123988681731,
+        "rmse": 1.5638427172657232
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 100.0,
+      "validation_macro_rmse_kcal_mol": 1.2341204580522418,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 2.6120624064324507
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 1.9423219218619059
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 1.2341204580522418
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1TUD": {
+            "n": 600,
+            "spearman_rho": 0.7847269212423489,
+            "pearson_r": 0.8018458601078353,
+            "mae": 0.8184294245935987,
+            "rmse": 1.0109258430101942
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.7847269212423489,
+          "pearson_r": 0.8018458601078353,
+          "mae": 0.8184294245935987,
+          "rmse": 1.0109258430101942
+        },
+        "pooled": {
+          "spearman_rho": 0.7847269212423489,
+          "pearson_r": 0.8018458601078353,
+          "mae": 0.8184294245935987,
+          "rmse": 1.0109258430101942
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.018534458009526134
+  },
+  {
+    "protocol": "S2",
+    "fold": "1LP1",
+    "model": "frozen_hybrid_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1LP1": {
+          "n": 600,
+          "spearman_rho": 0.43848919559349137,
+          "pearson_r": 0.5145398063133786,
+          "mae": 9.372500455402346,
+          "rmse": 9.413623482199274
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.43848919559349137,
+        "pearson_r": 0.5145398063133786,
+        "mae": 9.372500455402346,
+        "rmse": 9.413623482199274
+      },
+      "pooled": {
+        "spearman_rho": 0.43848919559349137,
+        "pearson_r": 0.5145398063133786,
+        "mae": 9.372500455402346,
+        "rmse": 9.413623482199274
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 100.0,
+      "validation_macro_rmse_kcal_mol": 4.402832122113226,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 13.823575459297286
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 8.043779917905656
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 4.402832122113226
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1TUD": {
+            "n": 600,
+            "spearman_rho": 0.7802416662181199,
+            "pearson_r": 0.8155525427975305,
+            "mae": 0.7864041448721286,
+            "rmse": 0.9825734454483841
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.7802416662181199,
+          "pearson_r": 0.8155525427975305,
+          "mae": 0.7864041448721286,
+          "rmse": 0.9825734454483841
+        },
+        "pooled": {
+          "spearman_rho": 0.7802416662181199,
+          "pearson_r": 0.8155525427975305,
+          "mae": 0.7864041448721286,
+          "rmse": 0.9825734454483841
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.015052000060677528
+  },
+  {
+    "protocol": "S2",
+    "fold": "1LP1",
+    "model": "mutation_count_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1LP1": {
+          "n": 600,
+          "spearman_rho": null,
+          "pearson_r": null,
+          "mae": 1.2841285440297974,
+          "rmse": 1.4606315388759308
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.0,
+        "pearson_r": 0.0,
+        "mae": 1.2841285440297974,
+        "rmse": 1.4606315388759308
+      },
+      "pooled": {
+        "spearman_rho": null,
+        "pearson_r": null,
+        "mae": 1.2841285440297974,
+        "rmse": 1.4606315388759308
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 0.1,
+      "validation_macro_rmse_kcal_mol": 1.602256999978018,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 1.602256999978018
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 1.602256999978018
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 1.602256999978018
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1TUD": {
+            "n": 600,
+            "spearman_rho": null,
+            "pearson_r": null,
+            "mae": 1.4213864842649484,
+            "rmse": 1.687495043289025
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.0,
+          "pearson_r": 0.0,
+          "mae": 1.4213864842649484,
+          "rmse": 1.687495043289025
+        },
+        "pooled": {
+          "spearman_rho": null,
+          "pearson_r": null,
+          "mae": 1.4213864842649484,
+          "rmse": 1.687495043289025
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.005806416971608996
+  },
+  {
+    "protocol": "S2",
+    "fold": "1LP1",
+    "model": "stability_head",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1LP1": {
+          "n": 600,
+          "spearman_rho": 0.4252167402154964,
+          "pearson_r": 0.48581540321923555,
+          "mae": 1.1310473035239508,
+          "rmse": 1.2941042200232142
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.4252167402154964,
+        "pearson_r": 0.48581540321923555,
+        "mae": 1.1310473035239508,
+        "rmse": 1.2941042200232142
+      },
+      "pooled": {
+        "spearman_rho": 0.4252167402154964,
+        "pearson_r": 0.48581540321923555,
+        "mae": 1.1310473035239508,
+        "rmse": 1.2941042200232142
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "epoch": 1,
+      "validation_macro_rmse_kcal_mol": 1.344020505528948,
+      "trace": [
+        {
+          "epoch": 1,
+          "validation_macro_rmse_kcal_mol": 1.344020505528948
+        },
+        {
+          "epoch": 2,
+          "validation_macro_rmse_kcal_mol": 1.3630348892299569
+        },
+        {
+          "epoch": 3,
+          "validation_macro_rmse_kcal_mol": 1.6948006861583205
+        },
+        {
+          "epoch": 4,
+          "validation_macro_rmse_kcal_mol": 1.536157545476812
+        },
+        {
+          "epoch": 5,
+          "validation_macro_rmse_kcal_mol": 1.8610730551430865
+        },
+        {
+          "epoch": 6,
+          "validation_macro_rmse_kcal_mol": 1.8927607163488054
+        },
+        {
+          "epoch": 7,
+          "validation_macro_rmse_kcal_mol": 1.760021546765126
+        },
+        {
+          "epoch": 8,
+          "validation_macro_rmse_kcal_mol": 1.9868364049668108
+        },
+        {
+          "epoch": 9,
+          "validation_macro_rmse_kcal_mol": 1.993301930542918
+        },
+        {
+          "epoch": 10,
+          "validation_macro_rmse_kcal_mol": 2.219468833387606
+        },
+        {
+          "epoch": 11,
+          "validation_macro_rmse_kcal_mol": 2.169882243615989
+        },
+        {
+          "epoch": 12,
+          "validation_macro_rmse_kcal_mol": 2.2463551540857214
+        },
+        {
+          "epoch": 13,
+          "validation_macro_rmse_kcal_mol": 2.4410255490475814
+        },
+        {
+          "epoch": 14,
+          "validation_macro_rmse_kcal_mol": 2.4672761658237876
+        },
+        {
+          "epoch": 15,
+          "validation_macro_rmse_kcal_mol": 2.392410033199893
+        },
+        {
+          "epoch": 16,
+          "validation_macro_rmse_kcal_mol": 2.4599068800502515
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1TUD": {
+            "n": 600,
+            "spearman_rho": 0.5684365115696134,
+            "pearson_r": 0.6184484127565087,
+            "mae": 1.103291769965186,
+            "rmse": 1.3465423561891565
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.5684365115696134,
+          "pearson_r": 0.6184484127565087,
+          "mae": 1.103291769965186,
+          "rmse": 1.3465423561891565
+        },
+        "pooled": {
+          "spearman_rho": 0.5684365115696134,
+          "pearson_r": 0.6184484127565087,
+          "mae": 1.103291769965186,
+          "rmse": 1.3465423561891565
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      },
+      "train_only_target_mean": 1.766553426501755,
+      "train_only_target_scale": 1.687495043289025,
+      "trainable_parameters": 1633
+    },
+    "elapsed_seconds": 0.04448904190212488
+  },
+  {
+    "protocol": "S2",
+    "fold": "1LP1",
+    "model": "stability_head",
+    "seed": 1,
+    "test": {
+      "per_protein": {
+        "1LP1": {
+          "n": 600,
+          "spearman_rho": 0.4551796053849645,
+          "pearson_r": 0.4765278958748782,
+          "mae": 1.3233959757560922,
+          "rmse": 1.4853821122147237
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.4551796053849645,
+        "pearson_r": 0.4765278958748782,
+        "mae": 1.3233959757560922,
+        "rmse": 1.4853821122147237
+      },
+      "pooled": {
+        "spearman_rho": 0.4551796053849645,
+        "pearson_r": 0.4765278958748782,
+        "mae": 1.3233959757560922,
+        "rmse": 1.4853821122147237
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "epoch": 1,
+      "validation_macro_rmse_kcal_mol": 1.4048147776191855,
+      "trace": [
+        {
+          "epoch": 1,
+          "validation_macro_rmse_kcal_mol": 1.4048147776191855
+        },
+        {
+          "epoch": 2,
+          "validation_macro_rmse_kcal_mol": 1.5013751029619102
+        },
+        {
+          "epoch": 3,
+          "validation_macro_rmse_kcal_mol": 1.857324581025685
+        },
+        {
+          "epoch": 4,
+          "validation_macro_rmse_kcal_mol": 2.006414720746651
+        },
+        {
+          "epoch": 5,
+          "validation_macro_rmse_kcal_mol": 1.7033033715738635
+        },
+        {
+          "epoch": 6,
+          "validation_macro_rmse_kcal_mol": 2.157281572160188
+        },
+        {
+          "epoch": 7,
+          "validation_macro_rmse_kcal_mol": 1.9721485810652797
+        },
+        {
+          "epoch": 8,
+          "validation_macro_rmse_kcal_mol": 2.364697888677549
+        },
+        {
+          "epoch": 9,
+          "validation_macro_rmse_kcal_mol": 2.269295857120248
+        },
+        {
+          "epoch": 10,
+          "validation_macro_rmse_kcal_mol": 2.274557537437667
+        },
+        {
+          "epoch": 11,
+          "validation_macro_rmse_kcal_mol": 2.5366839154096734
+        },
+        {
+          "epoch": 12,
+          "validation_macro_rmse_kcal_mol": 2.6118538953658943
+        },
+        {
+          "epoch": 13,
+          "validation_macro_rmse_kcal_mol": 2.7417831807553137
+        },
+        {
+          "epoch": 14,
+          "validation_macro_rmse_kcal_mol": 2.873287790041377
+        },
+        {
+          "epoch": 15,
+          "validation_macro_rmse_kcal_mol": 2.933005450985711
+        },
+        {
+          "epoch": 16,
+          "validation_macro_rmse_kcal_mol": 2.7719497727058613
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1TUD": {
+            "n": 600,
+            "spearman_rho": 0.554088075471954,
+            "pearson_r": 0.6072092808035565,
+            "mae": 1.1078406426877077,
+            "rmse": 1.3476538552544204
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.554088075471954,
+          "pearson_r": 0.6072092808035565,
+          "mae": 1.1078406426877077,
+          "rmse": 1.3476538552544204
+        },
+        "pooled": {
+          "spearman_rho": 0.554088075471954,
+          "pearson_r": 0.6072092808035565,
+          "mae": 1.1078406426877077,
+          "rmse": 1.3476538552544204
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      },
+      "train_only_target_mean": 1.766553426501755,
+      "train_only_target_scale": 1.687495043289025,
+      "trainable_parameters": 1633
+    },
+    "elapsed_seconds": 0.04448708286508918
+  },
+  {
+    "protocol": "S2",
+    "fold": "1A32",
+    "model": "training_mean",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 600,
+          "spearman_rho": null,
+          "pearson_r": null,
+          "mae": 0.5901957961243347,
+          "rmse": 0.6953262706710973
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.0,
+        "pearson_r": 0.0,
+        "mae": 0.5901957961243347,
+        "rmse": 0.6953262706710973
+      },
+      "pooled": {
+        "spearman_rho": null,
+        "pearson_r": null,
+        "mae": 0.5901957961243347,
+        "rmse": 0.6953262706710973
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "rule": "training labels only"
+    },
+    "elapsed_seconds": 0.0002007081639021635
+  },
+  {
+    "protocol": "S2",
+    "fold": "1A32",
+    "model": "physicochemical_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 600,
+          "spearman_rho": 0.5245400681668559,
+          "pearson_r": 0.6447080280530147,
+          "mae": 0.733241560071398,
+          "rmse": 0.8659068886463036
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.5245400681668559,
+        "pearson_r": 0.6447080280530147,
+        "mae": 0.733241560071398,
+        "rmse": 0.8659068886463036
+      },
+      "pooled": {
+        "spearman_rho": 0.5245400681668559,
+        "pearson_r": 0.6447080280530147,
+        "mae": 0.733241560071398,
+        "rmse": 0.8659068886463036
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 10.0,
+      "validation_macro_rmse_kcal_mol": 1.7213609044926395,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 1.7216709707797624
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 1.7213609044926395
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 1.7218572380091015
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1LP1": {
+            "n": 600,
+            "spearman_rho": 0.6609848445391362,
+            "pearson_r": 0.6685457337943298,
+            "mae": 0.43942090015477786,
+            "rmse": 0.5730950281979007
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.6609848445391362,
+          "pearson_r": 0.6685457337943298,
+          "mae": 0.43942090015477786,
+          "rmse": 0.5730950281979007
+        },
+        "pooled": {
+          "spearman_rho": 0.6609848445391362,
+          "pearson_r": 0.6685457337943298,
+          "mae": 0.43942090015477786,
+          "rmse": 0.5730950281979007
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.009402499999850988
+  },
+  {
+    "protocol": "S2",
+    "fold": "1A32",
+    "model": "substitution_one_hot_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 600,
+          "spearman_rho": 0.44404596861395357,
+          "pearson_r": 0.5323545257473337,
+          "mae": 0.4934384386721925,
+          "rmse": 0.6153931434102697
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.44404596861395357,
+        "pearson_r": 0.5323545257473337,
+        "mae": 0.4934384386721925,
+        "rmse": 0.6153931434102697
+      },
+      "pooled": {
+        "spearman_rho": 0.44404596861395357,
+        "pearson_r": 0.5323545257473337,
+        "mae": 0.4934384386721925,
+        "rmse": 0.6153931434102697
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 100.0,
+      "validation_macro_rmse_kcal_mol": 2.102232679113766,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 2.1150935471133403
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 2.113484947717388
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 2.102232679113766
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1LP1": {
+            "n": 600,
+            "spearman_rho": 0.7403853150237608,
+            "pearson_r": 0.7624354884264899,
+            "mae": 0.3746759687685196,
+            "rmse": 0.5055877050090849
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.7403853150237608,
+          "pearson_r": 0.7624354884264899,
+          "mae": 0.3746759687685196,
+          "rmse": 0.5055877050090849
+        },
+        "pooled": {
+          "spearman_rho": 0.7403853150237608,
+          "pearson_r": 0.7624354884264899,
+          "mae": 0.3746759687685196,
+          "rmse": 0.5055877050090849
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.010059792082756758
+  },
+  {
+    "protocol": "S2",
+    "fold": "1A32",
+    "model": "esm_sites_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 600,
+          "spearman_rho": 0.6080142444840124,
+          "pearson_r": 0.6603047868401505,
+          "mae": 0.40042409646932403,
+          "rmse": 0.5148750142863184
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.6080142444840124,
+        "pearson_r": 0.6603047868401505,
+        "mae": 0.40042409646932403,
+        "rmse": 0.5148750142863184
+      },
+      "pooled": {
+        "spearman_rho": 0.6080142444840124,
+        "pearson_r": 0.6603047868401505,
+        "mae": 0.40042409646932403,
+        "rmse": 0.5148750142863184
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 100.0,
+      "validation_macro_rmse_kcal_mol": 1.7894468123144065,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 4.255263312841747
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 1.9788046419195544
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 1.7894468123144065
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1LP1": {
+            "n": 600,
+            "spearman_rho": 0.9238110000043144,
+            "pearson_r": 0.9321517158596048,
+            "mae": 0.20171762005036425,
+            "rmse": 0.28224473833992325
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.9238110000043144,
+          "pearson_r": 0.9321517158596048,
+          "mae": 0.20171762005036425,
+          "rmse": 0.28224473833992325
+        },
+        "pooled": {
+          "spearman_rho": 0.9238110000043144,
+          "pearson_r": 0.9321517158596048,
+          "mae": 0.20171762005036425,
+          "rmse": 0.28224473833992325
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.10341212502680719
+  },
+  {
+    "protocol": "S2",
+    "fold": "1A32",
+    "model": "structural_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 600,
+          "spearman_rho": 0.6162742674285205,
+          "pearson_r": 0.6374851652583939,
+          "mae": 0.4886213381080953,
+          "rmse": 0.6412933978682513
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.6162742674285205,
+        "pearson_r": 0.6374851652583939,
+        "mae": 0.4886213381080953,
+        "rmse": 0.6412933978682513
+      },
+      "pooled": {
+        "spearman_rho": 0.6162742674285205,
+        "pearson_r": 0.6374851652583939,
+        "mae": 0.4886213381080953,
+        "rmse": 0.6412933978682513
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 100.0,
+      "validation_macro_rmse_kcal_mol": 2.041821228391279,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 2.162381323750156
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 2.1689893810833305
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 2.041821228391279
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1LP1": {
+            "n": 600,
+            "spearman_rho": 0.7868093504161685,
+            "pearson_r": 0.8044304294478575,
+            "mae": 0.3462597600779545,
+            "rmse": 0.45881403454313463
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.7868093504161685,
+          "pearson_r": 0.8044304294478575,
+          "mae": 0.3462597600779545,
+          "rmse": 0.45881403454313463
+        },
+        "pooled": {
+          "spearman_rho": 0.7868093504161685,
+          "pearson_r": 0.8044304294478575,
+          "mae": 0.3462597600779545,
+          "rmse": 0.45881403454313463
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.015962708042934537
+  },
+  {
+    "protocol": "S2",
+    "fold": "1A32",
+    "model": "frozen_hybrid_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 600,
+          "spearman_rho": 0.593129814249484,
+          "pearson_r": 0.6915445084993616,
+          "mae": 0.48312692512092914,
+          "rmse": 0.6060515337150493
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.593129814249484,
+        "pearson_r": 0.6915445084993616,
+        "mae": 0.48312692512092914,
+        "rmse": 0.6060515337150493
+      },
+      "pooled": {
+        "spearman_rho": 0.593129814249484,
+        "pearson_r": 0.6915445084993616,
+        "mae": 0.48312692512092914,
+        "rmse": 0.6060515337150493
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 100.0,
+      "validation_macro_rmse_kcal_mol": 7.7552141892617215,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 15.566042082473082
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 13.77467958755238
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 7.7552141892617215
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1LP1": {
+            "n": 600,
+            "spearman_rho": 0.7785842986486563,
+            "pearson_r": 0.7867002430560994,
+            "mae": 0.3670714752615849,
+            "rmse": 0.48066976795025795
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.7785842986486563,
+          "pearson_r": 0.7867002430560994,
+          "mae": 0.3670714752615849,
+          "rmse": 0.48066976795025795
+        },
+        "pooled": {
+          "spearman_rho": 0.7785842986486563,
+          "pearson_r": 0.7867002430560994,
+          "mae": 0.3670714752615849,
+          "rmse": 0.48066976795025795
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.015357291791588068
+  },
+  {
+    "protocol": "S2",
+    "fold": "1A32",
+    "model": "mutation_count_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 600,
+          "spearman_rho": null,
+          "pearson_r": null,
+          "mae": 0.5901957961243347,
+          "rmse": 0.6953262706710973
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.0,
+        "pearson_r": 0.0,
+        "mae": 0.5901957961243347,
+        "rmse": 0.6953262706710973
+      },
+      "pooled": {
+        "spearman_rho": null,
+        "pearson_r": null,
+        "mae": 0.5901957961243347,
+        "rmse": 0.6953262706710973
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 0.1,
+      "validation_macro_rmse_kcal_mol": 2.094577170996761,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 2.094577170996761
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 2.094577170996761
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 2.094577170996761
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1LP1": {
+            "n": 600,
+            "spearman_rho": null,
+            "pearson_r": null,
+            "mae": 0.6343935377423029,
+            "rmse": 0.7706039762571327
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.0,
+          "pearson_r": 0.0,
+          "mae": 0.6343935377423029,
+          "rmse": 0.7706039762571327
+        },
+        "pooled": {
+          "spearman_rho": null,
+          "pearson_r": null,
+          "mae": 0.6343935377423029,
+          "rmse": 0.7706039762571327
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.005800916813313961
+  },
+  {
+    "protocol": "S2",
+    "fold": "1A32",
+    "model": "stability_head",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 600,
+          "spearman_rho": 0.4776335489820805,
+          "pearson_r": 0.5977063346717336,
+          "mae": 0.46117896318173507,
+          "rmse": 0.5898298943763935
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.4776335489820805,
+        "pearson_r": 0.5977063346717336,
+        "mae": 0.46117896318173507,
+        "rmse": 0.5898298943763935
+      },
+      "pooled": {
+        "spearman_rho": 0.4776335489820805,
+        "pearson_r": 0.5977063346717336,
+        "mae": 0.46117896318173507,
+        "rmse": 0.5898298943763935
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "epoch": 20,
+      "validation_macro_rmse_kcal_mol": 1.639911284957846,
+      "trace": [
+        {
+          "epoch": 1,
+          "validation_macro_rmse_kcal_mol": 1.9011666703861188
+        },
+        {
+          "epoch": 2,
+          "validation_macro_rmse_kcal_mol": 1.8893142466021662
+        },
+        {
+          "epoch": 3,
+          "validation_macro_rmse_kcal_mol": 1.8439641114983223
+        },
+        {
+          "epoch": 4,
+          "validation_macro_rmse_kcal_mol": 1.8004001333990443
+        },
+        {
+          "epoch": 5,
+          "validation_macro_rmse_kcal_mol": 1.8762950440437
+        },
+        {
+          "epoch": 6,
+          "validation_macro_rmse_kcal_mol": 1.748317435940869
+        },
+        {
+          "epoch": 7,
+          "validation_macro_rmse_kcal_mol": 1.8734076943764437
+        },
+        {
+          "epoch": 8,
+          "validation_macro_rmse_kcal_mol": 1.7377127194444497
+        },
+        {
+          "epoch": 9,
+          "validation_macro_rmse_kcal_mol": 1.7875244693420504
+        },
+        {
+          "epoch": 10,
+          "validation_macro_rmse_kcal_mol": 1.7860068574415897
+        },
+        {
+          "epoch": 11,
+          "validation_macro_rmse_kcal_mol": 1.772999944172596
+        },
+        {
+          "epoch": 12,
+          "validation_macro_rmse_kcal_mol": 1.724608972957269
+        },
+        {
+          "epoch": 13,
+          "validation_macro_rmse_kcal_mol": 1.7514557387610032
+        },
+        {
+          "epoch": 14,
+          "validation_macro_rmse_kcal_mol": 1.7562696284442378
+        },
+        {
+          "epoch": 15,
+          "validation_macro_rmse_kcal_mol": 1.7289029863540721
+        },
+        {
+          "epoch": 16,
+          "validation_macro_rmse_kcal_mol": 1.7063646583024825
+        },
+        {
+          "epoch": 17,
+          "validation_macro_rmse_kcal_mol": 1.6992923732976222
+        },
+        {
+          "epoch": 18,
+          "validation_macro_rmse_kcal_mol": 1.7429484673486493
+        },
+        {
+          "epoch": 19,
+          "validation_macro_rmse_kcal_mol": 1.7123431024015314
+        },
+        {
+          "epoch": 20,
+          "validation_macro_rmse_kcal_mol": 1.639911284957846
+        },
+        {
+          "epoch": 21,
+          "validation_macro_rmse_kcal_mol": 1.7144433937566288
+        },
+        {
+          "epoch": 22,
+          "validation_macro_rmse_kcal_mol": 1.7284090974206598
+        },
+        {
+          "epoch": 23,
+          "validation_macro_rmse_kcal_mol": 1.7405110423084138
+        },
+        {
+          "epoch": 24,
+          "validation_macro_rmse_kcal_mol": 1.6958319851665973
+        },
+        {
+          "epoch": 25,
+          "validation_macro_rmse_kcal_mol": 1.7193649299188445
+        },
+        {
+          "epoch": 26,
+          "validation_macro_rmse_kcal_mol": 1.6599297454448863
+        },
+        {
+          "epoch": 27,
+          "validation_macro_rmse_kcal_mol": 1.6860852006914233
+        },
+        {
+          "epoch": 28,
+          "validation_macro_rmse_kcal_mol": 1.7633001181338757
+        },
+        {
+          "epoch": 29,
+          "validation_macro_rmse_kcal_mol": 1.68818360030995
+        },
+        {
+          "epoch": 30,
+          "validation_macro_rmse_kcal_mol": 1.6540195882762996
+        },
+        {
+          "epoch": 31,
+          "validation_macro_rmse_kcal_mol": 1.7266292850930856
+        },
+        {
+          "epoch": 32,
+          "validation_macro_rmse_kcal_mol": 1.714049544266585
+        },
+        {
+          "epoch": 33,
+          "validation_macro_rmse_kcal_mol": 1.6917544917682057
+        },
+        {
+          "epoch": 34,
+          "validation_macro_rmse_kcal_mol": 1.6729663864112112
+        },
+        {
+          "epoch": 35,
+          "validation_macro_rmse_kcal_mol": 1.726870381533909
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1LP1": {
+            "n": 600,
+            "spearman_rho": 0.6975983957731055,
+            "pearson_r": 0.7308032062226626,
+            "mae": 0.4187509802694609,
+            "rmse": 0.5565042533330465
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.6975983957731055,
+          "pearson_r": 0.7308032062226626,
+          "mae": 0.4187509802694609,
+          "rmse": 0.5565042533330465
+        },
+        "pooled": {
+          "spearman_rho": 0.6975983957731055,
+          "pearson_r": 0.7308032062226626,
+          "mae": 0.4187509802694609,
+          "rmse": 0.5565042533330465
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      },
+      "train_only_target_mean": 0.5257415938148783,
+      "train_only_target_scale": 0.7706039762571327,
+      "trainable_parameters": 1633
+    },
+    "elapsed_seconds": 0.08987400005571544
+  },
+  {
+    "protocol": "S2",
+    "fold": "1A32",
+    "model": "stability_head",
+    "seed": 1,
+    "test": {
+      "per_protein": {
+        "1A32": {
+          "n": 600,
+          "spearman_rho": 0.4774786041072336,
+          "pearson_r": 0.5781317172443952,
+          "mae": 0.4655647234720298,
+          "rmse": 0.5818944317087629
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.4774786041072336,
+        "pearson_r": 0.5781317172443952,
+        "mae": 0.4655647234720298,
+        "rmse": 0.5818944317087629
+      },
+      "pooled": {
+        "spearman_rho": 0.4774786041072336,
+        "pearson_r": 0.5781317172443952,
+        "mae": 0.4655647234720298,
+        "rmse": 0.5818944317087629
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "epoch": 42,
+      "validation_macro_rmse_kcal_mol": 1.7324850823622444,
+      "trace": [
+        {
+          "epoch": 1,
+          "validation_macro_rmse_kcal_mol": 2.0345174362463636
+        },
+        {
+          "epoch": 2,
+          "validation_macro_rmse_kcal_mol": 1.879018991458254
+        },
+        {
+          "epoch": 3,
+          "validation_macro_rmse_kcal_mol": 1.8932378689449088
+        },
+        {
+          "epoch": 4,
+          "validation_macro_rmse_kcal_mol": 1.9760222374018754
+        },
+        {
+          "epoch": 5,
+          "validation_macro_rmse_kcal_mol": 1.9597235329038234
+        },
+        {
+          "epoch": 6,
+          "validation_macro_rmse_kcal_mol": 1.9038374350949876
+        },
+        {
+          "epoch": 7,
+          "validation_macro_rmse_kcal_mol": 1.9252286487992387
+        },
+        {
+          "epoch": 8,
+          "validation_macro_rmse_kcal_mol": 1.8900152187101655
+        },
+        {
+          "epoch": 9,
+          "validation_macro_rmse_kcal_mol": 1.9224118294643135
+        },
+        {
+          "epoch": 10,
+          "validation_macro_rmse_kcal_mol": 1.8637485251519283
+        },
+        {
+          "epoch": 11,
+          "validation_macro_rmse_kcal_mol": 1.8050237941750649
+        },
+        {
+          "epoch": 12,
+          "validation_macro_rmse_kcal_mol": 1.9177973215789985
+        },
+        {
+          "epoch": 13,
+          "validation_macro_rmse_kcal_mol": 1.9485565546641872
+        },
+        {
+          "epoch": 14,
+          "validation_macro_rmse_kcal_mol": 1.858278570128772
+        },
+        {
+          "epoch": 15,
+          "validation_macro_rmse_kcal_mol": 1.8078284695739988
+        },
+        {
+          "epoch": 16,
+          "validation_macro_rmse_kcal_mol": 1.856193947208936
+        },
+        {
+          "epoch": 17,
+          "validation_macro_rmse_kcal_mol": 1.8595275934187154
+        },
+        {
+          "epoch": 18,
+          "validation_macro_rmse_kcal_mol": 1.7905917722067215
+        },
+        {
+          "epoch": 19,
+          "validation_macro_rmse_kcal_mol": 1.8512394672946977
+        },
+        {
+          "epoch": 20,
+          "validation_macro_rmse_kcal_mol": 1.8109903271072925
+        },
+        {
+          "epoch": 21,
+          "validation_macro_rmse_kcal_mol": 1.781245355790201
+        },
+        {
+          "epoch": 22,
+          "validation_macro_rmse_kcal_mol": 1.805719264744688
+        },
+        {
+          "epoch": 23,
+          "validation_macro_rmse_kcal_mol": 1.8254802540890904
+        },
+        {
+          "epoch": 24,
+          "validation_macro_rmse_kcal_mol": 1.8430573298252324
+        },
+        {
+          "epoch": 25,
+          "validation_macro_rmse_kcal_mol": 1.7977313147383074
+        },
+        {
+          "epoch": 26,
+          "validation_macro_rmse_kcal_mol": 1.8060250631743846
+        },
+        {
+          "epoch": 27,
+          "validation_macro_rmse_kcal_mol": 1.791405001883592
+        },
+        {
+          "epoch": 28,
+          "validation_macro_rmse_kcal_mol": 1.7884169531401728
+        },
+        {
+          "epoch": 29,
+          "validation_macro_rmse_kcal_mol": 1.7904539664706844
+        },
+        {
+          "epoch": 30,
+          "validation_macro_rmse_kcal_mol": 1.7718382952603104
+        },
+        {
+          "epoch": 31,
+          "validation_macro_rmse_kcal_mol": 1.7707628673246407
+        },
+        {
+          "epoch": 32,
+          "validation_macro_rmse_kcal_mol": 1.8603034785967223
+        },
+        {
+          "epoch": 33,
+          "validation_macro_rmse_kcal_mol": 1.8028596185449133
+        },
+        {
+          "epoch": 34,
+          "validation_macro_rmse_kcal_mol": 1.7827535697396861
+        },
+        {
+          "epoch": 35,
+          "validation_macro_rmse_kcal_mol": 1.8198925102583092
+        },
+        {
+          "epoch": 36,
+          "validation_macro_rmse_kcal_mol": 1.8121907582238748
+        },
+        {
+          "epoch": 37,
+          "validation_macro_rmse_kcal_mol": 1.77229891713834
+        },
+        {
+          "epoch": 38,
+          "validation_macro_rmse_kcal_mol": 1.7784817728016358
+        },
+        {
+          "epoch": 39,
+          "validation_macro_rmse_kcal_mol": 1.8222632707752615
+        },
+        {
+          "epoch": 40,
+          "validation_macro_rmse_kcal_mol": 1.8093748363074547
+        },
+        {
+          "epoch": 41,
+          "validation_macro_rmse_kcal_mol": 1.7475263239832446
+        },
+        {
+          "epoch": 42,
+          "validation_macro_rmse_kcal_mol": 1.7324850823622444
+        },
+        {
+          "epoch": 43,
+          "validation_macro_rmse_kcal_mol": 1.8407483398171864
+        },
+        {
+          "epoch": 44,
+          "validation_macro_rmse_kcal_mol": 1.7896567437007485
+        },
+        {
+          "epoch": 45,
+          "validation_macro_rmse_kcal_mol": 1.77630821537857
+        },
+        {
+          "epoch": 46,
+          "validation_macro_rmse_kcal_mol": 1.8278468422399081
+        },
+        {
+          "epoch": 47,
+          "validation_macro_rmse_kcal_mol": 1.8728788827151535
+        },
+        {
+          "epoch": 48,
+          "validation_macro_rmse_kcal_mol": 1.7550031237789065
+        },
+        {
+          "epoch": 49,
+          "validation_macro_rmse_kcal_mol": 1.7741880539982082
+        },
+        {
+          "epoch": 50,
+          "validation_macro_rmse_kcal_mol": 1.7562331536889988
+        },
+        {
+          "epoch": 51,
+          "validation_macro_rmse_kcal_mol": 1.8029967531197533
+        },
+        {
+          "epoch": 52,
+          "validation_macro_rmse_kcal_mol": 1.7537160900069575
+        },
+        {
+          "epoch": 53,
+          "validation_macro_rmse_kcal_mol": 1.7413466988465929
+        },
+        {
+          "epoch": 54,
+          "validation_macro_rmse_kcal_mol": 1.7841803998303847
+        },
+        {
+          "epoch": 55,
+          "validation_macro_rmse_kcal_mol": 1.7954834331912548
+        },
+        {
+          "epoch": 56,
+          "validation_macro_rmse_kcal_mol": 1.7872540368933536
+        },
+        {
+          "epoch": 57,
+          "validation_macro_rmse_kcal_mol": 1.8552798997309865
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1LP1": {
+            "n": 600,
+            "spearman_rho": 0.7554013421428107,
+            "pearson_r": 0.7838322126729504,
+            "mae": 0.3738576254871899,
+            "rmse": 0.49784437434034806
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.7554013421428107,
+          "pearson_r": 0.7838322126729504,
+          "mae": 0.3738576254871899,
+          "rmse": 0.49784437434034806
+        },
+        "pooled": {
+          "spearman_rho": 0.7554013421428107,
+          "pearson_r": 0.7838322126729504,
+          "mae": 0.3738576254871899,
+          "rmse": 0.49784437434034806
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      },
+      "train_only_target_mean": 0.5257415938148783,
+      "train_only_target_scale": 0.7706039762571327,
+      "trainable_parameters": 1633
+    },
+    "elapsed_seconds": 0.1474157921038568
+  },
+  {
+    "protocol": "S2",
+    "fold": "1TUD",
+    "model": "training_mean",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1TUD": {
+          "n": 600,
+          "spearman_rho": null,
+          "pearson_r": null,
+          "mae": 1.6268595805987274,
+          "rmse": 2.231471672451484
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.0,
+        "pearson_r": 0.0,
+        "mae": 1.6268595805987274,
+        "rmse": 2.231471672451484
+      },
+      "pooled": {
+        "spearman_rho": null,
+        "pearson_r": null,
+        "mae": 1.6268595805987274,
+        "rmse": 2.231471672451484
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "rule": "training labels only"
+    },
+    "elapsed_seconds": 0.0001987079158425331
+  },
+  {
+    "protocol": "S2",
+    "fold": "1TUD",
+    "model": "physicochemical_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1TUD": {
+          "n": 600,
+          "spearman_rho": 0.21453399883502605,
+          "pearson_r": 0.264590827674852,
+          "mae": 1.3183112558888717,
+          "rmse": 1.6731905952356474
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.21453399883502605,
+        "pearson_r": 0.264590827674852,
+        "mae": 1.3183112558888717,
+        "rmse": 1.6731905952356474
+      },
+      "pooled": {
+        "spearman_rho": 0.21453399883502605,
+        "pearson_r": 0.264590827674852,
+        "mae": 1.3183112558888717,
+        "rmse": 1.6731905952356474
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 100.0,
+      "validation_macro_rmse_kcal_mol": 1.3951191692263734,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 1.4614572756861912
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 1.455082065259522
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 1.3951191692263734
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1A32": {
+            "n": 600,
+            "spearman_rho": 0.7223878399662221,
+            "pearson_r": 0.7728071427750196,
+            "mae": 0.3308005688708302,
+            "rmse": 0.42044686116846425
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.7223878399662221,
+          "pearson_r": 0.7728071427750196,
+          "mae": 0.3308005688708302,
+          "rmse": 0.42044686116846425
+        },
+        "pooled": {
+          "spearman_rho": 0.7223878399662221,
+          "pearson_r": 0.7728071427750196,
+          "mae": 0.3308005688708302,
+          "rmse": 0.42044686116846425
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.009553459007292986
+  },
+  {
+    "protocol": "S2",
+    "fold": "1TUD",
+    "model": "substitution_one_hot_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1TUD": {
+          "n": 600,
+          "spearman_rho": 0.2098924246504094,
+          "pearson_r": 0.2599566924061776,
+          "mae": 1.6548837328380224,
+          "rmse": 2.2104132502362224
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.2098924246504094,
+        "pearson_r": 0.2599566924061776,
+        "mae": 1.6548837328380224,
+        "rmse": 2.2104132502362224
+      },
+      "pooled": {
+        "spearman_rho": 0.2098924246504094,
+        "pearson_r": 0.2599566924061776,
+        "mae": 1.6548837328380224,
+        "rmse": 2.2104132502362224
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 100.0,
+      "validation_macro_rmse_kcal_mol": 0.7407972568685113,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 0.7575073990772622
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 0.7552435979986732
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 0.7407972568685113
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1A32": {
+            "n": 600,
+            "spearman_rho": 0.8344824806389725,
+            "pearson_r": 0.8585613363883179,
+            "mae": 0.24618060333162547,
+            "rmse": 0.34776776701815676
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.8344824806389725,
+          "pearson_r": 0.8585613363883179,
+          "mae": 0.24618060333162547,
+          "rmse": 0.34776776701815676
+        },
+        "pooled": {
+          "spearman_rho": 0.8344824806389725,
+          "pearson_r": 0.8585613363883179,
+          "mae": 0.24618060333162547,
+          "rmse": 0.34776776701815676
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.010983208892866969
+  },
+  {
+    "protocol": "S2",
+    "fold": "1TUD",
+    "model": "esm_sites_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1TUD": {
+          "n": 600,
+          "spearman_rho": 0.40387107956968626,
+          "pearson_r": 0.44245798925538027,
+          "mae": 1.778897619218728,
+          "rmse": 2.257128897823134
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.40387107956968626,
+        "pearson_r": 0.44245798925538027,
+        "mae": 1.778897619218728,
+        "rmse": 2.257128897823134
+      },
+      "pooled": {
+        "spearman_rho": 0.40387107956968626,
+        "pearson_r": 0.44245798925538027,
+        "mae": 1.778897619218728,
+        "rmse": 2.257128897823134
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 100.0,
+      "validation_macro_rmse_kcal_mol": 0.8038263717855713,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 1.9720584470958418
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 0.9029574615424315
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 0.8038263717855713
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1A32": {
+            "n": 600,
+            "spearman_rho": 0.9481157447659575,
+            "pearson_r": 0.9652440867353587,
+            "mae": 0.1318594737516299,
+            "rmse": 0.1739492975961036
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.9481157447659575,
+          "pearson_r": 0.9652440867353587,
+          "mae": 0.1318594737516299,
+          "rmse": 0.1739492975961036
+        },
+        "pooled": {
+          "spearman_rho": 0.9481157447659575,
+          "pearson_r": 0.9652440867353587,
+          "mae": 0.1318594737516299,
+          "rmse": 0.1739492975961036
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.09088562498800457
+  },
+  {
+    "protocol": "S2",
+    "fold": "1TUD",
+    "model": "structural_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1TUD": {
+          "n": 600,
+          "spearman_rho": 0.5075029597138542,
+          "pearson_r": 0.5293299445425661,
+          "mae": 1.4147707089558743,
+          "rmse": 1.8457968388448291
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.5075029597138542,
+        "pearson_r": 0.5293299445425661,
+        "mae": 1.4147707089558743,
+        "rmse": 1.8457968388448291
+      },
+      "pooled": {
+        "spearman_rho": 0.5075029597138542,
+        "pearson_r": 0.5293299445425661,
+        "mae": 1.4147707089558743,
+        "rmse": 1.8457968388448291
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 100.0,
+      "validation_macro_rmse_kcal_mol": 0.8357026850913105,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 0.9944105741625072
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 0.8832831146895531
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 0.8357026850913105
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1A32": {
+            "n": 600,
+            "spearman_rho": 0.8269541304281399,
+            "pearson_r": 0.8774530794388399,
+            "mae": 0.24496766888178906,
+            "rmse": 0.31734289486862005
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.8269541304281399,
+          "pearson_r": 0.8774530794388399,
+          "mae": 0.24496766888178906,
+          "rmse": 0.31734289486862005
+        },
+        "pooled": {
+          "spearman_rho": 0.8269541304281399,
+          "pearson_r": 0.8774530794388399,
+          "mae": 0.24496766888178906,
+          "rmse": 0.31734289486862005
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.01598187512718141
+  },
+  {
+    "protocol": "S2",
+    "fold": "1TUD",
+    "model": "frozen_hybrid_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1TUD": {
+          "n": 600,
+          "spearman_rho": 0.2662361594807016,
+          "pearson_r": 0.3301104376359811,
+          "mae": 5.354783680754506,
+          "rmse": 5.586692320428095
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.2662361594807016,
+        "pearson_r": 0.3301104376359811,
+        "mae": 5.354783680754506,
+        "rmse": 5.586692320428095
+      },
+      "pooled": {
+        "spearman_rho": 0.2662361594807016,
+        "pearson_r": 0.3301104376359811,
+        "mae": 5.354783680754506,
+        "rmse": 5.586692320428095
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 0.1,
+      "validation_macro_rmse_kcal_mol": 1.132736024586877,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 1.132736024586877
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 1.7957689980088898
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 2.075695652214661
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1A32": {
+            "n": 600,
+            "spearman_rho": 0.8126504795846654,
+            "pearson_r": 0.878921469718469,
+            "mae": 0.24877842146454138,
+            "rmse": 0.314726587029766
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.8126504795846654,
+          "pearson_r": 0.878921469718469,
+          "mae": 0.24877842146454138,
+          "rmse": 0.314726587029766
+        },
+        "pooled": {
+          "spearman_rho": 0.8126504795846654,
+          "pearson_r": 0.878921469718469,
+          "mae": 0.24877842146454138,
+          "rmse": 0.314726587029766
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.01580395782366395
+  },
+  {
+    "protocol": "S2",
+    "fold": "1TUD",
+    "model": "mutation_count_ridge",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1TUD": {
+          "n": 600,
+          "spearman_rho": null,
+          "pearson_r": null,
+          "mae": 1.6268595805987274,
+          "rmse": 2.231471672451484
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.0,
+        "pearson_r": 0.0,
+        "mae": 1.6268595805987274,
+        "rmse": 2.231471672451484
+      },
+      "pooled": {
+        "spearman_rho": null,
+        "pearson_r": null,
+        "mae": 1.6268595805987274,
+        "rmse": 2.231471672451484
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "alpha": 0.1,
+      "validation_macro_rmse_kcal_mol": 0.8011915630849562,
+      "candidates": [
+        {
+          "alpha": 0.1,
+          "validation_macro_rmse_kcal_mol": 0.8011915630849562
+        },
+        {
+          "alpha": 10.0,
+          "validation_macro_rmse_kcal_mol": 0.8011915630849562
+        },
+        {
+          "alpha": 100.0,
+          "validation_macro_rmse_kcal_mol": 0.8011915630849562
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1A32": {
+            "n": 600,
+            "spearman_rho": null,
+            "pearson_r": null,
+            "mae": 0.5159975526530077,
+            "rmse": 0.6598493692882976
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.0,
+          "pearson_r": 0.0,
+          "mae": 0.5159975526530077,
+          "rmse": 0.6598493692882976
+        },
+        "pooled": {
+          "spearman_rho": null,
+          "pearson_r": null,
+          "mae": 0.5159975526530077,
+          "rmse": 0.6598493692882976
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      }
+    },
+    "elapsed_seconds": 0.007942541968077421
+  },
+  {
+    "protocol": "S2",
+    "fold": "1TUD",
+    "model": "stability_head",
+    "seed": 0,
+    "test": {
+      "per_protein": {
+        "1TUD": {
+          "n": 600,
+          "spearman_rho": 0.5486455058111683,
+          "pearson_r": 0.6313765709553187,
+          "mae": 1.501696639706095,
+          "rmse": 1.9415000281355188
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.5486455058111683,
+        "pearson_r": 0.6313765709553187,
+        "mae": 1.501696639706095,
+        "rmse": 1.9415000281355188
+      },
+      "pooled": {
+        "spearman_rho": 0.5486455058111683,
+        "pearson_r": 0.6313765709553187,
+        "mae": 1.501696639706095,
+        "rmse": 1.9415000281355188
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "epoch": 30,
+      "validation_macro_rmse_kcal_mol": 0.6410061892714333,
+      "trace": [
+        {
+          "epoch": 1,
+          "validation_macro_rmse_kcal_mol": 0.7177004078483296
+        },
+        {
+          "epoch": 2,
+          "validation_macro_rmse_kcal_mol": 0.7036252341617574
+        },
+        {
+          "epoch": 3,
+          "validation_macro_rmse_kcal_mol": 0.6831506391229457
+        },
+        {
+          "epoch": 4,
+          "validation_macro_rmse_kcal_mol": 0.7084814535186744
+        },
+        {
+          "epoch": 5,
+          "validation_macro_rmse_kcal_mol": 0.7321881154127283
+        },
+        {
+          "epoch": 6,
+          "validation_macro_rmse_kcal_mol": 0.7549680223687183
+        },
+        {
+          "epoch": 7,
+          "validation_macro_rmse_kcal_mol": 0.6555279295219735
+        },
+        {
+          "epoch": 8,
+          "validation_macro_rmse_kcal_mol": 0.666633459743522
+        },
+        {
+          "epoch": 9,
+          "validation_macro_rmse_kcal_mol": 0.716791778266558
+        },
+        {
+          "epoch": 10,
+          "validation_macro_rmse_kcal_mol": 0.6653800308735802
+        },
+        {
+          "epoch": 11,
+          "validation_macro_rmse_kcal_mol": 0.6765677375707908
+        },
+        {
+          "epoch": 12,
+          "validation_macro_rmse_kcal_mol": 0.7031661776288448
+        },
+        {
+          "epoch": 13,
+          "validation_macro_rmse_kcal_mol": 0.6708017221824002
+        },
+        {
+          "epoch": 14,
+          "validation_macro_rmse_kcal_mol": 0.6475607875671376
+        },
+        {
+          "epoch": 15,
+          "validation_macro_rmse_kcal_mol": 0.7119032801769998
+        },
+        {
+          "epoch": 16,
+          "validation_macro_rmse_kcal_mol": 0.6558192923767321
+        },
+        {
+          "epoch": 17,
+          "validation_macro_rmse_kcal_mol": 0.6532287935531751
+        },
+        {
+          "epoch": 18,
+          "validation_macro_rmse_kcal_mol": 0.6851754702310263
+        },
+        {
+          "epoch": 19,
+          "validation_macro_rmse_kcal_mol": 0.6629761538858494
+        },
+        {
+          "epoch": 20,
+          "validation_macro_rmse_kcal_mol": 0.6478906497715866
+        },
+        {
+          "epoch": 21,
+          "validation_macro_rmse_kcal_mol": 0.6532062228522281
+        },
+        {
+          "epoch": 22,
+          "validation_macro_rmse_kcal_mol": 0.6746250178378883
+        },
+        {
+          "epoch": 23,
+          "validation_macro_rmse_kcal_mol": 0.6546488548943113
+        },
+        {
+          "epoch": 24,
+          "validation_macro_rmse_kcal_mol": 0.6650228663468903
+        },
+        {
+          "epoch": 25,
+          "validation_macro_rmse_kcal_mol": 0.6687686154309102
+        },
+        {
+          "epoch": 26,
+          "validation_macro_rmse_kcal_mol": 0.6657557364237112
+        },
+        {
+          "epoch": 27,
+          "validation_macro_rmse_kcal_mol": 0.6448146458516316
+        },
+        {
+          "epoch": 28,
+          "validation_macro_rmse_kcal_mol": 0.66279553895036
+        },
+        {
+          "epoch": 29,
+          "validation_macro_rmse_kcal_mol": 0.6575248858421944
+        },
+        {
+          "epoch": 30,
+          "validation_macro_rmse_kcal_mol": 0.6410061892714333
+        },
+        {
+          "epoch": 31,
+          "validation_macro_rmse_kcal_mol": 0.6613143709284427
+        },
+        {
+          "epoch": 32,
+          "validation_macro_rmse_kcal_mol": 0.6504140003839057
+        },
+        {
+          "epoch": 33,
+          "validation_macro_rmse_kcal_mol": 0.6493776964662054
+        },
+        {
+          "epoch": 34,
+          "validation_macro_rmse_kcal_mol": 0.6558585585025455
+        },
+        {
+          "epoch": 35,
+          "validation_macro_rmse_kcal_mol": 0.6672614238890203
+        },
+        {
+          "epoch": 36,
+          "validation_macro_rmse_kcal_mol": 0.660878737514803
+        },
+        {
+          "epoch": 37,
+          "validation_macro_rmse_kcal_mol": 0.6558598709228393
+        },
+        {
+          "epoch": 38,
+          "validation_macro_rmse_kcal_mol": 0.6871812457760291
+        },
+        {
+          "epoch": 39,
+          "validation_macro_rmse_kcal_mol": 0.6846419981327003
+        },
+        {
+          "epoch": 40,
+          "validation_macro_rmse_kcal_mol": 0.6754965184345114
+        },
+        {
+          "epoch": 41,
+          "validation_macro_rmse_kcal_mol": 0.6765644492887015
+        },
+        {
+          "epoch": 42,
+          "validation_macro_rmse_kcal_mol": 0.6691239272759776
+        },
+        {
+          "epoch": 43,
+          "validation_macro_rmse_kcal_mol": 0.6612012794820691
+        },
+        {
+          "epoch": 44,
+          "validation_macro_rmse_kcal_mol": 0.6528731628696715
+        },
+        {
+          "epoch": 45,
+          "validation_macro_rmse_kcal_mol": 0.6523280520326582
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1A32": {
+            "n": 600,
+            "spearman_rho": 0.732286700796391,
+            "pearson_r": 0.8299468764538804,
+            "mae": 0.3053054143613541,
+            "rmse": 0.3875071182667728
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.732286700796391,
+          "pearson_r": 0.8299468764538804,
+          "mae": 0.3053054143613541,
+          "rmse": 0.3875071182667728
+        },
+        "pooled": {
+          "spearman_rho": 0.732286700796391,
+          "pearson_r": 0.8299468764538804,
+          "mae": 0.3053054143613541,
+          "rmse": 0.3875071182667728
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      },
+      "train_only_target_mean": 0.3064759272475565,
+      "train_only_target_scale": 0.6598493692882976,
+      "trainable_parameters": 1633
+    },
+    "elapsed_seconds": 0.13761929189786315
+  },
+  {
+    "protocol": "S2",
+    "fold": "1TUD",
+    "model": "stability_head",
+    "seed": 1,
+    "test": {
+      "per_protein": {
+        "1TUD": {
+          "n": 600,
+          "spearman_rho": 0.5572865724496009,
+          "pearson_r": 0.6465361655887158,
+          "mae": 1.5427929658179331,
+          "rmse": 1.9659269284236884
+        }
+      },
+      "macro": {
+        "spearman_rho": 0.5572865724496009,
+        "pearson_r": 0.6465361655887158,
+        "mae": 1.5427929658179331,
+        "rmse": 1.9659269284236884
+      },
+      "pooled": {
+        "spearman_rho": 0.5572865724496009,
+        "pearson_r": 0.6465361655887158,
+        "mae": 1.5427929658179331,
+        "rmse": 1.9659269284236884
+      },
+      "unit": "kcal/mol",
+      "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+    },
+    "selection": {
+      "epoch": 25,
+      "validation_macro_rmse_kcal_mol": 0.6345255127422348,
+      "trace": [
+        {
+          "epoch": 1,
+          "validation_macro_rmse_kcal_mol": 0.7156171636117474
+        },
+        {
+          "epoch": 2,
+          "validation_macro_rmse_kcal_mol": 0.6653805960141079
+        },
+        {
+          "epoch": 3,
+          "validation_macro_rmse_kcal_mol": 0.6511241051929881
+        },
+        {
+          "epoch": 4,
+          "validation_macro_rmse_kcal_mol": 0.6594659078730436
+        },
+        {
+          "epoch": 5,
+          "validation_macro_rmse_kcal_mol": 0.7055410949621108
+        },
+        {
+          "epoch": 6,
+          "validation_macro_rmse_kcal_mol": 0.6884216823155055
+        },
+        {
+          "epoch": 7,
+          "validation_macro_rmse_kcal_mol": 0.6734306543198819
+        },
+        {
+          "epoch": 8,
+          "validation_macro_rmse_kcal_mol": 0.6557545819520945
+        },
+        {
+          "epoch": 9,
+          "validation_macro_rmse_kcal_mol": 0.6793452203143444
+        },
+        {
+          "epoch": 10,
+          "validation_macro_rmse_kcal_mol": 0.6711326403914749
+        },
+        {
+          "epoch": 11,
+          "validation_macro_rmse_kcal_mol": 0.6463526925771773
+        },
+        {
+          "epoch": 12,
+          "validation_macro_rmse_kcal_mol": 0.6608965352160918
+        },
+        {
+          "epoch": 13,
+          "validation_macro_rmse_kcal_mol": 0.7007880738601829
+        },
+        {
+          "epoch": 14,
+          "validation_macro_rmse_kcal_mol": 0.6371416588700272
+        },
+        {
+          "epoch": 15,
+          "validation_macro_rmse_kcal_mol": 0.6465597413717458
+        },
+        {
+          "epoch": 16,
+          "validation_macro_rmse_kcal_mol": 0.6854167799903783
+        },
+        {
+          "epoch": 17,
+          "validation_macro_rmse_kcal_mol": 0.6756534200729135
+        },
+        {
+          "epoch": 18,
+          "validation_macro_rmse_kcal_mol": 0.6691944407135564
+        },
+        {
+          "epoch": 19,
+          "validation_macro_rmse_kcal_mol": 0.6603283641962511
+        },
+        {
+          "epoch": 20,
+          "validation_macro_rmse_kcal_mol": 0.6445464057340102
+        },
+        {
+          "epoch": 21,
+          "validation_macro_rmse_kcal_mol": 0.6582098156117664
+        },
+        {
+          "epoch": 22,
+          "validation_macro_rmse_kcal_mol": 0.6584989819605969
+        },
+        {
+          "epoch": 23,
+          "validation_macro_rmse_kcal_mol": 0.6737660427333475
+        },
+        {
+          "epoch": 24,
+          "validation_macro_rmse_kcal_mol": 0.6833792129078455
+        },
+        {
+          "epoch": 25,
+          "validation_macro_rmse_kcal_mol": 0.6345255127422348
+        },
+        {
+          "epoch": 26,
+          "validation_macro_rmse_kcal_mol": 0.635398431945154
+        },
+        {
+          "epoch": 27,
+          "validation_macro_rmse_kcal_mol": 0.6410562556031953
+        },
+        {
+          "epoch": 28,
+          "validation_macro_rmse_kcal_mol": 0.6522048981525759
+        },
+        {
+          "epoch": 29,
+          "validation_macro_rmse_kcal_mol": 0.6895320336812341
+        },
+        {
+          "epoch": 30,
+          "validation_macro_rmse_kcal_mol": 0.6467375512697342
+        },
+        {
+          "epoch": 31,
+          "validation_macro_rmse_kcal_mol": 0.6407497412852751
+        },
+        {
+          "epoch": 32,
+          "validation_macro_rmse_kcal_mol": 0.6460809083779528
+        },
+        {
+          "epoch": 33,
+          "validation_macro_rmse_kcal_mol": 0.651537870473741
+        },
+        {
+          "epoch": 34,
+          "validation_macro_rmse_kcal_mol": 0.6504467554465222
+        },
+        {
+          "epoch": 35,
+          "validation_macro_rmse_kcal_mol": 0.6600165574549245
+        },
+        {
+          "epoch": 36,
+          "validation_macro_rmse_kcal_mol": 0.6451725917511523
+        },
+        {
+          "epoch": 37,
+          "validation_macro_rmse_kcal_mol": 0.6494347533602407
+        },
+        {
+          "epoch": 38,
+          "validation_macro_rmse_kcal_mol": 0.6494250346228497
+        },
+        {
+          "epoch": 39,
+          "validation_macro_rmse_kcal_mol": 0.6600642655962108
+        },
+        {
+          "epoch": 40,
+          "validation_macro_rmse_kcal_mol": 0.6673296201507547
+        }
+      ],
+      "train": {
+        "per_protein": {
+          "1A32": {
+            "n": 600,
+            "spearman_rho": 0.6984192733868704,
+            "pearson_r": 0.799389614047386,
+            "mae": 0.32469828331725015,
+            "rmse": 0.41021411554423654
+          }
+        },
+        "macro": {
+          "spearman_rho": 0.6984192733868704,
+          "pearson_r": 0.799389614047386,
+          "mae": 0.32469828331725015,
+          "rmse": 0.41021411554423654
+        },
+        "pooled": {
+          "spearman_rho": 0.6984192733868704,
+          "pearson_r": 0.799389614047386,
+          "mae": 0.32469828331725015,
+          "rmse": 0.41021411554423654
+        },
+        "unit": "kcal/mol",
+        "undefined_correlation_macro_policy": "zero; raw per-protein undefined correlations retained"
+      },
+      "train_only_target_mean": 0.3064759272475565,
+      "train_only_target_scale": 0.6598493692882976,
+      "trainable_parameters": 1633
+    },
+    "elapsed_seconds": 0.09723904076963663
+  }
+]
