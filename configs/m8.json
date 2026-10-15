@@ -1,0 +1,13 @@
+{
+  "output": "runs/m8",
+  "m7_config": "configs/m7.json",
+  "seeds": [0, 1, 2],
+  "stability_sources": ["esm_sites_ridge", "structural_ridge"],
+  "alphas": [0.1, 10.0, 100.0],
+  "controls": ["predicted", "shuffled", "dummy"],
+  "head": {"hidden": 16, "max_epochs": 40, "patience": 8, "batch_size": 32, "cpu_threads": 4, "learning_rate": 0.003, "weight_decay": 0.01},
+  "cache": "data/cache/m8",
+  "schema": "m8-stability-conditioned-function-v1",
+  "stability_roles": "Exact M7 fold pairs and M6 S1/S2 roles; source alpha selected only on stability validation RMSE. Function proteins are all OOD, no measured stability attached.",
+  "selection": "Function alpha/epoch selected solely on function validation macro Spearman. No source selection using function test labels. No encoder adaptation."
+}
