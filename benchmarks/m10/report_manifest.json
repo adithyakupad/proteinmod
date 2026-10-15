@@ -1,0 +1,14 @@
+{
+  "prediction_sha256": "631fae1925178ea2a8ede77351d8e318c0ce3cd5d92166889ac256188f1b4d3b",
+  "files": {
+    "metrics.json": "96913d7b2033f97f3d51cf053ff88247bfc8680fecd9d2966f17da43decc059d",
+    "per_assay.csv": "790406a5ea30e27ab3efe72da7df7ea8bd6dbe987c482f65c2037eb1ef68166c",
+    "paired_changes.csv": "d7326a9c2219042aadb0eb67939495167812c1d23dd1977ff5b4ad1da01a43cc",
+    "quality_slices.csv": "855ab652aef34fd59c76aad31472c18e9c2814ed301caa9f9b5d145f126adbbd",
+    "gates.csv": "e954e898f482a5fefabefeaec36680682d3b962bad60122e45ed1b207b340c47",
+    "generalization_gaps.csv": "618497a388a5768d9ee24b3ef41757ba12bee32c1a9097b7687723bb6abfde43",
+    "REPORT.md": "20f1abfae17a41c37d29c877a69f678c538e7d80a150945b842ab485cd96c291",
+    "comparison.png": "f6ac04855b056cd707bb068dd808e669b45c2cc92a521213434b0023aef9d489",
+    "gate_behavior.png": "cf1571be1758b48827e22c93f93b2718454deb50818cac5a51a61082cc5c4b73"
+  }
+}

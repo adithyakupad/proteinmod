@@ -1,0 +1,58 @@
+{
+  "config": {
+    "schema": "m10-structure-reliability-v1",
+    "m9_config": "configs/m9.json",
+    "output": "runs/m10",
+    "cache": "data/cache/m10",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "modes": [
+      "unconditioned",
+      "confidence_input",
+      "weighted_late",
+      "gate",
+      "combined",
+      "gate_zero",
+      "input_shuffled",
+      "combined_shuffled"
+    ],
+    "training": {
+      "hidden": 16,
+      "max_epochs": 60,
+      "patience": 10,
+      "batch_size": 64,
+      "learning_rate": 0.003,
+      "weight_decay": 0.01,
+      "cpu_threads": 4,
+      "device": "cpu"
+    }
+  },
+  "git_head": "5640337cf814c4717601c59c10b85acad472a843",
+  "source_hashes": {
+    "reliability_experiments.py": "93d146994080d820aa8cb1bafc75e674d63e2d16f31b576d5c12a1bb11f8a349",
+    "structure_reliability.py": "4abfd7c67eac461be887cde351c23bd5ede176f5161a58fb9f57d290243ff068",
+    "confidence_fusion.py": "003d2edc2857fa711b86ecd3451bd1f16023f1d56ee294ffc9a70c6cc1edd778"
+  },
+  "checkpoint_root": "data/cache/m10/heads/0105287409174b533c30b5d5071fd38b801e8e01ceb971598040110d18df67bc",
+  "feature_root": "data/cache/m10/features/bacff6066052850c9924975b288f4168323cb7c753a67a23fbed603c29c4ee9e",
+  "device": "cpu",
+  "machine": "arm64",
+  "python": "3.12.15",
+  "versions": {
+    "torch": "2.14.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "biopython": "1.88"
+  },
+  "elapsed_seconds": 18.24960504216142,
+  "peak_rss_bytes": 457392128,
+  "files": {
+    "audit.json": "864ce4bd16e51d7705228d2931dc2f5df75f202d921e4a86c70ae98dc1cfc557",
+    "predictions.csv": "631fae1925178ea2a8ede77351d8e318c0ce3cd5d92166889ac256188f1b4d3b",
+    "runs.json": "6d018e815d6d6a08fb8e8f20296bff7491ac5ec20815b1928fc30469434dcf4c"
+  }
+}
