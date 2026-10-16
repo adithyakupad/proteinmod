@@ -1,0 +1,41 @@
+{
+  "pytest": {
+    "passed": 172,
+    "elapsed_seconds": 11.01
+  },
+  "lightweight_pytest": {
+    "passed": 112,
+    "skipped_optional_modules": 13,
+    "elapsed_seconds": 1.11
+  },
+  "ruff": "All checks passed",
+  "ruff_format": "145 files already formatted",
+  "m12_historical_verifier": {
+    "verified": true,
+    "fits": 182,
+    "held_out_predictions": 23296,
+    "historical_files_preserved": 279,
+    "undefined_protein_correlations": 0
+  },
+  "m13_verifier": {
+    "verified": true,
+    "uncertainty_evaluations": 180,
+    "serialized_point_models_replayed": 1560,
+    "held_out_predictions": 32388,
+    "calibration_validation_predictions_verified": 38232,
+    "finite_interval_endpoints_verified": 516408,
+    "max_absolute_native_prediction_error": 0.0,
+    "g3_test_families": [
+      "PF00018",
+      "PF00046",
+      "PF00385",
+      "PF00397"
+    ],
+    "independent_g3_calibration_families_per_fold": 1,
+    "finite_family_block_80_90_intervals_possible": false,
+    "historical_files_preserved": 299,
+    "metrics_recomputed_byte_identically": true
+  },
+  "historical_files_verified_against_base_git_blobs": 299,
+  "baseline_main_sha": "ad2e56478ec1c23c18ad9e46932259f865f7ff55"
+}

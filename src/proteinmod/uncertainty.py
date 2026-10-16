@@ -161,3 +161,33 @@ def selective_risk(error, ranking, ids, fractions, seed=0):
         ix = order[:n]
         result.append({"retained_fraction": fraction, "n": n, "risk": float(error[ix].mean())})
     return result
+
+
+def predictive_result(members, intervals, unit, eligible=None, metadata=None):
+    """Public result contract: point, sensitivity, bounds, units and modality eligibility."""
+    result = ensemble_summary(members, eligible)
+    masked = {}
+    for name, bounds in intervals.items():
+        if len(bounds["lower"]) != len(result["eligible"]) or len(bounds["upper"]) != len(
+            result["eligible"]
+        ):
+            raise ValueError("Interval dimensions do not match predictions")
+        for lo, hi, m in zip(bounds["lower"], bounds["upper"], result["eligible"], strict=True):
+            if m and (
+                (lo is None) != (hi is None)
+                or (lo is not None and (not np.isfinite([lo, hi]).all() or lo > hi))
+            ):
+                raise ValueError("Eligible interval bounds must be ordered or explicitly unbounded")
+        masked[name] = {
+            **bounds,
+            "lower": [
+                v if m else None for v, m in zip(bounds["lower"], result["eligible"], strict=True)
+            ],
+            "upper": [
+                v if m else None for v, m in zip(bounds["upper"], result["eligible"], strict=True)
+            ],
+        }
+    result.update(
+        intervals=masked, unit=unit, metadata=metadata or {}, coverage_guarantee_claimed=False
+    )
+    return result

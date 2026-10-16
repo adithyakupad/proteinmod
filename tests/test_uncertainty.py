@@ -224,3 +224,87 @@ def test_primary_native_sign_units_and_multi_mutation_mask(tmp_path):
     assert values[0] == -2 and np.isnan(values[1]) and evidence[1]["reason"].startswith("multiple")
     rows[1]["mutations"] = tuple(reversed(rows[1]["mutations"]))
     np.testing.assert_array_equal(values, native_labels(rows, m12, m6)[0])
+
+
+def test_public_prediction_contract_serializes_masks_and_bounds():
+    from proteinmod.uncertainty import predictive_result
+
+    bounds = {"calibration_80": {"lower": [0, 0], "upper": [3, 3], "status": ["finite", "finite"]}}
+    value = predictive_result(
+        [[1, np.nan], [2, np.nan]],
+        bounds,
+        "kcal/mol",
+        np.array([True, False]),
+        {"target_convention": "positive_destabilizing"},
+    )
+    assert value["intervals"]["calibration_80"]["upper"] == [3, None]
+    assert value["point_prediction"] == [1.5, None]
+    assert json.loads(json.dumps(value, allow_nan=False)) == value
+    with pytest.raises(ValueError):
+        predictive_result([[1], [2]], bounds, "kcal/mol")
+
+
+def test_public_result_rejects_reversed_or_half_missing_interval():
+    from proteinmod.uncertainty import predictive_result
+
+    for lower, upper in (([2], [1]), ([None], [1])):
+        with pytest.raises(ValueError, match="ordered"):
+            predictive_result([[1], [2]], {"bad": {"lower": lower, "upper": upper}}, "kcal/mol")
+
+
+def test_saved_example_analysis_and_equal_family_aggregation():
+    from proteinmod.uncertainty_report import analyze, macro
+
+    predictions = []
+    for j in range(3):
+        row = {
+            "dataset": "M12",
+            "protocol": "G3",
+            "fold": "f",
+            "model": "test",
+            "repeat": "0",
+            "protein_id": "p",
+            "family": "f",
+            "id": str(j),
+            "measured_native": str(3 * j) if j < 2 else "",
+            "native_point": "0",
+            "native_sd": str(0.1 + j),
+            "native_sd_shuffled": str(2 - j),
+            "distance_to_training": str(j + 1),
+            "nearest_training_reference_identity": ".2",
+            "structure_coverage": "1",
+            "mutation_count": "1" if j < 2 else "2",
+            "measured_original": str(j),
+            "rank_point": str(j),
+            "rank_sd": str(0.1 + j),
+            "rank_sd_shuffled": str(2 - j),
+            "deterministic_rank": str(j),
+        }
+        for level in (80, 90):
+            row[f"calibration_residual_{level}_lower"] = "-1"
+            row[f"calibration_residual_{level}_upper"] = "1"
+        predictions.append(row)
+    config = {
+        "retained_fractions": [0.5, 1.0],
+        "nominal_levels": [0.8, 0.9],
+        "methods": ["calibration_residual"],
+    }
+    points, intervals, curves = analyze(predictions, config)
+    assert points[0]["n_all"] == 3 and points[0]["n_native"] == 2
+    assert points[0]["rank_spearman"] == 1 and points[0]["native_mae"] == 1.5
+    assert intervals[0]["coverage"] == 0.5 and intervals[0]["interval_score"] == pytest.approx(12)
+    assert any(
+        r["risk"] == 0
+        for r in curves
+        if r["ranker"] == "ensemble" and r["risk_type"] == "native_mae"
+    )
+    result = macro(
+        [
+            {"family": "a", "protein_id": "a1", "metric": 0},
+            {"family": "a", "protein_id": "a2", "metric": 0},
+            {"family": "b", "protein_id": "b1", "metric": 1},
+        ],
+        (),
+        ("metric",),
+    )
+    assert result[0]["metric"] == 0.5 and result[0]["replication_groups"] == 2

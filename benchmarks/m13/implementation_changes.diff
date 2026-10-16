@@ -1,0 +1,130 @@
+diff --git a/src/proteinmod/uncertainty.py b/src/proteinmod/uncertainty.py
+index 4a80c9b..a75eb15 100644
+--- a/src/proteinmod/uncertainty.py
++++ b/src/proteinmod/uncertainty.py
+@@ -161,3 +161,33 @@ def selective_risk(error, ranking, ids, fractions, seed=0):
+         ix = order[:n]
+         result.append({"retained_fraction": fraction, "n": n, "risk": float(error[ix].mean())})
+     return result
++
++
++def predictive_result(members, intervals, unit, eligible=None, metadata=None):
++    """Public result contract: point, sensitivity, bounds, units and modality eligibility."""
++    result = ensemble_summary(members, eligible)
++    masked = {}
++    for name, bounds in intervals.items():
++        if len(bounds["lower"]) != len(result["eligible"]) or len(bounds["upper"]) != len(
++            result["eligible"]
++        ):
++            raise ValueError("Interval dimensions do not match predictions")
++        for lo, hi, m in zip(bounds["lower"], bounds["upper"], result["eligible"], strict=True):
++            if m and (
++                (lo is None) != (hi is None)
++                or (lo is not None and (not np.isfinite([lo, hi]).all() or lo > hi))
++            ):
++                raise ValueError("Eligible interval bounds must be ordered or explicitly unbounded")
++        masked[name] = {
++            **bounds,
++            "lower": [
++                v if m else None for v, m in zip(bounds["lower"], result["eligible"], strict=True)
++            ],
++            "upper": [
++                v if m else None for v, m in zip(bounds["upper"], result["eligible"], strict=True)
++            ],
++        }
++    result.update(
++        intervals=masked, unit=unit, metadata=metadata or {}, coverage_guarantee_claimed=False
++    )
++    return result
+diff --git a/src/proteinmod/uncertainty_data.py b/src/proteinmod/uncertainty_data.py
+index 78dffa4..f81d8e7 100644
+--- a/src/proteinmod/uncertainty_data.py
++++ b/src/proteinmod/uncertainty_data.py
+@@ -158,3 +158,58 @@ def uq_folds(rows, native, m12, config):
+         roles_audit(rows, roles, protocol)
+         output.append((protocol, fold, roles))
+     return output
++
++
++def native_control_features(config):
++    """Only the three used M6 features; no unrelated supervised transfer checkpoint."""
++    from proteinmod.embeddings import site_features
++    from proteinmod.multiprotein_data import sequence_features
++    from proteinmod.residue_cache import residue_cache
++    from proteinmod.stability_data import load_stability
++    from proteinmod.structural_graph import load_graph, variant_inputs
++
++    rows, data = load_stability(config)
++    values = {"physicochemical_ridge": [], "esm_sites_ridge": [], "structural_ridge": []}
++    evidence = {
++        "data": data,
++        "graphs": {},
++        "residue_manifests": {},
++        "missingness": [],
++        "label_free": True,
++        "supervised_transfer_used": False,
++    }
++    for spec in config["proteins"]:
++        pid, ref = spec["protein_id"], spec["reference"]["sequence"]
++        part = [r for r in rows if r["protein_id"] == pid]
++        graph = load_graph(spec["structure_artifacts"], ref)
++        cache = {"reference": spec["reference"], "dataset": config["sources"]["measurements"]}
++        tokens, manifest, directory = residue_cache(
++            cache, part, config["embedding"], config["residue_cache"]
++        )
++        wt, _, _ = residue_cache(
++            cache,
++            [{"id": pid + ":WT", "sequence": ref}],
++            config["embedding"],
++            config["residue_cache"],
++        )
++        for j, row in enumerate(part):
++            mapped = tuple(t for t in row["mutations"] if int(t[1:-1]) in graph["lookup"])
++            _, features, reasons = variant_inputs(mapped, ref, graph)
++            if reasons:
++                raise ValueError("Native control graph mapping failed")
++            fraction = len(mapped) / len(row["mutations"])
++            values["physicochemical_ridge"].append(sequence_features(row, ref))
++            values["structural_ridge"].append(np.r_[features, fraction, 1.0])
++            values["esm_sites_ridge"].append(
++                site_features(tokens[j], wt[0], [int(t[1:-1]) - 1 for t in row["mutations"]])
++            )
++            evidence["missingness"].append({"id": row["id"], "mutation_mapping_fraction": fraction})
++        evidence["graphs"][pid] = graph["audit"]
++        evidence["residue_manifests"][pid] = {
++            "manifest_sha256": checksum(directory / "manifest.json"),
++            "manifest": manifest,
++        }
++    values = {k: np.asarray(v) for k, v in values.items()}
++    if any(len(v) != len(rows) or not np.isfinite(v).all() for v in values.values()):
++        raise ValueError("Invalid native control features")
++    return rows, values, evidence
+diff --git a/src/proteinmod/uncertainty_experiments.py b/src/proteinmod/uncertainty_experiments.py
+index df3bb40..d2f808d 100644
+--- a/src/proteinmod/uncertainty_experiments.py
++++ b/src/proteinmod/uncertainty_experiments.py
+@@ -32,9 +32,9 @@ def output_path(value):
+ 
+ def m6_inputs(m6, config):
+     from proteinmod.stability_data import stability_folds
+-    from proteinmod.stability_features import model_inputs
++    from proteinmod.uncertainty_data import native_control_features
+ 
+-    rows, features, evidence = model_inputs(m6)
++    rows, features, evidence = native_control_features(m6)
+     roles = []
+     for protocol, fold, original in stability_folds(rows, m6):
+         calibration = []
+@@ -138,7 +138,11 @@ def run(config):
+         shuffled_rank = ru.copy()
+         for ix in roles.values():
+             pids = [local_rows[i]["protein_id"] for i in ix]
+-            shuffled_sd[ix] = shuffled(sd[ix], pids, config["bootstrap_seed"] + repeat)
++            native_groups = [
++                str(p) + (":native" if np.isfinite(local_y[i]) else ":missing")
++                for p, i in zip(pids, ix, strict=True)
++            ]
++            shuffled_sd[ix] = shuffled(sd[ix], native_groups, config["bootstrap_seed"] + repeat)
+             shuffled_rank[ix] = shuffled(ru[ix], pids, config["bootstrap_seed"] + repeat)
+         state = calibration_state(
+             local_y, point, sd, distance, shuffled_sd, local_rows, roles, config, protocol

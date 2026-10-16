@@ -582,3 +582,17 @@ attention. This bounded stability mutation-effect benchmark does not establish b
 functional or unseen-fold generalization. See [verified results](benchmarks/m12/REPORT.md),
 [provenance](benchmarks/m12/DATA_PROVENANCE.md), [preregistration](benchmarks/m12/PREREGISTRATION.md)
 and [reproduction and limitations](docs/M12.md). M0–M11 artifacts remain unchanged.
+
+### M13: predictive uncertainty and calibration
+
+M13 adds bootstrap/ensemble sensitivity, independent residual/conformal calibration,
+OOD distance diagnostics and selective prediction on the unchanged M12 G1/G2/G3 test
+variants. Native kcal/mol intervals use only 347 independently crosswalked primary
+single-mutant labels; original DMS scores and all historical results are preserved.
+At nominal 90%, bidirectional attention reached **86.9% G3 residual coverage** with
+**3.65 kcal/mol** mean width; Gaussian ensemble bars covered only **33.6%**. Coverage
+varies strongly by family. One calibration family cannot justify finite 80/90%
+family-level conformal bounds or a distribution-free unseen-family guarantee.
+See [results and failure analysis](benchmarks/m13/REPORT.md),
+[provenance](benchmarks/m13/DATA_PROVENANCE.md) and [reproduction/API](docs/M13.md).
+M14/M15 are excluded.

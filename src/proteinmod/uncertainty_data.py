@@ -158,3 +158,58 @@ def uq_folds(rows, native, m12, config):
         roles_audit(rows, roles, protocol)
         output.append((protocol, fold, roles))
     return output
+
+
+def native_control_features(config):
+    """Only the three used M6 features; no unrelated supervised transfer checkpoint."""
+    from proteinmod.embeddings import site_features
+    from proteinmod.multiprotein_data import sequence_features
+    from proteinmod.residue_cache import residue_cache
+    from proteinmod.stability_data import load_stability
+    from proteinmod.structural_graph import load_graph, variant_inputs
+
+    rows, data = load_stability(config)
+    values = {"physicochemical_ridge": [], "esm_sites_ridge": [], "structural_ridge": []}
+    evidence = {
+        "data": data,
+        "graphs": {},
+        "residue_manifests": {},
+        "missingness": [],
+        "label_free": True,
+        "supervised_transfer_used": False,
+    }
+    for spec in config["proteins"]:
+        pid, ref = spec["protein_id"], spec["reference"]["sequence"]
+        part = [r for r in rows if r["protein_id"] == pid]
+        graph = load_graph(spec["structure_artifacts"], ref)
+        cache = {"reference": spec["reference"], "dataset": config["sources"]["measurements"]}
+        tokens, manifest, directory = residue_cache(
+            cache, part, config["embedding"], config["residue_cache"]
+        )
+        wt, _, _ = residue_cache(
+            cache,
+            [{"id": pid + ":WT", "sequence": ref}],
+            config["embedding"],
+            config["residue_cache"],
+        )
+        for j, row in enumerate(part):
+            mapped = tuple(t for t in row["mutations"] if int(t[1:-1]) in graph["lookup"])
+            _, features, reasons = variant_inputs(mapped, ref, graph)
+            if reasons:
+                raise ValueError("Native control graph mapping failed")
+            fraction = len(mapped) / len(row["mutations"])
+            values["physicochemical_ridge"].append(sequence_features(row, ref))
+            values["structural_ridge"].append(np.r_[features, fraction, 1.0])
+            values["esm_sites_ridge"].append(
+                site_features(tokens[j], wt[0], [int(t[1:-1]) - 1 for t in row["mutations"]])
+            )
+            evidence["missingness"].append({"id": row["id"], "mutation_mapping_fraction": fraction})
+        evidence["graphs"][pid] = graph["audit"]
+        evidence["residue_manifests"][pid] = {
+            "manifest_sha256": checksum(directory / "manifest.json"),
+            "manifest": manifest,
+        }
+    values = {k: np.asarray(v) for k, v in values.items()}
+    if any(len(v) != len(rows) or not np.isfinite(v).all() for v in values.values()):
+        raise ValueError("Invalid native control features")
+    return rows, values, evidence

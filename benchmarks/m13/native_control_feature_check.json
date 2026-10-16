@@ -1,0 +1,18 @@
+{
+  "rows": 1800,
+  "features_exactly_match_M6": {
+    "physicochemical_ridge": [
+      1800,
+      67
+    ],
+    "esm_sites_ridge": [
+      1800,
+      961
+    ],
+    "structural_ridge": [
+      1800,
+      272
+    ]
+  },
+  "new_control_requires_no_supervised_transfer_checkpoint": true
+}

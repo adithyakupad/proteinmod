@@ -32,9 +32,9 @@ def output_path(value):
 
 def m6_inputs(m6, config):
     from proteinmod.stability_data import stability_folds
-    from proteinmod.stability_features import model_inputs
+    from proteinmod.uncertainty_data import native_control_features
 
-    rows, features, evidence = model_inputs(m6)
+    rows, features, evidence = native_control_features(m6)
     roles = []
     for protocol, fold, original in stability_folds(rows, m6):
         calibration = []
@@ -138,7 +138,11 @@ def run(config):
         shuffled_rank = ru.copy()
         for ix in roles.values():
             pids = [local_rows[i]["protein_id"] for i in ix]
-            shuffled_sd[ix] = shuffled(sd[ix], pids, config["bootstrap_seed"] + repeat)
+            native_groups = [
+                str(p) + (":native" if np.isfinite(local_y[i]) else ":missing")
+                for p, i in zip(pids, ix, strict=True)
+            ]
+            shuffled_sd[ix] = shuffled(sd[ix], native_groups, config["bootstrap_seed"] + repeat)
             shuffled_rank[ix] = shuffled(ru[ix], pids, config["bootstrap_seed"] + repeat)
         state = calibration_state(
             local_y, point, sd, distance, shuffled_sd, local_rows, roles, config, protocol

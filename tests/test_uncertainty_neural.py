@@ -16,6 +16,9 @@ from proteinmod.uncertainty_models import predict_hybrid
 
 def test_full_role_inference_and_exact_neural_serialization():
     rows, groups = fixture()
+    for r in rows:
+        j = int(r["id"].split(":")[-1])
+        r["partition"] = "train" if j < 3 else "validation" if j < 5 else "test"
     roles = protocols(rows, ["a", "b", "c"])[0][2]
     calibration = roles["train"][:1]
     roles = {**roles, "train": roles["train"][1:], "calibration": calibration}
