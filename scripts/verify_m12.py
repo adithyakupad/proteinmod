@@ -16,6 +16,10 @@ from proteinmod.structural_graph import load_graph
 
 
 def verify(directory):
+    manifest_path = directory / "artifact_hashes.json"
+    if manifest_path.exists():
+        for name, digest in json.loads(manifest_path.read_text()).items():
+            assert checksum(directory / name) == digest, name
     config = json.loads(Path("configs/m12.json").read_text())
     prereg = json.loads((directory / "preregistration.json").read_text())
     assert prereg["config_sha256"] == checksum("configs/m12.json")
