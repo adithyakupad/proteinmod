@@ -27,8 +27,18 @@ def read_csv(path):
 
 def verify(root, repeat=None):
     config = json.loads(Path("configs/m14.json").read_text())
+    registration = json.loads(Path("benchmarks/m14/preregistration.json").read_text())
+    assert checksum("configs/m14.json") == registration["config_sha256"]
+    assert checksum("benchmarks/m14/PREREGISTRATION.md") == registration["plan_sha256"]
+    for path, digest in (
+        ("configs/m14.json", registration["config_sha256"]),
+        ("docs/m14_plan.md", registration["plan_sha256"]),
+    ):
+        original = subprocess.check_output(["git", "show", registration["commit"] + ":" + path])
+        assert hashlib.sha256(original).hexdigest() == digest
     torch.set_num_threads(config["training"]["cpu_threads"])
     torch.use_deterministic_algorithms(True)
+    torch.manual_seed(0)
     audit = json.loads((root / "audit.json").read_text())
     assert config == audit["config"] | {"output": config["output"]}
     assert historical() == audit["history_before"]
@@ -145,6 +155,10 @@ def verify(root, repeat=None):
                 assert not a[2] and not b[2]
                 np.testing.assert_array_equal(a[0], b[0])
                 np.testing.assert_array_equal(a[1], b[1])
+            order = np.random.default_rng(18).permutation(len(atoms))
+            permuted_h = encoder.encode([atoms[i] for i in order], [pos[i] for i in order])
+            frozen_node_error = float(abs(h1[order] - permuted_h).max())
+            assert frozen_node_error < 1e-3
             model = make_model(group, "edge_full", config["training"]).eval()
             top = topology(group, "edge_full", config["controls_seed"])
             perm = torch.tensor(np.random.default_rng(18).permutation(len(graph["nodes"])))
@@ -163,6 +177,7 @@ def verify(root, repeat=None):
                     "protein": pid,
                     "node_permutation_max_error": node_error,
                     "frozen_rigid_transform_max_error": encoder_error,
+                    "frozen_node_permutation_max_error": frozen_node_error,
                     "mutation_order_variants": len(group["indices"]),
                 }
             )
@@ -172,16 +187,53 @@ def verify(root, repeat=None):
         assert saved == repeated, "Fresh complete repeat predictions differ"
         runs2 = json.loads((repeat / "metrics.json").read_text())
         assert len(records) == len(runs2)
+        repeat_audit = json.loads((repeat / "audit.json").read_text())
+        assert repeat_audit["config"] | {"output": config["output"]} == config
+        assert repeat_audit["roles"] == audit["roles"]
+        for path, digest in repeat_audit["sources"].items():
+            assert checksum(path) == digest, path
         for a, b in zip(records, runs2, strict=True):
             for key in ("cohort", "protocol", "fold", "model", "seed", "selection", "per_protein"):
                 assert a[key] == b[key], (key, a["model"])
+            assert checksum(b["state_path"]) == b["state_sha256"]
+            if a["model"].endswith("_ridge"):
+                x, y = dict(np.load(a["state_path"])), dict(np.load(b["state_path"]))
+                assert x.keys() == y.keys()
+                for key, value in x.items():
+                    np.testing.assert_array_equal(value, y[key])
+            else:
+                x = torch.load(a["state_path"], weights_only=True)
+                y = torch.load(b["state_path"], weights_only=True)
+                assert x.keys() == y.keys()
+                assert all(torch.equal(x[k], y[k]) for k in x)
         repeat_evidence = {
             "fits": len(records),
             "prediction_records": len(saved),
             "max_prediction_error": 0,
             "all_selection_traces_identical": True,
+            "all_selected_state_values_identical": True,
+            "git_revision": repeat_audit["git_revision"],
             "seconds": json.loads((repeat / "audit.json").read_text())["seconds"],
         }
+    historical_predictions = [
+        r for r in read_csv("benchmarks/m12/predictions.csv") if r["model"] == "structural_ridge"
+    ]
+    current_predictions = [
+        r for r in saved if r["cohort"] == "family" and r["model"] == "structural_ridge"
+    ]
+    key_columns = ("protocol", "fold", "id")
+    old = {tuple(r[k] for k in key_columns): float(r["prediction"]) for r in historical_predictions}
+    new = {tuple(r[k] for k in key_columns): float(r["prediction"]) for r in current_predictions}
+    assert old == new, "Original M12 structural ridge predictions changed"
+    write_json(
+        root / "baseline_equivalence.json",
+        {
+            "m12_predictions": len(old),
+            "exact_ids": True,
+            "max_absolute_prediction_error": 0.0,
+            "m12_benchmark_unchanged": True,
+        },
+    )
     result = {
         "fits_replayed": len(records),
         "fitting_git_revision": audit["git_revision"],
@@ -194,7 +246,8 @@ def verify(root, repeat=None):
         "real_structure_invariances": invariance,
         "fresh_repeat": repeat_evidence,
     }
-    write_json(root / "validation.json", result)
+    if not manifest_path.exists() or repeat:
+        write_json(root / "validation.json", result)
     print(json.dumps(result, indent=2))
     return result
 

@@ -1,0 +1,16 @@
+{
+  "fresh_repeat": {
+    "fits": 391,
+    "prediction_records": 85882,
+    "max_prediction_error": 0,
+    "all_selection_traces_identical": true,
+    "all_selected_state_values_identical": true,
+    "git_revision": "6bbaa7263afa25f75306ee801065a560076e4f68",
+    "seconds": 228.66572666703723
+  },
+  "first_predictions_sha256": "d3fe6ccca3405ea368eed06dc2ba8a4369dbc0b3b6356e26871dd38d351230a0",
+  "repeat_predictions_sha256": "d3fe6ccca3405ea368eed06dc2ba8a4369dbc0b3b6356e26871dd38d351230a0",
+  "predictions_byte_identical": true,
+  "repeat_peak_rss_bytes": 726368256,
+  "replay_max_error": 0.0
+}

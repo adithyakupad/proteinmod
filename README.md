@@ -596,3 +596,17 @@ family-level conformal bounds or a distribution-free unseen-family guarantee.
 See [results and failure analysis](benchmarks/m13/REPORT.md),
 [provenance](benchmarks/m13/DATA_PROVENANCE.md) and [reproduction/API](docs/M13.md).
 M14/M15 are excluded.
+
+### M14: edge-aware structural encoders
+
+M14 adds learned distance/biochemical edge messages and an actual frozen ProteinMPNN
+backbone-encoder probe, with matched original G1/G2/G3 and native S1/S2 cohorts.
+On G3, structural ridge scores **0.4298** Spearman, the original GNN **0.4020**, the
+richer GNN **0.3799**, and frozen ProteinMPNN ridge **0.4147**. Native held-out-protein
+RMSE is **1.2237 kcal/mol** for the richer GNN versus **1.2521** for the original;
+zero-message (**1.2157**) and shuffled controls undermine a geometry-benefit claim.
+Chemical features represent validated WT heavy-atom proximity candidates, with
+missingness masks; they are not measured mutant rearrangements or confirmed H bonds.
+See [actual results](benchmarks/m14/RESULTS.md), [failure analysis](benchmarks/m14/REPORT.md),
+[provenance](benchmarks/m14/DATA_PROVENANCE.md) and [reproduction/API](docs/M14.md).
+M0–M13 evidence is preserved. No M15/M16 implementation.
