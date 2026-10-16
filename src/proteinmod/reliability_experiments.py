@@ -200,8 +200,8 @@ def prepare(config):
     return root
 
 
-def load_features(config):
-    root = feature_path(config)
+def load_features(config, root=None):
+    root = feature_path(config) if root is None else Path(root)
     manifest = json.loads((root / "manifest.json").read_text())
     if checksum(root / "features.npz") != manifest["feature_sha256"]:
         raise ValueError("M10 feature checksum mismatch")

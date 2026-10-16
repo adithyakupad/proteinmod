@@ -1,0 +1,19 @@
+{
+  "pytest_passed": 153,
+  "ruff_check": "passed",
+  "ruff_format": "passed",
+  "lightweight_pytest_passed": 96,
+  "lightweight_optional_skips": 11,
+  "full_repeat": "fitness CSV, factorial CSV, all metrics and selections identical",
+  "saved_model_cases": 54,
+  "neural_heads": 36,
+  "replayed_fitness_predictions": 28080,
+  "replayed_factorial_predictions": 19656,
+  "maximum_replay_error": 0,
+  "historical_benchmark_files": 238,
+  "historical_configurations": 15,
+  "m10_saved_head_replay": "96 heads; 29808 rows; six numeric columns; error 0",
+  "report_only_reproduction": "all tables/text/figures byte-identical",
+  "protocol_commit": "180b9d5",
+  "m12_implemented": false
+}

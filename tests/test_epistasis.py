@@ -231,3 +231,39 @@ def test_historical_hash_guards_and_m10_forward_replay(tmp_path, monkeypatch):
     (root / "m11.json").write_text("{}")
     monkeypatch.chdir(tmp_path)
     assert set(m10_history()) == {"benchmarks/m9/evidence", "configs/m9.json"}
+
+
+def test_archived_m10_cache_root_is_pinned_and_checksum_validated(tmp_path):
+    import json
+
+    from proteinmod.reliability_experiments import load_features
+
+    path = tmp_path / "features.npz"
+    np.savez_compressed(path, h=np.ones((2, 100)))
+    (tmp_path / "manifest.json").write_text(json.dumps({"feature_sha256": checksum(path)}))
+    values, _ = load_features({}, tmp_path)
+    assert values["h"].shape == (2, 100)
+    path.write_bytes(b"corrupt")
+    with pytest.raises(ValueError, match="checksum"):
+        load_features({}, tmp_path)
+
+
+def test_block_bootstrap_is_paired_deterministic_and_refuses_one_block():
+    pytest.importorskip("matplotlib")
+    import importlib.util
+    from pathlib import Path
+
+    path = Path(__file__).resolve().parents[1] / "scripts/report_m11.py"
+    spec = importlib.util.spec_from_file_location("report_m11", path)
+    report = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(report)
+    y = np.arange(6.0)
+    p = y + 0.2
+    groups = ["a", "a", "b", "b", "c", "c"]
+    settings = {"seed": 0, "resamples": 20}
+    equal = report.paired_block_interval(y, p, p, groups, "mae", settings)
+    assert equal["low"] == equal["high"] == 0
+    a = report.paired_block_interval(y, y, p, groups, "mae", settings)
+    assert a == report.paired_block_interval(y, y, p, groups, "mae", settings)
+    assert a["low"] == pytest.approx(0.2) and a["high"] == pytest.approx(0.2)
+    assert report.paired_block_interval(y, y, p, ["one"] * 6, "mae", settings)["low"] is None

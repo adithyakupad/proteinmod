@@ -1,0 +1,217 @@
+[
+  {
+    "protocol": "C1",
+    "model": "hybrid_pairs",
+    "baseline": "single_additive",
+    "scope": "fitness",
+    "blocks": 11,
+    "low": 0.601564504570606,
+    "high": 1.3929240676283008,
+    "direction": "positive is improvement; baseline loss minus model loss",
+    "conditional": "fixed models/observed constituent labels; not measurement-noise uncertainty"
+  },
+  {
+    "protocol": "C1",
+    "model": "hybrid_pairs",
+    "baseline": "single_additive",
+    "scope": "WT_epistasis",
+    "blocks": 6,
+    "low": 0.1100030100041318,
+    "high": 0.4775225130242595,
+    "direction": "positive is improvement; baseline loss minus model loss",
+    "conditional": "fixed models/observed constituent labels; not measurement-noise uncertainty"
+  },
+  {
+    "protocol": "C1",
+    "model": "hybrid_pairs",
+    "baseline": "hybrid_zero3d",
+    "scope": "fitness",
+    "blocks": 11,
+    "low": -0.010900956893864455,
+    "high": 0.015222093070953648,
+    "direction": "positive is improvement; baseline loss minus model loss",
+    "conditional": "fixed models/observed constituent labels; not measurement-noise uncertainty"
+  },
+  {
+    "protocol": "C1",
+    "model": "hybrid_pairs",
+    "baseline": "hybrid_zero3d",
+    "scope": "WT_epistasis",
+    "blocks": 6,
+    "low": -0.03198090625377694,
+    "high": -0.000639877334630714,
+    "direction": "positive is improvement; baseline loss minus model loss",
+    "conditional": "fixed models/observed constituent labels; not measurement-noise uncertainty"
+  },
+  {
+    "protocol": "C1",
+    "model": "hybrid_pairs",
+    "baseline": "hybrid_shuffled_distance",
+    "scope": "fitness",
+    "blocks": 11,
+    "low": -0.03515123255920695,
+    "high": -0.0005615412690367664,
+    "direction": "positive is improvement; baseline loss minus model loss",
+    "conditional": "fixed models/observed constituent labels; not measurement-noise uncertainty"
+  },
+  {
+    "protocol": "C1",
+    "model": "hybrid_pairs",
+    "baseline": "hybrid_shuffled_distance",
+    "scope": "WT_epistasis",
+    "blocks": 6,
+    "low": -0.03389832529023751,
+    "high": 0.0020571292428446263,
+    "direction": "positive is improvement; baseline loss minus model loss",
+    "conditional": "fixed models/observed constituent labels; not measurement-noise uncertainty"
+  },
+  {
+    "protocol": "C1",
+    "model": "hybrid_pairs",
+    "baseline": "hybrid_shuffled_biochemical",
+    "scope": "fitness",
+    "blocks": 11,
+    "low": -0.06488103622485006,
+    "high": 0.040841158481060034,
+    "direction": "positive is improvement; baseline loss minus model loss",
+    "conditional": "fixed models/observed constituent labels; not measurement-noise uncertainty"
+  },
+  {
+    "protocol": "C1",
+    "model": "hybrid_pairs",
+    "baseline": "hybrid_shuffled_biochemical",
+    "scope": "WT_epistasis",
+    "blocks": 6,
+    "low": -0.06580724919649461,
+    "high": 0.04330177306940951,
+    "direction": "positive is improvement; baseline loss minus model loss",
+    "conditional": "fixed models/observed constituent labels; not measurement-noise uncertainty"
+  },
+  {
+    "protocol": "C1",
+    "model": "structural_pairs",
+    "baseline": "sequence_pairs",
+    "scope": "fitness",
+    "blocks": 11,
+    "low": -0.011166967817338508,
+    "high": 0.03833124427842324,
+    "direction": "positive is improvement; baseline loss minus model loss",
+    "conditional": "fixed models/observed constituent labels; not measurement-noise uncertainty"
+  },
+  {
+    "protocol": "C1",
+    "model": "structural_pairs",
+    "baseline": "sequence_pairs",
+    "scope": "WT_epistasis",
+    "blocks": 6,
+    "low": -0.05362248407125937,
+    "high": 0.020001865946990837,
+    "direction": "positive is improvement; baseline loss minus model loss",
+    "conditional": "fixed models/observed constituent labels; not measurement-noise uncertainty"
+  },
+  {
+    "protocol": "C2",
+    "model": "hybrid_pairs",
+    "baseline": "single_additive",
+    "scope": "fitness",
+    "blocks": 4,
+    "low": -0.26773696721634366,
+    "high": 1.2168285356667283,
+    "direction": "positive is improvement; baseline loss minus model loss",
+    "conditional": "fixed models/observed constituent labels; not measurement-noise uncertainty"
+  },
+  {
+    "protocol": "C2",
+    "model": "hybrid_pairs",
+    "baseline": "single_additive",
+    "scope": "WT_epistasis",
+    "blocks": 1,
+    "low": null,
+    "high": null,
+    "reason": "fewer than three position blocks"
+  },
+  {
+    "protocol": "C2",
+    "model": "hybrid_pairs",
+    "baseline": "hybrid_zero3d",
+    "scope": "fitness",
+    "blocks": 4,
+    "low": -0.315058850800479,
+    "high": -0.24652350964899128,
+    "direction": "positive is improvement; baseline loss minus model loss",
+    "conditional": "fixed models/observed constituent labels; not measurement-noise uncertainty"
+  },
+  {
+    "protocol": "C2",
+    "model": "hybrid_pairs",
+    "baseline": "hybrid_zero3d",
+    "scope": "WT_epistasis",
+    "blocks": 1,
+    "low": null,
+    "high": null,
+    "reason": "fewer than three position blocks"
+  },
+  {
+    "protocol": "C2",
+    "model": "hybrid_pairs",
+    "baseline": "hybrid_shuffled_distance",
+    "scope": "fitness",
+    "blocks": 4,
+    "low": -0.29157336539857903,
+    "high": -0.2281008330844867,
+    "direction": "positive is improvement; baseline loss minus model loss",
+    "conditional": "fixed models/observed constituent labels; not measurement-noise uncertainty"
+  },
+  {
+    "protocol": "C2",
+    "model": "hybrid_pairs",
+    "baseline": "hybrid_shuffled_distance",
+    "scope": "WT_epistasis",
+    "blocks": 1,
+    "low": null,
+    "high": null,
+    "reason": "fewer than three position blocks"
+  },
+  {
+    "protocol": "C2",
+    "model": "hybrid_pairs",
+    "baseline": "hybrid_shuffled_biochemical",
+    "scope": "fitness",
+    "blocks": 4,
+    "low": -0.35808104982960387,
+    "high": -0.20998022817076212,
+    "direction": "positive is improvement; baseline loss minus model loss",
+    "conditional": "fixed models/observed constituent labels; not measurement-noise uncertainty"
+  },
+  {
+    "protocol": "C2",
+    "model": "hybrid_pairs",
+    "baseline": "hybrid_shuffled_biochemical",
+    "scope": "WT_epistasis",
+    "blocks": 1,
+    "low": null,
+    "high": null,
+    "reason": "fewer than three position blocks"
+  },
+  {
+    "protocol": "C2",
+    "model": "structural_pairs",
+    "baseline": "sequence_pairs",
+    "scope": "fitness",
+    "blocks": 4,
+    "low": -0.6998069327704721,
+    "high": -0.1828813517865271,
+    "direction": "positive is improvement; baseline loss minus model loss",
+    "conditional": "fixed models/observed constituent labels; not measurement-noise uncertainty"
+  },
+  {
+    "protocol": "C2",
+    "model": "structural_pairs",
+    "baseline": "sequence_pairs",
+    "scope": "WT_epistasis",
+    "blocks": 1,
+    "low": null,
+    "high": null,
+    "reason": "fewer than three position blocks"
+  }
+]

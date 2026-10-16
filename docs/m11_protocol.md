@@ -85,3 +85,5 @@ pytest -q
 ```
 
 Use Python3.12 requirements-m3.txt and existing M4/M7 graph/encoder preparations. ESM tokens extract locally with MPS, deterministic heads/ridges run CPU. Report-only reproduction uses --input benchmarks/m11 --output runs/m11-report without weights/raw data. No M12 work.
+
+Archived M10 replay now reads its recorded feature-cache root explicitly, rather than selecting a new code-hash cache after the history-only compatibility edit. Cache checksum and checkpoint-feature identity still fail closed. The loader's optional root preserves its existing default API; unit corruption checks and actual archived-head replay cover the change. No feature values or old checkpoints are replaced.
