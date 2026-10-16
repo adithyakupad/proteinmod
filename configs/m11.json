@@ -1,0 +1,159 @@
+{
+  "schema": "m11-gb1-count-epistasis-v1",
+  "output": "runs/m11",
+  "cache": "data/cache/m11",
+  "dataset": {
+    "path": "data/cache/m11/source/gb1.csv",
+    "sha256": "14cfb23e04edcaf99daa106743782b9289c1c673fcb6193ed90f8f19d33755f3",
+    "archive_member": "four_mutations_full_data.csv",
+    "archive": {
+      "path": "data/cache/m11/source/four_mutations_full_data.csv.zip",
+      "sha256": "85692d808dcd3ae54fa2ac31f4e590858d4582369b6c7b05df299b9b6c383bff",
+      "url": "https://raw.githubusercontent.com/J-SNACKKB/FLIP/62cace8735f5610e2743cf06ce0f944b37fffaa6/splits/gb1/four_mutations_full_data.csv.zip"
+    },
+    "source_commit": "62cace8735f5610e2743cf06ce0f944b37fffaa6",
+    "provenance": [
+      "https://doi.org/10.7554/eLife.16965",
+      "https://doi.org/10.7554/eLife.16965.024",
+      "https://github.com/J-SNACKKB/FLIP/tree/62cace8735f5610e2743cf06ce0f944b37fffaa6/splits/gb1"
+    ],
+    "license": "CC-BY-4.0 original measurements; AFL-3.0 FLIP-derived table",
+    "assay": "Wu 2016 GB1 mRNA-display IgG-Fc affinity selection",
+    "target": "same-assay selected/input count ratio divided by WT ratio",
+    "published_single_caveat": "Published Fitness singles are Olson 2014 values scaled by 1.159; primary M11 recomputes ALL variants from Wu counts instead. Singles have low coverage.",
+    "conditions": {
+      "readout": "mRNA-display IgG-Fc affinity selection",
+      "selection_temperature_c": null,
+      "selection_ph": null,
+      "missingness": "No numerical assay selection temperature/pH assigned from unrelated library preparation conditions"
+    }
+  },
+  "expected_source_rows": 149361,
+  "reference": {
+    "sequence": "MQYKLILNGKTLKGETTTEAVDAATAEKVFKQYANDNGVDGEWTYDDATKTFTVTE",
+    "source": "https://zenodo.org/records/18433203/files/gb1/sampled.csv.gz (designated WT first row; GB1 core agrees with Wu 2016 reference)",
+    "sha256": "6d140c4f60bede5a68db37a9b38a43c4227c4cdf198675dae4ab09d57e871234"
+  },
+  "full_reference": {
+    "sequence": "MQYKLILNGKTLKGETTTEAVDAATAEKVFKQYANDNGVDGEWTYDDATKTFTVTELEVLFQGPLDPNSMATYEVLCEVARKLGTDDREVVLFLLNVFIPQPTLAQLIGALRALKEEGRLTFPLLAECLFRAGRRDLLRDLLHLDPRFLERHLAGTMSYFSPYQLTVLHVDGELCARDIRSLIFLSKDTIGSRSTPQTFLHWVYCMENLDLLGPTDVDALMSMLRSLSRVDLQRQVQTLMGLHLSGPSHSQHYRHTPLEHHHHHH",
+    "source": "https://zenodo.org/records/18433203/files/gb1/sampled.csv.gz (designated WT first row; GB1 core agrees with Wu 2016 reference)",
+    "sha256": "eeb5c7b9a3a11ecee612b5bb28aea8f7104b417824d932da46703f17e87d3e85"
+  },
+  "structure_artifacts": "data/cache/m4/graphs/gb1",
+  "structure_config": {
+    "structure": {
+      "name": "1PGA experimental reference context",
+      "kind": "pdb",
+      "format": "cif",
+      "path": "data/cache/m4/1PGA.cif",
+      "id": "1PGA",
+      "sha256": "e8d9e171a9ca2b7e66b10568bf6d0122da8450e57ad632a7b4c13c6a71f7edf2",
+      "source": "https://www.rcsb.org/structure/1PGA",
+      "license": "wwPDB CC0; cite deposition and primary publication",
+      "confidence": "experimental_bfactor"
+    },
+    "reference": {
+      "sequence": "MQYKLILNGKTLKGETTTEAVDAATAEKVFKQYANDNGVDGEWTYDDATKTFTVTE",
+      "source": "https://zenodo.org/records/18433203/files/gb1/sampled.csv.gz (designated WT first row; GB1 core agrees with Wu 2016 reference)",
+      "sha256": "6d140c4f60bede5a68db37a9b38a43c4227c4cdf198675dae4ab09d57e871234"
+    },
+    "mapping": {
+      "chain": "A",
+      "model_index": 0,
+      "min_coverage": 0.95,
+      "min_identity": 0.98,
+      "allowed_mismatches": [
+        "Q2T"
+      ]
+    },
+    "geometry": {
+      "contact_cutoff_a": 8.0,
+      "sasa_points": 960,
+      "dssp": "off"
+    },
+    "structure_run": {
+      "output": "data/cache/m4/graphs/gb1"
+    }
+  },
+  "positions": [
+    39,
+    40,
+    41,
+    54
+  ],
+  "fitness_floor": 0.01,
+  "caps": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": 360,
+    "4": 120
+  },
+  "split_salt": "m11-gb1-combination-v1",
+  "test_position_pair": [
+    39,
+    54
+  ],
+  "validation_position_pair": [
+    40,
+    54
+  ],
+  "embedding": {
+    "model": "facebook/esm2_t12_35M_UR50D",
+    "revision": "6fbf070e65b0b7291e7bbcd451118c216cff79d8",
+    "dimension": 480,
+    "device": "auto",
+    "batch_size": 8,
+    "cpu_threads": 4,
+    "model_cache": "data/cache/models",
+    "cache": "data/cache/embeddings"
+  },
+  "pretrained": {
+    "path": "data/cache/m7/checkpoints/7f3a61026493fc8200286e13addd11b3962e153d4fab30c0ea2a96f9f835f794/gb1-1A32-function-1-0.pt",
+    "encoder_tensor_sha256": "8f0ff7aeafdd7e01ec33376a8a3e6448505a0fcaa62a3de731907bb9d5d185fb",
+    "m7_function_fold": "gb1",
+    "m7_stability_fold": "1A32",
+    "seed": 0,
+    "function_training": [
+      "amylase"
+    ],
+    "function_validation": [
+      "nucb"
+    ],
+    "assay_supervision": "M4 only; no M6 stability or M8 outputs"
+  },
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "alphas": [
+    0.1,
+    10.0,
+    100.0
+  ],
+  "bootstrap": {
+    "resamples": 1000,
+    "seed": 2026,
+    "unit": "position-pair blocks; conditional on measured constituent labels; no C2 interval with one test position pair"
+  },
+  "training": {
+    "hidden": 16,
+    "max_epochs": 60,
+    "patience": 10,
+    "batch_size": 128,
+    "learning_rate": 0.003,
+    "weight_decay": 0.01,
+    "cpu_threads": 4,
+    "device": "cpu",
+    "scale_floor": 1e-06
+  },
+  "neural_modes": [
+    "sequence_pairs",
+    "structural_pairs",
+    "hybrid_pairs",
+    "hybrid_zero3d",
+    "hybrid_shuffled_distance",
+    "hybrid_shuffled_biochemical"
+  ]
+}

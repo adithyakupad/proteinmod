@@ -31,7 +31,12 @@ def history():
         str(p): checksum(p)
         for root in (Path("benchmarks"), Path("configs"))
         for p in sorted(root.rglob("*"))
-        if p.is_file() and "m10" not in p.parts and p.name != "m10.json"
+        if p.is_file()
+        and not (
+            (name := p.parts[1] if root.name == "benchmarks" else p.stem).startswith("m")
+            and name[1:].isdigit()
+            and int(name[1:]) >= 10
+        )
     }
 
 
