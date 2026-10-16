@@ -570,3 +570,15 @@ The54 model/seed/protocol cases yield28,080 fitness predictions and19,656 factor
 predictions. Full repeat and saved-model replay are exact. All238 M0–M10 artifacts
 and15 prior configurations remain unchanged. M11 is stacked on #20; main unchanged.
 No M12 expansion, new encoder training or calibrated predictive uncertainty.
+
+### M12: family-held-out domain benchmark
+
+M12 adds G1/G2/G3 evaluation for eight experimentally measured domains in four
+externally annotated Pfam families. It trains fresh sequence/ESM, structural ridge/GNN,
+weighted fusion and bidirectional-attention models with family-disjoint G3 roles.
+The fixed local experiment found G3 family-macro Spearman **0.430** for structural
+ridge, **0.401** for frozen ESM-2, **0.397** for the GNN and **0.350** for bidirectional
+attention. This bounded stability mutation-effect benchmark does not establish broad
+functional or unseen-fold generalization. See [verified results](benchmarks/m12/REPORT.md),
+[provenance](benchmarks/m12/DATA_PROVENANCE.md), [preregistration](benchmarks/m12/PREREGISTRATION.md)
+and [reproduction and limitations](docs/M12.md). M0–M11 artifacts remain unchanged.

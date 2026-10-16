@@ -1,0 +1,29 @@
+[
+  {
+    "protocol": "G3",
+    "fold": "PF00018",
+    "model": "structure_only",
+    "seed": 0,
+    "exact_predictions": 192,
+    "selected_epoch": 12,
+    "trace_identical": true
+  },
+  {
+    "protocol": "G3",
+    "fold": "PF00018",
+    "model": "weighted_fusion",
+    "seed": 0,
+    "exact_predictions": 192,
+    "selected_epoch": 11,
+    "trace_identical": true
+  },
+  {
+    "protocol": "G3",
+    "fold": "PF00018",
+    "model": "bidirectional",
+    "seed": 0,
+    "exact_predictions": 192,
+    "selected_epoch": 4,
+    "trace_identical": true
+  }
+]

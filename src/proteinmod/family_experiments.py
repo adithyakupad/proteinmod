@@ -108,6 +108,24 @@ def inputs(config, prepare=False):
         if json.loads(manifest_path.read_text())["config"] != settings:
             raise ValueError("Graph configuration changed")
         graph = load_graph(spec["structure_artifacts"], ref)
+        external = json.loads(Path(spec["classification"]["path"]).read_text())
+        domain = next(
+            d for d in external["rcsb_polymer_entity_feature"] if d["feature_id"] == spec["family"]
+        )
+        spans = domain["feature_positions"]
+        if (
+            spans != spec["classification"]["entity_domain_spans"]
+            or domain["assignment_version"] != spec["classification"]["pfam_version"]
+        ):
+            raise ValueError("Declared family spans/version differ from external evidence")
+        if (
+            sum(
+                any(s["beg_seq_id"] <= n["polymer_position"] <= s["end_seq_id"] for s in spans)
+                for n in graph["nodes"]
+            )
+            < len(graph["nodes"]) / 2
+        ):
+            raise ValueError("Annotated family does not cover the assay domain")
         ix = np.array([i for i, r in enumerate(rows) if r["protein_id"] == pid])
         token_rows = [rows[i] for i in ix] + [{"id": pid + ":WT", "sequence": ref}]
         try:
@@ -190,11 +208,14 @@ def run(config):
     if (
         Path("benchmarks").resolve() in output.resolve().parents
         or output.resolve() == Path("benchmarks").resolve()
+        or output.resolve() in Path("benchmarks").resolve().parents
     ):
         raise ValueError("Run outputs must not overwrite archived benchmarks")
     output.mkdir(parents=True, exist_ok=True)
     prereg = json.loads(Path("benchmarks/m12/preregistration.json").read_text())
-    if prereg["config_sha256"] != checksum("configs/m12.json"):
+    if config != json.loads(Path("configs/m12.json").read_text()) or prereg[
+        "config_sha256"
+    ] != checksum("configs/m12.json"):
         raise ValueError("Preregistered config changed")
     similarities = similarity(config)
     rows, matrices, mask, groups, evidence = inputs(config)
@@ -328,7 +349,8 @@ def run(config):
         {
             "config_sha256": checksum("configs/m12.json"),
             "elapsed_seconds": time.perf_counter() - started,
-            "max_rss_bytes": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
+            "max_rss_bytes": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+            * (1 if platform.system() == "Darwin" else 1024),
             "platform": platform.platform(),
             "python": platform.python_version(),
             "versions": {

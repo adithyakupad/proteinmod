@@ -145,7 +145,16 @@ def test_explicit_construct_range_requires_exact_reference():
         parsed, "ACDEFGHM", {"chain": "A", "min_coverage": 0.5, "reference_polymer_range": [1, 8]}
     )
     assert evidence["accepted"] and rows[1]["polymer_position"] == 2
-    for span in ([0, 8], [1, 7], [2, 9]):
+    for span in ([0, 8], [1, 7], [2, 9], [1.0, 8], [1, 8, 9]):
         assert not map_reference(
             parsed, "ACDEFGHM", {"chain": "A", "reference_polymer_range": span}
         )[1]["accepted"]
+
+
+def test_ambiguous_family_or_order_rejected():
+    rows = examples()
+    with pytest.raises(ValueError, match="four classified"):
+        folds(rows, ["a", "b", "c", "a"])
+    rows[0]["family"] = "b"
+    with pytest.raises(ValueError, match="four classified"):
+        folds(rows, ["a", "b", "c", "d"])

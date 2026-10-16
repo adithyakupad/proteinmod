@@ -352,6 +352,12 @@ def map_reference(parsed, reference, settings):
             span = settings.get("reference_polymer_range")
             if span is not None and chain_id == settings.get("chain"):
                 # Explicit construct bounds disambiguate repeated terminal cloning tags.
+                if (
+                    not isinstance(span, (list, tuple))
+                    or len(span) != 2
+                    or any(type(v) is not int for v in span)
+                ):
+                    raise ValueError("Explicit polymer range requires two integer bounds")
                 start, end = span
                 if (
                     not (1 <= start <= end <= len(chain["sequence"]))

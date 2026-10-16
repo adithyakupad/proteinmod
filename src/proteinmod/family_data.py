@@ -19,6 +19,13 @@ def collection(config):
     if config["schema"] != "m12-family-held-out-v1":
         raise ValueError("Unknown family schema")
     rows, evidence = [], {}
+    for key in ("protein_id", "assay_id"):
+        values = [p[key] for p in config["proteins"]]
+        if len(values) != len(set(values)):
+            raise ValueError("Ambiguous duplicate protein/assay identity")
+    references = [p["reference"]["sequence"] for p in config["proteins"]]
+    if len(references) != len(set(references)):
+        raise ValueError("Duplicate WT/construct aliases are not independent proteins")
     counts = config["partition_counts"]
     if len(counts) != 3 or min(counts) < 2 or sum(counts) != config["cap_per_protein"]:
         raise ValueError("Three nonempty partition counts must sum to cap")
@@ -84,7 +91,12 @@ def collection(config):
 def folds(rows, families):
     by_family = {f: sorted({r["protein_id"] for r in rows if r["family"] == f}) for f in families}
     if (
-        len(families) < 4
+        len(set(families)) < 4
+        or len(families) != len(set(families))
+        or any(
+            len({r["family"] for r in rows if r["protein_id"] == pid}) != 1
+            for pid in {r["protein_id"] for r in rows}
+        )
         or any(len(v) < 2 for v in by_family.values())
         or set(by_family) != {r["family"] for r in rows}
     ):

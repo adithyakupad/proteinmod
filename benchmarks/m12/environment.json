@@ -1,0 +1,26 @@
+{
+  "config_sha256": "2cc1e0caeced858e805189bda4c963dd952784283e268666aa935e4c79a28184",
+  "elapsed_seconds": 121.23759083286859,
+  "max_rss_bytes": 562397184,
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.12.15",
+  "versions": {
+    "torch": "2.14.1",
+    "transformers": "4.57.6",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "biopython": "1.88"
+  },
+  "device": "deterministic CPU training; frozen ESM MPS when available",
+  "training_implementation_commit": "f1f8c24",
+  "implementation_note": "Training ran after preregistration commit f1f8c24. Later changes add stricter data/bounds guards, verification, reporting and CI; no fitting/model change. Actual first-G3 replays prove exact predictions/traces.",
+  "fit_source_sha256_at_execution": {
+    "family_experiments.py": "32bcc4c8bc48d3fee56503f0b97953486971df91b8ba1499804f4e38b18056d5",
+    "family_data.py": "1bd94796701c541dde6e4c16a2e4767e4b8beb246e2a8d6cd3d7134283073c3c",
+    "hybrid_experiments.py": "e581dedf380b6ffe48e5c4281068e28bed850d353da7d1c1b2ec9d5a7fd3cfe1",
+    "hybrid.py": "f19cd19a5759ff324c99d81bee98d4ebaea62b30f88c1283b0ad465ba727e5f5",
+    "multiprotein_experiments.py": "b7172eaea59629521361364a1fe7d04116a672ae19808d5295436549019dbbea",
+    "structural_gnn.py": "299cc321d4d35d310a152cdb0d0b0021ebffc48661c52fa60412662d42365a27"
+  }
+}
