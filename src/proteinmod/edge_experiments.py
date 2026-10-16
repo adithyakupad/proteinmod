@@ -11,6 +11,7 @@ from pathlib import Path
 
 import numpy as np
 import torch
+from sklearn.preprocessing import StandardScaler
 
 from proteinmod.data import checksum, verify_file, write_json
 from proteinmod.edge_chemistry import EDGE_NAMES, annotate, controlled_graph, mapped_atoms
@@ -24,7 +25,21 @@ from proteinmod.stability_experiments import scores, validate_task
 from proteinmod.structural_gnn import ResidueGNN
 from proteinmod.structural_graph import load_graph, variant_inputs
 from proteinmod.structure_pipeline import write_csv
-from proteinmod.uncertainty_models import ridge_ensemble, ridge_predict
+from proteinmod.uncertainty_models import ridge_ensemble
+
+
+def ridge_predict(features, state):
+    # Reuse the fitted scaler contract so float32 rounding matches training exactly.
+    scaler = StandardScaler()
+    scaler.mean_, scaler.scale_ = state["mean"], state["scale"]
+    scaler.n_features_in_ = len(state["mean"])
+    x = scaler.transform(features)
+    return np.stack(
+        [
+            x @ coefficient + intercept
+            for coefficient, intercept in zip(state["coefficient"], state["intercept"], strict=True)
+        ]
+    )
 
 
 def historical():
@@ -305,6 +320,7 @@ def run(config, acquire=False):
                         pred, selection, state = ridge_ensemble(
                             x, rows, roles, config["alphas"], 0, seed, native
                         )
+                        pred = ridge_predict(x, state)
                         prediction = pred[0, roles["test"]]
                         np.savez_compressed(cache / (key + ".npz"), **state)
                         restored = dict(np.load(cache / (key + ".npz")))

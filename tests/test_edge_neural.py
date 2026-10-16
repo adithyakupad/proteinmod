@@ -89,3 +89,22 @@ def test_fixed_fit_test_label_blindness_and_state_replay(tmp_path):
             torch.tensor(g["dynamic"][roles["test"]]), topology(g, "edge_full", 8)
         ).numpy()
     np.testing.assert_array_equal(p, replay)
+
+
+def test_ridge_replay_preserves_float32_scaler_rounding():
+    from sklearn.linear_model import Ridge
+    from sklearn.preprocessing import StandardScaler
+
+    from proteinmod.edge_experiments import ridge_predict
+
+    x = np.random.default_rng(7).normal(size=(8, 3)).astype(np.float32)
+    scaler = StandardScaler().fit(x)
+    transformed = scaler.transform(x)
+    model = Ridge(alpha=0.1).fit(transformed, np.arange(8, dtype=np.float32))
+    state = {
+        "mean": scaler.mean_,
+        "scale": scaler.scale_,
+        "coefficient": model.coef_[None],
+        "intercept": np.array([model.intercept_]),
+    }
+    np.testing.assert_array_equal(ridge_predict(x, state)[0], model.predict(transformed))

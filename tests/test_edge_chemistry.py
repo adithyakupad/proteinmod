@@ -63,3 +63,30 @@ def test_controls_symmetric_capacity_and_topology():
         np.testing.assert_array_equal(values, v2)
     with pytest.raises(ValueError, match="Unknown"):
         controlled_graph(g, x, "bad", 9)
+
+
+def test_reporting_keeps_native_units_and_rank_metrics_separate():
+    from proteinmod.edge_report import summarize
+
+    rows = [
+        {
+            "cohort": cohort,
+            "protocol": protocol,
+            "model": "ridge",
+            "seed": "0",
+            "protein_id": "p",
+            "family": "f",
+            "n_mutations": "1",
+            "target": str(i),
+            "prediction": str(i + offset),
+        }
+        for cohort, protocol, offset in [("family", "G3", 50), ("native", "S2", 1)]
+        for i in range(4)
+    ]
+    result = summarize(rows)
+    rank = next(r for r in result["summary"] if r["cohort"] == "family")
+    native = next(r for r in result["summary"] if r["cohort"] == "native")
+    assert rank["macro_spearman"] == 1
+    assert "macro_rmse_kcal_mol" not in rank
+    assert native["macro_rmse_kcal_mol"] == 1
+    assert next(r for r in result["per_protein"] if r["cohort"] == "family")["rmse"] is None
