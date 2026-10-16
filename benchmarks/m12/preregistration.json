@@ -1,0 +1,8 @@
+{
+  "registered_utc": "2026-10-16T01:26:00.908876+00:00",
+  "config_sha256": "2cc1e0caeced858e805189bda4c963dd952784283e268666aa935e4c79a28184",
+  "plan_sha256": "b7f85ac47947bd622e54a18d7e168ced62db18089f0542a6007e06445b655544",
+  "metrics_inspected": false,
+  "base_pr": 22,
+  "base_sha": "fe1cb5ca373a1f7b7246bfda6ed3448ee9b40ec0"
+}

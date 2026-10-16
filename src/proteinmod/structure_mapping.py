@@ -349,7 +349,24 @@ def map_reference(parsed, reference, settings):
     candidates, successful = [], {}
     for chain_id, chain in parsed["chains"].items():
         try:
-            pairs, score, alignment = unique_alignment(reference, chain["sequence"])
+            span = settings.get("reference_polymer_range")
+            if span is not None and chain_id == settings.get("chain"):
+                # Explicit construct bounds disambiguate repeated terminal cloning tags.
+                start, end = span
+                if (
+                    not (1 <= start <= end <= len(chain["sequence"]))
+                    or chain["sequence"][start - 1 : end] != reference
+                ):
+                    raise ValueError(
+                        "Explicit polymer range must exactly match the complete reference"
+                    )
+                pairs = {i: start - 1 + i for i in range(len(reference))}
+                score, alignment = (
+                    3 * len(reference),
+                    f"Exact declared polymer range {start}..{end}",
+                )
+            else:
+                pairs, score, alignment = unique_alignment(reference, chain["sequence"])
             identity = sum(reference[i] == chain["sequence"][j] for i, j in pairs.items()) / max(
                 len(pairs), 1
             )

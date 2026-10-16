@@ -1,0 +1,576 @@
+{
+  "schema": "m12-family-held-out-v1",
+  "output": "runs/m12",
+  "cache": "data/cache/m12",
+  "reference_catalog": {
+    "path": "data/cache/m9/source/proteingym_reference.csv",
+    "sha256": "a8f498011532a74aa9fe556a50555a75e928c5837d19c06a87592ae04049b308",
+    "url": "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+  },
+  "archive": {
+    "url": "https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/DMS_ProteinGym_substitutions.zip",
+    "evidence": {
+      "url": "https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/DMS_ProteinGym_substitutions.zip",
+      "etag": "\"2907348-6329ff6970941\"",
+      "archive_bytes": 43021128,
+      "downloaded_bytes": 296298
+    }
+  },
+  "license": "ProteinGym MIT curation; Tsuboyama et al. 2023 Nature experimental stability/proteolysis scores; cite original publication; RCSB CC0 coordinates",
+  "proteins": [
+    {
+      "protein_id": "BBC1",
+      "assay_id": "BBC1_YEAST_Tsuboyama_2023_1TG0",
+      "family": "PF00018",
+      "family_name": "SH3 domain (SH3_1)",
+      "reference": {
+        "sequence": "EVPFKVVAQFPYKSDYEDDLNFEKDQEIIVTSVEDAEWYFGEYQDSNGDVIEGIFPKSFVAVQG",
+        "sha256": "2525c4c880a947f46b4d75c90e17d85e653fcf632fc7dc9d0c64a75625d36e61",
+        "source": "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+      },
+      "dataset": {
+        "path": "data/cache/m12/source/BBC1_YEAST_Tsuboyama_2023_1TG0.csv",
+        "sha256": "d258240a3ab7088f5ac331abf661611369d9a6a06cf7778ab4ae285b824cfdab",
+        "url": "https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/DMS_ProteinGym_substitutions.zip",
+        "archive_member": "DMS_ProteinGym_substitutions/BBC1_YEAST_Tsuboyama_2023_1TG0.csv"
+      },
+      "classification": {
+        "path": "data/cache/m12/source/1TG0.entity.json",
+        "sha256": "630c6e687fa812eab37b51db3bcbc661c42cf193b232b8bdd6f1e39585ccb657",
+        "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/1TG0/1",
+        "entity_id": "1",
+        "pfam_version": "34.0",
+        "entity_domain_spans": [
+          {
+            "beg_seq_id": 11,
+            "end_seq_id": 61
+          }
+        ]
+      },
+      "structure": {
+        "path": "data/cache/m12/source/1TG0.cif",
+        "sha256": "974ca8eb2ed169728cfefbfdd6ff8820fecf006ba3cb5dcec1dba07c5e272249",
+        "url": "https://files.rcsb.org/download/1TG0.cif",
+        "kind": "local",
+        "format": "cif",
+        "confidence": "unknown",
+        "source": "https://www.rcsb.org/structure/1TG0",
+        "license": "wwPDB CC0",
+        "id": "1TG0",
+        "name": "BBC1 experimental NMR model 0"
+      },
+      "structure_artifacts": "data/cache/m12/graphs/BBC1",
+      "mapping": {
+        "chain": "A",
+        "model_index": 0,
+        "min_coverage": 0.7,
+        "min_identity": 1.0,
+        "allowed_mismatches": []
+      },
+      "assay": {
+        "first_author": "Tsuboyama",
+        "title": "Mega-scale experimental analysis of protein folding stability in biology and design",
+        "year": "2023",
+        "jo": "10.1038/s41586-023-06328-6",
+        "raw_DMS_phenotype_name": "ddG_ML_float",
+        "raw_DMS_directionality": "1",
+        "selection_assay": "Stability",
+        "selection_type": "cDNA display proteolysis",
+        "region_mutated": "1-64"
+      }
+    },
+    {
+      "protein_id": "CBX4",
+      "assay_id": "CBX4_HUMAN_Tsuboyama_2023_2K28",
+      "family": "PF00385",
+      "family_name": "Chromo (CHRromatin Organisation MOdifier) domain (Chromo)",
+      "reference": {
+        "sequence": "AVESIEKKRIRKGRVEYLVKWRGWSPKYNTWEPEENILDPRLLIAFQNRE",
+        "sha256": "98af4350fbb819c7ff347e0a3d2cef6e324feb76ec19f8a98231519888ff80f2",
+        "source": "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+      },
+      "dataset": {
+        "path": "data/cache/m12/source/CBX4_HUMAN_Tsuboyama_2023_2K28.csv",
+        "sha256": "3ffc9405e5f6e7467cedffb845e91f17baba09862dbb6d1750f54230c8ad3a0d",
+        "url": "https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/DMS_ProteinGym_substitutions.zip",
+        "archive_member": "DMS_ProteinGym_substitutions/CBX4_HUMAN_Tsuboyama_2023_2K28.csv"
+      },
+      "classification": {
+        "path": "data/cache/m12/source/2K28.entity.json",
+        "sha256": "96d0f817ca8d91b93f332d89e857387fb04d2bd1b3d2990b145c0ced5a3a9b8a",
+        "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/2K28/1",
+        "entity_id": "1",
+        "pfam_version": "34.0",
+        "entity_domain_spans": [
+          {
+            "beg_seq_id": 6,
+            "end_seq_id": 55
+          }
+        ]
+      },
+      "structure": {
+        "path": "data/cache/m12/source/2K28.cif",
+        "sha256": "038d92dbf183ab96560ccdcd0b4641bf4c0399662c939c0dea7b0cd34b537bcd",
+        "url": "https://files.rcsb.org/download/2K28.cif",
+        "kind": "local",
+        "format": "cif",
+        "confidence": "unknown",
+        "source": "https://www.rcsb.org/structure/2K28",
+        "license": "wwPDB CC0",
+        "id": "2K28",
+        "name": "CBX4 experimental NMR model 0"
+      },
+      "structure_artifacts": "data/cache/m12/graphs/CBX4",
+      "mapping": {
+        "chain": "A",
+        "model_index": 0,
+        "min_coverage": 0.7,
+        "min_identity": 1.0,
+        "allowed_mismatches": []
+      },
+      "assay": {
+        "first_author": "Tsuboyama",
+        "title": "Mega-scale experimental analysis of protein folding stability in biology and design",
+        "year": "2023",
+        "jo": "10.1038/s41586-023-06328-6",
+        "raw_DMS_phenotype_name": "ddG_ML_float",
+        "raw_DMS_directionality": "1",
+        "selection_assay": "Stability",
+        "selection_type": "cDNA display proteolysis",
+        "region_mutated": "1-50"
+      }
+    },
+    {
+      "protein_id": "MYO3",
+      "assay_id": "MYO3_YEAST_Tsuboyama_2023_2BTT",
+      "family": "PF00018",
+      "family_name": "SH3 domain (SH3_1)",
+      "reference": {
+        "sequence": "KDPKFEAAYDFPGSGSSSELPLKKGDIVFISRDEPSGWSLAKLLDGSKEGWVPTAYMTPYK",
+        "sha256": "e4a68c4b8acb4d369e571d9d37d3e3f2c5675c6881b011349ca8110b10daf0cc",
+        "source": "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+      },
+      "dataset": {
+        "path": "data/cache/m12/source/MYO3_YEAST_Tsuboyama_2023_2BTT.csv",
+        "sha256": "e8b89ca04955ea068a082e6ac1524e404d48a8dc3070b0d7833f02c56f9854f9",
+        "url": "https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/DMS_ProteinGym_substitutions.zip",
+        "archive_member": "DMS_ProteinGym_substitutions/MYO3_YEAST_Tsuboyama_2023_2BTT.csv"
+      },
+      "classification": {
+        "path": "data/cache/m12/source/2BTT.entity.json",
+        "sha256": "0fbd0f990603f2d9123b16af06557e36527c4cf13fabe5d0b17c6332a4e8ee0d",
+        "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/2BTT/1",
+        "entity_id": "1",
+        "pfam_version": "34.0",
+        "entity_domain_spans": [
+          {
+            "beg_seq_id": 6,
+            "end_seq_id": 54
+          }
+        ]
+      },
+      "structure": {
+        "path": "data/cache/m12/source/2BTT.cif",
+        "sha256": "c689dd22bbba615a7907350ff4c8b5cd72f54863b35127d7daf210ddb20310ef",
+        "url": "https://files.rcsb.org/download/2BTT.cif",
+        "kind": "local",
+        "format": "cif",
+        "confidence": "unknown",
+        "source": "https://www.rcsb.org/structure/2BTT",
+        "license": "wwPDB CC0",
+        "id": "2BTT",
+        "name": "MYO3 experimental NMR model 0"
+      },
+      "structure_artifacts": "data/cache/m12/graphs/MYO3",
+      "mapping": {
+        "chain": "A",
+        "model_index": 0,
+        "min_coverage": 0.7,
+        "min_identity": 1.0,
+        "allowed_mismatches": []
+      },
+      "assay": {
+        "first_author": "Tsuboyama",
+        "title": "Mega-scale experimental analysis of protein folding stability in biology and design",
+        "year": "2023",
+        "jo": "10.1038/s41586-023-06328-6",
+        "raw_DMS_phenotype_name": "ddG_ML_float",
+        "raw_DMS_directionality": "1",
+        "selection_assay": "Stability",
+        "selection_type": "cDNA display proteolysis",
+        "region_mutated": "1-61"
+      }
+    },
+    {
+      "protein_id": "NKX31",
+      "assay_id": "NKX31_HUMAN_Tsuboyama_2023_2L9R",
+      "family": "PF00046",
+      "family_name": "Homeodomain (Homeodomain)",
+      "reference": {
+        "sequence": "HSHMSHTQVIELERKFSHQKYLSAPERAHLAKNLKLTETQVKIWFQNRRYKTKRKQLSSEL",
+        "sha256": "c9f6965638d2fd03c56238100627b8434704ee694d5fad714adb2ac8ca2d450a",
+        "source": "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+      },
+      "dataset": {
+        "path": "data/cache/m12/source/NKX31_HUMAN_Tsuboyama_2023_2L9R.csv",
+        "sha256": "24015ebc1f902a88c17fbe083866d26213039ab977dcd1b559cd38d6fe2810c5",
+        "url": "https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/DMS_ProteinGym_substitutions.zip",
+        "archive_member": "DMS_ProteinGym_substitutions/NKX31_HUMAN_Tsuboyama_2023_2L9R.csv"
+      },
+      "classification": {
+        "path": "data/cache/m12/source/2L9R.entity.json",
+        "sha256": "79eb9e5d17392a29e1d7c3f84a302c7cd0e9bf08afc945cb468c1b35699bb665",
+        "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/2L9R/1",
+        "entity_id": "1",
+        "pfam_version": "34.0",
+        "entity_domain_spans": [
+          {
+            "beg_seq_id": 12,
+            "end_seq_id": 61
+          }
+        ]
+      },
+      "structure": {
+        "path": "data/cache/m12/source/2L9R.cif",
+        "sha256": "4e13d378fe02448f751009b9e9ea1a4193c872e50169f7b2b3ac6e0597e43c02",
+        "url": "https://files.rcsb.org/download/2L9R.cif",
+        "kind": "local",
+        "format": "cif",
+        "confidence": "unknown",
+        "source": "https://www.rcsb.org/structure/2L9R",
+        "license": "wwPDB CC0",
+        "id": "2L9R",
+        "name": "NKX31 experimental NMR model 0"
+      },
+      "structure_artifacts": "data/cache/m12/graphs/NKX31",
+      "mapping": {
+        "chain": "A",
+        "model_index": 0,
+        "min_coverage": 0.7,
+        "min_identity": 1.0,
+        "allowed_mismatches": []
+      },
+      "assay": {
+        "first_author": "Tsuboyama",
+        "title": "Mega-scale experimental analysis of protein folding stability in biology and design",
+        "year": "2023",
+        "jo": "10.1038/s41586-023-06328-6",
+        "raw_DMS_phenotype_name": "ddG_ML_float",
+        "raw_DMS_directionality": "1",
+        "selection_assay": "Stability",
+        "selection_type": "cDNA display proteolysis",
+        "region_mutated": "1-61"
+      }
+    },
+    {
+      "protein_id": "PIN1",
+      "assay_id": "PIN1_HUMAN_Tsuboyama_2023_1I6C",
+      "family": "PF00397",
+      "family_name": "WW domain (WW)",
+      "reference": {
+        "sequence": "KLPPGWEKRMSRSSGRVYYFNHITNASQWERPSGNSSSG",
+        "sha256": "32f6115513f39a2d0d751aff5d991c95f598beb690622721a13d943300a60ea4",
+        "source": "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+      },
+      "dataset": {
+        "path": "data/cache/m12/source/PIN1_HUMAN_Tsuboyama_2023_1I6C.csv",
+        "sha256": "4b805e0a24543d68bb677230053c0c8548e93fae2ab4870a6c16fd13e170cc87",
+        "url": "https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/DMS_ProteinGym_substitutions.zip",
+        "archive_member": "DMS_ProteinGym_substitutions/PIN1_HUMAN_Tsuboyama_2023_1I6C.csv"
+      },
+      "classification": {
+        "path": "data/cache/m12/source/1I6C.entity.json",
+        "sha256": "6e2e5477f685b49ddf98585ad77fb91077d2a60b6fb2a40fc70f99cfff67922b",
+        "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/1I6C/1",
+        "entity_id": "1",
+        "pfam_version": "34.0",
+        "entity_domain_spans": [
+          {
+            "beg_seq_id": 2,
+            "end_seq_id": 32
+          }
+        ]
+      },
+      "structure": {
+        "path": "data/cache/m12/source/1I6C.cif",
+        "sha256": "33b69aa6e38fede75ee33c81cb9c2b90586429ae0a5ead3d69c4a5a65a528f88",
+        "url": "https://files.rcsb.org/download/1I6C.cif",
+        "kind": "local",
+        "format": "cif",
+        "confidence": "unknown",
+        "source": "https://www.rcsb.org/structure/1I6C",
+        "license": "wwPDB CC0",
+        "id": "1I6C",
+        "name": "PIN1 experimental NMR model 0"
+      },
+      "structure_artifacts": "data/cache/m12/graphs/PIN1",
+      "mapping": {
+        "chain": "A",
+        "model_index": 0,
+        "min_coverage": 0.7,
+        "min_identity": 1.0,
+        "allowed_mismatches": []
+      },
+      "assay": {
+        "first_author": "Tsuboyama",
+        "title": "Mega-scale experimental analysis of protein folding stability in biology and design",
+        "year": "2023",
+        "jo": "10.1038/s41586-023-06328-6",
+        "raw_DMS_phenotype_name": "ddG_ML_float",
+        "raw_DMS_directionality": "1",
+        "selection_assay": "Stability",
+        "selection_type": "cDNA display proteolysis",
+        "region_mutated": "1-39"
+      }
+    },
+    {
+      "protein_id": "PITX2",
+      "assay_id": "PITX2_HUMAN_Tsuboyama_2023_2L7M",
+      "family": "PF00046",
+      "family_name": "Homeodomain (Homeodomain)",
+      "reference": {
+        "sequence": "THFTSQQLQELEATFQRNHYPDMSTREEIAVWTNLTEARVRVWFKNRRAKWR",
+        "sha256": "f33cf1a6bd36d6f6b6c6dcb7476a95f16918e17b3eaff633f4bd6c8a2d0e7ee6",
+        "source": "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+      },
+      "dataset": {
+        "path": "data/cache/m12/source/PITX2_HUMAN_Tsuboyama_2023_2L7M.csv",
+        "sha256": "f04f3c49bc25997b627e0bdb781e85737eba7052e686e5670591f7917275b598",
+        "url": "https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/DMS_ProteinGym_substitutions.zip",
+        "archive_member": "DMS_ProteinGym_substitutions/PITX2_HUMAN_Tsuboyama_2023_2L7M.csv"
+      },
+      "classification": {
+        "path": "data/cache/m12/source/2L7M.entity.json",
+        "sha256": "f118d5bc1fed87f9ec1871fa439645cd5ebaa07b6a05a0f05723c1f1c0f0aece",
+        "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/2L7M/1",
+        "entity_id": "1",
+        "pfam_version": "34.0",
+        "entity_domain_spans": [
+          {
+            "beg_seq_id": 4,
+            "end_seq_id": 60
+          }
+        ]
+      },
+      "structure": {
+        "path": "data/cache/m12/source/2L7M.cif",
+        "sha256": "7d35b9096a019fabb9a69da7e162446d295e393f08788c66adfd7690027e69fe",
+        "url": "https://files.rcsb.org/download/2L7M.cif",
+        "kind": "local",
+        "format": "cif",
+        "confidence": "unknown",
+        "source": "https://www.rcsb.org/structure/2L7M",
+        "license": "wwPDB CC0",
+        "id": "2L7M",
+        "name": "PITX2 experimental NMR model 0"
+      },
+      "structure_artifacts": "data/cache/m12/graphs/PITX2",
+      "mapping": {
+        "chain": "P",
+        "model_index": 0,
+        "min_coverage": 0.7,
+        "min_identity": 1.0,
+        "allowed_mismatches": []
+      },
+      "assay": {
+        "first_author": "Tsuboyama",
+        "title": "Mega-scale experimental analysis of protein folding stability in biology and design",
+        "year": "2023",
+        "jo": "10.1038/s41586-023-06328-6",
+        "raw_DMS_phenotype_name": "ddG_ML_float",
+        "raw_DMS_directionality": "1",
+        "selection_assay": "Stability",
+        "selection_type": "cDNA display proteolysis",
+        "region_mutated": "1-52"
+      }
+    },
+    {
+      "protein_id": "SAV1",
+      "assay_id": "SAV1_MOUSE_Tsuboyama_2023_2YSB",
+      "family": "PF00397",
+      "family_name": "WW domain (WW)",
+      "reference": {
+        "sequence": "GEDLPLPPGWSVDWTMRGRKYYIDHNTNTTHWSHPLESGPSSG",
+        "sha256": "a33e27b03fd4cd2408b350a29777dd57e8caeb94c9ff4259ca7e29d67e1af0b5",
+        "source": "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+      },
+      "dataset": {
+        "path": "data/cache/m12/source/SAV1_MOUSE_Tsuboyama_2023_2YSB.csv",
+        "sha256": "3b5dc1b5690fd3ed677ba76f7146d5eb38d6d6895cd7aacbf7fbd1b800187497",
+        "url": "https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/DMS_ProteinGym_substitutions.zip",
+        "archive_member": "DMS_ProteinGym_substitutions/SAV1_MOUSE_Tsuboyama_2023_2YSB.csv"
+      },
+      "classification": {
+        "path": "data/cache/m12/source/2YSB.entity.json",
+        "sha256": "9ab9790c1deb5f4a09967073fee953a8d9f83dcc6142d91e6699d9b0a063f28c",
+        "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/2YSB/1",
+        "entity_id": "1",
+        "pfam_version": "34.0",
+        "entity_domain_spans": [
+          {
+            "beg_seq_id": 12,
+            "end_seq_id": 41
+          }
+        ]
+      },
+      "structure": {
+        "path": "data/cache/m12/source/2YSB.cif",
+        "sha256": "86dba03989d8824e03a8fba99ac908757743d227dcaf2a082bd4e59908787a41",
+        "url": "https://files.rcsb.org/download/2YSB.cif",
+        "kind": "local",
+        "format": "cif",
+        "confidence": "unknown",
+        "source": "https://www.rcsb.org/structure/2YSB",
+        "license": "wwPDB CC0",
+        "id": "2YSB",
+        "name": "SAV1 experimental NMR model 0"
+      },
+      "structure_artifacts": "data/cache/m12/graphs/SAV1",
+      "mapping": {
+        "chain": "A",
+        "model_index": 0,
+        "min_coverage": 0.7,
+        "min_identity": 1.0,
+        "allowed_mismatches": [],
+        "reference_polymer_range": [
+          7,
+          49
+        ]
+      },
+      "assay": {
+        "first_author": "Tsuboyama",
+        "title": "Mega-scale experimental analysis of protein folding stability in biology and design",
+        "year": "2023",
+        "jo": "10.1038/s41586-023-06328-6",
+        "raw_DMS_phenotype_name": "ddG_ML_float",
+        "raw_DMS_directionality": "1",
+        "selection_assay": "Stability",
+        "selection_type": "cDNA display proteolysis",
+        "region_mutated": "1-43"
+      }
+    },
+    {
+      "protein_id": "SR43C",
+      "assay_id": "SR43C_ARATH_Tsuboyama_2023_2N88",
+      "family": "PF00385",
+      "family_name": "Chromo (CHRromatin Organisation MOdifier) domain (Chromo)",
+      "reference": {
+        "sequence": "AVAESVIGKRVGDDGKTIEYLVKWTDMSDATWEPQDNVDSTLVLLYQQ",
+        "sha256": "81346251006cd7699ec780db8c419274f1044e32371600068db7abd2a89b0e53",
+        "source": "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+      },
+      "dataset": {
+        "path": "data/cache/m12/source/SR43C_ARATH_Tsuboyama_2023_2N88.csv",
+        "sha256": "97ed4fd124169047e4ffeadb62f8b5895b50a171a5383933ac3c3cf67c1e03b1",
+        "url": "https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/DMS_ProteinGym_substitutions.zip",
+        "archive_member": "DMS_ProteinGym_substitutions/SR43C_ARATH_Tsuboyama_2023_2N88.csv"
+      },
+      "classification": {
+        "path": "data/cache/m12/source/2N88.entity.json",
+        "sha256": "46eaeea81360584be0448807eab6d1643f8598abe719e989f796a7f17afddeae",
+        "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/2N88/1",
+        "entity_id": "1",
+        "pfam_version": "34.0",
+        "entity_domain_spans": [
+          {
+            "beg_seq_id": 5,
+            "end_seq_id": 53
+          }
+        ]
+      },
+      "structure": {
+        "path": "data/cache/m12/source/2N88.cif",
+        "sha256": "604317a79aab471b3953721e97ba43a9a0e48fe53d74755ef3ef0abcc16ba12f",
+        "url": "https://files.rcsb.org/download/2N88.cif",
+        "kind": "local",
+        "format": "cif",
+        "confidence": "unknown",
+        "source": "https://www.rcsb.org/structure/2N88",
+        "license": "wwPDB CC0",
+        "id": "2N88",
+        "name": "SR43C experimental NMR model 0"
+      },
+      "structure_artifacts": "data/cache/m12/graphs/SR43C",
+      "mapping": {
+        "chain": "A",
+        "model_index": 0,
+        "min_coverage": 0.7,
+        "min_identity": 1.0,
+        "allowed_mismatches": []
+      },
+      "assay": {
+        "first_author": "Tsuboyama",
+        "title": "Mega-scale experimental analysis of protein folding stability in biology and design",
+        "year": "2023",
+        "jo": "10.1038/s41586-023-06328-6",
+        "raw_DMS_phenotype_name": "ddG_ML_float",
+        "raw_DMS_directionality": "1",
+        "selection_assay": "Stability",
+        "selection_type": "cDNA display proteolysis",
+        "region_mutated": "1-48"
+      }
+    }
+  ],
+  "family_order": [
+    "PF00018",
+    "PF00385",
+    "PF00046",
+    "PF00397"
+  ],
+  "cap_per_protein": 96,
+  "partition_counts": [
+    64,
+    16,
+    16
+  ],
+  "split_salt": "m12-preregistered-family-v1",
+  "embedding": {
+    "model": "facebook/esm2_t12_35M_UR50D",
+    "revision": "6fbf070e65b0b7291e7bbcd451118c216cff79d8",
+    "dimension": 480,
+    "device": "auto",
+    "batch_size": 8,
+    "cpu_threads": 4,
+    "model_cache": "data/cache/models",
+    "cache": "data/cache/embeddings"
+  },
+  "alphas": [
+    0.1,
+    10.0,
+    100.0
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "modes": [
+    "structure_only",
+    "weighted_fusion",
+    "bidirectional"
+  ],
+  "training": {
+    "dimension": 16,
+    "heads": 2,
+    "layers": 2,
+    "learning_rate": 0.003,
+    "weight_decay": 0.01,
+    "max_epochs": 12,
+    "patience": 4,
+    "batch_size": 32,
+    "cpu_threads": 4,
+    "device": "cpu"
+  },
+  "similarity": {
+    "cluster_identity_thresholds": [
+      0.4,
+      0.6,
+      0.8
+    ],
+    "min_both_coverage": 0.7,
+    "partial_min_aligned": 25,
+    "partial_min_identity": 0.5,
+    "partial_min_shorter_coverage": 0.6
+  },
+  "scope": "Four Pfam domain families, two independently measured constructs each; stability assay only, not function or unseen-fold claim. No historical supervised encoder reuse."
+}
