@@ -108,3 +108,22 @@ def test_ridge_replay_preserves_float32_scaler_rounding():
         "intercept": np.array([model.intercept_]),
     }
     np.testing.assert_array_equal(ridge_predict(x, state)[0], model.predict(transformed))
+
+
+def test_run_cannot_overwrite_existing_checkpoints(tmp_path, monkeypatch):
+    import json
+    from pathlib import Path
+
+    from proteinmod.edge_experiments import run
+
+    canonical = json.loads(Path("configs/m14.json").read_text())
+    monkeypatch.chdir(tmp_path)
+    Path("configs").mkdir()
+    Path("configs/m14.json").write_text(json.dumps(canonical))
+    cache = Path(canonical["cache"]) / "weights" / "reused"
+    cache.mkdir(parents=True)
+    old = cache / "preserved.pt"
+    old.write_bytes(b"existing work")
+    with pytest.raises(ValueError, match="checkpoint"):
+        run(canonical | {"output": "runs/reused"})
+    assert old.read_bytes() == b"existing work"

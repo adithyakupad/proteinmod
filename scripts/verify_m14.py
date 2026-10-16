@@ -2,7 +2,9 @@
 
 import argparse
 import csv
+import hashlib
 import json
+import subprocess
 from collections import defaultdict
 from pathlib import Path
 
@@ -36,8 +38,12 @@ def verify(root, repeat=None):
     if manifest_path.exists():
         for name, digest in json.loads(manifest_path.read_text()).items():
             assert checksum(root / name) == digest, name
+    source_changes = []
     for p, digest in audit["sources"].items():
-        assert checksum(p) == digest, p
+        if checksum(p) != digest:
+            original = subprocess.check_output(["git", "show", audit["git_revision"] + ":" + p])
+            assert hashlib.sha256(original).hexdigest() == digest, p
+            source_changes.append(p)
     cohorts, provenance = prepare(config)
     for name in ("family", "native"):
         assert provenance[name] == audit["provenance"][name]
@@ -178,6 +184,8 @@ def verify(root, repeat=None):
         }
     result = {
         "fits_replayed": len(records),
+        "fitting_git_revision": audit["git_revision"],
+        "post_fit_source_changes_verified_against_git": source_changes,
         "prediction_records": len(saved),
         "max_prediction_error": maximum,
         "historical_files_unchanged": len(prereg),

@@ -297,10 +297,12 @@ def run(config, acquire=False):
     output.mkdir(parents=True, exist_ok=True)
     if (output / "metrics.json").exists():
         raise ValueError("Existing experiment; use a new output directory")
+    cache = Path(config["cache"]) / "weights" / output.name
+    if cache.exists() and any(cache.iterdir()):
+        raise ValueError("Existing checkpoint directory; use a unique output name")
     started = time.perf_counter()
     cohorts, provenance = prepare(config, acquire)
     records, predictions, role_records = [], [], []
-    cache = Path(config["cache"]) / "weights" / output.name
     cache.mkdir(parents=True, exist_ok=True)
     for cohort, (rows, structural, groups, partitions, probe) in cohorts.items():
         native = cohort == "native"
