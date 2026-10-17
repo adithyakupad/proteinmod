@@ -1,0 +1,52 @@
+{
+  "ruff": "All checks passed",
+  "ruff_format": "132 files already formatted",
+  "pytest": {
+    "passed": 161,
+    "elapsed_seconds": 22.08
+  },
+  "lightweight_pytest": {
+    "passed": 102,
+    "skipped_optional": 12,
+    "elapsed_seconds": 1.71
+  },
+  "m12": {
+    "verified": true,
+    "fits": 182,
+    "held_out_predictions": 23296,
+    "historical_files_preserved": 279,
+    "undefined_protein_correlations": 0
+  },
+  "historical_verifiers": {
+    "m9": {
+      "saved_heads": 60,
+      "neural_test_predictions": 22356,
+      "max_absolute_replay_error": 0.0,
+      "matched_test_ids_all_92_cases": true,
+      "historical_files_unchanged": 199,
+      "stability_scalar_inputs": false
+    },
+    "m10": {
+      "saved_heads": 96,
+      "test_rows": 29808,
+      "replayed_numeric_columns": 6,
+      "maximum_absolute_error": 0,
+      "missing_structure_gate_exactly_zero": true,
+      "all_metrics_recomputed": true,
+      "matched_m9_role_ids": true,
+      "historical_files_and_configs_preserved": 233,
+      "m9_real_encoder_replay_exact": true
+    },
+    "m11": {
+      "models": 54,
+      "neural_heads": 36,
+      "held_out_predictions": 28080,
+      "factorial_predictions": 19656,
+      "maximum_absolute_replay_error": 0,
+      "model_implied_contrasts_recomputed": true,
+      "matched_test_ids": true,
+      "historical_files_and_configs": 253,
+      "probe_only_labels_fitted": false
+    }
+  }
+}

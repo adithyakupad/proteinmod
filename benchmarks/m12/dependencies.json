@@ -1,0 +1,71 @@
+{
+  "decision": "Stack on PR #22; existing dependency drafts are not merged or rewritten. Main remains unchanged.",
+  "dependencies": [
+    {
+      "number": 12,
+      "url": "https://github.com/adithyakupad/proteinmod/pull/12",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "1753cbbbe7a3cc86b72d0b53e8bceb7cda6133b8",
+      "head_branch": "codex/m6-experimental-stability",
+      "base_branch": "main",
+      "successful_checks_verified": 10
+    },
+    {
+      "number": 14,
+      "url": "https://github.com/adithyakupad/proteinmod/pull/14",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "dd9e8bceb333c18cb1db57d49210bbbc865846d9",
+      "head_branch": "codex/m7-progressive-multitask",
+      "base_branch": "codex/m6-experimental-stability",
+      "successful_checks_verified": 10
+    },
+    {
+      "number": 16,
+      "url": "https://github.com/adithyakupad/proteinmod/pull/16",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "16a53a1f76426a7133491b786b13bdc4773f9209",
+      "head_branch": "codex/m8-stability-informed-function",
+      "base_branch": "codex/m7-progressive-multitask",
+      "successful_checks_verified": 10
+    },
+    {
+      "number": 18,
+      "url": "https://github.com/adithyakupad/proteinmod/pull/18",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "9610fe4a6da49393ed2b53dc3dcaece23c007e3e",
+      "head_branch": "codex/m9-assay-aware-prediction",
+      "base_branch": "codex/m8-stability-informed-function",
+      "successful_checks_verified": 10
+    },
+    {
+      "number": 20,
+      "url": "https://github.com/adithyakupad/proteinmod/pull/20",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "624fb3e183fab8866433e5b2b4b7b3d16b50ec1f",
+      "head_branch": "codex/m10-confidence-aware-fusion",
+      "base_branch": "codex/m9-assay-aware-prediction",
+      "successful_checks_verified": 10
+    },
+    {
+      "number": 22,
+      "url": "https://github.com/adithyakupad/proteinmod/pull/22",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "fe1cb5ca373a1f7b7246bfda6ed3448ee9b40ec0",
+      "head_branch": "codex/m11-explicit-epistasis",
+      "base_branch": "codex/m10-confidence-aware-fusion",
+      "successful_checks_verified": 10
+    }
+  ]
+}

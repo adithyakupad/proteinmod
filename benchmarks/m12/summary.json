@@ -1,0 +1,4038 @@
+{
+  "all_test_variants": [
+    {
+      "cohort": "sequence_all",
+      "protocol": "G1",
+      "model": "esm_sites_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.7735294117647058
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.6088235294117647
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.4676470588235294
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6647058823529411
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.711764705882353
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.7441176470588236
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.8088235294117646
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.8529411764705882
+        }
+      },
+      "per_family": {
+        "PF00018": 0.6205882352941177,
+        "PF00046": 0.7044117647058823,
+        "PF00385": 0.7308823529411764,
+        "PF00397": 0.7602941176470588
+      },
+      "family_macro_spearman": 0.7040441176470588
+    },
+    {
+      "cohort": "sequence_all",
+      "protocol": "G1",
+      "model": "sequence_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.0411764705882353
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.4735294117647058
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.3529411764705882
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": -0.02941176470588235
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7176470588235294
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.4705882352941176
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.2323529411764706
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.43529411764705883
+        }
+      },
+      "per_family": {
+        "PF00018": 0.19705882352941176,
+        "PF00046": 0.2205882352941176,
+        "PF00385": 0.4544117647058823,
+        "PF00397": 0.475
+      },
+      "family_macro_spearman": 0.3367647058823529
+    },
+    {
+      "cohort": "sequence_all",
+      "protocol": "G2",
+      "model": "esm_sites_ridge",
+      "seed": 0,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.5179191535539881
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.4736842105263158
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.6652875746066197
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.6652197504069451
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.5413591969614758
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.44392295170916984
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.6714053174172545
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.3420510037981552
+        }
+      },
+      "per_family": {
+        "PF00018": 0.49580168204015196,
+        "PF00046": 0.49264107433532284,
+        "PF00385": 0.6652536625067824,
+        "PF00397": 0.5067281606077049
+      },
+      "family_macro_spearman": 0.5401061448724905
+    },
+    {
+      "cohort": "sequence_all",
+      "protocol": "G2",
+      "model": "sequence_ridge",
+      "seed": 0,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.20793543136190992
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.2638632664134563
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.6353860397012923
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.4794744927794201
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": -0.09169862892968128
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.362805208898535
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.45105805751492134
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.13692349430276723
+        }
+      },
+      "per_family": {
+        "PF00018": 0.2358993488876831,
+        "PF00046": 0.13555328998442687,
+        "PF00385": 0.5574302662403562,
+        "PF00397": 0.29399077590884426
+      },
+      "family_macro_spearman": 0.3057184202553276
+    },
+    {
+      "cohort": "sequence_all",
+      "protocol": "G3",
+      "model": "esm_sites_ridge",
+      "seed": 0,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.49229517091698316
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.39601193705914267
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.4708762886597938
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.43813076505697235
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.2715002712967987
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.35446283233857845
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.5309142702116114
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.25210255018990774
+        }
+      },
+      "per_family": {
+        "PF00018": 0.4441535539880629,
+        "PF00046": 0.3129815518176886,
+        "PF00385": 0.4545035268583831,
+        "PF00397": 0.39150841020075955
+      },
+      "family_macro_spearman": 0.40078676071622354
+    },
+    {
+      "cohort": "sequence_all",
+      "protocol": "G3",
+      "model": "sequence_ridge",
+      "seed": 0,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.23311177428106347
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.15954964731416169
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.6043495806789385
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.4593169355596044
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.2088042892181337
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.2999728703201302
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.48380358111774274
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.11195062398263701
+        }
+      },
+      "per_family": {
+        "PF00018": 0.19633071079761258,
+        "PF00046": 0.254388579769132,
+        "PF00385": 0.5318332581192715,
+        "PF00397": 0.2978771025501899
+      },
+      "family_macro_spearman": 0.3201074128090515
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "bidirectional",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.6735294117647058
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.4823529411764706
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.6823529411764706
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6852941176470588
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7617647058823529
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.7382352941176471
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.39999999999999997
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.5411764705882353
+        }
+      },
+      "per_family": {
+        "PF00018": 0.6779411764705883,
+        "PF00046": 0.711764705882353,
+        "PF00385": 0.5117647058823529,
+        "PF00397": 0.5808823529411764
+      },
+      "family_macro_spearman": 0.6205882352941177
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "bidirectional",
+      "seed": 1,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.6323529411764706
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.43529411764705883
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.5352941176470588
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6911764705882353
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7941176470588236
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.6588235294117648
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.4441176470588235
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.6088235294117647
+        }
+      },
+      "per_family": {
+        "PF00018": 0.5838235294117646,
+        "PF00046": 0.675,
+        "PF00385": 0.5220588235294117,
+        "PF00397": 0.6191176470588236
+      },
+      "family_macro_spearman": 0.6
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "bidirectional",
+      "seed": 2,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.6617647058823529
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.5676470588235295
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.6676470588235294
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6529411764705881
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7647058823529411
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.7588235294117647
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.5470588235294118
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.5558823529411765
+        }
+      },
+      "per_family": {
+        "PF00018": 0.6647058823529411,
+        "PF00046": 0.7058823529411764,
+        "PF00385": 0.5617647058823529,
+        "PF00397": 0.6558823529411765
+      },
+      "family_macro_spearman": 0.6470588235294118
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "esm_sites_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.7735294117647058
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.6088235294117647
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.4676470588235294
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6647058823529411
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.711764705882353
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.7441176470588236
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.8088235294117646
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.8529411764705882
+        }
+      },
+      "per_family": {
+        "PF00018": 0.6205882352941177,
+        "PF00046": 0.7044117647058823,
+        "PF00385": 0.7308823529411764,
+        "PF00397": 0.7602941176470588
+      },
+      "family_macro_spearman": 0.7040441176470588
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "sequence_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.0411764705882353
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.4735294117647058
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.3529411764705882
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": -0.02941176470588235
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7176470588235294
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.4705882352941176
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.2323529411764706
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.43529411764705883
+        }
+      },
+      "per_family": {
+        "PF00018": 0.19705882352941176,
+        "PF00046": 0.2205882352941176,
+        "PF00385": 0.4544117647058823,
+        "PF00397": 0.475
+      },
+      "family_macro_spearman": 0.3367647058823529
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "structural_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.4441176470588235
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.5882352941176471
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": -0.023529411764705882
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.7617647058823529
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.6852941176470588
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.6705882352941177
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.6676470588235294
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.6323529411764706
+        }
+      },
+      "per_family": {
+        "PF00018": 0.2102941176470588,
+        "PF00046": 0.7161764705882353,
+        "PF00385": 0.6102941176470589,
+        "PF00397": 0.6764705882352942
+      },
+      "family_macro_spearman": 0.5533088235294118
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "structure_only",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.5470588235294118
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.37941176470588234
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.21176470588235297
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.3323529411764706
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.6941176470588235
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.7000000000000001
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.3941176470588235
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.5441176470588236
+        }
+      },
+      "per_family": {
+        "PF00018": 0.3794117647058824,
+        "PF00046": 0.5161764705882353,
+        "PF00385": 0.46176470588235297,
+        "PF00397": 0.5441176470588235
+      },
+      "family_macro_spearman": 0.4753676470588235
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "structure_only",
+      "seed": 1,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.28529411764705886
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.5529411764705882
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.18235294117647058
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.5911764705882353
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7823529411764706
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.4735294117647058
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.2323529411764706
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.411764705882353
+        }
+      },
+      "per_family": {
+        "PF00018": 0.2338235294117647,
+        "PF00046": 0.5323529411764706,
+        "PF00385": 0.48235294117647054,
+        "PF00397": 0.5073529411764706
+      },
+      "family_macro_spearman": 0.4389705882352941
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "structure_only",
+      "seed": 2,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.34411764705882353
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.2735294117647059
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.25588235294117645
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.38235294117647056
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.6941176470588235
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.5764705882352941
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.23823529411764705
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.45
+        }
+      },
+      "per_family": {
+        "PF00018": 0.3,
+        "PF00046": 0.4794117647058823,
+        "PF00385": 0.361764705882353,
+        "PF00397": 0.4661764705882353
+      },
+      "family_macro_spearman": 0.40183823529411766
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "weighted_fusion",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.6970588235294117
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.6588235294117648
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.7058823529411764
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6764705882352942
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7735294117647058
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.7382352941176471
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.4441176470588235
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.5176470588235293
+        }
+      },
+      "per_family": {
+        "PF00018": 0.7014705882352941,
+        "PF00046": 0.7073529411764706,
+        "PF00385": 0.5882352941176471,
+        "PF00397": 0.6088235294117647
+      },
+      "family_macro_spearman": 0.6514705882352941
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "weighted_fusion",
+      "seed": 1,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.6176470588235293
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.5058823529411764
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.5735294117647058
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6735294117647058
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7735294117647058
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.7852941176470588
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.5147058823529412
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.5882352941176471
+        }
+      },
+      "per_family": {
+        "PF00018": 0.5955882352941175,
+        "PF00046": 0.7294117647058823,
+        "PF00385": 0.5470588235294118,
+        "PF00397": 0.6441176470588235
+      },
+      "family_macro_spearman": 0.6290441176470587
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "weighted_fusion",
+      "seed": 2,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.5088235294117647
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.43529411764705883
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.5823529411764706
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.7941176470588236
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7294117647058823
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.7941176470588236
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.6823529411764706
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.5294117647058824
+        }
+      },
+      "per_family": {
+        "PF00018": 0.5455882352941177,
+        "PF00046": 0.7941176470588236,
+        "PF00385": 0.4823529411764706,
+        "PF00397": 0.7058823529411764
+      },
+      "family_macro_spearman": 0.6319852941176471
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "bidirectional",
+      "seed": 0,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.46664405860010844
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.4242946283233858
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.723657080846446
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.7134485406913321
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.3948046663049376
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.4281877373846989
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.7178920238741183
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.32676342919153556
+        }
+      },
+      "per_family": {
+        "PF00018": 0.44546934346174716,
+        "PF00046": 0.4114962018448183,
+        "PF00385": 0.718552810768889,
+        "PF00397": 0.522327726532827
+      },
+      "family_macro_spearman": 0.5244615206520704
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "bidirectional",
+      "seed": 1,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.5057379272924579
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.39059956592512207
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.565477482365708
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.6894194248507869
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.4944384156266956
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.18662506782419966
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.5936109603906674
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.4968936516549105
+        }
+      },
+      "per_family": {
+        "PF00018": 0.44816874660879,
+        "PF00046": 0.34053174172544765,
+        "PF00385": 0.6274484536082474,
+        "PF00397": 0.545252306022789
+      },
+      "family_macro_spearman": 0.4903503119913185
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "bidirectional",
+      "seed": 2,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.384631036353771
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.41327997829625607
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.7310363537710255
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.6277672273467173
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.4242132392837764
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.30870862723819853
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.563415626695605
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.26458220293000545
+        }
+      },
+      "per_family": {
+        "PF00018": 0.3989555073250135,
+        "PF00046": 0.3664609332609875,
+        "PF00385": 0.6794017905588714,
+        "PF00397": 0.4139989148128052
+      },
+      "family_macro_spearman": 0.46470428648941936
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "esm_sites_ridge",
+      "seed": 0,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.5179191535539881
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.4736842105263158
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.6652875746066197
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.6652197504069451
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.5413591969614758
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.44392295170916984
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.6714053174172545
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.3420510037981552
+        }
+      },
+      "per_family": {
+        "PF00018": 0.49580168204015196,
+        "PF00046": 0.49264107433532284,
+        "PF00385": 0.6652536625067824,
+        "PF00397": 0.5067281606077049
+      },
+      "family_macro_spearman": 0.5401061448724905
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "sequence_ridge",
+      "seed": 0,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.20793543136190992
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.2638632664134563
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.6353860397012923
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.4794744927794201
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": -0.09169862892968128
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.362805208898535
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.45105805751492134
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.13692349430276723
+        }
+      },
+      "per_family": {
+        "PF00018": 0.2358993488876831,
+        "PF00046": 0.13555328998442687,
+        "PF00385": 0.5574302662403562,
+        "PF00397": 0.29399077590884426
+      },
+      "family_macro_spearman": 0.3057184202553276
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "structural_ridge",
+      "seed": 0,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.36432447097124254
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.37038795442213784
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.391101465002713
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.6178648941942484
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.17514921323928379
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.49127780792186654
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.3291372761801411
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.4576505697232772
+        }
+      },
+      "per_family": {
+        "PF00018": 0.36735621269669017,
+        "PF00046": 0.33321351058057513,
+        "PF00385": 0.5044831795984807,
+        "PF00397": 0.39339392295170916
+      },
+      "family_macro_spearman": 0.3996117064568638
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "structure_only",
+      "seed": 0,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.2701437873033098
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.21770211611502985
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.5087628865979382
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.7051410743353228
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.3101871947911015
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.4823250135648399
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.5487384698860553
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.1432582745523603
+        }
+      },
+      "per_family": {
+        "PF00018": 0.24392295170916983,
+        "PF00046": 0.39625610417797075,
+        "PF00385": 0.6069519804666306,
+        "PF00397": 0.3459983722192078
+      },
+      "family_macro_spearman": 0.3982823521432447
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "structure_only",
+      "seed": 1,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.3174579489962019
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.25691806836679326
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.6001899077590884
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.5521296798697776
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.12106619641888226
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.46200488334237655
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.5773060227889311
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.3435567010309278
+        }
+      },
+      "per_family": {
+        "PF00018": 0.2871880086814976,
+        "PF00046": 0.2915355398806294,
+        "PF00385": 0.5761597938144329,
+        "PF00397": 0.4604313619099294
+      },
+      "family_macro_spearman": 0.4038286760716223
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "structure_only",
+      "seed": 2,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.24087086272381988
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.25638903960933257
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.5472599023331525
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.6110417797069995
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.25056972327726534
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.41790558871405314
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.5448996201844818
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.2731551817688551
+        }
+      },
+      "per_family": {
+        "PF00018": 0.2486299511665762,
+        "PF00046": 0.33423765599565924,
+        "PF00385": 0.579150841020076,
+        "PF00397": 0.40902740097666845
+      },
+      "family_macro_spearman": 0.39276146228974496
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "weighted_fusion",
+      "seed": 0,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.4002712967986978
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.4451030927835052
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.6752441671188281
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.65607704829083
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.5255018990775908
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.3127645143787303
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.7223819858925664
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.4427156809549648
+        }
+      },
+      "per_family": {
+        "PF00018": 0.4226871947911015,
+        "PF00046": 0.41913320672816057,
+        "PF00385": 0.665660607704829,
+        "PF00397": 0.5825488334237656
+      },
+      "family_macro_spearman": 0.5225074606619642
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "weighted_fusion",
+      "seed": 1,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.3984264785675529
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.5161421595225176
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.6771296798697776
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.7308328811720022
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.4391616928920239
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.4018041237113402
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.6877509495387955
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.40381172002170374
+        }
+      },
+      "per_family": {
+        "PF00018": 0.4572843190450353,
+        "PF00046": 0.42048290830168206,
+        "PF00385": 0.7039812805208898,
+        "PF00397": 0.5457813347802496
+      },
+      "family_macro_spearman": 0.5318824606619642
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "weighted_fusion",
+      "seed": 2,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.5021296798697775
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.3876288659793815
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.7299918610960392
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.6411150298426478
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.45383884970157357
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.4797341291372762
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.6704422137818775
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.37476939772110685
+        }
+      },
+      "per_family": {
+        "PF00018": 0.4448792729245795,
+        "PF00046": 0.4667864894194249,
+        "PF00385": 0.6855534454693435,
+        "PF00397": 0.5226058057514922
+      },
+      "family_macro_spearman": 0.52995625339121
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "bidirectional",
+      "seed": 0,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.33522788931090614
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.14285132935431363
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.47198860553445465
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.34201030927835047
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.2598073792729246
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.42086272381985895
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.6358925664677156
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.4607433532284319
+        }
+      },
+      "per_family": {
+        "PF00018": 0.23903960933260987,
+        "PF00046": 0.34033505154639176,
+        "PF00385": 0.40699945740640253,
+        "PF00397": 0.5483179598480737
+      },
+      "family_macro_spearman": 0.38367301953336946
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "bidirectional",
+      "seed": 1,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.187805208898535
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.1018176885512751
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.467322300596853
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.43676071622354856
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.19679869777536624
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.37868963646228976
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.6566874660879002
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.3217444384156267
+        }
+      },
+      "per_family": {
+        "PF00018": 0.14481144872490503,
+        "PF00046": 0.287744167118828,
+        "PF00385": 0.45204150841020074,
+        "PF00397": 0.48921595225176345
+      },
+      "family_macro_spearman": 0.3434532691264243
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "bidirectional",
+      "seed": 2,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.1265599565925122
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.12095767769940316
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.5128594682582746
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.45588714053174173
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.16553174172544766
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.336096039066739
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.601098752034726
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.27217851329354315
+        }
+      },
+      "per_family": {
+        "PF00018": 0.12375881714595768,
+        "PF00046": 0.25081389039609336,
+        "PF00385": 0.48437330439500814,
+        "PF00397": 0.43663863266413455
+      },
+      "family_macro_spearman": 0.32389616115029846
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "esm_sites_ridge",
+      "seed": 0,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.49229517091698316
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.39601193705914267
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.4708762886597938
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.43813076505697235
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.2715002712967987
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.35446283233857845
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.5309142702116114
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.25210255018990774
+        }
+      },
+      "per_family": {
+        "PF00018": 0.4441535539880629,
+        "PF00046": 0.3129815518176886,
+        "PF00385": 0.4545035268583831,
+        "PF00397": 0.39150841020075955
+      },
+      "family_macro_spearman": 0.40078676071622354
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "sequence_ridge",
+      "seed": 0,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.23311177428106347
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.15954964731416169
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.6043495806789385
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.4593169355596044
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.2088042892181337
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.2999728703201302
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.48380358111774274
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.11195062398263701
+        }
+      },
+      "per_family": {
+        "PF00018": 0.19633071079761258,
+        "PF00046": 0.254388579769132,
+        "PF00385": 0.5318332581192715,
+        "PF00397": 0.2978771025501899
+      },
+      "family_macro_spearman": 0.3201074128090515
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "structural_ridge",
+      "seed": 0,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.27561041779706996
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.4425800325556158
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.5438822571893651
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.5482094411285947
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.399755832881172
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.46642702116115026
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.47569180683667933
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.2859061313076506
+        }
+      },
+      "per_family": {
+        "PF00018": 0.35909522517634285,
+        "PF00046": 0.4330914270211611,
+        "PF00385": 0.5460458491589799,
+        "PF00397": 0.38079896907216493
+      },
+      "family_macro_spearman": 0.4297578676071622
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "structure_only",
+      "seed": 0,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.2564297341291373
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.30103092783505153
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.5889582202930006
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.6578404774823657
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.3137411828540423
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.42518990775908844
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.4239148128052089
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.09346174715138361
+        }
+      },
+      "per_family": {
+        "PF00018": 0.27873033098209443,
+        "PF00046": 0.3694655453065654,
+        "PF00385": 0.6233993488876832,
+        "PF00397": 0.25868827997829624
+      },
+      "family_macro_spearman": 0.3825708762886598
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "structure_only",
+      "seed": 1,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.333410200759631
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.18216223548562127
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.5841291372761801
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.4416304937601736
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.2345225176342919
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.39276994031470425
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.5855941399891481
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.3818502441671189
+        }
+      },
+      "per_family": {
+        "PF00018": 0.25778621812262614,
+        "PF00046": 0.31364622897449806,
+        "PF00385": 0.5128798155181769,
+        "PF00397": 0.4837221920781335
+      },
+      "family_macro_spearman": 0.3920086136733586
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "structure_only",
+      "seed": 2,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.16877373846988608
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.2175122083559414
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.6192349430276722
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.6267769940314705
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.3982772653282691
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.3664405860010852
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.6206999457406404
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.31425664677156806
+        }
+      },
+      "per_family": {
+        "PF00018": 0.19314297341291375,
+        "PF00046": 0.38235892566467716,
+        "PF00385": 0.6230059685295714,
+        "PF00397": 0.4674782962561042
+      },
+      "family_macro_spearman": 0.4164965409658166
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "weighted_fusion",
+      "seed": 0,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.33332881172002177
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.29614758545849157
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.48254205100379816
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.4430276722734672
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.1311313076505697
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.32555615843733043
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.6289202387411829
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.4454150841020076
+        }
+      },
+      "per_family": {
+        "PF00018": 0.31473819858925667,
+        "PF00046": 0.22834373304395006,
+        "PF00385": 0.46278486163863264,
+        "PF00397": 0.5371676614215952
+      },
+      "family_macro_spearman": 0.3857586136733587
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "weighted_fusion",
+      "seed": 1,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.15754205100379817
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.05249593054801953
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.46039066739012474
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.46610146500271293
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.09782962561041779
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.4657487791644059
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.6673358654367878
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.3602550189907759
+        }
+      },
+      "per_family": {
+        "PF00018": 0.10501899077590884,
+        "PF00046": 0.28178920238741184,
+        "PF00385": 0.46324606619641884,
+        "PF00397": 0.5137954422137818
+      },
+      "family_macro_spearman": 0.34096242539338034
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "weighted_fusion",
+      "seed": 2,
+      "n": 768,
+      "per_protein": {
+        "BBC1": {
+          "n": 96,
+          "spearman_rho": 0.3042051003798155
+        },
+        "MYO3": {
+          "n": 96,
+          "spearman_rho": 0.2130222463374932
+        },
+        "CBX4": {
+          "n": 96,
+          "spearman_rho": 0.5865979381443299
+        },
+        "SR43C": {
+          "n": 96,
+          "spearman_rho": 0.5360417797069995
+        },
+        "NKX31": {
+          "n": 96,
+          "spearman_rho": 0.3042186652197504
+        },
+        "PITX2": {
+          "n": 96,
+          "spearman_rho": 0.5307243624525231
+        },
+        "PIN1": {
+          "n": 96,
+          "spearman_rho": 0.6148263700488334
+        },
+        "SAV1": {
+          "n": 96,
+          "spearman_rho": 0.4905046120455779
+        }
+      },
+      "per_family": {
+        "PF00018": 0.2586136733586544,
+        "PF00046": 0.41747151383613673,
+        "PF00385": 0.5613198589256647,
+        "PF00397": 0.5526654910472056
+      },
+      "family_macro_spearman": 0.4475176342919154
+    }
+  ],
+  "common_G1_test_variants": [
+    {
+      "cohort": "sequence_all",
+      "protocol": "G1",
+      "model": "esm_sites_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.7735294117647058
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.6088235294117647
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.4676470588235294
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6647058823529411
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.711764705882353
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.7441176470588236
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.8088235294117646
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.8529411764705882
+        }
+      },
+      "per_family": {
+        "PF00018": 0.6205882352941177,
+        "PF00046": 0.7044117647058823,
+        "PF00385": 0.7308823529411764,
+        "PF00397": 0.7602941176470588
+      },
+      "family_macro_spearman": 0.7040441176470588
+    },
+    {
+      "cohort": "sequence_all",
+      "protocol": "G1",
+      "model": "sequence_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.0411764705882353
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.4735294117647058
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.3529411764705882
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": -0.02941176470588235
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7176470588235294
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.4705882352941176
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.2323529411764706
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.43529411764705883
+        }
+      },
+      "per_family": {
+        "PF00018": 0.19705882352941176,
+        "PF00046": 0.2205882352941176,
+        "PF00385": 0.4544117647058823,
+        "PF00397": 0.475
+      },
+      "family_macro_spearman": 0.3367647058823529
+    },
+    {
+      "cohort": "sequence_all",
+      "protocol": "G2",
+      "model": "esm_sites_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.15588235294117647
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.10294117647058824
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.45
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.4294117647058823
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.5441176470588236
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.5764705882352941
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.6970588235294117
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.3558823529411765
+        }
+      },
+      "per_family": {
+        "PF00018": 0.12941176470588237,
+        "PF00046": 0.5602941176470588,
+        "PF00385": 0.43970588235294117,
+        "PF00397": 0.5264705882352941
+      },
+      "family_macro_spearman": 0.4139705882352941
+    },
+    {
+      "cohort": "sequence_all",
+      "protocol": "G2",
+      "model": "sequence_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": -0.11176470588235293
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.5411764705882353
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.39999999999999997
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.34705882352941175
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": -0.23823529411764705
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.4382352941176471
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.6
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": -0.03529411764705882
+        }
+      },
+      "per_family": {
+        "PF00018": 0.21470588235294116,
+        "PF00046": 0.10000000000000003,
+        "PF00385": 0.3735294117647059,
+        "PF00397": 0.2823529411764706
+      },
+      "family_macro_spearman": 0.2426470588235294
+    },
+    {
+      "cohort": "sequence_all",
+      "protocol": "G3",
+      "model": "esm_sites_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.21764705882352942
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": -0.044117647058823525
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.0823529411764706
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.16176470588235295
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.2647058823529412
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.4647058823529412
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7058823529411764
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": -0.07941176470588236
+        }
+      },
+      "per_family": {
+        "PF00018": 0.08676470588235294,
+        "PF00046": 0.3647058823529412,
+        "PF00385": 0.12205882352941178,
+        "PF00397": 0.313235294117647
+      },
+      "family_macro_spearman": 0.22169117647058822
+    },
+    {
+      "cohort": "sequence_all",
+      "protocol": "G3",
+      "model": "sequence_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.06764705882352941
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.4794117647058824
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.06764705882352941
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.33529411764705885
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": -0.13823529411764704
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.4382352941176471
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.6705882352941177
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": -0.2029411764705882
+        }
+      },
+      "per_family": {
+        "PF00018": 0.2735294117647059,
+        "PF00046": 0.15000000000000002,
+        "PF00385": 0.20147058823529412,
+        "PF00397": 0.23382352941176476
+      },
+      "family_macro_spearman": 0.2147058823529412
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "bidirectional",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.6735294117647058
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.4823529411764706
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.6823529411764706
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6852941176470588
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7617647058823529
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.7382352941176471
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.39999999999999997
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.5411764705882353
+        }
+      },
+      "per_family": {
+        "PF00018": 0.6779411764705883,
+        "PF00046": 0.711764705882353,
+        "PF00385": 0.5117647058823529,
+        "PF00397": 0.5808823529411764
+      },
+      "family_macro_spearman": 0.6205882352941177
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "bidirectional",
+      "seed": 1,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.6323529411764706
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.43529411764705883
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.5352941176470588
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6911764705882353
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7941176470588236
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.6588235294117648
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.4441176470588235
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.6088235294117647
+        }
+      },
+      "per_family": {
+        "PF00018": 0.5838235294117646,
+        "PF00046": 0.675,
+        "PF00385": 0.5220588235294117,
+        "PF00397": 0.6191176470588236
+      },
+      "family_macro_spearman": 0.6
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "bidirectional",
+      "seed": 2,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.6617647058823529
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.5676470588235295
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.6676470588235294
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6529411764705881
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7647058823529411
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.7588235294117647
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.5470588235294118
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.5558823529411765
+        }
+      },
+      "per_family": {
+        "PF00018": 0.6647058823529411,
+        "PF00046": 0.7058823529411764,
+        "PF00385": 0.5617647058823529,
+        "PF00397": 0.6558823529411765
+      },
+      "family_macro_spearman": 0.6470588235294118
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "esm_sites_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.7735294117647058
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.6088235294117647
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.4676470588235294
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6647058823529411
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.711764705882353
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.7441176470588236
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.8088235294117646
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.8529411764705882
+        }
+      },
+      "per_family": {
+        "PF00018": 0.6205882352941177,
+        "PF00046": 0.7044117647058823,
+        "PF00385": 0.7308823529411764,
+        "PF00397": 0.7602941176470588
+      },
+      "family_macro_spearman": 0.7040441176470588
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "sequence_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.0411764705882353
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.4735294117647058
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.3529411764705882
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": -0.02941176470588235
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7176470588235294
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.4705882352941176
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.2323529411764706
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.43529411764705883
+        }
+      },
+      "per_family": {
+        "PF00018": 0.19705882352941176,
+        "PF00046": 0.2205882352941176,
+        "PF00385": 0.4544117647058823,
+        "PF00397": 0.475
+      },
+      "family_macro_spearman": 0.3367647058823529
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "structural_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.4441176470588235
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.5882352941176471
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": -0.023529411764705882
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.7617647058823529
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.6852941176470588
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.6705882352941177
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.6676470588235294
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.6323529411764706
+        }
+      },
+      "per_family": {
+        "PF00018": 0.2102941176470588,
+        "PF00046": 0.7161764705882353,
+        "PF00385": 0.6102941176470589,
+        "PF00397": 0.6764705882352942
+      },
+      "family_macro_spearman": 0.5533088235294118
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "structure_only",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.5470588235294118
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.37941176470588234
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.21176470588235297
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.3323529411764706
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.6941176470588235
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.7000000000000001
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.3941176470588235
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.5441176470588236
+        }
+      },
+      "per_family": {
+        "PF00018": 0.3794117647058824,
+        "PF00046": 0.5161764705882353,
+        "PF00385": 0.46176470588235297,
+        "PF00397": 0.5441176470588235
+      },
+      "family_macro_spearman": 0.4753676470588235
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "structure_only",
+      "seed": 1,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.28529411764705886
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.5529411764705882
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.18235294117647058
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.5911764705882353
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7823529411764706
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.4735294117647058
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.2323529411764706
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.411764705882353
+        }
+      },
+      "per_family": {
+        "PF00018": 0.2338235294117647,
+        "PF00046": 0.5323529411764706,
+        "PF00385": 0.48235294117647054,
+        "PF00397": 0.5073529411764706
+      },
+      "family_macro_spearman": 0.4389705882352941
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "structure_only",
+      "seed": 2,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.34411764705882353
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.2735294117647059
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.25588235294117645
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.38235294117647056
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.6941176470588235
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.5764705882352941
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.23823529411764705
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.45
+        }
+      },
+      "per_family": {
+        "PF00018": 0.3,
+        "PF00046": 0.4794117647058823,
+        "PF00385": 0.361764705882353,
+        "PF00397": 0.4661764705882353
+      },
+      "family_macro_spearman": 0.40183823529411766
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "weighted_fusion",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.6970588235294117
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.6588235294117648
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.7058823529411764
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6764705882352942
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7735294117647058
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.7382352941176471
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.4441176470588235
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.5176470588235293
+        }
+      },
+      "per_family": {
+        "PF00018": 0.7014705882352941,
+        "PF00046": 0.7073529411764706,
+        "PF00385": 0.5882352941176471,
+        "PF00397": 0.6088235294117647
+      },
+      "family_macro_spearman": 0.6514705882352941
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "weighted_fusion",
+      "seed": 1,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.6176470588235293
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.5058823529411764
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.5735294117647058
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6735294117647058
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7735294117647058
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.7852941176470588
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.5147058823529412
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.5882352941176471
+        }
+      },
+      "per_family": {
+        "PF00018": 0.5955882352941175,
+        "PF00046": 0.7294117647058823,
+        "PF00385": 0.5470588235294118,
+        "PF00397": 0.6441176470588235
+      },
+      "family_macro_spearman": 0.6290441176470587
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G1",
+      "model": "weighted_fusion",
+      "seed": 2,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.5088235294117647
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.43529411764705883
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.5823529411764706
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.7941176470588236
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7294117647058823
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.7941176470588236
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.6823529411764706
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.5294117647058824
+        }
+      },
+      "per_family": {
+        "PF00018": 0.5455882352941177,
+        "PF00046": 0.7941176470588236,
+        "PF00385": 0.4823529411764706,
+        "PF00397": 0.7058823529411764
+      },
+      "family_macro_spearman": 0.6319852941176471
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "bidirectional",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.25
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.4323529411764706
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.5117647058823529
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.5989699929151022
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.5411764705882353
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.6029411764705882
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7823529411764706
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.10294117647058824
+        }
+      },
+      "per_family": {
+        "PF00018": 0.3411764705882353,
+        "PF00046": 0.5720588235294117,
+        "PF00385": 0.5553673493987276,
+        "PF00397": 0.4426470588235294
+      },
+      "family_macro_spearman": 0.477812425584976
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "bidirectional",
+      "seed": 1,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.36176470588235293
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.18235294117647058
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.4735294117647058
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.6176470588235293
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6794117647058824
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": -0.22058823529411767
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7264705882352941
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.22941176470588234
+        }
+      },
+      "per_family": {
+        "PF00018": 0.27205882352941174,
+        "PF00046": 0.22941176470588237,
+        "PF00385": 0.5455882352941176,
+        "PF00397": 0.4779411764705882
+      },
+      "family_macro_spearman": 0.38125
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "bidirectional",
+      "seed": 2,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.1647058823529412
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.12352941176470587
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.4676470588235294
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.4911764705882353
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.5647058823529412
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.4323529411764706
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.4617647058823529
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.13823529411764704
+        }
+      },
+      "per_family": {
+        "PF00018": 0.14411764705882354,
+        "PF00046": 0.4985294117647059,
+        "PF00385": 0.47941176470588237,
+        "PF00397": 0.3
+      },
+      "family_macro_spearman": 0.35551470588235295
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "esm_sites_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.15588235294117647
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.10294117647058824
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.45
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.4294117647058823
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.5441176470588236
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.5764705882352941
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.6970588235294117
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.3558823529411765
+        }
+      },
+      "per_family": {
+        "PF00018": 0.12941176470588237,
+        "PF00046": 0.5602941176470588,
+        "PF00385": 0.43970588235294117,
+        "PF00397": 0.5264705882352941
+      },
+      "family_macro_spearman": 0.4139705882352941
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "sequence_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": -0.11176470588235293
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.5411764705882353
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.39999999999999997
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.34705882352941175
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": -0.23823529411764705
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.4382352941176471
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.6
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": -0.03529411764705882
+        }
+      },
+      "per_family": {
+        "PF00018": 0.21470588235294116,
+        "PF00046": 0.10000000000000003,
+        "PF00385": 0.3735294117647059,
+        "PF00397": 0.2823529411764706
+      },
+      "family_macro_spearman": 0.2426470588235294
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "structural_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.06764705882352941
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.11176470588235293
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.26176470588235295
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.5264705882352941
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.5617647058823529
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.4617647058823529
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.5235294117647059
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.488235294117647
+        }
+      },
+      "per_family": {
+        "PF00018": 0.08970588235294116,
+        "PF00046": 0.5117647058823529,
+        "PF00385": 0.3941176470588236,
+        "PF00397": 0.5058823529411764
+      },
+      "family_macro_spearman": 0.37536764705882353
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "structure_only",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": -0.06764705882352941
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.19411764705882353
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.5588235294117647
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.6558823529411765
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6823529411764706
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.55
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7264705882352941
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": -0.19117647058823528
+        }
+      },
+      "per_family": {
+        "PF00018": 0.06323529411764706,
+        "PF00046": 0.6161764705882353,
+        "PF00385": 0.6073529411764707,
+        "PF00397": 0.2676470588235294
+      },
+      "family_macro_spearman": 0.3886029411764706
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "structure_only",
+      "seed": 1,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.13823529411764704
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.1323529411764706
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.29705882352941176
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.4764705882352941
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.17941176470588235
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.4617647058823529
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.6911764705882353
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.19411764705882353
+        }
+      },
+      "per_family": {
+        "PF00018": 0.13529411764705881,
+        "PF00046": 0.3205882352941176,
+        "PF00385": 0.3867647058823529,
+        "PF00397": 0.4426470588235294
+      },
+      "family_macro_spearman": 0.3213235294117647
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "structure_only",
+      "seed": 2,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": -0.1264705882352941
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.4911764705882353
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.3
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.3
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6323529411764706
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.6088235294117647
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.65
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.18823529411764706
+        }
+      },
+      "per_family": {
+        "PF00018": 0.1823529411764706,
+        "PF00046": 0.6205882352941177,
+        "PF00385": 0.3,
+        "PF00397": 0.41911764705882354
+      },
+      "family_macro_spearman": 0.380514705882353
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "weighted_fusion",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": -0.032352941176470584
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.3558823529411765
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.5441176470588236
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.55
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6617647058823529
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.36470588235294116
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7764705882352941
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.18235294117647058
+        }
+      },
+      "per_family": {
+        "PF00018": 0.16176470588235295,
+        "PF00046": 0.513235294117647,
+        "PF00385": 0.5470588235294118,
+        "PF00397": 0.47941176470588237
+      },
+      "family_macro_spearman": 0.4253676470588236
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "weighted_fusion",
+      "seed": 1,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.27941176470588236
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.2058823529411765
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.4558823529411765
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.6647058823529411
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.65
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.4823529411764706
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7647058823529411
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.15882352941176472
+        }
+      },
+      "per_family": {
+        "PF00018": 0.24264705882352944,
+        "PF00046": 0.5661764705882353,
+        "PF00385": 0.5602941176470588,
+        "PF00397": 0.4617647058823529
+      },
+      "family_macro_spearman": 0.4577205882352941
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G2",
+      "model": "weighted_fusion",
+      "seed": 2,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.19117647058823528
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.32647058823529407
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.4647058823529412
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.42352941176470593
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.7264705882352941
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.5764705882352941
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7911764705882354
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.21176470588235297
+        }
+      },
+      "per_family": {
+        "PF00018": 0.2588235294117647,
+        "PF00046": 0.651470588235294,
+        "PF00385": 0.44411764705882356,
+        "PF00397": 0.5014705882352941
+      },
+      "family_macro_spearman": 0.4639705882352941
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "bidirectional",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.07941176470588236
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.023529411764705882
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.13529411764705881
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.22647058823529412
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.2911764705882353
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.39999999999999997
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.8088235294117646
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.18823529411764706
+        }
+      },
+      "per_family": {
+        "PF00018": 0.05147058823529412,
+        "PF00046": 0.34558823529411764,
+        "PF00385": 0.18088235294117647,
+        "PF00397": 0.49852941176470583
+      },
+      "family_macro_spearman": 0.2691176470588235
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "bidirectional",
+      "seed": 1,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": -0.17352941176470588
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": -0.17058823529411765
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.19999999999999998
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.2411764705882353
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.34411764705882353
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.36764705882352944
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.6676470588235294
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.26176470588235295
+        }
+      },
+      "per_family": {
+        "PF00018": -0.17205882352941176,
+        "PF00046": 0.3558823529411765,
+        "PF00385": 0.22058823529411764,
+        "PF00397": 0.4647058823529412
+      },
+      "family_macro_spearman": 0.2172794117647059
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "bidirectional",
+      "seed": 2,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": -0.12352941176470587
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": -0.09117647058823529
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.07941176470588236
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.2735294117647059
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.24705882352941175
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.36176470588235293
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7764705882352941
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.1411764705882353
+        }
+      },
+      "per_family": {
+        "PF00018": -0.10735294117647058,
+        "PF00046": 0.3044117647058823,
+        "PF00385": 0.17647058823529413,
+        "PF00397": 0.45882352941176474
+      },
+      "family_macro_spearman": 0.20808823529411766
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "esm_sites_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.21764705882352942
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": -0.044117647058823525
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.0823529411764706
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.16176470588235295
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.2647058823529412
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.4647058823529412
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7058823529411764
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": -0.07941176470588236
+        }
+      },
+      "per_family": {
+        "PF00018": 0.08676470588235294,
+        "PF00046": 0.3647058823529412,
+        "PF00385": 0.12205882352941178,
+        "PF00397": 0.313235294117647
+      },
+      "family_macro_spearman": 0.22169117647058822
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "sequence_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.06764705882352941
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.4794117647058824
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.06764705882352941
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.33529411764705885
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": -0.13823529411764704
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.4382352941176471
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.6705882352941177
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": -0.2029411764705882
+        }
+      },
+      "per_family": {
+        "PF00018": 0.2735294117647059,
+        "PF00046": 0.15000000000000002,
+        "PF00385": 0.20147058823529412,
+        "PF00397": 0.23382352941176476
+      },
+      "family_macro_spearman": 0.2147058823529412
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "structural_ridge",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": -0.25
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": -0.1176470588235294
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.4617647058823529
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.40294117647058825
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.6676470588235294
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.4617647058823529
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.5647058823529412
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.06176470588235294
+        }
+      },
+      "per_family": {
+        "PF00018": -0.1838235294117647,
+        "PF00046": 0.5647058823529412,
+        "PF00385": 0.4323529411764706,
+        "PF00397": 0.31323529411764706
+      },
+      "family_macro_spearman": 0.28161764705882353
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "structure_only",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": -0.011764705882352941
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.16176470588235295
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.5911764705882353
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.4794117647058824
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.15882352941176472
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.6
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.6470588235294118
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": -0.21764705882352942
+        }
+      },
+      "per_family": {
+        "PF00018": 0.07500000000000001,
+        "PF00046": 0.37941176470588234,
+        "PF00385": 0.5352941176470589,
+        "PF00397": 0.2147058823529412
+      },
+      "family_macro_spearman": 0.30110294117647063
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "structure_only",
+      "seed": 1,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.047058823529411764
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.023529411764705882
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.27058823529411763
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.31764705882352945
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.15588235294117647
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.5941176470588235
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.8352941176470589
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.011764705882352941
+        }
+      },
+      "per_family": {
+        "PF00018": 0.03529411764705882,
+        "PF00046": 0.375,
+        "PF00385": 0.29411764705882354,
+        "PF00397": 0.4235294117647059
+      },
+      "family_macro_spearman": 0.28198529411764706
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "structure_only",
+      "seed": 2,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": -0.3529411764705882
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.26176470588235295
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.3529411764705882
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.4588235294117647
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.4823529411764706
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.3941176470588235
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.8647058823529412
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.09999999999999999
+        }
+      },
+      "per_family": {
+        "PF00018": -0.045588235294117624,
+        "PF00046": 0.43823529411764706,
+        "PF00385": 0.40588235294117647,
+        "PF00397": 0.4823529411764706
+      },
+      "family_macro_spearman": 0.32022058823529415
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "weighted_fusion",
+      "seed": 0,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": -0.011764705882352941
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": -0.05294117647058824
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.2058823529411765
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.2764705882352941
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.3323529411764706
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.42352941176470593
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.7529411764705882
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.34705882352941175
+        }
+      },
+      "per_family": {
+        "PF00018": -0.03235294117647059,
+        "PF00046": 0.3779411764705882,
+        "PF00385": 0.24117647058823527,
+        "PF00397": 0.55
+      },
+      "family_macro_spearman": 0.2841911764705882
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "weighted_fusion",
+      "seed": 1,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": -0.12352941176470587
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.10294117647058824
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.05294117647058824
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.25588235294117645
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.3588235294117647
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.5058823529411764
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.8735294117647058
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.17941176470588235
+        }
+      },
+      "per_family": {
+        "PF00018": -0.010294117647058815,
+        "PF00046": 0.4323529411764706,
+        "PF00385": 0.15441176470588236,
+        "PF00397": 0.526470588235294
+      },
+      "family_macro_spearman": 0.2757352941176471
+    },
+    {
+      "cohort": "structure_matched",
+      "protocol": "G3",
+      "model": "weighted_fusion",
+      "seed": 2,
+      "n": 128,
+      "per_protein": {
+        "BBC1": {
+          "n": 16,
+          "spearman_rho": 0.023529411764705882
+        },
+        "MYO3": {
+          "n": 16,
+          "spearman_rho": 0.0588235294117647
+        },
+        "CBX4": {
+          "n": 16,
+          "spearman_rho": 0.28529411764705886
+        },
+        "SR43C": {
+          "n": 16,
+          "spearman_rho": 0.10294117647058824
+        },
+        "NKX31": {
+          "n": 16,
+          "spearman_rho": 0.4323529411764706
+        },
+        "PITX2": {
+          "n": 16,
+          "spearman_rho": 0.5147058823529412
+        },
+        "PIN1": {
+          "n": 16,
+          "spearman_rho": 0.8529411764705882
+        },
+        "SAV1": {
+          "n": 16,
+          "spearman_rho": 0.26176470588235295
+        }
+      },
+      "per_family": {
+        "PF00018": 0.04117647058823529,
+        "PF00046": 0.4735294117647059,
+        "PF00385": 0.19411764705882356,
+        "PF00397": 0.5573529411764706
+      },
+      "family_macro_spearman": 0.31654411764705886
+    }
+  ]
+}
