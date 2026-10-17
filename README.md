@@ -610,3 +610,17 @@ missingness masks; they are not measured mutant rearrangements or confirmed H bo
 See [actual results](benchmarks/m14/RESULTS.md), [failure analysis](benchmarks/m14/REPORT.md),
 [provenance](benchmarks/m14/DATA_PROVENANCE.md) and [reproduction/API](docs/M14.md).
 M0–M13 evidence is preserved. No M15/M16 implementation.
+
+### M15: bounded ESM-2 LoRA adaptation
+
+M15 evaluates last-block query/value LoRA against frozen ESM ridge, a frozen learned
+head, an exactly parameter-matched head and existing structural baselines. Original
+G1/G2/G3 roles are preserved, with an additional nested 25% training-label condition.
+At full labels, G3 Spearman is **.3426** for LoRA, **.3401** for the frozen learned
+head, **.4008** for frozen ridge and **.4298** for structural ridge. Low-label LoRA
+also trails frozen ridge; the measured extra training cost did not yield a robust
+adaptation benefit under this fixed budget. All original PLM parameters stay frozen;
+only 3,840 LoRA parameters plus the 15,409-parameter common head are trained.
+See [measured results](benchmarks/m15/RESULTS.md), [failure analysis](benchmarks/m15/REPORT.md),
+[provenance](benchmarks/m15/DATA_PROVENANCE.md) and [reproduction](docs/M15.md).
+Historical M0–M14 artifacts are preserved. M16 has not been started.

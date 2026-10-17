@@ -1,0 +1,31 @@
+{
+  "python": "3.12.15",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "versions": {
+    "torch": "2.14.1",
+    "transformers": "4.57.6",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "biopython": "1.88",
+    "matplotlib": "3.11.2",
+    "pytest": "9.1.1",
+    "ruff": "0.17.0",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "0.36.2"
+  },
+  "device": "cpu",
+  "cpu_threads": 4,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "first_seconds": 588.129453917034,
+  "repeat_seconds": 590.3039579580072,
+  "first_peak_rss_bytes": 1081917440,
+  "repeat_peak_rss_bytes": 1104183296,
+  "prefix_extraction_seconds": 10.626903289696202,
+  "fitting_commit": "16f97ccd4cd5a8d80ca15cf04d239c3bf08ff71d",
+  "repeat_commit": "16f97ccd4cd5a8d80ca15cf04d239c3bf08ff71d"
+}
