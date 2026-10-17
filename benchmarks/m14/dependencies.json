@@ -1,0 +1,399 @@
+{
+  "base": "0a1faedad5cb9aa5f318b0dc09f19ef59d03ed07",
+  "main": "ad2e56478ec1c23c18ad9e46932259f865f7ff55",
+  "strategy": "Stacked on PR #26; all dependencies remain drafts. No merges or rewritten history.",
+  "pull_requests": [
+    {
+      "number": 12,
+      "head": "1753cbbbe7a3cc86b72d0b53e8bceb7cda6133b8",
+      "base": "main",
+      "draft": true,
+      "merged": false,
+      "checks": [
+        {
+          "name": "offline-tests (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "m3-neural-tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "conclusion": "success"
+        },
+        {
+          "name": "m3-neural-tests",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "head": "dd9e8bceb333c18cb1db57d49210bbbc865846d9",
+      "base": "codex/m6-experimental-stability",
+      "draft": true,
+      "merged": false,
+      "checks": [
+        {
+          "name": "offline-tests (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "conclusion": "success"
+        },
+        {
+          "name": "m3-neural-tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "conclusion": "success"
+        },
+        {
+          "name": "m3-neural-tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "head": "16a53a1f76426a7133491b786b13bdc4773f9209",
+      "base": "codex/m7-progressive-multitask",
+      "draft": true,
+      "merged": false,
+      "checks": [
+        {
+          "name": "offline-tests (3.14)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "conclusion": "success"
+        },
+        {
+          "name": "m3-neural-tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "conclusion": "success"
+        },
+        {
+          "name": "m3-neural-tests",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "head": "9610fe4a6da49393ed2b53dc3dcaece23c007e3e",
+      "base": "codex/m8-stability-informed-function",
+      "draft": true,
+      "merged": false,
+      "checks": [
+        {
+          "name": "offline-tests (3.14)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "m3-neural-tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "m3-neural-tests",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "head": "624fb3e183fab8866433e5b2b4b7b3d16b50ec1f",
+      "base": "codex/m9-assay-aware-prediction",
+      "draft": true,
+      "merged": false,
+      "checks": [
+        {
+          "name": "offline-tests (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "conclusion": "success"
+        },
+        {
+          "name": "m3-neural-tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "m3-neural-tests",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "head": "fe1cb5ca373a1f7b7246bfda6ed3448ee9b40ec0",
+      "base": "codex/m10-confidence-aware-fusion",
+      "draft": true,
+      "merged": false,
+      "checks": [
+        {
+          "name": "offline-tests (3.13)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "m3-neural-tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "conclusion": "success"
+        },
+        {
+          "name": "m3-neural-tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "head": "ff1655a61e118ebbb5ec8cd3b3b01b87cc528bf1",
+      "base": "codex/m11-explicit-epistasis",
+      "draft": true,
+      "merged": false,
+      "checks": [
+        {
+          "name": "offline-tests (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "conclusion": "success"
+        },
+        {
+          "name": "m3-neural-tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "m3-neural-tests",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "head": "0a1faedad5cb9aa5f318b0dc09f19ef59d03ed07",
+      "base": "codex/m12-family-held-out",
+      "draft": true,
+      "merged": false,
+      "checks": [
+        {
+          "name": "offline-tests (3.13)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "conclusion": "success"
+        },
+        {
+          "name": "m3-neural-tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.13)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.14)",
+          "conclusion": "success"
+        },
+        {
+          "name": "offline-tests (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "m3-neural-tests",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ]
+}

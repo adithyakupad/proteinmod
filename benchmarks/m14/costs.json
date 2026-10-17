@@ -1,0 +1,88 @@
+[
+  {
+    "model": "edge_distance",
+    "fits": 51,
+    "total_seconds": 39.702245831722394,
+    "median_seconds": 0.7101084580644965,
+    "trainable_parameters": [
+      5361
+    ],
+    "median_selected_epoch": 10.0
+  },
+  {
+    "model": "edge_full",
+    "fits": 51,
+    "total_seconds": 40.51127125392668,
+    "median_seconds": 0.7089417090173811,
+    "trainable_parameters": [
+      5361
+    ],
+    "median_selected_epoch": 10.0
+  },
+  {
+    "model": "edge_no_chemistry",
+    "fits": 51,
+    "total_seconds": 38.660191542003304,
+    "median_seconds": 0.7092930001672357,
+    "trainable_parameters": [
+      5361
+    ],
+    "median_selected_epoch": 10.0
+  },
+  {
+    "model": "edge_shuffled_chemistry",
+    "fits": 51,
+    "total_seconds": 40.463509041117504,
+    "median_seconds": 0.7200114999432117,
+    "trainable_parameters": [
+      5361
+    ],
+    "median_selected_epoch": 9.0
+  },
+  {
+    "model": "edge_shuffled_topology",
+    "fits": 51,
+    "total_seconds": 39.361066666897386,
+    "median_seconds": 0.7218627908732742,
+    "trainable_parameters": [
+      5361
+    ],
+    "median_selected_epoch": 9.0
+  },
+  {
+    "model": "original_gnn",
+    "fits": 51,
+    "total_seconds": 22.372071127407253,
+    "median_seconds": 0.3416598339099437,
+    "trainable_parameters": [
+      3473
+    ],
+    "median_selected_epoch": 11.0
+  },
+  {
+    "model": "proteinmpnn_ridge",
+    "fits": 17,
+    "total_seconds": 0.45735574909485877,
+    "median_seconds": 0.025237750029191375,
+    "trainable_parameters": [],
+    "median_selected_epoch": null
+  },
+  {
+    "model": "structural_ridge",
+    "fits": 17,
+    "total_seconds": 0.2721986644901335,
+    "median_seconds": 0.014564000070095062,
+    "trainable_parameters": [],
+    "median_selected_epoch": null
+  },
+  {
+    "model": "zero_message",
+    "fits": 51,
+    "total_seconds": 40.35618654428981,
+    "median_seconds": 0.7263787081465125,
+    "trainable_parameters": [
+      5361
+    ],
+    "median_selected_epoch": 10.0
+  }
+]

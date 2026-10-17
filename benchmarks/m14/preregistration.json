@@ -1,0 +1,12 @@
+{
+  "commit": "087712c",
+  "registered_at": "2026-10-15T23:39:01-04:00",
+  "config_sha256": "3a0a4f28689fa393188729bbcd118e77702d833f31330efc7089713ad2fcf7e6",
+  "plan_sha256": "2431b92558fab1b506d79b77108fc316c3f8c78d271b7b17c9eab8ed6f218c90",
+  "metrics_inspected_before_registration": false,
+  "base_pr": 26,
+  "base_sha": "0a1faedad5cb9aa5f318b0dc09f19ef59d03ed07",
+  "final_fit_revision": "aad6afe",
+  "repeat_revision": "6bbaa72",
+  "post_fit_change": "Output checkpoint overwrite guard only; architecture, feature definitions, roles, hyperparameters and target handling unchanged."
+}

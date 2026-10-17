@@ -1,0 +1,25 @@
+{
+  "python": "3.12.15",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "versions": {
+    "torch": "2.14.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "biopython": "1.88"
+  },
+  "device": "cpu",
+  "cpu_threads": 4,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "first_fit_seconds": 271.42716374993324,
+  "repeat_seconds": 228.66572666703723,
+  "repeat_peak_process_rss_bytes": 726368256,
+  "peak_rss_method": "resource.getrusage(RUSAGE_SELF).ru_maxrss on Darwin after complete fresh repeat",
+  "encoder_inference_seconds": 0.2118613317143172,
+  "fitting_revision": "aad6afe7e8f3a9d8c34cc49b04b4838a2ff12e1c",
+  "repeat_revision": "6bbaa7263afa25f75306ee801065a560076e4f68"
+}

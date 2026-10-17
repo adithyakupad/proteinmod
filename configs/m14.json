@@ -1,0 +1,69 @@
+{
+  "schema": "m14-edge-chemistry-v1",
+  "output": "runs/m14",
+  "cache": "data/cache/m14",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "alphas": [
+    0.1,
+    10.0,
+    100.0
+  ],
+  "models": [
+    "structural_ridge",
+    "original_gnn",
+    "edge_full",
+    "edge_distance",
+    "edge_no_chemistry",
+    "edge_shuffled_chemistry",
+    "edge_shuffled_topology",
+    "zero_message",
+    "proteinmpnn_ridge"
+  ],
+  "training": {
+    "hidden": 16,
+    "layers": 2,
+    "learning_rate": 0.003,
+    "weight_decay": 0.01,
+    "max_epochs": 12,
+    "patience": 4,
+    "batch_size": 32,
+    "cpu_threads": 4,
+    "device": "cpu"
+  },
+  "controls_seed": 314159,
+  "pretrained": {
+    "repository": "dauparas/ProteinMPNN",
+    "revision": "8907e6671bfbfc92303b5f79c4b5e6ce47cdef57",
+    "license": "MIT",
+    "files": [
+      {
+        "path": "data/cache/m14/pretrained/protein_mpnn_utils.py",
+        "sha256": "74c8f9b7553422a7a0bbd705874844ee103c8926c2c96f154a87e0b824071e1b",
+        "url": "https://raw.githubusercontent.com/dauparas/ProteinMPNN/8907e6671bfbfc92303b5f79c4b5e6ce47cdef57/protein_mpnn_utils.py"
+      },
+      {
+        "path": "data/cache/m14/pretrained/v_48_020.pt",
+        "sha256": "c9cb4a671d79604111231f8dbfc7c590e06f1197453b7a6854ac6661a642f5bd",
+        "url": "https://raw.githubusercontent.com/dauparas/ProteinMPNN/8907e6671bfbfc92303b5f79c4b5e6ce47cdef57/vanilla_model_weights/v_48_020.pt"
+      },
+      {
+        "path": "data/cache/m14/pretrained/LICENSE",
+        "sha256": "82009d25ce585631f452b2b24589bdb29c559ccfefa2f200ef312ed5b501a586",
+        "url": "https://raw.githubusercontent.com/dauparas/ProteinMPNN/8907e6671bfbfc92303b5f79c4b5e6ce47cdef57/LICENSE"
+      }
+    ]
+  },
+  "dependencies": {},
+  "m12_config": {
+    "path": "configs/m12.json",
+    "sha256": "2cc1e0caeced858e805189bda4c963dd952784283e268666aa935e4c79a28184"
+  },
+  "m6_config": {
+    "path": "configs/m6.json",
+    "sha256": "d0f5611dec8cfa1c6748b25f160f58bd3b763c2fd3e8acf311b16c3c880543c5"
+  }
+}
