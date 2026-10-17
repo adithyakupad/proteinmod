@@ -1,0 +1,170 @@
+[
+  {
+    "model": "edge_full",
+    "selected_fits": 78,
+    "total_seconds": 48.8451463773381,
+    "median_seconds": 0.5335254374658689,
+    "trainable_parameters": [
+      5361
+    ],
+    "candidate_executions": 78,
+    "by_fraction": [
+      {
+        "fraction": 0.25,
+        "selected_fits": 39,
+        "median_seconds": 0.35080554080195725,
+        "total_seconds": 13.375516292639077
+      },
+      {
+        "fraction": 1.0,
+        "selected_fits": 39,
+        "median_seconds": 0.9918351250234991,
+        "total_seconds": 35.46963008469902
+      }
+    ]
+  },
+  {
+    "model": "frozen_head",
+    "selected_fits": 78,
+    "total_seconds": 10.621108748251572,
+    "median_seconds": 0.14265270857140422,
+    "trainable_parameters": [
+      15409
+    ],
+    "candidate_executions": 156,
+    "by_fraction": [
+      {
+        "fraction": 0.25,
+        "selected_fits": 39,
+        "median_seconds": 0.10558704193681479,
+        "total_seconds": 4.237964913249016
+      },
+      {
+        "fraction": 1.0,
+        "selected_fits": 39,
+        "median_seconds": 0.16519024991430342,
+        "total_seconds": 6.383143835002556
+      }
+    ]
+  },
+  {
+    "model": "frozen_ridge",
+    "selected_fits": 26,
+    "total_seconds": 1.7769642903003842,
+    "median_seconds": 0.052972541423514485,
+    "trainable_parameters": [
+      962
+    ],
+    "candidate_executions": 78,
+    "by_fraction": [
+      {
+        "fraction": 0.25,
+        "selected_fits": 13,
+        "median_seconds": 0.021618874976411462,
+        "total_seconds": 0.29744078987278044
+      },
+      {
+        "fraction": 1.0,
+        "selected_fits": 13,
+        "median_seconds": 0.1241511250846088,
+        "total_seconds": 1.4795235004276037
+      }
+    ]
+  },
+  {
+    "model": "lora",
+    "selected_fits": 78,
+    "total_seconds": 453.22326299734414,
+    "median_seconds": 5.432988749933429,
+    "trainable_parameters": [
+      19249
+    ],
+    "candidate_executions": 156,
+    "by_fraction": [
+      {
+        "fraction": 0.25,
+        "selected_fits": 39,
+        "median_seconds": 2.90533029101789,
+        "total_seconds": 118.57276150095277
+      },
+      {
+        "fraction": 1.0,
+        "selected_fits": 39,
+        "median_seconds": 8.906118999933824,
+        "total_seconds": 334.65050149639137
+      }
+    ]
+  },
+  {
+    "model": "matched_head",
+    "selected_fits": 78,
+    "total_seconds": 14.811995998257771,
+    "median_seconds": 0.19127441651653498,
+    "trainable_parameters": [
+      19249
+    ],
+    "candidate_executions": 156,
+    "by_fraction": [
+      {
+        "fraction": 0.25,
+        "selected_fits": 39,
+        "median_seconds": 0.13879812485538423,
+        "total_seconds": 5.511409042170271
+      },
+      {
+        "fraction": 1.0,
+        "selected_fits": 39,
+        "median_seconds": 0.240769499912858,
+        "total_seconds": 9.3005869560875
+      }
+    ]
+  },
+  {
+    "model": "original_gnn",
+    "selected_fits": 78,
+    "total_seconds": 27.892088331049308,
+    "median_seconds": 0.3286916040815413,
+    "trainable_parameters": [
+      3473
+    ],
+    "candidate_executions": 78,
+    "by_fraction": [
+      {
+        "fraction": 0.25,
+        "selected_fits": 39,
+        "median_seconds": 0.19117175019346178,
+        "total_seconds": 6.867181248031557
+      },
+      {
+        "fraction": 1.0,
+        "selected_fits": 39,
+        "median_seconds": 0.5630786251276731,
+        "total_seconds": 21.02490708301775
+      }
+    ]
+  },
+  {
+    "model": "structural_ridge",
+    "selected_fits": 26,
+    "total_seconds": 0.6211806677747518,
+    "median_seconds": 0.022885438054800034,
+    "trainable_parameters": [
+      271
+    ],
+    "candidate_executions": 78,
+    "by_fraction": [
+      {
+        "fraction": 0.25,
+        "selected_fits": 13,
+        "median_seconds": 0.020904416916891932,
+        "total_seconds": 0.2888855852652341
+      },
+      {
+        "fraction": 1.0,
+        "selected_fits": 13,
+        "median_seconds": 0.025111791910603642,
+        "total_seconds": 0.33229508250951767
+      }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "selected_fits_per_run": 442,
+  "candidate_executions_per_run": 780,
+  "complete_runs": 2,
+  "failed_supervised_candidates": [],
+  "excluded_test_variants": [],
+  "rank_search": [
+    2
+  ],
+  "head_lr_grid": [
+    0.001,
+    0.003
+  ],
+  "adapter_lr_ratio": 0.1,
+  "post_test_retuning": false,
+  "prefix_parity_failures": [],
+  "notes": [
+    "Label-free synthetic timing probe only before registration.",
+    "Only candidate LR/epoch selection used validation labels.",
+    "No full-weight, all-layer, extra-rank or M16 experiment."
+  ]
+}

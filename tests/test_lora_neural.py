@@ -62,6 +62,15 @@ def test_lora_zero_identity_gradients_frozen_weights_and_capacity(tmp_path):
         hidden = frozen.norm(frozen.tail(x, attention_mask=ext))[:, 1:-1]
         expected = site_representation(hidden[:-1], hidden[-1:].expand(2, -1, -1), mask)
     torch.testing.assert_close(features, expected, rtol=0, atol=0)
+    torch.testing.assert_close(
+        model(prefix=x, extended_mask=ext, mutation_mask=mask),
+        frozen(features=expected),
+        rtol=0,
+        atol=0,
+    )
+    torch.testing.assert_close(
+        frozen(features=expected), matched(features=expected), rtol=0, atol=0
+    )
     optimizer = torch.optim.Adam([p for p in model.parameters() if p.requires_grad], lr=0.01)
     model(prefix=x, extended_mask=ext, mutation_mask=mask).square().sum().backward()
     assert x.grad[-1].abs().sum() > 0, "WT delta path must receive gradients"
@@ -141,3 +150,28 @@ def test_held_out_labels_do_not_change_adapters_or_selection():
     np.testing.assert_array_equal(a, b)
     assert sa == sb
     assert all(torch.equal(wa[k], wb[k]) for k in wa)
+
+
+def test_run_rejects_historical_outputs_and_existing_checkpoints(tmp_path, monkeypatch):
+    import json
+    from pathlib import Path
+
+    from proteinmod.lora_experiments import run
+
+    config = json.loads(Path("configs/m15.json").read_text())
+    monkeypatch.chdir(tmp_path)
+    Path("configs").mkdir()
+    Path("configs/m15.json").write_text(json.dumps(config))
+    old = Path("benchmarks/m14/metrics.json")
+    old.parent.mkdir(parents=True)
+    old.write_text("preserved")
+    with pytest.raises(ValueError, match="runs/"):
+        run(config | {"output": "benchmarks/m14"})
+    cache = Path(config["cache"]) / "weights" / "reused"
+    cache.mkdir(parents=True)
+    weight = cache / "old.pt"
+    weight.write_bytes(b"preserved weights")
+    with pytest.raises(ValueError, match="Existing"):
+        run(config | {"output": "runs/reused"})
+    assert old.read_text() == "preserved"
+    assert weight.read_bytes() == b"preserved weights"

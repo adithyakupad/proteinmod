@@ -1,0 +1,19 @@
+{
+  "selected_states_compared": 442,
+  "predictions_compared": 56576,
+  "state_values_identical": true,
+  "all_selection_traces_identical": true,
+  "predictions_byte_identical": true,
+  "first_predictions_sha256": "18bcfafbb537a09a44ba0a3c9812e44dc52af2d6f89c1b1a7d4fc302c93cd171",
+  "repeat_predictions_sha256": "18bcfafbb537a09a44ba0a3c9812e44dc52af2d6f89c1b1a7d4fc302c93cd171",
+  "raw_full_adapted_forward_max_error": 0.0,
+  "repeat": {
+    "fits": 442,
+    "predictions": 56576,
+    "all_state_values_identical": true,
+    "all_selection_traces_identical": true,
+    "max_prediction_error": 0.0,
+    "seconds": 590.3039579580072,
+    "peak_rss_bytes": 1104183296
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "pytest": {
+    "passed": 187,
+    "seconds": 25.55
+  },
+  "lightweight_pytest": {
+    "passed": 119,
+    "skipped_optional_modules": 15,
+    "seconds": 2.39
+  },
+  "ruff": "passed",
+  "ruff_format": "passed",
+  "historical_m14_verifier": "passed; 391 saved fits and 85882 predictions replayed",
+  "historical_files_preserved": 354,
+  "m15_reproducibility": "validation.json",
+  "main_untouched": "ad2e56478ec1c23c18ad9e46932259f865f7ff55"
+}

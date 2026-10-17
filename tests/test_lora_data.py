@@ -35,3 +35,24 @@ def test_cache_contract_changes_with_weights_sequence_boundary_and_revision():
     assert a != prefix_contract({"revision": "a"}, {"weights": "new"}, ["one"], ["AAA"], 11)
     assert a != prefix_contract({"revision": "a"}, {"weights": "hash"}, ["one"], ["AVA"], 11)
     assert a != prefix_contract({"revision": "a"}, {"weights": "hash"}, ["one"], ["AAA"], 10)
+
+
+def test_history_protects_old_files_and_excludes_future_milestones(tmp_path, monkeypatch):
+    from pathlib import Path
+
+    from proteinmod.lora_data import history
+
+    monkeypatch.chdir(tmp_path)
+    for name in ("benchmarks/m14", "benchmarks/m15", "benchmarks/m16", "configs"):
+        Path(name).mkdir(parents=True, exist_ok=True)
+    protected = Path("benchmarks/m14/metrics.json")
+    protected.write_text("historical")
+    Path("configs/m14.json").write_text("old config")
+    before = history()
+    assert set(before) == {"benchmarks/m14/metrics.json", "configs/m14.json"}
+    Path("benchmarks/m15/metrics.json").write_text("new")
+    Path("benchmarks/m16/metrics.json").write_text("future")
+    Path("configs/m15.json").write_text("new config")
+    assert history() == before
+    protected.write_text("changed")
+    assert history() != before

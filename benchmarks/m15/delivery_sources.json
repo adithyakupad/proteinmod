@@ -1,0 +1,9 @@
+{
+  "scripts/report_m15.py": "73baf5ef5085c2e307698b10c82e98d29fcc4459fe5156918a2603c448cd7503",
+  "scripts/verify_m15.py": "273a6db96446a54b630c1ddffb4759e258a87e7a46eeaa4308858a096ef381ed",
+  "tests/test_lora_data.py": "9db560fcd1268a5ffcaa1925aff32cc3aa03c4e5d2d0818142d9809ccbddfeb6",
+  "tests/test_lora_neural.py": "915ffe30e0e3ed312fd7f6db4f27e975c26b8a9f17f87dd30424d84e3e20d02b",
+  "configs/m15.json": "9580e9baf13ee5e8cc957691faf1b14f9e65636d9bcb232a03a5526e438286b5",
+  "docs/M15.md": "40424931addd34eefc16dc7cb5779431fa6ef5e25651caa8ef204b6721144525",
+  ".github/workflows/ci.yml": "9ebe107f1900b09cb8deb30f39ba3e6e19b22c845f3fbda1eab614c1952842d0"
+}

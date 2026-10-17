@@ -1,0 +1,10 @@
+{
+  "commit": "d808fdb88783fe0090740cba382f02b8bbc70e44",
+  "registered_at": "2026-10-16T21:33:46-04:00",
+  "config_sha256": "9580e9baf13ee5e8cc957691faf1b14f9e65636d9bcb232a03a5526e438286b5",
+  "plan_sha256": "526581a75bc7c251f0fc5d089d7d4d46d64b45d6d58d4f6cccd7f9ab125a4995",
+  "implementation_commit": "16f97ccd4cd5a8d80ca15cf04d239c3bf08ff71d",
+  "metrics_inspected_before_registration": false,
+  "base_pr": 28,
+  "base_sha": "6ce820fce2b8f287b79ff92a1a576c5e761f6cf3"
+}
