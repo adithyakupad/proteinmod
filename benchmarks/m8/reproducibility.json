@@ -1,0 +1,10 @@
+{
+  "full_second_run": true,
+  "function_predictions": 161433,
+  "stability_inference_rows": 13848,
+  "all_prediction_bytes_exact": true,
+  "all_324_model_metrics_and_selections_exact": true,
+  "source_precision": "M6 float32; identical features and source test predictions confirmed in source_failure_audit.json",
+  "first_revision": "ad26d689e9b53e1d56680a5caf8d84dbb25468b2",
+  "repeat_seconds": 27.77426837501116
+}

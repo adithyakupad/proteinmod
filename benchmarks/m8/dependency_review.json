@@ -1,0 +1,28 @@
+{
+  "issue": 15,
+  "branch": "codex/m8-stability-informed-function",
+  "stacked_base": "codex/m7-progressive-multitask",
+  "pr12": {
+    "url": "https://github.com/adithyakupad/proteinmod/pull/12",
+    "state": "open draft, unmerged",
+    "head": "1753cbbbe7a3cc86b72d0b53e8bceb7cda6133b8",
+    "ci": "all 10 checks passed",
+    "runs": [
+      "https://github.com/adithyakupad/proteinmod/actions/runs/38669745977",
+      "https://github.com/adithyakupad/proteinmod/actions/runs/38669893536"
+    ]
+  },
+  "pr14": {
+    "url": "https://github.com/adithyakupad/proteinmod/pull/14",
+    "state": "open draft, unmerged",
+    "head": "dd9e8bceb333c18cb1db57d49210bbbc865846d9",
+    "ci": "all 10 checks passed",
+    "runs": [
+      "https://github.com/adithyakupad/proteinmod/actions/runs/38674639693",
+      "https://github.com/adithyakupad/proteinmod/actions/runs/38674691783"
+    ]
+  },
+  "decision": "Use authorized stack while draft scientific contracts and failure analyses remain reviewable; no main mutation or bypass",
+  "main_unchanged": "ad2e56478ec1c23c18ad9e46932259f865f7ff55",
+  "historical_files_preserved": 176
+}

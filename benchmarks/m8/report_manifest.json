@@ -1,0 +1,28 @@
+{
+  "script_sha256": "9a0561c88338ca5e65e06e50873652cf9fd7b385227502abe5645e1133cd8983",
+  "source_predictions_sha256": "5ddb918e4fc137b378e1f6ea958efe2422c3c9e797b70c59b0078d7faa1bd663",
+  "files": {
+    "summary.csv": "76c01ff28964c4e173401b9ce857c2fcb487acc2c9bc2dbf2792e6f2c00ee22a",
+    "baseline_replay.json": "b905e375c90d5925e18247c6bcaefe2be664e2b950d5b222d24c6c645e8e63bd",
+    "audit.json": "191e45528e2cdf773eb42f5db5a0bae7be2329372ec140f94c1d50cf973f8b8d",
+    "predicted_stability.csv": "f2d96ade6b4fd6e5b5471ebacf58315d209f20d5816ad230bb2327529408d5dd",
+    "interpretation.md": "28f3b834daff5a79aaa9c919832368fd878c1a8d880e69e9539a0b97baefd7ca",
+    "largest_rank_errors.csv": "4a088526740db86222af0e19c62b74c3c70aa9f201a44232ae0da1548916bcda",
+    "local_verification.json": "e7777cc6677a3ec9371c9dc981f31d129d8352c6b19d9ab683096e870edcb93d",
+    "report.md": "70f5f68ccd6bc7536efd14c9760d13c06b340add87710ebc2633911937472142",
+    "predictions.csv": "5ddb918e4fc137b378e1f6ea958efe2422c3c9e797b70c59b0078d7faa1bd663",
+    "comparison.png": "65c9f1cc55d9e78db6cca2d857ff6cf993e5037ee120ca59a131b7256309ab53",
+    "paired_changes.csv": "d00205c3ca07adfb423572ed219ae1a544644b2e9de01b3555d916d223ef46d9",
+    "source_failure_audit.json": "fadbccc19189059d0303e68f6f20dbf575133004086aa4f28ef66bfa40d7bb0a",
+    "control_comparisons.csv": "0785dcb5a22ef84a18015e4410616f773bb13f7faf512c81705cabe815a2b01b",
+    "source_models.json": "5fdd46356eb72b6b11f72d8650ebca58647c2858f5c71bb377b4c9631869ebb3",
+    "checkpoint_replay.json": "a7fac47030910080643e7b2ad9b7120b929482329cda382fa90d57b339284664",
+    "per_protein.csv": "5ec7ff394e19b49ef4a20c1c3d20ad864f8bed7a4810e3187ef068938cd58d4f",
+    "manifest.json": "366921f50f6b6a2d907ecfb526bf46bb342348045364d8b48d0ed9d432f42a8f",
+    "stability_ood.png": "16d5f546af9cc4613be3de4e2e0776598b2bad51063ee82ca61237d59033007f",
+    "source_quality.csv": "1bca611daf3e47cf935495afa78417339291ab5fcfea84a47deeab62671393f8",
+    "reproducibility.json": "7a9fb96837a915dcd9c0743bea1ff70dfd581d4b5894875deab5717e9862dbd3",
+    "dependency_review.json": "fefadd554ec49546e0bfd9c37a1d371a85401574239302ff1679c23ada061871",
+    "runs.json": "32e67fbd425657c1f6b63895797aa8e943b1d6d371a1e5a623b29fcf2dde1745"
+  }
+}
