@@ -1,0 +1,23 @@
+{
+  "output": "runs/m7",
+  "function_config": "configs/m5.json",
+  "stability_config": "configs/m6.json",
+  "seeds": [0, 1, 2],
+  "stability_weights": [0.25, 1.0, 4.0],
+  "fold_pairs": [["within", "within"], ["amylase", "1LP1"], ["gb1", "1A32"], ["nucb", "1TUD"]],
+  "training": {
+    "dimension": 16,
+    "heads": 2,
+    "layers": 2,
+    "learning_rate": 0.003,
+    "weight_decay": 0.01,
+    "warmup_epochs": 2,
+    "max_epochs": 20,
+    "batch_size": 32,
+    "cpu_threads": 4,
+    "device": "cpu"
+  },
+  "selection": "Minimize mean of (1-function validation macro Spearman)/2 and stability validation macro RMSE divided by stability training target SD. Independent tasks select their own validation optimum. No test selection.",
+  "initialization": "Seed-matched fresh non-PLM pathways; never the fixed M6 function-supervised checkpoint. Frozen cached ESM-2 only.",
+  "schema": "m7-unpaired-bidirectional-v1"
+}

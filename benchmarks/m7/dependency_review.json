@@ -1,0 +1,16 @@
+{
+  "issue": 13,
+  "dependency_pr": "https://github.com/adithyakupad/proteinmod/pull/12",
+  "state": "open draft, unmerged; verified twice",
+  "head": "1753cbbbe7a3cc86b72d0b53e8bceb7cda6133b8",
+  "base": "main",
+  "ci": "all 10 push/PR jobs succeeded",
+  "ci_runs": [
+    "https://github.com/adithyakupad/proteinmod/actions/runs/38669745977",
+    "https://github.com/adithyakupad/proteinmod/actions/runs/38669893536"
+  ],
+  "review": "M6 data provenance, historical preservation, held-out metrics and compact-table/saturation limits reviewed; no automatic merge",
+  "m7_branch": "codex/m7-progressive-multitask",
+  "m7_base": "codex/m6-experimental-stability",
+  "main_unchanged": "ad2e56478ec1c23c18ad9e46932259f865f7ff55"
+}

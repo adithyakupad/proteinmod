@@ -1,0 +1,20 @@
+{
+  "fold_pair": [
+    "amylase",
+    "1LP1"
+  ],
+  "seed": 0,
+  "mode": "equal_joint",
+  "exact_prediction_replay": {
+    "function": {
+      "predictions": 578,
+      "max_absolute_difference": 0.0
+    },
+    "stability": {
+      "predictions": 600,
+      "max_absolute_difference": 0.0
+    }
+  },
+  "selection_and_training_trace_exact": true,
+  "serialized_state_exact": true
+}

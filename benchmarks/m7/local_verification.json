@@ -1,0 +1,18 @@
+{
+  "full_tests": "123 passed",
+  "lightweight_tests": "96 passed, 7 optional skips",
+  "ruff": "passed",
+  "format": "passed",
+  "python": "3.12.15",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "hardware_detail": "chip model unavailable to sandbox; arm64 CPU, 4 training threads",
+  "commands": [
+    ".venv/bin/ruff check .",
+    ".venv/bin/ruff format --check .",
+    ".venv/bin/pytest -q",
+    "/tmp/proteinmod-m1-core/bin/pytest -q"
+  ],
+  "m7_preregistered_commit": "62b9a48615a0ef3683b3fa55ee63290dcfbe4bd4",
+  "branch": "codex/m7-progressive-multitask"
+}
