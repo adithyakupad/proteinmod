@@ -1,0 +1,72 @@
+[
+  {
+    "pr": 12,
+    "merge": "5be82ec264a828e4611a6d90d4f7f0613cb430eb",
+    "head": "1753cbbbe7a3cc86b72d0b53e8bceb7cda6133b8",
+    "tree": "03ea67c6ffec067234f1aaff6fcfe492ab2443f6",
+    "merge_tree_identical_to_tested_head": true
+  },
+  {
+    "pr": 14,
+    "merge": "b014dbeb2309caef5d8c4157d3fb38640be9148e",
+    "head": "dd9e8bceb333c18cb1db57d49210bbbc865846d9",
+    "tree": "7c342d0220aaeed18ea0a587b2c4232095e1584c",
+    "merge_tree_identical_to_tested_head": true
+  },
+  {
+    "pr": 16,
+    "merge": "b639d26f9e53aa4cf430150c09e84e6f76161c18",
+    "head": "16a53a1f76426a7133491b786b13bdc4773f9209",
+    "tree": "5be16b356997b72461545cc29f8d0aec2590f260",
+    "merge_tree_identical_to_tested_head": true
+  },
+  {
+    "pr": 18,
+    "merge": "148f7494e44b9bdded9bf40c429d07bbd68774cf",
+    "head": "9610fe4a6da49393ed2b53dc3dcaece23c007e3e",
+    "tree": "fa5a59928aa83fb593e037fb61d2d84bfbb2ba7e",
+    "merge_tree_identical_to_tested_head": true
+  },
+  {
+    "pr": 20,
+    "merge": "3d757d015057cd1b04bc1239fcdcd4eb6206b2e0",
+    "head": "624fb3e183fab8866433e5b2b4b7b3d16b50ec1f",
+    "tree": "4946fb90e7845d01409233c0962ef96c2f820756",
+    "merge_tree_identical_to_tested_head": true
+  },
+  {
+    "pr": 22,
+    "merge": "b0f2c1a4075240c4646dc7946b57161e0d6a5b49",
+    "head": "fe1cb5ca373a1f7b7246bfda6ed3448ee9b40ec0",
+    "tree": "286cbf356d7b90b81ccc4e09a6f20911e148b1af",
+    "merge_tree_identical_to_tested_head": true
+  },
+  {
+    "pr": 24,
+    "merge": "e038672619b9f999701d574b5091bf6c90e7e2ee",
+    "head": "ff1655a61e118ebbb5ec8cd3b3b01b87cc528bf1",
+    "tree": "5d42ace4afef4985e6879715d02da337164d9064",
+    "merge_tree_identical_to_tested_head": true
+  },
+  {
+    "pr": 26,
+    "merge": "d2de60419c7e5ef4984a6169676b3264fc6620c9",
+    "head": "0a1faedad5cb9aa5f318b0dc09f19ef59d03ed07",
+    "tree": "48dc9c09b6fbfc9d4160a0fe6c84b0aa3a6445c6",
+    "merge_tree_identical_to_tested_head": true
+  },
+  {
+    "pr": 28,
+    "merge": "b62ca1f484341f68b724abf18f386f0144146832",
+    "head": "6ce820fce2b8f287b79ff92a1a576c5e761f6cf3",
+    "tree": "678d4a1a6ac4c0a9c8b9a962918a352ec301ecc5",
+    "merge_tree_identical_to_tested_head": true
+  },
+  {
+    "pr": 31,
+    "merge": "7cc4dbbe9c47355d1afa46f6f46f502394e9e999",
+    "head": "1c03ac58f0c268fcd9b2d8f27de96f7c8719ae9c",
+    "tree": "4987d95e73fbb2fe16360803209f70592df76965",
+    "merge_tree_identical_to_tested_head": true
+  }
+]

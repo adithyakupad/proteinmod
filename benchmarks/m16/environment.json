@@ -1,0 +1,28 @@
+{
+  "python": "3.12.15",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "versions": {
+    "proteinmod": "0.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "biopython": "1.88",
+    "torch": "2.14.1",
+    "transformers": "4.57.6",
+    "matplotlib": "3.11.2",
+    "pytest": "9.1.1",
+    "ruff": "0.17.0",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "0.36.2"
+  },
+  "git_revision": "7cc4dbbe9c47355d1afa46f6f46f502394e9e999",
+  "git_status": "",
+  "mps_available": false,
+  "frozen_cache_reused_for_main_refits": true,
+  "model_downloads_reused": true,
+  "fresh_dependency_install": true,
+  "fresh_m1_activation_extraction": "separate audit, CPU versus historical MPS",
+  "timing_limit": "Some verification, tests and fresh extraction ran concurrently. Wall times are not isolated model throughput comparisons.",
+  "checkout": "isolated clean consolidated main"
+}

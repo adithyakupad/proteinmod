@@ -1,0 +1,250 @@
+{
+  "method": "HEAD; redirects followed; no source archives downloaded",
+  "results": [
+    {
+      "url": "https://alphafold.ebi.ac.uk/entry/P00691",
+      "status": 200,
+      "resolved": "https://alphafold.ebi.ac.uk/entry/P00691"
+    },
+    {
+      "url": "https://arxiv.org/abs/1612.01474",
+      "status": 200,
+      "resolved": "https://arxiv.org/abs/1612.01474"
+    },
+    {
+      "url": "https://arxiv.org/abs/2106.09685",
+      "status": 200,
+      "resolved": "https://arxiv.org/abs/2106.09685"
+    },
+    {
+      "url": "https://arxiv.org/abs/2202.13415",
+      "status": 200,
+      "resolved": "https://arxiv.org/abs/2202.13415"
+    },
+    {
+      "url": "https://biopython.org/docs/latest/api/Bio.PDB.DSSP.html",
+      "status": 200,
+      "resolved": "https://biopython.org/docs/latest/api/Bio.PDB.DSSP.html"
+    },
+    {
+      "url": "https://biopython.org/docs/latest/api/Bio.PDB.SASA.html",
+      "status": 200,
+      "resolved": "https://biopython.org/docs/latest/api/Bio.PDB.SASA.html"
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "status": 200,
+      "resolved": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-023-06328-6",
+      "status": 200,
+      "resolved": "https://www.nature.com/articles/s41586-023-06328-6?error=cookies_not_supported&code=09429fe2-5922-4931-80ac-74831d22db07"
+    },
+    {
+      "url": "https://doi.org/10.1101/2024.03.21.585615",
+      "status": 200,
+      "resolved": "https://www.biorxiv.org/content/10.1101/2024.03.21.585615v7"
+    },
+    {
+      "url": "https://doi.org/10.1126/science.add2187",
+      "status": 403,
+      "reason": "Forbidden"
+    },
+    {
+      "url": "https://doi.org/10.1371/journal.pone.0080635",
+      "status": 200,
+      "resolved": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0080635"
+    },
+    {
+      "url": "https://doi.org/10.2210/pdb1PGA/pdb",
+      "status": 200,
+      "resolved": "https://www.wwpdb.org/pdb?id=pdb_00001pga"
+    },
+    {
+      "url": "https://doi.org/10.2210/pdb5OMT/pdb",
+      "status": 200,
+      "resolved": "https://www.wwpdb.org/pdb?id=pdb_00005omt"
+    },
+    {
+      "url": "https://doi.org/10.5281/zenodo.18433203",
+      "status": 200,
+      "resolved": "https://zenodo.org/records/18433203"
+    },
+    {
+      "url": "https://doi.org/10.7554/eLife.16965",
+      "status": 200,
+      "resolved": "https://elifesciences.org/articles/16965"
+    },
+    {
+      "url": "https://doi.org/10.7554/eLife.16965.024",
+      "status": 200,
+      "resolved": "https://elifesciences.org/articles/16965/figures#SD1-data"
+    },
+    {
+      "url": "https://github.com/J-SNACKKB/FLIP/blob/62cace8735f5610e2743cf06ce0f944b37fffaa6/splits/gb1/README.md",
+      "status": 200,
+      "resolved": "https://github.com/J-SNACKKB/FLIP/blob/62cace8735f5610e2743cf06ce0f944b37fffaa6/splits/gb1/README.md"
+    },
+    {
+      "url": "https://github.com/J-SNACKKB/FLIP/tree/62cace8735f5610e2743cf06ce0f944b37fffaa6/splits/gb1",
+      "status": 200,
+      "resolved": "https://github.com/J-SNACKKB/FLIP/tree/62cace8735f5610e2743cf06ce0f944b37fffaa6/splits/gb1"
+    },
+    {
+      "url": "https://github.com/OATML-Markslab/ProteinGym/blob/144fe22b07dfaeec2b366f2346203a9838a55b4c/LICENSE",
+      "status": 200,
+      "resolved": "https://github.com/OATML-Markslab/ProteinGym/blob/144fe22b07dfaeec2b366f2346203a9838a55b4c/LICENSE"
+    },
+    {
+      "url": "https://github.com/adithyakupad/proteinmod/pull/10",
+      "status": 200,
+      "resolved": "https://github.com/adithyakupad/proteinmod/pull/10"
+    },
+    {
+      "url": "https://github.com/adithyakupad/proteinmod/pull/8",
+      "status": 200,
+      "resolved": "https://github.com/adithyakupad/proteinmod/pull/8"
+    },
+    {
+      "url": "https://github.com/dauparas/ProteinMPNN/blob/8907e6671bfbfc92303b5f79c4b5e6ce47cdef57/training/README.md",
+      "status": 200,
+      "resolved": "https://github.com/dauparas/ProteinMPNN/blob/8907e6671bfbfc92303b5f79c4b5e6ce47cdef57/training/README.md"
+    },
+    {
+      "url": "https://github.com/dauparas/ProteinMPNN/tree/8907e6671bfbfc92303b5f79c4b5e6ce47cdef57",
+      "status": 200,
+      "resolved": "https://github.com/dauparas/ProteinMPNN/tree/8907e6671bfbfc92303b5f79c4b5e6ce47cdef57"
+    },
+    {
+      "url": "https://github.com/facebookresearch/esm",
+      "status": 200,
+      "resolved": "https://github.com/facebookresearch/esm"
+    },
+    {
+      "url": "https://github.com/florisvdf/mutation-predictability/tree/main/data/AMY_BACSU",
+      "status": 200,
+      "resolved": "https://github.com/florisvdf/mutation-predictability/tree/main/data/AMY_BACSU"
+    },
+    {
+      "url": "https://github.com/google-deepmind/nuclease_design",
+      "status": 200,
+      "resolved": "https://github.com/google-deepmind/nuclease_design"
+    },
+    {
+      "url": "https://github.com/google-deepmind/nuclease_design/blob/702284847c4558567d8288169a86dc147cfaab32/nuclease_design/constants.py",
+      "status": 200,
+      "resolved": "https://github.com/google-deepmind/nuclease_design/blob/702284847c4558567d8288169a86dc147cfaab32/nuclease_design/constants.py"
+    },
+    {
+      "url": "https://huggingface.co/docs/peft/package_reference/lora",
+      "status": 200,
+      "resolved": "https://huggingface.co/docs/peft/package_reference/lora"
+    },
+    {
+      "url": "https://huggingface.co/facebook/esm2_t12_35M_UR50D",
+      "status": 200,
+      "resolved": "https://huggingface.co/facebook/esm2_t12_35M_UR50D"
+    },
+    {
+      "url": "https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/DMS_ProteinGym_substitutions.zip",
+      "status": 200,
+      "resolved": "https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/DMS_ProteinGym_substitutions.zip"
+    },
+    {
+      "url": "https://mmcif.wwpdb.org/dictionaries/mmcif_pdbx_v50.dic/Categories/pdbx_poly_seq_scheme.html",
+      "status": 200,
+      "resolved": "https://mmcif.wwpdb.org/dictionaries/mmcif_pdbx_v50.dic/Categories/pdbx_poly_seq_scheme.html"
+    },
+    {
+      "url": "https://opensource.org/license/afl-3-0",
+      "status": 200,
+      "resolved": "https://opensource.org/license/AFL-3.0"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/plddt-understanding-local-confidence/",
+      "status": 200,
+      "resolved": "https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/plddt-understanding-local-confidence/"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41586-023-06328-6",
+      "status": 200,
+      "resolved": "https://www.nature.com/articles/s41586-023-06328-6?error=cookies_not_supported&code=e1344d3b-2f4e-48bb-b411-b495721a314e"
+    },
+    {
+      "url": "https://www.rcsb.org/structure/1I6C",
+      "status": 200,
+      "resolved": "https://www.rcsb.org/structure/1I6C"
+    },
+    {
+      "url": "https://www.rcsb.org/structure/1PGA",
+      "status": 200,
+      "resolved": "https://www.rcsb.org/structure/1PGA"
+    },
+    {
+      "url": "https://www.rcsb.org/structure/1TG0",
+      "status": 200,
+      "resolved": "https://www.rcsb.org/structure/1TG0"
+    },
+    {
+      "url": "https://www.rcsb.org/structure/1UA7",
+      "status": 200,
+      "resolved": "https://www.rcsb.org/structure/1UA7"
+    },
+    {
+      "url": "https://www.rcsb.org/structure/1UBQ",
+      "status": 200,
+      "resolved": "https://www.rcsb.org/structure/1UBQ"
+    },
+    {
+      "url": "https://www.rcsb.org/structure/2BTT",
+      "status": 200,
+      "resolved": "https://www.rcsb.org/structure/2BTT"
+    },
+    {
+      "url": "https://www.rcsb.org/structure/2K28",
+      "status": 200,
+      "resolved": "https://www.rcsb.org/structure/2K28"
+    },
+    {
+      "url": "https://www.rcsb.org/structure/2L7M",
+      "status": 200,
+      "resolved": "https://www.rcsb.org/structure/2L7M"
+    },
+    {
+      "url": "https://www.rcsb.org/structure/2L9R",
+      "status": 200,
+      "resolved": "https://www.rcsb.org/structure/2L9R"
+    },
+    {
+      "url": "https://www.rcsb.org/structure/2N88",
+      "status": 200,
+      "resolved": "https://www.rcsb.org/structure/2N88"
+    },
+    {
+      "url": "https://www.rcsb.org/structure/2YSB",
+      "status": 200,
+      "resolved": "https://www.rcsb.org/structure/2YSB"
+    },
+    {
+      "url": "https://www.wwpdb.org/about/usage-policies",
+      "status": 200,
+      "resolved": "https://www.wwpdb.org/about/usage-policies"
+    },
+    {
+      "url": "https://zenodo.org/records/18433203/files/gb1/README.md",
+      "status": 200,
+      "resolved": "https://zenodo.org/records/18433203/files/gb1/README.md"
+    },
+    {
+      "url": "https://zenodo.org/records/18433203/files/nucb/README.md",
+      "status": 200,
+      "resolved": "https://zenodo.org/records/18433203/files/nucb/README.md"
+    },
+    {
+      "url": "https://zenodo.org/records/7992926",
+      "status": 200,
+      "resolved": "https://zenodo.org/records/7992926"
+    }
+  ]
+}

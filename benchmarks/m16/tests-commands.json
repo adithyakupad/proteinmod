@@ -1,0 +1,60 @@
+[
+  {
+    "name": "ruff",
+    "command": [
+      "python",
+      "-m",
+      "ruff",
+      "check",
+      "."
+    ],
+    "exit_code": 0,
+    "seconds": 0.6889848751015961
+  },
+  {
+    "name": "format",
+    "command": [
+      "python",
+      "-m",
+      "ruff",
+      "format",
+      "--check",
+      "."
+    ],
+    "exit_code": 0,
+    "seconds": 0.17675049998797476
+  },
+  {
+    "name": "pytest",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "-q"
+    ],
+    "exit_code": 0,
+    "seconds": 40.723031000001356
+  },
+  {
+    "name": "pip-check",
+    "command": [
+      "python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "exit_code": 0,
+    "seconds": 0.3083029168192297
+  },
+  {
+    "name": "cli-help",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.cli",
+      "--help"
+    ],
+    "exit_code": 0,
+    "seconds": 0.8348345831036568
+  }
+]
