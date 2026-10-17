@@ -1,0 +1,17 @@
+{
+  "prediction_sha256": "75a2d26a67197a5b0500b9cc882d755152c97b1802123c544a204b21d01be2a1",
+  "epistasis_prediction_sha256": "216d13c8f3df6a597a24ea6f85bb27e3330baf1006ddc4a39eee70f972f810b7",
+  "files": {
+    "metrics.json": "c939cae29fd329fcbdccf0ba5ee04527dfea979fe53cd58a7c044bab6db25364",
+    "mutation_count_slices.csv": "491748796bbe501aebfa1098d8c8321caddf25012afdfd46356ee54d25a3dea4",
+    "rare_pair_slices.csv": "8d48d3736d8bb59234eff63e6157a26763f44221772a10bcbf4c78b34cfeb650",
+    "paired_seed_changes.csv": "6ba255b990a95e86dfa9d8a16c22595ebe7989a94e79fbeb5d7809e972ab3b0a",
+    "paired_bootstrap.json": "a5e4f62af40206edeaad24d182cfa946d46719e1a6cbbfb9cac28aba2a4b0195",
+    "scale_sensitivity.json": "54611093b26be249ec546e7c502939d4e2c92cf13a42a52d05b058c85d3e78a4",
+    "nonadditive_examples.csv": "f2208cc0a7f5a6a38d9da681b2be4919a3a884fd1710d12967d73b3737c7a93f",
+    "fitness_comparison.png": "85b392c2a233906f3542a5f6d463be6727b384c6edb8f1c6c78d0bbc569d02ea",
+    "epistasis.png": "f7530370b16fd9a276e8da78bc5e8a18a849c46dc70b16f2f6677776cedd251a",
+    "scale_sensitivity.png": "3a40582404fabb166fb8cc02e03a055a294113fb44f2787e77da05acddbcb530",
+    "REPORT.md": "c3cf4e6cb59d8d47723251dab2787095d9da5822555378d9b44e3fa646e0df37"
+  }
+}

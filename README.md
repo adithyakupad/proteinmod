@@ -527,3 +527,46 @@ held-out predictions and the same number of missing-structure stress predictions
 A full repeat is exact; all saved predictions/gates/fallbacks replay exactly. All219
 M0–M9 evidence files and old configurations remain unchanged. No M8 OOD stability
 values are used. Work is stacked on #18 → #16 → #14 → #12; no M11 implementation.
+
+## M11 explicit mutation interactions and measured epistasis
+
+M11 uses the original measured four-site GB1 landscape with all76 singles and2,091
+doubles, plus a label-blind360 triples/120 quadruples. It derives **every label from
+the same experiment's input/selected counts**, avoiding the published single-fitness
+column imported/rescaled from another study. WT-normalized log enrichment uses an
+explicit0.01 observation floor; direct epistasis requires four uncensored measured
+factorial constituents. No missing measurement is invented.
+
+C1 holds out complete combinations; C2 excludes position pair39–54 from all training
+and validation backgrounds. Actual held-out log-fitness RMSE:
+
+| Model | C1 | C2 |
+|---|---:|---:|
+| Measured-single additive | 1.9853 | 2.6643 |
+| Frozen ESM probe | .8228 | 1.2263 |
+| Sequence pair residual ridge | 1.3719 | 1.7808 |
+| Structural pair residual ridge | 1.3327 | 2.5846 |
+| Learned hybrid pair residual | 1.0655 | 2.4696 |
+| Matched hybrid without explicit3D | 1.0641 | 2.2086 |
+
+The explicit hybrid improves C1 WT-background epistasis MAE from1.0340 to.7658,
+but worsens C2 MAE from1.2286 to1.3520. Real3D does not beat zero/shuffled controls;
+non-WT background contrasts and increasing mutation burden expose further failures.
+Fitness ranking alone does not prove epistasis recovery. All explicit pair features
+and learned sums are symmetric; they do not estimate true higher-order coefficients.
+
+```sh
+python -m proteinmod.epistasis_experiments download --config configs/m11.json
+python -m proteinmod.epistasis_experiments prepare --config configs/m11.json
+python -m proteinmod.epistasis_experiments run --config configs/m11.json
+python scripts/verify_m11.py --input runs/m11
+MPLCONFIGDIR=/tmp/proteinmod-m11-matplotlib python scripts/report_m11.py --input runs/m11 --output runs/m11
+```
+
+See [protocol](docs/m11_protocol.md), [results/failure analysis](benchmarks/m11/REPORT.md),
+[model-implied factorial predictions](benchmarks/m11/epistasis_predictions.csv)
+and [conditional paired-block intervals](benchmarks/m11/paired_bootstrap.json).
+The54 model/seed/protocol cases yield28,080 fitness predictions and19,656 factorial
+predictions. Full repeat and saved-model replay are exact. All238 M0–M10 artifacts
+and15 prior configurations remain unchanged. M11 is stacked on #20; main unchanged.
+No M12 expansion, new encoder training or calibrated predictive uncertainty.

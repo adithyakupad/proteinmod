@@ -22,7 +22,7 @@ def verify(root):
     for name, sha in manifest["files"].items():
         assert checksum(root / name) == sha, name
     _, rows, _, roles = inputs(config)
-    features, feature_manifest = load_features(config)
+    features, feature_manifest = load_features(config, manifest["feature_root"])
     with (root / "predictions.csv").open() as handle:
         expected = list(csv.DictReader(handle))
     runs = json.loads((root / "runs.json").read_text())

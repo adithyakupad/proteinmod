@@ -31,7 +31,12 @@ def history():
         str(p): checksum(p)
         for root in (Path("benchmarks"), Path("configs"))
         for p in sorted(root.rglob("*"))
-        if p.is_file() and "m10" not in p.parts and p.name != "m10.json"
+        if p.is_file()
+        and not (
+            (name := p.parts[1] if root.name == "benchmarks" else p.stem).startswith("m")
+            and name[1:].isdigit()
+            and int(name[1:]) >= 10
+        )
     }
 
 
@@ -195,8 +200,8 @@ def prepare(config):
     return root
 
 
-def load_features(config):
-    root = feature_path(config)
+def load_features(config, root=None):
+    root = feature_path(config) if root is None else Path(root)
     manifest = json.loads((root / "manifest.json").read_text())
     if checksum(root / "features.npz") != manifest["feature_sha256"]:
         raise ValueError("M10 feature checksum mismatch")

@@ -1,0 +1,9 @@
+{
+  "fitness_csv_identical": true,
+  "factorial_csv_identical": true,
+  "metrics_selections_identical": true,
+  "cases_per_run": 54,
+  "prediction_sha256": "75a2d26a67197a5b0500b9cc882d755152c97b1802123c544a204b21d01be2a1",
+  "factorial_prediction_sha256": "216d13c8f3df6a597a24ea6f85bb27e3330baf1006ddc4a39eee70f972f810b7",
+  "repeat_runtime_seconds": 25.38249300001189
+}
