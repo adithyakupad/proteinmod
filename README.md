@@ -16,6 +16,7 @@ for final review; strict cross-device cold-extraction parity also failed.
 
 M0–M15 are consolidated at `7cc4dbbe9c47355d1afa46f6f46f502394e9e999`.
 All ten dependency heads and all ten merge commits passed CI (150 jobs total).
+M16 adds full-suite neural checks, formatting and an immutable-history artifact CI gate.
 See the [M16 technical report](docs/M16.md), [qualification matrix](benchmarks/m16/QUALIFICATION.md),
 [execution evidence](benchmarks/m16/), and [proposed release notes](docs/RELEASE_NOTES_PROPOSED.md).
 No release/tag has been published. Source licensing and final review remain gates.
