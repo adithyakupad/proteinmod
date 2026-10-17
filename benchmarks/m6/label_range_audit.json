@@ -1,0 +1,29 @@
+{
+  "1A32": {
+    "n": 600,
+    "min_ddg_kcal_mol": -0.9133960241741685,
+    "max_ddg_kcal_mol": 3.1967625895893246,
+    "exact_min_count": 1,
+    "exact_max_count": 1,
+    "numeric_boundary_does_not_establish_censoring": true,
+    "raw_label_CI_and_censoring_flags_available": false
+  },
+  "1LP1": {
+    "n": 600,
+    "min_ddg_kcal_mol": -1.6870673243983123,
+    "max_ddg_kcal_mol": 2.7374615590159275,
+    "exact_min_count": 1,
+    "exact_max_count": 4,
+    "numeric_boundary_does_not_establish_censoring": true,
+    "raw_label_CI_and_censoring_flags_available": false
+  },
+  "1TUD": {
+    "n": 600,
+    "min_ddg_kcal_mol": -0.7654826572797635,
+    "max_ddg_kcal_mol": 5.032554099284036,
+    "exact_min_count": 1,
+    "exact_max_count": 60,
+    "numeric_boundary_does_not_establish_censoring": true,
+    "raw_label_CI_and_censoring_flags_available": false
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "all_18900_predictions_exact": true,
+  "all_39_selections_and_metrics_exact": true,
+  "max_prediction_difference": 0.0,
+  "original_launch_revision": "65dc307cbc5040138566debab6982b69ccd1e5a7",
+  "final_launch_revision": "580ecfb5c21dfa76d7376d8a27a0e0a89529347a",
+  "initial_predictions_sha256": "2c08d67f5b2369da3afe227b53267be2b584ead34a749a981c2ad1fc8ad2c94e",
+  "final_predictions_sha256": "2c08d67f5b2369da3afe227b53267be2b584ead34a749a981c2ad1fc8ad2c94e",
+  "final_git_dirty": false
+}

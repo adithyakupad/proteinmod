@@ -358,3 +358,7 @@ Transfer is weak and does not establish a structural-model advantage. NucB G2 co
 ### M5: hybrid sequence–structure pilot (stacked on M4)
 
 M5 compares frozen ESM-2 residue tokens and the existing structural GNN using weighted fusion, concatenation, either cross-attention direction and bidirectional attention, with neural single-modality controls. It reuses the exact M4 matched G1/G2 role IDs and training-only assay targets. See [the protocol](docs/m5_protocol.md) for architecture, masks, reproducible local commands and scope. Results and limitations are recorded in `benchmarks/m5/report.md`; historical M0–M4 artifacts are retained.
+
+### M6: experimental stability prediction
+
+M6 adds an independent, continuous ΔΔG head over the frozen M5 sequence–structure encoder, with real experimental folding-stability labels. It preserves kcal/mol units and explicit sign conversion, verifies mutation coordinates, and evaluates protein-held-out predictions against stability baselines. See [the data and evaluation protocol](docs/m6_protocol.md) and [the benchmark report](benchmarks/m6/report.md). Function and stability objectives are trained separately; no multitask or stability-informed function prediction is included.

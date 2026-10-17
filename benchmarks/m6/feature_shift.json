@@ -1,0 +1,65 @@
+[
+  {
+    "test_protein": "1LP1",
+    "features": "frozen_hybrid_ridge",
+    "fraction_test_feature_cells_outside_train_range": 0.23873333333333333,
+    "max_abs_test_train_zscore": 31.629619598388672,
+    "fraction_test_feature_cells_abs_z_over_10": 0.06335
+  },
+  {
+    "test_protein": "1LP1",
+    "features": "esm_sites_ridge",
+    "fraction_test_feature_cells_outside_train_range": 0.0021800208116545265,
+    "max_abs_test_train_zscore": 4.533910274505615,
+    "fraction_test_feature_cells_abs_z_over_10": 0.0
+  },
+  {
+    "test_protein": "1LP1",
+    "features": "physicochemical_ridge",
+    "fraction_test_feature_cells_outside_train_range": 0.1821144278606965,
+    "max_abs_test_train_zscore": 17.38751694830094,
+    "fraction_test_feature_cells_abs_z_over_10": 0.018333333333333333
+  },
+  {
+    "test_protein": "1A32",
+    "features": "frozen_hybrid_ridge",
+    "fraction_test_feature_cells_outside_train_range": 0.18505,
+    "max_abs_test_train_zscore": 32.84474563598633,
+    "fraction_test_feature_cells_abs_z_over_10": 0.08526666666666667
+  },
+  {
+    "test_protein": "1A32",
+    "features": "esm_sites_ridge",
+    "fraction_test_feature_cells_outside_train_range": 0.012402011793270898,
+    "max_abs_test_train_zscore": 6.948287010192871,
+    "fraction_test_feature_cells_abs_z_over_10": 0.0
+  },
+  {
+    "test_protein": "1A32",
+    "features": "physicochemical_ridge",
+    "fraction_test_feature_cells_outside_train_range": 0.2364676616915423,
+    "max_abs_test_train_zscore": 29.45117630326476,
+    "fraction_test_feature_cells_abs_z_over_10": 0.0459452736318408
+  },
+  {
+    "test_protein": "1TUD",
+    "features": "frozen_hybrid_ridge",
+    "fraction_test_feature_cells_outside_train_range": 0.30691666666666667,
+    "max_abs_test_train_zscore": 42.67726135253906,
+    "fraction_test_feature_cells_abs_z_over_10": 0.14318333333333333
+  },
+  {
+    "test_protein": "1TUD",
+    "features": "esm_sites_ridge",
+    "fraction_test_feature_cells_outside_train_range": 0.057644814429413806,
+    "max_abs_test_train_zscore": 17.92890739440918,
+    "fraction_test_feature_cells_abs_z_over_10": 0.00018210197710718002
+  },
+  {
+    "test_protein": "1TUD",
+    "features": "physicochemical_ridge",
+    "fraction_test_feature_cells_outside_train_range": 0.2232587064676617,
+    "max_abs_test_train_zscore": 18.404732918508415,
+    "fraction_test_feature_cells_abs_z_over_10": 0.04519900497512438
+  }
+]
