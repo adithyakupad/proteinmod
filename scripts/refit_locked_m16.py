@@ -23,7 +23,7 @@ def refit(milestone):
         check=True,
     )
     subprocess.run(["git", "-C", str(workspace), "checkout", "--detach", revision], check=True)
-    # Copy only required acquisition/activation caches, never historical trained weights.
+    # Copy required cache trees; reset this fit's checkpoints before training.
     for name in ("m12", "m6") if milestone == 13 else ("m12",):
         shutil.copytree(source / "data/cache" / name, workspace / "data/cache" / name)
     checkpoints = workspace / "data/cache/m12/checkpoints"

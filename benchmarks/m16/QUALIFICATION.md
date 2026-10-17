@@ -1,6 +1,6 @@
 # M16 release qualification — FAIL / HOLD
 
-Bounded research integration/reproduction: PARTIAL until all recorded checks finish.
+Cached-feature numerical reproduction: PASS. Full cold-source / universal-model validation: PARTIAL.
 
 This is a research-code qualification, not an unrestricted predictor validation.
 No tag/release was published. Final human review and project licensing remain open.
@@ -14,8 +14,8 @@ Evidence baseline: `7cc4dbbe9c47355d1afa46f6f46f502394e9e999`.
 | Historical M0–M15 artifacts/configs | PASS | Byte-for-byte checks against integrated main; no changed/deleted old evidence |
 | Fresh pinned installation | PASS | Separate venv and clean main source; documented requirements/extras; pip check |
 | Existing offline/neural suite | PASS | Clean main: 187 passed; Ruff and format passed |
-| M16 checks | PARTIAL | Added comparison/inference/link tests; final-head CI recorded separately |
-| M0–M15 fresh supervised fits | PARTIAL | Running isolated output identities; refit command record and numerical comparisons are authoritative |
+| M16 checks | PASS | Clean M16 source: 190 tests; no-Torch core: 121 passed/16 skipped; final-head CI linked in PR |
+| M0–M15 training/reconstruction commands | PASS | All completed after preserved guard repairs; 677,557 prediction CSV records exact; all scientific selections/metrics/traces exact |
 | Structure reconstruction | PASS | All five real M2 source cases rebuilt from pinned cached coordinates |
 | Selected checkpoint replay | PASS | M7 selected refit; M8–M15 verifiers all succeeded, including actual ESM adapted forward |
 | Source-matched single/multiple inference | PASS | BBC1 P56N and D45S;N47R through real G3 LoRA; units/interval ineligibility explicit |
@@ -35,7 +35,7 @@ Evidence baseline: `7cc4dbbe9c47355d1afa46f6f46f502394e9e999`.
 | Credentials/large weight archives/local release paths | PASS | No pattern matches or tracked weights/arrays/archives; no private paths in release docs; limited pattern scan |
 | Local links | PASS | 62 Markdown documents checked, zero unresolved local/case targets; external URLs assessed separately |
 | Independent security/dependency vulnerability audit | PARTIAL | pip consistency/CI only; no complete security certification |
-| Tag/release and final review | HOLD | Intentionally unpublished; final qualification PR requires review |
+| Tag/release and final review | PARTIAL | Intentionally unpublished; final qualification PR requires review |
 
 PASS means a stated bounded check ran successfully, not broad biological validity.
 PARTIAL means an explicit scope/coverage limitation or outstanding check. FAIL identifies

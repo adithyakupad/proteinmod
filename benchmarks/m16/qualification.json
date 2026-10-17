@@ -1,0 +1,148 @@
+{
+  "release_qualified": false,
+  "release_status": "FAIL / HOLD",
+  "license_decision": "Deliberately unresolved for final review, as requested",
+  "tag_or_release_published": false,
+  "gates": [
+    {
+      "gate": "Safe dependency consolidation",
+      "status": "PASS",
+      "evidence_or_limit": "Ten merge commits, original heads preserved; tested base-tree equivalence; guarded merges"
+    },
+    {
+      "gate": "Exact dependency-head CI",
+      "status": "PASS",
+      "evidence_or_limit": "100/100 original-head jobs successful; stack-before.json"
+    },
+    {
+      "gate": "Exact merge-commit CI",
+      "status": "PASS",
+      "evidence_or_limit": "50/50 jobs successful, four Python versions plus neural CPU; main-ci.json"
+    },
+    {
+      "gate": "Historical M0\u2013M15 artifacts/configs",
+      "status": "PASS",
+      "evidence_or_limit": "Byte-for-byte checks against integrated main; no changed/deleted old evidence"
+    },
+    {
+      "gate": "Fresh pinned installation",
+      "status": "PASS",
+      "evidence_or_limit": "Separate venv and clean main source; documented requirements/extras; pip check"
+    },
+    {
+      "gate": "Existing offline/neural suite",
+      "status": "PASS",
+      "evidence_or_limit": "Clean main: 187 passed; Ruff and format passed"
+    },
+    {
+      "gate": "M16 checks",
+      "status": "PASS",
+      "evidence_or_limit": "Clean M16 source: 190 tests; no-Torch core: 121 passed/16 skipped; final-head CI linked in PR"
+    },
+    {
+      "gate": "M0\u2013M15 training/reconstruction commands",
+      "status": "PASS",
+      "evidence_or_limit": "All completed after preserved guard repairs; 677,557 prediction CSV records exact; all scientific selections/metrics/traces exact"
+    },
+    {
+      "gate": "Structure reconstruction",
+      "status": "PASS",
+      "evidence_or_limit": "All five real M2 source cases rebuilt from pinned cached coordinates"
+    },
+    {
+      "gate": "Selected checkpoint replay",
+      "status": "PASS",
+      "evidence_or_limit": "M7 selected refit; M8\u2013M15 verifiers all succeeded, including actual ESM adapted forward"
+    },
+    {
+      "gate": "Source-matched single/multiple inference",
+      "status": "PASS",
+      "evidence_or_limit": "BBC1 P56N and D45S;N47R through real G3 LoRA; units/interval ineligibility explicit"
+    },
+    {
+      "gate": "Mutation/order/tensor/missingness contracts",
+      "status": "PASS",
+      "evidence_or_limit": "Full suite plus actual graph/sequence replay; mismapped/unknown inputs rejected"
+    },
+    {
+      "gate": "Protein/family leakage controls",
+      "status": "PASS",
+      "evidence_or_limit": "Existing declared role audits replay; test labels excluded from supervised fitting/selection"
+    },
+    {
+      "gate": "Stability units/sign",
+      "status": "PASS",
+      "evidence_or_limit": "Native M6 canonical kcal/mol positive destabilizing; rank/enrichment heads kept separate"
+    },
+    {
+      "gate": "M8 physical OOD stability prediction",
+      "status": "FAIL",
+      "evidence_or_limit": "Extreme extrapolation from near-constant descriptor scaling; prohibited as thermodynamic input; retained negative evidence"
+    },
+    {
+      "gate": "Multitask/assay/confidence/epistasis",
+      "status": "PASS",
+      "evidence_or_limit": "Implemented tested research pathways and negative controls, not claims of improved performance"
+    },
+    {
+      "gate": "Predictive uncertainty",
+      "status": "PARTIAL",
+      "evidence_or_limit": "Model-specific calibrated diagnostics only; one G3 calibration family gives unbounded family-block intervals"
+    },
+    {
+      "gate": "Universal all-extension checkpoint",
+      "status": "PARTIAL",
+      "evidence_or_limit": "Extensions evaluated in separate workflows; no jointly validated universal model"
+    },
+    {
+      "gate": "Complete cold-source reproduction",
+      "status": "PARTIAL",
+      "evidence_or_limit": "External downloads and most frozen activations reused; M1 activations independently regenerated"
+    },
+    {
+      "gate": "CPU versus historical MPS M1 extraction parity",
+      "status": "FAIL",
+      "evidence_or_limit": "Fresh features max 2.9027e-5; refit predictions max 3.62634e-6, exceeding stated 1e-6 tolerance"
+    },
+    {
+      "gate": "External citation availability",
+      "status": "PARTIAL",
+      "evidence_or_limit": "48/49 HEAD requests succeeded; Science DOI 10.1126/science.add2187 returned 403"
+    },
+    {
+      "gate": "Pretraining/family population claims",
+      "status": "PARTIAL",
+      "evidence_or_limit": "Unknown pretraining overlap; four measured families; no universal transfer claim"
+    },
+    {
+      "gate": "Source-code license",
+      "status": "FAIL",
+      "evidence_or_limit": "No LICENSE/COPYING or declared project license; deliberately left unresolved for final review"
+    },
+    {
+      "gate": "Data/model provenance/licenses",
+      "status": "PASS",
+      "evidence_or_limit": "Source-specific pinned attribution; MIT/CC BY/AFL/CC0 distinctions retained"
+    },
+    {
+      "gate": "Credentials/large weight archives/local release paths",
+      "status": "PASS",
+      "evidence_or_limit": "No pattern matches or tracked weights/arrays/archives; no private paths in release docs; limited pattern scan"
+    },
+    {
+      "gate": "Local links",
+      "status": "PASS",
+      "evidence_or_limit": "62 Markdown documents checked, zero unresolved local/case targets; external URLs assessed separately"
+    },
+    {
+      "gate": "Independent security/dependency vulnerability audit",
+      "status": "PARTIAL",
+      "evidence_or_limit": "pip consistency/CI only; no complete security certification"
+    },
+    {
+      "gate": "Tag/release and final review",
+      "status": "PARTIAL",
+      "evidence_or_limit": "Intentionally unpublished; final qualification PR requires review"
+    }
+  ]
+}

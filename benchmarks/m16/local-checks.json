@@ -10,5 +10,7 @@
     "strict historical prediction comparison",
     "bounded source-matched mutation lookup",
     "case-sensitive local links and credential-pattern false positives"
-  ]
+  ],
+  "final_local_suite": "190 passed in 12.65s",
+  "final_format": "all Python files passed"
 }

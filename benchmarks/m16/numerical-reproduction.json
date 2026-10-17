@@ -1,0 +1,198 @@
+{
+  "m0": {
+    "test_predictions.csv": {
+      "status": "PASS",
+      "rows": 702,
+      "maximum_absolute_difference": 0.0
+    },
+    "metrics.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    }
+  },
+  "m1": {
+    "test_predictions.csv": {
+      "status": "PASS",
+      "rows": 702,
+      "maximum_absolute_difference": 0.0
+    },
+    "metrics.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    }
+  },
+  "m3": {
+    "baseline_predictions.csv": {
+      "status": "PASS",
+      "rows": 12600,
+      "maximum_absolute_difference": 0.0
+    },
+    "test_predictions.csv": {
+      "status": "PASS",
+      "rows": 21000,
+      "maximum_absolute_difference": 0.0
+    },
+    "runs.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    },
+    "baseline_runs.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    }
+  },
+  "m4": {
+    "predictions.csv": {
+      "status": "PASS",
+      "rows": 18700,
+      "maximum_absolute_difference": 0.0
+    },
+    "runs.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    }
+  },
+  "m5": {
+    "predictions.csv": {
+      "status": "PASS",
+      "rows": 27902,
+      "maximum_absolute_difference": 0.0
+    },
+    "runs.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    }
+  },
+  "m6": {
+    "predictions.csv": {
+      "status": "PASS",
+      "rows": 18900,
+      "maximum_absolute_difference": 0.0
+    },
+    "runs.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    }
+  },
+  "m7": {
+    "predictions.csv": {
+      "status": "PASS",
+      "rows": 73134,
+      "maximum_absolute_difference": 0.0
+    },
+    "runs.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    }
+  },
+  "m8": {
+    "predictions.csv": {
+      "status": "PASS",
+      "rows": 161433,
+      "maximum_absolute_difference": 0.0
+    },
+    "runs.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    }
+  },
+  "m9": {
+    "predictions.csv": {
+      "status": "PASS",
+      "rows": 28566,
+      "maximum_absolute_difference": 0.0
+    },
+    "metrics.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    },
+    "runs.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    }
+  },
+  "m10": {
+    "predictions.csv": {
+      "status": "PASS",
+      "rows": 29808,
+      "maximum_absolute_difference": 0.0
+    },
+    "metrics.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    },
+    "runs.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    }
+  },
+  "m11": {
+    "epistasis_predictions.csv": {
+      "status": "PASS",
+      "rows": 19656,
+      "maximum_absolute_difference": 0.0
+    },
+    "predictions.csv": {
+      "status": "PASS",
+      "rows": 28080,
+      "maximum_absolute_difference": 0.0
+    },
+    "metrics.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    },
+    "runs.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    }
+  },
+  "m12": {
+    "predictions.csv": {
+      "status": "PASS",
+      "rows": 23296,
+      "maximum_absolute_difference": 0.0
+    },
+    "runs.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    }
+  },
+  "m13": {
+    "calibration_predictions.csv": {
+      "status": "PASS",
+      "rows": 38232,
+      "maximum_absolute_difference": 0.0
+    },
+    "predictions.csv": {
+      "status": "PASS",
+      "rows": 32388,
+      "maximum_absolute_difference": 0.0
+    },
+    "runs.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    }
+  },
+  "m14": {
+    "predictions.csv": {
+      "status": "PASS",
+      "rows": 85882,
+      "maximum_absolute_difference": 0.0
+    },
+    "metrics.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    }
+  },
+  "m15": {
+    "predictions.csv": {
+      "status": "PASS",
+      "rows": 56576,
+      "maximum_absolute_difference": 0.0
+    },
+    "metrics.json": {
+      "status": "PASS",
+      "scientific_fields_exact": true
+    }
+  }
+}

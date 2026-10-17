@@ -111,6 +111,26 @@ def commands(phase, output):
             ("pip-check", [py, "-m", "pip", "check"]),
             ("cli-help", [py, "-m", "proteinmod.cli", "--help"]),
         ]
+    if phase == "reports":
+        result = [("m9-fresh-shift-audit", [py, "scripts/audit_m9.py", "--input", "runs/m16-m9"])]
+        result += [
+            (
+                f"m{n}-report",
+                [
+                    py,
+                    f"scripts/report_m{n}.py",
+                    "--input",
+                    f"runs/m16-m{n}",
+                    "--output",
+                    f"runs/m16-m{n}",
+                ],
+            )
+            for n in (9, 10, 11)
+        ]
+        return result + [
+            ("m14-report", [py, "-m", "proteinmod.edge_report", "--directory", "runs/m16-m14"]),
+            ("m15-report", [py, "scripts/report_m15.py", "--directory", "runs/m16-m15"]),
+        ]
     if phase == "replay":
         result = [
             ("m5-m6-reference-replay", [py, "scripts/replay_m7_references.py"]),
@@ -202,7 +222,7 @@ def commands(phase, output):
 
 def main():
     parser = argparse.ArgumentParser(__doc__)
-    parser.add_argument("phase", choices=("tests", "replay", "refit", "compare"))
+    parser.add_argument("phase", choices=("tests", "replay", "refit", "reports", "compare"))
     args = parser.parse_args()
     output = Path("runs/m16") / args.phase
     output.mkdir(parents=True, exist_ok=False)
