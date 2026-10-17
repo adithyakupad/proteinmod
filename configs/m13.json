@@ -1,0 +1,84 @@
+{
+  "schema": "m13-uncertainty-v1",
+  "output": "runs/m13",
+  "cache": "data/cache/m13",
+  "m12_config": {
+    "path": "configs/m12.json",
+    "sha256": "2cc1e0caeced858e805189bda4c963dd952784283e268666aa935e4c79a28184"
+  },
+  "m6_config": {
+    "path": "configs/m6.json",
+    "sha256": "d0f5611dec8cfa1c6748b25f160f58bd3b763c2fd3e8acf311b16c3c880543c5"
+  },
+  "nominal_levels": [
+    0.8,
+    0.9
+  ],
+  "retained_fractions": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "replicates": [
+    0,
+    1
+  ],
+  "ensemble_seeds": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      3,
+      4,
+      5
+    ]
+  ],
+  "bootstrap_members": 12,
+  "bootstrap_seed": 13000,
+  "calibration_salt": "m13-calibration-v1",
+  "g1_calibration_native_per_protein": 12,
+  "native_scale_floor_kcal_mol": 0.05,
+  "distance_floor": 0.05,
+  "native_affine_alpha": 1e-08,
+  "ridge_models": [
+    "sequence",
+    "esm_sites",
+    "structural"
+  ],
+  "neural_modes": [
+    "structure_only",
+    "weighted_fusion",
+    "bidirectional"
+  ],
+  "methods": [
+    "validation_residual",
+    "calibration_residual",
+    "ensemble_scaled",
+    "distance_scaled",
+    "shuffled_scaled",
+    "ensemble_normal"
+  ],
+  "g3_family_block_audit": true,
+  "m6_native_control": {
+    "enabled": true,
+    "models": [
+      "physicochemical_ridge",
+      "esm_sites_ridge",
+      "structural_ridge"
+    ],
+    "s1_calibration_per_protein": 60,
+    "s2_calibration_from_training": 120
+  },
+  "similarity_bins": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.000001
+  ],
+  "scope": "No label-scale fitting on held-out proteins/families. M12 ordinal diagnostics on unchanged test IDs; native intervals only on independently verified primary single-mutant M6-table labels. Native affine heads use training labels only. No claim of measured aleatoric variance or OOD coverage guarantee."
+}

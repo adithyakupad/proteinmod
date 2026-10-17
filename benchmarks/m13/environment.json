@@ -1,0 +1,30 @@
+{
+  "config_sha256": "3690b911c08f0a5328adb237530252c1ec770918398214a4a0eb8dc11d0567ac",
+  "python": "3.12.15",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.14.1",
+    "transformers": "4.57.6",
+    "biopython": "1.88"
+  },
+  "device": "deterministic CPU fits; previously cached frozen MPS ESM tokens",
+  "seeds": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      3,
+      4,
+      5
+    ]
+  ],
+  "bootstrap_seed": 13000,
+  "elapsed_seconds": 109.09323812508956,
+  "max_rss_bytes": 732708864,
+  "git_revision": "32e2c6c27ab4a15e804d10996d39360b3c2c76f1"
+}
