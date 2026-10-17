@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "proteinmod"
 version = "0.1.0"
-description = "Reproducible FLIP2 mutation-effect baselines"
+description = "Reproducible protein mutation-effect research benchmarks"
 requires-python = ">=3.11,<3.15"
 dependencies = ["numpy>=2.0,<3", "scipy>=1.14,<2", "scikit-learn>=1.5,<2"]
 

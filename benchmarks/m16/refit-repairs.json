@@ -1,0 +1,48 @@
+[
+  {
+    "name": "m12-canonical-refit",
+    "command": [
+      "python",
+      "scripts/refit_locked_m16.py",
+      "12"
+    ],
+    "exit_code": 0,
+    "seconds": 89.24370404100046
+  },
+  {
+    "name": "m13-canonical-refit",
+    "command": [
+      "python",
+      "scripts/refit_locked_m16.py",
+      "13"
+    ],
+    "exit_code": 0,
+    "seconds": 145.39398362510838
+  },
+  {
+    "name": "m10-prepare",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.reliability_experiments",
+      "prepare",
+      "--config",
+      "runs/m16/refit/m10-config.json"
+    ],
+    "exit_code": 0,
+    "seconds": 5.829259457997978
+  },
+  {
+    "name": "m10-run",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.reliability_experiments",
+      "run",
+      "--config",
+      "runs/m16/refit/m10-config.json"
+    ],
+    "exit_code": 0,
+    "seconds": 14.063492791960016
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "m12": {
+    "unique_selected_checkpoint_files": 117,
+    "all_tensor_or_array_values_identical": true,
+    "canonical_source_checkout_clean": true
+  },
+  "m13": {
+    "unique_selected_checkpoint_files": 336,
+    "all_tensor_or_array_values_identical": true,
+    "canonical_source_checkout_clean": true
+  }
+}

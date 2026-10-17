@@ -1,0 +1,91 @@
+[
+  {
+    "name": "m7-refit-selected",
+    "command": [
+      "python",
+      "scripts/verify_m7.py"
+    ],
+    "exit_code": 0,
+    "seconds": 20.61500949994661
+  },
+  {
+    "name": "m8-replay",
+    "command": [
+      "python",
+      "scripts/verify_m8.py"
+    ],
+    "exit_code": 0,
+    "seconds": 4.679215707816184
+  },
+  {
+    "name": "m9-replay",
+    "command": [
+      "python",
+      "scripts/verify_m9.py"
+    ],
+    "exit_code": 0,
+    "seconds": 3.9532963749952614
+  },
+  {
+    "name": "m10-replay",
+    "command": [
+      "python",
+      "scripts/verify_m10.py"
+    ],
+    "exit_code": 0,
+    "seconds": 3.936504832934588
+  },
+  {
+    "name": "m11-replay",
+    "command": [
+      "python",
+      "scripts/verify_m11.py"
+    ],
+    "exit_code": 0,
+    "seconds": 4.266848500119522
+  },
+  {
+    "name": "m12-replay",
+    "command": [
+      "python",
+      "scripts/verify_m12.py",
+      "--directory",
+      "runs/m16/replay/m12-evidence"
+    ],
+    "exit_code": 0,
+    "seconds": 1.343339208047837
+  },
+  {
+    "name": "m13-replay",
+    "command": [
+      "python",
+      "scripts/verify_m13.py",
+      "--directory",
+      "runs/m16/replay/m13-evidence"
+    ],
+    "exit_code": 0,
+    "seconds": 31.353867541067302
+  },
+  {
+    "name": "m14-replay",
+    "command": [
+      "python",
+      "scripts/verify_m14.py",
+      "--directory",
+      "runs/m16/replay/m14-evidence"
+    ],
+    "exit_code": 0,
+    "seconds": 19.32899979199283
+  },
+  {
+    "name": "m15-replay",
+    "command": [
+      "python",
+      "scripts/verify_m15.py",
+      "--directory",
+      "runs/m16/replay/m15-evidence"
+    ],
+    "exit_code": 0,
+    "seconds": 17.25628695799969
+  }
+]
