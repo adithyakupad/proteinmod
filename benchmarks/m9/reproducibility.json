@@ -1,0 +1,8 @@
+{
+  "full_repeat_prediction_csv_identical": true,
+  "full_repeat_metrics_and_selections_identical": true,
+  "prediction_sha256": "44f3621c1dfbd0d62434a22de10a8f1e9b6bf1a2247fdbf29b3c70bcdd8d5e60",
+  "repeat_prediction_sha256": "44f3621c1dfbd0d62434a22de10a8f1e9b6bf1a2247fdbf29b3c70bcdd8d5e60",
+  "cases_per_run": 92,
+  "repeat_runtime_seconds": 11.908868832979351
+}

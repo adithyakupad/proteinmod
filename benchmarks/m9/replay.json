@@ -1,0 +1,8 @@
+{
+  "saved_heads": 60,
+  "neural_test_predictions": 22356,
+  "max_absolute_replay_error": 0.0,
+  "matched_test_ids_all_92_cases": true,
+  "historical_files_unchanged": 199,
+  "stability_scalar_inputs": false
+}

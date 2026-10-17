@@ -1,0 +1,343 @@
+{
+  "schema": "m9-crossed-assays-v1",
+  "output": "runs/m9",
+  "cache": "data/cache/m9",
+  "archive": {
+    "url": "https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/DMS_ProteinGym_substitutions.zip",
+    "etag": "\"2907348-6329ff6970941\"",
+    "archive_bytes": 43021128,
+    "downloaded_bytes": 509047
+  },
+  "reference_catalog": {
+    "path": "data/cache/m9/source/proteingym_reference.csv",
+    "sha256": "a8f498011532a74aa9fe556a50555a75e928c5837d19c06a87592ae04049b308",
+    "url": "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+  },
+  "license": "MIT (ProteinGym curated dataset; original study citations retained)",
+  "cap_genotypes_per_protein": 180,
+  "split_fractions": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "split_salt": "m9-crossed-assays-v1",
+  "protein_order": [
+    "PTEN",
+    "CYP2C9",
+    "VKOR1"
+  ],
+  "embedding": {
+    "model": "facebook/esm2_t12_35M_UR50D",
+    "revision": "6fbf070e65b0b7291e7bbcd451118c216cff79d8",
+    "dimension": 480,
+    "device": "auto",
+    "batch_size": 8,
+    "cpu_threads": 4,
+    "model_cache": "data/cache/models",
+    "cache": "data/cache/embeddings"
+  },
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "alphas": [
+    0.1,
+    10.0,
+    100.0
+  ],
+  "pretrained": {
+    "path": "data/cache/m7/checkpoints/7f3a61026493fc8200286e13addd11b3962e153d4fab30c0ea2a96f9f835f794/gb1-1A32-function-1-0.pt",
+    "encoder_tensor_sha256": "8f0ff7aeafdd7e01ec33376a8a3e6448505a0fcaa62a3de731907bb9d5d185fb",
+    "m7_function_fold": "gb1",
+    "m7_stability_fold": "1A32",
+    "seed": 0,
+    "function_training": [
+      "amylase"
+    ],
+    "function_validation": [
+      "nucb"
+    ],
+    "assay_supervision": "M4 only; no M6 stability or M8 outputs"
+  },
+  "training": {
+    "hidden": 16,
+    "max_epochs": 60,
+    "patience": 10,
+    "batch_size": 64,
+    "learning_rate": 0.003,
+    "weight_decay": 0.01,
+    "cpu_threads": 4,
+    "device": "cpu",
+    "scale_floor": 1e-06
+  },
+  "modes": [
+    "zero",
+    "structured",
+    "with_assay_id",
+    "shuffled_train",
+    "protein_proxy"
+  ],
+  "proteins": [
+    {
+      "protein_id": "PTEN",
+      "reference": {
+        "sequence": "MTAIIKEIVSRNKRRYQEDGFDLDLTYIYPNIIAMGFPAERLEGVYRNNIDDVVRFLDSKHKNHYKIYNLCAERHYDTAKFNCRVAQYPFEDHNPPQLELIKPFCEDLDQWLSEDDNHVAAIHCKAGKGRTGVMICAYLLHRGKFLKAQEALDFYGEVRTRDKKGVTIPSQRRYVYYYSYLLKNHLDYRPVALLFHKMMFETIPMFSGGTCNPQFVVCQLKVKIYSSNSGPTRREDKFMYFEFPQPLPVCGDIKVEFFHKQNKMLKKDKMFHFWVNTFFIPGPEETSEKVENGSLCDQEIDSICSIERADNDKEYLVLTLTKNDLDKANKDKANRYFSPNFKVKLYFTKTVEEPSNPEASSSTSVTPDVSDNEPDHYRYSDTTDSDPENEPFDEDQHTQITKV",
+        "sha256": "2675a6cc946076d70342977845afe793269c5987a998382100bede64d1e61b42",
+        "source": "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+      },
+      "structure": {
+        "kind": "local",
+        "format": "pdb",
+        "path": "data/cache/m9/source/PTEN.pdb",
+        "url": "https://alphafold.ebi.ac.uk/files/AF-P60484-F1-model_v6.pdb",
+        "sha256": "58f527376b98af06d772564ef154ac1206d9e90ea53d28e9886e50521aa67d2c",
+        "confidence": "alphafold_plddt",
+        "source": "https://alphafold.ebi.ac.uk/files/AF-P60484-F1-model_v6.pdb",
+        "license": "CC-BY-4.0 AlphaFold DB",
+        "version": 6
+      },
+      "structure_artifacts": "data/cache/m9/graphs/PTEN"
+    },
+    {
+      "protein_id": "CYP2C9",
+      "reference": {
+        "sequence": "MDSLVVLVLCLSCLLLLSLWRQSSGRGKLPPGPTPLPVIGNILQIGIKDISKSLTNLSKVYGPVFTLYFGLKPIVVLHGYEAVKEALIDLGEEFSGRGIFPLAERANRGFGIVFSNGKKWKEIRRFSLMTLRNFGMGKRSIEDRVQEEARCLVEELRKTKASPCDPTFILGCAPCNVICSIIFHKRFDYKDQQFLNLMEKLNENIKILSSPWIQICNNFSPIIDYFPGTHNKLLKNVAFMKSYILEKVKEHQESMDMNNPQDFIDCFLMKMEKEKHNQPSEFTIESLENTAVDLFGAGTETTSTTLRYALLLLLKHPEVTAKVQEEIERVIGRNRSPCMQDRSHMPYTDAVVHEVQRYIDLLPTSLPHAVTCDIKFRNYLIPKGTTILISLTSVLHDNKEFPNPEMFDPHHFLDEGGNFKKSKYFMPFSAGKRICVGEALAGMELFLFLTSILQNFNLKSLVDPKNLDTTPVVNGFASVPPFYQLCFIPV",
+        "sha256": "3f891626b6684fc43355f4146b0d0aad6273d9d39670b42340a49cff79fa8d24",
+        "source": "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+      },
+      "structure": {
+        "kind": "local",
+        "format": "pdb",
+        "path": "data/cache/m9/source/CYP2C9.pdb",
+        "url": "https://alphafold.ebi.ac.uk/files/AF-P11712-F1-model_v6.pdb",
+        "sha256": "ff037d0dfb02ccc1c715cc4659f38c2f1804c479166db38842dfbc6a523e0b7d",
+        "confidence": "alphafold_plddt",
+        "source": "https://alphafold.ebi.ac.uk/files/AF-P11712-F1-model_v6.pdb",
+        "license": "CC-BY-4.0 AlphaFold DB",
+        "version": 6
+      },
+      "structure_artifacts": "data/cache/m9/graphs/CYP2C9"
+    },
+    {
+      "protein_id": "VKOR1",
+      "reference": {
+        "sequence": "MGSTWGSPGWVRLALCLTGLVLSLYALHVKAARARDRDYRALCDVGTAISCSRVFSSRWGRGFGLVEHVLGQDSILNQSNSIFGCIFYTLQLLLGCLRTRWASVLMLLSSLVSLAGSVYLAWILFFVLYDFCIVCITTYAINVSLMWLSFRKVQEPQGKAKRH",
+        "sha256": "f8e6c25683dd1eb29c9ddee6be595cb5ac278018a028b0d07316b906a864763d",
+        "source": "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+      },
+      "structure": {
+        "kind": "local",
+        "format": "pdb",
+        "path": "data/cache/m9/source/VKOR1.pdb",
+        "url": "https://alphafold.ebi.ac.uk/files/AF-Q9BQB6-F1-model_v6.pdb",
+        "sha256": "c6af4431d3fabcaa0c846dbc35b79403e3b09e3e157b1e04bd3726834e75e5c6",
+        "confidence": "alphafold_plddt",
+        "source": "https://alphafold.ebi.ac.uk/files/AF-Q9BQB6-F1-model_v6.pdb",
+        "license": "CC-BY-4.0 AlphaFold DB",
+        "version": 6
+      },
+      "structure_artifacts": "data/cache/m9/graphs/VKOR1"
+    }
+  ],
+  "assays": [
+    {
+      "protein_id": "PTEN",
+      "dataset": {
+        "path": "data/cache/m9/source/PTEN_HUMAN_Matreyek_2021.csv",
+        "archive_member": "DMS_ProteinGym_substitutions/PTEN_HUMAN_Matreyek_2021.csv",
+        "sha256": "1c52aba95950c6d3b1ac8320df4cb99a79ae97353bd43e24c87ef78dbb02e636",
+        "bytes": 2184896
+      },
+      "metadata": {
+        "assay_id": "PTEN_HUMAN_Matreyek_2021",
+        "family": "abundance",
+        "endpoint": "cellular_protein_abundance",
+        "technology": "VAMP_seq",
+        "context": "human_cell",
+        "substrate": "not_applicable",
+        "unit": "assay_specific_ProteinGym_processed_score",
+        "direction": "higher_score_better",
+        "temperature_c": {
+          "value": null,
+          "status": "unavailable"
+        },
+        "ph": {
+          "value": null,
+          "status": "unavailable"
+        },
+        "provenance": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC8518224/",
+          "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+        ]
+      },
+      "raw_phenotype": "score_total",
+      "raw_direction": 1
+    },
+    {
+      "protein_id": "PTEN",
+      "dataset": {
+        "path": "data/cache/m9/source/PTEN_HUMAN_Mighell_2018.csv",
+        "archive_member": "DMS_ProteinGym_substitutions/PTEN_HUMAN_Mighell_2018.csv",
+        "sha256": "d532bed24c80449936dd61cf303225d78e6e9963a58165c1c36dff92c89557e1",
+        "bytes": 3088566
+      },
+      "metadata": {
+        "assay_id": "PTEN_HUMAN_Mighell_2018",
+        "family": "activity",
+        "endpoint": "enzyme_function_proxy",
+        "technology": "yeast_growth_selection",
+        "context": "yeast_cell",
+        "substrate": "lipid_phosphate_growth_surrogate",
+        "unit": "assay_specific_ProteinGym_processed_score",
+        "direction": "higher_score_better",
+        "temperature_c": {
+          "value": null,
+          "status": "unavailable"
+        },
+        "ph": {
+          "value": null,
+          "status": "unavailable"
+        },
+        "provenance": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC5986715/",
+          "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+        ]
+      },
+      "raw_phenotype": "Fitness_score",
+      "raw_direction": 1
+    },
+    {
+      "protein_id": "CYP2C9",
+      "dataset": {
+        "path": "data/cache/m9/source/CP2C9_HUMAN_Amorosi_2021_abundance.csv",
+        "archive_member": "DMS_ProteinGym_substitutions/CP2C9_HUMAN_Amorosi_2021_abundance.csv",
+        "sha256": "1f4ba7b86e88709783b2e68b04c82fe1f305181c164edfff6391369833ad62ad",
+        "bytes": 3259960
+      },
+      "metadata": {
+        "assay_id": "CP2C9_HUMAN_Amorosi_2021_abundance",
+        "family": "abundance",
+        "endpoint": "cellular_protein_abundance",
+        "technology": "VAMP_seq",
+        "context": "human_cell",
+        "substrate": "not_applicable",
+        "unit": "assay_specific_ProteinGym_processed_score",
+        "direction": "higher_score_better",
+        "temperature_c": {
+          "value": null,
+          "status": "unavailable"
+        },
+        "ph": {
+          "value": null,
+          "status": "unavailable"
+        },
+        "provenance": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC8456167/",
+          "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+        ]
+      },
+      "raw_phenotype": "abundance_score",
+      "raw_direction": 1
+    },
+    {
+      "protein_id": "CYP2C9",
+      "dataset": {
+        "path": "data/cache/m9/source/CP2C9_HUMAN_Amorosi_2021_activity.csv",
+        "archive_member": "DMS_ProteinGym_substitutions/CP2C9_HUMAN_Amorosi_2021_activity.csv",
+        "sha256": "2373e6a5aea9ae6431cbfd519733a3ccd5be2c109a60e5e2d59cc5ff39eb6b27",
+        "bytes": 3143321
+      },
+      "metadata": {
+        "assay_id": "CP2C9_HUMAN_Amorosi_2021_activity",
+        "family": "activity",
+        "endpoint": "enzyme_function_proxy",
+        "technology": "click_seq_fluorescent_probe",
+        "context": "yeast_cell",
+        "substrate": "fluorescent_CYP_probe",
+        "unit": "assay_specific_ProteinGym_processed_score",
+        "direction": "higher_score_better",
+        "temperature_c": {
+          "value": null,
+          "status": "unavailable"
+        },
+        "ph": {
+          "value": null,
+          "status": "unavailable"
+        },
+        "provenance": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC8456167/",
+          "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+        ]
+      },
+      "raw_phenotype": "activity_score",
+      "raw_direction": 1
+    },
+    {
+      "protein_id": "VKOR1",
+      "dataset": {
+        "path": "data/cache/m9/source/VKOR1_HUMAN_Chiasson_2020_abundance.csv",
+        "archive_member": "DMS_ProteinGym_substitutions/VKOR1_HUMAN_Chiasson_2020_abundance.csv",
+        "sha256": "04fc7a81a09c372ed14b9ad283c5da7ceed7d51c4d949a13e2c143b6c138a7d5",
+        "bytes": 510816
+      },
+      "metadata": {
+        "assay_id": "VKOR1_HUMAN_Chiasson_2020_abundance",
+        "family": "abundance",
+        "endpoint": "cellular_protein_abundance",
+        "technology": "VAMP_seq",
+        "context": "human_cell",
+        "substrate": "not_applicable",
+        "unit": "assay_specific_ProteinGym_processed_score",
+        "direction": "higher_score_better",
+        "temperature_c": {
+          "value": null,
+          "status": "unavailable"
+        },
+        "ph": {
+          "value": null,
+          "status": "unavailable"
+        },
+        "provenance": [
+          "https://pubmed.ncbi.nlm.nih.gov/32870157/",
+          "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+        ]
+      },
+      "raw_phenotype": "abundance_score",
+      "raw_direction": 1
+    },
+    {
+      "protein_id": "VKOR1",
+      "dataset": {
+        "path": "data/cache/m9/source/VKOR1_HUMAN_Chiasson_2020_activity.csv",
+        "archive_member": "DMS_ProteinGym_substitutions/VKOR1_HUMAN_Chiasson_2020_activity.csv",
+        "sha256": "1aebf00f05b72ade9aa8c6330a89318e3874ea855ae9bef080fe3437cd76729d",
+        "bytes": 132039
+      },
+      "metadata": {
+        "assay_id": "VKOR1_HUMAN_Chiasson_2020_activity",
+        "family": "activity",
+        "endpoint": "enzyme_function_proxy",
+        "technology": "cell_surface_carboxylation_reporter",
+        "context": "human_cell",
+        "substrate": "vitamin_K_dependent_reporter",
+        "unit": "assay_specific_ProteinGym_processed_score",
+        "direction": "higher_score_better",
+        "temperature_c": {
+          "value": null,
+          "status": "unavailable"
+        },
+        "ph": {
+          "value": null,
+          "status": "unavailable"
+        },
+        "provenance": [
+          "https://pubmed.ncbi.nlm.nih.gov/32870157/",
+          "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+        ]
+      },
+      "raw_phenotype": "activity_score",
+      "raw_direction": 1
+    }
+  ]
+}
