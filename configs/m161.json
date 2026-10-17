@@ -1,0 +1,13 @@
+{
+  "schema": "m16.1-portability-v1",
+  "base": "ea6f6ce4cf547fe34bbc729c30cf82216a24d186",
+  "cache": "data/cache/m16.1",
+  "output": "runs/m16.1",
+  "devices": ["cpu", "mps"],
+  "seed": 0,
+  "same_device_probe_rows": 64,
+  "activation_depth": 12,
+  "roundoff_allowance_per_layer": 32,
+  "functional_margin": 0.001,
+  "legacy_absolute_tolerance": 0.000001
+}

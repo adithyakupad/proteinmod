@@ -17,6 +17,7 @@ esm = ["torch>=2.6,<3", "transformers>=4.48,<5", "matplotlib>=3.9,<4"]
 
 [project.scripts]
 proteinmod = "proteinmod.cli:main"
+proteinmod-stability = "proteinmod.stability_inference:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

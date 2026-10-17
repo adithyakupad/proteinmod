@@ -18,6 +18,8 @@ jobs:
         python: ['3.11', '3.12', '3.13', '3.14']
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '${{ matrix.python }}'
@@ -25,6 +27,8 @@ jobs:
       - run: ruff check .
       - run: ruff format --check .
       - run: pytest
+      - run: python scripts/verify_m16_1.py
+        if: matrix.python == '3.12'
   m3-neural-tests:
     runs-on: ubuntu-latest
     steps:

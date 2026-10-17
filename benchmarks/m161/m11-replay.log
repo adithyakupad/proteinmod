@@ -1,0 +1,11 @@
+{
+  "models": 54,
+  "neural_heads": 36,
+  "held_out_predictions": 28080,
+  "factorial_predictions": 19656,
+  "maximum_absolute_replay_error": 0,
+  "model_implied_contrasts_recomputed": true,
+  "matched_test_ids": true,
+  "historical_files_and_configs": 253,
+  "probe_only_labels_fitted": false
+}

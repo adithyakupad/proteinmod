@@ -12,7 +12,11 @@ source-matched substitution experiments, not a universally validated predictor.
 ## Qualification and evidence
 
 **Release qualification: FAIL / HOLD.** Source licensing is deliberately unresolved
-for final review; strict cross-device cold-extraction parity also failed.
+for final review. The original strict cross-device parity failure is preserved.
+M16.1 adds prespecified device-portability qualification, independent core source
+regeneration and a guarded OOD stability export; see the [follow-up report](docs/M16_1.md),
+[updated matrix](benchmarks/m161/QUALIFICATION.md), and [license recommendation](docs/LICENSE_REVIEW.md).
+Apache-2.0 is recommended for owner consideration; no license has been selected.
 
 M0–M15 are consolidated at `7cc4dbbe9c47355d1afa46f6f46f502394e9e999`.
 All ten dependency heads and all ten merge commits passed CI (150 jobs total).
@@ -79,6 +83,11 @@ variants/proteins are rejected. These predictions are training-assay rank output
 For all other model paths, use the [checkpoint replay recipes](docs/M16.md#reproduction)
 which verify masks, roles, metadata and native-unit conventions against held-out outputs.
 There is no single trained checkpoint that jointly includes every research extension.
+
+For safe handling of archived M8 stability outputs, use
+`python -m proteinmod.stability_inference --output runs/safe-stability.json`.
+Unsupported OOD predictions are explicitly null and thermodynamically ineligible;
+raw benchmark files remain diagnostic evidence, not deployable physical predictions.
 
 ## Matched family benchmark highlights
 
