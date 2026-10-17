@@ -129,6 +129,9 @@ def commands(phase, output):
                 (f"m{n}-replay", [py, f"scripts/verify_m{n}.py", "--directory", str(destination)])
             )
         return result
+    for n in range(16):
+        if Path(f"runs/m16-m{n}").exists():
+            raise ValueError(f"Existing qualification output runs/m16-m{n}; preserve it")
     result = [
         ("m0-refit", [py, "-m", "proteinmod.cli", "run", "--output", "runs/m16-m0"]),
         (
@@ -171,7 +174,9 @@ def commands(phase, output):
         13: "uncertainty",
     }
     for n in range(4, 16):
-        if n >= 14:
+        if n in (12, 13):
+            command = [py, "scripts/refit_locked_m16.py", str(n)]
+        elif n >= 14:
             module = "edge" if n == 14 else "lora"
             command = [py, "-m", f"proteinmod.{module}_experiments", "--output", f"runs/m16-m{n}"]
         else:
@@ -189,6 +194,8 @@ def commands(phase, output):
                 if n in (5, 6, 9, 10, 11):
                     command.append("run")
                 command += ["--config", str(path)]
+                if n == 10:
+                    result.append(("m10-feature-rebuild", [*command[:3], "prepare", *command[4:]]))
         result.append((f"m{n}-refit", command))
     return result
 

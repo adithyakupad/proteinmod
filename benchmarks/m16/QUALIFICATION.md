@@ -1,4 +1,6 @@
-# M16 release qualification — PARTIAL / HOLD
+# M16 release qualification — FAIL / HOLD
+
+Bounded research integration/reproduction: PARTIAL until all recorded checks finish.
 
 This is a research-code qualification, not an unrestricted predictor validation.
 No tag/release was published. Final human review and project licensing remain open.
@@ -20,6 +22,7 @@ Evidence baseline: `7cc4dbbe9c47355d1afa46f6f46f502394e9e999`.
 | Mutation/order/tensor/missingness contracts | PASS | Full suite plus actual graph/sequence replay; mismapped/unknown inputs rejected |
 | Protein/family leakage controls | PASS | Existing declared role audits replay; test labels excluded from supervised fitting/selection |
 | Stability units/sign | PASS | Native M6 canonical kcal/mol positive destabilizing; rank/enrichment heads kept separate |
+| M8 physical OOD stability prediction | FAIL | Extreme extrapolation from near-constant descriptor scaling; prohibited as thermodynamic input; retained negative evidence |
 | Multitask/assay/confidence/epistasis | PASS | Implemented tested research pathways and negative controls, not claims of improved performance |
 | Predictive uncertainty | PARTIAL | Model-specific calibrated diagnostics only; one G3 calibration family gives unbounded family-block intervals |
 | Universal all-extension checkpoint | PARTIAL | Extensions evaluated in separate workflows; no jointly validated universal model |
@@ -27,7 +30,7 @@ Evidence baseline: `7cc4dbbe9c47355d1afa46f6f46f502394e9e999`.
 | CPU versus historical MPS M1 extraction parity | FAIL | Fresh features max 2.9027e-5; refit predictions max 3.62634e-6, exceeding stated 1e-6 tolerance |
 | External citation availability | PARTIAL | 48/49 HEAD requests succeeded; Science DOI 10.1126/science.add2187 returned 403 |
 | Pretraining/family population claims | PARTIAL | Unknown pretraining overlap; four measured families; no universal transfer claim |
-| Source-code license | FAIL | No LICENSE/COPYING or declared project license; rights-holder choice required |
+| Source-code license | FAIL | No LICENSE/COPYING or declared project license; deliberately left unresolved for final review |
 | Data/model provenance/licenses | PASS | Source-specific pinned attribution; MIT/CC BY/AFL/CC0 distinctions retained |
 | Credentials/large weight archives/local release paths | PASS | No pattern matches or tracked weights/arrays/archives; no private paths in release docs; limited pattern scan |
 | Local links | PASS | 62 Markdown documents checked, zero unresolved local/case targets; external URLs assessed separately |

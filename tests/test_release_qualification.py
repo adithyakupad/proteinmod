@@ -10,7 +10,7 @@ module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
 
 
-def test_comparison(tmp_path):
+def test_comparison(tmp_path, monkeypatch):
     a, b = tmp_path / "a.csv", tmp_path / "b.csv"
     a.write_text("id,prediction\na,0.5\n")
     b.write_text("id,prediction\na,0.5000001\n")
@@ -27,6 +27,20 @@ def test_comparison(tmp_path):
     repeat = {**original, "seconds": 2, "state_path": "new"}
     assert module.scientific(original) == module.scientific(repeat)
     assert module.scientific(original) != module.scientific({**repeat, "selection": {"alpha": 2}})
+    monkeypatch.chdir(tmp_path)
+    Path("runs/m16-m0").mkdir(parents=True)
+    with pytest.raises(ValueError, match="preserve"):
+        module.commands("refit", tmp_path)
+    locked_spec = importlib.util.spec_from_file_location(
+        "locked", Path(__file__).resolve().parents[1] / "scripts/refit_locked_m16.py"
+    )
+    locked = importlib.util.module_from_spec(locked_spec)
+    locked_spec.loader.exec_module(locked)
+    with pytest.raises(ValueError, match="Only M12/M13"):
+        locked.refit(11)
+    Path("runs/m16-m12").mkdir()
+    with pytest.raises(ValueError, match="preserve"):
+        locked.refit(12)
 
 
 def test_bounded_variant_lookup():

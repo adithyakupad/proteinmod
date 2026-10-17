@@ -1,0 +1,14 @@
+{
+  "clean_main_tests": "187 passed",
+  "clean_m16_tests": "........................................................................ [ 37%]\n........................................................................ [ 75%]\n..............................................                           [100%]\n190 passed in 15.74s",
+  "core_without_torch": "121 passed, 16 skipped, 1 warning in 1.98s",
+  "ruff": "passed",
+  "format": "passed, 180 Python files",
+  "pip_check": "No broken requirements found",
+  "m16_source_commit": "985f2282768e5a675b1c264013de531e8884abf9",
+  "new_test_scope": [
+    "strict historical prediction comparison",
+    "bounded source-matched mutation lookup",
+    "case-sensitive local links and credential-pattern false positives"
+  ]
+}
