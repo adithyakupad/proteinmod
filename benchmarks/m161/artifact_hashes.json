@@ -1,6 +1,8 @@
 {
-  "QUALIFICATION.md": "aa6f704741c6309b5991ddc17efa97449e39431111c11419910ef217182b0b5f",
+  "QUALIFICATION.md": "e503e14fb30b146191f740a572713f399939a9409f86c29e6bc5d8abf1c425e0",
   "acquisition.json": "9e8b417c68d69ad168ef69c790a1808fa2df1df7c78e8dd3c4365db5edbb21c1",
+  "ci-verification.json": "45f457cd3a69642d726267a9037218298154ddd8a4eb5471e532389b031cdec4",
+  "clean-checkout-tests.log": "280d69febd0ff283d99cadb600aa15def3ae47ce42919bf823e5b84f073c9fb7",
   "cold-sources.json": "f34a3ce1de9e9a683db2c6a1370f6b9a3e984a44d433fcc0b29bd07df1ef4538",
   "cpu-learning_curve_summary.csv": "7b2224da4aaf93006aadaa5e8009c288ca86b594973859c309b30ce8343ecba9",
   "cpu-metrics.json": "52bb3ad6ea484168212ae88e975ba06aae470d35c0ce56c3cec179ed1c9c438e",

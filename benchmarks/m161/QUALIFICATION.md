@@ -21,7 +21,7 @@ Numerical results and final verification records are in this directory; the orig
 | OOD physical model validity | FAIL | Native M6 models not qualified for M8 function proteins |
 | Historical checkpoint/leakage replay | PASS | M5–M15 selected states/roles replayed; bookkeeping attempts retained |
 | Local tests/Ruff/dependencies | PASS | 192 tests; Ruff/format and pip check pass |
-| Exact-head CI | PENDING | Verify after publishing draft |
+| Exact-head CI | PASS | 12/12 at 6a64f93; final draft-head checks must stay green: [live PR #34](https://github.com/adithyakupad/proteinmod/pull/34/checks) |
 | Source-code license | FAIL | Apache-2.0 recommended; owner decision reserved; no LICENSE added |
 | Third-party redistribution clearance | PARTIAL | 49 distribution inventory; AFL/CC-BY notices and bundle terms reviewed, final clearance open |
 | Universal combined checkpoint | PARTIAL | Separate evaluated paths; no all-extension inference claim |
