@@ -1,0 +1,18 @@
+{
+  "pytest_passed": 144,
+  "ruff_check": "passed",
+  "ruff_format": "passed",
+  "lightweight_pytest_passed": 96,
+  "lightweight_optional_skips": 10,
+  "full_repeat": "prediction CSV, all metrics and selections identical",
+  "report_only_reproduction": "all text/tables/plots byte-identical",
+  "saved_heads": 96,
+  "replayed_test_rows": 29808,
+  "replayed_numeric_columns_per_row": 6,
+  "maximum_replay_error": 0,
+  "preserved_benchmark_files": 219,
+  "preserved_benchmark_files_and_configs": 233,
+  "m9_real_encoder_replay": "all 1080x100 features exact",
+  "prespecified_commit": "5640337",
+  "m11_implemented": false
+}

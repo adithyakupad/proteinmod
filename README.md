@@ -485,3 +485,45 @@ MPLCONFIGDIR=/tmp/proteinmod-m9-matplotlib python scripts/report_m9.py --input r
 All 199 M0–M8 evidence files remain unchanged. The full repeated experiment produces
 identical predictions and metrics; all 60 saved heads replay exactly. Work is stacked
 on draft PR #16 → #14 → #12, leaving main unchanged. M10 is outside this milestone.
+
+## M10 confidence-aware sequence–structure fusion
+
+M10 distinguishes AlphaFold pLDDT (reference geometry confidence), experimental
+B-factors (Å²), resolution (Å), mapping coverage and missingness. It enables typed
+confidence in the existing frozen GNN input and adds a learned reliability gate over
+bidirectional sequence-query/structure-query experts. Missing structures mask all
+structural attention and force the structural mixing weight to zero. Gate weights
+are neither calibrated predictive uncertainty nor causal biological explanations.
+
+Actual results on the **unchanged M9 G1/G2 six-assay cohort**, three seeds:
+
+| Model | G1 macro Spearman | G2 macro Spearman |
+|---|---:|---:|
+| Neutral-confidence, unconditioned head | .3171 | .3491 |
+| Confidence input | .2420 | .3090 |
+| Weighted late fusion | .2977 | .3443 |
+| Learned reliability gate | .2725 | .3365 |
+| Confidence input + gate | .2354 | .3082 |
+| Zero-confidence gate control | .2856 | .3381 |
+| Shuffled input + gate | .2506 | .3048 |
+
+Confidence did not improve this pilot. Low/high pLDDT slices differ, and the small
+combined-minus-shuffled gain changes sign across seeds. All structures are AlphaFold;
+experimental-source performance and calibrated uncertainty remain untested. Encoder
+weights stay frozen; all new heads use the same raw feature scale, so historical M9
+head scores are not a matched architecture comparison.
+
+```sh
+python -m proteinmod.reliability_experiments prepare --config configs/m10.json
+python -m proteinmod.reliability_experiments run --config configs/m10.json
+python scripts/verify_m10.py --input runs/m10
+MPLCONFIGDIR=/tmp/proteinmod-m10-matplotlib python scripts/report_m10.py --input runs/m10 --output runs/m10
+```
+
+Use existing M9/M7 frozen caches first; see the [protocol](docs/m10_protocol.md),
+[results/failure analysis](benchmarks/m10/REPORT.md), [quality slices](benchmarks/m10/quality_slices.csv)
+and [gate diagnostics](benchmarks/m10/gates.csv). The 96 fits produce29,808 matched
+held-out predictions and the same number of missing-structure stress predictions.
+A full repeat is exact; all saved predictions/gates/fallbacks replay exactly. All219
+M0–M9 evidence files and old configurations remain unchanged. No M8 OOD stability
+values are used. Work is stacked on #18 → #16 → #14 → #12; no M11 implementation.
