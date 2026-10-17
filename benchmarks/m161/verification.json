@@ -1,0 +1,15 @@
+{
+  "pytest_passed": 192,
+  "ruff_check": "PASS",
+  "ruff_format": "PASS",
+  "pip_check": "PASS",
+  "wheel_build": "PASS",
+  "wheel_sha256": "1ca260a6f999c9beabc6c3f15c87a4dd4165e1b6234532889bf9a972b067eb4b",
+  "full_cold_all_milestones": false,
+  "same_device_training_refits": "M16 evidence inherited, not repeated here",
+  "initial_attempts": [
+    "M10/M11 config naming inventory mismatch; corrected both PASS",
+    "Replay snapshot preservation assertion interrupted by config rename; M13-M15 rerun PASS",
+    "Source audit staged-rename and unfinished-link failures corrected before final verification"
+  ]
+}

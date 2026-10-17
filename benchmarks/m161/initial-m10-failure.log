@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/adithyaupad/Developer/proteinmod/scripts/verify_m10.py", line 91, in <module>
+    verify(parser.parse_args().input)
+  File "/Users/adithyaupad/Developer/proteinmod/scripts/verify_m10.py", line 21, in verify
+    assert audit["history"] == history()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

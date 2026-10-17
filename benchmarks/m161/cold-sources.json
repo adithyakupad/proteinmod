@@ -1,0 +1,973 @@
+{
+  "structures": {
+    "ubiquitin_m2": {
+      "accepted": true,
+      "chain": "A",
+      "reference_length": 76,
+      "coordinate_coverage": 1.0,
+      "aligned_identity": 1.0,
+      "exact_compatible_positions": 76,
+      "differences": [],
+      "missing_positions": [],
+      "edges": 326,
+      "variants": 3,
+      "output": "runs/m16.1/sources/ubiquitin_m2"
+    },
+    "ubiquitin_m2_pdb": {
+      "accepted": true,
+      "chain": "A",
+      "reference_length": 76,
+      "coordinate_coverage": 1.0,
+      "aligned_identity": 1.0,
+      "exact_compatible_positions": 76,
+      "differences": [],
+      "missing_positions": [],
+      "edges": 326,
+      "variants": 3,
+      "output": "runs/m16.1/sources/ubiquitin_m2_pdb"
+    }
+  },
+  "format_comparison": {
+    "passed": true,
+    "max_ca_coordinate_difference_a": 0.0,
+    "max_rsa_difference": 0.0,
+    "identical_contact_edges": 326
+  },
+  "stability_rows": 1800,
+  "stability_audit": {
+    "available_by_protein": {
+      "1LP1": 990,
+      "1A32": 1134,
+      "1TUD": 1080
+    },
+    "excluded": [
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:K1C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2521
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:F2C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2522
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:N3C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2523
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:K4C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2524
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:E5C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2525
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:L6C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2526
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:S7C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2527
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:V8C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2528
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:A9C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2529
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:G10C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2530
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:R11C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2531
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:E12C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2532
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:I13C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2533
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:V14C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2534
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:T15C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2535
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:L16C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2536
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:P17C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2537
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:N18C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2538
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:L19C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2539
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:N20C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2540
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:D21C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2541
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:P22C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2542
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:Q23C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2543
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:K24C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2544
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:K25C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2545
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:A26C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2546
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:F27C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2547
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:I28C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2548
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:F29C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2549
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:S30C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2550
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:L31C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2551
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:W32C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2552
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:D33C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2553
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:D34C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2554
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:P35C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2555
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:S36C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2556
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:Q37C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2557
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:S38C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2558
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:A39C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2559
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:N40C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2560
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:L41C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2561
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:L42C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2562
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:A43C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2563
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:E44C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2564
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:A45C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2565
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:K46C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2566
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:K47C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2567
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:L48C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2568
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:N49C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2569
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:D50C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2570
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:A51C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2571
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:Q52C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2572
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:A53C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2573
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:P54C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2574
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1LP1:K55C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 2575
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:S1C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5426
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:P2C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5427
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:E3C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5428
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:V4C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5429
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:Q5C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5430
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:I6C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5431
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:A7C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5432
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:I8C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5433
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:L9C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5434
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:T10C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5435
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:E11C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5436
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:Q12C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5437
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:I13C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5438
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:N14C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5439
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:N15C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5440
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:L16C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5441
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:N17C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5442
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:E18C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5443
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:H19C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5444
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:L20C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5445
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:R21C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5446
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:V22C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5447
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:H23C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5448
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:K24C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5449
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:K25C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5450
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:D26C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5451
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:H27C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5452
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:H28C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5453
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:S29C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5454
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:R30C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5455
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:R31C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5456
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:G32C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5457
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:L33C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5458
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:L34C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5459
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:K35C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5460
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:M36C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5461
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:V37C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5462
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:G38C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5463
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:K39C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5464
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:R40C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5465
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:R41C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5466
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:R42C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5467
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:L43C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5468
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:L44C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5469
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:A45C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5470
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:Y46C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5471
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:L47C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5472
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:R48C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5473
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:N49C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5474
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:K50C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5475
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:D51C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5476
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:V52C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5477
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:A53C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5478
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:R54C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5479
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:Y55C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5480
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:R56C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5481
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:E57C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5482
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:I58C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5483
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:V59C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5484
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:E60C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5485
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:K61C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5486
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:L62C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5487
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1A32:G63C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 5488
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:R1C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6299
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:Q2C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6300
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:G3C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6301
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:F4C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6302
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:V5C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6303
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:P6C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6304
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:A7C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6305
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:A8C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6306
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:Y9C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6307
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:V10C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6308
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:K11C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6309
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:K12C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6310
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:L13C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6311
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:D14C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6312
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:S15C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6313
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:G16C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6314
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:T17C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6315
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:G18C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6316
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:K19C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6317
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:E20C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6318
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:L21C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6319
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:V22C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6320
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:L23C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6321
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:A24C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6322
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:L25C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6323
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:Y26C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6324
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:D27C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6325
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:Y28C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6326
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:Q29C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6327
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:E30C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6328
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:K31C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6329
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:S32C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6330
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:P33C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6331
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:R34C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6332
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:E35C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6333
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:V36C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6334
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:T37C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6335
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:M38C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6336
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:K39C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6337
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:K40C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6338
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:G41C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6339
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:D42C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6340
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:I43C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6341
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:L44C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6342
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:T45C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6343
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:L46C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6344
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:L47C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6345
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:N48C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6346
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:S49C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6347
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:T50C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6348
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:N51C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6349
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:K52C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6350
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:D53C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6351
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:W54C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6352
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:W55C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6353
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:K56C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6354
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:V57C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6355
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:E58C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6356
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:V59C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6357
+      },
+      {
+        "id": "Tsuboyama2023_Fig3_cdna_ddg:1TUD:N60C",
+        "reason": "cysteine_substitution_prespecified",
+        "source_row": 6358
+      }
+    ],
+    "selected_by_protein": {
+      "1LP1": 600,
+      "1A32": 600,
+      "1TUD": 600
+    },
+    "sampling": "Smallest sequence-identity hashes, label-blind cap; 70/15/15 within-protein diagnostic",
+    "source_columns_used": [
+      "pdb_name",
+      "pos",
+      "wt_aa",
+      "ddg_<AA>"
+    ],
+    "source_analysis_features_never_used": [
+      "meanzero_dg_*",
+      "pc*",
+      "5pc_error",
+      "K50*",
+      "author burial/contact/SASA",
+      "GEMME",
+      "WT mean stability"
+    ]
+  },
+  "sources": {
+    "measurements": {
+      "path": "data/cache/m16.1/sources/figure_data.zip",
+      "url": "https://zenodo.org/records/7992926/files/Data_tables_for_figs.zip",
+      "md5": "c4b6a64345e30e1b9e2e40a266d14a68",
+      "sha256": "69f6d5a68ba961759879ab60b3f168b8fad1bce0b0b810ac490fe85001515890"
+    },
+    "structures": {
+      "path": "data/cache/m16.1/sources/structures.zip",
+      "url": "https://zenodo.org/records/7992926/files/AlphaFold_model_PDBs.zip",
+      "md5": "c29317a75f28d008b2718316995902ef",
+      "sha256": "70c6da80c91493b603d4319a16b1f59be0f261dfd2079f0c8710ccb49829575d"
+    }
+  },
+  "seconds": 197.46998112509027,
+  "scope": "Cold source adapter, not native transfer-head retraining"
+}

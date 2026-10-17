@@ -1,0 +1,11 @@
+{
+  "saved_heads": 96,
+  "test_rows": 29808,
+  "replayed_numeric_columns": 6,
+  "maximum_absolute_error": 0,
+  "missing_structure_gate_exactly_zero": true,
+  "all_metrics_recomputed": true,
+  "matched_m9_role_ids": true,
+  "historical_files_and_configs_preserved": 233,
+  "m9_real_encoder_replay_exact": true
+}
