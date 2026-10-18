@@ -1,0 +1,296 @@
+[
+  {
+    "name": "1A32-entity.json",
+    "bytes": 13952,
+    "sha256": "12a5c4be392382fd5df19bbe09f938bf427a77d25b0f355f23bb3280fa07d611",
+    "quarantine": false
+  },
+  {
+    "name": "1A32-pdbe.json",
+    "bytes": 6601,
+    "sha256": "432331da0e595a6951a6ecd07fc8a251d8bcea3138878c9c1a001ecdaa12d1a7",
+    "quarantine": false
+  },
+  {
+    "name": "1A32.cif",
+    "bytes": 115708,
+    "sha256": "b2583a0ace4bb8010f6e7ed00e5ce5bc7fdeac3b239d0a4f097e8dd7c2db6f6c",
+    "quarantine": false
+  },
+  {
+    "name": "1BTL-entity.json",
+    "bytes": 44578,
+    "sha256": "d54d5b19740ff073e6f27dcaa60c7b5caf2c4786f0f5e25260424e96443f6db3",
+    "quarantine": false
+  },
+  {
+    "name": "1BTL-pdbe.json",
+    "bytes": 7821,
+    "sha256": "11be0eaad8c6f4ee433e1c11cd1f21ba2965a5412ced3e588b397dbedc989103",
+    "quarantine": false
+  },
+  {
+    "name": "1LP1-entity.json",
+    "bytes": 9319,
+    "sha256": "5fce6c0e134413ee4dbf517fb847720875bacea7b2e46a6542a6513f7e062df1",
+    "quarantine": false
+  },
+  {
+    "name": "1LP1-pdbe.json",
+    "bytes": 119,
+    "sha256": "b8065576bb0e8c47e6e3b8cb5663c42b2643eb3c8ba0b5b66037eabc87f7d848",
+    "quarantine": false
+  },
+  {
+    "name": "1LP1.cif",
+    "bytes": 159593,
+    "sha256": "5bf7190a08cff55d6af0b794eff95453bac4307af8f387298259bd1bbe3570c7",
+    "quarantine": false
+  },
+  {
+    "name": "1MJC-entity.json",
+    "bytes": 19211,
+    "sha256": "0b6f8e4d35e488ed3893cdd128cf8561e99c309a9342f615fa0e870ad474c1fc",
+    "quarantine": false
+  },
+  {
+    "name": "1MJC-pdbe.json",
+    "bytes": 10570,
+    "sha256": "616b9f685c2452dc7059a588c841009a8ff15892d2d8e4ec9b01695cba9f5621",
+    "quarantine": false
+  },
+  {
+    "name": "1TG0-entity.json",
+    "bytes": 17765,
+    "sha256": "630c6e687fa812eab37b51db3bcbc661c42cf193b232b8bdd6f1e39585ccb657",
+    "quarantine": false
+  },
+  {
+    "name": "1TG0-pdbe.json",
+    "bytes": 3485,
+    "sha256": "750a0d6df5c0bc17d18f85f6a9c04f13abb833e18aadafc7d1770420f8816fa2",
+    "quarantine": false
+  },
+  {
+    "name": "3CI2-entity.json",
+    "bytes": 9458,
+    "sha256": "8c88934622b100c339f28e52b3978cb3596f660eaee81a37706b93a162b2c48c",
+    "quarantine": false
+  },
+  {
+    "name": "3CI2-pdbe.json",
+    "bytes": 4986,
+    "sha256": "6c654e5989a2b9cf66c2773a0b6ecec878f2937036d32a8125fd7c586905139b",
+    "quarantine": false
+  },
+  {
+    "name": "P05766-uniprot.json",
+    "bytes": 10174,
+    "sha256": "4aef99061f35b176ba28f9064a30fb8483ae08cd8845d2f71336af574f91c599",
+    "quarantine": false
+  },
+  {
+    "name": "P0CG63-uniprot.json",
+    "bytes": 35659,
+    "sha256": "b0987c6267a3608e544fac75e771b2f931b95c2cac977b2dd206806fcce863bb",
+    "quarantine": false
+  },
+  {
+    "name": "P38507-uniprot.json",
+    "bytes": 40187,
+    "sha256": "087ca2269e12fe34b6fec8b793d6761b4f10ffd4532113abeb9da17ce5b35ce7",
+    "quarantine": false
+  },
+  {
+    "name": "P62593-uniprot.json",
+    "bytes": 51324,
+    "sha256": "04fb62c54fb899ebe96859771fbf479120287da70d12997e7e856e96927ac11b",
+    "quarantine": false
+  },
+  {
+    "name": "PF00018-entry.json",
+    "bytes": 2632,
+    "sha256": "45c2ac3547704c673125bb7d1289310d6e368b5790328e68218c1e7a153cfb3a",
+    "quarantine": false
+  },
+  {
+    "name": "PF00018-hmm",
+    "bytes": 5440,
+    "sha256": "45056d96e86e4fff92a88d698569b1451619902100acfadbfab48fee12a1e4f3",
+    "quarantine": false
+  },
+  {
+    "name": "PF00235-entry.json",
+    "bytes": 1408,
+    "sha256": "f0301c4f0a95dd6e01a320024f4ec378653dc015c64773397a5fbd95a82ca10b",
+    "quarantine": false
+  },
+  {
+    "name": "PF00235-hmm",
+    "bytes": 14628,
+    "sha256": "b20ef433c69f51016285a73ac177eb3cc75dfb3fdfb3cce5389ca7185a048348",
+    "quarantine": false
+  },
+  {
+    "name": "PF00240-entry.json",
+    "bytes": 4613,
+    "sha256": "a23859466fa90cad43bdb98d4efe2860d5713f4a8ecac0fb368bb332bdeb2630",
+    "quarantine": false
+  },
+  {
+    "name": "PF00240-hmm",
+    "bytes": 8071,
+    "sha256": "e3b192b90648acfb5d21457043e506baec1cec4addf8b87f3527b5dbc0520ce2",
+    "quarantine": false
+  },
+  {
+    "name": "PF00280-entry.json",
+    "bytes": 880,
+    "sha256": "fe48ba4816c58709ca658805e00c7a5a95b88bf473de9a04a1f98ace319d39bb",
+    "quarantine": false
+  },
+  {
+    "name": "PF00280-hmm",
+    "bytes": 7678,
+    "sha256": "26a85bae788672df4e3ea322b8c5a16d73e94d47e15507bc641e98be050c0ab1",
+    "quarantine": false
+  },
+  {
+    "name": "PF00312-entry.json",
+    "bytes": 883,
+    "sha256": "c40849b836dfc143b6ad51a3c810af9dc07d10c7e370217b9943909d5c70a9c7",
+    "quarantine": false
+  },
+  {
+    "name": "PF00312-hmm",
+    "bytes": 8365,
+    "sha256": "3c7bc0c8b41f394fb53232e4f603bc78c56216cf1c0f52f4ac70f854f74e8a2a",
+    "quarantine": false
+  },
+  {
+    "name": "PF00313-entry.json",
+    "bytes": 1213,
+    "sha256": "abcea2239f208aad5aa14cec8b08e2a47cd84aab0dcb09c52f71d3fb2a4aace5",
+    "quarantine": false
+  },
+  {
+    "name": "PF00313-hmm",
+    "bytes": 6925,
+    "sha256": "6e9355eb3169ae27228118e382bdee27cb9f92d8a0996a7d0bf6a26296ef1372",
+    "quarantine": false
+  },
+  {
+    "name": "PF00320-entry.json",
+    "bytes": 3240,
+    "sha256": "efd8ee26c8a0ee3e6f1984c6f83de60375ef5deb5f287b5c97d4974c83247e27",
+    "quarantine": false
+  },
+  {
+    "name": "PF00320-hmm",
+    "bytes": 4117,
+    "sha256": "f918bbe990b4b74e485c243d3fef48f3b6ba3f7bed1dea3b928efc98cc2c842e",
+    "quarantine": false
+  },
+  {
+    "name": "PF00392-entry.json",
+    "bytes": 21401,
+    "sha256": "75b5ab0f25180ecdc4210e518873141d858e5fff800c735bf273855a5e20ba75",
+    "quarantine": false
+  },
+  {
+    "name": "PF00392-hmm",
+    "bytes": 6415,
+    "sha256": "e52bae2d9521653b6adf634636e3a3ec8809c29944496dbc38b50a000550510f",
+    "quarantine": false
+  },
+  {
+    "name": "PF02216-entry.json",
+    "bytes": 1757,
+    "sha256": "283e87b1a209e72eb59343b5c836a2aa72778a1fb5a72555820bb37faf4349f3",
+    "quarantine": false
+  },
+  {
+    "name": "PF02216-hmm",
+    "bytes": 5313,
+    "sha256": "86b9a9b361b5cf55dc4b102012d39871ebfc394bfad94d880faafd8a26cf386a",
+    "quarantine": false
+  },
+  {
+    "name": "TEM1-Data-S1-S4.xlsx",
+    "bytes": 3066061,
+    "sha256": "bcdd031301113ede74652d4e2eba3f03cf48eb46222d92ccab5c8787950aa5d3",
+    "quarantine": true
+  },
+  {
+    "name": "TEM1-genotypes.json",
+    "bytes": 605974,
+    "sha256": "aac37b70ee9e7dc7c03767b8a5fd13f3fbfe410cc47f6e0f59eac3b81614b87d",
+    "quarantine": false
+  },
+  {
+    "name": "TEM1-headers.json",
+    "bytes": 2544,
+    "sha256": "dbb71365aafdee9deafff3f37ba1e4bcc64a62ea7316107020d02de667c83115",
+    "quarantine": false
+  },
+  {
+    "name": "TEM1-primary.xml",
+    "bytes": 151735,
+    "sha256": "6a6e5264fd4f753387f9f540bca4c5a569a74be8c4312a622f310c974f7640fa",
+    "quarantine": true
+  },
+  {
+    "name": "TEM1-supplement-links.json",
+    "bytes": 7709,
+    "sha256": "f42f81da87e96ac0ff736c3c951e52e656b3e8fd412b0fd832119e86dda5c1a7",
+    "quarantine": false
+  },
+  {
+    "name": "TEM1-supplement-manifest.json",
+    "bytes": 798,
+    "sha256": "30b2e6cf878dd0b4998d917c9a60199047194c6b5b9388b8de4600c7132b6867",
+    "quarantine": false
+  },
+  {
+    "name": "TEM1-supplements.zip",
+    "bytes": 6494931,
+    "sha256": "5534885cc700dd25ddac68504c9b1c182702c5b65d60e2cd9dc88aeec261d330",
+    "quarantine": true
+  },
+  {
+    "name": "elife15802-article.json",
+    "bytes": 180715,
+    "sha256": "33374175265f600ccf2e636a4b5ae31395fd62453da8ba73fa5258cfd5161cd5",
+    "quarantine": true
+  },
+  {
+    "name": "fetch-attempt1.json",
+    "bytes": 5107,
+    "sha256": "981bed6c8c856032ad34b5261f3184289e00a93d55bb56d04310cec780e61a1d",
+    "quarantine": false
+  },
+  {
+    "name": "fetch-attempt2.json",
+    "bytes": 1556,
+    "sha256": "69e1afdc795273f6837309b4ef51a94473f137f414b7a06f022173a3e2dd80a9",
+    "quarantine": false
+  },
+  {
+    "name": "fetch-attempt3.json",
+    "bytes": 1427,
+    "sha256": "ae71f1bc58c224e4084200f51efef6ecc28a2b896f59e463093d628a75155d3b",
+    "quarantine": false
+  },
+  {
+    "name": "fetch-attempt4.json",
+    "bytes": 454,
+    "sha256": "a80232e6f348b730c3014e6f899bc08ca395acebd801d9aa0401b2c5bd5c5898",
+    "quarantine": false
+  },
+  {
+    "name": "reciprocal-profiles.json",
+    "bytes": 15504,
+    "sha256": "5ffbc865b7dc2b0fdc26df66bdc595c192947b7903cb512e414b01aab05c5c43",
+    "quarantine": false
+  }
+]

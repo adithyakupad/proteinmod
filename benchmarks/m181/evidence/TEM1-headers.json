@@ -1,0 +1,111 @@
+{
+  "xlsx_sha256": "bcdd031301113ede74652d4e2eba3f03cf48eb46222d92ccab5c8787950aa5d3",
+  "sheets": [
+    {
+      "name": "S1 Codon fitnesses",
+      "sheetId": "10",
+      "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id": "rId1"
+    },
+    {
+      "name": "S2 Missense mutation fitnesses",
+      "sheetId": "11",
+      "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id": "rId2"
+    },
+    {
+      "name": "S3 AA substitution matrix ",
+      "sheetId": "12",
+      "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id": "rId3"
+    },
+    {
+      "name": "S4 k-star effective # of AA",
+      "sheetId": "13",
+      "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id": "rId4"
+    }
+  ],
+  "text_only_first_three_rows": {
+    "S1 Codon fitnesses": [
+      {
+        "A1": "Ambler Position",
+        "B1": "WT codon",
+        "C1": "Mutant codon",
+        "D1": "WT AA",
+        "E1": "Mutant AA",
+        "F1": "Base Changes",
+        "G1": "Sequencing Counts",
+        "T1": "Total Counts",
+        "U1": "Fitness",
+        "V1": "Estimated error in fitness"
+      },
+      {},
+      {
+        "B3": "ATG",
+        "C3": "TAA",
+        "D3": "M",
+        "E3": "*"
+      }
+    ],
+    "S2 Missense mutation fitnesses": [
+      {
+        "A1": "Ambler Position",
+        "B1": "WT AA",
+        "C1": "Mutant AA",
+        "D1": "Sequencing Counts for each sub-library",
+        "Q1": "Total Counts",
+        "R1": "Fitness",
+        "S1": "Estimated error in fitness"
+      },
+      {},
+      {
+        "B3": "M",
+        "C3": "A"
+      }
+    ],
+    "S3 AA substitution matrix ": [
+      {
+        "A1": "Average Fitness"
+      },
+      {
+        "C2": "WT amino acid"
+      },
+      {
+        "C3": "W",
+        "D3": "F",
+        "E3": "Y",
+        "F3": "P",
+        "G3": "M",
+        "H3": "I",
+        "I3": "L",
+        "J3": "V",
+        "K3": "A",
+        "L3": "G",
+        "M3": "C",
+        "N3": "S",
+        "O3": "T",
+        "P3": "Q",
+        "Q3": "N",
+        "R3": "D",
+        "S3": "E",
+        "T3": "H",
+        "U3": "R",
+        "V3": "K"
+      }
+    ],
+    "S4 k-star effective # of AA": [
+      {
+        "A1": "Codon",
+        "B1": "Ambler Position",
+        "C1": "Amino Acid",
+        "D1": "k*o (observed)",
+        "E1": "Number of Missense Mutations With Fitness Data",
+        "F1": "k*"
+      },
+      {
+        "C2": "M"
+      },
+      {
+        "C3": "S"
+      }
+    ]
+  },
+  "numeric_phenotype_cells_accessed": false
+}

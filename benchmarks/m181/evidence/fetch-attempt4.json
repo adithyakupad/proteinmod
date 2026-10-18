@@ -1,0 +1,16 @@
+[
+  {
+    "name": "1BTL-entity.json",
+    "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/1BTL/1",
+    "status": "OK",
+    "sha256": "d54d5b19740ff073e6f27dcaa60c7b5caf2c4786f0f5e25260424e96443f6db3",
+    "bytes": 44578
+  },
+  {
+    "name": "1BTL-pdbe.json",
+    "url": "https://www.ebi.ac.uk/pdbe/api/mappings/1btl",
+    "status": "OK",
+    "sha256": "11be0eaad8c6f4ee433e1c11cd1f21ba2965a5412ced3e588b397dbedc989103",
+    "bytes": 7821
+  }
+]

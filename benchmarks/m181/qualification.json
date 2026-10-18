@@ -1,0 +1,22 @@
+{
+  "baseline_commit": "3eb51fbb25325d6a9a20bccf48211cc834aa5113",
+  "amendment_commit": "ce0e581",
+  "admission": "BLOCKED",
+  "potential_families": [
+    "PF00313",
+    "PF00280",
+    "PF13354"
+  ],
+  "required_confirmatory_families": 4,
+  "models_fit": 0,
+  "predictions_generated": 0,
+  "confirmatory_candidate_target_cells_accessed": false,
+  "alternative_source_example_exposure": "Mavor2016 methods; excluded; see exposure-ledger.json",
+  "reasons": [
+    "At most three potential independent test families; original >=3/4 criterion requires four",
+    "TEM1 proposed structure has missing residues and two WT mismatches",
+    "TEM1 noncommercial license and redistribution scope need review"
+  ],
+  "alignment_verdict": "Four original flags retained; bounded profile/fold evidence favors incidental alignment",
+  "no_external_performance_claim": true
+}

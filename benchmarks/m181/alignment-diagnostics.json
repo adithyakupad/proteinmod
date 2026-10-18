@@ -1,0 +1,587 @@
+{
+  "settings": {
+    "cluster_identity_thresholds": [
+      0.4,
+      0.6,
+      0.8
+    ],
+    "min_both_coverage": 0.7,
+    "partial_min_aligned": 25,
+    "partial_min_identity": 0.5,
+    "partial_min_shorter_coverage": 0.6
+  },
+  "pairs": [
+    {
+      "a": "P0A9X9",
+      "b": "BBC1",
+      "global": {
+        "identity": 0.4166666666666667,
+        "aligned": 48,
+        "coverage_a": 0.7384615384615385,
+        "coverage_b": 0.75,
+        "blocks": [
+          [
+            [
+              3,
+              5
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          [
+            [
+              6,
+              14
+            ],
+            [
+              2,
+              10
+            ]
+          ],
+          [
+            [
+              18,
+              19
+            ],
+            [
+              10,
+              11
+            ]
+          ],
+          [
+            [
+              19,
+              21
+            ],
+            [
+              17,
+              19
+            ]
+          ],
+          [
+            [
+              21,
+              25
+            ],
+            [
+              21,
+              25
+            ]
+          ],
+          [
+            [
+              25,
+              37
+            ],
+            [
+              29,
+              41
+            ]
+          ],
+          [
+            [
+              42,
+              45
+            ],
+            [
+              41,
+              44
+            ]
+          ],
+          [
+            [
+              46,
+              48
+            ],
+            [
+              44,
+              46
+            ]
+          ],
+          [
+            [
+              48,
+              52
+            ],
+            [
+              48,
+              52
+            ]
+          ],
+          [
+            [
+              53,
+              54
+            ],
+            [
+              52,
+              53
+            ]
+          ],
+          [
+            [
+              54,
+              60
+            ],
+            [
+              55,
+              61
+            ]
+          ],
+          [
+            [
+              62,
+              65
+            ],
+            [
+              61,
+              64
+            ]
+          ]
+        ],
+        "ambiguous_optimum": true,
+        "identical": 20,
+        "identity_shorter": 0.3125,
+        "identity_longer": 0.3076923076923077,
+        "unpaired_a": 17,
+        "unpaired_b": 16
+      },
+      "local": {
+        "identity": 1.0,
+        "aligned": 3,
+        "coverage_a": 0.046153846153846156,
+        "coverage_b": 0.046875,
+        "blocks": [
+          [
+            [
+              37,
+              40
+            ],
+            [
+              11,
+              14
+            ]
+          ]
+        ],
+        "ambiguous_optimum": true,
+        "identical": 3,
+        "identity_shorter": 0.046875,
+        "identity_longer": 0.046153846153846156,
+        "unpaired_a": 62,
+        "unpaired_b": 61
+      },
+      "original_flag": true
+    },
+    {
+      "a": "P01053",
+      "b": "BBC1",
+      "global": {
+        "identity": 0.42857142857142855,
+        "aligned": 49,
+        "coverage_a": 0.7777777777777778,
+        "coverage_b": 0.765625,
+        "blocks": [
+          [
+            [
+              2,
+              8
+            ],
+            [
+              0,
+              6
+            ]
+          ],
+          [
+            [
+              8,
+              22
+            ],
+            [
+              11,
+              25
+            ]
+          ],
+          [
+            [
+              23,
+              25
+            ],
+            [
+              25,
+              27
+            ]
+          ],
+          [
+            [
+              27,
+              30
+            ],
+            [
+              27,
+              30
+            ]
+          ],
+          [
+            [
+              34,
+              37
+            ],
+            [
+              30,
+              33
+            ]
+          ],
+          [
+            [
+              39,
+              40
+            ],
+            [
+              33,
+              34
+            ]
+          ],
+          [
+            [
+              43,
+              54
+            ],
+            [
+              34,
+              45
+            ]
+          ],
+          [
+            [
+              54,
+              55
+            ],
+            [
+              46,
+              47
+            ]
+          ],
+          [
+            [
+              55,
+              56
+            ],
+            [
+              53,
+              54
+            ]
+          ],
+          [
+            [
+              56,
+              63
+            ],
+            [
+              57,
+              64
+            ]
+          ]
+        ],
+        "ambiguous_optimum": true,
+        "identical": 21,
+        "identity_shorter": 0.3333333333333333,
+        "identity_longer": 0.328125,
+        "unpaired_a": 14,
+        "unpaired_b": 15
+      },
+      "local": {
+        "identity": 0.8,
+        "aligned": 5,
+        "coverage_a": 0.07936507936507936,
+        "coverage_b": 0.078125,
+        "blocks": [
+          [
+            [
+              10,
+              15
+            ],
+            [
+              31,
+              36
+            ]
+          ]
+        ],
+        "ambiguous_optimum": false,
+        "identical": 4,
+        "identity_shorter": 0.06349206349206349,
+        "identity_longer": 0.0625,
+        "unpaired_a": 58,
+        "unpaired_b": 59
+      },
+      "original_flag": true
+    },
+    {
+      "a": "P01053",
+      "b": "1LP1",
+      "global": {
+        "identity": 0.41304347826086957,
+        "aligned": 46,
+        "coverage_a": 0.7301587301587301,
+        "coverage_b": 0.8363636363636363,
+        "blocks": [
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              2,
+              7
+            ],
+            [
+              1,
+              6
+            ]
+          ],
+          [
+            [
+              10,
+              20
+            ],
+            [
+              6,
+              16
+            ]
+          ],
+          [
+            [
+              20,
+              23
+            ],
+            [
+              22,
+              25
+            ]
+          ],
+          [
+            [
+              25,
+              31
+            ],
+            [
+              25,
+              31
+            ]
+          ],
+          [
+            [
+              31,
+              32
+            ],
+            [
+              34,
+              35
+            ]
+          ],
+          [
+            [
+              41,
+              60
+            ],
+            [
+              35,
+              54
+            ]
+          ],
+          [
+            [
+              62,
+              63
+            ],
+            [
+              54,
+              55
+            ]
+          ]
+        ],
+        "ambiguous_optimum": true,
+        "identical": 19,
+        "identity_shorter": 0.34545454545454546,
+        "identity_longer": 0.30158730158730157,
+        "unpaired_a": 17,
+        "unpaired_b": 9
+      },
+      "local": {
+        "identity": 1.0,
+        "aligned": 4,
+        "coverage_a": 0.06349206349206349,
+        "coverage_b": 0.07272727272727272,
+        "blocks": [
+          [
+            [
+              13,
+              17
+            ],
+            [
+              43,
+              47
+            ]
+          ]
+        ],
+        "ambiguous_optimum": false,
+        "identical": 4,
+        "identity_shorter": 0.07272727272727272,
+        "identity_longer": 0.06349206349206349,
+        "unpaired_a": 59,
+        "unpaired_b": 51
+      },
+      "original_flag": true
+    },
+    {
+      "a": "P01053",
+      "b": "1A32",
+      "global": {
+        "identity": 0.44680851063829785,
+        "aligned": 47,
+        "coverage_a": 0.746031746031746,
+        "coverage_b": 0.746031746031746,
+        "blocks": [
+          [
+            [
+              3,
+              6
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          [
+            [
+              11,
+              15
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          [
+            [
+              18,
+              20
+            ],
+            [
+              7,
+              9
+            ]
+          ],
+          [
+            [
+              23,
+              25
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          [
+            [
+              26,
+              48
+            ],
+            [
+              11,
+              33
+            ]
+          ],
+          [
+            [
+              48,
+              52
+            ],
+            [
+              35,
+              39
+            ]
+          ],
+          [
+            [
+              52,
+              55
+            ],
+            [
+              46,
+              49
+            ]
+          ],
+          [
+            [
+              56,
+              61
+            ],
+            [
+              49,
+              54
+            ]
+          ],
+          [
+            [
+              61,
+              62
+            ],
+            [
+              58,
+              59
+            ]
+          ],
+          [
+            [
+              62,
+              63
+            ],
+            [
+              62,
+              63
+            ]
+          ]
+        ],
+        "ambiguous_optimum": true,
+        "identical": 21,
+        "identity_shorter": 0.3333333333333333,
+        "identity_longer": 0.3333333333333333,
+        "unpaired_a": 16,
+        "unpaired_b": 16
+      },
+      "local": {
+        "identity": 0.8,
+        "aligned": 5,
+        "coverage_a": 0.07936507936507936,
+        "coverage_b": 0.07936507936507936,
+        "blocks": [
+          [
+            [
+              23,
+              28
+            ],
+            [
+              1,
+              6
+            ]
+          ]
+        ],
+        "ambiguous_optimum": false,
+        "identical": 4,
+        "identity_shorter": 0.06349206349206349,
+        "identity_longer": 0.06349206349206349,
+        "unpaired_a": 58,
+        "unpaired_b": 58
+      },
+      "original_flag": true
+    }
+  ]
+}

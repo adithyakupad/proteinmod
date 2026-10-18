@@ -1,0 +1,51 @@
+[
+  {
+    "name": "P05766-uniprot.json",
+    "url": "https://rest.uniprot.org/uniprotkb/P05766.json",
+    "status": "OK",
+    "bytes": 10174,
+    "sha256": "4aef99061f35b176ba28f9064a30fb8483ae08cd8845d2f71336af574f91c599"
+  },
+  {
+    "name": "P38507-uniprot.json",
+    "url": "https://rest.uniprot.org/uniprotkb/P38507.json",
+    "status": "OK",
+    "bytes": 40187,
+    "sha256": "087ca2269e12fe34b6fec8b793d6761b4f10ffd4532113abeb9da17ce5b35ce7"
+  },
+  {
+    "name": "P0CG63-uniprot.json",
+    "url": "https://rest.uniprot.org/uniprotkb/P0CG63.json",
+    "status": "OK",
+    "bytes": 35659,
+    "sha256": "b0987c6267a3608e544fac75e771b2f931b95c2cac977b2dd206806fcce863bb"
+  },
+  {
+    "name": "P62593-uniprot.json",
+    "url": "https://rest.uniprot.org/uniprotkb/P62593.json",
+    "status": "OK",
+    "bytes": 51324,
+    "sha256": "04fb62c54fb899ebe96859771fbf479120287da70d12997e7e856e96927ac11b"
+  },
+  {
+    "name": "elife15802-article.json",
+    "url": "https://api.elifesciences.org/articles/15802",
+    "status": "OK",
+    "bytes": 180715,
+    "sha256": "33374175265f600ccf2e636a4b5ae31395fd62453da8ba73fa5258cfd5161cd5"
+  },
+  {
+    "name": "1LP1.cif",
+    "url": "https://files.rcsb.org/download/1LP1.cif",
+    "status": "OK",
+    "bytes": 159593,
+    "sha256": "5bf7190a08cff55d6af0b794eff95453bac4307af8f387298259bd1bbe3570c7"
+  },
+  {
+    "name": "1A32.cif",
+    "url": "https://files.rcsb.org/download/1A32.cif",
+    "status": "OK",
+    "bytes": 115708,
+    "sha256": "b2583a0ace4bb8010f6e7ed00e5ce5bc7fdeac3b239d0a4f097e8dd7c2db6f6c"
+  }
+]

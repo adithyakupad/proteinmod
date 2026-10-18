@@ -1,0 +1,23 @@
+{
+  "pytest": "201 passed, 1 warning in 26.89s",
+  "ruff_check": "PASS",
+  "ruff_format": "224 files PASS",
+  "pip_check": "PASS",
+  "m161": "PASS",
+  "m17": {
+    "fits": 1096,
+    "predictions": 34304,
+    "roles_and_metrics": "PASS",
+    "state_replay": "not rerun"
+  },
+  "m18": "PASS immutable blocked-admission evidence",
+  "profile_replay": "25 pairs, exact scores and spans; max absolute difference0",
+  "TEM1_primary_replay": "5740 metadata rows,5434 canonical non-WT substitutions; R/S not decoded",
+  "python": "3.12.15",
+  "new_model_fits": 0,
+  "candidate_target_cells_accessed": false,
+  "historical_hashes": 563,
+  "limits": "No external prediction or cold independent-operator validation; Mavor methods example-output exposure recorded; no MPS replay",
+  "clean_PR38_baseline": "198 passed, 1 warning in25.57s; git archive3eb51fb with baseline src first on PYTHONPATH, same installed environment",
+  "historical_artifact_audit": "PASS379 original blobs,12 artifact manifests inclM18.1;563 parent benchmark/config/source hashes exact"
+}

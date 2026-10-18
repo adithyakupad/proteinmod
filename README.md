@@ -135,3 +135,5 @@ The [historical README](HISTORICAL_README.md) preserves the original milestone n
 all historical benchmark files and configurations remain unchanged.
 
 M18 external qualification is [blocked before label access](benchmarks/m18/REPORT.md): primary abundance-assay lineage is traced, but four historical sequence-similarity flags remain unresolved. No independent external performance is claimed.
+
+M18.1 adds [blinded homology/profile adjudication and a primary TEM-1 lineage audit](benchmarks/m181/REPORT.md). The four original flags remain recorded; confirmation is blocked because fewer than four test families are qualified.
