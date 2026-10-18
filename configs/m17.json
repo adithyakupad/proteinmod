@@ -1,0 +1,14 @@
+{
+  "schema": "m17-mechanism-v1",
+  "base": "0908f90727bf36c0c5de7bdf7f591656efb27022",
+  "seeds": [0, 1, 2, 3, 4],
+  "fractions": [0.1, 0.25, 0.5, 1.0],
+  "alphas": [0.1, 10.0, 100.0],
+  "output": "runs/m17",
+  "cache": "data/cache/m17",
+  "graph_fractions": [0.25, 1.0],
+  "training": {"hidden": 16, "layers": 2, "learning_rate": 0.003, "weight_decay": 0.01, "max_epochs": 12, "patience": 4, "batch_size": 32, "cpu_threads": 4, "device": "cpu"},
+  "hypothesis_margin_rho": 0.02,
+  "controls_seed": 314159,
+  "external_source": {"url": "https://zenodo.org/records/18433203/files/hydro/three_to_many.csv.gz?download=1", "md5": "a13b01d71faf2e76dd91dc57b7311972", "path": "data/cache/m17/source/hydro.csv.gz", "primary": "https://zenodo.org/records/11175470", "license": "CC-BY-4.0"}
+}
