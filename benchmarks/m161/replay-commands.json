@@ -1,0 +1,85 @@
+[
+  {
+    "name": "m5-m6-reference-replay",
+    "command": [
+      "python",
+      "scripts/replay_m7_references.py"
+    ],
+    "exit_code": 0,
+    "seconds": 8.175454291980714
+  },
+  {
+    "name": "m7-refit-selected",
+    "command": [
+      "python",
+      "scripts/verify_m7.py"
+    ],
+    "exit_code": 0,
+    "seconds": 15.968279791995883
+  },
+  {
+    "name": "m8-source-audit",
+    "command": [
+      "python",
+      "scripts/audit_m8.py"
+    ],
+    "exit_code": 0,
+    "seconds": 8.205941833090037
+  },
+  {
+    "name": "m9-shift-audit",
+    "command": [
+      "python",
+      "scripts/audit_m9.py"
+    ],
+    "exit_code": 0,
+    "seconds": 3.216170708183199
+  },
+  {
+    "name": "m8-replay",
+    "command": [
+      "python",
+      "scripts/verify_m8.py"
+    ],
+    "exit_code": 0,
+    "seconds": 3.7110297500621527
+  },
+  {
+    "name": "m9-replay",
+    "command": [
+      "python",
+      "scripts/verify_m9.py"
+    ],
+    "exit_code": 0,
+    "seconds": 3.7220788749400526
+  },
+  {
+    "name": "m10-replay",
+    "command": [
+      "python",
+      "scripts/verify_m10.py"
+    ],
+    "exit_code": 1,
+    "seconds": 1.5336645829956979
+  },
+  {
+    "name": "m11-replay",
+    "command": [
+      "python",
+      "scripts/verify_m11.py"
+    ],
+    "exit_code": 1,
+    "seconds": 1.5222562921699136
+  },
+  {
+    "name": "m12-replay",
+    "command": [
+      "python",
+      "scripts/verify_m12.py",
+      "--directory",
+      "runs/m16.1/replay/m12-evidence"
+    ],
+    "exit_code": 0,
+    "seconds": 1.499340625014156
+  }
+]

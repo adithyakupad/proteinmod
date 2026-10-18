@@ -1,0 +1,24 @@
+features BBC1 valid 96 excluded 0
+features CBX4 valid 96 excluded 0
+features MYO3 valid 96 excluded 0
+features NKX31 valid 96 excluded 0
+features PIN1 valid 96 excluded 0
+features PITX2 valid 96 excluded 0
+features SAV1 valid 96 excluded 0
+features SR43C valid 96 excluded 0
+{
+  "fits_replayed": 442,
+  "predictions_replayed": 56576,
+  "max_error": 0.0,
+  "historical_files_unchanged": 354,
+  "historical_baseline_predictions_exact": {
+    "benchmarks/m12/predictions.csv": 3328,
+    "benchmarks/m14/predictions.csv": 9984
+  },
+  "full_original_backbone_unchanged": true,
+  "raw_full_adapted_forward_max_error": 0.0,
+  "original_roles_preserved": true,
+  "mutation_order_variants": 768,
+  "full_prefix_parity_max_error": 0.0,
+  "repeat": null
+}

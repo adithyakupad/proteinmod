@@ -1,0 +1,10 @@
+{
+  "scripts/archive_m16_1.py": "4a8aa7b16c9db9a489c06e4c4b095304162a48f5fe9b68e7fd444c53688e3436",
+  "scripts/verify_m16_1.py": "a3b6fe2c6568c2a39264375512f2b5df839ad6e496784680d8087203d3008ee3",
+  "scripts/license_inventory_m16_1.py": "b12f1a04fcab76466f03d987a2590aaa2ff64af8751702fe437f00975f06c0f7",
+  "scripts/reproduce_m16_1.py": "f3b5d292ae32fdd6dc5b34dd95c76add3d105a1fc1405f067e11ebe27c994895",
+  "scripts/cold_sources_m16_1.py": "607d4a6878883b4b70e0e1abda0c4e08f4afe1c6714b2bfbb1619da49db87816",
+  "src/proteinmod/portability.py": "079b9d26be0de0221cdc7debd6d10c36f92033e530d4faf976641e70118bd9f5",
+  "src/proteinmod/stability_inference.py": "3a22d4b231ef51324e0aa7b9bd41dab82e4e158f16c9a75ec53b70d0043f9c30",
+  "configs/m161.json": "bbc9414bc990612833155ac7113d7917dc31c3be9ffeb94a295f977af2e8a819"
+}

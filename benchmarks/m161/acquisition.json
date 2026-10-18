@@ -1,0 +1,11 @@
+{
+  "dataset": "2e76acc9da3ef04a8ccecd8a3f631b84ee2e4e1f0cdea406f18153387b986d04",
+  "checkpoint": {
+    "config.json": "ae07364efa51e0fa1d81da3fe608f6d948abdbbb69785ba6e1df379a458e58ee",
+    "model.safetensors": "e35647818e0e064351d4531ed480d225a002567b4b2b93ad3a9246d753150fc0",
+    "special_tokens_map.json": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1",
+    "tokenizer_config.json": "7e9161ecdb548ec45a41cbc6b24aa4476fdd418461f491c4207baa99419a29ad",
+    "vocab.txt": "0b82cc0a7c7cf9e567b1e5892d793285b9fbae822c964ca48696f7db44598e03"
+  },
+  "cold_cache_initially_absent": true
+}
