@@ -104,7 +104,12 @@ and5,434 canonical non-WT substitutions. Concatenating the **author WT column**,
 variant consensus, exactly matches reviewed UniProt P62593's286aa sequence after removing
 the terminal stop. Ambler numbering skips239 and253; positional labels must not be used
 as contiguous sequence offsets. All mutant symbols are canonical and WT-site assignments
-are consistent. Against all18 historical reference sequences, TEM1 has zero unchanged
+are consistent. These are table-encoded amino-acid substitutions, not proof of the translated
+product at every site: the primary paper notes that start-codon variants are expected to
+initiate with methionine. Position1 therefore cannot be treated as a verified M1 amino-acid
+replacement; it must be excluded from any future protein-substitution cohort before labels.
+Signal-peptide effects and synonymous-codon averaging also make this an assay-specific
+functional measurement rather than an isolated mature-protein activity measurement. Against all18 historical reference sequences, TEM1 has zero unchanged
 review flags and no exact alias; no TEM1/Firnberg target lineage appears in historical
 benchmark/configuration records. This supports a new measured family PF13354, not encoder
 pretraining independence.

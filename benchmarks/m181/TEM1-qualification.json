@@ -5131,5 +5131,7 @@
       "pdb_residue": "V"
     }
   ],
-  "target_fields_accessed": false
+  "target_fields_accessed": false,
+  "genotype_semantic_limit": "Table-encoded amino-acid substitutions; start-codon variants may still initiate with methionine per primary paper. No translated-product validation is claimed.",
+  "future_mandatory_exclusion": "Position1 from protein-substitution interpretation; unresolved structure coverage/mismatches must also be handled prospectively."
 }
