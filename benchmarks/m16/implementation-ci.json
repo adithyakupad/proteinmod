@@ -1,0 +1,42 @@
+{
+  "head": "1174e0510b6628c5cedcdf2c91fd003bc0885a4f",
+  "run_id": 39055058885,
+  "note": "Implementation parent check; final qualification head CI is linked in the draft PR. M16 adds a sixth artifact job after this implementation commit.",
+  "jobs": [
+    {
+      "id": 117461238792,
+      "head_sha": "1174e0510b6628c5cedcdf2c91fd003bc0885a4f",
+      "name": "m3-neural-tests",
+      "conclusion": "success",
+      "html_url": "https://github.com/adithyakupad/proteinmod/actions/runs/39055058885/job/117461238792"
+    },
+    {
+      "id": 117461238850,
+      "head_sha": "1174e0510b6628c5cedcdf2c91fd003bc0885a4f",
+      "name": "offline-tests (3.13)",
+      "conclusion": "success",
+      "html_url": "https://github.com/adithyakupad/proteinmod/actions/runs/39055058885/job/117461238850"
+    },
+    {
+      "id": 117461238902,
+      "head_sha": "1174e0510b6628c5cedcdf2c91fd003bc0885a4f",
+      "name": "offline-tests (3.14)",
+      "conclusion": "success",
+      "html_url": "https://github.com/adithyakupad/proteinmod/actions/runs/39055058885/job/117461238902"
+    },
+    {
+      "id": 117461238998,
+      "head_sha": "1174e0510b6628c5cedcdf2c91fd003bc0885a4f",
+      "name": "offline-tests (3.11)",
+      "conclusion": "success",
+      "html_url": "https://github.com/adithyakupad/proteinmod/actions/runs/39055058885/job/117461238998"
+    },
+    {
+      "id": 117461239010,
+      "head_sha": "1174e0510b6628c5cedcdf2c91fd003bc0885a4f",
+      "name": "offline-tests (3.12)",
+      "conclusion": "success",
+      "html_url": "https://github.com/adithyakupad/proteinmod/actions/runs/39055058885/job/117461239010"
+    }
+  ]
+}

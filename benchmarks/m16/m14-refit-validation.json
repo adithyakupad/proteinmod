@@ -1,0 +1,111 @@
+{
+  "fits_replayed": 391,
+  "fitting_git_revision": "aad6afe7e8f3a9d8c34cc49b04b4838a2ff12e1c",
+  "post_fit_source_changes_verified_against_git": [
+    "src/proteinmod/edge_experiments.py"
+  ],
+  "prediction_records": 85882,
+  "max_prediction_error": 0.0,
+  "historical_files_unchanged": 329,
+  "roles_identical_to_original_m12_m6": true,
+  "extra_exclusions": 0,
+  "real_structure_invariances": [
+    {
+      "cohort": "family",
+      "protein": "BBC1",
+      "node_permutation_max_error": 1.4901161193847656e-08,
+      "frozen_rigid_transform_max_error": 3.0994415283203125e-06,
+      "frozen_node_permutation_max_error": 0.0,
+      "mutation_order_variants": 96
+    },
+    {
+      "cohort": "family",
+      "protein": "CBX4",
+      "node_permutation_max_error": 0.0,
+      "frozen_rigid_transform_max_error": 1.3113021850585938e-06,
+      "frozen_node_permutation_max_error": 0.0,
+      "mutation_order_variants": 96
+    },
+    {
+      "cohort": "family",
+      "protein": "MYO3",
+      "node_permutation_max_error": 7.450580596923828e-09,
+      "frozen_rigid_transform_max_error": 2.2649765014648438e-06,
+      "frozen_node_permutation_max_error": 0.0,
+      "mutation_order_variants": 96
+    },
+    {
+      "cohort": "family",
+      "protein": "NKX31",
+      "node_permutation_max_error": 7.450580596923828e-09,
+      "frozen_rigid_transform_max_error": 2.0265579223632812e-06,
+      "frozen_node_permutation_max_error": 0.0,
+      "mutation_order_variants": 96
+    },
+    {
+      "cohort": "family",
+      "protein": "PIN1",
+      "node_permutation_max_error": 1.4901161193847656e-08,
+      "frozen_rigid_transform_max_error": 3.0025839805603027e-06,
+      "frozen_node_permutation_max_error": 0.0,
+      "mutation_order_variants": 96
+    },
+    {
+      "cohort": "family",
+      "protein": "PITX2",
+      "node_permutation_max_error": 0.0,
+      "frozen_rigid_transform_max_error": 1.3485550880432129e-06,
+      "frozen_node_permutation_max_error": 0.0,
+      "mutation_order_variants": 96
+    },
+    {
+      "cohort": "family",
+      "protein": "SAV1",
+      "node_permutation_max_error": 0.0,
+      "frozen_rigid_transform_max_error": 1.5795230865478516e-06,
+      "frozen_node_permutation_max_error": 0.0,
+      "mutation_order_variants": 96
+    },
+    {
+      "cohort": "family",
+      "protein": "SR43C",
+      "node_permutation_max_error": 1.4901161193847656e-08,
+      "frozen_rigid_transform_max_error": 1.8030405044555664e-06,
+      "frozen_node_permutation_max_error": 0.0,
+      "mutation_order_variants": 96
+    },
+    {
+      "cohort": "native",
+      "protein": "1LP1",
+      "node_permutation_max_error": 0.0,
+      "frozen_rigid_transform_max_error": 1.8775463104248047e-06,
+      "frozen_node_permutation_max_error": 0.0,
+      "mutation_order_variants": 600
+    },
+    {
+      "cohort": "native",
+      "protein": "1A32",
+      "node_permutation_max_error": 0.0,
+      "frozen_rigid_transform_max_error": 2.205371856689453e-06,
+      "frozen_node_permutation_max_error": 0.0,
+      "mutation_order_variants": 600
+    },
+    {
+      "cohort": "native",
+      "protein": "1TUD",
+      "node_permutation_max_error": 0.0,
+      "frozen_rigid_transform_max_error": 1.341104507446289e-06,
+      "frozen_node_permutation_max_error": 0.0,
+      "mutation_order_variants": 600
+    }
+  ],
+  "fresh_repeat": {
+    "fits": 391,
+    "prediction_records": 85882,
+    "max_prediction_error": 0,
+    "all_selection_traces_identical": true,
+    "all_selected_state_values_identical": true,
+    "git_revision": "7cc4dbbe9c47355d1afa46f6f46f502394e9e999",
+    "seconds": 221.43249491602182
+  }
+}

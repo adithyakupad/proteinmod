@@ -1,0 +1,206 @@
+[
+  {
+    "name": "m0-refit",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.cli",
+      "run",
+      "--output",
+      "runs/m16-m0"
+    ],
+    "exit_code": 0,
+    "seconds": 7.481864249799401
+  },
+  {
+    "name": "m1-refit",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.cli",
+      "run-m1",
+      "--config",
+      "configs/amylase_m1.toml",
+      "--output",
+      "runs/m16-m1"
+    ],
+    "exit_code": 0,
+    "seconds": 20.345646957866848
+  },
+  {
+    "name": "m2-rebuild",
+    "command": [
+      "python",
+      "scripts/verify_structures.py",
+      "--output",
+      "runs/m16-m2"
+    ],
+    "exit_code": 0,
+    "seconds": 12.283700291998684
+  },
+  {
+    "name": "m3-refit",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.cli",
+      "run-m3",
+      "--config",
+      "configs/amylase_m3.toml",
+      "--output",
+      "runs/m16-m3"
+    ],
+    "exit_code": 0,
+    "seconds": 256.61642758292146
+  },
+  {
+    "name": "m4-refit",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.cli",
+      "run-m4",
+      "--config",
+      "runs/m16/refit/m4-config.json"
+    ],
+    "exit_code": 0,
+    "seconds": 27.86272820783779
+  },
+  {
+    "name": "m5-refit",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.hybrid_experiments",
+      "run",
+      "--config",
+      "runs/m16/refit/m5-config.json"
+    ],
+    "exit_code": 0,
+    "seconds": 214.08125745807774
+  },
+  {
+    "name": "m6-refit",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.stability_experiments",
+      "run",
+      "--config",
+      "runs/m16/refit/m6-config.json"
+    ],
+    "exit_code": 0,
+    "seconds": 6.032087041065097
+  },
+  {
+    "name": "m7-refit",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.multitask_experiments",
+      "--config",
+      "runs/m16/refit/m7-config.json"
+    ],
+    "exit_code": 0,
+    "seconds": 494.39103045803495
+  },
+  {
+    "name": "m8-refit",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.conditioning_experiments",
+      "--config",
+      "runs/m16/refit/m8-config.json"
+    ],
+    "exit_code": 0,
+    "seconds": 16.474264333955944
+  },
+  {
+    "name": "m9-refit",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.assay_experiments",
+      "run",
+      "--config",
+      "runs/m16/refit/m9-config.json"
+    ],
+    "exit_code": 0,
+    "seconds": 7.048425541026518
+  },
+  {
+    "name": "m10-refit",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.reliability_experiments",
+      "run",
+      "--config",
+      "runs/m16/refit/m10-config.json"
+    ],
+    "exit_code": 1,
+    "seconds": 1.6459901668131351
+  },
+  {
+    "name": "m11-refit",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.epistasis_experiments",
+      "run",
+      "--config",
+      "runs/m16/refit/m11-config.json"
+    ],
+    "exit_code": 0,
+    "seconds": 16.34897708403878
+  },
+  {
+    "name": "m12-refit",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.family_experiments",
+      "--config",
+      "runs/m16/refit/m12-config.json"
+    ],
+    "exit_code": 1,
+    "seconds": 1.152137374971062
+  },
+  {
+    "name": "m13-refit",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.uncertainty_experiments",
+      "--config",
+      "runs/m16/refit/m13-config.json"
+    ],
+    "exit_code": 1,
+    "seconds": 1.165009583113715
+  },
+  {
+    "name": "m14-refit",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.edge_experiments",
+      "--output",
+      "runs/m16-m14"
+    ],
+    "exit_code": 0,
+    "seconds": 222.95625166688114
+  },
+  {
+    "name": "m15-refit",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.lora_experiments",
+      "--output",
+      "runs/m16-m15"
+    ],
+    "exit_code": 0,
+    "seconds": 359.29543716693297
+  }
+]

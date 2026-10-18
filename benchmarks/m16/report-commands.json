@@ -1,0 +1,75 @@
+[
+  {
+    "name": "m9-fresh-shift-audit",
+    "command": [
+      "python",
+      "scripts/audit_m9.py",
+      "--input",
+      "runs/m16-m9"
+    ],
+    "exit_code": 0,
+    "seconds": 2.559917208040133
+  },
+  {
+    "name": "m9-report",
+    "command": [
+      "python",
+      "scripts/report_m9.py",
+      "--input",
+      "runs/m16-m9",
+      "--output",
+      "runs/m16-m9"
+    ],
+    "exit_code": 0,
+    "seconds": 0.5306297920178622
+  },
+  {
+    "name": "m10-report",
+    "command": [
+      "python",
+      "scripts/report_m10.py",
+      "--input",
+      "runs/m16-m10",
+      "--output",
+      "runs/m16-m10"
+    ],
+    "exit_code": 0,
+    "seconds": 1.3003399160224944
+  },
+  {
+    "name": "m11-report",
+    "command": [
+      "python",
+      "scripts/report_m11.py",
+      "--input",
+      "runs/m16-m11",
+      "--output",
+      "runs/m16-m11"
+    ],
+    "exit_code": 0,
+    "seconds": 1.4051420828327537
+  },
+  {
+    "name": "m14-report",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.edge_report",
+      "--directory",
+      "runs/m16-m14"
+    ],
+    "exit_code": 0,
+    "seconds": 1.462069708155468
+  },
+  {
+    "name": "m15-report",
+    "command": [
+      "python",
+      "scripts/report_m15.py",
+      "--directory",
+      "runs/m16-m15"
+    ],
+    "exit_code": 0,
+    "seconds": 1.413653666852042
+  }
+]

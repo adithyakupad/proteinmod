@@ -1,0 +1,64 @@
+[
+  {
+    "name": "m9-report",
+    "command": [
+      "python",
+      "scripts/report_m9.py",
+      "--input",
+      "runs/m16-m9",
+      "--output",
+      "runs/m16-m9"
+    ],
+    "exit_code": 1,
+    "seconds": 0.43297266704030335
+  },
+  {
+    "name": "m10-report",
+    "command": [
+      "python",
+      "scripts/report_m10.py",
+      "--input",
+      "runs/m16-m10",
+      "--output",
+      "runs/m16-m10"
+    ],
+    "exit_code": 0,
+    "seconds": 1.4025539169088006
+  },
+  {
+    "name": "m11-report",
+    "command": [
+      "python",
+      "scripts/report_m11.py",
+      "--input",
+      "runs/m16-m11",
+      "--output",
+      "runs/m16-m11"
+    ],
+    "exit_code": 0,
+    "seconds": 1.4733730831649154
+  },
+  {
+    "name": "m14-report",
+    "command": [
+      "python",
+      "-m",
+      "proteinmod.edge_report",
+      "--directory",
+      "runs/m16-m14"
+    ],
+    "exit_code": 0,
+    "seconds": 1.4743369999341667
+  },
+  {
+    "name": "m15-report",
+    "command": [
+      "python",
+      "scripts/report_m15.py",
+      "--directory",
+      "runs/m16-m15"
+    ],
+    "exit_code": 0,
+    "seconds": 1.4245063338894397
+  }
+]

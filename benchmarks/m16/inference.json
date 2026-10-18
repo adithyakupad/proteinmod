@@ -1,0 +1,55 @@
+{
+  "actual_saved_G3_prediction_max_error": 4.172325134277344e-07,
+  "tolerance": 1e-06,
+  "single_variant_vs_saved_batch_rounding": true,
+  "multiple_mutation_order_exact": true,
+  "examples": [
+    {
+      "protein_id": "BBC1",
+      "assay_id": "BBC1_YEAST_Tsuboyama_2023_1TG0",
+      "variant_id": "BBC1_YEAST_Tsuboyama_2023_1TG0:P56N",
+      "mutations": [
+        "P56N"
+      ],
+      "protocol": "G3",
+      "fold": "PF00018",
+      "model": "M15 last-block LoRA, seed 0",
+      "prediction": 0.05477935075759888,
+      "unit": "training-assay rank prediction (unbounded regression), not kcal/mol",
+      "task": "stability mutation-effect ranking",
+      "checkpoint_sha256": "ce9c93d404dcfa7180162c4950110837b5f36f1fea4636e569ecab6c72145bd2",
+      "test_family_supervised_training": false,
+      "structural_inputs_used": false,
+      "structure_confidence_type": null,
+      "predictive_uncertainty": null,
+      "interval": null,
+      "interval_eligibility": false,
+      "interval_reason": "M13 calibration is not valid for this separately fitted M15 model",
+      "geometry": "reference structure only; this sequence model does not infer mutant rearrangement"
+    },
+    {
+      "protein_id": "BBC1",
+      "assay_id": "BBC1_YEAST_Tsuboyama_2023_1TG0",
+      "variant_id": "BBC1_YEAST_Tsuboyama_2023_1TG0:D45S:N47R",
+      "mutations": [
+        "D45S",
+        "N47R"
+      ],
+      "protocol": "G3",
+      "fold": "PF00018",
+      "model": "M15 last-block LoRA, seed 0",
+      "prediction": 0.5626708269119263,
+      "unit": "training-assay rank prediction (unbounded regression), not kcal/mol",
+      "task": "stability mutation-effect ranking",
+      "checkpoint_sha256": "ce9c93d404dcfa7180162c4950110837b5f36f1fea4636e569ecab6c72145bd2",
+      "test_family_supervised_training": false,
+      "structural_inputs_used": false,
+      "structure_confidence_type": null,
+      "predictive_uncertainty": null,
+      "interval": null,
+      "interval_eligibility": false,
+      "interval_reason": "M13 calibration is not valid for this separately fitted M15 model",
+      "geometry": "reference structure only; this sequence model does not infer mutant rearrangement"
+    }
+  ]
+}

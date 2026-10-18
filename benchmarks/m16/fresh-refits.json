@@ -1,0 +1,205 @@
+{
+  "audit_date_utc": "2026-10-17T17:49:57.738371+00:00",
+  "model_source_commit": "7cc4dbbe9c47355d1afa46f6f46f502394e9e999",
+  "all_M0_M15_fit_or_structure_rebuild_commands_succeeded_after_guard_repairs": true,
+  "prediction_csv_comparison_rows": 677557,
+  "all_comparison_rows_maximum_absolute_error": 0.0,
+  "all_scientific_json_selections_metrics_and_traces_exact": true,
+  "cached_acquisition_and_frozen_features_reused": true,
+  "separate_fresh_M1_CPU_vs_MPS_tolerance_failure": true,
+  "resolved_commands": [
+    {
+      "name": "m0-refit",
+      "command": [
+        "python",
+        "-m",
+        "proteinmod.cli",
+        "run",
+        "--output",
+        "runs/m16-m0"
+      ],
+      "exit_code": 0,
+      "seconds": 7.481864249799401
+    },
+    {
+      "name": "m1-refit",
+      "command": [
+        "python",
+        "-m",
+        "proteinmod.cli",
+        "run-m1",
+        "--config",
+        "configs/amylase_m1.toml",
+        "--output",
+        "runs/m16-m1"
+      ],
+      "exit_code": 0,
+      "seconds": 20.345646957866848
+    },
+    {
+      "name": "m2-rebuild",
+      "command": [
+        "python",
+        "scripts/verify_structures.py",
+        "--output",
+        "runs/m16-m2"
+      ],
+      "exit_code": 0,
+      "seconds": 12.283700291998684
+    },
+    {
+      "name": "m3-refit",
+      "command": [
+        "python",
+        "-m",
+        "proteinmod.cli",
+        "run-m3",
+        "--config",
+        "configs/amylase_m3.toml",
+        "--output",
+        "runs/m16-m3"
+      ],
+      "exit_code": 0,
+      "seconds": 256.61642758292146
+    },
+    {
+      "name": "m4-refit",
+      "command": [
+        "python",
+        "-m",
+        "proteinmod.cli",
+        "run-m4",
+        "--config",
+        "runs/m16/refit/m4-config.json"
+      ],
+      "exit_code": 0,
+      "seconds": 27.86272820783779
+    },
+    {
+      "name": "m5-refit",
+      "command": [
+        "python",
+        "-m",
+        "proteinmod.hybrid_experiments",
+        "run",
+        "--config",
+        "runs/m16/refit/m5-config.json"
+      ],
+      "exit_code": 0,
+      "seconds": 214.08125745807774
+    },
+    {
+      "name": "m6-refit",
+      "command": [
+        "python",
+        "-m",
+        "proteinmod.stability_experiments",
+        "run",
+        "--config",
+        "runs/m16/refit/m6-config.json"
+      ],
+      "exit_code": 0,
+      "seconds": 6.032087041065097
+    },
+    {
+      "name": "m7-refit",
+      "command": [
+        "python",
+        "-m",
+        "proteinmod.multitask_experiments",
+        "--config",
+        "runs/m16/refit/m7-config.json"
+      ],
+      "exit_code": 0,
+      "seconds": 494.39103045803495
+    },
+    {
+      "name": "m8-refit",
+      "command": [
+        "python",
+        "-m",
+        "proteinmod.conditioning_experiments",
+        "--config",
+        "runs/m16/refit/m8-config.json"
+      ],
+      "exit_code": 0,
+      "seconds": 16.474264333955944
+    },
+    {
+      "name": "m9-refit",
+      "command": [
+        "python",
+        "-m",
+        "proteinmod.assay_experiments",
+        "run",
+        "--config",
+        "runs/m16/refit/m9-config.json"
+      ],
+      "exit_code": 0,
+      "seconds": 7.048425541026518
+    },
+    {
+      "name": "m10-refit",
+      "exit_code": 0,
+      "seconds": 19.892752249957994,
+      "repaired_attempts": [
+        "m10-prepare",
+        "m10-run"
+      ]
+    },
+    {
+      "name": "m11-refit",
+      "command": [
+        "python",
+        "-m",
+        "proteinmod.epistasis_experiments",
+        "run",
+        "--config",
+        "runs/m16/refit/m11-config.json"
+      ],
+      "exit_code": 0,
+      "seconds": 16.34897708403878
+    },
+    {
+      "name": "m12-refit",
+      "exit_code": 0,
+      "seconds": 89.24370404100046,
+      "repaired_attempts": [
+        "m12-canonical-refit"
+      ]
+    },
+    {
+      "name": "m13-refit",
+      "exit_code": 0,
+      "seconds": 145.39398362510838,
+      "repaired_attempts": [
+        "m13-canonical-refit"
+      ]
+    },
+    {
+      "name": "m14-refit",
+      "command": [
+        "python",
+        "-m",
+        "proteinmod.edge_experiments",
+        "--output",
+        "runs/m16-m14"
+      ],
+      "exit_code": 0,
+      "seconds": 222.95625166688114
+    },
+    {
+      "name": "m15-refit",
+      "command": [
+        "python",
+        "-m",
+        "proteinmod.lora_experiments",
+        "--output",
+        "runs/m16-m15"
+      ],
+      "exit_code": 0,
+      "seconds": 359.29543716693297
+    }
+  ],
+  "timing_limit": "Reported wall times include some concurrent processes, not isolated architecture throughput."
+}

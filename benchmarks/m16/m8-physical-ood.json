@@ -1,0 +1,14 @@
+{
+  "esm_sites_ridge": {
+    "predictions": 6924,
+    "minimum_predicted_kcal_mol": -1.1924421787261963,
+    "maximum_predicted_kcal_mol": 2.8652431964874268,
+    "thermodynamic_validity": "not established; OOD diagnostic only"
+  },
+  "structural_ridge": {
+    "predictions": 6924,
+    "minimum_predicted_kcal_mol": -1372636.75,
+    "maximum_predicted_kcal_mol": -286623.09375,
+    "thermodynamic_validity": "not established; OOD diagnostic only"
+  }
+}
