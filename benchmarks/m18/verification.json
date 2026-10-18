@@ -1,0 +1,23 @@
+{
+  "pytest": "198 passed, 1 warning in 15.68s",
+  "ruff_check": "PASS",
+  "ruff_format": "216 files PASS",
+  "pip_check": "PASS",
+  "m16_audit": "379 original historical blobs exact; all artifact manifests verified",
+  "m161_verify": "PASS",
+  "m17_verify": {
+    "fits": 1096,
+    "predictions": 34304,
+    "roles_and_metrics": "PASS",
+    "state_replay": "not rerun"
+  },
+  "m18_blind_index": "192 metadata-only candidates; 0 mapping failures",
+  "m18_overlap": "36 pairs; 4 unresolved flags",
+  "python": "3.12.15",
+  "device": "CPU (metadata/alignment/geometry only)",
+  "new_model_fits": 0,
+  "target_accesses": 0,
+  "warning": "loky could not detect physical cores; used logical cores",
+  "clean_main_tests": "196 passed, 1 warning in 16.80s; git archive baseline73f0666, baseline src on PYTHONPATH; existing environment",
+  "historical_inventory_files": 484
+}

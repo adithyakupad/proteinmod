@@ -11,6 +11,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/audit_m16.py
+      - run: python scripts/verify_m18.py
   offline-tests:
     runs-on: ubuntu-latest
     strategy:
