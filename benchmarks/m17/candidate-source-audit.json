@@ -1,0 +1,23 @@
+{
+  "hydro_readme_sha256": "274e7a53f92088cb156bf9b2a8c4397c89b477884fa63963ed2770de2cdaf406",
+  "hydro_data_sha256": "76befc506e84e0ef0dd96fa4c8e5b41c6ec47e1664eccbf8804862f3ea97cb90",
+  "hydro_data_registered_md5": "a13b01d71faf2e76dd91dc57b7311972",
+  "primary_record": "11175470",
+  "primary_directory_sha256": "34a10f85c33fc3badd9a8a0d99ee28a9d6edd601598e4d79e92c116832f648cc",
+  "primary_entries": [
+    {
+      "path": "zenodo/Fig1/Tsuboyama2023_Dataset2_Dataset3_20230416.csv",
+      "uncompressed_bytes": 697658024
+    },
+    {
+      "path": "zenodo/Fig1/DiMSUM_Sparse_cores_DTS_variants.txt",
+      "uncompressed_bytes": 645065856
+    },
+    {
+      "path": "zenodo/Fig1/Sparse_cores_DTS_Tecan.txt",
+      "uncompressed_bytes": 342985
+    }
+  ],
+  "target_used_for_prediction_evaluation": false,
+  "status": "BLOCKED mixed-source label lineage unresolved"
+}

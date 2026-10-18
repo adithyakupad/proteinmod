@@ -1,0 +1,14 @@
+{
+  "base": "0908f90727bf36c0c5de7bdf7f591656efb27022",
+  "historical_files_exact": 450,
+  "external_confirmation": "BLOCKED, no external labels used in any fit",
+  "sources": {
+    "src/proteinmod/mechanism.py": "1a0c4fd8c7ac2a5ed7ee9fd1b5494d3918801aaa4ce31bc21f57cc88af9ce095",
+    "src/proteinmod/mechanism_experiments.py": "13eacb4298ba6fb2ccb8767d4c0e78b1d60348c2dc6db8a184704f48fa82fa98",
+    "scripts/archive_m17.py": "fa6d9ddc369abade44c20342a7efdce4c9ad88d2c1b0d3d1c2f1fcc7bb0c13c9",
+    "scripts/report_m17.py": "05159abe8e2ffeb46bcb5e72adde2dc92343d09f7475b6cf7ac50b543fb8ed27",
+    "scripts/interpret_m17.py": "726d648fd7517d9ce3036badb3b3b820a1b25a1935096ea1691a57f2d68b3c57",
+    "scripts/verify_m17.py": "79142b4e3c62228c600e1b2630679d2557fd26b7ce3b390b9e430bbaeaf59180",
+    "scripts/freeze_m17.py": "55d50beb62d4a39886439dfb343c26ceb183a808e03a9233eed4878eef289d24"
+  }
+}

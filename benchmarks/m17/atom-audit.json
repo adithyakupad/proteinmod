@@ -1,0 +1,130 @@
+{
+  "BBC1": {
+    "nodes": 64,
+    "missing_heavy_atoms": [],
+    "candidate_directed_edges": [
+      2,
+      38,
+      48
+    ],
+    "unknown_interaction_directed_edges": [
+      0,
+      0,
+      0
+    ],
+    "semantics": "Canonical heavy atoms, excluding terminal OXT/hydrogens; absent atoms are unknown interactions, not no interaction",
+    "coordinate_sha256": "974ca8eb2ed169728cfefbfdd6ff8820fecf006ba3cb5dcec1dba07c5e272249"
+  },
+  "CBX4": {
+    "nodes": 50,
+    "missing_heavy_atoms": [],
+    "candidate_directed_edges": [
+      4,
+      26,
+      42
+    ],
+    "unknown_interaction_directed_edges": [
+      0,
+      0,
+      0
+    ],
+    "semantics": "Canonical heavy atoms, excluding terminal OXT/hydrogens; absent atoms are unknown interactions, not no interaction",
+    "coordinate_sha256": "038d92dbf183ab96560ccdcd0b4641bf4c0399662c939c0dea7b0cd34b537bcd"
+  },
+  "MYO3": {
+    "nodes": 61,
+    "missing_heavy_atoms": [],
+    "candidate_directed_edges": [
+      4,
+      40,
+      44
+    ],
+    "unknown_interaction_directed_edges": [
+      0,
+      0,
+      0
+    ],
+    "semantics": "Canonical heavy atoms, excluding terminal OXT/hydrogens; absent atoms are unknown interactions, not no interaction",
+    "coordinate_sha256": "c689dd22bbba615a7907350ff4c8b5cd72f54863b35127d7daf210ddb20310ef"
+  },
+  "NKX31": {
+    "nodes": 61,
+    "missing_heavy_atoms": [],
+    "candidate_directed_edges": [
+      6,
+      26,
+      68
+    ],
+    "unknown_interaction_directed_edges": [
+      0,
+      0,
+      0
+    ],
+    "semantics": "Canonical heavy atoms, excluding terminal OXT/hydrogens; absent atoms are unknown interactions, not no interaction",
+    "coordinate_sha256": "4e13d378fe02448f751009b9e9ea1a4193c872e50169f7b2b3ac6e0597e43c02"
+  },
+  "PIN1": {
+    "nodes": 39,
+    "missing_heavy_atoms": [],
+    "candidate_directed_edges": [
+      4,
+      6,
+      16
+    ],
+    "unknown_interaction_directed_edges": [
+      0,
+      0,
+      0
+    ],
+    "semantics": "Canonical heavy atoms, excluding terminal OXT/hydrogens; absent atoms are unknown interactions, not no interaction",
+    "coordinate_sha256": "33b69aa6e38fede75ee33c81cb9c2b90586429ae0a5ead3d69c4a5a65a528f88"
+  },
+  "PITX2": {
+    "nodes": 52,
+    "missing_heavy_atoms": [],
+    "candidate_directed_edges": [
+      0,
+      22,
+      56
+    ],
+    "unknown_interaction_directed_edges": [
+      0,
+      0,
+      0
+    ],
+    "semantics": "Canonical heavy atoms, excluding terminal OXT/hydrogens; absent atoms are unknown interactions, not no interaction",
+    "coordinate_sha256": "7d35b9096a019fabb9a69da7e162446d295e393f08788c66adfd7690027e69fe"
+  },
+  "SAV1": {
+    "nodes": 43,
+    "missing_heavy_atoms": [],
+    "candidate_directed_edges": [
+      0,
+      6,
+      18
+    ],
+    "unknown_interaction_directed_edges": [
+      0,
+      0,
+      0
+    ],
+    "semantics": "Canonical heavy atoms, excluding terminal OXT/hydrogens; absent atoms are unknown interactions, not no interaction",
+    "coordinate_sha256": "86dba03989d8824e03a8fba99ac908757743d227dcaf2a082bd4e59908787a41"
+  },
+  "SR43C": {
+    "nodes": 48,
+    "missing_heavy_atoms": [],
+    "candidate_directed_edges": [
+      0,
+      26,
+      34
+    ],
+    "unknown_interaction_directed_edges": [
+      0,
+      0,
+      0
+    ],
+    "semantics": "Canonical heavy atoms, excluding terminal OXT/hydrogens; absent atoms are unknown interactions, not no interaction",
+    "coordinate_sha256": "604317a79aab471b3953721e97ba43a9a0e48fe53d74755ef3ef0abcc16ba12f"
+  }
+}

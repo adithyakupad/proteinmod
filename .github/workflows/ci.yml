@@ -29,6 +29,8 @@ jobs:
       - run: pytest
       - run: python scripts/verify_m16_1.py
         if: matrix.python == '3.12'
+      - run: python scripts/verify_m17.py
+        if: matrix.python == '3.12'
   m3-neural-tests:
     runs-on: ubuntu-latest
     steps:

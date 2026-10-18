@@ -1,0 +1,129 @@
+{
+  "baseRefName": "codex/m16-release-qualification",
+  "headRefOid": "0908f90727bf36c0c5de7bdf7f591656efb27022",
+  "isDraft": true,
+  "state": "OPEN",
+  "statusCheckRollup": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-17T20:06:46Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/adithyakupad/proteinmod/actions/runs/39065308718/job/117491611983",
+      "name": "historical-artifacts",
+      "startedAt": "2026-10-17T20:06:28Z",
+      "status": "COMPLETED",
+      "workflowName": "checks"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-17T20:06:43Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/adithyakupad/proteinmod/actions/runs/39065305586/job/117491601926",
+      "name": "historical-artifacts",
+      "startedAt": "2026-10-17T20:06:26Z",
+      "status": "COMPLETED",
+      "workflowName": "checks"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-17T20:07:01Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/adithyakupad/proteinmod/actions/runs/39065308718/job/117491611952",
+      "name": "offline-tests (3.11)",
+      "startedAt": "2026-10-17T20:06:28Z",
+      "status": "COMPLETED",
+      "workflowName": "checks"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-17T20:07:00Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/adithyakupad/proteinmod/actions/runs/39065305586/job/117491601759",
+      "name": "offline-tests (3.11)",
+      "startedAt": "2026-10-17T20:06:26Z",
+      "status": "COMPLETED",
+      "workflowName": "checks"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-17T20:06:59Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/adithyakupad/proteinmod/actions/runs/39065308718/job/117491611995",
+      "name": "offline-tests (3.12)",
+      "startedAt": "2026-10-17T20:06:28Z",
+      "status": "COMPLETED",
+      "workflowName": "checks"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-17T20:07:07Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/adithyakupad/proteinmod/actions/runs/39065305586/job/117491601754",
+      "name": "offline-tests (3.12)",
+      "startedAt": "2026-10-17T20:06:26Z",
+      "status": "COMPLETED",
+      "workflowName": "checks"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-17T20:07:01Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/adithyakupad/proteinmod/actions/runs/39065308718/job/117491612328",
+      "name": "offline-tests (3.13)",
+      "startedAt": "2026-10-17T20:06:29Z",
+      "status": "COMPLETED",
+      "workflowName": "checks"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-17T20:07:00Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/adithyakupad/proteinmod/actions/runs/39065305586/job/117491601630",
+      "name": "offline-tests (3.13)",
+      "startedAt": "2026-10-17T20:06:26Z",
+      "status": "COMPLETED",
+      "workflowName": "checks"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-17T20:07:07Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/adithyakupad/proteinmod/actions/runs/39065308718/job/117491612010",
+      "name": "offline-tests (3.14)",
+      "startedAt": "2026-10-17T20:06:29Z",
+      "status": "COMPLETED",
+      "workflowName": "checks"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-17T20:07:06Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/adithyakupad/proteinmod/actions/runs/39065305586/job/117491601794",
+      "name": "offline-tests (3.14)",
+      "startedAt": "2026-10-17T20:06:26Z",
+      "status": "COMPLETED",
+      "workflowName": "checks"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-17T20:07:54Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/adithyakupad/proteinmod/actions/runs/39065308718/job/117491611901",
+      "name": "m3-neural-tests",
+      "startedAt": "2026-10-17T20:06:29Z",
+      "status": "COMPLETED",
+      "workflowName": "checks"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-17T20:07:46Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/adithyakupad/proteinmod/actions/runs/39065305586/job/117491601757",
+      "name": "m3-neural-tests",
+      "startedAt": "2026-10-17T20:06:26Z",
+      "status": "COMPLETED",
+      "workflowName": "checks"
+    }
+  ],
+  "url": "https://github.com/adithyakupad/proteinmod/pull/34"
+}
