@@ -1,0 +1,626 @@
+[
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00018",
+    "model": "sequence_ridge",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00018",
+    "model": "esm_sites_ridge",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00018",
+    "model": "structural_ridge",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00018",
+    "model": "structure_only",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00018",
+    "model": "weighted_fusion",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00018",
+    "model": "bidirectional",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00018",
+    "model": "sequence_ridge",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00018",
+    "model": "esm_sites_ridge",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00018",
+    "model": "structural_ridge",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00018",
+    "model": "structure_only",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00018",
+    "model": "weighted_fusion",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00018",
+    "model": "bidirectional",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00385",
+    "model": "sequence_ridge",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00385",
+    "model": "esm_sites_ridge",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00385",
+    "model": "structural_ridge",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00385",
+    "model": "structure_only",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00385",
+    "model": "weighted_fusion",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00385",
+    "model": "bidirectional",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00385",
+    "model": "sequence_ridge",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00385",
+    "model": "esm_sites_ridge",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00385",
+    "model": "structural_ridge",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00385",
+    "model": "structure_only",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00385",
+    "model": "weighted_fusion",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00385",
+    "model": "bidirectional",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00046",
+    "model": "sequence_ridge",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00046",
+    "model": "esm_sites_ridge",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00046",
+    "model": "structural_ridge",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00046",
+    "model": "structure_only",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00046",
+    "model": "weighted_fusion",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00046",
+    "model": "bidirectional",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00046",
+    "model": "sequence_ridge",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00046",
+    "model": "esm_sites_ridge",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00046",
+    "model": "structural_ridge",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00046",
+    "model": "structure_only",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00046",
+    "model": "weighted_fusion",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00046",
+    "model": "bidirectional",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00397",
+    "model": "sequence_ridge",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00397",
+    "model": "esm_sites_ridge",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00397",
+    "model": "structural_ridge",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00397",
+    "model": "structure_only",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00397",
+    "model": "weighted_fusion",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00397",
+    "model": "bidirectional",
+    "repeat": 0,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00397",
+    "model": "sequence_ridge",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00397",
+    "model": "esm_sites_ridge",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00397",
+    "model": "structural_ridge",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00397",
+    "model": "structure_only",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00397",
+    "model": "weighted_fusion",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  },
+  {
+    "dataset": "M12",
+    "protocol": "G3",
+    "fold": "PF00397",
+    "model": "bidirectional",
+    "repeat": 1,
+    "independent_calibration_families": 1,
+    "quantiles": {
+      "0.8": null,
+      "0.9": null
+    },
+    "status": "No finite 80/90% group-conformal interval from one calibration family; no mutation-as-family replication"
+  }
+]

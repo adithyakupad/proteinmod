@@ -1,7 +1,9 @@
 """M17 outcome-blind controlled roles and graph nulls; historical APIs unchanged."""
 
+import functools
 import hashlib
 import math
+import operator
 from itertools import combinations, product
 
 import numpy as np
@@ -38,7 +40,7 @@ def study_roles(rows, families):
     for j, family in enumerate(families):
         val_family = families[(j + 1) % len(families)]
         other = [f for f in families if f not in (family, val_family)]
-        train_pids = sum([proteins[f] for f in other], [])
+        train_pids = functools.reduce(operator.iadd, [proteins[f] for f in other], [])
         base = {
             "train": indices(train_pids, "train"),
             "validation": indices(proteins[val_family], "validation"),

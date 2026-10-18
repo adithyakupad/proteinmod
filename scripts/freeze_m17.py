@@ -15,14 +15,14 @@ for study, fold, protocol, rr in study_roles(rows, families):
         for fraction in config["fractions"] if study == "H1" else [1.0]:
             selected = {**rr, "train": balanced(rows, rr["train"], fraction, seed)}
             roles.append(
-                dict(
-                    study=study,
-                    fold=fold,
-                    protocol=protocol,
-                    seed=seed,
-                    fraction=fraction,
-                    roles={k: [rows[i]["id"] for i in ix] for k, ix in selected.items()},
-                )
+                {
+                    "study": study,
+                    "fold": fold,
+                    "protocol": protocol,
+                    "seed": seed,
+                    "fraction": fraction,
+                    "roles": {k: [rows[i]["id"] for i in ix] for k, ix in selected.items()},
+                }
             )
 path = Path("benchmarks/m17/split-manifest.json")
 assert not path.exists()

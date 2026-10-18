@@ -11,19 +11,22 @@ source-matched substitution experiments, not a universally validated predictor.
 
 ## Qualification and evidence
 
-**Release qualification: FAIL / HOLD.** Source licensing is deliberately unresolved
-for final review. The original strict cross-device parity failure is preserved.
-M16.1 adds prespecified device-portability qualification, independent core source
-regeneration and a guarded OOD stability export; see the [follow-up report](docs/M16_1.md),
-[updated matrix](benchmarks/m161/QUALIFICATION.md), and [license recommendation](docs/LICENSE_REVIEW.md).
-Apache-2.0 is recommended for owner consideration; no license has been selected.
+**Release qualification: FAIL / HOLD.** The owner's M16.1 branch now includes
+an MIT source-code license; independent scientific confirmation and other release
+gates remain unmet. M17 preregistered H1–H5 and ran 1,096 controlled development fits:
+preprocessing changes the mean ordering, and physical graph topology does not
+consistently beat a degree-preserving null. No independent validation is claimed.
+See the [mechanistic report](docs/M17.md), [qualification matrix](benchmarks/m17/QUALIFICATION.md),
+and [ML evidence/defense questions](docs/M17_DEFENSE.md). Historical M16/M16.1
+license and portability failures remain unchanged in their dated reports.
 
 M0–M15 are consolidated at `7cc4dbbe9c47355d1afa46f6f46f502394e9e999`.
 All ten dependency heads and all ten merge commits passed CI (150 jobs total).
 M16 adds full-suite neural checks, formatting and an immutable-history artifact CI gate.
 See the [M16 technical report](docs/M16.md), [qualification matrix](benchmarks/m16/QUALIFICATION.md),
 [execution evidence](benchmarks/m16/), and [proposed release notes](docs/RELEASE_NOTES_PROPOSED.md).
-No release/tag has been published. Source licensing and final review remain gates.
+No release/tag has been published. Third-party bundle clearance, independent science
+and final review remain gates.
 
 ## Install and test
 
@@ -125,8 +128,8 @@ The original GNN and M12 `structure_only` wrapper are distinct comparators.
   inputs. pLDDT, B-factors, predictive uncertainty and OOD are distinct quantities.
 - One G3 calibration family cannot support finite 80/90% family-block conformal
   guarantees. Aleatoric variance is not independently measured.
-- Dataset/model licenses are documented per source. The repository currently lacks
-  a project source-code license; public availability does not resolve reuse rights.
+- ProteinMod source is licensed under [MIT](LICENSE) on this branch. Dataset/model
+  terms remain separate; the license does not clear third-party redistribution.
 
 The [historical README](HISTORICAL_README.md) preserves the original milestone narrative;
 all historical benchmark files and configurations remain unchanged.

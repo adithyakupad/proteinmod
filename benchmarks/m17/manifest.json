@@ -1,0 +1,76 @@
+{
+  "config": {
+    "schema": "m17-mechanism-v1",
+    "base": "0908f90727bf36c0c5de7bdf7f591656efb27022",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "fractions": [
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "alphas": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "output": "runs/m17",
+    "cache": "data/cache/m17",
+    "graph_fractions": [
+      0.25,
+      1.0
+    ],
+    "training": {
+      "hidden": 16,
+      "layers": 2,
+      "learning_rate": 0.003,
+      "weight_decay": 0.01,
+      "max_epochs": 12,
+      "patience": 4,
+      "batch_size": 32,
+      "cpu_threads": 4,
+      "device": "cpu"
+    },
+    "hypothesis_margin_rho": 0.02,
+    "controls_seed": 314159,
+    "external_source": {
+      "url": "https://zenodo.org/records/18433203/files/hydro/three_to_many.csv.gz?download=1",
+      "md5": "a13b01d71faf2e76dd91dc57b7311972",
+      "path": "data/cache/m17/source/hydro.csv.gz",
+      "primary": "https://zenodo.org/records/11175470",
+      "license": "CC-BY-4.0"
+    }
+  },
+  "preregistration": {
+    "configs/m17.json": "befdb69c9038fd9e4434bbee1b1cc8baad7b30814a4b2852539fa2ef04ea0893",
+    "benchmarks/m17/PREREGISTRATION.md": "26dde309517174ff4c0aa1e1d365725b146605c906a75676545ff5eec88af33f",
+    "benchmarks/m17/split-manifest.json": "ec3a4d6d2c34058aec093a8e3c78d76c953748c3039b0a223c48b7893297aecf",
+    "benchmarks/m17/ELIGIBILITY.md": "42a5fcfce1e46ff20090c1b344f247f96eedb7a5021f947ac5d8fe3c4e9a88d7"
+  },
+  "seconds": 55.22410166589543,
+  "device": "cpu",
+  "python": "3.12.15",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.14.1",
+    "transformers": "4.57.6",
+    "biopython": "1.88"
+  },
+  "fits": 1096,
+  "held_out_predictions": 34304,
+  "fresh_edge_refit_exact": true,
+  "external_outcomes_used": false,
+  "source_sha256": {
+    "src/proteinmod/mechanism.py": "1a0c4fd8c7ac2a5ed7ee9fd1b5494d3918801aaa4ce31bc21f57cc88af9ce095",
+    "src/proteinmod/mechanism_experiments.py": "13eacb4298ba6fb2ccb8767d4c0e78b1d60348c2dc6db8a184704f48fa82fa98"
+  }
+}
