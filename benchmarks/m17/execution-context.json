@@ -1,0 +1,21 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "proteinmod.mechanism_experiments"
+  ],
+  "environment": {
+    "LOKY_MAX_CPU_COUNT": "4",
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1"
+  },
+  "recording": "Recorded after execution from actual invoked command; model manifest/source hashes were written by the run",
+  "local_tests_passed": 196,
+  "pip_check": "PASS",
+  "ruff_check": "PASS",
+  "ruff_format": "PASS",
+  "wheel_build": "PASS",
+  "wheel_sha256": "da293ebf05c4eb63bf5294509332bad41a4f5faea0c51952d70d295955583f5a"
+}

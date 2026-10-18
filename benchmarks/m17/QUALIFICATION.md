@@ -19,7 +19,7 @@ implemented; independent confirmation is BLOCKED. No merge, tag or release.
 | Calibration and uncertainty | PARTIAL | Seed spread is not calibrated uncertainty; M13-only native reanalysis; G3 family-block intervals unbounded |
 | Historical preservation | PASS | All baseline benchmark/config blobs and negative results unchanged |
 | Selected-state reproducibility | PASS | All 1,096 states/34,304 predictions replay exactly; one independent edge refit exact |
-| Local tests/Ruff | PASS | 194 tests; formatting/lint verified before delivery |
+| Local tests/Ruff | PASS | 196 tests; formatting/lint verified before delivery |
 | Exact-head CI | PENDING | Must verify live draft head before completion |
 | M8 OOD physical safety | PASS handling / FAIL validity | Guarded export preserved; OOD raw values remain physically invalid; no clipping |
 | Device portability | PARTIAL | M16.1 pooled/functional tests pass on tested CPU/MPS; raw-layer and strict 1e-6 failures retained |
