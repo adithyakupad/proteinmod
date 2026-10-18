@@ -19,6 +19,8 @@ def verify(root, states=False):
         assert checksum(root / name) == digest, name
     for p, digest in json.loads((root / "historical_hashes.json").read_text()).items():
         assert checksum(p) == digest, p
+    for source, digest in json.loads((root / "manifest.json").read_text())["source_sha256"].items():
+        assert checksum(source) == digest, source
     runs = json.loads((root / "runs.json").read_text())
     cases = json.loads(Path("benchmarks/m17/split-manifest.json").read_text())["folds"]
     key = lambda r: tuple(str(r[k]) for k in ("study", "fold", "protocol", "seed", "fraction"))

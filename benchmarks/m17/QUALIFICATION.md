@@ -20,7 +20,7 @@ implemented; independent confirmation is BLOCKED. No merge, tag or release.
 | Historical preservation | PASS | All baseline benchmark/config blobs and negative results unchanged |
 | Selected-state reproducibility | PASS | All 1,096 states/34,304 predictions replay exactly; one independent edge refit exact |
 | Local tests/Ruff | PASS | 196 tests; formatting/lint verified before delivery |
-| Exact-head CI | PENDING | Must verify live draft head before completion |
+| Exact-head CI | PASS | 12/12 at 189a91d; final head must also pass [live PR #36 checks](https://github.com/adithyakupad/proteinmod/pull/36/checks) |
 | M8 OOD physical safety | PASS handling / FAIL validity | Guarded export preserved; OOD raw values remain physically invalid; no clipping |
 | Device portability | PARTIAL | M16.1 pooled/functional tests pass on tested CPU/MPS; raw-layer and strict 1e-6 failures retained |
 | Complete cold reproduction | PARTIAL | M17 uses pinned cached raw graphs/ESM; no new full cold-source claim |
