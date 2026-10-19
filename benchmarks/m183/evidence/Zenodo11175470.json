@@ -1,0 +1,139 @@
+{
+  "created": "2024-08-01T09:52:16.220082+00:00",
+  "modified": "2024-08-01T09:52:16.462381+00:00",
+  "id": 11175470,
+  "conceptrecid": "11175469",
+  "doi": "10.5281/zenodo.11175470",
+  "conceptdoi": "10.5281/zenodo.11175469",
+  "doi_url": "https://doi.org/10.5281/zenodo.11175470",
+  "metadata": {
+    "title": "Files to replicate the figures in the manuscript \"Genetics, energetics and allostery during a billion years of hydrophobic protein core evolution\"",
+    "doi": "10.5281/zenodo.11175470",
+    "publication_date": "2024-05-12",
+    "description": "<p>paper: <a href=\"https://www.biorxiv.org/content/10.1101/2024.05.11.593672v1\">https://www.biorxiv.org/content/10.1101/2024.05.11.593672v1</a></p>\n<p>code: <a href=\"https://github.com/lehner-lab/combinatorialcores\">https://github.com/lehner-lab/combinatorialcores</a></p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Escobedo, Albert",
+        "affiliation": "Centre for Genomic Regulation",
+        "orcid": "0000-0001-7295-5111"
+      },
+      {
+        "name": "Voigt, Gesa",
+        "affiliation": "Centre for Genomic Regulation"
+      },
+      {
+        "name": "Faure, Andre J.",
+        "affiliation": "Centre for Genomic Regulation",
+        "orcid": "0000-0002-4471-5994"
+      },
+      {
+        "name": "Lehner, Ben",
+        "affiliation": "Centre for Genomic Regulation",
+        "orcid": "0000-0002-8817-1124"
+      }
+    ],
+    "custom": {
+      "code:codeRepository": "https://github.com/lehner-lab/combinatorialcores",
+      "code:programmingLanguage": [
+        {
+          "id": "python",
+          "title": {
+            "en": "Python"
+          }
+        },
+        {
+          "id": "jupyter_notebook",
+          "title": {
+            "en": "Jupyter Notebook"
+          }
+        }
+      ]
+    },
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": false,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "11175469"
+          }
+        }
+      ]
+    }
+  },
+  "title": "Files to replicate the figures in the manuscript \"Genetics, energetics and allostery during a billion years of hydrophobic protein core evolution\"",
+  "links": {
+    "self": "https://zenodo.org/api/records/11175470",
+    "self_html": "https://zenodo.org/records/11175470",
+    "preview_html": "https://zenodo.org/records/11175470?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.11175470",
+    "self_doi": "https://doi.org/10.5281/zenodo.11175470",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.11175470",
+    "reserve_doi": "https://zenodo.org/api/records/11175470/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/11175469",
+    "parent_html": "https://zenodo.org/records/11175469",
+    "parent_doi": "https://doi.org/10.5281/zenodo.11175469",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.11175469",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:11175470/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:11175470/sequence/default",
+    "files": "https://zenodo.org/api/records/11175470/files",
+    "media_files": "https://zenodo.org/api/records/11175470/media-files",
+    "latest": "https://zenodo.org/api/records/11175470/versions/latest",
+    "latest_html": "https://zenodo.org/records/11175470/latest",
+    "versions": "https://zenodo.org/api/records/11175470/versions",
+    "draft": "https://zenodo.org/api/records/11175470/draft",
+    "access_links": "https://zenodo.org/api/records/11175470/access/links",
+    "access_grants": "https://zenodo.org/api/records/11175470/access/grants",
+    "access_users": "https://zenodo.org/api/records/11175470/access/users",
+    "access_request": "https://zenodo.org/api/records/11175470/access/request",
+    "access": "https://zenodo.org/api/records/11175470/access",
+    "communities": "https://zenodo.org/api/records/11175470/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/11175470/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/11175470/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/11175470/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/11175470/quota-increase",
+    "requests": "https://zenodo.org/api/records/11175470/requests"
+  },
+  "updated": "2024-08-01T09:52:16.462381+00:00",
+  "recid": "11175470",
+  "revision": 4,
+  "files": [
+    {
+      "id": "7d620054-1f23-475f-adf3-b0fbcc127433",
+      "key": "Escobedo_cores_24_zenodo.zip",
+      "size": 1331618368,
+      "checksum": "md5:716ab20afae843c6db145bbb72063453",
+      "links": {
+        "self": "https://zenodo.org/api/records/11175470/files/Escobedo_cores_24_zenodo.zip/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "432960"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 250,
+    "unique_downloads": 194,
+    "views": 394,
+    "unique_views": 355,
+    "version_downloads": 105,
+    "version_unique_downloads": 72,
+    "version_unique_views": 117,
+    "version_views": 132
+  },
+  "state": "done",
+  "submitted": true
+}

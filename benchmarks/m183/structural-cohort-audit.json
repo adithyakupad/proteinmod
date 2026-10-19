@@ -1,0 +1,4169 @@
+{
+  "scope": "masked-reference-v1",
+  "families": [
+    {
+      "scope": "masked-reference-v1",
+      "masked_accepted": true,
+      "full_reference_M2_audit": {
+        "accepted": true,
+        "errors": [],
+        "chains": [
+          {
+            "chain": "A",
+            "identity": 1.0,
+            "aligned_coverage": 1.0,
+            "score": 182.0,
+            "sequence_source": "mmCIF polymer scheme + atom_site label/auth mapping"
+          }
+        ],
+        "selected_chain": "A",
+        "reference_length": 65,
+        "coordinate_coverage": 1.0,
+        "aligned_coverage": 1.0,
+        "aligned_identity": 1.0,
+        "exact_compatible_positions": 65,
+        "differences": [],
+        "missing_positions": [],
+        "alignment": "target            0 ---MTGIVKWFNADKGFGFITPDDGSKDVFVHFSAIQNDGYKSLDEGQKVSFTIESGAKG\n                  0 ---|||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery             0 SGKMTGIVKWFNADKGFGFITPDDGSKDVFVHFSAIQNDGYKSLDEGQKVSFTIESGAKG\n\ntarget           57 PAAGNVTS- 65\n                 60 ||||||||- 69\nquery            60 PAAGNVTSL 69\n",
+        "construct_insertions": [
+          1,
+          2,
+          3,
+          69
+        ]
+      },
+      "reference": "MTGIVKWFNADKGFGFITPDDGSKDVFVHFSAIQNDGYKSLDEGQKVSFTIESGAKGPAAGNVTS",
+      "coordinate_sha256": "2ce3a3b1694eb4a07930bcd4350892066ce6b064dffb495435427e645013d9f4",
+      "eligible_positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "eligible_identity": 1.0,
+      "eligible_CA_coverage": 1.0,
+      "excluded_positions": [],
+      "nodes": 65,
+      "undirected_edges": 298,
+      "connected_components": 1,
+      "isolated_nodes": 0,
+      "descriptor_missing_nodes": {
+        "rsa": 0,
+        "contact_degree": 0,
+        "nonlocal_contact_degree": 0,
+        "bfactor_a2": 0,
+        "plddt": 65
+      },
+      "confidence_semantics": "experimental_bfactor",
+      "ASA": {
+        "algorithm": "Biopython Shrake-Rupley",
+        "probe_radius_a": 1.4,
+        "sphere_points": 960,
+        "environment": "entire selected deposited model, occupied heavy atoms including ligands/other chains; no waters/H/D; no symmetry mates",
+        "rsa_table": "Tien et al. 2013 theoretical maxima (Wilke), doi:10.1371/journal.pone.0080635",
+        "max_asa_a2": {
+          "A": 129,
+          "C": 167,
+          "D": 193,
+          "E": 223,
+          "F": 240,
+          "G": 104,
+          "H": 224,
+          "I": 197,
+          "K": 236,
+          "L": 201,
+          "M": 224,
+          "N": 195,
+          "P": 159,
+          "Q": 225,
+          "R": 274,
+          "S": 155,
+          "T": 172,
+          "V": 174,
+          "W": 285,
+          "Y": 263
+        },
+        "rsa_clipped": false,
+        "secondary_structure": {
+          "status": "disabled"
+        }
+      },
+      "contacts": "eligible induced graph; no invented WT atoms; deposited context ASA",
+      "backbone_breaks": [],
+      "reference_construct_sequence_compatible": true,
+      "protein_id": "P0A9X9",
+      "pdb": "1MJC",
+      "coordinate_path": "data/cache/m18/source/1MJC.cif",
+      "tensor_sha256": {
+        "static": "1a91da65bee2c9d584b407710e2a308f624821c70b2ccde5ac756e248162d410",
+        "neighborhood": "dedf852193959f3f9305273cbcc7d77d5e1403f806cc2301e1025ad10a910e7f",
+        "edge_index": "4648d246a3852a127ff8aff038ba6aaf8a922a62869c80b1b3fec43fa6ceb675",
+        "edge_features": "b8b9a1ace827dca25465b86ec6d4a3215964ffc64c2c1ada0cdfc071653eb643",
+        "xyz": "9cc56277d89a7cf6d38dcf166dae5a2f79af51e611943dda4c339b36c198b3cb"
+      },
+      "atoms": 486,
+      "chemistry_shape": [
+        596,
+        29
+      ],
+      "raw_atom_site_coordinates_verified": true,
+      "per_residue_missing_chemical_atoms": [
+        {
+          "position": 1,
+          "missing": []
+        },
+        {
+          "position": 2,
+          "missing": []
+        },
+        {
+          "position": 3,
+          "missing": []
+        },
+        {
+          "position": 4,
+          "missing": []
+        },
+        {
+          "position": 5,
+          "missing": []
+        },
+        {
+          "position": 6,
+          "missing": []
+        },
+        {
+          "position": 7,
+          "missing": []
+        },
+        {
+          "position": 8,
+          "missing": []
+        },
+        {
+          "position": 9,
+          "missing": []
+        },
+        {
+          "position": 10,
+          "missing": []
+        },
+        {
+          "position": 11,
+          "missing": []
+        },
+        {
+          "position": 12,
+          "missing": []
+        },
+        {
+          "position": 13,
+          "missing": []
+        },
+        {
+          "position": 14,
+          "missing": []
+        },
+        {
+          "position": 15,
+          "missing": []
+        },
+        {
+          "position": 16,
+          "missing": []
+        },
+        {
+          "position": 17,
+          "missing": []
+        },
+        {
+          "position": 18,
+          "missing": []
+        },
+        {
+          "position": 19,
+          "missing": []
+        },
+        {
+          "position": 20,
+          "missing": []
+        },
+        {
+          "position": 21,
+          "missing": []
+        },
+        {
+          "position": 22,
+          "missing": []
+        },
+        {
+          "position": 23,
+          "missing": []
+        },
+        {
+          "position": 24,
+          "missing": []
+        },
+        {
+          "position": 25,
+          "missing": []
+        },
+        {
+          "position": 26,
+          "missing": []
+        },
+        {
+          "position": 27,
+          "missing": []
+        },
+        {
+          "position": 28,
+          "missing": []
+        },
+        {
+          "position": 29,
+          "missing": []
+        },
+        {
+          "position": 30,
+          "missing": []
+        },
+        {
+          "position": 31,
+          "missing": []
+        },
+        {
+          "position": 32,
+          "missing": []
+        },
+        {
+          "position": 33,
+          "missing": []
+        },
+        {
+          "position": 34,
+          "missing": []
+        },
+        {
+          "position": 35,
+          "missing": []
+        },
+        {
+          "position": 36,
+          "missing": []
+        },
+        {
+          "position": 37,
+          "missing": []
+        },
+        {
+          "position": 38,
+          "missing": []
+        },
+        {
+          "position": 39,
+          "missing": []
+        },
+        {
+          "position": 40,
+          "missing": []
+        },
+        {
+          "position": 41,
+          "missing": []
+        },
+        {
+          "position": 42,
+          "missing": []
+        },
+        {
+          "position": 43,
+          "missing": []
+        },
+        {
+          "position": 44,
+          "missing": []
+        },
+        {
+          "position": 45,
+          "missing": []
+        },
+        {
+          "position": 46,
+          "missing": []
+        },
+        {
+          "position": 47,
+          "missing": []
+        },
+        {
+          "position": 48,
+          "missing": []
+        },
+        {
+          "position": 49,
+          "missing": []
+        },
+        {
+          "position": 50,
+          "missing": []
+        },
+        {
+          "position": 51,
+          "missing": []
+        },
+        {
+          "position": 52,
+          "missing": []
+        },
+        {
+          "position": 53,
+          "missing": []
+        },
+        {
+          "position": 54,
+          "missing": []
+        },
+        {
+          "position": 55,
+          "missing": []
+        },
+        {
+          "position": 56,
+          "missing": []
+        },
+        {
+          "position": 57,
+          "missing": []
+        },
+        {
+          "position": 58,
+          "missing": []
+        },
+        {
+          "position": 59,
+          "missing": []
+        },
+        {
+          "position": 60,
+          "missing": []
+        },
+        {
+          "position": 61,
+          "missing": []
+        },
+        {
+          "position": 62,
+          "missing": []
+        },
+        {
+          "position": 63,
+          "missing": []
+        },
+        {
+          "position": 64,
+          "missing": []
+        },
+        {
+          "position": 65,
+          "missing": []
+        }
+      ],
+      "chemistry_invalid_directed_edges": {
+        "salt_valid": 0,
+        "hydrophobic_valid": 0,
+        "backbone_polar_valid": 0
+      },
+      "ASA_range_a2": [
+        0.0,
+        208.7233763399521
+      ],
+      "RSA_range": [
+        0.0,
+        0.8844210861862377
+      ],
+      "model_input_dimensions": {
+        "static": 34,
+        "dynamic": 25,
+        "ridge": 270,
+        "edge": 29
+      },
+      "common_candidate_ids": [
+        "GSE266299:P0A9X9:0bbeebdfe5ad9f26",
+        "GSE266299:P0A9X9:cdfb4a1d605f0587",
+        "GSE266299:P0A9X9:1d2a33bee62ebf66",
+        "GSE266299:P0A9X9:e8707305afdae6bc",
+        "GSE266299:P0A9X9:6709a072ed59ef89",
+        "GSE266299:P0A9X9:b9ae6dbc7d528bed",
+        "GSE266299:P0A9X9:362d31394b7d4968",
+        "GSE266299:P0A9X9:7f2e8c5d574a9fa7",
+        "GSE266299:P0A9X9:21e170249c85dd9e",
+        "GSE266299:P0A9X9:f00fdfc7b2f0eec2",
+        "GSE266299:P0A9X9:d8803946d292b916",
+        "GSE266299:P0A9X9:bf0a7e2060e01b3b",
+        "GSE266299:P0A9X9:780688670f18fbc4",
+        "GSE266299:P0A9X9:860e5f1764bce357",
+        "GSE266299:P0A9X9:de27c9ae1bcd1f07",
+        "GSE266299:P0A9X9:3faea29a2107b9f7",
+        "GSE266299:P0A9X9:9e4aec4bb6714232",
+        "GSE266299:P0A9X9:b5d788862354c215",
+        "GSE266299:P0A9X9:3e601c4cbda29c2d",
+        "GSE266299:P0A9X9:c9719945122b1e01",
+        "GSE266299:P0A9X9:21d9ea06cef94e36",
+        "GSE266299:P0A9X9:e0026b12e1627fca",
+        "GSE266299:P0A9X9:3c8e7981694165b9",
+        "GSE266299:P0A9X9:d5c2ab3316ea48d7",
+        "GSE266299:P0A9X9:a6e8dfc24aeaeb92",
+        "GSE266299:P0A9X9:e858caeae6086764",
+        "GSE266299:P0A9X9:976958df88639705",
+        "GSE266299:P0A9X9:1bb1a13edc761f47",
+        "GSE266299:P0A9X9:fab0139a8f9285ca",
+        "GSE266299:P0A9X9:3e44e1cc1a1acb3a",
+        "GSE266299:P0A9X9:e0bebfc444443da4",
+        "GSE266299:P0A9X9:5df881ab26d5b955",
+        "GSE266299:P0A9X9:a906a5496943309e",
+        "GSE266299:P0A9X9:8c4e5411536eaa07",
+        "GSE266299:P0A9X9:3fbd8d5ea78175d0",
+        "GSE266299:P0A9X9:0d349c1428f1799a",
+        "GSE266299:P0A9X9:5e80014aeebb74e5",
+        "GSE266299:P0A9X9:b11efd370d0f1ffb",
+        "GSE266299:P0A9X9:d6c7655b7e14858a",
+        "GSE266299:P0A9X9:ada83432d8a8e119",
+        "GSE266299:P0A9X9:8dc4c5795d80b59b",
+        "GSE266299:P0A9X9:751644cf583dc1dc",
+        "GSE266299:P0A9X9:497fa9dbe74b7500",
+        "GSE266299:P0A9X9:658a8f90973013be",
+        "GSE266299:P0A9X9:2f6ecdc1140061b8",
+        "GSE266299:P0A9X9:77270a64b49208fe",
+        "GSE266299:P0A9X9:1cd79765234a88f3",
+        "GSE266299:P0A9X9:c246219b58135fa5",
+        "GSE266299:P0A9X9:356b95a484f7be34",
+        "GSE266299:P0A9X9:723958a18c892089",
+        "GSE266299:P0A9X9:08e7e6b24e880b98",
+        "GSE266299:P0A9X9:a93aa02e0b210c05",
+        "GSE266299:P0A9X9:fdbca9dc8b033f37",
+        "GSE266299:P0A9X9:49a6f92fd1288576",
+        "GSE266299:P0A9X9:7e09864e2666942c",
+        "GSE266299:P0A9X9:674f8fd250aca6a9",
+        "GSE266299:P0A9X9:976a56fa94464d8c",
+        "GSE266299:P0A9X9:6ba62b9ef2f35fca",
+        "GSE266299:P0A9X9:7c120a3a133935fb",
+        "GSE266299:P0A9X9:1b72a5205575ced6",
+        "GSE266299:P0A9X9:9149e14b334e66e9",
+        "GSE266299:P0A9X9:36370a2decadd07e",
+        "GSE266299:P0A9X9:512028adb7d9a11d",
+        "GSE266299:P0A9X9:d038c81c8b513080",
+        "GSE266299:P0A9X9:4f150f9e0f87d848",
+        "GSE266299:P0A9X9:88defdce8e779a43",
+        "GSE266299:P0A9X9:11f9a306c35fb4f2",
+        "GSE266299:P0A9X9:cfc839be7c49cc80",
+        "GSE266299:P0A9X9:bd7ce1dcc5211289",
+        "GSE266299:P0A9X9:ac39840109040936",
+        "GSE266299:P0A9X9:eb405d63794efc59",
+        "GSE266299:P0A9X9:f050ea32d2f00122",
+        "GSE266299:P0A9X9:60845aa95ac3bc7d",
+        "GSE266299:P0A9X9:e964a88b3e921eb5",
+        "GSE266299:P0A9X9:1923dd97f3875d6e",
+        "GSE266299:P0A9X9:7bd5268b9de2e967",
+        "GSE266299:P0A9X9:7d65c1079069fa38",
+        "GSE266299:P0A9X9:11bfe12a9bcff512",
+        "GSE266299:P0A9X9:4c169ae81593717c",
+        "GSE266299:P0A9X9:3dc2c78bec7726a0",
+        "GSE266299:P0A9X9:c2d1cccfb9084936",
+        "GSE266299:P0A9X9:d305d606367083f4",
+        "GSE266299:P0A9X9:4388ab88ea1e9577",
+        "GSE266299:P0A9X9:82c3973d0dcc329a",
+        "GSE266299:P0A9X9:cc1143921fa264e6",
+        "GSE266299:P0A9X9:f75e6dee2374d583",
+        "GSE266299:P0A9X9:5dff1d4e0a07c1fa",
+        "GSE266299:P0A9X9:32f202e122da54f9",
+        "GSE266299:P0A9X9:04495ad2318963b9",
+        "GSE266299:P0A9X9:f74adb4adc4b40ac",
+        "GSE266299:P0A9X9:7a004b1ec134d442",
+        "GSE266299:P0A9X9:4c1a812f92a06191",
+        "GSE266299:P0A9X9:7e7521539abb1815",
+        "GSE266299:P0A9X9:a173593b620a013a",
+        "GSE266299:P0A9X9:4c44cb242e99898f",
+        "GSE266299:P0A9X9:1e492b8bd3489ecd"
+      ],
+      "matched_candidates": 96,
+      "cohort_exclusions_after_mask": [],
+      "mutation_order_invariance": true,
+      "independent_spatial_edges_verified": true,
+      "independent_backbone_edges_verified": true
+    },
+    {
+      "scope": "masked-reference-v1",
+      "masked_accepted": true,
+      "full_reference_M2_audit": {
+        "accepted": true,
+        "errors": [],
+        "chains": [
+          {
+            "chain": "A",
+            "identity": 1.0,
+            "aligned_coverage": 1.0,
+            "score": 182.0,
+            "sequence_source": "mmCIF polymer scheme + atom_site label/auth mapping"
+          }
+        ],
+        "selected_chain": "A",
+        "reference_length": 63,
+        "coordinate_coverage": 1.0,
+        "aligned_coverage": 1.0,
+        "aligned_identity": 1.0,
+        "exact_compatible_positions": 63,
+        "differences": [],
+        "missing_positions": [],
+        "alignment": "target            0 ---KTEWPELVGKSVEEAKKVILQDKPEAQIIVLPVGTIVTMEYRIDRVRLFVDKLDNIA\n                  0 ---|||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery             0 HNLKTEWPELVGKSVEEAKKVILQDKPEAQIIVLPVGTIVTMEYRIDRVRLFVDKLDNIA\n\ntarget           57 QVPRVG 63\n                 60 |||||| 66\nquery            60 QVPRVG 66\n",
+        "construct_insertions": [
+          1,
+          2,
+          3
+        ]
+      },
+      "reference": "KTEWPELVGKSVEEAKKVILQDKPEAQIIVLPVGTIVTMEYRIDRVRLFVDKLDNIAQVPRVG",
+      "coordinate_sha256": "bf5e06fc219ebce54da5ab1d7b252694e1fd41e6655f78c0bd72e251521f3100",
+      "eligible_positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "eligible_identity": 1.0,
+      "eligible_CA_coverage": 1.0,
+      "excluded_positions": [],
+      "nodes": 63,
+      "undirected_edges": 288,
+      "connected_components": 1,
+      "isolated_nodes": 0,
+      "descriptor_missing_nodes": {
+        "rsa": 0,
+        "contact_degree": 0,
+        "nonlocal_contact_degree": 0,
+        "bfactor_a2": 0,
+        "plddt": 63
+      },
+      "confidence_semantics": "experimental_bfactor",
+      "ASA": {
+        "algorithm": "Biopython Shrake-Rupley",
+        "probe_radius_a": 1.4,
+        "sphere_points": 960,
+        "environment": "entire selected deposited model, occupied heavy atoms including ligands/other chains; no waters/H/D; no symmetry mates",
+        "rsa_table": "Tien et al. 2013 theoretical maxima (Wilke), doi:10.1371/journal.pone.0080635",
+        "max_asa_a2": {
+          "A": 129,
+          "C": 167,
+          "D": 193,
+          "E": 223,
+          "F": 240,
+          "G": 104,
+          "H": 224,
+          "I": 197,
+          "K": 236,
+          "L": 201,
+          "M": 224,
+          "N": 195,
+          "P": 159,
+          "Q": 225,
+          "R": 274,
+          "S": 155,
+          "T": 172,
+          "V": 174,
+          "W": 285,
+          "Y": 263
+        },
+        "rsa_clipped": false,
+        "secondary_structure": {
+          "status": "disabled"
+        }
+      },
+      "contacts": "eligible induced graph; no invented WT atoms; deposited context ASA",
+      "backbone_breaks": [],
+      "reference_construct_sequence_compatible": true,
+      "protein_id": "P01053",
+      "pdb": "3CI2",
+      "coordinate_path": "data/cache/m18/source/3CI2.cif",
+      "tensor_sha256": {
+        "static": "e03728f2c8351fc8fb18e2c30c20c986876290b153460ff7a5dac4c7c1bbed68",
+        "neighborhood": "bac90ed7be89172b6906a293400c092d6654b520bfc71de0f04aa4bbab0ffe2d",
+        "edge_index": "bdac052a6a1392c02b5ed48d30f137a7c9b334aab7b62bb82648c2e97f83aae0",
+        "edge_features": "a073fd72cfbfc8a7f08914e7f3d8b7378b97b397beff48d3d02066356bdb80bf",
+        "xyz": "00a0ed11a5e6ecf9d9822cfdd8d903a779728928797491827bef61d3677d4cd2"
+      },
+      "atoms": 505,
+      "chemistry_shape": [
+        576,
+        29
+      ],
+      "raw_atom_site_coordinates_verified": true,
+      "per_residue_missing_chemical_atoms": [
+        {
+          "position": 1,
+          "missing": []
+        },
+        {
+          "position": 2,
+          "missing": []
+        },
+        {
+          "position": 3,
+          "missing": []
+        },
+        {
+          "position": 4,
+          "missing": []
+        },
+        {
+          "position": 5,
+          "missing": []
+        },
+        {
+          "position": 6,
+          "missing": []
+        },
+        {
+          "position": 7,
+          "missing": []
+        },
+        {
+          "position": 8,
+          "missing": []
+        },
+        {
+          "position": 9,
+          "missing": []
+        },
+        {
+          "position": 10,
+          "missing": []
+        },
+        {
+          "position": 11,
+          "missing": []
+        },
+        {
+          "position": 12,
+          "missing": []
+        },
+        {
+          "position": 13,
+          "missing": []
+        },
+        {
+          "position": 14,
+          "missing": []
+        },
+        {
+          "position": 15,
+          "missing": []
+        },
+        {
+          "position": 16,
+          "missing": []
+        },
+        {
+          "position": 17,
+          "missing": []
+        },
+        {
+          "position": 18,
+          "missing": []
+        },
+        {
+          "position": 19,
+          "missing": []
+        },
+        {
+          "position": 20,
+          "missing": []
+        },
+        {
+          "position": 21,
+          "missing": []
+        },
+        {
+          "position": 22,
+          "missing": []
+        },
+        {
+          "position": 23,
+          "missing": []
+        },
+        {
+          "position": 24,
+          "missing": []
+        },
+        {
+          "position": 25,
+          "missing": []
+        },
+        {
+          "position": 26,
+          "missing": []
+        },
+        {
+          "position": 27,
+          "missing": []
+        },
+        {
+          "position": 28,
+          "missing": []
+        },
+        {
+          "position": 29,
+          "missing": []
+        },
+        {
+          "position": 30,
+          "missing": []
+        },
+        {
+          "position": 31,
+          "missing": []
+        },
+        {
+          "position": 32,
+          "missing": []
+        },
+        {
+          "position": 33,
+          "missing": []
+        },
+        {
+          "position": 34,
+          "missing": []
+        },
+        {
+          "position": 35,
+          "missing": []
+        },
+        {
+          "position": 36,
+          "missing": []
+        },
+        {
+          "position": 37,
+          "missing": []
+        },
+        {
+          "position": 38,
+          "missing": []
+        },
+        {
+          "position": 39,
+          "missing": []
+        },
+        {
+          "position": 40,
+          "missing": []
+        },
+        {
+          "position": 41,
+          "missing": []
+        },
+        {
+          "position": 42,
+          "missing": []
+        },
+        {
+          "position": 43,
+          "missing": []
+        },
+        {
+          "position": 44,
+          "missing": []
+        },
+        {
+          "position": 45,
+          "missing": []
+        },
+        {
+          "position": 46,
+          "missing": []
+        },
+        {
+          "position": 47,
+          "missing": []
+        },
+        {
+          "position": 48,
+          "missing": []
+        },
+        {
+          "position": 49,
+          "missing": []
+        },
+        {
+          "position": 50,
+          "missing": []
+        },
+        {
+          "position": 51,
+          "missing": []
+        },
+        {
+          "position": 52,
+          "missing": []
+        },
+        {
+          "position": 53,
+          "missing": []
+        },
+        {
+          "position": 54,
+          "missing": []
+        },
+        {
+          "position": 55,
+          "missing": []
+        },
+        {
+          "position": 56,
+          "missing": []
+        },
+        {
+          "position": 57,
+          "missing": []
+        },
+        {
+          "position": 58,
+          "missing": []
+        },
+        {
+          "position": 59,
+          "missing": []
+        },
+        {
+          "position": 60,
+          "missing": []
+        },
+        {
+          "position": 61,
+          "missing": []
+        },
+        {
+          "position": 62,
+          "missing": []
+        },
+        {
+          "position": 63,
+          "missing": []
+        }
+      ],
+      "chemistry_invalid_directed_edges": {
+        "salt_valid": 0,
+        "hydrophobic_valid": 0,
+        "backbone_polar_valid": 0
+      },
+      "ASA_range_a2": [
+        0.0,
+        172.42005185991655
+      ],
+      "RSA_range": [
+        0.0,
+        0.7697323743746275
+      ],
+      "model_input_dimensions": {
+        "static": 34,
+        "dynamic": 25,
+        "ridge": 270,
+        "edge": 29
+      },
+      "common_candidate_ids": [
+        "GSE266299:P01053:063ec8bf5bba75b8",
+        "GSE266299:P01053:ffe00adc17ab7ed4",
+        "GSE266299:P01053:bc0a4a3a67734643",
+        "GSE266299:P01053:b8daf827851c53bf",
+        "GSE266299:P01053:1e3734cbc2e4059c",
+        "GSE266299:P01053:c47ab23c9f14e37d",
+        "GSE266299:P01053:3789501a1f5798aa",
+        "GSE266299:P01053:3d5672150a510d36",
+        "GSE266299:P01053:5dc86bed81df1eff",
+        "GSE266299:P01053:e48d0980baab8018",
+        "GSE266299:P01053:2391249400b02111",
+        "GSE266299:P01053:62aa296820bad187",
+        "GSE266299:P01053:1c11fc648bc55da1",
+        "GSE266299:P01053:0283ffc5a84543cb",
+        "GSE266299:P01053:763b5ec23cf4a98d",
+        "GSE266299:P01053:483145c99aba37bc",
+        "GSE266299:P01053:fefceb750f2069cf",
+        "GSE266299:P01053:b7251c0a97935e9a",
+        "GSE266299:P01053:608857e6bc0a8f89",
+        "GSE266299:P01053:0d4f724731d8d83c",
+        "GSE266299:P01053:3e19d782395834c9",
+        "GSE266299:P01053:801e9f571a4bf8e3",
+        "GSE266299:P01053:b204b28061cda226",
+        "GSE266299:P01053:a8ede474e76cd3a7",
+        "GSE266299:P01053:3936310c8c48150b",
+        "GSE266299:P01053:ec0c2c062928d126",
+        "GSE266299:P01053:6ace582fbbae0bae",
+        "GSE266299:P01053:87e221fd52328fc4",
+        "GSE266299:P01053:406f472c2b118f02",
+        "GSE266299:P01053:2569b2854c046999",
+        "GSE266299:P01053:cc91a6943514a797",
+        "GSE266299:P01053:b28be44b47fd6d04",
+        "GSE266299:P01053:023d57d320ca3baa",
+        "GSE266299:P01053:428418c25f1d73e1",
+        "GSE266299:P01053:7d67b1f2b305b3c0",
+        "GSE266299:P01053:897d871f01d0e68d",
+        "GSE266299:P01053:c658adfe1410d2f0",
+        "GSE266299:P01053:c6e3bf869c60e70f",
+        "GSE266299:P01053:98b6ee1e1a5e1c9f",
+        "GSE266299:P01053:1e9cd77249d85264",
+        "GSE266299:P01053:dbb5f250ecc5143a",
+        "GSE266299:P01053:cfb2118a7ea1ca5a",
+        "GSE266299:P01053:baaf1128064dda2f",
+        "GSE266299:P01053:57b34f0f879e04a4",
+        "GSE266299:P01053:88b3998b549ae120",
+        "GSE266299:P01053:f00992f493687f96",
+        "GSE266299:P01053:a2549a55d5eac3c4",
+        "GSE266299:P01053:acc8615c5e84b0be",
+        "GSE266299:P01053:418f00ab0234bc25",
+        "GSE266299:P01053:c66173e916a4cdc7",
+        "GSE266299:P01053:55f796a1160fafbb",
+        "GSE266299:P01053:5b46e7db227b5165",
+        "GSE266299:P01053:7130d34f22d044cd",
+        "GSE266299:P01053:180d10cd5d66dd0d",
+        "GSE266299:P01053:4548b5dfb52f3a9d",
+        "GSE266299:P01053:09c6886b121a3952",
+        "GSE266299:P01053:ab493912680f9532",
+        "GSE266299:P01053:1e84a7daf72485a6",
+        "GSE266299:P01053:500ef2db06e0b82e",
+        "GSE266299:P01053:850b62cc533a1a8c",
+        "GSE266299:P01053:ceff8a37d0847a06",
+        "GSE266299:P01053:b06982513097086d",
+        "GSE266299:P01053:4125e95fcf37c4c3",
+        "GSE266299:P01053:e3d6890b748e44d6",
+        "GSE266299:P01053:f1283ce8c630f091",
+        "GSE266299:P01053:ff6107a82b6759d7",
+        "GSE266299:P01053:e0fe2a03f53ee9ab",
+        "GSE266299:P01053:bf98a1836cbe9cbd",
+        "GSE266299:P01053:b3c2f1fcb08084f0",
+        "GSE266299:P01053:eec20f97249beb8b",
+        "GSE266299:P01053:007af371d0ae6530",
+        "GSE266299:P01053:188923eaabd2c6c0",
+        "GSE266299:P01053:b57dc17bb3a9cbff",
+        "GSE266299:P01053:c3d5a964f53e000f",
+        "GSE266299:P01053:16d9822f631e9c84",
+        "GSE266299:P01053:3513d2786cdcd765",
+        "GSE266299:P01053:dbdbcc51b589c807",
+        "GSE266299:P01053:c18a79ad3a46ab6d",
+        "GSE266299:P01053:58c122f67af3f5f6",
+        "GSE266299:P01053:92d2006af5c5d479",
+        "GSE266299:P01053:e37043dad9eb7ea0",
+        "GSE266299:P01053:ae6ef8b28d2b51ca",
+        "GSE266299:P01053:eeeec26845f658b7",
+        "GSE266299:P01053:2223c58d195184e4",
+        "GSE266299:P01053:6e14a84b97830bb0",
+        "GSE266299:P01053:110723627c09f071",
+        "GSE266299:P01053:bf9cd7b4142f23ae",
+        "GSE266299:P01053:e5047709c87bb578",
+        "GSE266299:P01053:d58928c672a36671",
+        "GSE266299:P01053:df2673d84e9224f8",
+        "GSE266299:P01053:d05f0245e0611992",
+        "GSE266299:P01053:ec277d7bd48cb941",
+        "GSE266299:P01053:cf4f16fc07b51f65",
+        "GSE266299:P01053:359afff7eac5a071",
+        "GSE266299:P01053:68fb476e2ddbd77c",
+        "GSE266299:P01053:a07deea6f6a3a6c3"
+      ],
+      "matched_candidates": 96,
+      "cohort_exclusions_after_mask": [],
+      "mutation_order_invariance": true,
+      "independent_spatial_edges_verified": true,
+      "independent_backbone_edges_verified": true
+    },
+    {
+      "scope": "masked-reference-v1",
+      "masked_accepted": true,
+      "full_reference_M2_audit": {
+        "accepted": false,
+        "errors": [
+          "C-alpha reference coverage below threshold"
+        ],
+        "chains": [
+          {
+            "chain": "A",
+            "identity": 1.0,
+            "aligned_coverage": 0.9195804195804196,
+            "score": 772.0,
+            "sequence_source": "mmCIF polymer scheme + atom_site label/auth mapping"
+          }
+        ],
+        "selected_chain": "A",
+        "reference_length": 286,
+        "coordinate_coverage": 0.9195804195804196,
+        "aligned_coverage": 0.9195804195804196,
+        "aligned_identity": 1.0,
+        "exact_compatible_positions": 263,
+        "differences": [],
+        "missing_positions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "alignment": "target            0 MSIQHFRVALIPFFAAFCLPVFAHPETLVKVKDAEDQLGARVGYIELDLNSGKILESFRP\n                  0 -----------------------|||||||||||||||||||||||||||||||||||||\nquery             0 -----------------------HPETLVKVKDAEDQLGARVGYIELDLNSGKILESFRP\n\ntarget           60 EERFPMMSTFKVLLCGAVLSRVDAGQEQLGRRIHYSQNDLVEYSPVTEKHLTDGMTVREL\n                 60 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery            37 EERFPMMSTFKVLLCGAVLSRVDAGQEQLGRRIHYSQNDLVEYSPVTEKHLTDGMTVREL\n\ntarget          120 CSAAITMSDNTAANLLLTTIGGPKELTAFLHNMGDHVTRLDRWEPELNEAIPNDERDTTM\n                120 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery            97 CSAAITMSDNTAANLLLTTIGGPKELTAFLHNMGDHVTRLDRWEPELNEAIPNDERDTTM\n\ntarget          180 PAAMATTLRKLLTGELLTLASRQQLIDWMEADKVAGPLLRSALPAGWFIADKSGAGERGS\n                180 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery           157 PAAMATTLRKLLTGELLTLASRQQLIDWMEADKVAGPLLRSALPAGWFIADKSGAGERGS\n\ntarget          240 RGIIAALGPDGKPSRIVVIYTTGSQATMDERNRQIAEIGASLIKHW 286\n                240 |||||||||||||||||||||||||||||||||||||||||||||| 286\nquery           217 RGIIAALGPDGKPSRIVVIYTTGSQATMDERNRQIAEIGASLIKHW 263\n",
+        "construct_insertions": []
+      },
+      "reference": "MSIQHFRVALIPFFAAFCLPVFAHPETLVKVKDAEDQLGARVGYIELDLNSGKILESFRPEERFPMMSTFKVLLCGAVLSRVDAGQEQLGRRIHYSQNDLVEYSPVTEKHLTDGMTVRELCSAAITMSDNTAANLLLTTIGGPKELTAFLHNMGDHVTRLDRWEPELNEAIPNDERDTTMPAAMATTLRKLLTGELLTLASRQQLIDWMEADKVAGPLLRSALPAGWFIADKSGAGERGSRGIIAALGPDGKPSRIVVIYTTGSQATMDERNRQIAEIGASLIKHW",
+      "coordinate_sha256": "99145e8616a9aafffa7a26b543f5de5bcc623fa03d18fc3695dba385b8d4d763",
+      "eligible_positions": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286
+      ],
+      "eligible_identity": 1.0,
+      "eligible_CA_coverage": 1.0,
+      "excluded_positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "nodes": 263,
+      "undirected_edges": 1355,
+      "connected_components": 1,
+      "isolated_nodes": 0,
+      "descriptor_missing_nodes": {
+        "rsa": 0,
+        "contact_degree": 0,
+        "nonlocal_contact_degree": 0,
+        "bfactor_a2": 0,
+        "plddt": 263
+      },
+      "confidence_semantics": "experimental_bfactor",
+      "ASA": {
+        "algorithm": "Biopython Shrake-Rupley",
+        "probe_radius_a": 1.4,
+        "sphere_points": 960,
+        "environment": "entire selected deposited model, occupied heavy atoms including ligands/other chains; no waters/H/D; no symmetry mates",
+        "rsa_table": "Tien et al. 2013 theoretical maxima (Wilke), doi:10.1371/journal.pone.0080635",
+        "max_asa_a2": {
+          "A": 129,
+          "C": 167,
+          "D": 193,
+          "E": 223,
+          "F": 240,
+          "G": 104,
+          "H": 224,
+          "I": 197,
+          "K": 236,
+          "L": 201,
+          "M": 224,
+          "N": 195,
+          "P": 159,
+          "Q": 225,
+          "R": 274,
+          "S": 155,
+          "T": 172,
+          "V": 174,
+          "W": 285,
+          "Y": 263
+        },
+        "rsa_clipped": false,
+        "secondary_structure": {
+          "status": "disabled"
+        }
+      },
+      "contacts": "eligible induced graph; no invented WT atoms; deposited context ASA",
+      "backbone_breaks": [],
+      "reference_construct_sequence_compatible": true,
+      "protein_id": "TEM1",
+      "pdb": "1XPB",
+      "coordinate_path": "data/cache/m182/source/1XPB.cif",
+      "tensor_sha256": {
+        "static": "c7c76dd790530c5b51635ab082d933afbb6fbc67a5f1b3057a1a2da57a7089e2",
+        "neighborhood": "c1e03401bbf6f85305e9d583248dec1ce37e15f42fa12086251337fe687b4cea",
+        "edge_index": "355aacc471248ff869755f746b3a392e20a439747caac48fc0ad95e3fcef95cc",
+        "edge_features": "25f4a72b9c0246233e771764f7a96dcdb9487b78f2df477fc7e991c2aa04fb0e",
+        "xyz": "702ba97e9ec83efb4631a375345bc2540ccd8e61aef034f88c70e52a71df60f5"
+      },
+      "atoms": 2027,
+      "chemistry_shape": [
+        2710,
+        29
+      ],
+      "raw_atom_site_coordinates_verified": true,
+      "per_residue_missing_chemical_atoms": [
+        {
+          "position": 24,
+          "missing": []
+        },
+        {
+          "position": 25,
+          "missing": []
+        },
+        {
+          "position": 26,
+          "missing": []
+        },
+        {
+          "position": 27,
+          "missing": []
+        },
+        {
+          "position": 28,
+          "missing": []
+        },
+        {
+          "position": 29,
+          "missing": []
+        },
+        {
+          "position": 30,
+          "missing": []
+        },
+        {
+          "position": 31,
+          "missing": []
+        },
+        {
+          "position": 32,
+          "missing": []
+        },
+        {
+          "position": 33,
+          "missing": []
+        },
+        {
+          "position": 34,
+          "missing": []
+        },
+        {
+          "position": 35,
+          "missing": []
+        },
+        {
+          "position": 36,
+          "missing": []
+        },
+        {
+          "position": 37,
+          "missing": []
+        },
+        {
+          "position": 38,
+          "missing": []
+        },
+        {
+          "position": 39,
+          "missing": []
+        },
+        {
+          "position": 40,
+          "missing": []
+        },
+        {
+          "position": 41,
+          "missing": []
+        },
+        {
+          "position": 42,
+          "missing": []
+        },
+        {
+          "position": 43,
+          "missing": []
+        },
+        {
+          "position": 44,
+          "missing": []
+        },
+        {
+          "position": 45,
+          "missing": []
+        },
+        {
+          "position": 46,
+          "missing": []
+        },
+        {
+          "position": 47,
+          "missing": []
+        },
+        {
+          "position": 48,
+          "missing": []
+        },
+        {
+          "position": 49,
+          "missing": []
+        },
+        {
+          "position": 50,
+          "missing": []
+        },
+        {
+          "position": 51,
+          "missing": []
+        },
+        {
+          "position": 52,
+          "missing": []
+        },
+        {
+          "position": 53,
+          "missing": []
+        },
+        {
+          "position": 54,
+          "missing": []
+        },
+        {
+          "position": 55,
+          "missing": []
+        },
+        {
+          "position": 56,
+          "missing": []
+        },
+        {
+          "position": 57,
+          "missing": []
+        },
+        {
+          "position": 58,
+          "missing": []
+        },
+        {
+          "position": 59,
+          "missing": []
+        },
+        {
+          "position": 60,
+          "missing": []
+        },
+        {
+          "position": 61,
+          "missing": []
+        },
+        {
+          "position": 62,
+          "missing": []
+        },
+        {
+          "position": 63,
+          "missing": []
+        },
+        {
+          "position": 64,
+          "missing": []
+        },
+        {
+          "position": 65,
+          "missing": []
+        },
+        {
+          "position": 66,
+          "missing": []
+        },
+        {
+          "position": 67,
+          "missing": []
+        },
+        {
+          "position": 68,
+          "missing": []
+        },
+        {
+          "position": 69,
+          "missing": []
+        },
+        {
+          "position": 70,
+          "missing": []
+        },
+        {
+          "position": 71,
+          "missing": []
+        },
+        {
+          "position": 72,
+          "missing": []
+        },
+        {
+          "position": 73,
+          "missing": []
+        },
+        {
+          "position": 74,
+          "missing": []
+        },
+        {
+          "position": 75,
+          "missing": []
+        },
+        {
+          "position": 76,
+          "missing": []
+        },
+        {
+          "position": 77,
+          "missing": []
+        },
+        {
+          "position": 78,
+          "missing": []
+        },
+        {
+          "position": 79,
+          "missing": []
+        },
+        {
+          "position": 80,
+          "missing": []
+        },
+        {
+          "position": 81,
+          "missing": []
+        },
+        {
+          "position": 82,
+          "missing": []
+        },
+        {
+          "position": 83,
+          "missing": []
+        },
+        {
+          "position": 84,
+          "missing": []
+        },
+        {
+          "position": 85,
+          "missing": []
+        },
+        {
+          "position": 86,
+          "missing": []
+        },
+        {
+          "position": 87,
+          "missing": []
+        },
+        {
+          "position": 88,
+          "missing": []
+        },
+        {
+          "position": 89,
+          "missing": []
+        },
+        {
+          "position": 90,
+          "missing": []
+        },
+        {
+          "position": 91,
+          "missing": []
+        },
+        {
+          "position": 92,
+          "missing": []
+        },
+        {
+          "position": 93,
+          "missing": []
+        },
+        {
+          "position": 94,
+          "missing": []
+        },
+        {
+          "position": 95,
+          "missing": []
+        },
+        {
+          "position": 96,
+          "missing": []
+        },
+        {
+          "position": 97,
+          "missing": []
+        },
+        {
+          "position": 98,
+          "missing": []
+        },
+        {
+          "position": 99,
+          "missing": []
+        },
+        {
+          "position": 100,
+          "missing": []
+        },
+        {
+          "position": 101,
+          "missing": []
+        },
+        {
+          "position": 102,
+          "missing": []
+        },
+        {
+          "position": 103,
+          "missing": []
+        },
+        {
+          "position": 104,
+          "missing": []
+        },
+        {
+          "position": 105,
+          "missing": []
+        },
+        {
+          "position": 106,
+          "missing": []
+        },
+        {
+          "position": 107,
+          "missing": []
+        },
+        {
+          "position": 108,
+          "missing": []
+        },
+        {
+          "position": 109,
+          "missing": []
+        },
+        {
+          "position": 110,
+          "missing": []
+        },
+        {
+          "position": 111,
+          "missing": []
+        },
+        {
+          "position": 112,
+          "missing": []
+        },
+        {
+          "position": 113,
+          "missing": []
+        },
+        {
+          "position": 114,
+          "missing": []
+        },
+        {
+          "position": 115,
+          "missing": []
+        },
+        {
+          "position": 116,
+          "missing": []
+        },
+        {
+          "position": 117,
+          "missing": []
+        },
+        {
+          "position": 118,
+          "missing": []
+        },
+        {
+          "position": 119,
+          "missing": []
+        },
+        {
+          "position": 120,
+          "missing": []
+        },
+        {
+          "position": 121,
+          "missing": []
+        },
+        {
+          "position": 122,
+          "missing": []
+        },
+        {
+          "position": 123,
+          "missing": []
+        },
+        {
+          "position": 124,
+          "missing": []
+        },
+        {
+          "position": 125,
+          "missing": []
+        },
+        {
+          "position": 126,
+          "missing": []
+        },
+        {
+          "position": 127,
+          "missing": []
+        },
+        {
+          "position": 128,
+          "missing": []
+        },
+        {
+          "position": 129,
+          "missing": []
+        },
+        {
+          "position": 130,
+          "missing": []
+        },
+        {
+          "position": 131,
+          "missing": []
+        },
+        {
+          "position": 132,
+          "missing": []
+        },
+        {
+          "position": 133,
+          "missing": []
+        },
+        {
+          "position": 134,
+          "missing": []
+        },
+        {
+          "position": 135,
+          "missing": []
+        },
+        {
+          "position": 136,
+          "missing": []
+        },
+        {
+          "position": 137,
+          "missing": []
+        },
+        {
+          "position": 138,
+          "missing": []
+        },
+        {
+          "position": 139,
+          "missing": []
+        },
+        {
+          "position": 140,
+          "missing": []
+        },
+        {
+          "position": 141,
+          "missing": []
+        },
+        {
+          "position": 142,
+          "missing": []
+        },
+        {
+          "position": 143,
+          "missing": []
+        },
+        {
+          "position": 144,
+          "missing": []
+        },
+        {
+          "position": 145,
+          "missing": []
+        },
+        {
+          "position": 146,
+          "missing": []
+        },
+        {
+          "position": 147,
+          "missing": []
+        },
+        {
+          "position": 148,
+          "missing": []
+        },
+        {
+          "position": 149,
+          "missing": []
+        },
+        {
+          "position": 150,
+          "missing": []
+        },
+        {
+          "position": 151,
+          "missing": []
+        },
+        {
+          "position": 152,
+          "missing": []
+        },
+        {
+          "position": 153,
+          "missing": []
+        },
+        {
+          "position": 154,
+          "missing": []
+        },
+        {
+          "position": 155,
+          "missing": []
+        },
+        {
+          "position": 156,
+          "missing": []
+        },
+        {
+          "position": 157,
+          "missing": []
+        },
+        {
+          "position": 158,
+          "missing": []
+        },
+        {
+          "position": 159,
+          "missing": []
+        },
+        {
+          "position": 160,
+          "missing": []
+        },
+        {
+          "position": 161,
+          "missing": []
+        },
+        {
+          "position": 162,
+          "missing": []
+        },
+        {
+          "position": 163,
+          "missing": []
+        },
+        {
+          "position": 164,
+          "missing": []
+        },
+        {
+          "position": 165,
+          "missing": []
+        },
+        {
+          "position": 166,
+          "missing": []
+        },
+        {
+          "position": 167,
+          "missing": []
+        },
+        {
+          "position": 168,
+          "missing": []
+        },
+        {
+          "position": 169,
+          "missing": []
+        },
+        {
+          "position": 170,
+          "missing": []
+        },
+        {
+          "position": 171,
+          "missing": []
+        },
+        {
+          "position": 172,
+          "missing": []
+        },
+        {
+          "position": 173,
+          "missing": []
+        },
+        {
+          "position": 174,
+          "missing": []
+        },
+        {
+          "position": 175,
+          "missing": []
+        },
+        {
+          "position": 176,
+          "missing": []
+        },
+        {
+          "position": 177,
+          "missing": []
+        },
+        {
+          "position": 178,
+          "missing": []
+        },
+        {
+          "position": 179,
+          "missing": []
+        },
+        {
+          "position": 180,
+          "missing": []
+        },
+        {
+          "position": 181,
+          "missing": []
+        },
+        {
+          "position": 182,
+          "missing": []
+        },
+        {
+          "position": 183,
+          "missing": []
+        },
+        {
+          "position": 184,
+          "missing": []
+        },
+        {
+          "position": 185,
+          "missing": []
+        },
+        {
+          "position": 186,
+          "missing": []
+        },
+        {
+          "position": 187,
+          "missing": []
+        },
+        {
+          "position": 188,
+          "missing": []
+        },
+        {
+          "position": 189,
+          "missing": []
+        },
+        {
+          "position": 190,
+          "missing": []
+        },
+        {
+          "position": 191,
+          "missing": []
+        },
+        {
+          "position": 192,
+          "missing": []
+        },
+        {
+          "position": 193,
+          "missing": []
+        },
+        {
+          "position": 194,
+          "missing": []
+        },
+        {
+          "position": 195,
+          "missing": []
+        },
+        {
+          "position": 196,
+          "missing": []
+        },
+        {
+          "position": 197,
+          "missing": []
+        },
+        {
+          "position": 198,
+          "missing": []
+        },
+        {
+          "position": 199,
+          "missing": []
+        },
+        {
+          "position": 200,
+          "missing": []
+        },
+        {
+          "position": 201,
+          "missing": []
+        },
+        {
+          "position": 202,
+          "missing": []
+        },
+        {
+          "position": 203,
+          "missing": []
+        },
+        {
+          "position": 204,
+          "missing": []
+        },
+        {
+          "position": 205,
+          "missing": []
+        },
+        {
+          "position": 206,
+          "missing": []
+        },
+        {
+          "position": 207,
+          "missing": []
+        },
+        {
+          "position": 208,
+          "missing": []
+        },
+        {
+          "position": 209,
+          "missing": []
+        },
+        {
+          "position": 210,
+          "missing": []
+        },
+        {
+          "position": 211,
+          "missing": []
+        },
+        {
+          "position": 212,
+          "missing": []
+        },
+        {
+          "position": 213,
+          "missing": []
+        },
+        {
+          "position": 214,
+          "missing": []
+        },
+        {
+          "position": 215,
+          "missing": []
+        },
+        {
+          "position": 216,
+          "missing": []
+        },
+        {
+          "position": 217,
+          "missing": []
+        },
+        {
+          "position": 218,
+          "missing": []
+        },
+        {
+          "position": 219,
+          "missing": []
+        },
+        {
+          "position": 220,
+          "missing": []
+        },
+        {
+          "position": 221,
+          "missing": []
+        },
+        {
+          "position": 222,
+          "missing": []
+        },
+        {
+          "position": 223,
+          "missing": []
+        },
+        {
+          "position": 224,
+          "missing": []
+        },
+        {
+          "position": 225,
+          "missing": []
+        },
+        {
+          "position": 226,
+          "missing": []
+        },
+        {
+          "position": 227,
+          "missing": []
+        },
+        {
+          "position": 228,
+          "missing": []
+        },
+        {
+          "position": 229,
+          "missing": []
+        },
+        {
+          "position": 230,
+          "missing": []
+        },
+        {
+          "position": 231,
+          "missing": []
+        },
+        {
+          "position": 232,
+          "missing": []
+        },
+        {
+          "position": 233,
+          "missing": []
+        },
+        {
+          "position": 234,
+          "missing": []
+        },
+        {
+          "position": 235,
+          "missing": []
+        },
+        {
+          "position": 236,
+          "missing": []
+        },
+        {
+          "position": 237,
+          "missing": []
+        },
+        {
+          "position": 238,
+          "missing": []
+        },
+        {
+          "position": 239,
+          "missing": []
+        },
+        {
+          "position": 240,
+          "missing": []
+        },
+        {
+          "position": 241,
+          "missing": []
+        },
+        {
+          "position": 242,
+          "missing": []
+        },
+        {
+          "position": 243,
+          "missing": []
+        },
+        {
+          "position": 244,
+          "missing": []
+        },
+        {
+          "position": 245,
+          "missing": []
+        },
+        {
+          "position": 246,
+          "missing": []
+        },
+        {
+          "position": 247,
+          "missing": []
+        },
+        {
+          "position": 248,
+          "missing": []
+        },
+        {
+          "position": 249,
+          "missing": []
+        },
+        {
+          "position": 250,
+          "missing": []
+        },
+        {
+          "position": 251,
+          "missing": []
+        },
+        {
+          "position": 252,
+          "missing": []
+        },
+        {
+          "position": 253,
+          "missing": []
+        },
+        {
+          "position": 254,
+          "missing": []
+        },
+        {
+          "position": 255,
+          "missing": []
+        },
+        {
+          "position": 256,
+          "missing": []
+        },
+        {
+          "position": 257,
+          "missing": []
+        },
+        {
+          "position": 258,
+          "missing": []
+        },
+        {
+          "position": 259,
+          "missing": []
+        },
+        {
+          "position": 260,
+          "missing": []
+        },
+        {
+          "position": 261,
+          "missing": []
+        },
+        {
+          "position": 262,
+          "missing": []
+        },
+        {
+          "position": 263,
+          "missing": []
+        },
+        {
+          "position": 264,
+          "missing": []
+        },
+        {
+          "position": 265,
+          "missing": []
+        },
+        {
+          "position": 266,
+          "missing": []
+        },
+        {
+          "position": 267,
+          "missing": []
+        },
+        {
+          "position": 268,
+          "missing": []
+        },
+        {
+          "position": 269,
+          "missing": []
+        },
+        {
+          "position": 270,
+          "missing": []
+        },
+        {
+          "position": 271,
+          "missing": []
+        },
+        {
+          "position": 272,
+          "missing": []
+        },
+        {
+          "position": 273,
+          "missing": []
+        },
+        {
+          "position": 274,
+          "missing": []
+        },
+        {
+          "position": 275,
+          "missing": []
+        },
+        {
+          "position": 276,
+          "missing": []
+        },
+        {
+          "position": 277,
+          "missing": []
+        },
+        {
+          "position": 278,
+          "missing": []
+        },
+        {
+          "position": 279,
+          "missing": []
+        },
+        {
+          "position": 280,
+          "missing": []
+        },
+        {
+          "position": 281,
+          "missing": []
+        },
+        {
+          "position": 282,
+          "missing": []
+        },
+        {
+          "position": 283,
+          "missing": []
+        },
+        {
+          "position": 284,
+          "missing": []
+        },
+        {
+          "position": 285,
+          "missing": []
+        },
+        {
+          "position": 286,
+          "missing": []
+        }
+      ],
+      "chemistry_invalid_directed_edges": {
+        "salt_valid": 0,
+        "hydrophobic_valid": 0,
+        "backbone_polar_valid": 0
+      },
+      "ASA_range_a2": [
+        0.0,
+        185.4696321493213
+      ],
+      "RSA_range": [
+        0.0,
+        0.8243094762192058
+      ],
+      "model_input_dimensions": {
+        "static": 34,
+        "dynamic": 25,
+        "ridge": 270,
+        "edge": 29
+      },
+      "common_candidate_ids": [
+        "Firnberg2014:P25Y",
+        "Firnberg2014:A246C",
+        "Firnberg2014:R59F",
+        "Firnberg2014:P165Q",
+        "Firnberg2014:K144C",
+        "Firnberg2014:L136G",
+        "Firnberg2014:L192E",
+        "Firnberg2014:H24E",
+        "Firnberg2014:E119Y",
+        "Firnberg2014:T158I",
+        "Firnberg2014:Q204C",
+        "Firnberg2014:L218K",
+        "Firnberg2014:L199N",
+        "Firnberg2014:H151Q",
+        "Firnberg2014:R118M",
+        "Firnberg2014:K252T",
+        "Firnberg2014:G251F",
+        "Firnberg2014:P60V",
+        "Firnberg2014:E169D",
+        "Firnberg2014:D207I",
+        "Firnberg2014:A34G",
+        "Firnberg2014:A245S",
+        "Firnberg2014:G239R",
+        "Firnberg2014:M115E",
+        "Firnberg2014:G194M",
+        "Firnberg2014:G216H",
+        "Firnberg2014:G242T",
+        "Firnberg2014:T27K",
+        "Firnberg2014:K144S",
+        "Firnberg2014:I275H",
+        "Firnberg2014:L150E",
+        "Firnberg2014:A123F",
+        "Firnberg2014:D161H",
+        "Firnberg2014:L218F",
+        "Firnberg2014:K232M",
+        "Firnberg2014:L79Y",
+        "Firnberg2014:G52R",
+        "Firnberg2014:T178A",
+        "Firnberg2014:K190D",
+        "Firnberg2014:Y44C",
+        "Firnberg2014:D231M",
+        "Firnberg2014:G234K",
+        "Firnberg2014:I206Q",
+        "Firnberg2014:Q88K",
+        "Firnberg2014:I93L",
+        "Firnberg2014:A77S",
+        "Firnberg2014:G248R",
+        "Firnberg2014:L55S",
+        "Firnberg2014:P249E",
+        "Firnberg2014:T193F",
+        "Firnberg2014:D250N",
+        "Firnberg2014:N98C",
+        "Firnberg2014:D207R",
+        "Firnberg2014:A133L",
+        "Firnberg2014:S221Y",
+        "Firnberg2014:A183M",
+        "Firnberg2014:D129S",
+        "Firnberg2014:E26L",
+        "Firnberg2014:F228W",
+        "Firnberg2014:L282G",
+        "Firnberg2014:K144M",
+        "Firnberg2014:L197S",
+        "Firnberg2014:I243R",
+        "Firnberg2014:K30T",
+        "Firnberg2014:E119M",
+        "Firnberg2014:E46L",
+        "Firnberg2014:Y95M",
+        "Firnberg2014:G52S",
+        "Firnberg2014:D36Q",
+        "Firnberg2014:Q88M",
+        "Firnberg2014:V258M",
+        "Firnberg2014:L160Y",
+        "Firnberg2014:S233Q",
+        "Firnberg2014:T147W",
+        "Firnberg2014:A266C",
+        "Firnberg2014:I275R",
+        "Firnberg2014:R202V",
+        "Firnberg2014:A276V",
+        "Firnberg2014:I243W",
+        "Firnberg2014:L111P",
+        "Firnberg2014:W286V",
+        "Firnberg2014:R91K",
+        "Firnberg2014:T262P",
+        "Firnberg2014:L223S",
+        "Firnberg2014:T262E",
+        "Firnberg2014:D174I",
+        "Firnberg2014:V117R",
+        "Firnberg2014:G43H",
+        "Firnberg2014:Q97V",
+        "Firnberg2014:E169S",
+        "Firnberg2014:E87L",
+        "Firnberg2014:S240T",
+        "Firnberg2014:K30I",
+        "Firnberg2014:V258H",
+        "Firnberg2014:V31R",
+        "Firnberg2014:R271M"
+      ],
+      "matched_candidates": 96,
+      "cohort_exclusions_after_mask": [],
+      "mutation_order_invariance": true,
+      "independent_spatial_edges_verified": true,
+      "independent_backbone_edges_verified": true
+    },
+    {
+      "scope": "masked-reference-v1",
+      "masked_accepted": true,
+      "full_reference_M2_audit": {
+        "accepted": false,
+        "errors": [
+          "Unapproved reference/construct difference: L63F",
+          "Unapproved reference/construct difference: Q79R",
+          "Aligned sequence identity below threshold",
+          "C-alpha reference coverage below threshold"
+        ],
+        "chains": [
+          {
+            "chain": "A",
+            "identity": 0.9915611814345991,
+            "aligned_coverage": 1.0,
+            "score": 693.0,
+            "sequence_source": "mmCIF polymer scheme + atom_site label/auth mapping"
+          },
+          {
+            "chain": "B",
+            "identity": 0.9915611814345991,
+            "aligned_coverage": 1.0,
+            "score": 693.0,
+            "sequence_source": "mmCIF polymer scheme + atom_site label/auth mapping"
+          }
+        ],
+        "selected_chain": "A",
+        "reference_length": 237,
+        "coordinate_coverage": 0.9662447257383966,
+        "aligned_coverage": 1.0,
+        "aligned_identity": 0.9915611814345991,
+        "exact_compatible_positions": 227,
+        "differences": [
+          "L63F",
+          "Q79R"
+        ],
+        "missing_positions": [
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237
+        ],
+        "alignment": "target            0 -SKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTL\n                  0 -|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery             0 ASKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTL\n\ntarget           59 VTTLSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLV\n                 60 |||.|||||||||||||||.||||||||||||||||||||||||||||||||||||||||\nquery            60 VTTFSYGVQCFSRYPDHMKRHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLV\n\ntarget          119 NRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLAD\n                120 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery           120 NRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLAD\n\ntarget          179 HYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK\n                180 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery           180 HYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK\n\ntarget          237\n                238\nquery           238\n",
+        "construct_insertions": [
+          1
+        ]
+      },
+      "reference": "SKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTLSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK",
+      "coordinate_sha256": "5d5a7ce2dd7be9228907902d5cd41ec162c569234bb8bd119eb48874e1dac90b",
+      "eligible_positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229
+      ],
+      "eligible_identity": 1.0,
+      "eligible_CA_coverage": 1.0,
+      "excluded_positions": [
+        63,
+        79,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237
+      ],
+      "nodes": 227,
+      "undirected_edges": 1145,
+      "connected_components": 1,
+      "isolated_nodes": 0,
+      "descriptor_missing_nodes": {
+        "rsa": 0,
+        "contact_degree": 0,
+        "nonlocal_contact_degree": 0,
+        "bfactor_a2": 0,
+        "plddt": 227
+      },
+      "confidence_semantics": "experimental_bfactor",
+      "ASA": {
+        "algorithm": "Biopython Shrake-Rupley",
+        "probe_radius_a": 1.4,
+        "sphere_points": 960,
+        "environment": "entire selected deposited model, occupied heavy atoms including ligands/other chains; no waters/H/D; no symmetry mates",
+        "rsa_table": "Tien et al. 2013 theoretical maxima (Wilke), doi:10.1371/journal.pone.0080635",
+        "max_asa_a2": {
+          "A": 129,
+          "C": 167,
+          "D": 193,
+          "E": 223,
+          "F": 240,
+          "G": 104,
+          "H": 224,
+          "I": 197,
+          "K": 236,
+          "L": 201,
+          "M": 224,
+          "N": 195,
+          "P": 159,
+          "Q": 225,
+          "R": 274,
+          "S": 155,
+          "T": 172,
+          "V": 174,
+          "W": 285,
+          "Y": 263
+        },
+        "rsa_clipped": false,
+        "secondary_structure": {
+          "status": "disabled"
+        }
+      },
+      "contacts": "eligible induced graph; no invented WT atoms; deposited context ASA",
+      "backbone_breaks": [
+        {
+          "left": 62,
+          "right": 64,
+          "reason": "missing polymer residues or TER boundary"
+        },
+        {
+          "left": 78,
+          "right": 80,
+          "reason": "missing polymer residues or TER boundary"
+        }
+      ],
+      "reference_construct_sequence_compatible": false,
+      "protein_id": "GFP",
+      "pdb": "1GFL",
+      "coordinate_path": "data/cache/m182/source/1GFL.cif",
+      "tensor_sha256": {
+        "static": "56ecf8c654100e22519a3f9308c01b720e67e5e2ceb5bf651609aab2cff3cdf5",
+        "neighborhood": "d7636bb8f58bd233495b31c844fd59f5d251b1b9340848e8188cc054c371326d",
+        "edge_index": "eacea050449e0e44354372ff39765a019c933734af1014ab9ba4af4b80fdde86",
+        "edge_features": "c2f33432cb6aff667fe503021c2a78fda7336b2d20429d76ee74a0bbda166268",
+        "xyz": "8727b2c20ac19fbe740df306b877d1043d6152cae041663dfa801bc81ab11f21"
+      },
+      "atoms": 1798,
+      "chemistry_shape": [
+        2290,
+        29
+      ],
+      "raw_atom_site_coordinates_verified": true,
+      "per_residue_missing_chemical_atoms": [
+        {
+          "position": 1,
+          "missing": []
+        },
+        {
+          "position": 2,
+          "missing": []
+        },
+        {
+          "position": 3,
+          "missing": []
+        },
+        {
+          "position": 4,
+          "missing": []
+        },
+        {
+          "position": 5,
+          "missing": []
+        },
+        {
+          "position": 6,
+          "missing": []
+        },
+        {
+          "position": 7,
+          "missing": []
+        },
+        {
+          "position": 8,
+          "missing": []
+        },
+        {
+          "position": 9,
+          "missing": []
+        },
+        {
+          "position": 10,
+          "missing": []
+        },
+        {
+          "position": 11,
+          "missing": []
+        },
+        {
+          "position": 12,
+          "missing": []
+        },
+        {
+          "position": 13,
+          "missing": []
+        },
+        {
+          "position": 14,
+          "missing": []
+        },
+        {
+          "position": 15,
+          "missing": []
+        },
+        {
+          "position": 16,
+          "missing": []
+        },
+        {
+          "position": 17,
+          "missing": []
+        },
+        {
+          "position": 18,
+          "missing": []
+        },
+        {
+          "position": 19,
+          "missing": []
+        },
+        {
+          "position": 20,
+          "missing": []
+        },
+        {
+          "position": 21,
+          "missing": []
+        },
+        {
+          "position": 22,
+          "missing": []
+        },
+        {
+          "position": 23,
+          "missing": []
+        },
+        {
+          "position": 24,
+          "missing": []
+        },
+        {
+          "position": 25,
+          "missing": []
+        },
+        {
+          "position": 26,
+          "missing": []
+        },
+        {
+          "position": 27,
+          "missing": []
+        },
+        {
+          "position": 28,
+          "missing": []
+        },
+        {
+          "position": 29,
+          "missing": []
+        },
+        {
+          "position": 30,
+          "missing": []
+        },
+        {
+          "position": 31,
+          "missing": []
+        },
+        {
+          "position": 32,
+          "missing": []
+        },
+        {
+          "position": 33,
+          "missing": []
+        },
+        {
+          "position": 34,
+          "missing": []
+        },
+        {
+          "position": 35,
+          "missing": []
+        },
+        {
+          "position": 36,
+          "missing": []
+        },
+        {
+          "position": 37,
+          "missing": []
+        },
+        {
+          "position": 38,
+          "missing": []
+        },
+        {
+          "position": 39,
+          "missing": []
+        },
+        {
+          "position": 40,
+          "missing": []
+        },
+        {
+          "position": 41,
+          "missing": []
+        },
+        {
+          "position": 42,
+          "missing": []
+        },
+        {
+          "position": 43,
+          "missing": []
+        },
+        {
+          "position": 44,
+          "missing": []
+        },
+        {
+          "position": 45,
+          "missing": []
+        },
+        {
+          "position": 46,
+          "missing": []
+        },
+        {
+          "position": 47,
+          "missing": []
+        },
+        {
+          "position": 48,
+          "missing": []
+        },
+        {
+          "position": 49,
+          "missing": []
+        },
+        {
+          "position": 50,
+          "missing": []
+        },
+        {
+          "position": 51,
+          "missing": []
+        },
+        {
+          "position": 52,
+          "missing": []
+        },
+        {
+          "position": 53,
+          "missing": []
+        },
+        {
+          "position": 54,
+          "missing": []
+        },
+        {
+          "position": 55,
+          "missing": []
+        },
+        {
+          "position": 56,
+          "missing": []
+        },
+        {
+          "position": 57,
+          "missing": []
+        },
+        {
+          "position": 58,
+          "missing": []
+        },
+        {
+          "position": 59,
+          "missing": []
+        },
+        {
+          "position": 60,
+          "missing": []
+        },
+        {
+          "position": 61,
+          "missing": []
+        },
+        {
+          "position": 62,
+          "missing": []
+        },
+        {
+          "position": 64,
+          "missing": [
+            "O"
+          ]
+        },
+        {
+          "position": 65,
+          "missing": []
+        },
+        {
+          "position": 66,
+          "missing": []
+        },
+        {
+          "position": 67,
+          "missing": []
+        },
+        {
+          "position": 68,
+          "missing": []
+        },
+        {
+          "position": 69,
+          "missing": []
+        },
+        {
+          "position": 70,
+          "missing": []
+        },
+        {
+          "position": 71,
+          "missing": []
+        },
+        {
+          "position": 72,
+          "missing": []
+        },
+        {
+          "position": 73,
+          "missing": []
+        },
+        {
+          "position": 74,
+          "missing": []
+        },
+        {
+          "position": 75,
+          "missing": []
+        },
+        {
+          "position": 76,
+          "missing": []
+        },
+        {
+          "position": 77,
+          "missing": []
+        },
+        {
+          "position": 78,
+          "missing": []
+        },
+        {
+          "position": 80,
+          "missing": []
+        },
+        {
+          "position": 81,
+          "missing": []
+        },
+        {
+          "position": 82,
+          "missing": []
+        },
+        {
+          "position": 83,
+          "missing": []
+        },
+        {
+          "position": 84,
+          "missing": []
+        },
+        {
+          "position": 85,
+          "missing": []
+        },
+        {
+          "position": 86,
+          "missing": []
+        },
+        {
+          "position": 87,
+          "missing": []
+        },
+        {
+          "position": 88,
+          "missing": []
+        },
+        {
+          "position": 89,
+          "missing": []
+        },
+        {
+          "position": 90,
+          "missing": []
+        },
+        {
+          "position": 91,
+          "missing": []
+        },
+        {
+          "position": 92,
+          "missing": []
+        },
+        {
+          "position": 93,
+          "missing": []
+        },
+        {
+          "position": 94,
+          "missing": []
+        },
+        {
+          "position": 95,
+          "missing": []
+        },
+        {
+          "position": 96,
+          "missing": []
+        },
+        {
+          "position": 97,
+          "missing": []
+        },
+        {
+          "position": 98,
+          "missing": []
+        },
+        {
+          "position": 99,
+          "missing": []
+        },
+        {
+          "position": 100,
+          "missing": []
+        },
+        {
+          "position": 101,
+          "missing": []
+        },
+        {
+          "position": 102,
+          "missing": []
+        },
+        {
+          "position": 103,
+          "missing": []
+        },
+        {
+          "position": 104,
+          "missing": []
+        },
+        {
+          "position": 105,
+          "missing": []
+        },
+        {
+          "position": 106,
+          "missing": []
+        },
+        {
+          "position": 107,
+          "missing": []
+        },
+        {
+          "position": 108,
+          "missing": []
+        },
+        {
+          "position": 109,
+          "missing": []
+        },
+        {
+          "position": 110,
+          "missing": []
+        },
+        {
+          "position": 111,
+          "missing": []
+        },
+        {
+          "position": 112,
+          "missing": []
+        },
+        {
+          "position": 113,
+          "missing": []
+        },
+        {
+          "position": 114,
+          "missing": []
+        },
+        {
+          "position": 115,
+          "missing": []
+        },
+        {
+          "position": 116,
+          "missing": []
+        },
+        {
+          "position": 117,
+          "missing": []
+        },
+        {
+          "position": 118,
+          "missing": []
+        },
+        {
+          "position": 119,
+          "missing": []
+        },
+        {
+          "position": 120,
+          "missing": []
+        },
+        {
+          "position": 121,
+          "missing": []
+        },
+        {
+          "position": 122,
+          "missing": []
+        },
+        {
+          "position": 123,
+          "missing": []
+        },
+        {
+          "position": 124,
+          "missing": []
+        },
+        {
+          "position": 125,
+          "missing": []
+        },
+        {
+          "position": 126,
+          "missing": []
+        },
+        {
+          "position": 127,
+          "missing": []
+        },
+        {
+          "position": 128,
+          "missing": []
+        },
+        {
+          "position": 129,
+          "missing": []
+        },
+        {
+          "position": 130,
+          "missing": []
+        },
+        {
+          "position": 131,
+          "missing": []
+        },
+        {
+          "position": 132,
+          "missing": []
+        },
+        {
+          "position": 133,
+          "missing": []
+        },
+        {
+          "position": 134,
+          "missing": []
+        },
+        {
+          "position": 135,
+          "missing": []
+        },
+        {
+          "position": 136,
+          "missing": []
+        },
+        {
+          "position": 137,
+          "missing": []
+        },
+        {
+          "position": 138,
+          "missing": []
+        },
+        {
+          "position": 139,
+          "missing": []
+        },
+        {
+          "position": 140,
+          "missing": []
+        },
+        {
+          "position": 141,
+          "missing": []
+        },
+        {
+          "position": 142,
+          "missing": []
+        },
+        {
+          "position": 143,
+          "missing": []
+        },
+        {
+          "position": 144,
+          "missing": []
+        },
+        {
+          "position": 145,
+          "missing": []
+        },
+        {
+          "position": 146,
+          "missing": []
+        },
+        {
+          "position": 147,
+          "missing": []
+        },
+        {
+          "position": 148,
+          "missing": []
+        },
+        {
+          "position": 149,
+          "missing": []
+        },
+        {
+          "position": 150,
+          "missing": []
+        },
+        {
+          "position": 151,
+          "missing": []
+        },
+        {
+          "position": 152,
+          "missing": []
+        },
+        {
+          "position": 153,
+          "missing": []
+        },
+        {
+          "position": 154,
+          "missing": []
+        },
+        {
+          "position": 155,
+          "missing": []
+        },
+        {
+          "position": 156,
+          "missing": []
+        },
+        {
+          "position": 157,
+          "missing": []
+        },
+        {
+          "position": 158,
+          "missing": []
+        },
+        {
+          "position": 159,
+          "missing": []
+        },
+        {
+          "position": 160,
+          "missing": []
+        },
+        {
+          "position": 161,
+          "missing": []
+        },
+        {
+          "position": 162,
+          "missing": []
+        },
+        {
+          "position": 163,
+          "missing": []
+        },
+        {
+          "position": 164,
+          "missing": []
+        },
+        {
+          "position": 165,
+          "missing": []
+        },
+        {
+          "position": 166,
+          "missing": []
+        },
+        {
+          "position": 167,
+          "missing": []
+        },
+        {
+          "position": 168,
+          "missing": []
+        },
+        {
+          "position": 169,
+          "missing": []
+        },
+        {
+          "position": 170,
+          "missing": []
+        },
+        {
+          "position": 171,
+          "missing": []
+        },
+        {
+          "position": 172,
+          "missing": []
+        },
+        {
+          "position": 173,
+          "missing": []
+        },
+        {
+          "position": 174,
+          "missing": []
+        },
+        {
+          "position": 175,
+          "missing": []
+        },
+        {
+          "position": 176,
+          "missing": []
+        },
+        {
+          "position": 177,
+          "missing": []
+        },
+        {
+          "position": 178,
+          "missing": []
+        },
+        {
+          "position": 179,
+          "missing": []
+        },
+        {
+          "position": 180,
+          "missing": []
+        },
+        {
+          "position": 181,
+          "missing": []
+        },
+        {
+          "position": 182,
+          "missing": []
+        },
+        {
+          "position": 183,
+          "missing": []
+        },
+        {
+          "position": 184,
+          "missing": []
+        },
+        {
+          "position": 185,
+          "missing": []
+        },
+        {
+          "position": 186,
+          "missing": []
+        },
+        {
+          "position": 187,
+          "missing": []
+        },
+        {
+          "position": 188,
+          "missing": []
+        },
+        {
+          "position": 189,
+          "missing": []
+        },
+        {
+          "position": 190,
+          "missing": []
+        },
+        {
+          "position": 191,
+          "missing": []
+        },
+        {
+          "position": 192,
+          "missing": []
+        },
+        {
+          "position": 193,
+          "missing": []
+        },
+        {
+          "position": 194,
+          "missing": []
+        },
+        {
+          "position": 195,
+          "missing": []
+        },
+        {
+          "position": 196,
+          "missing": []
+        },
+        {
+          "position": 197,
+          "missing": []
+        },
+        {
+          "position": 198,
+          "missing": []
+        },
+        {
+          "position": 199,
+          "missing": []
+        },
+        {
+          "position": 200,
+          "missing": []
+        },
+        {
+          "position": 201,
+          "missing": []
+        },
+        {
+          "position": 202,
+          "missing": []
+        },
+        {
+          "position": 203,
+          "missing": []
+        },
+        {
+          "position": 204,
+          "missing": []
+        },
+        {
+          "position": 205,
+          "missing": []
+        },
+        {
+          "position": 206,
+          "missing": []
+        },
+        {
+          "position": 207,
+          "missing": []
+        },
+        {
+          "position": 208,
+          "missing": []
+        },
+        {
+          "position": 209,
+          "missing": []
+        },
+        {
+          "position": 210,
+          "missing": []
+        },
+        {
+          "position": 211,
+          "missing": []
+        },
+        {
+          "position": 212,
+          "missing": []
+        },
+        {
+          "position": 213,
+          "missing": []
+        },
+        {
+          "position": 214,
+          "missing": []
+        },
+        {
+          "position": 215,
+          "missing": []
+        },
+        {
+          "position": 216,
+          "missing": []
+        },
+        {
+          "position": 217,
+          "missing": []
+        },
+        {
+          "position": 218,
+          "missing": []
+        },
+        {
+          "position": 219,
+          "missing": []
+        },
+        {
+          "position": 220,
+          "missing": []
+        },
+        {
+          "position": 221,
+          "missing": []
+        },
+        {
+          "position": 222,
+          "missing": []
+        },
+        {
+          "position": 223,
+          "missing": []
+        },
+        {
+          "position": 224,
+          "missing": []
+        },
+        {
+          "position": 225,
+          "missing": []
+        },
+        {
+          "position": 226,
+          "missing": []
+        },
+        {
+          "position": 227,
+          "missing": []
+        },
+        {
+          "position": 228,
+          "missing": []
+        },
+        {
+          "position": 229,
+          "missing": []
+        }
+      ],
+      "chemistry_invalid_directed_edges": {
+        "salt_valid": 0,
+        "hydrophobic_valid": 0,
+        "backbone_polar_valid": 12
+      },
+      "ASA_range_a2": [
+        0.0,
+        184.14938176364103
+      ],
+      "RSA_range": [
+        0.0,
+        1.0161789204525795
+      ],
+      "model_input_dimensions": {
+        "static": 34,
+        "dynamic": 25,
+        "ridge": 270,
+        "edge": 29
+      },
+      "common_candidate_ids": [
+        "Sarkisyan2016:657319fb4974d24a",
+        "Sarkisyan2016:4f89692755322cca",
+        "Sarkisyan2016:3609bc15acef594f",
+        "Sarkisyan2016:36bcae75616d2ae1",
+        "Sarkisyan2016:5d680bbf3d231e64",
+        "Sarkisyan2016:764a2c1c88e0f76f",
+        "Sarkisyan2016:b9ae9453e5e4ddae",
+        "Sarkisyan2016:fb6f78eb3bf7e13f",
+        "Sarkisyan2016:c7f0d8cd4f57a1c9",
+        "Sarkisyan2016:e059e27f9616c353",
+        "Sarkisyan2016:e3ceec96b60141cb",
+        "Sarkisyan2016:f980d3b06ec80745",
+        "Sarkisyan2016:b8dd0b32b9f4006f",
+        "Sarkisyan2016:3064500fbb641887",
+        "Sarkisyan2016:f8c35a367bb9eb7f",
+        "Sarkisyan2016:623f79d1253a34cf",
+        "Sarkisyan2016:4044bce5e04534e0",
+        "Sarkisyan2016:bfb0461237d8a87b",
+        "Sarkisyan2016:33b0c0a203030390",
+        "Sarkisyan2016:a43c3b73965eae65",
+        "Sarkisyan2016:f582ab85518b3197",
+        "Sarkisyan2016:d2641c0b34250017",
+        "Sarkisyan2016:52130ae595ad7cf5",
+        "Sarkisyan2016:cff39d2019e5df83",
+        "Sarkisyan2016:0b6954b4479c1a3e",
+        "Sarkisyan2016:9cb1846c0394904a",
+        "Sarkisyan2016:ffafaf069566589a",
+        "Sarkisyan2016:c21ddb12ecafc6ab",
+        "Sarkisyan2016:bbf331e49c57ba41",
+        "Sarkisyan2016:9a6ff01ceb93a8f2",
+        "Sarkisyan2016:4307c7a6dfcc02f0",
+        "Sarkisyan2016:ccaa81c49f913620",
+        "Sarkisyan2016:39e8523925138a22",
+        "Sarkisyan2016:8f93df67a16d7643",
+        "Sarkisyan2016:49e9470020ebce5c",
+        "Sarkisyan2016:067b6be5da5a312b",
+        "Sarkisyan2016:88898302cfea25a1",
+        "Sarkisyan2016:3fa8a7e60d448b75",
+        "Sarkisyan2016:0993df00d5e7101b",
+        "Sarkisyan2016:4bb42335688edd1d",
+        "Sarkisyan2016:5c687331bde7161c",
+        "Sarkisyan2016:8c60a5fb6e648d46",
+        "Sarkisyan2016:ac05860579a43179",
+        "Sarkisyan2016:956e637980f4ad30",
+        "Sarkisyan2016:9a72273cda309ff0",
+        "Sarkisyan2016:e3eb001d566c592a",
+        "Sarkisyan2016:df6974ff05c63c67",
+        "Sarkisyan2016:832988ad8eb1a390",
+        "Sarkisyan2016:86ed49e3629cfc2e",
+        "Sarkisyan2016:3f60f220c75d962d",
+        "Sarkisyan2016:c6f0126a85674276",
+        "Sarkisyan2016:88b0347439bf00dd",
+        "Sarkisyan2016:9925f26447a2f7aa",
+        "Sarkisyan2016:34062bab950b81d4",
+        "Sarkisyan2016:b7ac9f4d811f3be3",
+        "Sarkisyan2016:8ef33c59e81ec15c",
+        "Sarkisyan2016:608dac79153f5352",
+        "Sarkisyan2016:1f9fc9cc5003025c",
+        "Sarkisyan2016:3bc2e0120d4a5d83",
+        "Sarkisyan2016:3a7a3657eee7344f",
+        "Sarkisyan2016:9c43df4b8720b4bd",
+        "Sarkisyan2016:cf6aadd6a10d25d6",
+        "Sarkisyan2016:318357f27e796e22",
+        "Sarkisyan2016:2adac7f9f625890d",
+        "Sarkisyan2016:38a5ba0c8ac0f4c9",
+        "Sarkisyan2016:db62778870d90204",
+        "Sarkisyan2016:4a4a92c81e95e132",
+        "Sarkisyan2016:78857988970c6167",
+        "Sarkisyan2016:ec183872b980ad93",
+        "Sarkisyan2016:a6024b761b8330f2",
+        "Sarkisyan2016:ff43bacc231186c9",
+        "Sarkisyan2016:809d5b43082c908f",
+        "Sarkisyan2016:162d3577ba619d5d",
+        "Sarkisyan2016:65cc6ba01b05fb77",
+        "Sarkisyan2016:4c974f8dfcc1f474",
+        "Sarkisyan2016:e92459859494113d",
+        "Sarkisyan2016:78a589901190fe60",
+        "Sarkisyan2016:8b1e033b8ccf124c",
+        "Sarkisyan2016:0595fa25aa8a5eea",
+        "Sarkisyan2016:189efd26d99fdaf7",
+        "Sarkisyan2016:ff866da465cfaefa",
+        "Sarkisyan2016:9d8b2023523f891a",
+        "Sarkisyan2016:40bff0c6bf12a3a8",
+        "Sarkisyan2016:4f0519521377120a",
+        "Sarkisyan2016:103adf3f63c20470",
+        "Sarkisyan2016:295d9a00ff63c4fd",
+        "Sarkisyan2016:639c22830698f397",
+        "Sarkisyan2016:a15dfb23006089ed",
+        "Sarkisyan2016:71dc356f7fd374b1",
+        "Sarkisyan2016:830cf3e91b2bdc32",
+        "Sarkisyan2016:bbda64a5edec3bab",
+        "Sarkisyan2016:ef39e888b8e56f46",
+        "Sarkisyan2016:2621aa2a131fb3aa",
+        "Sarkisyan2016:95870d4f10dabe13",
+        "Sarkisyan2016:3f770f46c7612445",
+        "Sarkisyan2016:79fbb6cf8712f286"
+      ],
+      "matched_candidates": 96,
+      "cohort_exclusions_after_mask": [],
+      "mutation_order_invariance": true,
+      "independent_spatial_edges_verified": true,
+      "independent_backbone_edges_verified": true,
+      "background_sensitivity": {
+        "mismatches": [
+          "L63F",
+          "Q79R"
+        ],
+        "excluded_to_eligible_contacts": 20,
+        "eligible_neighbors": [
+          1,
+          15,
+          17,
+          59,
+          60,
+          61,
+          62,
+          64,
+          65,
+          66,
+          67,
+          76,
+          77,
+          78,
+          80,
+          81,
+          120,
+          122,
+          193,
+          195
+        ],
+        "selected_candidates_mutating_contact_neighbors": [
+          "Sarkisyan2016:b9ae9453e5e4ddae",
+          "Sarkisyan2016:fb6f78eb3bf7e13f",
+          "Sarkisyan2016:c7f0d8cd4f57a1c9",
+          "Sarkisyan2016:e059e27f9616c353",
+          "Sarkisyan2016:3064500fbb641887",
+          "Sarkisyan2016:a43c3b73965eae65",
+          "Sarkisyan2016:52130ae595ad7cf5",
+          "Sarkisyan2016:0b6954b4479c1a3e",
+          "Sarkisyan2016:ffafaf069566589a",
+          "Sarkisyan2016:3fa8a7e60d448b75",
+          "Sarkisyan2016:956e637980f4ad30",
+          "Sarkisyan2016:9a72273cda309ff0",
+          "Sarkisyan2016:e3eb001d566c592a",
+          "Sarkisyan2016:df6974ff05c63c67",
+          "Sarkisyan2016:88b0347439bf00dd",
+          "Sarkisyan2016:9925f26447a2f7aa",
+          "Sarkisyan2016:34062bab950b81d4",
+          "Sarkisyan2016:1f9fc9cc5003025c",
+          "Sarkisyan2016:3bc2e0120d4a5d83",
+          "Sarkisyan2016:9c43df4b8720b4bd",
+          "Sarkisyan2016:38a5ba0c8ac0f4c9",
+          "Sarkisyan2016:809d5b43082c908f",
+          "Sarkisyan2016:65cc6ba01b05fb77",
+          "Sarkisyan2016:4c974f8dfcc1f474",
+          "Sarkisyan2016:e92459859494113d",
+          "Sarkisyan2016:8b1e033b8ccf124c",
+          "Sarkisyan2016:40bff0c6bf12a3a8",
+          "Sarkisyan2016:a15dfb23006089ed",
+          "Sarkisyan2016:71dc356f7fd374b1",
+          "Sarkisyan2016:bbda64a5edec3bab",
+          "Sarkisyan2016:2621aa2a131fb3aa",
+          "Sarkisyan2016:95870d4f10dabe13",
+          "Sarkisyan2016:79fbb6cf8712f286"
+        ],
+        "ASA_affected_sites": [],
+        "max_delta_ASA_a2": 0.0,
+        "interpretation": "Deleting the two chain-A mismatched residues is an occlusion sensitivity test, not WT reconstruction; chain B is unchanged. Conformational propagation remains unknown; background gate unresolved."
+      }
+    }
+  ],
+  "common_candidates": 384,
+  "candidate_target_cells_accessed": false,
+  "models_fit": 0,
+  "predictions_generated": 0,
+  "runtime_seconds": 23.11224208306521,
+  "device": "CPU",
+  "python": "3.12.15",
+  "numpy": "2.5.4",
+  "biopython": "1.88",
+  "randomness": "none; deterministic geometry/genotype projections"
+}

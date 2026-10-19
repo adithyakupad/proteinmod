@@ -1,0 +1,127 @@
+{
+  "query_id": "ee8ece3d-2ac0-400d-90ee-97b001e52778",
+  "result_type": "polymer_entity",
+  "total_count": 732,
+  "result_set": [
+    {
+      "identifier": "5N9O_1",
+      "score": 1.0
+    },
+    {
+      "identifier": "8DN2_2",
+      "score": 0.9972826086956522
+    },
+    {
+      "identifier": "8DN3_2",
+      "score": 0.9972826086956522
+    },
+    {
+      "identifier": "8DN4_2",
+      "score": 0.9972826086956522
+    },
+    {
+      "identifier": "8DN5_2",
+      "score": 0.9972826086956522
+    },
+    {
+      "identifier": "9BOY_2",
+      "score": 0.9972826086956522
+    },
+    {
+      "identifier": "9BOZ_2",
+      "score": 0.9972826086956522
+    },
+    {
+      "identifier": "9BP0_2",
+      "score": 0.9972826086956522
+    },
+    {
+      "identifier": "9BP7_2",
+      "score": 0.9972826086956522
+    },
+    {
+      "identifier": "1GFL_1",
+      "score": 0.9945652173913043
+    },
+    {
+      "identifier": "1W7S_1",
+      "score": 0.9945652173913043
+    },
+    {
+      "identifier": "9NA8_3",
+      "score": 0.9945652173913043
+    },
+    {
+      "identifier": "9NA9_3",
+      "score": 0.9945652173913043
+    },
+    {
+      "identifier": "6GO8_1",
+      "score": 0.9891304347826086
+    },
+    {
+      "identifier": "6GO9_1",
+      "score": 0.9891304347826086
+    },
+    {
+      "identifier": "6GQG_1",
+      "score": 0.9891304347826086
+    },
+    {
+      "identifier": "6GQH_1",
+      "score": 0.9891304347826086
+    },
+    {
+      "identifier": "6GRM_1",
+      "score": 0.9891304347826086
+    },
+    {
+      "identifier": "6YLP_1",
+      "score": 0.9891304347826086
+    },
+    {
+      "identifier": "7PHR_4",
+      "score": 0.9891304347826086
+    },
+    {
+      "identifier": "9SDL_1",
+      "score": 0.9891304347826086
+    },
+    {
+      "identifier": "1HCJ_1",
+      "score": 0.9864130434782609
+    },
+    {
+      "identifier": "1W7T_1",
+      "score": 0.9864130434782609
+    },
+    {
+      "identifier": "1W7U_1",
+      "score": 0.9864130434782609
+    },
+    {
+      "identifier": "2WUR_1",
+      "score": 0.9864130434782609
+    },
+    {
+      "identifier": "2Y0G_1",
+      "score": 0.9864130434782609
+    },
+    {
+      "identifier": "31BG_4",
+      "score": 0.9864130434782609
+    },
+    {
+      "identifier": "4EUL_1",
+      "score": 0.9864130434782609
+    },
+    {
+      "identifier": "5MA3_1",
+      "score": 0.9864130434782609
+    },
+    {
+      "identifier": "5MA4_1",
+      "score": 0.9864130434782609
+    }
+  ]
+}

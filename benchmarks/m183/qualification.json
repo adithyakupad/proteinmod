@@ -1,0 +1,42 @@
+{
+  "admission": "BLOCKED",
+  "parent_PR": 42,
+  "parent_head": "d9579d6a51eaf200558d6a932e6072cff4cdab32",
+  "preregistration_commit": "b794903",
+  "scope": "masked-reference-v1",
+  "families": {
+    "P0A9X9": {
+      "family": "PF00313",
+      "masked_geometry": "PASS",
+      "permission": "PARTIAL"
+    },
+    "P01053": {
+      "family": "PF00280",
+      "masked_geometry": "PASS",
+      "permission": "PARTIAL"
+    },
+    "TEM1": {
+      "family": "PF13354",
+      "masked_geometry": "PASS",
+      "noncommercial_permission": "PASS"
+    },
+    "GFP": {
+      "family": "PF01353",
+      "masked_geometry": "PASS",
+      "permission": "PASS",
+      "WT_background_compatibility": "BLOCKED"
+    }
+  },
+  "blockers": [
+    "GFP1GFL L63F/Q79R background remains physically unqualified despite masking; 20 eligible contact neighbors, 33/96 selected genotypes mutate one or more of them. No exact full-reference structure among13 inspected new entity records.",
+    "CspA/CI2 GEO raw fitness table has no byte-identical member in licensed Zenodo archive; derived item/column equivalence and complete file-specific terms remain unverified. NCBI general access is not an unrestricted third-party license."
+  ],
+  "common_candidate_count": 384,
+  "four_family_denominator_retained": true,
+  "original_similarity_flags_retained": 4,
+  "final_manifest_issued": false,
+  "candidate_target_cells_accessed": false,
+  "models_fit": 0,
+  "predictions_generated": 0,
+  "release_tag_created": false
+}

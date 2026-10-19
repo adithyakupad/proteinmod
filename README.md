@@ -139,3 +139,5 @@ M18 external qualification is [blocked before label access](benchmarks/m18/REPOR
 M18.1 adds [blinded homology/profile adjudication and a primary TEM-1 lineage audit](benchmarks/m181/REPORT.md). The four original flags remain recorded; confirmation is blocked because fewer than four test families are qualified.
 
 M18.2 traces a [fourth primary family and TEM-1 workbook permissions](benchmarks/m182/REPORT.md). Genotype-only common masks are recorded; strict structural admission remains blocked, so no confirmatory performance is claimed.
+
+M18.3 implements [versioned masked extraction and a four-family blinded cohort audit](benchmarks/m183/REPORT.md): 384/384 candidate inputs pass, with original M2 rejections preserved. Confirmation remains blocked by GFP background compatibility and unverified GEO raw-item license linkage; no external outcomes were unblinded.

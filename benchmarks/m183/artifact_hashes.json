@@ -1,0 +1,21 @@
+{
+  "ADMISSION_PROTOCOL.md": "f23f9abf0ea6633a321a112751b8997a805f1bf33064063ab603d9297b192e14",
+  "REPORT.md": "dd68868767d68199d3a04935bccb616e0487dcb57db95d5e711f99a289fc32c7",
+  "evidence/GEO-Zenodo-item-audit.json": "2ff12c5e7ff72e8c2b3162985a379dec3f6bcffc00f443a2e1dcf03d6b009b4c",
+  "evidence/GEO-terms-audit.json": "c14bb19b9a7abed8bdfd5a01c4c1762dc9ef9120b47ddc360a63f2d60072782b",
+  "evidence/GFP-closer-template-audit.json": "f2de836a54038a4b47910067551aecde6489a22be19105d041d4724fe10c27e2",
+  "evidence/GFP-search-request.json": "ba702f1e13036c6a31cebacf5687536c3fb098e5cb2517e627a7c05eb172e236",
+  "evidence/GFP-search-response.json": "7e04928dc15ac536f0a7983cd7321667090e81e49a21d3d9c3c51953d2259b40",
+  "evidence/Zenodo-directory.json": "b9ca9933b679e1af7929ab3ffe6097f263d2c9361e70fa6b63efafd6814abe5b",
+  "evidence/Zenodo11175470.json": "2d76875819089c1cfcb4a56c4a87616512876d90629cc0179a1ddaf3610b3111",
+  "historical_hashes.json": "6ec6b81203fb40d1625fe7f034a5a92a94d921e2edb4ab8957edd4d91d4a3cc0",
+  "qualification.json": "a98ee2677dc3683d2eb531febfbdcb9bdc8fbafe583cb8aca62cf94f43328925",
+  "replay.json": "72ce331ddf8e69893cd784c87dbd86b21ca1f93819fb5fa40f614fca6eb4fdae",
+  "structural-cohort-audit.json": "e270e70e810450820be95bc119d7ec44861df2cc3bae2151d18b307f94620ed6",
+  "verification.json": "a22341aabffd9effb58e2b91a4e63b2ad3524b45cc7cb5d668996b5b4fa0eba3",
+  "../../src/proteinmod/masked_structure.py": "afb084eb1cccdcf03fe48dfd6528f169d5cfa67bc5244a31679f958939077ac6",
+  "../../scripts/audit_m183.py": "0349b40e9a5fa149f67f4b25982bdd35edbbd92535594e7c45107c8c7ea97be5",
+  "../../scripts/qualify_m183_sources.py": "ce5a774fced9b5c2cb31f4b9585260c6d3593d666db1e32df33b2f95a641067e",
+  "../../scripts/verify_m183.py": "01a0886345890aecabfc9c3c8a097c2131a128383bd84974629ce17669d5734d",
+  "../../tests/test_masked_structure.py": "d32641f9d1cf1fdc2b28c6baf9f6bbdea34fa32d19aaa3774252be1ca8c4bb6b"
+}

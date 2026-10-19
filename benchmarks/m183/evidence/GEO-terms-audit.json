@@ -1,0 +1,11 @@
+{
+  "retrieved_UTC": "2026-10-19T02:43:01.353524+00:00",
+  "GEO_specific_url": "https://www.ncbi.nlm.nih.gov/geo/info/disclaimer.html",
+  "GEO_specific_fetch_status": "reCAPTCHA challenge from both web and direct HTTP; search index excerpt is not complete governing terms",
+  "GEO_specific_search_excerpt": "NCBI places no restrictions on the use or distribution of the GEO data.",
+  "search_excerpt_is_not_full_terms": true,
+  "general_NCBI_policy_url": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+  "general_policy_sha256": "8ad8f6f186ca51ec73a5fb8935ecfa17b8cbaad300b7025b381898ab72621869",
+  "general_policy_molecular_data_section": "Molecular Data Usage Databases of molecular data on the NCBI Web site include such examples as nucleotide sequences (GenBank), protein sequences, macromolecular structures, molecular variation, gene expression, and mapping data. They are designed to provide and encourage access within the scientific community to sources of current and comprehensive information. Therefore, NCBI itself places no restrictions on the use or distribution of the data contained therein. Nor do we accept data when the submitter has requested restrictions on reuse or redistribution. However, some submitters of the original data (or the country of origin of such data) may claim patent, copyright, or other intellectual property rights in all or a portion of the data (that has been submitted). NCBI is not in a position to assess the validity of such claims and since there is no transfer of rights from submitters to NCBI, NCBI has no rights to transfer to a third party. Therefore, NCBI cannot provide comment or unrestricted permission concerning the use, copying, or distribution of the information contained in the molecular databases. ",
+  "interpretation": "NCBI itself places no restrictions, but disclaims ability to transfer third-party rights. This is not evidence of a prohibition; source-specific license/equivalence remains unverified for the GEO score table. No contact with authors was authorized or performed."
+}
