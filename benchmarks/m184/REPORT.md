@@ -121,7 +121,7 @@ not sent.** We retain the mandatory gate and all labels remain blinded.
 | M17 selected-state replay |PASS |1096 fits /34304 historical development predictions, max error0 |
 | M15 real LoRA checkpoint replay |PASS |PF00018 G3 seed0 full fraction,192 predictions, max error0 |
 | GNN/attention/LoRA/control kernels |PASS |Frozen-source digest equality retained |
-| Full local tests / Ruff / formatting / build |PASS |225 tests; lint/format/package checks pass |
+| Full local and clean-source tests / Ruff / formatting / build |PASS |225 tests in both checkouts; lint/format/package checks pass |
 | Independent cold-source confirmation |PARTIAL |Network search reproducible in principle; exact API response/backend and old model caches still required |
 | License audit |PARTIAL |Existing MIT source LICENSE preserved; upstream item gates remain separate |
 | Release qualification |NOT QUALIFIED |No tag/release; external confirmation not admitted |
@@ -131,7 +131,10 @@ not sent.** We retain the mandatory gate and all labels remain blinded.
 Use the existing project virtual environment; no dependency was added. This new
 work is CPU geometry/metadata only, with deterministic operations and no random
 seed consumption. Package versions, replay timing and peak memory are recorded in
-`verification.json` and `replay-*.json`. Exact current CI results belong to the
+`verification.json` and `replay-*.json`. A separate clean local clone at436ebbb (no research caches copied) also passed
+225 tests and the stdlib M184/frozen-history checks, using the same installed
+dependency environment. This is source isolation, not independent data/model
+regeneration. Exact current CI results belong to the
 PR check suite at its verified head, avoiding a self-referential commit hash here.
 
 ```bash

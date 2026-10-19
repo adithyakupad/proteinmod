@@ -13,12 +13,18 @@
   },
   "pytest": "225 passed,1 existing joblib core-count warning,13.71s",
   "ruff": "PASS",
-  "format": "PASS257files",
+  "format": "PASS258files",
   "pip_check": "PASS",
   "wheel": "PASS SHA256e493a0b3787ea7b70b4c80273f9e168e6e91127ba2a021be16a15957968a9268",
   "historical_guards": "PASS current833parent-file bytes plus original frozen8a07008 source guards, restricted readability AST checks",
   "confirmation": "BLOCKED no external target values decoded",
   "performance": "CPU tiny GNN300forwards median0.0128798s; process peakRSS393363456bytes. No source/model implementation changed; timing noise is not scientific performance improvement.",
-  "cold_checkout": "Will be checked at committed source; cache-free guard and offline tests only. No claim of independent model/data regeneration.",
+  "cold_checkout": {
+    "source_commit": "436ebbb",
+    "checkout": "separate local clone with no data/model/coordinate caches copied",
+    "tests": "225 passed,1 warning,13.02s",
+    "guards": "M184 stdlib integrity and frozen-history/readability --stdlib-only PASS",
+    "limits": "Same installed dependency environment; this is clean-source software verification, not independent cold-data/model regeneration. Initial harness command used wrong working directory and was corrected before this verification."
+  },
   "CI": "See exact draft-PR head checks; all prior checks retained plus M184 guard"
 }
