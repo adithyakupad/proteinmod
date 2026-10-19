@@ -24,21 +24,36 @@ class EdgeGNN(nn.Module):
         static, source, target, features, degree = graph
         if dynamic.ndim != 3 or dynamic.shape[1:] != (len(static), 25):
             raise ValueError("Expected batch x residues x 25 mutation input")
-        h = torch.relu(
+        node_hidden = torch.relu(
             self.input(torch.cat([static[None].expand(len(dynamic), -1, -1), dynamic], -1))
         )
         for message, update in zip(self.messages, self.updates, strict=True):
-            m = message(
+            edge_messages = message(
                 torch.cat(
-                    [h[:, source], h[:, target], features[None].expand(len(dynamic), -1, -1)], -1
+                    [
+                        node_hidden[:, source],
+                        node_hidden[:, target],
+                        features[None].expand(len(dynamic), -1, -1),
+                    ],
+                    -1,
                 )
             )
-            aggregate = torch.zeros_like(h).index_add(1, target, m)
+            aggregate = torch.zeros_like(node_hidden).index_add(1, target, edge_messages)
             if self.zero_message:
                 aggregate = aggregate * 0
-            h = h + torch.relu(update(torch.cat([h, aggregate / degree], -1)))
-        count = dynamic[:, :, :1].sum(1)
-        pooled = (h * dynamic[:, :, :1]).sum(1)
+            node_hidden = node_hidden + torch.relu(
+                update(torch.cat([node_hidden, aggregate / degree], -1))
+            )
+        mutation_count = dynamic[:, :, :1].sum(1)
+        mutation_sum = (node_hidden * dynamic[:, :, :1]).sum(1)
         return self.head(
-            torch.cat([pooled, pooled / count.clamp(min=1), h.mean(1), count], -1)
+            torch.cat(
+                [
+                    mutation_sum,
+                    mutation_sum / mutation_count.clamp(min=1),
+                    node_hidden.mean(1),
+                    mutation_count,
+                ],
+                -1,
+            )
         ).squeeze(-1)

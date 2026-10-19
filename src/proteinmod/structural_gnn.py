@@ -36,22 +36,34 @@ class ResidueGNN(nn.Module):
             else graph
         )
         static = static.unsqueeze(0).expand(len(dynamic), -1, -1)
-        h = torch.relu(self.input(torch.cat([static, dynamic], dim=-1)))
+        node_hidden = torch.relu(self.input(torch.cat([static, dynamic], dim=-1)))
         for message, gate, update in zip(self.messages, self.edge_gates, self.updates, strict=True):
             # Shared topology avoids a graph framework and duplicated batch edge storage.
-            m = message(h)[:, source] * torch.sigmoid(gate(edge_features))[None]
-            aggregate = torch.zeros_like(h)
-            aggregate.index_add_(1, target, m)
-            h = h + torch.relu(update(torch.cat([h, aggregate / degree], dim=-1)))
-        return h
+            edge_messages = (
+                message(node_hidden)[:, source] * torch.sigmoid(gate(edge_features))[None]
+            )
+            aggregate = torch.zeros_like(node_hidden)
+            aggregate.index_add_(1, target, edge_messages)
+            node_hidden = node_hidden + torch.relu(
+                update(torch.cat([node_hidden, aggregate / degree], dim=-1))
+            )
+        return node_hidden
 
     def forward(self, dynamic, graph=None):
-        h = self.encode(dynamic, graph)
-        mask = dynamic[:, :, :1]
-        count = mask.sum(dim=1)
-        pooled = (h * mask).sum(dim=1)
+        node_hidden = self.encode(dynamic, graph)
+        mutation_mask = dynamic[:, :, :1]
+        mutation_count = mutation_mask.sum(dim=1)
+        mutation_sum = (node_hidden * mutation_mask).sum(dim=1)
         return self.head(
-            torch.cat([pooled, pooled / count.clamp(min=1), h.mean(dim=1), count], dim=-1)
+            torch.cat(
+                [
+                    mutation_sum,
+                    mutation_sum / mutation_count.clamp(min=1),
+                    node_hidden.mean(dim=1),
+                    mutation_count,
+                ],
+                dim=-1,
+            )
         ).squeeze(-1)
 
 

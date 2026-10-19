@@ -27,8 +27,8 @@ class MultitaskModel(nn.Module):
 
     def forward(self, *args, **kwargs):
         # Bypass only M6's no-grad decorator; reuse its mapping and missingness validation.
-        h = StabilityModel.represent.__wrapped__(self.encoder, *args, **kwargs)
-        return torch.stack([self.heads[t](h).squeeze(-1) for t in TASKS], -1)
+        shared_features = StabilityModel.represent.__wrapped__(self.encoder, *args, **kwargs)
+        return torch.stack([self.heads[task](shared_features).squeeze(-1) for task in TASKS], -1)
 
 
 def masked_loss(prediction, target, observed, weights=(1.0, 1.0)):
@@ -38,33 +38,40 @@ def masked_loss(prediction, target, observed, weights=(1.0, 1.0)):
         raise ValueError("Two explicit boolean task masks required")
     if not observed.any():
         raise ValueError("All supervised outcomes are missing")
-    w = torch.as_tensor(weights, dtype=prediction.dtype, device=prediction.device)
-    if w.shape != (2,) or not torch.isfinite(w).all() or (w <= 0).any():
+    task_weights = torch.as_tensor(weights, dtype=prediction.dtype, device=prediction.device)
+    if (
+        task_weights.shape != (2,)
+        or not torch.isfinite(task_weights).all()
+        or (task_weights <= 0).any()
+    ):
         raise ValueError("Positive finite task weights required")
     losses, active = [], []
-    for j in range(2):
-        mask = observed[:, j]
+    for task_index in range(2):
+        mask = observed[:, task_index]
         if mask.any():
             # Index before subtraction: absent NaN labels must have exactly zero gradient.
-            delta = prediction[mask, j] - target[mask, j]
-            if not torch.isfinite(delta).all():
+            task_errors = prediction[mask, task_index] - target[mask, task_index]
+            if not torch.isfinite(task_errors).all():
                 raise ValueError("Nonfinite observed task outcome/prediction")
-            losses.append(delta.square().mean() * w[j])
-            active.append(w[j])
+            losses.append(task_errors.square().mean() * task_weights[task_index])
+            active.append(task_weights[task_index])
     return torch.stack(losses).sum() / torch.stack(active).sum()
 
 
 def calibrate(rows, train, task):
     if task not in TASKS:
         raise ValueError("Unknown task")
-    y = fit_targets(rows, train) if task == "function" else np.full(len(rows), np.nan)
+    targets = fit_targets(rows, train) if task == "function" else np.full(len(rows), np.nan)
     if task == "stability":
         for i in train:
-            r = rows[i]
-            if (r["target_unit"], r["target_convention"]) != ("kcal/mol", "positive_destabilizing"):
+            observation = rows[i]
+            if (observation["target_unit"], observation["target_convention"]) != (
+                "kcal/mol",
+                "positive_destabilizing",
+            ):
                 raise ValueError("Stability target units/sign mismatch")
-            y[i] = r["target"]
-    mean, scale = float(y[train].mean()), float(y[train].std())
+            targets[i] = observation["target"]
+    mean, scale = float(targets[train].mean()), float(targets[train].std())
     if not np.isfinite([mean, scale]).all() or scale <= 0:
         raise ValueError("Nonconstant finite training targets required")
-    return (y - mean) / scale, {"mean": mean, "scale": scale}
+    return (targets - mean) / scale, {"mean": mean, "scale": scale}

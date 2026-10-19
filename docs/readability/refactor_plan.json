@@ -162,5 +162,153 @@
       "k": "descriptor_name",
       "desc": "descriptors"
     }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/models.py",
+    "function": "metrics",
+    "renames": {
+      "delta": "prediction_errors"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/models.py",
+    "function": "fit_ridge",
+    "renames": {
+      "rmse": "validation_rmse"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/structural_gnn.py",
+    "function": "ResidueGNN.encode",
+    "renames": {
+      "h": "node_hidden",
+      "m": "edge_messages"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/structural_gnn.py",
+    "function": "ResidueGNN.forward",
+    "renames": {
+      "h": "node_hidden",
+      "mask": "mutation_mask",
+      "count": "mutation_count",
+      "pooled": "mutation_sum"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/edge_gnn.py",
+    "function": "EdgeGNN.forward",
+    "renames": {
+      "h": "node_hidden",
+      "m": "edge_messages",
+      "count": "mutation_count",
+      "pooled": "mutation_sum"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/hybrid.py",
+    "function": "CrossAttention.forward",
+    "renames": {
+      "b": "batch_size",
+      "n": "query_count",
+      "d": "feature_width",
+      "keys": "valid_keys"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/hybrid.py",
+    "function": "HybridRegressor.forward",
+    "renames": {
+      "b": "batch_size",
+      "n": "node_count",
+      "sm": "sequence_valid",
+      "gm": "graph_valid",
+      "qm": "query_valid",
+      "ix": "mutation_indices",
+      "s": "sequence_hidden",
+      "sq": "sequence_queries",
+      "g": "graph_hidden",
+      "gq": "graph_queries",
+      "new_sq": "updated_sequence_queries",
+      "sp": "sequence_pooled",
+      "gp": "graph_pooled",
+      "w": "fusion_weight"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/lora_model.py",
+    "function": "tensor_digest",
+    "renames": {
+      "h": "digest",
+      "x": "tensor"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/lora_model.py",
+    "function": "site_representation",
+    "renames": {
+      "count": "mutation_count",
+      "mask": "site_mask"
+    },
+    "temporaries": [
+      "mutant_mean",
+      "delta_mean"
+    ]
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/lora_model.py",
+    "function": "AdaptedESM.load_selected",
+    "renames": {
+      "params": "parameters"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/multitask.py",
+    "function": "MultitaskModel.forward",
+    "renames": {
+      "h": "shared_features",
+      "t": "task"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/multitask.py",
+    "function": "masked_loss",
+    "renames": {
+      "w": "task_weights",
+      "j": "task_index",
+      "delta": "task_errors"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/multitask.py",
+    "function": "calibrate",
+    "renames": {
+      "y": "targets",
+      "r": "observation"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/lora_model.py",
+    "function": "LowRank.forward",
+    "renames": {},
+    "temporaries": [
+      "dropped_inputs",
+      "rank_features",
+      "projected_features"
+    ]
   }
 ]

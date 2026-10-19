@@ -24,13 +24,13 @@ def one_hot(sequences):
 
 def metrics(measured, predicted):
     measured, predicted = np.asarray(measured), np.asarray(predicted)
-    delta = measured - predicted
+    prediction_errors = measured - predicted
     constant = len(measured) < 2 or np.ptp(measured) == 0 or np.ptp(predicted) == 0
     return {
         "spearman_rho": None if constant else float(spearmanr(measured, predicted).statistic),
         "pearson_r": None if constant else float(pearsonr(measured, predicted).statistic),
-        "mae": float(np.mean(np.abs(delta))),
-        "rmse": float(np.sqrt(np.mean(delta**2))),
+        "mae": float(np.mean(np.abs(prediction_errors))),
+        "rmse": float(np.sqrt(np.mean(prediction_errors**2))),
     }
 
 
@@ -43,10 +43,10 @@ def fit_ridge(train_x, train_y, validation_x, validation_y, alphas, seed):
         model = Ridge(alpha=alpha, solver="lsqr", tol=1e-8, max_iter=10000, random_state=seed).fit(
             train_x, train_y
         )
-        rmse = metrics(validation_y, model.predict(validation_x))["rmse"]
-        candidates.append({"alpha": alpha, "validation_rmse": rmse})
-        if best is None or rmse < best[0]:
-            best = rmse, model, alpha
+        validation_rmse = metrics(validation_y, model.predict(validation_x))["rmse"]
+        candidates.append({"alpha": alpha, "validation_rmse": validation_rmse})
+        if best is None or validation_rmse < best[0]:
+            best = validation_rmse, model, alpha
     return best[1], {
         "alpha": best[2],
         "selection": "minimum validation RMSE; ties smallest alpha",
