@@ -1,0 +1,177 @@
+{
+  "baseline": "256c2518bda891e5037376cfff351a852ec22010",
+  "historical": [
+    {
+      "id": "historical_0",
+      "sequence": "LTAPSIKSGTILHAWNWSFNTLKHNMKDIHDAGYTAIQTSPINQVKEGNQGDKSMSNWYWLYQPTSYQIGNRYLGTEQEFKEMCAAAEEYGIKVIVDAVINHTTSDYAAISNEVKSIPNWTHGNTPIKNWSDRWDVTQNSLSGLYDWNTQNTQVQSYLKRFLDRALNDGADGFRFDAAKHIELPDDGSYGSQFWPNITNTSAEFQYGEILQDSVSRDAAYANYMDVTASNYGHSIRSALKNRNLGVSNISHYAVDVSADKLVTWVESHDTYANDDEESTWMSDDDIRLGWAVIASRSGSTPLFFSRPEGGGNGVRFPGKSQIGDRGSALFEDQAITAVNRFHNVMAGQPEELSNPNGNNQIFMNQRGSHGVVLANAGSSSVSINTATKLPDGRYDNKAGAGSFQVNDGKLTGTINARSVAVLYPD",
+      "source_locations": [
+        "configs/amylase.toml",
+        "configs/amylase_m1.toml",
+        "configs/amylase_m2.toml",
+        "configs/amylase_m2_alphafold.toml",
+        "configs/amylase_m2_pdb.toml",
+        "configs/m4.json/collection/0"
+      ],
+      "sha256": "6f4349a85efa628251af65519800eb4f0c198e41158e71f37a271cc357ceccf8"
+    },
+    {
+      "id": "historical_1",
+      "sequence": "MQYKLILNGKTLKGETTTEAVDAATAEKVFKQYANDNGVDGEWTYDDATKTFTVTE",
+      "source_locations": [
+        "configs/m11.json",
+        "configs/m11.json/structure_config",
+        "configs/m4.json/collection/1",
+        "configs/m4.json/collection/1/structure_config"
+      ],
+      "sha256": "6d140c4f60bede5a68db37a9b38a43c4227c4cdf198675dae4ab09d57e871234"
+    },
+    {
+      "id": "historical_2",
+      "sequence": "EVPFKVVAQFPYKSDYEDDLNFEKDQEIIVTSVEDAEWYFGEYQDSNGDVIEGIFPKSFVAVQG",
+      "source_locations": [
+        "configs/m12.json/proteins/0"
+      ],
+      "sha256": "2525c4c880a947f46b4d75c90e17d85e653fcf632fc7dc9d0c64a75625d36e61"
+    },
+    {
+      "id": "historical_3",
+      "sequence": "AVESIEKKRIRKGRVEYLVKWRGWSPKYNTWEPEENILDPRLLIAFQNRE",
+      "source_locations": [
+        "configs/m12.json/proteins/1"
+      ],
+      "sha256": "98af4350fbb819c7ff347e0a3d2cef6e324feb76ec19f8a98231519888ff80f2"
+    },
+    {
+      "id": "historical_4",
+      "sequence": "KDPKFEAAYDFPGSGSSSELPLKKGDIVFISRDEPSGWSLAKLLDGSKEGWVPTAYMTPYK",
+      "source_locations": [
+        "configs/m12.json/proteins/2"
+      ],
+      "sha256": "e4a68c4b8acb4d369e571d9d37d3e3f2c5675c6881b011349ca8110b10daf0cc"
+    },
+    {
+      "id": "historical_5",
+      "sequence": "HSHMSHTQVIELERKFSHQKYLSAPERAHLAKNLKLTETQVKIWFQNRRYKTKRKQLSSEL",
+      "source_locations": [
+        "configs/m12.json/proteins/3"
+      ],
+      "sha256": "c9f6965638d2fd03c56238100627b8434704ee694d5fad714adb2ac8ca2d450a"
+    },
+    {
+      "id": "historical_6",
+      "sequence": "KLPPGWEKRMSRSSGRVYYFNHITNASQWERPSGNSSSG",
+      "source_locations": [
+        "configs/m12.json/proteins/4"
+      ],
+      "sha256": "32f6115513f39a2d0d751aff5d991c95f598beb690622721a13d943300a60ea4"
+    },
+    {
+      "id": "historical_7",
+      "sequence": "THFTSQQLQELEATFQRNHYPDMSTREEIAVWTNLTEARVRVWFKNRRAKWR",
+      "source_locations": [
+        "configs/m12.json/proteins/5"
+      ],
+      "sha256": "f33cf1a6bd36d6f6b6c6dcb7476a95f16918e17b3eaff633f4bd6c8a2d0e7ee6"
+    },
+    {
+      "id": "historical_8",
+      "sequence": "GEDLPLPPGWSVDWTMRGRKYYIDHNTNTTHWSHPLESGPSSG",
+      "source_locations": [
+        "configs/m12.json/proteins/6"
+      ],
+      "sha256": "a33e27b03fd4cd2408b350a29777dd57e8caeb94c9ff4259ca7e29d67e1af0b5"
+    },
+    {
+      "id": "historical_9",
+      "sequence": "AVAESVIGKRVGDDGKTIEYLVKWTDMSDATWEPQDNVDSTLVLLYQQ",
+      "source_locations": [
+        "configs/m12.json/proteins/7"
+      ],
+      "sha256": "81346251006cd7699ec780db8c419274f1044e32371600068db7abd2a89b0e53"
+    },
+    {
+      "id": "historical_10",
+      "sequence": "AARYDDVLYFPASRYPETGAHISDAIKAGHADVCTIERSGADKRRQESLKGIPTKPGFDRDEWPMAMCEEGGKGASVRYVSSSDNRGAGSWVGNRLNGYADGTRILFIVQ",
+      "source_locations": [
+        "configs/m4.json/collection/2",
+        "configs/m4.json/collection/2/structure_config"
+      ],
+      "sha256": "3d2330d61bc81dee4ce014a75498aa6c1a1c63fe59a7a8e575463e04f345ae35"
+    },
+    {
+      "id": "historical_11",
+      "sequence": "KFNKELSVAGREIVTLPNLNDPQKKAFIFSLWDDPSQSANLLAEAKKLNDAQAPK",
+      "source_locations": [
+        "configs/m6.json/proteins/0"
+      ],
+      "sha256": "5fd7bb16a69b9446c49b8cbe0e283cb065424c7b8b542181420d682c704ed3fd"
+    },
+    {
+      "id": "historical_12",
+      "sequence": "SPEVQIAILTEQINNLNEHLRVHKKDHHSRRGLLKMVGKRRRLLAYLRNKDVARYREIVEKLG",
+      "source_locations": [
+        "configs/m6.json/proteins/1"
+      ],
+      "sha256": "23260d892b2f1c7be955c13686082906af03865240d0a6da8e5a7bea65e592ce"
+    },
+    {
+      "id": "historical_13",
+      "sequence": "RQGFVPAAYVKKLDSGTGKELVLALYDYQEKSPREVTMKKGDILTLLNSTNKDWWKVEVN",
+      "source_locations": [
+        "configs/m6.json/proteins/2"
+      ],
+      "sha256": "5fe7d9ad6e17486d30f09a64b0e4317afde6f028bb243c91b9636b2becd865b2"
+    },
+    {
+      "id": "historical_14",
+      "sequence": "MTAIIKEIVSRNKRRYQEDGFDLDLTYIYPNIIAMGFPAERLEGVYRNNIDDVVRFLDSKHKNHYKIYNLCAERHYDTAKFNCRVAQYPFEDHNPPQLELIKPFCEDLDQWLSEDDNHVAAIHCKAGKGRTGVMICAYLLHRGKFLKAQEALDFYGEVRTRDKKGVTIPSQRRYVYYYSYLLKNHLDYRPVALLFHKMMFETIPMFSGGTCNPQFVVCQLKVKIYSSNSGPTRREDKFMYFEFPQPLPVCGDIKVEFFHKQNKMLKKDKMFHFWVNTFFIPGPEETSEKVENGSLCDQEIDSICSIERADNDKEYLVLTLTKNDLDKANKDKANRYFSPNFKVKLYFTKTVEEPSNPEASSSTSVTPDVSDNEPDHYRYSDTTDSDPENEPFDEDQHTQITKV",
+      "source_locations": [
+        "configs/m9.json/proteins/0"
+      ],
+      "sha256": "2675a6cc946076d70342977845afe793269c5987a998382100bede64d1e61b42"
+    },
+    {
+      "id": "historical_15",
+      "sequence": "MDSLVVLVLCLSCLLLLSLWRQSSGRGKLPPGPTPLPVIGNILQIGIKDISKSLTNLSKVYGPVFTLYFGLKPIVVLHGYEAVKEALIDLGEEFSGRGIFPLAERANRGFGIVFSNGKKWKEIRRFSLMTLRNFGMGKRSIEDRVQEEARCLVEELRKTKASPCDPTFILGCAPCNVICSIIFHKRFDYKDQQFLNLMEKLNENIKILSSPWIQICNNFSPIIDYFPGTHNKLLKNVAFMKSYILEKVKEHQESMDMNNPQDFIDCFLMKMEKEKHNQPSEFTIESLENTAVDLFGAGTETTSTTLRYALLLLLKHPEVTAKVQEEIERVIGRNRSPCMQDRSHMPYTDAVVHEVQRYIDLLPTSLPHAVTCDIKFRNYLIPKGTTILISLTSVLHDNKEFPNPEMFDPHHFLDEGGNFKKSKYFMPFSAGKRICVGEALAGMELFLFLTSILQNFNLKSLVDPKNLDTTPVVNGFASVPPFYQLCFIPV",
+      "source_locations": [
+        "configs/m9.json/proteins/1"
+      ],
+      "sha256": "3f891626b6684fc43355f4146b0d0aad6273d9d39670b42340a49cff79fa8d24"
+    },
+    {
+      "id": "historical_16",
+      "sequence": "MGSTWGSPGWVRLALCLTGLVLSLYALHVKAARARDRDYRALCDVGTAISCSRVFSSRWGRGFGLVEHVLGQDSILNQSNSIFGCIFYTLQLLLGCLRTRWASVLMLLSSLVSLAGSVYLAWILFFVLYDFCIVCITTYAINVSLMWLSFRKVQEPQGKAKRH",
+      "source_locations": [
+        "configs/m9.json/proteins/2"
+      ],
+      "sha256": "f8e6c25683dd1eb29c9ddee6be595cb5ac278018a028b0d07316b906a864763d"
+    },
+    {
+      "id": "historical_17",
+      "sequence": "MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG",
+      "source_locations": [
+        "configs/ubiquitin_m2.toml",
+        "configs/ubiquitin_m2_pdb.toml"
+      ],
+      "sha256": "233b4b0b8c4616095bc3249f9375fc345d32af7deaef07117d0383c51d6f19aa"
+    }
+  ],
+  "external_candidates": [
+    {
+      "id": "P0A9X9",
+      "sequence": "MTGIVKWFNADKGFGFITPDDGSKDVFVHFSAIQNDGYKSLDEGQKVSFTIESGAKGPAAGNVTS"
+    },
+    {
+      "id": "P01053",
+      "sequence": "KTEWPELVGKSVEEAKKVILQDKPEAQIIVLPVGTIVTMEYRIDRVRLFVDKLDNIAQVPRVG"
+    },
+    {
+      "id": "TEM1",
+      "sequence": "MSIQHFRVALIPFFAAFCLPVFAHPETLVKVKDAEDQLGARVGYIELDLNSGKILESFRPEERFPMMSTFKVLLCGAVLSRVDAGQEQLGRRIHYSQNDLVEYSPVTEKHLTDGMTVRELCSAAITMSDNTAANLLLTTIGGPKELTAFLHNMGDHVTRLDRWEPELNEAIPNDERDTTMPAAMATTLRKLLTGELLTLASRQQLIDWMEADKVAGPLLRSALPAGWFIADKSGAGERGSRGIIAALGPDGKPSRIVVIYTTGSQATMDERNRQIAEIGASLIKHW"
+    },
+    {
+      "id": "GFP",
+      "sequence": "SKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTLSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK"
+    }
+  ]
+}

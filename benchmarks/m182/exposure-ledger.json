@@ -1,0 +1,7 @@
+{
+  "candidate_tables": "CspA/CI2, TEM1 and GFP numerical phenotype/uncertainty cells remain unread/unparsed/unfitted. GFP processing reads header and first genotype field only; TEM1 projects A/B/C only.",
+  "primary_metadata": "GFP assay metadata includes instrument gate values and processing thresholds. Those define measurement conditions; they are not test-variant outcomes or filtering choices in this study.",
+  "prior_exposure": "Unchanged benchmarks/m181/exposure-ledger.json; Mavor2016 methods example outputs remain excluded from pristine confirmation.",
+  "search_context": "Search results can expose aggregate descriptions or other-study/model results; no such result was used to select cohorts, masks, models or thresholds. No candidate phenotype table was opened through browsing.",
+  "source_file_policy": "Target-bearing bytes quarantined and hashed; no phenotype data files committed."
+}

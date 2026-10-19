@@ -1,0 +1,13 @@
+[
+  {
+    "url": "https://pmc-oa-opendata.s3.amazonaws.com/metadata/PMC4032126.1.json",
+    "status": "OK",
+    "sha256": "667205b0a923a2499a7b4860257512597d3f9f7e5fa8d0438d7cf2b9c5dbbde6",
+    "bytes": 2553
+  },
+  {
+    "url": "https://pmc-oa-opendata.s3.amazonaws.com/metadata/PMC4032126.2.json",
+    "status": "ERROR",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

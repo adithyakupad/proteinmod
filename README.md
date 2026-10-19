@@ -137,3 +137,5 @@ all historical benchmark files and configurations remain unchanged.
 M18 external qualification is [blocked before label access](benchmarks/m18/REPORT.md): primary abundance-assay lineage is traced, but four historical sequence-similarity flags remain unresolved. No independent external performance is claimed.
 
 M18.1 adds [blinded homology/profile adjudication and a primary TEM-1 lineage audit](benchmarks/m181/REPORT.md). The four original flags remain recorded; confirmation is blocked because fewer than four test families are qualified.
+
+M18.2 traces a [fourth primary family and TEM-1 workbook permissions](benchmarks/m182/REPORT.md). Genotype-only common masks are recorded; strict structural admission remains blocked, so no confirmatory performance is claimed.

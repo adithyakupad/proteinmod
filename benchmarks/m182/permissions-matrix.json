@@ -1,0 +1,31 @@
+{
+  "scope": "Evidence-based admission decisions for this noncommercial research task, not a legal opinion or an unrestricted release license",
+  "GFP": {
+    "primary_deposition": "https://api.figshare.com/v2/articles/3102154/versions/1",
+    "license": "CC-BY-4.0",
+    "research_use": "PASS with attribution",
+    "raw_redistribution": "Permitted with attribution; no phenotype table redistributed here",
+    "commercial_use": "Permitted under CC-BY-4.0 attribution terms",
+    "exact_file_identity": "primary-deposited MD5s match pinned mirror bytes"
+  },
+  "TEM1": {
+    "source": "https://pmc-oa-opendata.s3.amazonaws.com/metadata/PMC4032126.1.json",
+    "license": "CC-BY-NC3.0 (article version license plus exact workbook media linkage)",
+    "research_use": "PASS for noncommercial research with attribution and NLM source/version notice",
+    "raw_redistribution": "Do not include workbook in this PR; any later reuse must remain within verified terms",
+    "commercial_use": "Not granted by this license; separate permission needed",
+    "exact_item_identity": "Published workbook MD5abc10a058a2adaba6ec7672fdda76ea7 matches cached XLSX"
+  },
+  "CspA_CI2": {
+    "source": "GEO GSE266299 raw fitness column; linked Zenodo11175470 CC-BY-4.0",
+    "research_use": "M18 source-specific licensing caveat retained; exact GEO-to-licensed-Zenodo item equivalence not newly verified",
+    "raw_redistribution": "No phenotype files redistributed",
+    "commercial_use": "No new unrestricted permission claim"
+  },
+  "coordinate_and_profile_evidence": {
+    "PDB": "wwPDB CC0; cite depositions",
+    "Pfam": "InterPro/Pfam downloadable data CC0; cite resources"
+  },
+  "model_prediction_outputs": "None generated; no automatic relicensing of model weights or predictions asserted",
+  "source_code": "Existing MIT unchanged; does not relicense third-party data"
+}

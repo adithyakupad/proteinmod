@@ -1,0 +1,26 @@
+{
+  "pytest": "203 passed, 1 warning in24.11s",
+  "clean_PR40_tests": "201 passed, 1 warning in23.20s; git archive256c2518 with baseline src first on PYTHONPATH; same installed environment",
+  "ruff_check": "PASS",
+  "ruff_format": "234 files PASS",
+  "pip_check": "PASS",
+  "historical_parent_files_exact": 724,
+  "m161": "PASS",
+  "m17": {
+    "fits": 1096,
+    "predictions": 34304,
+    "roles_and_metrics": "PASS",
+    "state_replay": "not repeated"
+  },
+  "m18": "PASS",
+  "m181": "PASS",
+  "profile_replay": "242 exact score/domain pairs; maximum absolute difference0.0",
+  "genotype_mask_replay": "Both candidate indexes identical",
+  "structure_mapping_replay": "Seven actual coordinate files parsed; failures retained; no rejected graph accepted",
+  "new_model_fits": 0,
+  "predictions_generated": 0,
+  "candidate_phenotype_cells_accessed": false,
+  "python": "3.12.15",
+  "device": "CPU metadata/alignment/profile only",
+  "limits": "Not a separate-operator cold-source reproduction; no external performance, all-historical training rerun or MPS replay"
+}
