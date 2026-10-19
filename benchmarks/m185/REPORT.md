@@ -15,7 +15,7 @@ Base: `research/sod1-blinded-admission` at
 `codex/sod1-blinded-qualification`. Before acquisition, commit `e6e4b22` chose
 abundance urn:mavedb:00001217-a-3 as the primary outcome, the initiator-only mask
 policy and original deterministic genotype selection. Activity is context only,
-not a score-selected fallback. No activity data were acquired.
+not a score-selected fallback. No activity genotype/outcome rows were acquired; activity column headers are context only.
 
 All **878 parent files** are protected byte-for-byte, including readability
 changes, M0–M18.4 evidence, source APIs, checkpoints/configurations, old failures,
@@ -158,12 +158,24 @@ Paper methods and the primary MaveDB method/schema establish:
 The paper explicitly links final map scores to Data S2 and MaveDB. Its abundance
 URN contains a duplicated `mavedb:` prefix; the valid API item, exact gene target
 and assay title are recorded rather than silently treating that typography as a
-verified file hash. Data S2's caption identifies `mmc2.xlsx`. The publisher HEAD
-request reports768010 bytes and range support, but both tested header-only ZIP
-requests received **HTTP403 before any worksheet member was acquired**. No full
-workbook fallback or phenotype-cell parsing occurred. Consequently **exact Data S2
-worksheet/column/export identity is PARTIAL**. We do not claim numerical equivalence
-between the workbook and MaveDB from a common citation or inferred column names.
+verified file hash. Data S2's caption identifies `mmc2.xlsx`. Initial header-only ZIP attempts
+received HTTP403. An honest research User-Agent made public metadata accessible;
+an inherited Excel namespace then caused a first-row parse error, corrected with
+a tested namespace-preserving header wrapper. The final bounded read succeeds:
+**12 sheet headers, 68,846 transferred range bytes, zero data rows parsed**.
+The `abundance_map_scores_LLRps` sheet A–I header is exactly:
+`hgvs_pro, score, se, df, llr, llrCI_lower, llrCI_upper, evidence_weight, pos`.
+This equals the MaveDB schema's genotype field plus all score-column names in order.
+The activity sheet similarly has `hgvs_pro, score, se, df, pos`, but no activity
+values or genotypes were acquired. Clinical/reference/other sheets were inspected
+only for header metadata, never data rows. The reader rejects numeric first-row
+cells and decodes only selected shared-string headers. Whole-sheet CRC and full
+workbook SHA were not verified; metadata/shared-string CRC checks are explicit.
+
+**Named-column lineage is PASS** using primary paper/deposit linkage, matching
+headers, method definitions and relevant author export source. This is not an
+empirical comparison of score values, Data S2 row IDs or numerical equality.
+All initial access/parser failures remain archived rather than being erased.
 
 Dataset permissions are stronger than the earlier candidate note: the **specific
 MaveDB item is explicitly CC0**, supporting research, redistribution, derived
@@ -179,6 +191,11 @@ Authority links: [MaveDB licensing](https://www.mavedb.org/docs/mavedb/submittin
 [version retention](https://www.mavedb.org/docs/mavedb/submitting-data/publishing.html),
 [wwPDB policy](https://www.wwpdb.org/about/usage-policies),
 [InterPro/Pfam terms](https://interpro-documentation.readthedocs.io/en/latest/license.html).
+
+If eventually admitted, use original test-only M17 rotations, assay-local
+Spearman and equal-family macro aggregation. Do not pool native assay RMSE or
+claim comparable thermodynamic units/conformal guarantees across assays. Family,
+assay and mutation-burden shifts are confounded, not isolated causal factors.
 
 ## Blinding deviation and qualification matrix
 
@@ -200,17 +217,19 @@ future confirmatory claim; this work cannot certify it away.
 | Prospective mature-reference graph |PASS |153 nodes,827 edges,96 matched candidate inputs |
 | Bounded family/similarity checks |PASS |Sod_Cu GA match;0 original flags; all ambiguities retained |
 | Specific MaveDB dataset license |PASS |Explicit CC0 item statement |
-| Data S2 exact column linkage |PARTIAL |Paper/schema/code linkage; primary worksheet headers403 |
+| Data S2 named-column linkage |PASS |Primary sheet header matches exact MaveDB columns; no score values compared |
 | Initial pre-decode aggregate blinding |FAIL / DEVIATION |Distribution mechanically decoded; not displayed/used |
 | Subsequent exclusion guards |PASS |Poison-field/header/body tests; no individual scores read |
 | Individual variant label blinding |PASS |No score endpoint, score column or clinical values acquired |
-| Four-family final admission |BLOCKED |CspA/CI2 permissions, column linkage and deviation review |
+| Four-family final admission |BLOCKED |CspA/CI2 permissions and deviation review |
 | External ML confirmation / release |NOT RUN |No final read/fold/checkpoint manifest; no tag |
 
 ## Reproduction and software checks
 
 See `verification.json` for actual tests, Ruff, build and clean-source results.
-The full local suite passes **241 tests** (one existing joblib core-count warning);
+The full local suite passes **242 tests** (one existing joblib core-count warning);
+A separate clean checkout at f6ec52e, without copied research caches, also passes
+241 tests and the stdlib integrity/history checks using the same dependencies.
 Ruff, formatting, dependency consistency and wheel build pass. Existing CI runs
 the new evidence guard via pytest; all old CI checks remain. Initial legacy
 history-count failures prompted moving only these new artifacts/configuration
@@ -230,6 +249,9 @@ python scripts/audit_sod1.py --output /tmp/sod1-new-geometry
 PYTHONPATH=/tmp/proteinmod-sod1-deps python scripts/profile_sod1.py --output /tmp/sod1-new-profiles.json
 ```
 
+For the optional profile tool, install the measured version into an isolated
+directory: `python -m pip install --target /tmp/proteinmod-sod1-deps pyhmmer==0.12.3`.
+
 For fresh sources, use only the exact primary URLs and pinned hashes in
 `source_inventory.json`. Official sequence-only sources are safe; raw API metadata
 must be processed through `scripts/sod1_sources.py`, never whole-JSON decoding.
@@ -238,7 +260,8 @@ The verified genotype acquisition is
 It requires a fresh output directory, validates the header and enforces the preregistered
 item/count; compare with the committed projection hash before substituting live data.
 `python scripts/sod1_supplement.py --output /tmp/sod1-new-headers.json` reproduces the
-header-only attempt; HTTP failure is a blocker, not permission for a full-table read.
+header-only acquisition. HTTP/parser failures require fixing the metadata-only
+path, never falling back to a full phenotype-table read.
 
 The coordinate SHA256 is
 `378722d38fea43812a185c331bb35e2fa2fd456d4e74d93bc7ab945698088145`.

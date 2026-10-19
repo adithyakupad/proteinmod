@@ -26,12 +26,17 @@ def first_row(handle):
         row = re.search(rb"<row(?:\s[^>]*)?>.*?</row>", content, re.DOTALL)
         if row is None:
             raise ValueError("Unsupported first-row XML")
-        wrapper = b'<root xmlns="' + NS["s"].encode() + b'">' + row.group() + b"</root>"
+        declarations = re.findall(rb'xmlns(?::[A-Za-z0-9_]+)?="[^"]*"', content)
+        wrapper = b"<root " + b" ".join(declarations) + b">" + row.group() + b"</root>"
         element = ET.fromstring(wrapper)[0]
         if element.get("r") != "1":
             raise ValueError("Only a declared first row may be inspected")
         cells = []
         for cell in element.findall("s:c", NS):
+            if cell.get("t") not in {"s", "inlineStr"} and cell.find("s:v", NS) is not None:
+                raise ValueError(
+                    "Unverified numeric first-row cell; no outcome value may be displayed"
+                )
             cells.append(
                 {
                     "coordinate": cell.get("r"),
@@ -56,6 +61,7 @@ def selected_strings(content, indices):
 
 
 def opener(request, timeout):
+    request.add_header("User-Agent", "ProteinMod/0.1 (outcome-blind metadata audit)")
     return urllib.request.urlopen(request, timeout=timeout)
 
 

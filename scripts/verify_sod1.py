@@ -16,6 +16,12 @@ def verify():
         metadata["urn"] == "urn:mavedb:00001217-a-3" and metadata["license"]["shortName"] == "CC0"
     )
     assert metadata["numVariants"] == 2906
+    supplement = json.loads((root / "evidence/DataS2-headers.json").read_text())
+    assert supplement["sheet_data_rows_parsed"] == 0
+    sheet = next(s for s in supplement["sheets"] if s["sheet"] == "abundance_map_scores_LLRps")
+    assert [c["header"] for c in sheet["first_row"]] == ["hgvs_pro"] + metadata["datasetColumns"][
+        "scoreColumns"
+    ]
     audit = json.loads((root / "structural-genotype-audit.json").read_text())
     assert audit["selected_chain"] == "A"
     for row in audit["strict_full_reference"]:
