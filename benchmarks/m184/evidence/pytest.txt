@@ -53,4 +53,4 @@ tests/test_uncertainty.py::test_bootstrap_mask_shuffle_and_label_free_distance
     warnings.warn(
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-======================= 225 passed, 1 warning in 13.71s ========================
+======================= 225 passed, 1 warning in 12.96s ========================

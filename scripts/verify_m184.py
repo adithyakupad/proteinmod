@@ -16,6 +16,13 @@ def verify():
     evidence = json.loads((root / "GFP-geometry-audit.json").read_text())
     assert evidence["strict_M2"]["accepted"]
     assert evidence["strict_M2"]["exact_compatible_positions"] == 237
+    assert evidence["model_input_dimensions"] == {
+        "static": 34,
+        "dynamic": 25,
+        "ridge": 270,
+        "edge": 29,
+    }
+    assert evidence["directed_chemical_edges_finite"] == 2220
     assert evidence["validated_genotypes"] == 96 and evidence["mutation_order_exact_invariance"]
     assert len(evidence["common_reference_positions"]) == 227
     assert evidence["graph_audit"]["descriptor_missing_nodes"]["plddt"] == 237

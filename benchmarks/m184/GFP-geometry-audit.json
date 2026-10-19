@@ -412,11 +412,18 @@
       "bfactor_a2": 237,
       "plddt": 237
     },
-    "m2_manifest_sha256": "f49c7599dc504c5ecd676a7714a7afad7e8e4a69db72621f7f037cf5a0251b0f",
+    "m2_manifest_sha256": "49b9c4e1ab7a8ac0d21ed75956a8f9cff8f4e0190d223c8be7e885743af8237c",
     "geometry": "reference construct only; not mutant rearrangements",
     "neighborhood": "identity-compatible induced M2 graph; M2 degree/RSA descriptors retain deposited context"
   },
   "validated_genotypes": 96,
+  "model_input_dimensions": {
+    "static": 34,
+    "dynamic": 25,
+    "ridge": 270,
+    "edge": 29
+  },
+  "directed_chemical_edges_finite": 2220,
   "mutation_order_exact_invariance": true,
   "mutation_pair_distances": [
     {

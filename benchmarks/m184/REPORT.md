@@ -31,7 +31,8 @@ Unchanged full-reference M2 accepts **237/237** exact compatible CA sites, uniqu
 mapping, no missing positions or residue differences. The full diagnostic graph
 has237 nodes,1110 undirected edges, one component and no isolated nodes. All96
 previously genotype-selected GFP candidates pass input construction and exact
-mutation-order invariance. Confidence descriptor missingness is explicit.
+mutation-order invariance. Confidence descriptor missingness is explicit. Existing static/dynamic/ridge/edge
+widths 34/25/270/29 pass, including 2220 finite directed chemical-edge rows.
 
 The original227 eligible positions and all candidate IDs were kept for paired
 geometry comparisons. The newly predicted terminal/mismatch positions did not

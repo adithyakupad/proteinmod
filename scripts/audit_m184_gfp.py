@@ -8,6 +8,7 @@ from pathlib import Path
 import numpy as np
 
 from proteinmod.data import checksum, write_json
+from proteinmod.edge_chemistry import annotate, mapped_atoms
 from proteinmod.masked_structure import extract
 from proteinmod.structural_graph import load_graph, variant_inputs
 from proteinmod.structure_mapping import map_reference, parse_structure
@@ -46,6 +47,10 @@ def audit(config, output):
     result = run_structure(config, render=False)
     reference = config["reference"]["sequence"]
     predicted = load_graph(config["structure_run"]["output"], reference)
+    atoms, _ = mapped_atoms(config["structure_run"]["output"], predicted)
+    edge_features = annotate(predicted, atoms)
+    assert predicted["static"].shape == (237, 34)
+    assert edge_features.shape == (2220, 29) and np.isfinite(edge_features).all()
     historical = json.loads(Path("benchmarks/m182/evidence/structure-mask-audits.json").read_text())
     digest = next(row["coordinate_sha256"] for row in historical if row["pdb"] == "1GFL")
     eligible = [p for p in range(1, 238) if p not in {63, 79, *range(230, 238)}]
@@ -86,6 +91,7 @@ def audit(config, output):
             row["mutations"][::-1], reference, predicted
         )
         assert not reasons and not reversed_reasons
+        assert dynamic.shape == (237, 25) and features.shape == (270,)
         assert np.array_equal(dynamic, reversed_dynamic)
         assert np.array_equal(features, reversed_features)
         positions = [int(token[1:-1]) for token in row["mutations"]]
@@ -170,6 +176,8 @@ def audit(config, output):
         },
         "graph_audit": predicted["audit"],
         "validated_genotypes": len(pairs),
+        "model_input_dimensions": {"static": 34, "dynamic": 25, "ridge": 270, "edge": 29},
+        "directed_chemical_edges_finite": len(edge_features),
         "mutation_order_exact_invariance": True,
         "mutation_pair_distances": pairs,
         "candidate_target_cells_accessed": False,

@@ -11,7 +11,7 @@
     "pytest": "9.1.1",
     "ruff": "0.17.0"
   },
-  "pytest": "225 passed,1 existing joblib core-count warning,13.71s",
+  "pytest": "225 passed,1 existing joblib core-count warning,12.96s (after complete edge-interface assertions)",
   "ruff": "PASS",
   "format": "PASS258files",
   "pip_check": "PASS",
