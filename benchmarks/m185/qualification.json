@@ -1,0 +1,35 @@
+{
+  "admission": "BLOCKED",
+  "SOD1_candidate": "not admitted; proposed replacement for GFP only",
+  "primary_score_set": "urn:mavedb:00001217-a-3",
+  "activity": "not selected and no activity genotypes/outcomes acquired",
+  "four_family_denominator": 4,
+  "directional_agreement_required": "original >=3/4",
+  "hypotheses_and_budgets": "original M17 unchanged",
+  "gates": {
+    "genotype_projection": "PASS2906 score-free rows; all match RefSeq HGVS",
+    "strict_full_M2": "FAIL retained; initiator Met missing in chainsA/F",
+    "prospective_masked_geometry": "PASS153/153 positions2-154, no identity differences",
+    "bounded_family_and_homology": "PASS original flag criteria; PF00080.26 sole matching family among12 profiles; raw ambiguities retained",
+    "SOD1_dataset_copyright_permission": "PASS exact MaveDB item metadata CC0; distinct from paper/source software",
+    "exact_DataS2_column_lineage": "PARTIAL; paper+API column definitions established, primary workbook-header access403",
+    "initial_predecode_aggregate_exclusion": "FAIL; metadata distribution mechanically decoded before exclusion guard",
+    "subsequent_predecode_and_header_guards": "PASS tests; only genotype namespace used",
+    "variant_level_label_blinding": "PASS no individual score values accessed",
+    "CspA_CI2_permission": "PARTIAL unchanged M184 blocker",
+    "TEM1": "Historical noncommercial-source and geometry qualification preserved"
+  },
+  "blockers": [
+    "CspA/CI2 exact GEO raw-score permissions remain unresolved; SOD1 cannot clear another family's gate.",
+    "DataS2 per-column/export linkage remains unverified because header-only primary publisher requests received403; direct MaveDB score/se/df methods are established, not numeric or header equivalence to the workbook.",
+    "Initial abundance metadata response unexpectedly included a nonempty scoreDistribution; two whole-JSON inspections mechanically decoded it. Values were not displayed/used and no variant scores were accessed. Independent review is required before any pristine-blinding claim or confirmation."
+  ],
+  "aggregate_metadata_mechanically_decoded": true,
+  "strict_predecode_blinding_preserved": false,
+  "variant_level_outcomes_accessed": false,
+  "confirmation_runs": 0,
+  "models_fit_on_external_outcomes": 0,
+  "final_manifest_issued": false,
+  "release_tag_created": false,
+  "ML_independent_validation_claim": false
+}

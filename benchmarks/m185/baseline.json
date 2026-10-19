@@ -1,0 +1,12 @@
+{
+  "parent_branch": "research/sod1-blinded-admission",
+  "parent_head": "c748ef6924a102ef424dac3212b8b61fad993697",
+  "initial_working_tree": "clean",
+  "work_branch": "codex/sod1-blinded-qualification",
+  "preregistration_commit": "e6e4b22",
+  "preserved_parent_files": 878,
+  "source_code_and_CI_workflows_modified": false,
+  "M17_protocol": "unchanged four-family denominator and original H1-H5/budgets/controls",
+  "CI": "Prior source head5a98c6d has12 successful checks; current draft head must pass independently",
+  "evidence_namespace": "m185; existing numbered-milestone exclusion convention, old guards/tests unchanged"
+}

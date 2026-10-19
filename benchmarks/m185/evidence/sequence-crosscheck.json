@@ -1,0 +1,6 @@
+{
+  "primary": "https://rest.uniprot.org/uniprotkb/P00441.fasta",
+  "file_sha256": "e37efca5bb96a42335302bbb3771bc4f9fa79197bd323a20d80f54d128656c43",
+  "canonical_human_sequence_equals_assay_reference": true,
+  "length": 154
+}

@@ -1,0 +1,17 @@
+{
+  "url": "https://ars.els-cdn.com/content/image/1-s2.0-S0002929725003519-mmc2.xlsx",
+  "HEAD_via_curl": "200 application/excel 768010bytes, accept-ranges advertised",
+  "header_only_RangeZipReader_attempts": [
+    {
+      "query": "range-specific cache key",
+      "result": "403 at HEAD; no ZIP member acquired"
+    },
+    {
+      "query": "none",
+      "result": "403 at HEAD; no ZIP member acquired"
+    }
+  ],
+  "worksheet_data_rows_parsed": 0,
+  "whole_workbook_downloaded": false,
+  "conclusion": "Exact worksheet header/column mapping remains unverified; no full-workbook fallback allowed"
+}

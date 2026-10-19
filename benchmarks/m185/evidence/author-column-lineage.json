@@ -1,0 +1,22 @@
+{
+  "repository": "axakova/SOD1_Manuscript",
+  "revision": "08e8e4c759eb738f56b7c58c20517b937bf487cb",
+  "path": "20250625_SOD1_Manuscript_Figures.Rmd",
+  "source_sha256": "796949f1f0168ad4b33f3eda271e6f6b1305db704e2885c432553a334191408a",
+  "projection": "Only selected I/O/column source lines inside R chunks; no narrative/results, plots, notebooks or data rows",
+  "lines": [
+    {
+      "line": 32,
+      "code": "abundance <- read.csv(\"2025_merged_map_unfloored_abundance.csv\")"
+    },
+    {
+      "line": 33,
+      "code": "activity <- read.csv(\"2025_merged_map_unfloored_activity.csv\")"
+    },
+    {
+      "line": 1902,
+      "code": "write.csv(LLRp_file_Invitae_tosave, file = \"LLRp_file_Invitae_tosave.csv\", row.names = FALSE)"
+    }
+  ],
+  "limits": "Author input map names and MaveDB clinical-column export logic, not proof of DataS2 worksheet column identity or numerical equality. No author code executed."
+}

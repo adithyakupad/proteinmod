@@ -7,7 +7,6 @@ import json
 import urllib.request
 from pathlib import Path
 
-
 METADATA_FIELDS = {
     "urn",
     "title",
@@ -130,6 +129,10 @@ def genotype_rows(handle):
 def acquire_genotypes(urn, output):
     if urn != "urn:mavedb:00001217-a-3":
         raise ValueError("Only preregistered abundance genotypes authorized")
+    if Path(output).exists():
+        raise FileExistsError(
+            "Choose a new genotype output; frozen evidence must not be overwritten"
+        )
     url = f"https://api.mavedb.org/api/v1/score-sets/{urn}/variants/data?start=0&limit=3000&namespaces=mavedb&drop_unused_hgvs_columns=false"
     with urllib.request.urlopen(url, timeout=60) as response:
         columns, rows = genotype_rows(response)
@@ -150,11 +153,11 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--genotypes", action="store_true")
+    parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
+    args.output.mkdir(parents=True, exist_ok=False)
     root = Path("data/cache/sod1/source")
     metadata = project_metadata((root / "abundance-metadata.json").read_text())
-    Path("benchmarks/sod1/evidence/abundance-metadata.json").write_text(
-        json.dumps(metadata, indent=2) + "\n"
-    )
+    (args.output / "abundance-metadata.json").write_text(json.dumps(metadata, indent=2) + "\n")
     if args.genotypes:
-        print(acquire_genotypes(metadata["urn"], "benchmarks/sod1/evidence/genotypes.json"))
+        print(acquire_genotypes(metadata["urn"], args.output / "genotypes.json"))

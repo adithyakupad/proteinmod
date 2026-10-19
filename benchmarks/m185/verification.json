@@ -1,0 +1,29 @@
+{
+  "python": "3.12.15",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "biopython": "1.88",
+    "torch": "2.14.1",
+    "pytest": "9.1.1",
+    "ruff": "0.17.0"
+  },
+  "profile_tool": "pyhmmer0.12.3 isolated /tmp/proteinmod-sod1-deps, not new project dependency",
+  "geometry_genotype_similarity_replay_seconds": 2.097959332866594,
+  "scientific_replay": "Exact complete geometry/genotype/similarity JSON; all276 HMM comparison records exact on repeat (runtime metadata excluded)",
+  "device": "CPU",
+  "randomness": "none in qualification; no new model training or random-number consumption",
+  "historical_guards": "PASS original frozen-source/readability/M184 checks; all878 parent files must remain exact",
+  "pytest": "241 passed,1 existing joblib core-count warning,15.03s",
+  "ruff": "PASS",
+  "format": "PASS271files",
+  "CI": "Will be verified at draft PR exact head; existing workflows unchanged",
+  "limits": "No fresh independent confirmation, no full historical model retraining, initial aggregate-only metadata blinding deviation retained",
+  "pip_check": "PASS",
+  "wheel_build": "PASS SHA25678a00dfe99fda8da7e6cd19e191e559e07190990dffc9c1204ea06fa0f247347",
+  "parent_CI": "6/6 SUCCESS at exactc748ef6924a102ef424dac3212b8b61fad993697",
+  "initial_full_test_result": "237 passed,3 legacy history-count failures caused by unnumbered new benchmark/config paths; fixed by moving only new files to m185, leaving legacy guards/tests unchanged",
+  "clean_source": "To be checked from committed branch without research caches; same installed dependencies, not independent data regeneration"
+}

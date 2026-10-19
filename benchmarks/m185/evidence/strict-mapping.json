@@ -1,0 +1,82 @@
+{
+  "coordinate_sha256": "378722d38fea43812a185c331bb35e2fa2fd456d4e74d93bc7ab945698088145",
+  "reference": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+  "reference_sha256": "c56903dca972575883387736442f68a5206604d08604ddeb8dbc2e3f25a9f76d",
+  "chains": [
+    {
+      "chain": "A",
+      "audit": {
+        "accepted": false,
+        "errors": [
+          "C-alpha reference coverage below threshold"
+        ],
+        "chains": [
+          {
+            "chain": "A",
+            "identity": 1.0,
+            "aligned_coverage": 0.9935064935064936,
+            "score": 453.0,
+            "sequence_source": "mmCIF polymer scheme + atom_site label/auth mapping"
+          },
+          {
+            "chain": "F",
+            "identity": 1.0,
+            "aligned_coverage": 0.9935064935064936,
+            "score": 453.0,
+            "sequence_source": "mmCIF polymer scheme + atom_site label/auth mapping"
+          }
+        ],
+        "selected_chain": "A",
+        "reference_length": 154,
+        "coordinate_coverage": 0.9935064935064936,
+        "aligned_coverage": 0.9935064935064936,
+        "aligned_identity": 1.0,
+        "exact_compatible_positions": 153,
+        "differences": [],
+        "missing_positions": [
+          1
+        ],
+        "alignment": "target            0 MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTS\n                  0 -|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery             0 -ATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTS\n\ntarget           60 AGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVV\n                 60 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery            59 AGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVV\n\ntarget          120 HEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ 154\n                120 |||||||||||||||||||||||||||||||||| 154\nquery           119 HEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ 153\n",
+        "construct_insertions": []
+      }
+    },
+    {
+      "chain": "F",
+      "audit": {
+        "accepted": false,
+        "errors": [
+          "C-alpha reference coverage below threshold"
+        ],
+        "chains": [
+          {
+            "chain": "A",
+            "identity": 1.0,
+            "aligned_coverage": 0.9935064935064936,
+            "score": 453.0,
+            "sequence_source": "mmCIF polymer scheme + atom_site label/auth mapping"
+          },
+          {
+            "chain": "F",
+            "identity": 1.0,
+            "aligned_coverage": 0.9935064935064936,
+            "score": 453.0,
+            "sequence_source": "mmCIF polymer scheme + atom_site label/auth mapping"
+          }
+        ],
+        "selected_chain": "F",
+        "reference_length": 154,
+        "coordinate_coverage": 0.9935064935064936,
+        "aligned_coverage": 0.9935064935064936,
+        "aligned_identity": 1.0,
+        "exact_compatible_positions": 153,
+        "differences": [],
+        "missing_positions": [
+          1
+        ],
+        "alignment": "target            0 MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTS\n                  0 -|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery             0 -ATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTS\n\ntarget           60 AGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVV\n                 60 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery            59 AGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVV\n\ntarget          120 HEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ 154\n                120 |||||||||||||||||||||||||||||||||| 154\nquery           119 HEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ 153\n",
+        "construct_insertions": []
+      }
+    }
+  ],
+  "variant_outcomes_accessed": false
+}

@@ -54,3 +54,14 @@ def test_genotype_export_validates_width_and_preserves_identifiers():
     assert rows == [{"accession": "a", "hgvs_pro": "p.Ala2Val"}]
     with pytest.raises(ValueError, match="width"):
         module.genotype_rows(io.BytesIO(b"accession,hgvs_pro\na,p.Ala2Val,extra\n"))
+
+
+def test_existing_genotype_evidence_is_not_overwritten(tmp_path, monkeypatch):
+    target = tmp_path / "genotypes.json"
+    target.write_text("frozen")
+    monkeypatch.setattr(
+        module.urllib.request, "urlopen", lambda *args, **kwargs: pytest.fail("No request allowed")
+    )
+    with pytest.raises(FileExistsError):
+        module.acquire_genotypes("urn:mavedb:00001217-a-3", target)
+    assert target.read_text() == "frozen"

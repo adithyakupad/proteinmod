@@ -1,0 +1,124 @@
+{
+  "data/cache/sod1/source/PF00080-metadata.json": {
+    "sha256": "f74f164f112592072201ca5aa4d81dce4e38018d7e557313cc746c0952d0870c",
+    "bytes": 211891,
+    "quarantine_notice": "Source metadata/coordinates/profile; no phenotype data table acquired.",
+    "primary_url": "https://www.ebi.ac.uk/interpro/wwwapi/entry/pfam/PF00080/"
+  },
+  "data/cache/sod1/source/author-code.Rmd": {
+    "sha256": "796949f1f0168ad4b33f3eda271e6f6b1305db704e2885c432553a334191408a",
+    "bytes": 127674,
+    "quarantine_notice": "Article/body and author source are used only through the recorded methods/column projections.",
+    "primary_url": "https://raw.githubusercontent.com/axakova/SOD1_Manuscript/08e8e4c759eb738f56b7c58c20517b937bf487cb/20250625_SOD1_Manuscript_Figures.Rmd"
+  },
+  "data/cache/sod1/source/PF00080.hmm.gz": {
+    "sha256": "dce7c3ff0fc6e471212e3ac1cacd4711349edae88a1c058c253c12eaeafead87",
+    "bytes": 16037,
+    "quarantine_notice": "Source metadata/coordinates/profile; no phenotype data table acquired.",
+    "primary_url": "https://www.ebi.ac.uk/interpro/wwwapi/entry/pfam/PF00080/?annotation=hmm"
+  },
+  "data/cache/sod1/source/mavedb-columns.py": {
+    "sha256": "f9eb6100566790bfe8178c41c31605763abf5eed3fc771778e91ffa086526366",
+    "bytes": 10493,
+    "quarantine_notice": "Source metadata/coordinates/profile; no phenotype data table acquired.",
+    "primary_url": "https://raw.githubusercontent.com/VariantEffect/mavedb-api/894b63294bdb29e0ac65ac7e99854df658ab2138/src/mavedb/lib/csv/columns.py"
+  },
+  "data/cache/sod1/source/mavedb-server-tree.json": {
+    "sha256": "b76ec16740940038622fb39803aed6a9f9a367ea9de9606d6c18f3088b97a2ab",
+    "bytes": 259532,
+    "quarantine_notice": "Source metadata/coordinates/profile; no phenotype data table acquired.",
+    "primary_url": "https://api.github.com/repos/VariantEffect/mavedb-api/git/trees/894b63294bdb29e0ac65ac7e99854df658ab2138?recursive=1"
+  },
+  "data/cache/sod1/source/P00441.fasta": {
+    "sha256": "e37efca5bb96a42335302bbb3771bc4f9fa79197bd323a20d80f54d128656c43",
+    "bytes": 250,
+    "quarantine_notice": "Source metadata/coordinates/profile; no phenotype data table acquired.",
+    "primary_url": "https://rest.uniprot.org/uniprotkb/P00441.fasta"
+  },
+  "data/cache/sod1/source/PF00080.hmm": {
+    "sha256": "0da04d63e48c5d52ae1e4b219b234d138a0a4528c4129d09f9c72eef51e02cbb",
+    "bytes": 63057,
+    "quarantine_notice": "Source metadata/coordinates/profile; no phenotype data table acquired.",
+    "primary_url": "https://www.ebi.ac.uk/interpro/wwwapi/entry/pfam/PF00080/?annotation=hmm",
+    "transformation": "gzip decompression of separately hash-pinned served bytes"
+  },
+  "data/cache/sod1/source/author-tree.json": {
+    "sha256": "524a349cbd718dc7b7d934067d69cabc49851623337e4ceefb82ffe37b8a3ac6",
+    "bytes": 9219,
+    "quarantine_notice": "Source metadata/coordinates/profile; no phenotype data table acquired.",
+    "primary_url": "https://api.github.com/repos/axakova/SOD1_Manuscript/git/trees/08e8e4c759eb738f56b7c58c20517b937bf487cb?recursive=1"
+  },
+  "data/cache/sod1/source/abundance-metadata.json": {
+    "sha256": "837d67d04ffb4da30d7f00fe2d0d2371923b8bf2c3fe01e302dd58e2c07a8149",
+    "bytes": 10592,
+    "quarantine_notice": "Whole API metadata includes outcome-derived distribution; do not decode, display or commit. Use whitelisted projection.",
+    "primary_url": "https://api.mavedb.org/api/v1/score-sets/urn:mavedb:00001217-a-3"
+  },
+  "data/cache/sod1/source/abundance-csv-schema.json": {
+    "sha256": "dd88c5736838153124c7afab2ae35555fd6f4622e0505f1a30b4bfd724fb96bd",
+    "bytes": 1240,
+    "quarantine_notice": "Source metadata/coordinates/profile; no phenotype data table acquired.",
+    "primary_url": "https://api.mavedb.org/api/v1/score-sets/urn:mavedb:00001217-a-3/csv-namespaces"
+  },
+  "data/cache/sod1/source/mavedb-namespaces.py": {
+    "sha256": "b4e9f2d34c9e4a119dc6ead2a36399d2d58d131dc9e2f9818610c66fbde5b525",
+    "bytes": 9529,
+    "quarantine_notice": "Source metadata/coordinates/profile; no phenotype data table acquired.",
+    "primary_url": "https://raw.githubusercontent.com/VariantEffect/mavedb-api/894b63294bdb29e0ac65ac7e99854df658ab2138/src/mavedb/lib/csv/namespaces.py"
+  },
+  "data/cache/sod1/source/DataS2-headers.txt": {
+    "sha256": "04613929262bb3686bf2a66694500294e54b057b453702132f5c7e9591ea38db",
+    "bytes": 898,
+    "quarantine_notice": "Source metadata/coordinates/profile; no phenotype data table acquired.",
+    "primary_url": "https://ars.els-cdn.com/content/image/1-s2.0-S0002929725003519-mmc2.xlsx",
+    "request": "HEAD only; no workbook body"
+  },
+  "data/cache/sod1/source/mavedb-router.py": {
+    "sha256": "96e6e2839141558cf9ab100e7001c5f1d66b91e639664eb026e1b62184a40111",
+    "bytes": 139240,
+    "quarantine_notice": "Source metadata/coordinates/profile; no phenotype data table acquired.",
+    "primary_url": "https://raw.githubusercontent.com/VariantEffect/mavedb-api/894b63294bdb29e0ac65ac7e99854df658ab2138/src/mavedb/routers/score_sets.py"
+  },
+  "data/cache/sod1/source/mavedb-openapi.json": {
+    "sha256": "6d36c5473ee85f8d1d9762499c0c2b9c53c8cf48e5b8e7104c537bb93add378e",
+    "bytes": 449635,
+    "quarantine_notice": "Source metadata/coordinates/profile; no phenotype data table acquired.",
+    "primary_url": "https://api.mavedb.org/openapi.json"
+  },
+  "data/cache/sod1/source/2C9V.cif": {
+    "sha256": "378722d38fea43812a185c331bb35e2fa2fd456d4e74d93bc7ab945698088145",
+    "bytes": 652927,
+    "quarantine_notice": "Source metadata/coordinates/profile; no phenotype data table acquired.",
+    "primary_url": "https://files.rcsb.org/download/2C9V.cif"
+  },
+  "data/cache/sod1/source/author-repository.json": {
+    "sha256": "cbf90b2c5f20d405b72f368078cc2e040daf2d1a0a96fce0f2a1529035d9f2a8",
+    "bytes": 5412,
+    "quarantine_notice": "Source metadata/coordinates/profile; no phenotype data table acquired.",
+    "primary_url": "https://api.github.com/repos/axakova/SOD1_Manuscript"
+  },
+  "data/cache/sod1/source/2C9V-entity1.json": {
+    "sha256": "600ea1ab710c1a5051e69b569375fea3336955828257f03ca3c2a125e8a2d197",
+    "bytes": 119005,
+    "quarantine_notice": "Source metadata/coordinates/profile; no phenotype data table acquired.",
+    "primary_url": "https://data.rcsb.org/rest/v1/core/polymer_entity/2C9V/1"
+  },
+  "data/cache/sod1/source/mavedb-score-set.py": {
+    "sha256": "7c32b17e1f971d90ea2fc36b385f614a9622f1a908d43b2c9de71f937aaa1a85",
+    "bytes": 5569,
+    "quarantine_notice": "Source metadata/coordinates/profile; no phenotype data table acquired.",
+    "primary_url": "https://raw.githubusercontent.com/VariantEffect/mavedb-api/894b63294bdb29e0ac65ac7e99854df658ab2138/src/mavedb/lib/csv/score_set.py"
+  },
+  "data/cache/sod1/source/article.xml": {
+    "sha256": "c05b1a6b030ba15e6ad9f63f9ac00340f6d289a2a833d11ac4a008218b2096fb",
+    "bytes": 267141,
+    "quarantine_notice": "Article/body and author source are used only through the recorded methods/column projections.",
+    "primary_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12696502/fullTextXML"
+  },
+  "data/cache/sod1/source/mavedb-specs.py": {
+    "sha256": "abdc0efd8af995f72966d4ab6214071c752364117958c0585aabdf7c8f6f8563",
+    "bytes": 10610,
+    "quarantine_notice": "Source metadata/coordinates/profile; no phenotype data table acquired.",
+    "primary_url": "https://raw.githubusercontent.com/VariantEffect/mavedb-api/894b63294bdb29e0ac65ac7e99854df658ab2138/src/mavedb/lib/csv/specs.py"
+  }
+}
