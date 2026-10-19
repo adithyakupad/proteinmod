@@ -1,0 +1,40 @@
+{
+  "baseline_head": "8a07008ba427cb9cd82c84b5508a1326b562afa0",
+  "initial_branch": "codex/m18-3-masked-structural-admission",
+  "initial_working_tree": "clean",
+  "pytest_baseline": "215 passed in9.36s",
+  "pytest_final": "219 passed, 1 existing joblib physical-core detection warning in26.77s",
+  "stage1_tests": "92 passed in22.43s",
+  "stage2_tests": "34 passed in6.94s",
+  "new_contract_tests": 4,
+  "ruff_check": "PASS",
+  "ruff_format": "PASS;249 files including code blocks",
+  "wheel_build": {
+    "status": "PASS",
+    "command": "python -m pip wheel --no-deps --no-build-isolation --wheel-dir /tmp/proteinmod-style-wheel .",
+    "sha256": "0970bcecbea682e3afd2c0f095985a344de39ec11b103ff9294b6811937a216b",
+    "initial_build_frontend": "python -m build unavailable; project build/ namespace is not PyPA build. Existing setuptools/pip backend succeeded without installing dependencies."
+  },
+  "pip_check": "PASS",
+  "historical_guards": "Original M16/M16.1/M17/M18/M18.1/M18.2/M18.3 source and artifact guards pass in frozen Git checkout; current protected-file/AST checks pass separately.",
+  "protected_baseline_files_exact": 792,
+  "original_python_files": 158,
+  "changed_source_files": 28,
+  "declared_functions": 46,
+  "new_python_files": 3,
+  "new_dependencies": [],
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.14.1",
+    "transformers": "4.57.6",
+    "biopython": "1.88",
+    "pytest": "9.1.1",
+    "ruff": "0.17.0",
+    "setuptools": "84.0.0"
+  },
+  "coverage_and_types": "Not run: no configured checker/coverage threshold and pyright/pytest-cov unavailable.",
+  "scientific_scope": "CPU local replay using existing caches; no M18 outcomes, final confirmation, new architectures, full M0-M15 retraining, independent replication or release.",
+  "CI": "Exact final commit conclusions will be linked in draft PR after push."
+}

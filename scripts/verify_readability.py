@@ -51,6 +51,7 @@ def inline_temporaries(node, names):
         ]
         assert len(matches) == 1, name
         assignment = matches[0]
+        assert isinstance(node.body[-1], ast.Return) and node.body[-2] is assignment, name
         uses = [
             item
             for item in ast.walk(node)

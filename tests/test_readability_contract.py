@@ -34,3 +34,11 @@ def test_intermediates_inline_to_original_expression():
     repeated = ast.parse("def f(x):\n    value = a(x)\n    return value + value\n").body[0]
     with pytest.raises(AssertionError):
         readability.inline_temporaries(repeated, ["value"])
+
+
+def test_temporaries_cannot_move_across_other_operations():
+    interleaved = ast.parse(
+        "def f(x):\n    value = a(x)\n    side_effect()\n    return value\n"
+    ).body[0]
+    with pytest.raises(AssertionError):
+        readability.inline_temporaries(interleaved, ["value"])

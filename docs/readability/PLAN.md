@@ -6,8 +6,8 @@ Baseline: `8a07008ba427cb9cd82c84b5508a1326b562afa0`, branch
 all 821 tracked files before edits, including 158 Python files, all configurations,
 reports, checkpoint schemas, source hashes and benchmark evidence.
 
-Baseline validation: 215 tests passed in 9.36 seconds; Ruff check and format passed.
-M16, M16.1, M17, M18, M18.1, M18.2 and M18.3 offline guards passed. Existing M17
+Baseline validation: 215 tests passed in 9. 36 seconds; Ruff check and format passed.
+M16, M16. 1, M17, M18, M18. 1, M18. 2 and M18. 3 offline guards passed. Existing M17
 records contain 1,096 fits / 34,304 predictions; no external outcomes accessed.
 
 Stages:

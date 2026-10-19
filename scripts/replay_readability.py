@@ -18,7 +18,7 @@ from pathlib import Path
 import numpy as np
 import torch
 
-from proteinmod.data import write_json
+from proteinmod.data import checksum, write_json
 from proteinmod.hybrid import CrossAttention
 from proteinmod.lora_model import AdaptedESM, tensor_digest
 from proteinmod.mechanism import degree_null
@@ -171,16 +171,69 @@ def m17(output):
     module.replay(runs, cases, grouped)
 
 
+def m15_fold(output):
+    from proteinmod.lora_experiments import predict, prepare
+
+    config = json.loads(Path("configs/m15.json").read_text())
+    encoder, rows, _, groups, _, partitions = prepare(config)
+    sample = next(row for row in rows if row["protein_id"] == "BBC1")
+    index = next(i for i, row in enumerate(rows) if row["id"] == sample["id"])
+    fold, roles = next(
+        (fold, roles)
+        for protocol, fold, roles in partitions
+        if protocol == "G3" and index in roles["test"]
+    )
+    record = next(
+        record
+        for record in json.loads(Path("benchmarks/m15/metrics.json").read_text())
+        if record["protocol"] == "G3"
+        and record["fold"] == fold
+        and record["fraction"] == 1
+        and record["seed"] == 0
+        and record["model"] == "lora"
+    )
+    assert checksum(record["state_path"]) == record["state_sha256"]
+    model = AdaptedESM(encoder.model, config["lora"], config["training"]["hidden"], "lora", 0)
+    model.load_selected(torch.load(record["state_path"], weights_only=True, map_location="cpu"))
+    prediction = predict(model, groups, roles["test"], config["training"]["batch_size"])
+    with Path("benchmarks/m15/predictions.csv").open() as handle:
+        stored = [
+            row
+            for row in csv.DictReader(handle)
+            if row["protocol"] == "G3"
+            and row["fold"] == fold
+            and float(row["fraction"]) == 1
+            and row["seed"] == "0"
+            and row["model"] == "lora"
+        ]
+    assert [row["id"] for row in stored] == [rows[i]["id"] for i in roles["test"]]
+    error = np.abs(prediction - np.array([float(row["prediction"]) for row in stored]))
+    write_json(
+        output / "m15.json",
+        {
+            "fold": fold,
+            "predictions": len(prediction),
+            "prediction_array": digest_array(prediction),
+            "maximum_historical_error": float(error.max()),
+            "checkpoint_sha256": record["state_sha256"],
+            "original_batch_size": config["training"]["batch_size"],
+        },
+    )
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--m17", action="store_true")
+    parser.add_argument("--m15-fold", action="store_true")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=False)
     started = time.perf_counter()
     kernels(args.output)
     if args.m17:
         m17(args.output)
+    if args.m15_fold:
+        m15_fold(args.output)
     write_json(
         args.output / "execution.json",
         {
