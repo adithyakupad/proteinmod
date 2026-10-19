@@ -42,10 +42,10 @@ def ddg_target(value, unit, convention, task_type="ddg"):
 
 def mutant_sequence(reference, tokens):
     normalized = parse_mutation_set(tokens, reference)
-    result = list(reference)
+    mutant_residues = list(reference)
     for token in normalized:
-        result[int(token[1:-1]) - 1] = token[-1]
-    sequence = "".join(result)
+        mutant_residues[int(token[1:-1]) - 1] = token[-1]
+    sequence = "".join(mutant_residues)
     if set(mutations(reference, sequence)) != set(normalized):
         raise ValueError("Mutation/reference correspondence failed")
     return sequence
@@ -74,10 +74,12 @@ def merge_measurements(rows):
         group = list(unique.values())
         row = dict(group[0])
         row["duplicate_records_removed"] = duplicates
-        values = [r["target"] for r in group if r["target_mask"]]
+        values = [
+            measurement_row["target"] for measurement_row in group if measurement_row["target_mask"]
+        ]
         row["target"] = float(np.mean(values)) if values else None
         row["target_mask"] = bool(values)
-        row["source_ids"] = [r["id"] for r in group]
+        row["source_ids"] = [measurement_row["id"] for measurement_row in group]
         row["measurement_count"] = len(values)
         row["measurement_sd_kcal_mol"] = float(np.std(values)) if len(values) > 1 else None
         result.append(row)

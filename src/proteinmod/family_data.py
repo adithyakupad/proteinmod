@@ -94,8 +94,8 @@ def folds(rows, families):
         len(set(families)) < 4
         or len(families) != len(set(families))
         or any(
-            len({r["family"] for r in rows if r["protein_id"] == pid}) != 1
-            for pid in {r["protein_id"] for r in rows}
+            len({r["family"] for r in rows if r["protein_id"] == protein_id}) != 1
+            for protein_id in {r["protein_id"] for r in rows}
         )
         or any(len(v) < 2 for v in by_family.values())
         or set(by_family) != {r["family"] for r in rows}
@@ -111,14 +111,14 @@ def folds(rows, families):
             },
         )
     ]
-    for j, family in enumerate(families):
-        for k, pid in enumerate(by_family[family]):
-            validation = by_family[families[(j + 1) % len(families)]][
-                k % len(by_family[families[(j + 1) % len(families)]])
+    for family_index, family in enumerate(families):
+        for protein_index, protein_id in enumerate(by_family[family]):
+            validation = by_family[families[(family_index + 1) % len(families)]][
+                protein_index % len(by_family[families[(family_index + 1) % len(families)]])
             ]
-            role = lambda r, pid=pid, validation=validation: (
+            role = lambda r, protein_id=protein_id, validation=validation: (
                 "test"
-                if r["protein_id"] == pid
+                if r["protein_id"] == protein_id
                 else "validation"
                 if r["protein_id"] == validation
                 else "train"
@@ -126,14 +126,16 @@ def folds(rows, families):
             output.append(
                 (
                     "G2",
-                    pid,
+                    protein_id,
                     {
-                        s: np.array([i for i, r in enumerate(rows) if role(r) == s], dtype=int)
-                        for s in ("train", "validation", "test")
+                        partition_name: np.array(
+                            [i for i, r in enumerate(rows) if role(r) == partition_name], dtype=int
+                        )
+                        for partition_name in ("train", "validation", "test")
                     },
                 )
             )
-        validation_family = families[(j + 1) % len(families)]
+        validation_family = families[(family_index + 1) % len(families)]
         role = lambda r, family=family, validation_family=validation_family: (
             "test"
             if r["family"] == family
@@ -146,8 +148,10 @@ def folds(rows, families):
                 "G3",
                 family,
                 {
-                    s: np.array([i for i, r in enumerate(rows) if role(r) == s], dtype=int)
-                    for s in ("train", "validation", "test")
+                    partition_name: np.array(
+                        [i for i, r in enumerate(rows) if role(r) == partition_name], dtype=int
+                    )
+                    for partition_name in ("train", "validation", "test")
                 },
             )
         )

@@ -1,0 +1,166 @@
+[
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/data.py",
+    "function": "mutations",
+    "renames": {
+      "old": "reference_residue",
+      "new": "mutant_residue"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/admission_masks.py",
+    "function": "gfp_mutations",
+    "renames": {
+      "old": "reference_residue",
+      "new": "mutant_residue",
+      "index": "source_index"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/admission_masks.py",
+    "function": "compatible_positions",
+    "renames": {
+      "r": "residue"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/structure_mapping.py",
+    "function": "map_reference",
+    "renames": {
+      "polymer": "polymer_index",
+      "record": "residue_record",
+      "quality": "alignment_quality",
+      "allowed": "allowed_mismatches",
+      "span": "polymer_range",
+      "pairs": "aligned_positions"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/structure_features.py",
+    "function": "contact_graph",
+    "renames": {
+      "a": "left_record",
+      "b": "right_record",
+      "i": "left_index",
+      "j": "right_index"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/structural_graph.py",
+    "function": "load_graph",
+    "renames": {
+      "r": "residue",
+      "e": "contact",
+      "a": "source_index",
+      "b": "target_index",
+      "d": "distance",
+      "k": "descriptor_name",
+      "attrs": "edge_attributes",
+      "desc": "descriptors"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/structural_graph.py",
+    "function": "variant_inputs",
+    "renames": {
+      "i": "node_index",
+      "old": "reference_index",
+      "new": "mutant_index",
+      "n": "node_count",
+      "coords": "site_coordinates"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/edge_chemistry.py",
+    "function": "annotate",
+    "renames": {
+      "i": "source_index",
+      "j": "target_index"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/edge_chemistry.py",
+    "function": "controlled_graph",
+    "renames": {
+      "perm": "permutation"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/mutation_interactions.py",
+    "function": "geometry",
+    "renames": {
+      "out": "features",
+      "i": "left_index",
+      "j": "right_index",
+      "adj": "adjacency",
+      "paths": "path_lengths"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/mutation_interactions.py",
+    "function": "pair_features",
+    "renames": {
+      "geom": "pair_geometry",
+      "bio": "shuffled_alleles",
+      "l": "left_token",
+      "r": "right_token",
+      "x": "left_vector",
+      "y": "right_vector",
+      "seq": "sequence_features",
+      "geo": "geometry_features",
+      "h": "left_context",
+      "k": "right_context"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/family_data.py",
+    "function": "folds",
+    "renames": {
+      "pid": "protein_id",
+      "j": "family_index",
+      "k": "protein_index",
+      "s": "partition_name"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/stability_data.py",
+    "function": "mutant_sequence",
+    "renames": {
+      "result": "mutant_residues"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/stability_data.py",
+    "function": "merge_measurements",
+    "renames": {
+      "r": "measurement_row"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/masked_structure.py",
+    "function": "extract",
+    "renames": {
+      "r": "residue",
+      "e": "contact",
+      "a": "source_index",
+      "b": "target_index",
+      "k": "descriptor_name",
+      "desc": "descriptors"
+    }
+  }
+]

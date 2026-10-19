@@ -15,13 +15,13 @@ def gfp_mutations(line, reference):
         match = re.fullmatch(r"S([A-Z*])(\d+)([A-Z*])", text)
         if match is None:
             raise ValueError("Unsupported primary genotype codec")
-        old, index, new = match.groups()
-        position = int(index) + 1
-        if position > len(reference) or reference[position - 1] != old:
+        reference_residue, source_index, mutant_residue = match.groups()
+        position = int(source_index) + 1
+        if position > len(reference) or reference[position - 1] != reference_residue:
             raise ValueError("Primary WT/reference mismatch")
-        if new not in AMINO_ACIDS:
+        if mutant_residue not in AMINO_ACIDS:
             noncanonical = True
-        tokens.append(f"{old}{position}{new}")
+        tokens.append(f"{reference_residue}{position}{mutant_residue}")
     if noncanonical:
         return None, "noncanonical_substitution"
     return tuple(parse_mutation_set(tokens, reference)), None
@@ -30,10 +30,10 @@ def gfp_mutations(line, reference):
 def compatible_positions(residues):
     """A proposed common mask is not an accepted full-reference M2 graph."""
     return [
-        r["reference_position"]
-        for r in residues
-        if r["status"] == "mapped"
-        and r["has_ca"]
-        and not r["noncanonical"]
-        and r["reference_aa"] == r["structure_aa"]
+        residue["reference_position"]
+        for residue in residues
+        if residue["status"] == "mapped"
+        and residue["has_ca"]
+        and not residue["noncanonical"]
+        and residue["reference_aa"] == residue["structure_aa"]
     ]

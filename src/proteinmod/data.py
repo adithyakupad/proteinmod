@@ -64,9 +64,9 @@ def mutations(reference, sequence):
     if len(reference) != len(sequence):
         raise ValueError("Reference/variant length mismatch; substitutions only")
     return tuple(
-        f"{old}{position}{new}"
-        for position, (old, new) in enumerate(zip(reference, sequence), 1)
-        if old != new
+        f"{reference_residue}{position}{mutant_residue}"
+        for position, (reference_residue, mutant_residue) in enumerate(zip(reference, sequence), 1)
+        if reference_residue != mutant_residue
     )
 
 

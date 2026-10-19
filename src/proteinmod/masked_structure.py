@@ -46,33 +46,48 @@ def extract(path, reference, eligible, expected_sha256, chain="A"):
     )
     # Preserve full indices: contact_graph uses row indices as reference positions.
     masked_rows = [
-        {**r, "has_ca": r["has_ca"] and r["reference_position"] in eligible} for r in rows
+        {**residue, "has_ca": residue["has_ca"] and residue["reference_position"] in eligible}
+        for residue in rows
     ]
     edges, breaks = contact_graph(masked_rows, features, 8.0)
-    for r in features:
-        if r["reference_position"] not in eligible:
-            r.update(
+    for residue in features:
+        if residue["reference_position"] not in eligible:
+            residue.update(
                 ca=None, asa_a2=None, rsa=None, contact_degree=None, nonlocal_contact_degree=None
             )
     nodes = [features[p - 1] for p in eligible]
     lookup = {p: i for i, p in enumerate(eligible)}
     pairs, attrs = [], []
-    for e in edges:
-        a, b = lookup[e["source"]], lookup[e["target"]]
-        pairs.extend([(a, b), (b, a)])
-        attrs.extend([[e["distance_a"] / 8, e["spatial"], e["backbone"]]] * 2)
+    for contact in edges:
+        source_index, target_index = lookup[contact["source"]], lookup[contact["target"]]
+        pairs.extend([(source_index, target_index), (target_index, source_index)])
+        attrs.extend([[contact["distance_a"] / 8, contact["spatial"], contact["backbone"]]] * 2)
     edge_index = np.asarray(pairs, dtype=np.int64).T.reshape(2, -1)
     edge_features = np.asarray(attrs, dtype=np.float32).reshape(-1, 3)
     adjacency = np.zeros((len(nodes), len(nodes)), dtype=np.float32)
     adjacency[edge_index[0], edge_index[1]] = 1
     degree = adjacency.sum(axis=1)
-    values = np.array([[r[k] if r[k] is not None else 0 for k in DESCRIPTORS] for r in nodes])
-    missing = np.array([[r[k] is None for k in DESCRIPTORS] for r in nodes])
-    desc = np.c_[values / [1, 20, 20, 100, 100], missing].astype(np.float32)
-    identity = IDENTITY[[AA[r["reference_aa"]] for r in nodes]]
-    properties = PROPERTIES[[AA[r["reference_aa"]] for r in nodes]]
+    values = np.array(
+        [
+            [
+                residue[descriptor_name] if residue[descriptor_name] is not None else 0
+                for descriptor_name in DESCRIPTORS
+            ]
+            for residue in nodes
+        ]
+    )
+    missing = np.array(
+        [[residue[descriptor_name] is None for descriptor_name in DESCRIPTORS] for residue in nodes]
+    )
+    descriptors = np.c_[values / [1, 20, 20, 100, 100], missing].astype(np.float32)
+    identity = IDENTITY[[AA[residue["reference_aa"]] for residue in nodes]]
+    properties = PROPERTIES[[AA[residue["reference_aa"]] for residue in nodes]]
     atoms = [
-        {a.name: a.coord.astype(float) for a in rows[p - 1]["record"]["residue"]} for p in eligible
+        {
+            source_index.name: source_index.coord.astype(float)
+            for source_index in rows[p - 1]["record"]["residue"]
+        }
+        for p in eligible
     ]
     audit = {
         "scope": VERSION,
@@ -89,7 +104,8 @@ def extract(path, reference, eligible, expected_sha256, chain="A"):
         "connected_components": int(connected_components(csr_matrix(adjacency), directed=False)[0]),
         "isolated_nodes": int(sum(degree == 0)),
         "descriptor_missing_nodes": {
-            k: int(missing[:, i].sum()) for i, k in enumerate(DESCRIPTORS)
+            descriptor_name: int(missing[:, i].sum())
+            for i, descriptor_name in enumerate(DESCRIPTORS)
         },
         "confidence_semantics": "experimental_bfactor",
         "ASA": sasa,
@@ -101,11 +117,11 @@ def extract(path, reference, eligible, expected_sha256, chain="A"):
         "nodes": nodes,
         "lookup": lookup,
         "residues": features,
-        "static": np.c_[identity, properties, desc],
-        "neighborhood": (adjacency / np.maximum(degree[:, None], 1)) @ np.c_[identity, desc],
+        "static": np.c_[identity, properties, descriptors],
+        "neighborhood": (adjacency / np.maximum(degree[:, None], 1)) @ np.c_[identity, descriptors],
         "edge_index": edge_index,
         "edge_features": edge_features,
-        "xyz": np.array([r["ca"] for r in nodes]),
+        "xyz": np.array([residue["ca"] for residue in nodes]),
         "audit": audit,
     }
     return graph, atoms, parsed, rows

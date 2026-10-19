@@ -87,12 +87,12 @@ def annotate(graph, atoms):
     distances = graph["edge_features"][:, 0] * 8
     rbf = np.exp(-(((distances[:, None] - np.linspace(0, 12, 16)) / 0.8) ** 2))
     chemistry = []
-    for i, j in graph["edge_index"].T:
-        left, right = graph["nodes"][i], graph["nodes"][j]
+    for source_index, target_index in graph["edge_index"].T:
+        left, right = graph["nodes"][source_index], graph["nodes"][target_index]
         chemistry.append(
             interaction(
-                atoms[i],
-                atoms[j],
+                atoms[source_index],
+                atoms[target_index],
                 left["reference_aa"],
                 right["reference_aa"],
                 abs(left["polymer_position"] - right["polymer_position"]) == 1,
@@ -143,12 +143,12 @@ def controlled_graph(graph, features, mode, seed):
         keys = sorted({tuple(sorted(e)) for e in edges.T})
         lookup = {key: i for i, key in enumerate(keys)}
         chemistry = {tuple(sorted(e)): v[19:].copy() for e, v in zip(edges.T, values, strict=True)}
-        perm = np.random.default_rng(seed).permutation(len(keys))
+        permutation = np.random.default_rng(seed).permutation(len(keys))
         for i, edge in enumerate(edges.T):
-            values[i, 19:] = chemistry[keys[perm[lookup[tuple(sorted(edge))]]]]
+            values[i, 19:] = chemistry[keys[permutation[lookup[tuple(sorted(edge))]]]]
     elif mode == "edge_shuffled_topology":
-        perm = np.random.default_rng(seed).permutation(len(graph["nodes"]))
-        edges = perm[edges]
+        permutation = np.random.default_rng(seed).permutation(len(graph["nodes"]))
+        edges = permutation[edges]
     elif mode not in ("edge_full", "zero_message"):
         raise ValueError("Unknown edge control")
     return edges, values
