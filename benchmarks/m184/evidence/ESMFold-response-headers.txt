@@ -1,0 +1,12 @@
+HTTP/2 200 
+date: Mon, 19 Oct 2026 05:25:17 GMT
+content-type: chemical/x-pdb
+content-length: 154104
+x-amzn-requestid: 7a576790-6fc7-4651-a65c-07850f58889a
+content-disposition: attachment; filename="result.pdb"
+access-control-allow-origin: *
+access-control-allow-headers: Content-Type
+x-amz-apigw-id: Fed1sErdoAMEezw=
+access-control-allow-methods: OPTIONS,POST
+x-amzn-trace-id: Root=1-6ad5a9bd-7f4d4e6925e749ab3ad99b63;Parent=619c15a757f3c150;Sampled=0;Lineage=1:13a671bf:0
+

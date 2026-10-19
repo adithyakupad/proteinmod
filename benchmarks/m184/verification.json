@@ -1,0 +1,24 @@
+{
+  "python": "3.12.15",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.14.1",
+    "transformers": "4.57.6",
+    "biopython": "1.88",
+    "pytest": "9.1.1",
+    "ruff": "0.17.0"
+  },
+  "pytest": "225 passed,1 existing joblib core-count warning,13.71s",
+  "ruff": "PASS",
+  "format": "PASS257files",
+  "pip_check": "PASS",
+  "wheel": "PASS SHA256e493a0b3787ea7b70b4c80273f9e168e6e91127ba2a021be16a15957968a9268",
+  "historical_guards": "PASS current833parent-file bytes plus original frozen8a07008 source guards, restricted readability AST checks",
+  "confirmation": "BLOCKED no external target values decoded",
+  "performance": "CPU tiny GNN300forwards median0.0128798s; process peakRSS393363456bytes. No source/model implementation changed; timing noise is not scientific performance improvement.",
+  "cold_checkout": "Will be checked at committed source; cache-free guard and offline tests only. No claim of independent model/data regeneration.",
+  "CI": "See exact draft-PR head checks; all prior checks retained plus M184 guard"
+}

@@ -1,0 +1,21 @@
+{
+  "archive": {
+    "id": "6f449871-75c5-45f4-a2fc-ebc61dabdec6",
+    "key": "combinatorialcores_github_repo.zip",
+    "size": 19726227,
+    "checksum": "md5:6f0626ae43afba3b03087593197dc3a3",
+    "links": {
+      "self": "https://zenodo.org/api/records/16266645/files/combinatorialcores_github_repo.zip/content"
+    }
+  },
+  "member": "combinatorialcores/README.md",
+  "sha256": "7b074223d6964e9d4e7f44f7485c4fc124257fb378d30cc3ae5b46b241733be5",
+  "member_CRC_verified": true,
+  "acquisition": {
+    "url": "https://zenodo.org/api/records/16266645/files/combinatorialcores_github_repo.zip/content",
+    "etag": null,
+    "archive_bytes": 19726227,
+    "downloaded_bytes": 12299
+  },
+  "whole_archive_MD5_verified": false
+}

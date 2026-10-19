@@ -1,0 +1,7 @@
+{
+  "seconds": 12.474832666805014,
+  "python": "3.12.15",
+  "torch": "2.14.1",
+  "numpy": "2.5.4",
+  "data_outcomes": "Only synthetic targets and optional previously published M17 development labels; no M18 external outcomes."
+}

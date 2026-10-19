@@ -1,0 +1,16 @@
+{
+  "gnn_300_forward_seconds": [
+    0.012854834087193012,
+    0.012879791902378201,
+    0.012878041947260499,
+    0.012990417191758752,
+    0.012917957967147231,
+    0.012971250107511878,
+    0.012776207877323031
+  ],
+  "median_seconds": 0.012879791902378201,
+  "process_peak_rss_bytes": 393363456,
+  "device": "CPU",
+  "threads": 1,
+  "scope": "Tiny GNN timing; process peak includes imports/fixtures. Not a production training memory benchmark."
+}

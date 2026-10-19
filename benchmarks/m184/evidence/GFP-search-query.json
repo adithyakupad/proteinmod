@@ -1,0 +1,16 @@
+{
+  "query": {
+    "type": "terminal",
+    "service": "sequence",
+    "parameters": {
+      "evalue_cutoff": 0.1,
+      "identity_cutoff": 0.95,
+      "sequence_type": "protein",
+      "value": "SKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTLSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK"
+    }
+  },
+  "request_options": {
+    "return_all_hits": true
+  },
+  "return_type": "polymer_entity"
+}
