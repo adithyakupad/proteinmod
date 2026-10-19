@@ -144,61 +144,72 @@ def neural_function(h, scalar, rows, roles, settings, seed):
     torch.use_deterministic_algorithms(True)
     torch.manual_seed(seed)
     train, validation = roles["train"], roles["validation"]
-    ix = np.unique(np.concatenate(list(roles.values())))
+    evaluation_indices = np.unique(np.concatenate(list(roles.values())))
     if (
         min(settings[k] for k in ("cpu_threads", "hidden", "max_epochs", "patience", "batch_size"))
         < 1
     ):
         raise ValueError("Positive head training settings required")
     scaler = StandardScaler().fit(h[train])
-    x = torch.tensor(scaler.transform(h), dtype=torch.float32)
-    s = torch.tensor(scalar, dtype=torch.float32)
+    representation_inputs = torch.tensor(scaler.transform(h), dtype=torch.float32)
+    stability_inputs = torch.tensor(scalar, dtype=torch.float32)
     target = fit_targets(rows, train)
-    mean, scale = float(target[train].mean()), max(float(target[train].std()), 1e-8)
-    y = torch.tensor((target - mean) / scale, dtype=torch.float32)
+    target_mean, target_scale = float(target[train].mean()), max(float(target[train].std()), 1e-8)
+    scaled_targets = torch.tensor((target - target_mean) / target_scale, dtype=torch.float32)
     model = ConditionedHead(h.shape[1], settings["hidden"])
     optimizer = torch.optim.AdamW(
         model.parameters(), lr=settings["learning_rate"], weight_decay=settings["weight_decay"]
     )
-    rng = np.random.default_rng(seed)
+    random_generator = np.random.default_rng(seed)
 
     def predict(indices):
         model.eval()
         with torch.no_grad():
-            return model(x[indices], s[indices]).double().numpy() * scale + mean
+            return (
+                model(representation_inputs[indices], stability_inputs[indices]).double().numpy()
+                * target_scale
+                + target_mean
+            )
 
-    best, stale, trace = None, 0, []
+    best, stale_epochs, trace = None, 0, []
     for epoch in range(1, settings["max_epochs"] + 1):
         model.train()
-        order = rng.permutation(train)
+        order = random_generator.permutation(train)
         for start in range(0, len(order), settings["batch_size"]):
             batch = order[start : start + settings["batch_size"]]
             optimizer.zero_grad(set_to_none=True)
-            loss = (model(x[batch], s[batch]) - y[batch]).square().mean()
+            loss = (
+                (
+                    model(representation_inputs[batch], stability_inputs[batch])
+                    - scaled_targets[batch]
+                )
+                .square()
+                .mean()
+            )
             if not torch.isfinite(loss):
                 raise ValueError("Nonfinite function loss")
             loss.backward()
             nn.utils.clip_grad_norm_(model.parameters(), 5, error_if_nonfinite=True)
             optimizer.step()
-        score = macro_score(rows, validation, predict(validation))
-        trace.append({"epoch": epoch, "validation_macro_spearman": score})
-        if best is None or score > best[0]:
-            best = score, epoch, copy.deepcopy(model.state_dict())
-            stale = 0
+        validation_score = macro_score(rows, validation, predict(validation))
+        trace.append({"epoch": epoch, "validation_macro_spearman": validation_score})
+        if best is None or validation_score > best[0]:
+            best = validation_score, epoch, copy.deepcopy(model.state_dict())
+            stale_epochs = 0
         else:
-            stale += 1
-        if stale >= settings["patience"]:
+            stale_epochs += 1
+        if stale_epochs >= settings["patience"]:
             break
     model.load_state_dict(best[2])
     prediction = np.full(len(rows), np.nan)
-    prediction[ix] = predict(ix)
+    prediction[evaluation_indices] = predict(evaluation_indices)
     state = {
         "schema": "m8-conditioned-head-v1",
         "head": best[2],
         "representation_mean": scaler.mean_.tolist(),
         "representation_scale": scaler.scale_.tolist(),
-        "target_mean": mean,
-        "target_scale": scale,
+        "target_mean": target_mean,
+        "target_scale": target_scale,
         "function_unit": "training-assay percentile",
         "stability_input_unit": "kcal/mol",
         "stability_positive_means": "destabilization",

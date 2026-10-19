@@ -27,3 +27,20 @@ state_dict keys, parameter construction, seeds and operations are unchanged.
 
 Targeted kernel tests:34 passed in6.94s (including LoRA gradient/checkpoint tests).
 Three new style-contract tests pass. Ruff and restricted AST checks PASS.
+
+## 3 — experiment state, scaling, calibration and controls
+Thirteen files /17 functions (two previously touched): GNN, LoRA, cross-attention,
+multitask, confidence and conditioning training loops; M17 balanced roles/degree
+nulls/probe fitting; assay ridge and uncertainty calibration. Local target tensors,
+scales, batch indices, validation scores and stale epochs are explicit. Public
+arguments retain their original names, including historically terse names, because
+keyword-call compatibility outweighs style. No loop, RNG call, optimizer step,
+selection rule, scaler fit or statistical operation is reordered.
+
+Full suite:218 passed, one pre-existing joblib core-detection warning,26.17s.
+Ruff PASS. Restricted AST check PASS for28 source files /46 functions. Same-process
+operation summaries across separate baseline/current executions are exactly equal
+for graph/attention outputs, LoRA gradients including WT path, selected adapter
+state, graph training trace/predictions/weights, degree nulls and final Torch RNG.
+All1,096 historical M17 states replay against34,304 stored predictions with
+maximum absolute error0.0 for both baseline and refactor. No external labels read.

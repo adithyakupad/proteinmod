@@ -107,90 +107,107 @@ def fit(groups, rows, roles, settings, seed, mode):
     )
     topologies, dynamics, positions = {}, {}, {}
     for p, group in groups.items():
-        g = group["graph"]
+        protein_graph = group["graph"]
         topologies[p] = (
-            torch.as_tensor(g["static"]),
-            torch.as_tensor(g["edge_index"][0]),
-            torch.as_tensor(g["edge_index"][1]),
-            torch.as_tensor(g["edge_features"]),
+            torch.as_tensor(protein_graph["static"]),
+            torch.as_tensor(protein_graph["edge_index"][0]),
+            torch.as_tensor(protein_graph["edge_index"][1]),
+            torch.as_tensor(protein_graph["edge_features"]),
             torch.as_tensor(
-                np.maximum(np.bincount(g["edge_index"][1], minlength=len(g["static"])), 1),
+                np.maximum(
+                    np.bincount(
+                        protein_graph["edge_index"][1], minlength=len(protein_graph["static"])
+                    ),
+                    1,
+                ),
                 dtype=torch.float32,
             )[None, :, None],
         )
         dynamics[p] = torch.as_tensor(group["dynamic"])
-        positions[p] = torch.tensor([r["reference_position"] - 1 for r in g["nodes"]])
-    y = torch.tensor(fit_targets(rows, roles["train"]), dtype=torch.float32)
+        positions[p] = torch.tensor([r["reference_position"] - 1 for r in protein_graph["nodes"]])
+    targets = torch.tensor(fit_targets(rows, roles["train"]), dtype=torch.float32)
     optimizer = torch.optim.AdamW(
         model.parameters(), lr=settings["learning_rate"], weight_decay=settings["weight_decay"]
     )
-    rng = np.random.default_rng(seed)
+    random_generator = np.random.default_rng(seed)
 
     def batches(indices, shuffle=False):
         result = []
         for p, group in groups.items():
-            local = np.flatnonzero(np.isin(group["indices"], indices))
+            local_indices = np.flatnonzero(np.isin(group["indices"], indices))
             if shuffle:
-                local = rng.permutation(local)
+                local_indices = random_generator.permutation(local_indices)
             result.extend(
-                (p, local[j : j + settings["batch_size"]])
-                for j in range(0, len(local), settings["batch_size"])
+                (p, local_indices[j : j + settings["batch_size"]])
+                for j in range(0, len(local_indices), settings["batch_size"])
             )
         if shuffle:
-            rng.shuffle(result)
+            random_generator.shuffle(result)
         return result
 
-    def call(p, local, diagnostic=False):
+    def call(p, local_indices, diagnostic=False):
         group = groups[p]
         residues = torch.from_numpy(
-            np.array(group["residues"][group["token_indices"][local]], copy=True)
+            np.array(group["residues"][group["token_indices"][local_indices]], copy=True)
         )
         return model(
-            residues, dynamics[p][local], topologies[p], positions[p], diagnostics=diagnostic
+            residues,
+            dynamics[p][local_indices],
+            topologies[p],
+            positions[p],
+            diagnostics=diagnostic,
         )
 
     def predict(indices):
         model.eval()
         found = {}
         with torch.no_grad():
-            for p, local in batches(indices):
-                found.update(zip(groups[p]["indices"][local], call(p, local).numpy(), strict=True))
+            for p, local_indices in batches(indices):
+                found.update(
+                    zip(
+                        groups[p]["indices"][local_indices],
+                        call(p, local_indices).numpy(),
+                        strict=True,
+                    )
+                )
         return np.array([found[i] for i in indices], dtype=float)
 
-    best, stale, trace = None, 0, []
+    best, stale_epochs, trace = None, 0, []
     for epoch in range(1, settings["max_epochs"] + 1):
         model.train()
-        total = 0.0
-        for p, local in batches(roles["train"], True):
+        total_loss = 0.0
+        for p, local_indices in batches(roles["train"], True):
             optimizer.zero_grad(set_to_none=True)
-            loss = ((call(p, local) - y[groups[p]["indices"][local]]) ** 2).mean()
+            loss = (
+                (call(p, local_indices) - targets[groups[p]["indices"][local_indices]]) ** 2
+            ).mean()
             if not torch.isfinite(loss):
                 raise ValueError("Nonfinite hybrid training loss")
             loss.backward()
             torch.nn.utils.clip_grad_norm_(model.parameters(), 5)
             optimizer.step()
-            total += loss.item() * len(local)
-        score = macro_score(rows, roles["validation"], predict(roles["validation"]))
+            total_loss += loss.item() * len(local_indices)
+        validation_score = macro_score(rows, roles["validation"], predict(roles["validation"]))
         trace.append(
             {
                 "epoch": epoch,
-                "train_mse_online": total / len(roles["train"]),
-                "validation_macro_spearman": score,
+                "train_mse_online": total_loss / len(roles["train"]),
+                "validation_macro_spearman": validation_score,
             }
         )
-        if best is None or score > best[0]:
-            best = score, epoch, copy.deepcopy(model.state_dict())
-            stale = 0
+        if best is None or validation_score > best[0]:
+            best = validation_score, epoch, copy.deepcopy(model.state_dict())
+            stale_epochs = 0
         else:
-            stale += 1
-        if stale >= settings["patience"]:
+            stale_epochs += 1
+        if stale_epochs >= settings["patience"]:
             break
     model.load_state_dict(best[2])
     predictions = predict(roles["test"])
     diagnostics = {}
     with torch.no_grad():
-        for p, local in batches(roles["test"]):
-            _, weights = call(p, local, True)
+        for p, local_indices in batches(roles["test"]):
+            _, weights = call(p, local_indices, True)
             for direction, w in weights.items():
                 valid = w.sum(-1) > 0
                 if valid.any():

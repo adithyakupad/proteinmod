@@ -17,46 +17,50 @@ def ordered(rows, indices, seed):
 
 def balanced(rows, indices, fraction, seed):
     result = []
-    for pid in sorted({rows[i]["protein_id"] for i in indices}):
-        ix = [i for i in indices if rows[i]["protein_id"] == pid]
-        result.extend(ordered(rows, ix, seed)[: math.ceil(len(ix) * fraction)])
+    for protein_id in sorted({rows[i]["protein_id"] for i in indices}):
+        protein_indices = [i for i in indices if rows[i]["protein_id"] == protein_id]
+        result.extend(
+            ordered(rows, protein_indices, seed)[: math.ceil(len(protein_indices) * fraction)]
+        )
     return np.array(sorted(result), dtype=int)
 
 
 def study_roles(rows, families):
     proteins = {f: sorted({r["protein_id"] for r in rows if r["family"] == f}) for f in families}
 
-    def indices(pids, partition):
+    def indices(protein_ids, partition):
         return np.array(
             [
                 i
                 for i, r in enumerate(rows)
-                if r["protein_id"] in pids and r["partition"] == partition
+                if r["protein_id"] in protein_ids and r["partition"] == partition
             ],
             dtype=int,
         )
 
     result = []
-    for j, family in enumerate(families):
-        val_family = families[(j + 1) % len(families)]
-        other = [f for f in families if f not in (family, val_family)]
-        train_pids = functools.reduce(operator.iadd, [proteins[f] for f in other], [])
+    for family_index, family in enumerate(families):
+        validation_family = families[(family_index + 1) % len(families)]
+        other = [f for f in families if f not in (family, validation_family)]
+        train_proteins = functools.reduce(operator.iadd, [proteins[f] for f in other], [])
         base = {
-            "train": indices(train_pids, "train"),
-            "validation": indices(proteins[val_family], "validation"),
+            "train": indices(train_proteins, "train"),
+            "validation": indices(proteins[validation_family], "validation"),
             "test": indices(proteins[family], "test"),
         }
         result.append(("H1", family, "G3", base))
-        for pid in proteins[family]:
-            partner = next(p for p in proteins[family] if p != pid)
-            for protocol, replacement in (("G1", pid), ("G2", partner), ("G3", None)):
-                pp = train_pids if replacement is None else [replacement] + train_pids[1:]
-                rr = {
-                    "train": balanced(rows, indices(pp, "train"), 0.5, 0),
+        for protein_id in proteins[family]:
+            partner = next(p for p in proteins[family] if p != protein_id)
+            for protocol, replacement in (("G1", protein_id), ("G2", partner), ("G3", None)):
+                replacement_proteins = (
+                    train_proteins if replacement is None else [replacement] + train_proteins[1:]
+                )
+                replacement_roles = {
+                    "train": balanced(rows, indices(replacement_proteins, "train"), 0.5, 0),
                     "validation": base["validation"],
-                    "test": indices([pid], "test"),
+                    "test": indices([protein_id], "test"),
                 }
-                result.append(("H2", pid, protocol, rr))
+                result.append(("H2", protein_id, protocol, replacement_roles))
         for family2 in other:
             result.append(
                 (
@@ -94,9 +98,9 @@ def degree_null(edges, seed):
     swaps = 0
     for _ in range(10 * len(keys)):
         pool = sorted(keys)
-        ix = rng.choice(len(pool), 2, replace=False)
-        a, b = pool[ix[0]]
-        c, d = pool[ix[1]]
+        selected_edges = rng.choice(len(pool), 2, replace=False)
+        a, b = pool[selected_edges[0]]
+        c, d = pool[selected_edges[1]]
         if len({a, b, c, d}) != 4:
             continue
         if rng.integers(2):
@@ -104,8 +108,8 @@ def degree_null(edges, seed):
         left, right = tuple(sorted((a, c))), tuple(sorted((b, d)))
         if left in keys or right in keys:
             continue
-        keys.remove(pool[ix[0]])
-        keys.remove(pool[ix[1]])
+        keys.remove(pool[selected_edges[0]])
+        keys.remove(pool[selected_edges[1]])
         keys.update((left, right))
         swaps += 1
     result = np.array(

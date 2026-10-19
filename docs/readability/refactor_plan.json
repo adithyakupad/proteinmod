@@ -310,5 +310,214 @@
       "rank_features",
       "projected_features"
     ]
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/mechanism.py",
+    "function": "balanced",
+    "renames": {
+      "pid": "protein_id",
+      "ix": "protein_indices"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/mechanism.py",
+    "function": "study_roles",
+    "renames": {
+      "pids": "protein_ids",
+      "train_pids": "train_proteins",
+      "val_family": "validation_family",
+      "pid": "protein_id",
+      "pp": "replacement_proteins",
+      "rr": "replacement_roles",
+      "j": "family_index"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/mechanism.py",
+    "function": "degree_null",
+    "renames": {
+      "ix": "selected_edges"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/mechanism_experiments.py",
+    "function": "probe_fit",
+    "renames": {
+      "x": "features"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/structural_gnn.py",
+    "function": "train_gnn",
+    "renames": {
+      "x": "mutation_inputs",
+      "y": "scaled_targets",
+      "mean": "target_mean",
+      "scale": "target_scale",
+      "ix": "batch_indices",
+      "rng": "random_generator",
+      "score": "validation_rmse",
+      "stale": "stale_epochs",
+      "total": "total_loss"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/assay_models.py",
+    "function": "ridge",
+    "renames": {
+      "val": "validation",
+      "z": "scaled_features",
+      "y": "targets",
+      "score": "validation_score"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/assay_models.py",
+    "function": "group_ridge",
+    "renames": {
+      "pred": "group_predictions",
+      "ix": "group_indices"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/uncertainty_calibration.py",
+    "function": "calibration_state",
+    "renames": {
+      "cal": "calibration_indices",
+      "val": "validation_indices",
+      "q": "quantile"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/uncertainty_calibration.py",
+    "function": "prediction_intervals",
+    "renames": {
+      "ix": "group_indices",
+      "q": "quantile",
+      "j": "group_offset",
+      "i": "row_index"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/uncertainty_models.py",
+    "function": "ridge_ensemble",
+    "renames": {
+      "y": "targets"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/lora_experiments.py",
+    "function": "fit",
+    "renames": {
+      "y": "targets",
+      "rng": "random_generator",
+      "stale": "stale_epochs",
+      "total": "total_loss",
+      "ix": "batch_indices",
+      "g": "protein_group",
+      "local": "local_indices",
+      "pid": "protein_id"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/hybrid_experiments.py",
+    "function": "fit",
+    "renames": {
+      "y": "targets",
+      "rng": "random_generator",
+      "stale": "stale_epochs",
+      "total": "total_loss",
+      "g": "protein_graph",
+      "local": "local_indices",
+      "score": "validation_score"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/multitask_experiments.py",
+    "function": "fit",
+    "renames": {
+      "y": "task_targets",
+      "rng": "task_generators",
+      "g": "protein_graph",
+      "local": "local_indices",
+      "pid": "protein_id",
+      "pred": "task_predictions",
+      "j": "task_index",
+      "total": "total_loss"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/multiprotein_experiments.py",
+    "function": "graph_fit",
+    "renames": {
+      "y": "target_tensor",
+      "rng": "random_generator",
+      "g": "protein_group",
+      "stale": "stale_epochs",
+      "local": "local_indices",
+      "score": "validation_score"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/edge_experiments.py",
+    "function": "fit",
+    "renames": {
+      "y": "scaled_targets",
+      "mean": "target_mean",
+      "scale": "target_scale",
+      "rng": "random_generator",
+      "stale": "stale_epochs",
+      "total": "total_loss",
+      "ix": "batch_indices",
+      "pred": "batch_predictions",
+      "local": "local_indices"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/reliability_experiments.py",
+    "function": "fit",
+    "renames": {
+      "x": "representations",
+      "q": "quality_tensor",
+      "y": "targets",
+      "rng": "random_generator",
+      "stale": "stale_epochs",
+      "total": "total_loss",
+      "ix": "batch_indices",
+      "pred": "validation_predictions",
+      "score": "validation_score"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/stability_conditioning.py",
+    "function": "neural_function",
+    "renames": {
+      "x": "representation_inputs",
+      "s": "stability_inputs",
+      "y": "scaled_targets",
+      "mean": "target_mean",
+      "scale": "target_scale",
+      "rng": "random_generator",
+      "stale": "stale_epochs",
+      "ix": "evaluation_indices",
+      "score": "validation_score"
+    }
   }
 ]
