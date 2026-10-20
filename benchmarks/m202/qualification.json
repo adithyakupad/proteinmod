@@ -1,0 +1,40 @@
+{
+  "decision": "FAIL_ADMISSION_STOP",
+  "endpoint_construct": "PASS: candidate operational assay-local abundance-fitness rank target; not GEO raw equivalence or thermodynamic stability",
+  "direction": "higher is favorable, primary Methods log output/input enrichment relative to reference",
+  "remaining_blocker": "Exact bridge from DiMSum outputs to deposited processed fitness table and any additional export eligibility/censoring is not established in bounded primary methods and pinned source pass. Replicate aggregation/export not traced.",
+  "not_a_requirement": "Bytewise reconstruction of normalization is not required for a new rank endpoint; unknown export selection remains material.",
+  "known_upstream_filters": [
+    "library-design barcode membership",
+    "minimum base Q20",
+    "fitnessMinInputCountAll=30 in all biological replicates"
+  ],
+  "unknown": "Additional export/replicate-combination and missing/censor handling; no absence claim from unlocated code",
+  "prospective_missing_label_policy_if_later_admitted": {
+    "select": "genotype-only fixed IDs before any labels",
+    "missing_or_nonfinite": "matched exclusion for every model, no replacement; disclose denominator; family with undefined rho retained as inconclusive",
+    "censored": "do not impute or invent bounds; require defined censor semantics before admission",
+    "no_filter_on": [
+      "fitness magnitude",
+      "sigma",
+      "counts",
+      "WT/STOP/indel flags",
+      "replicate agreement",
+      "score-derived flags"
+    ]
+  },
+  "sigma": "OMITTED entirely from inputs, weights, evaluation, calibration and claims; no future use authorized",
+  "M18_gate_change": "NONE executed. Proposed new endpoint would replace exact GEO raw-column requirement with licensed deposited assay-local fitness; final admission still fails.",
+  "SOD1": "Owner conditional prospective consideration accepted in M201; aggregate-metadata deviation preserved; no pristine-blinding claim",
+  "historical_thresholds": "Unchanged original M17 H1-H5, applicable 0.02 rho and >=3/4 directions; M19 strongest historical baseline and failures retained",
+  "manifest_issued": false,
+  "execution_command_issued": false,
+  "outcomes_accessed": false,
+  "distributions_accessed": false,
+  "source_selection_flag_values_accessed": false,
+  "models_fit": 0,
+  "predictions": 0,
+  "emails": 0,
+  "tags": 0,
+  "next_candidate": "Haddox et al HIV Env, eLife34420 CC-BY-4.0 primary article/supplement record; requires separate exact-member/genotype/family/structure qualification, not admitted"
+}

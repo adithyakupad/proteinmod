@@ -1,0 +1,472 @@
+# Configure Arial as the default font in all figures
+
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+
+
+arial_font_path = '/PATH/TO/ARIAL/FONT/arial.ttf'
+
+fm.fontManager.addfont(arial_font_path)
+
+plt.rcParams['font.family'] = 'Arial'
+
+path = 'PATH/TO/ZENODO/FILES/FOLDER'
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+coefs_1storder = pd.read_csv(path+'FigS5/FYN_ddGs_scaled_from_additivetrait_order1.txt',
+                       sep='\t', index_col=0)
+coefs_2ndorder = pd.read_csv(path+'FigS5/FYN_ddGs_scaled_from_additivetrait_order2.txt',
+                       sep='\t', index_col=0)
+coefs_2ndorder_sprsreg = pd.read_csv(path+'FigS5/FYN_ddGs_scaled_from_additivetrait_order2_sparse_regularized.txt',
+                       sep='\t', index_col=0)
+
+secondorderterms_2ndorder = pd.read_csv(path+'FigS5/FYN_mochiorder2_secondorderterms_scaled_w_iv_values.txt',
+                       sep='\t', index_col=0)
+
+secondorderterms_2ndorder_sprsreg = pd.read_csv(path+'FigS5/FYN_mochiorder2_sparse_regularized_secondorderterms_scaled_w_iv_values.txt',
+                       sep='\t', index_col=0)
+
+print("Biophysical model\n(1st order)")
+plt.rcParams['font.family'] = 'Arial'
+fig,ax=plt.subplots(figsize=(1.2,1.2))
+sns.histplot(coefs_1storder['actual_ddGs'], kde=True, bins=25, alpha=0.1,linewidth=0, color='k',ax=ax)
+ax.spines[['top','right']].set_visible(False)
+#plt.xticks(fontsize=6)
+plt.yticks(fontsize=6)
+ax.set_ylabel('Count', fontsize=7)
+ax.set_xticks(np.arange(-0.5,4,0.5),np.arange(-0.5,4,0.5),fontsize=6, rotation=45)
+ax.set_xlabel(r'Inferred ${ΔΔG_{f}}$ \ kcal mol$^-$$^1$', fontsize=7)
+ax.set_title('1st order terms', fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+
+print("Biophysical model\n(2nd order)")
+plt.rcParams['font.family'] = 'Arial'
+fig,ax=plt.subplots(figsize=(1.2,1.2))
+sns.histplot(coefs_2ndorder['actual_ddGs'], kde=True, bins=25, alpha=0.1,linewidth=0, color='k',ax=ax)
+ax.spines[['top','right']].set_visible(False)
+#plt.xticks(fontsize=6)
+plt.yticks(fontsize=6)
+ax.set_ylabel('Count', fontsize=7)
+ax.set_xticks(np.arange(-0.5,4,0.5),np.arange(-0.5,4,0.5),fontsize=6, rotation=45)
+ax.set_xlabel(r'Inferred ${ΔΔG_{f}}$ \ kcal mol$^-$$^1$', fontsize=7)
+ax.set_title('1st order terms', fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+
+print("Biophysical model\n(2nd order sparse)")
+plt.rcParams['font.family'] = 'Arial'
+fig,ax=plt.subplots(figsize=(1.2,1.2))
+sns.histplot(coefs_2ndorder_sprsreg['actual_ddGs'], kde=True, bins=25, alpha=0.1,linewidth=0, color='k',ax=ax)
+ax.spines[['top','right']].set_visible(False)
+#plt.xticks(fontsize=6)
+plt.yticks(fontsize=6)
+ax.set_ylabel('Count', fontsize=7)
+ax.set_xticks(np.arange(-0.5,4,0.5),np.arange(-0.5,4,0.5),fontsize=6, rotation=45)
+ax.set_xlabel(r'Inferred ${ΔΔG_{f}}$ \ kcal mol$^-$$^1$', fontsize=7)
+ax.set_title('1st order terms', fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+
+print("Biophysical model\n(2nd order)")
+plt.rcParams['font.family'] = 'Arial'
+fig,ax=plt.subplots(figsize=(1.2,1.2))
+sns.histplot(secondorderterms_2ndorder['scaled_ddGs'], kde=True, bins=25, alpha=0.1,linewidth=0, color='k',ax=ax)
+ax.spines[['top','right']].set_visible(False)
+#plt.xticks(fontsize=6)
+plt.yticks(fontsize=6)
+ax.set_ylabel('Count', fontsize=7)
+ax.set_xticks(np.arange(-2,3.1,1),np.arange(-2,3.1,1),fontsize=6, rotation=45)
+ax.set_xlabel(r'Inferred ${ΔΔΔG_{f}}$ \ kcal mol$^-$$^1$', fontsize=7)
+ax.set_title('2nd order terms', fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+
+print("Biophysical model\n(2nd order sparse)")
+plt.rcParams['font.family'] = 'Arial'
+fig,ax=plt.subplots(figsize=(1.2,1.2))
+sns.histplot(secondorderterms_2ndorder_sprsreg['scaled_ddGs'], kde=True, bins=25, alpha=0.1,linewidth=0, color='k',ax=ax)
+ax.spines[['top','right']].set_visible(False)
+#plt.xticks(fontsize=6)
+plt.yticks(fontsize=6)
+ax.set_ylabel('Count', fontsize=7)
+ax.set_xticks(np.arange(-2,3.1,1),np.arange(-2,3.1,1),fontsize=6, rotation=45)
+ax.set_xlabel(r'Inferred ${ΔΔΔG_{f}}$ \ kcal mol$^-$$^1$', fontsize=7)
+ax.set_title('2nd order terms', fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+
+from sklearn.linear_model import LinearRegression
+from scipy.stats import pearsonr
+from sklearn.metrics import mean_squared_error, r2_score
+
+coefs_1storder = coefs_1storder.rename(columns={'actual_ddGs':'ddGs_1storder', 'scaled_std':'std_1storder'})
+coefs_2ndorder = coefs_2ndorder.rename(columns={'actual_ddGs':'ddGs_2ndorder', 'scaled_std':'std_2ndorder'})
+
+vs_model = coefs_1storder.merge(coefs_2ndorder, left_index=True, right_index=True)
+
+vs_model=vs_model.sort_values('ddGs_2ndorder')
+
+x = vs_model[['ddGs_2ndorder']].to_numpy()
+y = vs_model[['ddGs_1storder']].to_numpy()
+
+model = LinearRegression()
+model.fit(x, y)
+
+y_pred = model.predict(x)
+r2 = r2_score(y,y_pred)
+r,p = pearsonr(y.ravel(),y_pred.ravel())
+
+fig, ax=plt.subplots(figsize=(1.5,1.5))
+ax.axline((0, 0), slope=1, linestyle="dashed", color='gray', lw=0.5)
+ax.axhline(0, color='black', linewidth=0.5)
+ax.axvline(0, color='black', linewidth=0.5)
+plt.plot(x, y_pred, color='red', linewidth=1, linestyle='-')
+ax.errorbar(vs_model[['ddGs_2ndorder']].to_numpy().ravel(),vs_model[['ddGs_1storder']].to_numpy().ravel(),vs_model[['std_1storder']].to_numpy().ravel(),vs_model[['std_2ndorder']].to_numpy().ravel(), color='k',linewidth=0,
+           markersize=2,marker='o', capsize=0.5, elinewidth=0.5)
+ax.set_ylabel(r'${ΔΔG_{f}}$ from 1st order model', fontsize=7)
+ax.set_xlabel(r'${ΔΔG_{f}}$ from 2nd order model', fontsize=7)
+ax.spines[['top', 'right']].set_visible(False)
+ax.tick_params(labelsize=6)
+ax.set_xticks(np.arange(0,5,1))
+#ax.set_xticklabels(np.arange(0,4,1))
+plt.title('R = '+str(round(r,2))+ '\np-val = '+'{:0.2e}'.format(p), fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+
+from sklearn.linear_model import LinearRegression
+from scipy.stats import pearsonr
+from sklearn.metrics import mean_squared_error, r2_score
+
+coefs_2ndorder_sprsreg = coefs_2ndorder_sprsreg.rename(columns={'actual_ddGs':'ddGs_2ndorder_sprsreg', 'scaled_std':'std_2ndorder_sprsreg'})
+
+vs_model = coefs_1storder.merge(coefs_2ndorder_sprsreg, left_index=True, right_index=True)
+
+vs_model=vs_model.sort_values('ddGs_2ndorder_sprsreg')
+
+x = vs_model[['ddGs_2ndorder_sprsreg']].to_numpy()
+y = vs_model[['ddGs_1storder']].to_numpy()
+
+model = LinearRegression()
+model.fit(x, y)
+
+y_pred = model.predict(x)
+r2 = r2_score(y,y_pred)
+r,p = pearsonr(y.ravel(),y_pred.ravel())
+
+fig, ax=plt.subplots(figsize=(1.5,1.5))
+ax.axline((0, 0), slope=1, linestyle="dashed", color='gray', lw=0.5)
+ax.axhline(0, color='black', linewidth=0.5)
+ax.axvline(0, color='black', linewidth=0.5)
+plt.plot(x, y_pred, color='red', linewidth=1, linestyle='-')
+ax.errorbar(vs_model[['ddGs_2ndorder_sprsreg']].to_numpy().ravel(),vs_model[['ddGs_1storder']].to_numpy().ravel(),vs_model[['std_1storder']].to_numpy().ravel(),vs_model[['std_2ndorder_sprsreg']].to_numpy().ravel(), color='k',linewidth=0,
+           markersize=2,marker='o', capsize=0.5, elinewidth=0.5)
+ax.set_ylabel(r'${ΔΔG_{f}}$ from 1st order model', fontsize=7)
+ax.set_xlabel(r'${ΔΔG_{f}}$ from 2nd order sparse model', fontsize=7)
+ax.spines[['top', 'right']].set_visible(False)
+ax.tick_params(labelsize=6)
+ax.set_xticks(np.arange(0,5,1))
+#ax.set_xticklabels(np.arange(0,4,1))
+plt.title('R = '+str(round(r,2))+ '\np-val = '+'{:0.2e}'.format(p), fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+
+from sklearn.linear_model import LinearRegression
+from scipy.stats import pearsonr
+from sklearn.metrics import mean_squared_error, r2_score
+
+vs_model = coefs_2ndorder_sprsreg.merge(coefs_2ndorder, left_index=True, right_index=True)
+
+vs_model=vs_model.sort_values('ddGs_2ndorder')
+
+x = vs_model[['ddGs_2ndorder']].to_numpy()
+y = vs_model[['ddGs_2ndorder_sprsreg']].to_numpy()
+
+model = LinearRegression()
+model.fit(x, y)
+
+y_pred = model.predict(x)
+r2 = r2_score(y,y_pred)
+r,p = pearsonr(y.ravel(),y_pred.ravel())
+
+fig, ax=plt.subplots(figsize=(1.5,1.5))
+ax.axline((0, 0), slope=1, linestyle="dashed", color='gray', lw=0.5)
+ax.axhline(0, color='black', linewidth=0.5)
+ax.axvline(0, color='black', linewidth=0.5)
+plt.plot(x, y_pred, color='red', linewidth=1, linestyle='-')
+ax.errorbar(vs_model[['ddGs_2ndorder']].to_numpy().ravel(),vs_model[['ddGs_2ndorder_sprsreg']].to_numpy().ravel(),vs_model[['std_2ndorder_sprsreg']].to_numpy().ravel(),vs_model[['std_2ndorder']].to_numpy().ravel(), color='k',linewidth=0,
+           markersize=2,marker='o', capsize=0.5, elinewidth=0.5)
+ax.set_ylabel(r'${ΔΔG_{f}}$ from 2nd order sparse model', fontsize=7)
+ax.set_xlabel(r'${ΔΔG_{f}}$ from 2nd order model', fontsize=7)
+ax.spines[['top', 'right']].set_visible(False)
+ax.tick_params(labelsize=6)
+ax.set_xticks(np.arange(0,5,1))
+#ax.set_xticklabels(np.arange(0,4,1))
+plt.title('R = '+str(round(r,2))+ '\np-val = '+'{:0.2e}'.format(p), fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+
+from sklearn.linear_model import LinearRegression
+from scipy.stats import pearsonr
+from sklearn.metrics import mean_squared_error, r2_score
+
+secondorderterms_2ndorder = secondorderterms_2ndorder.rename(columns={'scaled_ddGs':'ddGs_2ndorder', 'scaled_ddG_std':'std_2ndorder'})
+secondorderterms_2ndorder_sprsreg = secondorderterms_2ndorder_sprsreg.rename(columns={'scaled_ddGs':'ddGs_2ndorder_sprsreg', 'scaled_ddG_std':'std_2ndorder_sprsreg'})
+
+vs_model = secondorderterms_2ndorder.merge(secondorderterms_2ndorder_sprsreg, left_on='id_ref', right_on='id_ref')
+
+vs_model=vs_model.sort_values('ddGs_2ndorder')
+
+x = vs_model[['ddGs_2ndorder']].to_numpy()
+y = vs_model[['ddGs_2ndorder_sprsreg']].to_numpy()
+
+model = LinearRegression()
+model.fit(x, y)
+
+y_pred = model.predict(x)
+r2 = r2_score(y,y_pred)
+r,p = pearsonr(y.ravel(),y_pred.ravel())
+
+fig, ax=plt.subplots(figsize=(1.5,1.5))
+ax.axline((0, 0), slope=1, linestyle="dashed", color='gray', lw=0.5)
+ax.axhline(0, color='black', linewidth=0.5)
+ax.axvline(0, color='black', linewidth=0.5)
+plt.plot(x, y_pred, color='red', linewidth=1, linestyle='-')
+ax.errorbar(vs_model[['ddGs_2ndorder']].to_numpy().ravel(),vs_model[['ddGs_2ndorder_sprsreg']].to_numpy().ravel(),vs_model[['std_2ndorder_sprsreg']].to_numpy().ravel(),vs_model[['std_2ndorder']].to_numpy().ravel(), color='k',linewidth=0,
+           markersize=2,marker='o', capsize=0.5, elinewidth=0.5)
+ax.set_ylabel(r'${ΔΔΔG_{f}}$ from 2nd order sparse model', fontsize=7)
+ax.set_xlabel(r'${ΔΔΔG_{f}}$ from 2nd order model', fontsize=7)
+ax.spines[['top', 'right']].set_visible(False)
+ax.tick_params(labelsize=6)
+ax.set_xticks(np.arange(-2,3.1,1))
+ax.set_yticks(np.arange(-2,3.1,1))
+#ax.set_xticklabels(np.arange(0,4,1))
+plt.title('R = '+str(round(r,2))+ '\np-val = '+'{:0.2e}'.format(p), fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+coefs_1storder = pd.read_csv(path+'FigS5/CI-2A_ddGs_scaled_from_additivetrait_order1.txt',
+                       sep='\t', index_col=0)
+coefs_2ndorder = pd.read_csv(path+'FigS5/CI-2A_ddGs_scaled_from_additivetrait_order2.txt',
+                       sep='\t', index_col=0)
+coefs_2ndorder_sprsreg = pd.read_csv(path+'FigS5/CI-2A_ddGs_scaled_from_additivetrait_order2_sparse_regularized.txt',
+                       sep='\t', index_col=0)
+
+secondorderterms_2ndorder = pd.read_csv(path+'FigS5/CI-2A_mochiorder2_secondorderterms_scaled_w_iv_values.txt',
+                       sep='\t', index_col=0)
+
+secondorderterms_2ndorder_sprsreg = pd.read_csv(path+'FigS5/CI-2A_mochiorder2_sparse_regularized_secondorderterms_scaled_w_iv_values.txt',
+                       sep='\t', index_col=0)
+
+print("Biophysical model\n(1st order)")
+plt.rcParams['font.family'] = 'Arial'
+fig,ax=plt.subplots(figsize=(1.2,1.2))
+sns.histplot(coefs_1storder['actual_ddGs'], kde=True, bins=25, alpha=0.1,linewidth=0, color='k',ax=ax)
+ax.spines[['top','right']].set_visible(False)
+#plt.xticks(fontsize=6)
+plt.yticks(fontsize=6)
+ax.set_ylabel('Count', fontsize=7)
+ax.set_xticks(np.arange(-0.5,2,0.5),np.arange(-0.5,2,0.5),fontsize=6, rotation=45)
+ax.set_xlabel(r'Inferred ${ΔΔG_{f}}$ \ kcal mol$^-$$^1$', fontsize=7)
+ax.set_title('1st order terms', fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+
+print("Biophysical model\n(2nd order)")
+plt.rcParams['font.family'] = 'Arial'
+fig,ax=plt.subplots(figsize=(1.2,1.2))
+sns.histplot(coefs_2ndorder['actual_ddGs'], kde=True, bins=25, alpha=0.1,linewidth=0, color='k',ax=ax)
+ax.spines[['top','right']].set_visible(False)
+#plt.xticks(fontsize=6)
+plt.yticks(fontsize=6)
+ax.set_ylabel('Count', fontsize=7)
+ax.set_xticks(np.arange(-0.5,2,0.5),np.arange(-0.5,2,0.5),fontsize=6, rotation=45)
+ax.set_xlabel(r'Inferred ${ΔΔG_{f}}$ \ kcal mol$^-$$^1$', fontsize=7)
+ax.set_title('1st order terms', fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+
+print("Biophysical model\n(2nd order sparse)")
+plt.rcParams['font.family'] = 'Arial'
+fig,ax=plt.subplots(figsize=(1.2,1.2))
+sns.histplot(coefs_2ndorder_sprsreg['actual_ddGs'], kde=True, bins=25, alpha=0.1,linewidth=0, color='k',ax=ax)
+ax.spines[['top','right']].set_visible(False)
+#plt.xticks(fontsize=6)
+plt.yticks(fontsize=6)
+ax.set_ylabel('Count', fontsize=7)
+ax.set_xticks(np.arange(-0.5,2,0.5),np.arange(-0.5,2,0.5),fontsize=6, rotation=45)
+ax.set_xlabel(r'Inferred ${ΔΔG_{f}}$ \ kcal mol$^-$$^1$', fontsize=7)
+ax.set_title('1st order terms', fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+
+print("Biophysical model\n(2nd order)")
+plt.rcParams['font.family'] = 'Arial'
+fig,ax=plt.subplots(figsize=(1.2,1.2))
+sns.histplot(secondorderterms_2ndorder['scaled_ddGs'], kde=True, bins=25, alpha=0.1,linewidth=0, color='k',ax=ax)
+ax.spines[['top','right']].set_visible(False)
+#plt.xticks(fontsize=6)
+plt.yticks(fontsize=6)
+ax.set_ylabel('Count', fontsize=7)
+ax.set_xticks(np.arange(-1,1.1,1),np.arange(-1,1.1,1),fontsize=6, rotation=45)
+ax.set_xlabel(r'Inferred ${ΔΔΔG_{f}}$ \ kcal mol$^-$$^1$', fontsize=7)
+ax.set_title('2nd order terms', fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+
+print("Biophysical model\n(2nd order sparse)")
+plt.rcParams['font.family'] = 'Arial'
+fig,ax=plt.subplots(figsize=(1.2,1.2))
+sns.histplot(secondorderterms_2ndorder_sprsreg['scaled_ddGs'], kde=True, bins=25, alpha=0.1,linewidth=0, color='k',ax=ax)
+ax.spines[['top','right']].set_visible(False)
+#plt.xticks(fontsize=6)
+plt.yticks(fontsize=6)
+ax.set_ylabel('Count', fontsize=7)
+ax.set_xticks(np.arange(-1,1.1,1),np.arange(-1,1.1,1),fontsize=6, rotation=45)
+ax.set_xlabel(r'Inferred ${ΔΔΔG_{f}}$ \ kcal mol$^-$$^1$', fontsize=7)
+ax.set_title('2nd order terms', fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+
+from sklearn.linear_model import LinearRegression
+from scipy.stats import pearsonr
+from sklearn.metrics import mean_squared_error, r2_score
+
+coefs_1storder = coefs_1storder.rename(columns={'actual_ddGs':'ddGs_1storder', 'scaled_std':'std_1storder'})
+coefs_2ndorder = coefs_2ndorder.rename(columns={'actual_ddGs':'ddGs_2ndorder', 'scaled_std':'std_2ndorder'})
+
+vs_model = coefs_1storder.merge(coefs_2ndorder, left_index=True, right_index=True)
+
+vs_model=vs_model.sort_values('ddGs_2ndorder')
+
+x = vs_model[['ddGs_2ndorder']].to_numpy()
+y = vs_model[['ddGs_1storder']].to_numpy()
+
+model = LinearRegression()
+model.fit(x, y)
+
+y_pred = model.predict(x)
+r2 = r2_score(y,y_pred)
+r,p = pearsonr(y.ravel(),y_pred.ravel())
+
+fig, ax=plt.subplots(figsize=(1.5,1.5))
+ax.axline((0, 0), slope=1, linestyle="dashed", color='gray', lw=0.5)
+ax.axhline(0, color='black', linewidth=0.5)
+ax.axvline(0, color='black', linewidth=0.5)
+plt.plot(x, y_pred, color='red', linewidth=1, linestyle='-')
+ax.errorbar(vs_model[['ddGs_2ndorder']].to_numpy().ravel(),vs_model[['ddGs_1storder']].to_numpy().ravel(),vs_model[['std_1storder']].to_numpy().ravel(),vs_model[['std_2ndorder']].to_numpy().ravel(), color='k',linewidth=0,
+           markersize=2,marker='o', capsize=0.5, elinewidth=0.5)
+ax.set_ylabel(r'${ΔΔG_{f}}$ from 1st order model', fontsize=7)
+ax.set_xlabel(r'${ΔΔG_{f}}$ from 2nd order model', fontsize=7)
+ax.spines[['top', 'right']].set_visible(False)
+ax.tick_params(labelsize=6)
+ax.set_xticks(np.arange(0,2,0.5))
+ax.set_yticks(np.arange(0,2,0.5))
+#ax.set_xticklabels(np.arange(0,4,1))
+plt.title('R = '+str(round(r,2))+ '\np-val = '+'{:0.2e}'.format(p), fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+
+from sklearn.linear_model import LinearRegression
+from scipy.stats import pearsonr
+from sklearn.metrics import mean_squared_error, r2_score
+
+coefs_2ndorder_sprsreg = coefs_2ndorder_sprsreg.rename(columns={'actual_ddGs':'ddGs_2ndorder_sprsreg', 'scaled_std':'std_2ndorder_sprsreg'})
+
+vs_model = coefs_1storder.merge(coefs_2ndorder_sprsreg, left_index=True, right_index=True)
+
+vs_model=vs_model.sort_values('ddGs_2ndorder_sprsreg')
+
+x = vs_model[['ddGs_2ndorder_sprsreg']].to_numpy()
+y = vs_model[['ddGs_1storder']].to_numpy()
+
+model = LinearRegression()
+model.fit(x, y)
+
+y_pred = model.predict(x)
+r2 = r2_score(y,y_pred)
+r,p = pearsonr(y.ravel(),y_pred.ravel())
+
+fig, ax=plt.subplots(figsize=(1.5,1.5))
+ax.axline((0, 0), slope=1, linestyle="dashed", color='gray', lw=0.5)
+ax.axhline(0, color='black', linewidth=0.5)
+ax.axvline(0, color='black', linewidth=0.5)
+plt.plot(x, y_pred, color='red', linewidth=1, linestyle='-')
+ax.errorbar(vs_model[['ddGs_2ndorder_sprsreg']].to_numpy().ravel(),vs_model[['ddGs_1storder']].to_numpy().ravel(),vs_model[['std_1storder']].to_numpy().ravel(),vs_model[['std_2ndorder_sprsreg']].to_numpy().ravel(), color='k',linewidth=0,
+           markersize=2,marker='o', capsize=0.5, elinewidth=0.5)
+ax.set_ylabel(r'${ΔΔG_{f}}$ from 1st order model', fontsize=7)
+ax.set_xlabel(r'${ΔΔG_{f}}$ from 2nd order sparse model', fontsize=7)
+ax.spines[['top', 'right']].set_visible(False)
+ax.tick_params(labelsize=6)
+ax.set_xticks(np.arange(0,2,0.5))
+ax.set_yticks(np.arange(0,2,0.5))
+#ax.set_xticklabels(np.arange(0,4,1))
+plt.title('R = '+str(round(r,2))+ '\np-val = '+'{:0.2e}'.format(p), fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+
+from sklearn.linear_model import LinearRegression
+from scipy.stats import pearsonr
+from sklearn.metrics import mean_squared_error, r2_score
+
+vs_model = coefs_2ndorder_sprsreg.merge(coefs_2ndorder, left_index=True, right_index=True)
+
+vs_model=vs_model.sort_values('ddGs_2ndorder')
+
+x = vs_model[['ddGs_2ndorder']].to_numpy()
+y = vs_model[['ddGs_2ndorder_sprsreg']].to_numpy()
+
+model = LinearRegression()
+model.fit(x, y)
+
+y_pred = model.predict(x)
+r2 = r2_score(y,y_pred)
+r,p = pearsonr(y.ravel(),y_pred.ravel())
+
+fig, ax=plt.subplots(figsize=(1.5,1.5))
+ax.axline((0, 0), slope=1, linestyle="dashed", color='gray', lw=0.5)
+ax.axhline(0, color='black', linewidth=0.5)
+ax.axvline(0, color='black', linewidth=0.5)
+plt.plot(x, y_pred, color='red', linewidth=1, linestyle='-')
+ax.errorbar(vs_model[['ddGs_2ndorder']].to_numpy().ravel(),vs_model[['ddGs_2ndorder_sprsreg']].to_numpy().ravel(),vs_model[['std_2ndorder_sprsreg']].to_numpy().ravel(),vs_model[['std_2ndorder']].to_numpy().ravel(), color='k',linewidth=0,
+           markersize=2,marker='o', capsize=0.5, elinewidth=0.5)
+ax.set_ylabel(r'${ΔΔG_{f}}$ from 2nd order sparse model', fontsize=7)
+ax.set_xlabel(r'${ΔΔG_{f}}$ from 2nd order model', fontsize=7)
+ax.spines[['top', 'right']].set_visible(False)
+ax.tick_params(labelsize=6)
+ax.set_xticks(np.arange(0,2,0.5))
+ax.set_yticks(np.arange(0,2,0.5))
+#ax.set_xticklabels(np.arange(0,4,1))
+plt.title('R = '+str(round(r,2))+ '\np-val = '+'{:0.2e}'.format(p), fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+
+from sklearn.linear_model import LinearRegression
+from scipy.stats import pearsonr
+from sklearn.metrics import mean_squared_error, r2_score
+
+secondorderterms_2ndorder = secondorderterms_2ndorder.rename(columns={'scaled_ddGs':'ddGs_2ndorder', 'scaled_ddG_std':'std_2ndorder'})
+secondorderterms_2ndorder_sprsreg = secondorderterms_2ndorder_sprsreg.rename(columns={'scaled_ddGs':'ddGs_2ndorder_sprsreg', 'scaled_ddG_std':'std_2ndorder_sprsreg'})
+
+vs_model = secondorderterms_2ndorder.merge(secondorderterms_2ndorder_sprsreg, left_on='id_ref', right_on='id_ref')
+
+vs_model=vs_model.sort_values('ddGs_2ndorder')
+
+x = vs_model[['ddGs_2ndorder']].to_numpy()
+y = vs_model[['ddGs_2ndorder_sprsreg']].to_numpy()
+
+model = LinearRegression()
+model.fit(x, y)
+
+y_pred = model.predict(x)
+r2 = r2_score(y,y_pred)
+r,p = pearsonr(y.ravel(),y_pred.ravel())
+
+fig, ax=plt.subplots(figsize=(1.5,1.5))
+ax.axline((0, 0), slope=1, linestyle="dashed", color='gray', lw=0.5)
+ax.axhline(0, color='black', linewidth=0.5)
+ax.axvline(0, color='black', linewidth=0.5)
+plt.plot(x, y_pred, color='red', linewidth=1, linestyle='-')
+ax.errorbar(vs_model[['ddGs_2ndorder']].to_numpy().ravel(),vs_model[['ddGs_2ndorder_sprsreg']].to_numpy().ravel(),vs_model[['std_2ndorder_sprsreg']].to_numpy().ravel(),vs_model[['std_2ndorder']].to_numpy().ravel(), color='k',linewidth=0,
+           markersize=2,marker='o', capsize=0.5, elinewidth=0.5)
+ax.set_ylabel(r'${ΔΔΔG_{f}}$ from 2nd order sparse model', fontsize=7)
+ax.set_xlabel(r'${ΔΔΔG_{f}}$ from 2nd order model', fontsize=7)
+ax.spines[['top', 'right']].set_visible(False)
+ax.tick_params(labelsize=6)
+ax.set_xticks(np.arange(-0.5,1.5,0.5))
+ax.set_yticks(np.arange(-0.5,1.5,0.5))
+#ax.set_xticklabels(np.arange(0,4,1))
+plt.title('R = '+str(round(r,2))+ '\np-val = '+'{:0.2e}'.format(p), fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'

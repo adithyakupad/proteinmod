@@ -1,0 +1,39 @@
+#!/bin/bash
+#$ -V
+#$ -cwd
+#$ -j y
+#$ -m ae
+#$ -M your@mail.com
+#$ -l virtual_free=40G
+#$ -q long-centos79
+#$ -l h_rt=10:00:00
+#$ -pe smp 1
+#$ -N Cores_DTS
+
+conda activate dimsum
+fastqFileDir="/PATH/TO/FASTQ/FILES/FROM/GEO"
+experimentDesignPath="DiMSUM_experimentDesign_Sparse_cores_DTS.txt"
+barcodeIdentityPath="DiMSUM_Sparse_cores_DTS_variants.txt"
+experimentDesignPairDuplicates=F
+gzipped=T
+cutadapt5First="GCTGCTCTAGAATGGCTAGC;required...AAGCTTGGCGGTGGCG;optional"
+cutadapt5Second="CGCCACCGCCAAGCTT;required...GCTAGCCATTCTAGAGCAGC;optional"
+cutadaptOverlap="1"
+cutadaptErrorRate="0.2"
+outputPath="./"
+projectName="DTS-Coreome_Q20_12"
+wildtypeSequence="AAAACTGAATGGCCAGAATTGGTTGGTAAATCTGTGGAAGAAGCAAAAAAAGTTATCTTGCAAGATAAACCAGAAGCACAATTCATTGTTTTGCCAGTTGGTACTATTGTTACTATGGAATATAGAATTGATAGAATCAGAATCTTTGTCGATAAATTGGATAATGTGGCACAAGTTCCAAGAGTTGGT"
+stopStage=5
+mixedSubstitutions=T
+indels="180,195,201,108,192,189,171"
+numCores=4
+retainItermediateFiles=T
+vsearchMinQual=20
+vsearchMaxee=5
+maxSubstitutions=21
+startStage=5
+vsearchMinovlen=10
+synonymSequencePath="DiMSUM_Sparse_cores_DTS_synonymSequences.txt"
+fitnessMinInputCountAll=30
+DiMSum -i $fastqFileDir -e $experimentDesignPath --vsearchMinQual $vsearchMinQual --retainIntermediateFiles $retainItermediateFiles --vsearchMinovlen $vsearchMinovlen --numCores $numCores --cutadapt5First $cutadapt5First --gzipped $gzipped --cutadapt5Second $cutadapt5Second -a $cutadaptErrorRate -q $vsearchMinQual -o $outputPath -p $projectName -w $wildtypeSequence --stopStage $stopStage --mixedSubstitutions $mixedSubstitutions --maxSubstitutions $maxSubstitutions --startStage $startStage --experimentDesignPairDuplicates $experimentDesignPairDuplicates --cutadaptOverlap $cutadaptOverlap --vsearchMaxee $vsearchMaxee --indels $indels --barcodeIdentityPath $barcodeIdentityPath --synonymSequencePath $synonymSequencePath --fitnessMinInputCountAll $fitnessMinInputCountAll
+

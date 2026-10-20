@@ -1,0 +1,497 @@
+# Configure Arial as the default font in all figures
+
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+
+
+arial_font_path = '/PATH/TO/ARIAL/FONT/arial.ttf'
+
+fm.fontManager.addfont(arial_font_path)
+
+plt.rcParams['font.family'] = 'Arial'
+
+path = 'PATH/TO/ZENODO/FILES/FOLDER'
+
+# Define WT sequences
+
+proteins = {'P0A9X9': 'CspA',
+            'P01053': 'CI-2A',
+            'P06241': 'FYN-SH3'}
+
+P0A9X9 = 'ATGACTGGTATTGTCAAATGGTTTAATGCAGATAAAGGTTTTGGTTTTATCACTCCAGATGATGGTTCTAAAGATGTCTTTGTCCATTTTTCTGCAATTCAAAATGATGGTTATAAATCTTTGGATGAAGGTCAAAAAGTCTCTTTCACTATTGAATCTGGTGCAAAAGGTCCAGCAGCAGGTAATGTCACTTCT'
+P01053 = 'AAAACTGAATGGCCAGAATTGGTTGGTAAATCTGTCGAAGAAGCAAAAAAAGTTATCTTGCAAGATAAACCAGAAGCACAAATCATTGTTTTGCCAGTTGGTACTATTGTTACTATGGAATATAGAATTGATAGAGTCAGATTGTTTGTCGATAAATTGGATAATATCGCACAAGTTCCAAGAGTTGGT'
+P06241 = 'ACGCTTTTCGTTGCATTGTATGATTATGAAGCAAGAACTGAAGATGATTTGTCTTTCCATAAAGGTGAAAAATTCCAAATCTTGAATTCTTCTGAAGGTGATTGGTGGGAAGCAAGATCTTTGACTACTGGTGAAACTGGTTATATCCCATCTAACTATGTCGCGCCTGTG'
+
+prots=[P0A9X9,P01053,P06241]
+
+
+# Load data
+
+import pandas as pd
+
+allvariants = pd.read_csv(path+"Fig2/Sparse_DTS_Cores_fitness_replicates.txt",
+                         sep='\t', lineterminator='\n', low_memory = False)
+
+allvariants = allvariants.sort_values('fitness', ascending = False)
+
+# De-multiplex each protein's variants
+
+ID_dict =  {'MT' : 'P0A9X9',
+           'KT' : 'P01053',
+           'TL' : 'P06241'}
+
+allvariants["Protein"] = pd.Series(dtype="object") 
+for index, row in allvariants.iterrows():
+    try:
+        allvariants.at[index,'Protein']=ID_dict[row.aa_seq[:2]]
+    except KeyError:
+        continue
+
+allvariants = allvariants.loc[allvariants['Protein'].notnull()].copy()
+allvariants
+
+# Find core sequences
+
+cores = {'P0A9X9' : [4,16,25,27,46,48,62],
+        'P01053' : [11,18,27,45,47,49,55],
+        'P06241' : [2,16,18,24,26,48,53]}
+
+allvariants["core"] = pd.Series(dtype="object") 
+for index, row in allvariants.iterrows():
+    core=[]
+    for i in cores[row.Protein]:
+        core.append(row.aa_seq[i])
+    allvariants.at[index,'core'] = ''.join(core)
+
+# Define WT cores
+
+from Bio.Seq import Seq
+
+wt_cores = {}
+for (prot_seq, prot_nam) in zip(prots, proteins.keys()):
+    aa_seq=str(Seq(prot_seq).translate())
+    wt_core=[]
+    for i in cores[prot_nam]:
+        wt_core.append(aa_seq[i])
+    wt_cores[prot_nam]= ''.join(wt_core)
+wt_cores
+
+# Find Hamming distance to WT
+
+allvariants["wt_core"] = pd.Series(dtype="object") 
+for index, row in allvariants.iterrows():
+    wt = wt_cores[row.Protein]
+    allvariants.at[index, 'wt_core']=wt
+    if row.core == wt:
+        allvariants.at[index, 'Nham_aa'] = 0
+    else:
+        allvariants.at[index, 'Nham_aa'] = sum(1 for a,b in zip(wt, row.core) if a!=b)
+allvariants
+
+import numpy as np
+mean_median=allvariants.groupby('Protein')['fitness'].apply(lambda x: np.mean(x) - np.median(x)).to_frame()
+
+# get AA properties
+
+# based on AAindex1, a list of 566 features
+# see feature indices and names here: https://www.genome.jp/aaindex/AAindex/list_of_indices
+
+import pandas as pd
+from protlearn.features import aaindex1
+
+amino_acids = list('ACDEFGHIKLMNPQRSTVWY')
+aaind, inds = aaindex1(amino_acids)#, standardize='zscore')
+DTS_AA_props = pd.DataFrame(data=aaind, columns=inds, index=amino_acids)#.reset_index().rename(columns={'index':'AA'})
+DTS_AA_props
+
+merge = mean_median.copy()
+for key, value in wt_cores.items():
+    corevolume = sum(int(DTS_AA_props.loc[i]['BIGC670101']) for i in value)
+    merge.at[key,'CoreVolume']=corevolume
+
+merge
+
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.linear_model import LinearRegression
+from scipy.stats import pearsonr
+
+merge = merge.sort_values('fitness')
+
+protein_colors = {'P06241': '#A1D359',
+                 'P01053': '#F9AA8F',
+                 'P0A9X9': '#73D8D3'}
+
+g = sns.FacetGrid(data=merge, aspect=2)
+g.map(plt.scatter, 'fitness', 'CoreVolume', s=3, 
+      color=[protein_colors[idx] for idx in merge.index])  # Assign custom colors
+#g.add_legend(bbox_to_anchor=(1.3,0.7), title='', fontsize=6)
+g.fig.set_size_inches(0.7, 0.8)
+g.tick_params(axis='both', which='major', labelsize=6)
+
+x = merge[['fitness']].to_numpy()
+y = merge[['CoreVolume']].to_numpy()
+
+model = LinearRegression()
+model.fit(x, y)
+
+y_pred = model.predict(x)
+r2 = r2_score(y, y_pred)
+r, p = pearsonr(y.ravel(), y_pred.ravel())
+
+plt.plot(x, y_pred, color='Gray', linewidth=1, linestyle='--')
+plt.xlabel('Abundance fitness\nMean-median diff.', fontsize=7)
+plt.ylabel('WT core sidechain\nvolume (Å³)', fontsize=7)
+#plt.ylim(0,1)
+#plt.yticks(np.arange(0,1.1,0.2))
+#plt.annotate('R = '+str(round(r, 2))+'\np-val = '+'{:0.2e}'.format(p),
+#             fontsize=7, annotation_clip=False, xy=(0, 1.1))
+plt.title('R = '+str(round(r, 2))+'\np-val = '+'{:0.2e}'.format(p),
+             fontsize=7)
+
+plt.rcParams['svg.fonttype'] = 'none'
+#plt.savefig('WTCoreVol_vs_mean-median_diff.svg', dpi=300, transparent=True)
+
+
+sidechain_atoms = pd.read_csv(path+'FigS2/amino_acid_heavy_atoms_and_carbons.csv',sep=',',index_col=0)
+sidechain_atoms=sidechain_atoms.drop('Amino Acid',axis=1)
+sidechain_atoms=sidechain_atoms.rename(columns={'Heavy Atoms':'SCHeavyAtoms','Carbons in Sidechain':'SCCarbons'})
+sidechain_atoms.loc[list('FLIMV')]
+
+merge = mean_median.copy()
+for key, value in wt_cores.items():
+    scheavyatoms = sum(int(sidechain_atoms.loc[i]['SCHeavyAtoms']) for i in value)
+    sccarbons = sum(int(sidechain_atoms.loc[i]['SCCarbons']) for i in value)
+    merge.at[key,'SCHeavyAtoms']=scheavyatoms
+    merge.at[key,'SCCarbons']=sccarbons
+
+merge
+
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.linear_model import LinearRegression
+from scipy.stats import pearsonr
+
+merge = merge.sort_values('fitness')
+
+protein_colors = {'P06241': '#A1D359',
+                 'P01053': '#F9AA8F',
+                 'P0A9X9': '#73D8D3'}
+
+g = sns.FacetGrid(data=merge, aspect=2)
+g.map(plt.scatter, 'fitness', 'SCHeavyAtoms', s=3, 
+      color=[protein_colors[idx] for idx in merge.index])  # Assign custom colors
+#g.add_legend(bbox_to_anchor=(1.3,0.7), title='', fontsize=6)
+g.fig.set_size_inches(0.7, 0.8)
+g.tick_params(axis='both', which='major', labelsize=6)
+
+x = merge[['fitness']].to_numpy()
+y = merge[['SCHeavyAtoms']].to_numpy()
+
+model = LinearRegression()
+model.fit(x, y)
+
+y_pred = model.predict(x)
+r2 = r2_score(y, y_pred)
+r, p = pearsonr(y.ravel(), y_pred.ravel())
+
+plt.plot(x, y_pred, color='Gray', linewidth=1, linestyle='--')
+plt.xlabel('Abundance fitness\nMean-median diff.', fontsize=7)
+plt.ylabel('Number of Heavy Atoms\nin WT core sidechains', fontsize=7)
+#plt.ylim(0,1)
+#plt.yticks(np.arange(0,1.1,0.2))
+#plt.annotate('R = '+str(round(r, 2))+'\np-val = '+'{:0.2e}'.format(p),
+#             fontsize=7, annotation_clip=False, xy=(0, 1.1))
+plt.title('R = '+str(round(r, 2))+'\np-val = '+'{:0.2e}'.format(p),
+             fontsize=7)
+
+plt.rcParams['svg.fonttype'] = 'none'
+#plt.savefig('NrWTcoreHeavyAtoms_vs_mean-median_diff.svg', dpi=300, transparent=True)
+
+
+merge=mean_median.copy()
+proteins = ['P06241','P01053','P0A9X9']
+
+for protein in proteins:
+    WT_dG_df = pd.read_csv(path+'FigS2/'+protein+'_WT_dG_protherm.tsv', sep='\t')
+    WT_dG_df['∆G_H2O_(kcal/mol)'] = pd.to_numeric(WT_dG_df['∆G_H2O_(kcal/mol)'], errors='coerce')
+    merge.at[protein,'wt_dG']=-1*WT_dG_df['∆G_H2O_(kcal/mol)'].mean()
+    merge.at[protein,'wt_dG_std']=WT_dG_df['∆G_H2O_(kcal/mol)'].std()
+merge
+
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.linear_model import LinearRegression
+from scipy.stats import pearsonr
+
+# Ensure merge is sorted by 'fitness'
+merge = merge.sort_values('fitness')
+
+protein_colors = {'P06241': '#A1D359',
+                  'P01053': '#F9AA8F',
+                  'P0A9X9': '#73D8D3'}
+
+g = sns.FacetGrid(data=merge, aspect=2)
+
+# Add scatter plot with custom colors and y-error bars
+for idx, row in merge.iterrows():
+    g.map(plt.errorbar, x=[row['fitness']], y=[row['wt_dG']],
+          yerr=[row['wt_dG_std']], fmt='o', markersize=3, color=protein_colors[row.name])
+
+g.fig.set_size_inches(0.7, 0.8)
+g.tick_params(axis='both', which='major', labelsize=6)
+
+x = merge[['fitness']].to_numpy()
+y = merge[['wt_dG']].to_numpy()
+
+model = LinearRegression()
+model.fit(x, y)
+
+y_pred = model.predict(x)
+r2 = r2_score(y, y_pred)
+r, p = pearsonr(y.ravel(), y_pred.ravel())
+
+plt.plot(x, y_pred, color='Gray', linewidth=1, linestyle='--')
+plt.xlabel('Abundance fitness\nMean-median diff.', fontsize=7)
+plt.ylabel('WT ∆Gf (kcal mol-1)', fontsize=7)
+plt.title('R = '+str(round(r, 2))+'\np-val = '+'{:0.2e}'.format(p), fontsize=7)
+
+plt.rcParams['svg.fonttype'] = 'none'
+#plt.savefig('Randomized_core_proteins_WT_dG_vs_mean-median_diff.svg', dpi=300, transparent=True)
+
+from seaborn import kdeplot
+import numpy as np
+
+def normalize(values, bounds):
+    return [bounds['desired']['lower'] + (x - bounds['actual']['lower']) * (bounds['desired']['upper'] - bounds['desired']['lower']) / (bounds['actual']['upper'] - bounds['actual']['lower']) for x in values]
+
+
+allvariants['scaled_fitness'] = allvariants['fitness']
+for protein in ['P06241','P01053','P0A9X9']:
+    
+    protein_variants = allvariants.loc[allvariants['Protein']==protein].copy()
+
+    reference=allvariants.loc[allvariants['Protein']==protein].sort_values(['Nham_aa','fitness'], ascending=[True,False]).iloc[0]['core']
+    fig = plt.figure(figsize=(0,0))
+    lines = kdeplot(data=protein_variants,x='fitness',linewidth=0).get_lines()
+    for line in lines:
+        x, y = line.get_data()
+        mode=(x[np.argmax(y)])
+    plt.close()
+        
+    protein_variants_scaled = protein_variants.copy()    
+    
+    protein_variants_scaled['fitness']=normalize(list(protein_variants_scaled['fitness']),{'actual': {'lower': mode, 'upper': protein_variants_scaled.loc[protein_variants_scaled['core']==reference]['fitness'].iloc[0]}, 'desired': {'lower': -1, 'upper': 0}})
+    allvariants.loc[protein_variants_scaled.index, 'scaled_fitness'] = protein_variants_scaled['fitness']    
+
+import pandas as pd
+
+DTS_AA_props = pd.concat([DTS_AA_props,sidechain_atoms],axis=1)
+
+aa_props_dict = DTS_AA_props.to_dict(orient="index")
+
+def compute_sequence_props(sequence, aa_props_dict):
+    property_sums = {prop: 0 for prop in DTS_AA_props.columns}
+    for aa in sequence:
+        if aa in aa_props_dict:
+            for prop, value in aa_props_dict[aa].items():
+                property_sums[prop] += value
+    return property_sums
+
+result_data = []
+for sequence in allvariants["core"]:
+    sequence_props = compute_sequence_props(sequence, aa_props_dict)
+    result_data.append(sequence_props)
+
+AA_properties_sum = pd.DataFrame(result_data, columns=DTS_AA_props.columns)
+AA_properties_sum.index = allvariants.index
+
+AA_properties_sum
+
+
+wt_properties_sum = {}
+for protein, wt_sequence in wt_cores.items():
+    wt_properties_sum[protein] = compute_sequence_props(wt_sequence, aa_props_dict)
+
+percent_change_data = []
+for idx, row in allvariants.iterrows():
+    protein_name = row["Protein"]
+    sequence_props = compute_sequence_props(row["core"], aa_props_dict)
+    wt_props = wt_properties_sum[protein_name]
+
+    percent_change = {
+        prop: (sequence_props[prop] - wt_props[prop])
+        for prop in DTS_AA_props.columns
+    }
+    percent_change_data.append(percent_change)
+
+percent_change_df = pd.DataFrame(percent_change_data, columns=DTS_AA_props.columns)
+percent_change_df.index = allvariants.index
+percent_change_df
+
+from sklearn.linear_model import LinearRegression
+from scipy.stats import pearsonr
+import numpy as np
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.metrics import mean_squared_error, r2_score
+from scipy.stats import pearsonr
+import matplotlib.patches as mpatches
+from matplotlib.ticker import MultipleLocator, AutoLocator
+
+proteins = ['P06241','P01053','P0A9X9']
+subcategories = {'Volume':'Volume',
+                'Number of sidechain heavy atoms':'#SC atoms'}
+protein_names = {'P06241': 'FYN-SH3',
+                 'P01053': 'CI-2A',
+                 'P0A9X9': 'CspA'}
+
+for protein in proteins:
+    bestindices = {'Volume': 'BIGC670101', 'Number of sidechain heavy atoms': 'SCHeavyAtoms'}
+    for prop in ['Volume','Number of sidechain heavy atoms']:
+        x = percent_change_df.loc[allvariants['Protein']==protein][[bestindices[prop]]].to_numpy()
+        y = allvariants.loc[allvariants['Protein']==protein][['scaled_fitness']].to_numpy()
+        model = LinearRegression()
+        model.fit(x,y)
+        y_pred = model.predict(x)
+        
+        fig, ax = plt.subplots(figsize=(1.4,1.6))
+        hbin=ax.hexbin(y= allvariants.loc[allvariants['Protein']==protein][['scaled_fitness']],x=percent_change_df.loc[allvariants['Protein']==protein][[bestindices[prop]]],bins='log',gridsize=75,rasterized=True,linewidths=0)
+        #ax.axline((0.1, 0.1), slope=1, linestyle = "dashed", color = 'black',lw=0.5)
+        
+        
+        plt.axvline(0, ls='--', color='black', lw=0.5)
+        plt.axhline(0, ls='--', color='black', lw=0.5)
+        
+        plt.title(protein_names[protein]+'\nR$^2$ = '+str(round(r2_score(y,y_pred),3)),fontsize=7, color='k', loc='center', pad=22)
+        
+        plt.ylabel('Fitness', fontsize=7)
+        plt.xticks(fontsize=6)
+        if prop == 'Volume':
+            plt.xlabel('Change in \nsidechain volume (Å³)', fontsize=7)
+            merge=percent_change_df.loc[allvariants['Protein']==protein][['BIGC670101']].merge(allvariants.loc[allvariants['Protein']==protein][['scaled_fitness']],left_index=True,right_index=True)
+            print(protein)
+            print('Fraction of folded variants with volume increase: '+str(len(merge.loc[merge['BIGC670101']>0].loc[merge['scaled_fitness']>-0.5])/len(merge.loc[merge['scaled_fitness']>-0.5])))
+            print('Number of folded variants with volume increase: '+str(len(merge.loc[merge['BIGC670101']>0].loc[merge['scaled_fitness']>-0.5])))
+            print('Total number of folded variants: '+str(len(merge.loc[merge['scaled_fitness']>-0.5])))
+            print('Fraction of  variants with volume increase: '+str(len(merge.loc[merge['BIGC670101']>0])/len(merge)))
+        else:
+            plt.xlabel('Change in number of\nsidechain heavy atoms',fontsize=7)
+        plt.yticks(fontsize=6)
+        ax = plt.gca()
+
+        auto_locator = AutoLocator()
+        default_ticks = auto_locator.tick_values(*ax.get_xlim())
+
+        if len(default_ticks) > 1:
+            tick_interval = default_ticks[1] - default_ticks[0]
+            refined_locator = MultipleLocator(tick_interval*2)  # Half the default interval
+            ax.xaxis.set_major_locator(refined_locator)
+        ax.spines[['top','right']].set_visible(False)
+        ax.set_rasterization_zorder(0)
+        fmt = '%1.f'
+        cax=fig.add_axes([0.15,0.9,0.3,0.05])
+        cb=fig.colorbar(hbin, ax=ax, shrink=0.7,format=fmt,location='top',cax=cax)
+        cb.outline.set_visible(False)
+        cb.ax.tick_params(axis='both', which='both',direction='in', color='white',width=0.25)
+        cb.ax.xaxis.set_tick_params(pad=0)
+        cb.set_ticks([1,10,100])
+        cb.set_ticklabels([1,10,100], fontsize=6, rotation=45)
+        ax1 = cb.ax
+        ax1.text(100,0.1,'count',rotation=0, fontsize=7)
+        
+        plt.rcParams['svg.fonttype'] = 'none'
+#        plt.savefig(protein+'_fitness_vs_change_in_'+bestindices[prop]+'.svg', dpi=300, transparent=True, bbox_inches='tight')
+
+
+
+
+import pandas as pd
+AAont = pd.read_csv(path+'FigS2/AAontology_SupplTable3.txt', sep='\t', encoding = "ISO-8859-1", index_col=0).drop('Unnamed: 5', axis=1)
+AAont
+
+aaindex_featureNames = pd.read_csv(path+'FigS2/AAindex_featureNames.txt',sep='\t', header=None)
+
+aaindex_featureNames = aaindex_featureNames[0].str.split(' ', n=1, expand = True)
+aaindex_id = aaindex_featureNames[0]
+aaindex_featureNames = pd.concat([aaindex_id, aaindex_featureNames[1].str.split('(', n=1, expand=True)], axis=1)
+aaindex_featureNames.columns = ['id', 'name', 'source']
+aaindex_featureNames['name'] = aaindex_featureNames['name'].str.removesuffix(' ')
+aaindex_featureNames['source'] = aaindex_featureNames['source'].str.removesuffix(')')
+aaindex_featureNames = aaindex_featureNames.set_index('id')
+aaindex_featureNames.at['SCHeavyAtoms','name']='Number of sidechain heavy atoms'
+aaindex_featureNames.at['SCHeavyAtoms','source']='Escobedo, 2025'
+aaindex_featureNames.at['SCCarbons','name']='Number of sidechain carbon atoms'
+aaindex_featureNames.at['SCCarbons','source']='Escobedo, 2025'
+
+aaindex_featureNames
+
+AAont.at['SCHeavyAtoms','category']='#SC atoms'
+AAont.at['SCHeavyAtoms','subcategory']='#SC atoms'
+AAont.at['SCHeavyAtoms','scale_name']='Number of sidechain heavy atoms'
+AAont.at['SCHeavyAtoms','scale_description']='Number of sidechain heavy atoms'
+
+AAont.at['SCCarbons','category']='#SC atoms'
+AAont.at['SCCarbons','subcategory']='#SC atoms'
+AAont.at['SCCarbons','scale_name']='Number of sidechain carbon atoms'
+AAont.at['SCCarbons','scale_description']='Number of sidechain carbon atoms'
+
+AAont
+
+from scipy.stats import pearsonr
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.rcParams['font.family'] = 'Arial'
+
+proteins = ['P06241', 'P01053', 'P0A9X9']
+proteins_dict = {'P06241': 'FYN-SH3',
+                 'P01053': 'CI-2A',
+                 'P0A9X9': 'CspA'}
+
+for protein in proteins:
+    r_all_data = []
+    for prop in percent_change_df.columns:
+        x = percent_change_df[prop].loc[allvariants['Protein'] == protein]
+        y = allvariants.loc[allvariants['Protein'] == protein]['scaled_fitness']
+
+        if x.nunique() > 1 and y.nunique() > 1:
+            r, pval = pearsonr(x, y)
+        else:
+            r, pval = None, None
+        r_all_data.append({'prop': prop, 'r': r, 'r_square': r**2 if r is not None else None, 'r_pval': pval})
+
+    r_all = pd.DataFrame(r_all_data).set_index('prop').dropna(subset=['r'])
+
+    r_all['name'] = aaindex_featureNames.loc[r_all.index, 'name']
+    r_all['category'] = AAont.loc[r_all.index, 'category']
+    r_all['subcategory'] = AAont.loc[r_all.index, 'subcategory']
+    r_all = r_all.sort_values('category', ascending=True)
+
+    plt.subplots(figsize=(3, 1.5))
+    sns.violinplot(x='category', y='r_square', data=r_all, palette='Set2', hue='category', legend=False)
+
+    category_counts = r_all['category'].value_counts()
+    for i, category in enumerate(r_all['category'].unique()):
+        n = category_counts[category]
+        if i == 0:
+            plt.text(i, 0.9, f'n={n}', ha='center', va='center', fontsize=6)
+        else:
+            plt.text(i, 0.9, f'{n}', ha='center', va='center', fontsize=6)
+
+    plt.xticks(rotation=90, fontsize=6)
+    plt.yticks(fontsize=6)
+    plt.xlabel('Category', fontsize=7)
+    plt.ylabel('R$^2$', fontsize=7)
+    plt.ylim(-0.2, 1)
+    plt.title(proteins_dict[protein], fontsize=8)
+    plt.rcParams['svg.fonttype'] = 'none'
+#    plt.savefig(protein+'correl_vs_500aaindex_r2_by_category.svg', dpi=300, transparent=True, bbox_inches='tight')

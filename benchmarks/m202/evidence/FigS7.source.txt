@@ -1,0 +1,726 @@
+# Configure Arial as the default font in all figures
+
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+
+
+arial_font_path = '/PATH/TO/ARIAL/FONT/arial.ttf'
+
+fm.fontManager.addfont(arial_font_path)
+
+plt.rcParams['font.family'] = 'Arial'
+
+path = 'PATH/TO/ZENODO/FILES/FOLDER'
+
+import pandas as pd
+folding_ddGs = pd.read_csv(path+'/FigS7/CI-2A_folding_ivscaled_ddGs_order2.txt',sep='\t',index_col=0)
+folding_dddGs = pd.read_csv(path+'/FigS7/CI-2A_folding_ivscaled_dddGs_order2.txt',sep='\t',index_col=0)
+
+folding_ddGs_sparse = pd.read_csv(path+'/FigS7/CI-2A_folding_ivscaled_ddGs_order2_sparse_regularized.txt',sep='\t',index_col=0)
+folding_dddGs_sparse = pd.read_csv(path+'/FigS7/CI-2A_folding_ivscaled_dddGs_order2_sparse_regularized.txt',sep='\t',index_col=0)
+
+folding_dddGs['in_sparse_model']=False
+for index, row in folding_dddGs.iterrows():
+    folding_dddGs.at[index,'abs_coupling']=abs(row.dddG)
+    try:
+        len(folding_dddGs_sparse.loc[index])
+        folding_dddGs.at[index,'in_sparse_model']=True
+    except KeyError:
+        folding_dddGs.at[index,'in_sparse_model']=False
+
+folding_ddGs['in_sparse_model']=False
+for index, row in folding_ddGs.iterrows():
+    try:
+        len(folding_ddGs_sparse.loc[index])
+        folding_ddGs.at[index,'in_sparse_model']=True
+    except KeyError:
+        folding_ddGs.at[index,'in_sparse_model']=False
+
+folding_ddGs["wt"] = pd.Series(dtype="object") 
+folding_ddGs["mut"] = pd.Series(dtype="object") 
+for index, row in folding_ddGs.iterrows():
+    folding_ddGs.at[index,'wt']=str(index[0])
+    folding_ddGs.at[index,'pos']=int(index[1:-1])
+    folding_ddGs.at[index,'mut']=str(index[-1])
+folding_ddGs = folding_ddGs.sort_values('pos')
+folding_ddGs
+
+# get AA properties
+
+# based on AAindex1, a list of 566 features
+# see feature indices and names here: https://www.genome.jp/aaindex/AAindex/list_of_indices
+
+import pandas as pd
+from protlearn.features import aaindex1
+
+amino_acids = list('ACDEFGHIKLMNPQRSTVWY')
+aaind, inds = aaindex1(amino_acids)#, standardize='zscore')
+DTS_AA_props = pd.DataFrame(data=aaind, columns=inds, index=amino_acids)#.reset_index().rename(columns={'index':'AA'})
+DTS_AA_props
+
+import pandas as pd
+AAont = pd.read_csv(path+'/FigS2/AAontology_SupplTable3.txt', sep='\t', encoding = "ISO-8859-1", index_col=0).drop('Unnamed: 5', axis=1)
+AAont
+
+aaindex_featureNames = pd.read_csv(path+'/FigS2/AAindex_featureNames.txt',sep='\t', header=None)
+
+aaindex_featureNames = aaindex_featureNames[0].str.split(' ', n=1, expand = True)
+aaindex_id = aaindex_featureNames[0]
+aaindex_featureNames = pd.concat([aaindex_id, aaindex_featureNames[1].str.split('(', n=1, expand=True)], axis=1)
+aaindex_featureNames.columns = ['id', 'name', 'source']
+aaindex_featureNames['name'] = aaindex_featureNames['name'].str.removesuffix(' ')
+aaindex_featureNames['source'] = aaindex_featureNames['source'].str.removesuffix(')')
+aaindex_featureNames = aaindex_featureNames.set_index('id')
+aaindex_featureNames.at['SCHeavyAtoms','name']='Number of sidechain heavy atoms'
+aaindex_featureNames.at['SCHeavyAtoms','source']='Escobedo, 2025'
+aaindex_featureNames.at['SCCarbons','name']='Number of sidechain carbon atoms'
+aaindex_featureNames.at['SCCarbons','source']='Escobedo, 2025'
+
+aaindex_featureNames
+
+hydrophobicity_scales = list(AAont[AAont['scale_description'].str.contains('hydrophobicity', case=False, na=False)].index)
+
+hydrophobicity_scales_filtered = []
+for scale in hydrophobicity_scales:
+    if scale in DTS_AA_props.columns:
+        hydrophobicity_scales_filtered.append(scale)
+
+DTS_AA_props[hydrophobicity_scales_filtered]
+
+wt_props = DTS_AA_props.loc[folding_ddGs['wt']]
+mut_props = DTS_AA_props.loc[folding_ddGs['mut']]
+
+prop_change_dict = {}
+
+for scale in DTS_AA_props[hydrophobicity_scales_filtered].columns:
+
+    dprop = mut_props[scale].values - wt_props[scale].values
+
+    prop_change_dict[scale] = dprop
+
+prop_change_df = pd.DataFrame(prop_change_dict)
+prop_change_df
+
+from scipy.stats import pearsonr
+import seaborn as sns
+
+plt.rcParams['font.family'] = 'Arial'
+
+r_all_pos = pd.DataFrame()
+for pos in sorted([int(i) for i in list(folding_ddGs['pos'].unique())]):
+    r_all = [pearsonr(prop_change_df.loc[folding_ddGs.reset_index()['pos']==pos][prop],folding_ddGs.loc[folding_ddGs['pos']==pos]['ddG'])[0] for prop in prop_change_df.columns]
+    r_all = pd.DataFrame(r_all, index=prop_change_df.columns)
+    r_all.columns = ['r']
+    r_all['r_abs'] = abs(r_all['r'])
+    r_all['pos'] = pos
+    r_all_pos = pd.concat([r_all_pos, r_all], axis=0, ignore_index=False)
+r_all_pos
+
+fig,ax=plt.subplots(figsize=(3,1.5))
+sns.boxplot(x=r_all_pos['pos'], y=r_all_pos['r_abs'], color='lightgray')#,ax=ax_bot)
+sns.stripplot(data=r_all_pos, x='pos', hue="pos", y="r_abs", color='black', size=3, jitter=True, legend=False, palette='Set2')
+category_counts = r_all_pos['pos'].value_counts()
+
+plt.xticks(rotation=90,fontsize=6)
+plt.yticks(fontsize=6)
+plt.xlabel('Position', fontsize=7)
+plt.ylabel('|r|', fontsize=7)
+plt.ylim(-0.2,1)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.set_title('CI-2A positional tolerance\nfor core hydrophobicity changes\nΔΔGf vs ΔHydrophobicity correlation scores', fontsize=7)
+plt.show()
+
+### SECONDARY STRUCTURE WITH DSSP ###
+
+from Bio.PDB import PDBParser, DSSP
+from pathlib import Path
+pdb_path = str(Path(path).expanduser())
+
+parser = PDBParser()
+structure = parser.get_structure('3ci2', pdb_path+'/FigS7/3ci2.pdb')
+
+model = structure[0]
+
+dssp = DSSP(model, pdb_path+'/FigS7/3ci2.pdb', dssp='/users/project/prj004631/aescobedo/miniconda3/envs/BIO/bin/mkdssp')
+
+dssp_list=[]
+for key, value in dssp.property_dict.items():
+    res_id, dssp_info = key, value
+    if res_id[0] == 'A':
+        dssp_list.append(dssp_info[2])
+        
+folding_ddGs["secondary_structure"] = pd.Series(dtype="object")
+for index, row in folding_ddGs.iterrows():
+    folding_ddGs.at[index,'secondary_structure'] = dssp_list[int(row.pos)-1]
+
+folding_ddGs
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import scipy.stats as stats
+import itertools
+
+plt.rcParams['font.family'] = 'Arial'
+
+# Function to perform Mann-Whitney U tests for all secondary structure pairs
+def mann_whitney_tests(data, group_col, value_col):
+    unique_groups = sorted(data[group_col].unique())  # Sorted to keep ordering consistent
+    comparisons = list(itertools.combinations(unique_groups, 2))
+    p_values = {}
+
+    for g1, g2 in comparisons:
+        group1 = data[data[group_col] == g1][value_col]
+        group2 = data[data[group_col] == g2][value_col]
+        stat, p_value = stats.mannwhitneyu(group1, group2, alternative='two-sided')
+        p_values[(g1, g2)] = p_value
+
+    return p_values
+
+# Function to add significance annotation stacked above each other
+def add_stat_annotations(ax, p_values, unique_groups):
+    y_max = ax.get_ylim()[1]
+    h = (y_max - ax.get_ylim()[0]) * 0.01  # Small gap above violins
+    y_start = y_max * 1.02  # Initial height for annotations
+
+    for i, ((g1, g2), p_value) in enumerate(p_values.items()):
+        x1 = unique_groups.index(g1)
+        x2 = unique_groups.index(g2)
+        y = y_start + i * h * 30  # Stacking each annotation
+
+        ax.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1, c='black')
+        text = f"p = {p_value:.1e}"
+        ax.text((x1 + x2) * 0.5, y + h * 2.5, text, ha='center', va='bottom', color='black', fontsize=6)
+
+def add_mean_lines(ax, data, group_col, value_col):
+    means = data.groupby(group_col)[value_col].mean()
+    
+    # Get the x-tick order used by Seaborn
+    xticklabels = [tick.get_text() for tick in ax.get_xticklabels()]
+    
+    # Reorder means based on x-tick order
+    means = means.reindex(xticklabels)
+    
+    for i, (group, mean) in enumerate(means.items()):
+        ax.hlines(y=mean, xmin=i - 0.2, xmax=i + 0.2, color='black', linewidth=1.5, zorder=3)
+
+# Perform statistical tests
+p_values_ddG = mann_whitney_tests(folding_ddGs, "secondary_structure", "ddG")
+
+# Get sorted unique secondary structure classes
+unique_ss = sorted(folding_ddGs["secondary_structure"].unique())
+
+# Create the violin plot
+fig, ax = plt.subplots(figsize=(2, 1.5))
+sns.violinplot(
+    data=folding_ddGs, x="secondary_structure", y="ddG", hue="secondary_structure",
+    split=False, ax=ax, inner=None, linewidth=0.7, edgecolor='gray', palette=["lightgray"] * len(unique_ss)
+)
+sns.stripplot(data=folding_ddGs, x="secondary_structure", y="ddG", 
+              hue="secondary_structure", palette='Set2', size=3, jitter=True, ax=ax, dodge=False, legend=False)
+
+# Add mean lines
+add_mean_lines(ax, folding_ddGs, "secondary_structure", "ddG")
+
+# Add statistical annotations
+add_stat_annotations(ax, p_values_ddG, unique_ss)
+
+ax.set_xlabel("DSSP secondary structure", fontsize=7)
+ax.set_ylabel("ΔΔGf (kcal mol-1)", fontsize=7)
+ax.xaxis.set_tick_params(labelsize=6)
+for label in ax.get_yticklabels():
+    label.set_fontsize(6)
+
+# Remove unnecessary spines
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+for index, row in folding_dddGs.iterrows():
+    pos_mut1 = int(row.Pos.split('_')[0])
+    pos_mut2 = int(row.Pos.split('_')[1])
+    folding_dddGs.at[index,'primseqdist']=pos_mut2-pos_mut1
+
+from sklearn.linear_model import LinearRegression
+from scipy.stats import pearsonr
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+
+plt.rcParams['font.family'] = 'Arial'
+
+#predicted_vs_measured=predicted_vs_measured.rename(columns={'Nham_aa': 'Number of\nMutations', 'Observed': 'Observed\nin DTS lib.'})
+
+fig, ax = plt.subplots(figsize=(1.2,1.2))
+
+folding_dddGs = folding_dddGs.sort_values('primseqdist', ascending=True)
+
+ax=sns.scatterplot(x='primseqdist', y=folding_dddGs['dddG'].abs(), data=folding_dddGs ,edgecolor='k', linewidth=0.1, s=10)
+
+scatter_ylim=ax.get_ylim()
+
+#ax.axhspan(folding_dddGs[folding_dddGs['3d_dist_sidechain_category']=='<5Å']['dddG'].abs().mean(),ax.get_ylim()[0],facecolor='gray', alpha=0.1)
+
+
+x = folding_dddGs[['primseqdist']].to_numpy()
+y = folding_dddGs[['dddG']].abs().to_numpy()
+
+
+model = LinearRegression()
+model.fit(x, y)
+
+y_pred = model.predict(x)
+r,p = pearsonr(y.ravel(),x.ravel())
+
+plt.plot(x, y_pred, color='Gray', linewidth=1, linestyle='--')
+
+ax.set_ylim(scatter_ylim)
+ax.set_xticks(np.arange(0,60,10))
+ax.set_xticklabels(ax.get_xticklabels(), fontsize=6)
+for label in ax.get_yticklabels():
+    label.set_fontsize(6)
+ax.spines[['right', 'top']].set_visible(False)
+
+#legend=plt.legend(bbox_to_anchor=(1.55,1.31), fontsize=6,frameon=False, handletextpad=0.1, title='Minimum\nsidechain\ndistance')
+#legend.get_title().set_fontsize('7')
+plt.xlabel('Distance in primary sequence', fontsize=7)
+plt.ylabel('|ΔΔΔG| kcal mol$^-$$^1$', fontsize=7)
+plt.title('R = '+str(round(r,2))+ '\np-val = '+'{:0.2e}'.format(p), fontsize=7, color='red')
+plt.show()
+
+#Calculate residue minimum heavy atom distances from PDB structure
+
+import Bio.PDB
+import numpy as np
+from Bio.PDB import PDBParser, PDBIO, Select
+from Bio.SeqUtils import seq1
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+import matplotlib.colors as colors
+
+
+def calc_residue_dist(residue_one, residue_two) :
+    """Returns the minimum distance between any atom in two residues (except for backbone C, O and N)"""
+    #if 'CB' in residue_one and 'CB' in residue_two:
+    all_residue_one_distances=[]
+    all_residue_one_distance_names=[]
+    residue_one_id= residue_one.get_full_id()[3][1]
+    residue_one_chain= residue_one.get_full_id()[2]
+    residue_two_id= residue_two.get_full_id()[3][1]
+    residue_two_chain= residue_two.get_full_id()[2]
+    for atom_one in residue_one:
+        atom_one_type=str(atom_one)
+        atom_one_type=atom_one_type[6:-1]
+        if atom_one_type[0] != 'H' and atom_one_type != 'N' and atom_one_type != 'C' and atom_one_type != 'O': #and atom_one_type != 'CA':
+            all_atom_one_distances=[]
+            all_atom_dist_names = []
+            for atom_two in residue_two:
+                atom_two_type=str(atom_two)
+                atom_two_type=atom_two_type[6:-1]
+                if atom_two_type[0] != 'H' and atom_two_type != 'N' and atom_two_type != 'C' and atom_two_type != 'O': #and atom_two_type != 'CA':
+                    diff_vector = atom_one.coord - atom_two.coord
+                    all_atom_one_distances.append(np.sqrt(np.sum(diff_vector * diff_vector)))
+                    all_atom_dist_names.append('/'+residue_one_chain+':'+str(residue_one_id)+'@'+atom_one_type+'/'+residue_two_chain+':'+str(residue_two_id)+'@'+atom_two_type)
+            all_residue_one_distances.append(min(all_atom_one_distances))
+            all_residue_one_distance_names.append(all_atom_dist_names[all_atom_one_distances.index(min(all_atom_one_distances))])
+    return [min(all_residue_one_distances), all_residue_one_distance_names[all_residue_one_distances.index(min(all_residue_one_distances))]]
+
+def calc_residue_dist_allatom(residue_one, residue_two) :
+    """Returns the minimum distance between any atom in two residues"""
+    all_residue_one_distances=[]
+    all_residue_one_distance_names=[]
+    residue_one_id= residue_one.get_full_id()[3][1]
+    residue_one_chain= residue_one.get_full_id()[2]
+    residue_two_id= residue_two.get_full_id()[3][1]
+    residue_two_chain= residue_two.get_full_id()[2]
+    for atom_one in residue_one:
+        atom_one_type=str(atom_one)
+        atom_one_type=atom_one_type[6]
+        if atom_one_type != 'H':
+            all_atom_one_distances=[]
+            all_atom_dist_names = []
+            for atom_two in residue_two:
+                atom_two_type=str(atom_two)
+                atom_two_type=atom_two_type[6]
+                if atom_two_type != 'H':
+                    diff_vector = atom_one.coord - atom_two.coord
+                    all_atom_one_distances.append(np.sqrt(np.sum(diff_vector * diff_vector)))
+                    all_atom_dist_names.append('/'+residue_one_chain+':'+str(residue_one_id)+'@'+atom_one_type+'/'+residue_two_chain+':'+str(residue_two_id)+'@'+atom_two_type)
+                    #all_atom_one_distances.append(np.linalg.norm(atom_one.coord - atom_two.coord))
+            all_residue_one_distances.append(min(all_atom_one_distances))
+            all_residue_one_distance_names.append(all_atom_dist_names[all_atom_one_distances.index(min(all_atom_one_distances))])
+    return [min(all_residue_one_distances), all_residue_one_distance_names[all_residue_one_distances.index(min(all_residue_one_distances))]]
+
+def calc_dist_matrix(chain_one, chain_two) :
+    """Returns a matrix of side-chain distances between two chains"""
+    answer = np.zeros((len(chain_one), len(chain_two)), float)
+    resseqs = {chain.id:[residue.id[1] for residue in chain.get_residues()] for chain in structure.get_chains()} #Read sequence numbers
+    closest_atoms = pd.DataFrame(index=resseqs[chain_one.id],columns=resseqs[chain_two.id])
+    for row, residue_one in enumerate(chain_one) :
+        for col, residue_two in enumerate(chain_two) :
+            closest_atoms.at[row+resseqs[chain_one.id][0],col+resseqs[chain_one.id][1]-1]=calc_residue_dist(residue_one, residue_two)[1]
+            answer[row, col] = calc_residue_dist(residue_one, residue_two)[0]
+    return [answer, closest_atoms]
+
+def calc_dist_matrix_allatom(chain_one, chain_two) :
+    """Returns a matrix of minimum distances between two chains, considering all heavy atoms"""
+    answer = np.zeros((len(chain_one), len(chain_two)), float)
+    resseqs = {chain.id:[residue.id[1] for residue in chain.get_residues()] for chain in structure.get_chains()} #Read sequence numbers
+    closest_atoms = pd.DataFrame(index=resseqs[chain_one.id],columns=resseqs[chain_two.id])
+    for row, residue_one in enumerate(chain_one) :
+        for col, residue_two in enumerate(chain_two) :
+            closest_atoms.at[row+resseqs[chain_one.id][0],col+resseqs[chain_one.id][1]-1]=calc_residue_dist_allatom(residue_one, residue_two)[1]
+            answer[row, col] = calc_residue_dist_allatom(residue_one, residue_two)[0]
+    return [answer, closest_atoms]
+
+
+pdb_code='3ci2'
+pdb_filename = pdb_path + '/FigS7/' + pdb_code + '.pdb'
+
+structure = Bio.PDB.PDBParser().get_structure(pdb_code, pdb_filename)
+model = structure[0]
+
+chain = 'A'
+
+dist_matrix = calc_dist_matrix(model[chain], model[chain])[0]
+closest_atoms = calc_dist_matrix(model[chain], model[chain])[1]
+
+dist_matrix_allatom = calc_dist_matrix_allatom(model[chain], model[chain])[0]
+closest_atoms_allatom = calc_dist_matrix_allatom(model[chain], model[chain])[1]
+
+chains = {chain.id:seq1(''.join(residue.resname for residue in chain)) for chain in structure.get_chains()} #Read amino acid sequence
+resseqs = {chain.id:[residue.id[1] for residue in chain.get_residues()] for chain in structure.get_chains()} #Read sequence numbers
+
+seq = chains[chain]
+seq=list(seq)
+seq_nr=resseqs[chain]
+
+real_pos = [11,18,27,45,47,49,55]
+
+core_dists=pd.DataFrame()
+for pos1 in real_pos:
+    for pos2 in real_pos:
+        core_dists.at[pos1+1,pos2+1]=dist_matrix[pos1+1][pos2+1]
+
+ci2a_core_pos = [11,18,27,45,47,49,55]
+
+initial_res_in_pdb=20
+
+folding_dddGs["mutation1"] = pd.Series(dtype="object")
+folding_dddGs["mutation2"] = pd.Series(dtype="object")
+folding_dddGs["mut1_ddG"] = pd.Series(dtype="object")
+folding_dddGs["mut2_ddG"] = pd.Series(dtype="object")
+folding_dddGs["single_muts_ddG_sum"] = pd.Series(dtype="object")
+folding_dddGs["abs_single_muts_ddG_sum"] = pd.Series(dtype="object")
+for index, row in folding_dddGs.iterrows():
+    mut1 = row.id_ref.split('_')[0]
+    mut2 = row.id_ref.split('_')[1]
+    folding_dddGs.at[index,'mutation1']= mut1
+    folding_dddGs.at[index,'mutation2']= mut2
+    folding_dddGs.at[index,'mut1_ddG']= float(folding_ddGs.loc[mut1]['ddG'])
+    folding_dddGs.at[index,'mut2_ddG']= float(folding_ddGs.loc[mut2]['ddG'])
+    folding_dddGs.at[index,'single_muts_ddG_sum'] = float(folding_ddGs.loc[mut1]['ddG']) + float(folding_ddGs.loc[mut2]['ddG'])
+    folding_dddGs.at[index,'abs_single_muts_ddG_sum'] = abs(float(folding_ddGs.loc[mut1]['ddG']) + float(folding_ddGs.loc[mut2]['ddG']))
+ci2a_allatom_distances = pd.DataFrame(data=dist_matrix_allatom, index=np.arange(1,len(seq_nr)+1,1), columns=np.arange(1,len(seq_nr)+1,1))
+ci2a_sidechain_distances = pd.DataFrame(data=dist_matrix, index=np.arange(1,len(seq_nr)+1,1), columns=np.arange(1,len(seq_nr)+1,1))
+folding_dddGs["3d_dist_allatom"] = pd.Series(dtype="object") 
+folding_dddGs["3d_dist_sidechain"] = pd.Series(dtype="object") 
+folding_dddGs["prim_seq_dist"] = pd.Series(dtype="object") 
+folding_dddGs["closest_atoms_sidechains"] = pd.Series(dtype="object") 
+folding_dddGs["closest_atoms_allatom"] = pd.Series(dtype="object") 
+folding_dddGs["core_coupling"] = pd.Series(dtype="object")
+folding_dddGs["3d_dist_allatom_category"] = pd.Series(dtype="object")
+folding_dddGs["3d_dist_sidechain_category"] = pd.Series(dtype="object") 
+for index, row in folding_dddGs.iterrows():
+    folding_dddGs.at[index,'3d_dist_allatom']=ci2a_allatom_distances[int(row.mutation1[1:-1])+1][int(row.mutation2[1:-1])+1]
+    folding_dddGs.at[index,'3d_dist_sidechain']=ci2a_sidechain_distances[int(row.mutation1[1:-1])+1][int(row.mutation2[1:-1])+1]
+    folding_dddGs.at[index,'prim_seq_dist']=abs(int(row.mutation1[1:-1])+1-int(row.mutation2[1:-1])+1)
+    folding_dddGs.at[index,'closest_atoms_sidechains']=closest_atoms[int(row.mutation1[1:-1])+initial_res_in_pdb][int(row.mutation2[1:-1])+initial_res_in_pdb]
+    folding_dddGs.at[index,'closest_atoms_allatom']=closest_atoms_allatom[int(row.mutation1[1:-1])+initial_res_in_pdb][int(row.mutation2[1:-1])+initial_res_in_pdb]
+
+    if ci2a_allatom_distances[int(row.mutation1[1:-1])+1][int(row.mutation2[1:-1])+1] < 5:
+        folding_dddGs.at[index,'3d_dist_allatom_category']='<5Å'
+    elif ci2a_allatom_distances[int(row.mutation1[1:-1])+1][int(row.mutation2[1:-1])+1] > 5 and ci2a_allatom_distances[int(row.mutation1[1:-1])+1][int(row.mutation2[1:-1])+1] <= 10:
+        folding_dddGs.at[index,'3d_dist_allatom_category']='5-10Å'
+    elif ci2a_allatom_distances[int(row.mutation1[1:-1])+1][int(row.mutation2[1:-1])+1] > 10 and ci2a_allatom_distances[int(row.mutation1[1:-1])+1][int(row.mutation2[1:-1])+1] <= 15:
+        folding_dddGs.at[index,'3d_dist_allatom_category']='10-15Å'
+    else:
+        folding_dddGs.at[index,'3d_dist_allatom_category']='>15Å'
+        
+    if ci2a_sidechain_distances[int(row.mutation1[1:-1])+1][int(row.mutation2[1:-1])+1] < 5:
+        folding_dddGs.at[index,'3d_dist_sidechain_category']='<5Å'
+    elif ci2a_sidechain_distances[int(row.mutation1[1:-1])+1][int(row.mutation2[1:-1])+1] > 5 and ci2a_sidechain_distances[int(row.mutation1[1:-1])+1][int(row.mutation2[1:-1])+1] <= 10:
+        folding_dddGs.at[index,'3d_dist_sidechain_category']='5-10Å'
+    elif ci2a_sidechain_distances[int(row.mutation1[1:-1])+1][int(row.mutation2[1:-1])+1] > 10 and ci2a_sidechain_distances[int(row.mutation1[1:-1])+1][int(row.mutation2[1:-1])+1] <= 15:
+        folding_dddGs.at[index,'3d_dist_sidechain_category']='10-15Å'
+    else:
+        folding_dddGs.at[index,'3d_dist_sidechain_category']='>15Å'
+
+
+from sklearn.linear_model import LinearRegression
+from scipy.stats import pearsonr
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+plt.rcParams['font.family'] = 'Arial'
+
+#predicted_vs_measured=predicted_vs_measured.rename(columns={'Nham_aa': 'Number of\nMutations', 'Observed': 'Observed\nin DTS lib.'})
+
+fig, ax = plt.subplots(figsize=(1.2,1.2))
+
+hue_order=['<5Å', '5-10Å', '10-15Å', '>15Å']
+
+folding_dddGs = folding_dddGs.sort_values('3d_dist_sidechain', ascending=True)
+
+ax=sns.scatterplot(x='3d_dist_sidechain', y=folding_dddGs['dddG'].abs(), data=folding_dddGs.sort_values('3d_dist_sidechain', ascending=True), hue='3d_dist_sidechain_category', hue_order=hue_order, palette='coolwarm_r',edgecolor='k', linewidth=0.1, s=10)
+
+scatter_ylim=ax.get_ylim()
+
+ax.axhspan(folding_dddGs[folding_dddGs['3d_dist_sidechain_category']=='<5Å']['dddG'].abs().mean(),ax.get_ylim()[0],facecolor='gray', alpha=0.1)
+
+
+x = folding_dddGs[['3d_dist_sidechain']].to_numpy()
+y = folding_dddGs[['dddG']].abs().to_numpy()
+
+
+model = LinearRegression()
+model.fit(x, y)
+
+y_pred = model.predict(x)
+r,p = pearsonr(y.ravel(),x.ravel())
+
+plt.plot(x, y_pred, color='Gray', linewidth=1, linestyle='--')
+
+ax.set_ylim(scatter_ylim)
+ax.set_xticks(np.arange(5,15,5))
+ax.set_xticklabels(ax.get_xticklabels(), fontsize=6)
+for label in ax.get_yticklabels():
+    label.set_fontsize(6)
+ax.spines[['right', 'top']].set_visible(False)
+
+legend=plt.legend(bbox_to_anchor=(1.55,1.31), fontsize=6,frameon=False, handletextpad=0.1, title='Minimum\nsidechain\ndistance')
+legend.get_title().set_fontsize('7')
+plt.xlabel('Sidechain distance Å', fontsize=7)
+plt.ylabel('|ΔΔΔG| kcal mol$^-$$^1$', fontsize=7)
+plt.title('R = '+str(round(r,2))+ '\np-val = '+'{:0.2e}'.format(p), fontsize=7, color='red')
+plt.show()
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import scipy.stats as stats
+
+plt.rcParams['font.family'] = 'Arial'
+
+folding_dddGs['3d_dist_sidechain'] = pd.to_numeric(folding_dddGs['3d_dist_sidechain'],errors='coerce')
+folding_dddGs['single_muts_ddG_sum'] = pd.to_numeric(folding_dddGs['single_muts_ddG_sum'],errors='coerce')
+
+# Function to perform Mann-Whitney U test and return p-value
+def mann_whitney_test(data, group_col, value_col):
+    group1 = data[data[group_col] == True][value_col]
+    group2 = data[data[group_col] == False][value_col]
+    stat, p_value = stats.mannwhitneyu(group1, group2, alternative='two-sided')
+    return p_value
+
+# Function to add significance annotation with scientific notation
+def add_stat_annotation(ax, p_value):
+    x1, x2 = 0, 1  # X locations of the groups
+    y_max = ax.get_ylim()[1]
+    h = (y_max - ax.get_ylim()[0]) * 0.01  # Adjust space above violins
+    y = y_max * 1  # Increase space between line and violins
+    
+    ax.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1.5, c='black')
+
+    # Format p-value in scientific notation
+    text = f"p = {p_value:.1e}"
+    ax.text((x1 + x2) * 0.5, y + h * 2.5, text, ha='center', va='bottom', color='black', fontsize=6)
+
+    # Remove top and right spines
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+
+# Function to add horizontal lines at the mean values
+def add_mean_lines(ax, data, group_col, value_col):
+    means = data.groupby(group_col)[value_col].mean()
+    for i, (group, mean) in enumerate(means.items()):
+        ax.hlines(y=mean, xmin=i - 0.2, xmax=i + 0.2, color='black', linewidth=1.5, zorder=3)  # Black mean lines
+
+# Perform statistical tests
+p_value_dddG = mann_whitney_test(folding_dddGs, "in_sparse_model", "abs_coupling")
+p_value_3d_dist = mann_whitney_test(folding_dddGs, "in_sparse_model", "3d_dist_sidechain")
+p_value_singles_ddG_sum = mann_whitney_test(folding_dddGs, "in_sparse_model", "single_muts_ddG_sum")
+
+# Create the first violin plot for |dddG|
+fig, ax = plt.subplots(figsize=(1.2, 1.2))
+sns.violinplot(
+    data=folding_dddGs, x="in_sparse_model", y="abs_coupling", hue="in_sparse_model",
+    split=False, ax=ax, inner=None, linewidth=0.7, edgecolor='gray', palette=["lightgray", "lightgray"]
+)
+sns.stripplot(data=folding_dddGs, x="in_sparse_model", y="abs_coupling", hue='in_sparse_model', size=1, jitter=True, ax=ax, palette='Set2', dodge=False,legend=False)
+
+add_mean_lines(ax, folding_dddGs, "in_sparse_model", "abs_coupling")  # Add mean lines
+add_stat_annotation(ax, p_value_dddG)
+ax.set_xlabel("In Sparse Model", fontsize=7)
+ax.set_ylabel("|ΔΔΔG| (kcal mol-1)", fontsize=7)
+for label in ax.get_xticklabels():
+    label.set_fontsize(6)
+for label in ax.get_yticklabels():
+    label.set_fontsize(6)
+ax.legend_.remove()
+plt.show()
+
+# Create the second violin plot for 3d_dist_sidechain
+fig, ax = plt.subplots(figsize=(1.2, 1.2))
+sns.violinplot(
+    data=folding_dddGs, x="in_sparse_model", y="3d_dist_sidechain", hue="in_sparse_model",
+    split=False, ax=ax, inner=None, linewidth=0.7, edgecolor='gray', palette=["lightgray", "lightgray"]
+)
+sns.stripplot(data=folding_dddGs, x="in_sparse_model", y="3d_dist_sidechain", hue='in_sparse_model', color='black', size=1, jitter=True, ax=ax, palette='Set2', dodge=False,legend=False)
+add_mean_lines(ax, folding_dddGs, "in_sparse_model", "3d_dist_sidechain")  # Add mean lines
+add_stat_annotation(ax, p_value_3d_dist)
+ax.set_xlabel("In Sparse Model", fontsize=7)
+ax.set_ylabel("Sidechain heavy atom distance (Å)", fontsize=7)
+for label in ax.get_xticklabels():
+    label.set_fontsize(6)
+for label in ax.get_yticklabels():
+    label.set_fontsize(6)
+ax.legend_.remove()
+plt.show()
+
+# Create the third violin plot for single_muts_ddG_sum
+fig, ax = plt.subplots(figsize=(1.2, 1.2))
+sns.violinplot(
+    data=folding_dddGs, x="in_sparse_model", y="single_muts_ddG_sum", hue="in_sparse_model",
+    split=False, ax=ax, inner=None, linewidth=0.7, edgecolor='gray', palette=["lightgray", "lightgray"]
+)
+sns.stripplot(data=folding_dddGs, x="in_sparse_model", y="single_muts_ddG_sum", hue='in_sparse_model', color='black', size=1, jitter=True, ax=ax, palette='Set2', dodge=False,legend=False)
+add_mean_lines(ax, folding_dddGs, "in_sparse_model", "single_muts_ddG_sum")  # Add mean lines
+add_stat_annotation(ax, p_value_singles_ddG_sum)
+ax.set_xlabel("In Sparse Model", fontsize=7)
+ax.set_ylabel("ΔΔG mut.1 + ΔΔG mut.2\n(kcal mol-1)", fontsize=7)
+for label in ax.get_xticklabels():
+    label.set_fontsize(6)
+for label in ax.get_yticklabels():
+    label.set_fontsize(6)
+ax.legend_.remove()
+plt.show()
+
+
+split1 = folding_dddGs['id_ref'].str.split('_', expand = True)
+split2 = pd.concat([split1[0].str.extract(r'([A-Za-z]+)(\d+)([A-Za-z]+)', expand=True),
+           split1[1].str.extract(r'([A-Za-z]+)(\d+)([A-Za-z]+)', expand=True)], axis=1)
+split2.columns = ['wt1', 'pos1', 'mut1', 'wt2', 'pos2', 'mut2']
+split2 = split2.reset_index(drop=True)
+split2
+
+wt1_props = DTS_AA_props.loc[split2['wt1']]
+mut1_props = DTS_AA_props.loc[split2['mut1']]
+wt2_props = DTS_AA_props.loc[split2['wt2']]
+mut2_props = DTS_AA_props.loc[split2['mut2']]
+
+prop_change_dict = {}
+
+for scale in DTS_AA_props.columns:
+    dprop1 = mut1_props[scale].values - wt1_props[scale].values
+    dprop2 = mut2_props[scale].values - wt2_props[scale].values
+
+    prop_val = dprop1 + dprop2 
+
+    prop_change_dict[scale] = prop_val
+
+prop_change_df = pd.DataFrame(prop_change_dict)
+
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import scipy.stats as stats
+
+plt.rcParams['font.family'] = 'Arial'
+
+sum_all_in_sparse_model = [np.sum(prop_change_df.loc[folding_dddGs.reset_index(drop=True)['in_sparse_model']==True][prop]) for prop in prop_change_df.columns]
+sum_all_in_sparse_model = pd.DataFrame(sum_all_in_sparse_model, index=prop_change_df.columns)
+sum_all_in_sparse_model.columns = ['addition']
+sum_all_in_sparse_model['abs_addition'] = abs(sum_all_in_sparse_model['addition'])
+sum_all_in_sparse_model = sum_all_in_sparse_model.sort_values('addition', ascending=False)#.dropna(subset=['addition'], axis=0)
+
+sum_all_in_sparse_model['name'] = aaindex_featureNames.loc[sum_all_in_sparse_model.index, 'name']
+sum_all_in_sparse_model['category'] = AAont.loc[sum_all_in_sparse_model.index, 'category']
+sum_all_in_sparse_model['subcategory'] = AAont.loc[sum_all_in_sparse_model.index, 'subcategory']
+sum_all_in_sparse_model = sum_all_in_sparse_model.sort_values('category',ascending=True)
+
+sum_all_not_in_sparse_model = [np.sum(prop_change_df.loc[folding_dddGs.reset_index(drop=True)['in_sparse_model']==False][prop]) for prop in prop_change_df.columns]
+sum_all_not_in_sparse_model = pd.DataFrame(sum_all_not_in_sparse_model, index=prop_change_df.columns)
+sum_all_not_in_sparse_model.columns = ['addition']
+sum_all_not_in_sparse_model['abs_addition'] = abs(sum_all_not_in_sparse_model['addition'])
+sum_all_not_in_sparse_model = sum_all_not_in_sparse_model.sort_values('addition', ascending=False)#.dropna(subset=['addition'], axis=0)
+
+sum_all_not_in_sparse_model['name'] = aaindex_featureNames.loc[sum_all_not_in_sparse_model.index, 'name']
+sum_all_not_in_sparse_model['category'] = AAont.loc[sum_all_not_in_sparse_model.index, 'category']
+sum_all_not_in_sparse_model['subcategory'] = AAont.loc[sum_all_not_in_sparse_model.index, 'subcategory']
+sum_all_not_in_sparse_model = sum_all_not_in_sparse_model.sort_values('category',ascending=True)
+
+sum_all_in_sparse_model["group"] = True
+sum_all_not_in_sparse_model["group"] = False
+merged_df = pd.concat([sum_all_in_sparse_model, sum_all_not_in_sparse_model])
+
+def mann_whitney_by_category(data, group_col, value_col, category_col):
+    categories = data[category_col].unique()
+    p_values = {}
+    for category in categories:
+        group1 = data[(data[group_col] == True) & (data[category_col] == category)][value_col]
+        group2 = data[(data[group_col] == False) & (data[category_col] == category)][value_col]
+        if len(group1) > 0 and len(group2) > 0:
+            stat, p_value = stats.mannwhitneyu(group1, group2, alternative='two-sided')
+            p_values[category] = p_value
+    return p_values
+
+def add_stat_annotation(ax, p_value):
+    x1, x2 = 0, 1
+    y_max = ax.get_ylim()[1]
+    h = (y_max - ax.get_ylim()[0]) * 0.01
+    y = y_max * 1
+    
+    ax.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1.5, c='black')
+
+    text = f"p = {p_value:.1e}"
+    ax.text((x1 + x2) * 0.5, y + h * 4, text, ha='center', va='bottom', color='black', fontsize=6)
+
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+
+def add_mean_lines(ax, data, group_col, value_col):
+    means = data.groupby(group_col)[value_col].mean()
+    for i, (group, mean) in enumerate(means.items()):
+        ax.hlines(y=mean, xmin=i - 0.2, xmax=i + 0.2, color='black', linewidth=1.5, zorder=3)
+
+p_values = mann_whitney_by_category(merged_df, "group", "abs_addition", "category")
+
+n_per_category = merged_df.loc[merged_df['group']==True]["category"].value_counts() 
+
+for category in list(merged_df['category'].unique()):
+
+    p_value = p_values.get(category, None)    
+
+    fig, ax = plt.subplots(figsize=(1, 1))
+    sns.violinplot(
+        data=merged_df.loc[merged_df['category'] == category], x="group", y="abs_addition", hue="group",
+        split=False, ax=ax, inner=None, linewidth=0.7, edgecolor='gray', palette=["lightgray", "lightgray"]
+    )
+    sns.stripplot(data=merged_df.loc[merged_df['category'] == category], x="group", y="abs_addition", hue='group', color='black', size=1, jitter=True, ax=ax, palette='Set2', dodge=False,legend=False)
+
+    add_mean_lines(ax, merged_df.loc[merged_df['category'] == category], "group", "abs_addition")
+
+    add_stat_annotation(ax, p_value)
+
+    ax.set_xlabel("In Sparse Model", fontsize=7)
+    ax.set_ylabel(category, fontsize=7)
+    for label in ax.get_xticklabels():
+        label.set_fontsize(6)
+    for label in ax.get_yticklabels():
+        label.set_fontsize(6)
+    ax.legend_.remove()
+
+    ax.set_title(f'n = {n_per_category.loc[category]}', fontsize=7)
+
+    plt.rcParams['svg.fonttype'] = 'none'
+
+    plt.show()

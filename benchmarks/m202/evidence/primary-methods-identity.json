@@ -1,0 +1,15 @@
+{
+  "doi": "10.1126/science.adq3948",
+  "institutional_handle": "https://hdl.handle.net/10230/71290",
+  "pdf_url": "https://repositori.upf.edu/bitstreams/7d607f2a-c7ba-49b2-ae32-cfe9f8565b44/download",
+  "pdf_sha256": "3965120e6563b0df7aecb0686f6725dcdfcd41a3bbe5ba602b8bfeb4c7d72bc0",
+  "projected_pages_one_based": [
+    13,
+    27
+  ],
+  "start": "Materials and methods",
+  "end": "before References page28",
+  "methods_sha256": "bae62bb705783278329c2a4a3e5af10542920fa7c86dbf930b87ad0ab04f107e",
+  "results_figures_not_projected": true,
+  "pdf_parser": "pypdf"
+}
