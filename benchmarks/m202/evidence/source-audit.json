@@ -1,0 +1,482 @@
+[
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS18.ipynb",
+      "bytes": 246154,
+      "compressed_bytes": 172225,
+      "CRC": 530090988
+    },
+    "member_sha256": "0e1e6954a1cebc8531d91c8f6b96c1568156534c1ac361cc9023b1c9f5865445",
+    "source_sha256": "977c949f0aac9c87b7fad801c4a3d66cdb7c24ec37e293218c8ce645c0b21c50",
+    "source_path": "benchmarks/m202/evidence/FigS18.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS23.ipynb",
+      "bytes": 358628,
+      "compressed_bytes": 215334,
+      "CRC": 2840426134
+    },
+    "member_sha256": "a171521fb11a5f6a911c027733cd87c54cc55af697928374a4e87f56d95d1c48",
+    "source_sha256": "c102eecc57cf1b2b61e32ce84f0a8d1bddac0f22274579d7aabe882dc1e692bd",
+    "source_path": "benchmarks/m202/evidence/FigS23.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS9.ipynb",
+      "bytes": 273653,
+      "compressed_bytes": 173042,
+      "CRC": 940175425
+    },
+    "member_sha256": "c9848f08fb5e661d11f3700b559a0cfdcdd3ca6b0afeca4799a31ab0d0dd8232",
+    "source_sha256": "18ed7a5d5b792e4991dc4ca8ff3d757097eb50ee2d4aaceed62a631eb10f72f4",
+    "source_path": "benchmarks/m202/evidence/FigS9.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS21.ipynb",
+      "bytes": 377041,
+      "compressed_bytes": 259839,
+      "CRC": 1842369340
+    },
+    "member_sha256": "b4c83b1aeef33f3f04a640099566108a276040d79e60f8fe772a586ad037f521",
+    "source_sha256": "15b1b4e8449aa624d85c384bc2c85d812e0b78572eaab749cabbe20e053f50d9",
+    "source_path": "benchmarks/m202/evidence/FigS21.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS22.ipynb",
+      "bytes": 543558,
+      "compressed_bytes": 368984,
+      "CRC": 3964105690
+    },
+    "member_sha256": "b063d62e9be2e7edcfc0ba9bfe6e9c89f65344e233ad01a1b681d24a0ad9c24f",
+    "source_sha256": "7ee21b4a9a222688a7424f45c40f703aa29fdf451d24062ce142eb8e2e3dd9ed",
+    "source_path": "benchmarks/m202/evidence/FigS22.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS20.ipynb",
+      "bytes": 201777,
+      "compressed_bytes": 132832,
+      "CRC": 1543718200
+    },
+    "member_sha256": "fad6be7e79a1c153a2c6dc2cbf2828bf85ecba14fd109b23abc05c47fa644ef5",
+    "source_sha256": "e959776519998e82a2bb20f82e875785f06c0d6b1053b8e814cdd48fd090d5f9",
+    "source_path": "benchmarks/m202/evidence/FigS20.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS11.ipynb",
+      "bytes": 461675,
+      "compressed_bytes": 310039,
+      "CRC": 540013546
+    },
+    "member_sha256": "5e1728d1847494d669fde0b8e0e69e13449d87d210203cf4dc3cd34c209e5e47",
+    "source_sha256": "051c4f3e1806060196be9b88cd655778552f10430e58ad305276f1d174958c2b",
+    "source_path": "benchmarks/m202/evidence/FigS11.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS4.ipynb",
+      "bytes": 573800,
+      "compressed_bytes": 351164,
+      "CRC": 3778706924
+    },
+    "member_sha256": "cd4523913d109e52d4a16bd0b2634c11e9354fcafdb8a8d2d5e0c25c0ec4f230",
+    "source_sha256": "eebc962a850c055b652e69912fae197f8f2487c8853d792b968950ec89c4eec2",
+    "source_path": "benchmarks/m202/evidence/FigS4.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS17.ipynb",
+      "bytes": 125273,
+      "compressed_bytes": 86593,
+      "CRC": 4185742283
+    },
+    "member_sha256": "4c0f211ac2c2a6695256d4e7c2a9cacc90b3aedcbfab3d58646473d47cd8ace1",
+    "source_sha256": "7fceeaf02bc31ace3fb9155c7b0559af45f3c962ba71dd280832069ffe311e9c",
+    "source_path": "benchmarks/m202/evidence/FigS17.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS25.ipynb",
+      "bytes": 891730,
+      "compressed_bytes": 581188,
+      "CRC": 3234442099
+    },
+    "member_sha256": "19e3699c14ab669ce20155e8797decb9ec69b91375f44556a70d4ca4efb25d7b",
+    "source_sha256": "c08037fe07be0bdb197fc442817519aa45bf5a765d56e14f69bc558a1589288a",
+    "source_path": "benchmarks/m202/evidence/FigS25.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS16.ipynb",
+      "bytes": 194630,
+      "compressed_bytes": 121372,
+      "CRC": 2767330191
+    },
+    "member_sha256": "c912a11505e00a8265f28d042ef0ca3434f53057ed2798232f6f052ba981cf0a",
+    "source_sha256": "5273a6cb7f266f90068bc1821d478996ed951a26e51fde9d5628556f814eb055",
+    "source_path": "benchmarks/m202/evidence/FigS16.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS3.ipynb",
+      "bytes": 507451,
+      "compressed_bytes": 344708,
+      "CRC": 2623919757
+    },
+    "member_sha256": "ea68d1f47b3390ee6b9e51008c730ea464de5a20367ced3438f8d0394a66b6f2",
+    "source_sha256": "ede57d786bfe4d9d936b3337172c7d51dd436d1391268cdd52b69a6e8cc6aef1",
+    "source_path": "benchmarks/m202/evidence/FigS3.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS12.ipynb",
+      "bytes": 460311,
+      "compressed_bytes": 318954,
+      "CRC": 20379496
+    },
+    "member_sha256": "bcb03e95b2ef6ad01fec84f1b975fd253acbc5996552b4e0b46985011dd6b440",
+    "source_sha256": "08e6d77df3069ddcc988fe4dab741a802ddf372c632061f3295077cd485ffd24",
+    "source_path": "benchmarks/m202/evidence/FigS12.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS24.ipynb",
+      "bytes": 513036,
+      "compressed_bytes": 338488,
+      "CRC": 1421765550
+    },
+    "member_sha256": "7be17538eebab6818df42d70bbabb8b9bf60c520093277230a9001af6591d009",
+    "source_sha256": "c3fcc3ba41c6661bfca1b857584114739e14fbe250a8d7a27b81b48fdd6b2f03",
+    "source_path": "benchmarks/m202/evidence/FigS24.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS13.ipynb",
+      "bytes": 405180,
+      "compressed_bytes": 219832,
+      "CRC": 2940160217
+    },
+    "member_sha256": "aeff4409ea61bd7dae183f03ded7ae466c403a5e86961c3b8cf9b21615baff7b",
+    "source_sha256": "a17eb529e7ecc3bede4647e2592e149a5bdd19b15deafaa5f4a09683007c3870",
+    "source_path": "benchmarks/m202/evidence/FigS13.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS14.ipynb",
+      "bytes": 338332,
+      "compressed_bytes": 224416,
+      "CRC": 728547586
+    },
+    "member_sha256": "3ae5849535ea507c3bbe9c968c32f1f5907bae29f70fb01f81c53ec362caff2b",
+    "source_sha256": "65eebe99b3d561c4e545b4e131bcfc3cc89ace7c9354336b5ab648d06a130e0a",
+    "source_path": "benchmarks/m202/evidence/FigS14.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS7.ipynb",
+      "bytes": 363982,
+      "compressed_bytes": 173091,
+      "CRC": 349864326
+    },
+    "member_sha256": "2e8eef373c7b2a6848d9ab12f9dd74951c6e7106d3b565637c52e75cfb706022",
+    "source_sha256": "6e5a41544fc8f13a81cbc4d406494c3ef8d7c75f3f9573e5850feb34fe487651",
+    "source_path": "benchmarks/m202/evidence/FigS7.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS5.ipynb",
+      "bytes": 243731,
+      "compressed_bytes": 155602,
+      "CRC": 3412532549
+    },
+    "member_sha256": "d323665bbb1288c2c614eecf4e67235dc1c82429ce761ee728fc78c7f6689d35",
+    "source_sha256": "952c73d9ed6a4887512523481267e8c8f908bb64e5cdab2a3069fb9d41721bcc",
+    "source_path": "benchmarks/m202/evidence/FigS5.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS10.ipynb",
+      "bytes": 265295,
+      "compressed_bytes": 189778,
+      "CRC": 2282875821
+    },
+    "member_sha256": "02d0dd10d4990aafb854fe904b0c5fdbe34aec98405334cb0587708fee0d35a9",
+    "source_sha256": "5344f3d2dfcde79bb3c0c1baf6f83cb026dd07368bebfffe832e666d0f426cd9",
+    "source_path": "benchmarks/m202/evidence/FigS10.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS15.ipynb",
+      "bytes": 281881,
+      "compressed_bytes": 177967,
+      "CRC": 284745832
+    },
+    "member_sha256": "d927dcb3c118e21801efff3fe0f588191936f3ebdb71b7b4d7b93384aa8e2db4",
+    "source_sha256": "789b1e3110216ed7523a67ba7a989ad552834d3f5b44285563e3c01be93b0c58",
+    "source_path": "benchmarks/m202/evidence/FigS15.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS2.ipynb",
+      "bytes": 429975,
+      "compressed_bytes": 236639,
+      "CRC": 2827417590
+    },
+    "member_sha256": "ed5ae4c59db4d2f9319b555293fd38782b808a80728fd715eba8fada1ee24d3d",
+    "source_sha256": "9f9b531af94f5f3b9801f863f480cbf12195c40f88432358dfb622f905c3e559",
+    "source_path": "benchmarks/m202/evidence/FigS2.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS1.ipynb",
+      "bytes": 352864,
+      "compressed_bytes": 204377,
+      "CRC": 1497966628
+    },
+    "member_sha256": "a47f3021a7e89513217b9f789aba56d8dcd7aa6f9a32ddd19bf7e2303da523cc",
+    "source_sha256": "8c27627e3a7c0d9df21c9af6218a6dc456c2a1ceb757144082adc7f7a561b2fb",
+    "source_path": "benchmarks/m202/evidence/FigS1.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS6.ipynb",
+      "bytes": 365559,
+      "compressed_bytes": 173990,
+      "CRC": 884754726
+    },
+    "member_sha256": "8e6a471306a7815f429fdfe9b9e75d866309732f621328a63be32330fafd677a",
+    "source_sha256": "c1be6bfd2e6b309bf2b43c553b209bbcec55bad67da94b1e6e1c2b2f91ed3046",
+    "source_path": "benchmarks/m202/evidence/FigS6.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/SupplementaryFigures/FigS19.ipynb",
+      "bytes": 414524,
+      "compressed_bytes": 294558,
+      "CRC": 3105735704
+    },
+    "member_sha256": "3e78af45051f411c8d080189b0c99613b58eb69a4074b2d70b1d454814220506",
+    "source_sha256": "033e01e9ade920b5724a79da44664a2526527e9f53522bbd6774b99d6ff2652d",
+    "source_path": "benchmarks/m202/evidence/FigS19.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/MainFigures/Fig5.ipynb",
+      "bytes": 568883,
+      "compressed_bytes": 336377,
+      "CRC": 2271359427
+    },
+    "member_sha256": "2d92cab06951d9ae2726bf1a1a01192bc91e39abd652b8d4153243c2b58008a7",
+    "source_sha256": "491d184c559f890824d0fcdf529187bf9733049ff9cc6d24ba5952189b23a8b8",
+    "source_path": "benchmarks/m202/evidence/Fig5.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/MainFigures/Fig7.ipynb",
+      "bytes": 463345,
+      "compressed_bytes": 274921,
+      "CRC": 1039741747
+    },
+    "member_sha256": "d770e5f9050dd2ac813414d898609ef228887d5d4dfa21382d09fdf425601881",
+    "source_sha256": "941cd33d5261a53886f7449b3de5b8eb4df7e617812d49cb40bb43cf1d6caa26",
+    "source_path": "benchmarks/m202/evidence/Fig7.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/MainFigures/Fig4.ipynb",
+      "bytes": 172279,
+      "compressed_bytes": 106544,
+      "CRC": 2085384257
+    },
+    "member_sha256": "034d2ba62bfd61d2804aef9243aa104ac53c0f8402f3bb644775cf326d906649",
+    "source_sha256": "0001ad0d5103c16a7ad4e60b17f662e17e2f735c1d09b0d82e53be3c3c5b4577",
+    "source_path": "benchmarks/m202/evidence/Fig4.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/MainFigures/Fig6.ipynb",
+      "bytes": 410264,
+      "compressed_bytes": 249245,
+      "CRC": 4133997335
+    },
+    "member_sha256": "0d56f8b43a1f044bc22f927336acba3a82fcfcd2570beb6800ed09a5698b235b",
+    "source_sha256": "0a36ef3aad7c4ece1a0babbc36cb8d2e4fc9766e2b95a4c62b322296212153aa",
+    "source_path": "benchmarks/m202/evidence/Fig6.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/MainFigures/Fig3.ipynb",
+      "bytes": 682700,
+      "compressed_bytes": 415458,
+      "CRC": 2488837834
+    },
+    "member_sha256": "53bafe34aa93009a005e9715f38e3190e01dd849a966a0b42383b84acac2a3bb",
+    "source_sha256": "f8c2c5233a62a0a0315a5fb57c471bf035b4172db3c4ad4eca23e5ea6b307ba8",
+    "source_path": "benchmarks/m202/evidence/Fig3.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "combinatorialcores_github_repo.zip",
+    "member": {
+      "name": "combinatorialcores/MainFigures/Fig2.ipynb",
+      "bytes": 552486,
+      "compressed_bytes": 348939,
+      "CRC": 1566978875
+    },
+    "member_sha256": "2c2b37d01eafd203b3e816c92e0bef9418011c7a33b068a01eed94b1679ae4f1",
+    "source_sha256": "daf6dd3daf11e84b483c7bd72f76294d95292e12803de007346b6c69c425bfde",
+    "source_path": "benchmarks/m202/evidence/Fig2.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "Escobedo_et_al_protein_randomization_data_files.zip",
+    "member": {
+      "name": "zenodo/Fig2/DiMSUM_experimentDesign_Sparse_cores_DTS.txt",
+      "bytes": 678,
+      "compressed_bytes": 264,
+      "CRC": 3704728277
+    },
+    "member_sha256": "2b4ff149ab0662679eff8a7c386d530afaee2b63fdb0198df6e83c8f2146741c",
+    "source_sha256": "2b4ff149ab0662679eff8a7c386d530afaee2b63fdb0198df6e83c8f2146741c",
+    "source_path": "benchmarks/m202/evidence/DiMSUM_experimentDesign_Sparse_cores_DTS.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  },
+  {
+    "archive": "Escobedo_et_al_protein_randomization_data_files.zip",
+    "member": {
+      "name": "zenodo/Fig2/DiMSUM_run_Sparse_cores_DTS.sh",
+      "bytes": 1909,
+      "compressed_bytes": 822,
+      "CRC": 43491147
+    },
+    "member_sha256": "347f1ef72d192b74c70d099bcbe0b8bd5dc0b33bbefaa8c8262319426b3515eb",
+    "source_sha256": "347f1ef72d192b74c70d099bcbe0b8bd5dc0b33bbefaa8c8262319426b3515eb",
+    "source_path": "benchmarks/m202/evidence/DiMSUM_run_Sparse_cores_DTS.source.txt",
+    "CRC_verified": true,
+    "notebook_outputs_decoded": false,
+    "source_executed": false
+  }
+]

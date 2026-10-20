@@ -1,0 +1,5 @@
+sample_name	experiment_replicate	selection_id	selection_replicate	technical_replicate	pair1	pair2	generations	cell_density	selection_time
+CSDTSi1	1	0			CSlin1_lib_02070AAE_CAAGGAGG-ACCTAGGA_R1_001.fastq.gz	CSlin1_lib_02070AAE_CAAGGAGG-ACCTAGGA_R2_001.fastq.gz		0.05	
+CSDTSi2	2	0			CSlin2_lib_02071AAE_ACTTACGG-TCCAGACT_R1_001.fastq.gz	CSlin2_lib_02071AAE_ACTTACGG-TCCAGACT_R2_001.fastq.gz		0.05	
+CSDTSo1	1	1	1		CSl0u1_lib_02073AAE_GTCGCGAA-GCGGCAAG_R1_001.fastq.gz	CSl0u1_lib_02073AAE_GTCGCGAA-GCGGCAAG_R2_001.fastq.gz	3.138	0.44	31.5
+CSDTSo2	2	1	1		CSl0u2_lib_02074AAE_GCCTGAAC-TAATCAAT_R1_001.fastq.gz	CSl0u2_lib_02074AAE_GCCTGAAC-TAATCAAT_R2_001.fastq.gz	2.895	0.372	31.5

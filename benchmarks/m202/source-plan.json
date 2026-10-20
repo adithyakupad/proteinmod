@@ -1,0 +1,220 @@
+[
+  {
+    "archive": {
+      "id": "6f449871-75c5-45f4-a2fc-ebc61dabdec6",
+      "key": "combinatorialcores_github_repo.zip",
+      "size": 19726227,
+      "checksum": "md5:6f0626ae43afba3b03087593197dc3a3",
+      "links": {
+        "self": "https://zenodo.org/api/records/16266645/files/combinatorialcores_github_repo.zip/content"
+      }
+    },
+    "members": [
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS18.ipynb",
+        "bytes": 246154,
+        "compressed_bytes": 172225,
+        "CRC": 530090988
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS23.ipynb",
+        "bytes": 358628,
+        "compressed_bytes": 215334,
+        "CRC": 2840426134
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS9.ipynb",
+        "bytes": 273653,
+        "compressed_bytes": 173042,
+        "CRC": 940175425
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS21.ipynb",
+        "bytes": 377041,
+        "compressed_bytes": 259839,
+        "CRC": 1842369340
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS22.ipynb",
+        "bytes": 543558,
+        "compressed_bytes": 368984,
+        "CRC": 3964105690
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS20.ipynb",
+        "bytes": 201777,
+        "compressed_bytes": 132832,
+        "CRC": 1543718200
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS11.ipynb",
+        "bytes": 461675,
+        "compressed_bytes": 310039,
+        "CRC": 540013546
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS4.ipynb",
+        "bytes": 573800,
+        "compressed_bytes": 351164,
+        "CRC": 3778706924
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS17.ipynb",
+        "bytes": 125273,
+        "compressed_bytes": 86593,
+        "CRC": 4185742283
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS25.ipynb",
+        "bytes": 891730,
+        "compressed_bytes": 581188,
+        "CRC": 3234442099
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS16.ipynb",
+        "bytes": 194630,
+        "compressed_bytes": 121372,
+        "CRC": 2767330191
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS3.ipynb",
+        "bytes": 507451,
+        "compressed_bytes": 344708,
+        "CRC": 2623919757
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS12.ipynb",
+        "bytes": 460311,
+        "compressed_bytes": 318954,
+        "CRC": 20379496
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS24.ipynb",
+        "bytes": 513036,
+        "compressed_bytes": 338488,
+        "CRC": 1421765550
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS13.ipynb",
+        "bytes": 405180,
+        "compressed_bytes": 219832,
+        "CRC": 2940160217
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS14.ipynb",
+        "bytes": 338332,
+        "compressed_bytes": 224416,
+        "CRC": 728547586
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS7.ipynb",
+        "bytes": 363982,
+        "compressed_bytes": 173091,
+        "CRC": 349864326
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS5.ipynb",
+        "bytes": 243731,
+        "compressed_bytes": 155602,
+        "CRC": 3412532549
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS10.ipynb",
+        "bytes": 265295,
+        "compressed_bytes": 189778,
+        "CRC": 2282875821
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS15.ipynb",
+        "bytes": 281881,
+        "compressed_bytes": 177967,
+        "CRC": 284745832
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS2.ipynb",
+        "bytes": 429975,
+        "compressed_bytes": 236639,
+        "CRC": 2827417590
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS1.ipynb",
+        "bytes": 352864,
+        "compressed_bytes": 204377,
+        "CRC": 1497966628
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS6.ipynb",
+        "bytes": 365559,
+        "compressed_bytes": 173990,
+        "CRC": 884754726
+      },
+      {
+        "name": "combinatorialcores/SupplementaryFigures/FigS19.ipynb",
+        "bytes": 414524,
+        "compressed_bytes": 294558,
+        "CRC": 3105735704
+      },
+      {
+        "name": "combinatorialcores/MainFigures/Fig5.ipynb",
+        "bytes": 568883,
+        "compressed_bytes": 336377,
+        "CRC": 2271359427
+      },
+      {
+        "name": "combinatorialcores/MainFigures/Fig7.ipynb",
+        "bytes": 463345,
+        "compressed_bytes": 274921,
+        "CRC": 1039741747
+      },
+      {
+        "name": "combinatorialcores/MainFigures/Fig4.ipynb",
+        "bytes": 172279,
+        "compressed_bytes": 106544,
+        "CRC": 2085384257
+      },
+      {
+        "name": "combinatorialcores/MainFigures/Fig6.ipynb",
+        "bytes": 410264,
+        "compressed_bytes": 249245,
+        "CRC": 4133997335
+      },
+      {
+        "name": "combinatorialcores/MainFigures/Fig3.ipynb",
+        "bytes": 682700,
+        "compressed_bytes": 415458,
+        "CRC": 2488837834
+      },
+      {
+        "name": "combinatorialcores/MainFigures/Fig2.ipynb",
+        "bytes": 552486,
+        "compressed_bytes": 348939,
+        "CRC": 1566978875
+      }
+    ]
+  },
+  {
+    "archive": {
+      "id": "931f25f0-430f-4b6c-9a05-9b7ea885e011",
+      "key": "Escobedo_et_al_protein_randomization_data_files.zip",
+      "size": 2226162297,
+      "checksum": "md5:e7d6433bf7cca53071836a097ca63069",
+      "links": {
+        "self": "https://zenodo.org/api/records/16266645/files/Escobedo_et_al_protein_randomization_data_files.zip/content"
+      }
+    },
+    "members": [
+      {
+        "name": "zenodo/Fig2/DiMSUM_experimentDesign_Sparse_cores_DTS.txt",
+        "bytes": 678,
+        "compressed_bytes": 264,
+        "CRC": 3704728277
+      },
+      {
+        "name": "zenodo/Fig2/DiMSUM_run_Sparse_cores_DTS.sh",
+        "bytes": 1909,
+        "compressed_bytes": 822,
+        "CRC": 43491147
+      }
+    ]
+  }
+]

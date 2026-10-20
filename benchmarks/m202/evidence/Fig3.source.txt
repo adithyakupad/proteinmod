@@ -1,0 +1,1681 @@
+# Configure Arial as the default font in all figures
+
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+
+
+arial_font_path = '/PATH/TO/ARIAL/FONT/arial.ttf'
+
+fm.fontManager.addfont(arial_font_path)
+
+plt.rcParams['font.family'] = 'Arial'
+
+path = 'PATH/TO/ZENODO/FILES/FOLDER'
+
+import pandas as pd
+
+predicted_phenotypes = pd.read_csv(path+'Fig3/FYN-SH3/FYN_mochi_order2/task_1/predictions/predicted_phenotypes_all.txt',
+                                  sep='\t', lineterminator='\n')
+
+RT=303*0.001987
+predicted_phenotypes['mean_additive_trait']=predicted_phenotypes[['fold_1_additive_trait0','fold_2_additive_trait0','fold_3_additive_trait0','fold_4_additive_trait0','fold_5_additive_trait0','fold_6_additive_trait0','fold_7_additive_trait0','fold_8_additive_trait0','fold_9_additive_trait0','fold_10_additive_trait0']].mean(axis=1)
+predicted_phenotypes['std_additive_trait']=predicted_phenotypes[['fold_1_additive_trait0','fold_2_additive_trait0','fold_3_additive_trait0','fold_4_additive_trait0','fold_5_additive_trait0','fold_6_additive_trait0','fold_7_additive_trait0','fold_8_additive_trait0','fold_9_additive_trait0','fold_10_additive_trait0']].std(axis=1)
+
+predicted_phenotypes['mean']=predicted_phenotypes[['fold_1','fold_2','fold_3','fold_4','fold_5','fold_6','fold_7','fold_8','fold_9','fold_10']].mean(axis=1)
+predicted_phenotypes['std']=predicted_phenotypes[['fold_1','fold_2','fold_3','fold_4','fold_5','fold_6','fold_7','fold_8','fold_9','fold_10']].std(axis=1)
+
+predicted_phenotypes['mean_dG']= predicted_phenotypes['mean_additive_trait']*RT
+predicted_phenotypes['std_dG']= predicted_phenotypes['std_additive_trait']*RT
+
+for index, row in predicted_phenotypes.loc[predicted_phenotypes['WT']!=True].iterrows():
+    predicted_phenotypes.at[index,'predicted_fitness']=row['fold_'+str(int(row['Fold']))]
+    predicted_phenotypes.at[index,'predicted_ddG']=row['fold_'+str(int(row['Fold']))+'_additive_trait0']*RT
+
+predicted_phenotypes
+
+import matplotlib.pyplot as plt
+from seaborn import kdeplot
+import numpy as np
+
+fyn_wt = 'TLFVALYDYEARTEDDLSFHKGEKFQILNSSEGDWWEARSLTTGETGYIPSNYVAPV'
+
+# Normalize data in the -1 to 0 range
+
+def normalize(values, bounds):
+    return [bounds['desired']['lower'] + (x - bounds['actual']['lower']) * (bounds['desired']['upper'] - bounds['desired']['lower']) / (bounds['actual']['upper'] - bounds['actual']['lower']) for x in values]
+
+predicted_phenotypes_scaled = predicted_phenotypes.copy()
+
+reference=predicted_phenotypes.loc[predicted_phenotypes['WT']==True].iloc[0]['core']
+
+fig = plt.figure(figsize=(0,0))
+lines = kdeplot(data=predicted_phenotypes,x='fitness',linewidth=0).get_lines()
+for line in lines:
+    x, y = line.get_data()
+    mode=(x[np.argmax(y)])
+plt.close()
+
+predicted_phenotypes_scaled['fitness']=normalize(list(predicted_phenotypes_scaled['fitness']),{'actual': {'lower': mode, 'upper': predicted_phenotypes_scaled.loc[predicted_phenotypes_scaled['core']==reference]['fitness'].iloc[0]}, 'desired': {'lower': -1, 'upper': 0}})
+
+
+fig = plt.figure(figsize=(0,0))
+lines = kdeplot(data=predicted_phenotypes,x='predicted_fitness',linewidth=0).get_lines()
+for line in lines:
+    x, y = line.get_data()
+    mode=(x[np.argmax(y)])
+plt.close()
+
+predicted_phenotypes_scaled['predicted_fitness']=normalize(list(predicted_phenotypes_scaled['predicted_fitness']),{'actual': {'lower': mode, 'upper': 0}, 'desired': {'lower': -1, 'upper': 0}})
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy.optimize import curve_fit
+import numpy as np
+
+predicted_phenotypes_scaled=predicted_phenotypes_scaled.sort_values(['mean_additive_trait'])
+x=predicted_phenotypes_scaled['mean_additive_trait']
+y=predicted_phenotypes_scaled['fitness']
+def sigmoid(x, L ,x0, k, b): ##https://stackoverflow.com/questions/55725139/fit-sigmoid-function-s-shape-curve-to-data-using-python
+    z = L / (1 + np.exp(-k*(x-x0))) + b
+    return (z)
+
+p0 = [max(y), np.median(x),0,min(y)] # this is an mandatory initial guess
+
+popt, pcov = curve_fit(sigmoid, x, y,p0, method='lm', maxfev=10000)
+x_range = np.linspace(x.iloc[0],x.iloc[-1],1000)
+y_sig = sigmoid(x_range, *popt)
+deriv = np.diff(y_sig)/np.diff(x_range)
+
+L, x0, k, b = popt 
+y_target = -0.5
+x_target = x0 + (1/k) * np.log((L / (y_target - b)) - 1)
+print(f"x-value at y = {y_target}: {x_target}")
+
+fig, ax = plt.subplots(figsize=(1,1.2))    
+
+hbin=ax.hexbin(predicted_phenotypes_scaled['mean_additive_trait'],predicted_phenotypes_scaled['fitness'],bins='log',gridsize=100, cmap='viridis',rasterized=True,linewidths=0, vmax=100)
+plt.plot(x_range, y_sig, '-',c='r', linewidth=1)
+plt.axvline(0, ls='--', color='black', linewidth=0.5)
+plt.axhline(0,  ls='--', color='black', linewidth=0.5)
+plt.xlabel('Additive trait', fontsize=7)
+plt.xticks(fontsize=6)
+plt.ylabel('Abundance fitness\n(observed)', fontsize=7)
+plt.yticks(fontsize=6)
+ax.set_xticks(np.arange(-4,16,2))
+ax.set_yticks(np.arange(-1.5,0.5,0.5))
+ax.set_ylim(-1.3,0.2)
+ax.spines[['top','right']].set_visible(False)
+ax.set_rasterization_zorder(0)
+fmt = '%1.f'
+cax=fig.add_axes([0.4,0.82,0.3,0.05])
+cb=fig.colorbar(hbin, ax=ax, shrink=0.7,format=fmt,location='top',cax=cax)
+cb.outline.set_visible(False)
+cb.ax.tick_params(axis='both', which='both',direction='in', color='white',width=0.25)
+cb.ax.xaxis.set_tick_params(pad=0)
+#cb.ax.set_title('Count', fontsize=7)
+#cb.set_label('count', rotation=0, fontsize=7, labelpad=2)
+#cb.ax.xaxis.set_label_position('right')
+cb.set_ticks([1,10,100])
+cb.set_ticklabels([1,10,100], fontsize=6)
+ax1 = cb.ax
+ax1.text(140,0.1,'count',rotation=0, fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+#plt.savefig('FYN_Mochi_2ndorder_reps12.svg', dpi=300, transparent=True, bbox_inches='tight')
+
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.linear_model import LinearRegression
+from scipy.stats import pearsonr
+from sklearn.metrics import mean_absolute_error
+
+y = predicted_phenotypes_scaled.loc[predicted_phenotypes_scaled['Nham_aa']>0][['fitness']].to_numpy()
+x = predicted_phenotypes_scaled.loc[predicted_phenotypes_scaled['Nham_aa']>0][['predicted_fitness']].to_numpy()
+model = LinearRegression()
+model.fit(x,y)
+y_pred = model.predict(x)
+
+fig, ax = plt.subplots(figsize=(1.4,1.6))
+hbin=ax.hexbin(x=predicted_phenotypes_scaled['predicted_fitness'].loc[predicted_phenotypes_scaled['Nham_aa']>0],y=predicted_phenotypes_scaled['fitness'].loc[predicted_phenotypes_scaled['Nham_aa']>0],bins='log',gridsize=75,rasterized=True,linewidths=0,vmax=100)
+ax.axline((0.1, 0.1), slope=1, linestyle = "dashed", color = 'black',lw=0.5)
+
+
+plt.axvline(0, ls='--', color='black', lw=0.5)
+plt.axhline(0, ls='--', color='black', lw=0.5)
+plt.title('\nR$^2$='+str(round(r2_score(y,y_pred),2))+' | MAE='+str(round(mean_absolute_error(y,y_pred),3)),fontsize=7, color='r', loc='center',pad=10)
+#fyn_overall_full_model_performance.at['2','All']=round(r2_score(y,y_pred),2)
+plt.xlabel('Abundance fitness\n(predicted)', fontsize=7)
+plt.xticks(fontsize=6)
+plt.ylabel('Abundance fitness\n(observed)', fontsize=7)
+plt.yticks(fontsize=6)
+ax.set_xticks(np.arange(-1.5,0.5,0.5))
+ax.set_yticks(np.arange(-1.5,0.5,0.5))
+ax.set_ylim(-1.3,0.2)
+ax.set_xlim(-1.05,0.2)
+ax.spines[['top','right']].set_visible(False)
+ax.set_rasterization_zorder(0)
+fmt = '%1.f'
+cax=fig.add_axes([0.15,0.82,0.3,0.05])
+cb=fig.colorbar(hbin, ax=ax, shrink=0.7,format=fmt,location='top',cax=cax)
+cb.outline.set_visible(False)
+cb.ax.tick_params(axis='both', which='both',direction='in', color='white',width=0.25)
+cb.ax.xaxis.set_tick_params(pad=0)
+cb.set_ticks([1,10,100])
+cb.set_ticklabels([1,10,100], fontsize=6)
+ax1 = cb.ax
+ax1.text(140,0.1,'count',rotation=0, fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+#plt.savefig('FYN_Mochi_2ndorder_performance_reps12.svg', dpi=300, transparent=True, bbox_inches='tight')
+
+
+# Discard nth percentile with highest errors
+import numpy as np
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+from scipy.stats import gaussian_kde
+from scipy.stats import pearsonr
+import math
+import seaborn as sns
+import pandas as pd
+
+quantile = 1
+
+fyn_overall_full_model_performance = pd.DataFrame()
+fyn_model_performance_by_nham=pd.DataFrame()
+fyn_overall_sparse_model_performance=pd.DataFrame()
+fyn_sparse_model_performance_by_nham=pd.DataFrame()
+
+model_names = {'linear': 'Linear', 'order1':'1', 'order2':'2', 'order2_sparse_regularized':'2'}
+tasks = {'linear': '1', 'order1':'1', 'order2':'1', 'order2_sparse_regularized':'4'}
+
+for mochi_model in model_names.keys():
+
+    # Load predictions
+    #if mochi_model != '2_sparse_regularized':
+    predicted_phenotypes = pd.read_csv(path+'Fig3/FYN-SH3/FYN_mochi_'+mochi_model+'/task_'+tasks[mochi_model]+'/predictions/predicted_phenotypes_all.txt',
+                                          sep='\t', lineterminator='\n', low_memory=False)
+#    else:
+#        predicted_phenotypes = pd.read_csv(path+'Coreome-DTS_Slows/DTS-Coreome_Q20_12/mochi/P06241/sparse_regularized/FYN_trueWT_order'+mochi_model+'/task_'+tasks[mochi_model]+'/predictions/predicted_phenotypes_all.txt',
+#                                          sep='\t', lineterminator='\n', low_memory=False)
+    
+    RT=303*0.001987
+    predicted_phenotypes['mean_additive_trait']=predicted_phenotypes[['fold_1_additive_trait0','fold_2_additive_trait0','fold_3_additive_trait0','fold_4_additive_trait0','fold_5_additive_trait0','fold_6_additive_trait0','fold_7_additive_trait0','fold_8_additive_trait0','fold_9_additive_trait0','fold_10_additive_trait0']].mean(axis=1)
+    predicted_phenotypes['std_additive_trait']=predicted_phenotypes[['fold_1_additive_trait0','fold_2_additive_trait0','fold_3_additive_trait0','fold_4_additive_trait0','fold_5_additive_trait0','fold_6_additive_trait0','fold_7_additive_trait0','fold_8_additive_trait0','fold_9_additive_trait0','fold_10_additive_trait0']].std(axis=1)
+    
+    predicted_phenotypes['mean']=predicted_phenotypes[['fold_1','fold_2','fold_3','fold_4','fold_5','fold_6','fold_7','fold_8','fold_9','fold_10']].mean(axis=1)
+    predicted_phenotypes['std']=predicted_phenotypes[['fold_1','fold_2','fold_3','fold_4','fold_5','fold_6','fold_7','fold_8','fold_9','fold_10']].std(axis=1)
+    
+    predicted_phenotypes['mean_dG']= predicted_phenotypes['mean_additive_trait']*RT
+    predicted_phenotypes['std_dG']= predicted_phenotypes['std_additive_trait']*RT
+    
+    for index, row in predicted_phenotypes.loc[predicted_phenotypes['WT']!=True].iterrows():
+        predicted_phenotypes.at[index,'predicted_fitness']=row['fold_'+str(int(row['Fold']))]
+        predicted_phenotypes.at[index,'predicted_ddG']=row['fold_'+str(int(row['Fold']))+'_additive_trait0']*RT
+
+    predicted_phenotypes_scaled = predicted_phenotypes[predicted_phenotypes['sigma'] <= predicted_phenotypes['sigma'].quantile(quantile)].copy()
+
+    # calculate overall performance
+    y = predicted_phenotypes_scaled.loc[predicted_phenotypes_scaled['Nham_aa']>0][['fitness']].to_numpy()
+    x = predicted_phenotypes_scaled.loc[predicted_phenotypes_scaled['Nham_aa']>0][['predicted_fitness']].to_numpy()
+    model = LinearRegression()
+    model.fit(x,y)
+    y_pred = model.predict(x)
+
+    if mochi_model != 'order2_sparse_regularized':
+        fyn_overall_full_model_performance.at[model_names[mochi_model],'All']=round(r2_score(y,y_pred),2)
+    else:
+        fyn_overall_sparse_model_performance.at[model_names[mochi_model],'All']=round(r2_score(y,y_pred),2)
+
+    # calculate performance per nham
+    for hamm_dist in range(2,8,1):    
+        y = predicted_phenotypes_scaled.loc[predicted_phenotypes_scaled['Nham_aa']==hamm_dist][['fitness']].to_numpy()
+        x = predicted_phenotypes_scaled.loc[predicted_phenotypes_scaled['Nham_aa']==hamm_dist][['predicted_fitness']].to_numpy()
+        
+        model = LinearRegression()
+        model.fit(x,y)
+        y_pred = model.predict(x)
+        
+        if mochi_model != 'order2_sparse_regularized':
+            fyn_model_performance_by_nham.at[model_names[mochi_model],hamm_dist]=round(r2_score(y,y_pred),2)
+        else:
+            fyn_sparse_model_performance_by_nham.at[model_names[mochi_model],hamm_dist]=round(r2_score(y,y_pred),2)
+
+cummulative_sigma = 0
+for index, row in predicted_phenotypes.loc[predicted_phenotypes['WT']!=True].iterrows():
+    cummulative_sigma = cummulative_sigma + (row.sigma**2)
+
+MEV = predicted_phenotypes.var(numeric_only=True)['fitness'] - (cummulative_sigma/len(predicted_phenotypes.index))
+all_order_FEV = MEV/predicted_phenotypes.var(numeric_only=True)['fitness']
+
+FEV_correction = pd.DataFrame()
+for nham in range(2,8,1):
+    nham_vars = predicted_phenotypes.loc[predicted_phenotypes['Nham_aa']==nham]
+    
+    cummulative_sigma = 0
+    for index, row in nham_vars.iterrows():
+        cummulative_sigma = cummulative_sigma + (row.sigma**2)
+    
+    MEV = nham_vars.var(numeric_only=True)['fitness'] - (cummulative_sigma/len(nham_vars.index))
+    FEV = MEV/nham_vars.var(numeric_only=True)['fitness']
+    FEV_correction.at[0,nham]=FEV
+
+full_models_terms_by_order = pd.DataFrame(index=np.arange(1,3,1))
+
+models = {'linear':'Linear',
+         'order1':'1',
+         'order2':'2',
+         'order2_sparse_regularized':'2'}
+
+for model in list(model_names.keys())[:-1]:
+    coefs = pd.read_csv(path+'Fig3/FYN-SH3/FYN_mochi_'+model+'/task_'+tasks[model]+'/weights/weights_Folding.txt',
+                       sep='\t')
+    coefs.rename(columns={'mean_kcal/mol':'mean_kcal_mol', 'std_kcal/mol':'std_kcal_mol', 'ci95_kcal/mol':'ci95_kcal_mol'}, inplace=True)
+    for index, row in coefs.iterrows():
+        coefs.at[index,'order']=len(row.id.split('_'))
+    full_models_terms_by_order[models[model]]=coefs['order'].value_counts()
+
+
+sparse_models_terms_by_order = pd.DataFrame(index=np.arange(1,3,1))
+
+for model in list(model_names.keys())[-1:]:
+    coefs = pd.read_csv(path+'Fig3/FYN-SH3/FYN_mochi_'+model+'/task_'+tasks[model]+'/weights/weights_Folding.txt',
+                       sep='\t')
+    coefs.rename(columns={'mean_kcal/mol':'mean_kcal_mol', 'std_kcal/mol':'std_kcal_mol', 'ci95_kcal/mol':'ci95_kcal_mol'}, inplace=True)
+    for index, row in coefs.iterrows():
+        coefs.at[index,'order']=len(row.id.split('_'))
+    sparse_models_terms_by_order[models[model]]=coefs['order'].value_counts()
+
+
+import matplotlib.patches as mpatches
+from matplotlib.legend_handler import HandlerPatch
+
+fig, ax = plt.subplot_mosaic([['top left', 'top centre', 'top right'],
+                              ['biophys left', 'biophys centre', 'biophys right'],
+                              ['middle left', 'middle centre', 'middle right'],
+                              ['bottom left-centre', 'bottom left-centre', 'bottom right']],
+                            width_ratios = [3, 0.7, 3],
+                            height_ratios = [0.33, 0.67 ,0.37,0.1],
+                            figsize=(3.5,1.2))
+
+sns.heatmap(fyn_model_performance_by_nham.iloc[0:1].divide(FEV_correction.loc[0],axis=1), annot=False, fmt=".2f", cmap='coolwarm_r', vmin=0, vmax=1,ax=ax['top left'], linewidths=0, linecolor='black', annot_kws={'color':'black', 'font':'Arial', 'size':6}, center=0.5, cbar=False)
+sns.heatmap(fyn_model_performance_by_nham.iloc[1:].divide(FEV_correction.loc[0],axis=1), annot=False, fmt=".2f", cmap='coolwarm_r', vmin=0, vmax=1,ax=ax['biophys left'], linewidths=0, linecolor='black', annot_kws={'color':'black', 'font':'Arial', 'size':6}, center=0.5, cbar=False)
+sns.heatmap(fyn_sparse_model_performance_by_nham.divide(FEV_correction.loc[0],axis=1).apply(pd.to_numeric), annot=False, fmt=".2f", cmap='coolwarm_r', vmin=0, vmax=1,ax=ax['middle left'], linewidths=0, linecolor='black', annot_kws={'color':'black', 'font':'Arial', 'size':6}, center=0.5,cbar_ax=ax['bottom left-centre'],cbar_kws={"orientation": "horizontal", 'location':'bottom'})
+
+#ax['top left'].set_xlabel('Mutation order', fontsize=7)
+# Setting y-tick labels explicitly to ensure visibility
+ax['top left'].set_xticks([i+0.5 for i in range(fyn_model_performance_by_nham.shape[1])])
+ax['top left'].set_xticklabels(fyn_model_performance_by_nham.columns, fontsize=6, rotation=0)
+ax['top left'].set_yticks([0.5])
+ax['top left'].set_yticklabels(['1'], fontsize=6, rotation=0)
+ax['top left'].xaxis.set_label_position('top')
+ax['top left'].xaxis.set_ticks_position('top')
+ax['top left'].tick_params(axis='both',labelsize=6, labelrotation=0)
+ax['middle left'].set_yticks([i+0.5 for i in range(fyn_sparse_model_performance_by_nham.shape[0])])
+ax['middle left'].set_yticklabels([str(i+2) for i in range(fyn_sparse_model_performance_by_nham.shape[0])], fontsize=6, rotation=0)
+ax['middle left'].tick_params(axis='both',labelsize=6, labelrotation=0)
+ax['middle left'].set_xticks(ticks=[])
+ax['biophys left'].set_yticks([i+0.5 for i in range(fyn_model_performance_by_nham.shape[0]-1)])
+ax['biophys left'].set_yticklabels([str(i+1) for i in range(fyn_model_performance_by_nham.shape[0]-1)], fontsize=6, rotation=0)
+ax['biophys left'].tick_params(axis='both',labelsize=6, labelrotation=0)
+ax['biophys left'].set_xticks(ticks=[])
+ax['bottom left-centre'].set_xticks(ticks=np.arange(0,1.25,.25),labels=np.arange(0,1.25,.25), fontsize=6)
+ax['bottom left-centre'].set_xlabel('Fraction of Variance Explained (FVE)', rotation=0, labelpad=2, fontsize=7)
+
+sns.heatmap(fyn_overall_full_model_performance.iloc[0:1]/all_order_FEV, annot=True, fmt=".2f", cmap='coolwarm_r', vmin=0, vmax=1,ax=ax['top centre'], linewidths=0, linecolor='black', annot_kws={'ha': 'center', 'va': 'center','font':'Arial', 'size':6}, center=0.5, cbar=False)
+ax['top centre'].set_yticks(ticks=[])
+ax['top centre'].set_xticks([i+0.5 for i in range(fyn_overall_full_model_performance.shape[1])])
+ax['top centre'].set_xticklabels(fyn_overall_full_model_performance.columns, fontsize=6, rotation=0)
+ax['top centre'].xaxis.set_label_position('top')
+ax['top centre'].xaxis.set_ticks_position('top')
+ax['top centre'].tick_params(axis='both',labelsize=6, labelrotation=0)
+
+sns.heatmap((fyn_overall_full_model_performance.iloc[1:]/all_order_FEV), annot=True, fmt=".2f", cmap='coolwarm_r', vmin=0, vmax=1,ax=ax['biophys centre'], linewidths=0, linecolor='black', annot_kws={'ha': 'center', 'va': 'center','font':'Arial', 'size':6}, center=0.5, cbar=False)
+ax['biophys centre'].set_yticks(ticks=[])
+ax['biophys centre'].set_xticks(ticks=[])
+
+sns.heatmap((fyn_overall_sparse_model_performance/all_order_FEV), annot=True, fmt=".2f", cmap='coolwarm_r', vmin=0, vmax=1,ax=ax['middle centre'], linewidths=0, linecolor='black', annot_kws={'ha': 'center', 'va': 'center','font':'Arial', 'size':6}, center=0.5, cbar=False)
+ax['middle centre'].set_yticks(ticks=[])
+ax['middle centre'].set_xticks(ticks=[])
+
+full_models_terms_by_order.T.iloc[0:1].plot(kind='barh', stacked=True, cmap='cividis', ax=ax['top right'], legend=False, width=0.65)
+ax['top right'].invert_yaxis()
+ax['top right'].spines[['right','bottom','left']].set_visible(False)
+ax['top right'].xaxis.set_label_position('top')
+ax['top right'].xaxis.set_ticks_position('top')
+ax['top right'].set_xlabel('Number of coefficients', fontsize=7)
+ax['top right'].set_yticks(ticks=np.arange(0,1,1), labels=[])
+ax['top right'].set_xticks(ticks=np.arange(0,400,100),labels=np.arange(0,400,100))
+ax['top right'].set_xlim(0,350)
+ax['top right'].tick_params(axis='both',labelsize=6, labelrotation=0)
+
+full_models_terms_by_order.T.iloc[1:].plot(kind='barh', stacked=True, cmap='cividis', ax=ax['biophys right'], legend=False, width=0.65)
+ax['biophys right'].invert_yaxis()
+ax['biophys right'].spines[['right','bottom','left','top']].set_visible(False)
+ax['biophys right'].set_yticks(ticks=np.arange(0,2,1), labels=[])
+ax['biophys right'].set_xticks(ticks=[],labels=[])
+ax['biophys right'].set_xlim(0,350)
+ax['biophys right'].tick_params(axis='both',labelsize=6, labelrotation=0)
+
+sparse_models_terms_by_order.T.plot(kind='barh', stacked=True, cmap='cividis', ax=ax['middle right'], legend=False, width=0.6)
+ax['middle right'].invert_yaxis()
+handles, labels = ax['middle right'].get_legend_handles_labels()
+ax['middle right'].spines[['right','top','left']].set_visible(False)
+ax['middle right'].set_yticks(ticks=np.arange(0,1,1),labels=[])
+ax['middle right'].set_xticks(ticks=np.arange(0,400,100),labels=['']+[str(i) for i in np.arange(100,400,100)], fontsize=6)
+ax['middle right'].set_xlim(0,350)
+ax['middle right'].xaxis.set_ticks_position('bottom')
+
+for axis in ['top left', 'biophys left', 'middle left', 'bottom left-centre', 'top centre', 'biophys centre', 'middle centre']:
+    for spine in ax[axis].spines.values():
+        spine.set(visible=True,lw=0.5,edgecolor='black')
+
+ax['bottom right'].axis('off')
+#legend = ax['bottom right'].legend(handles, labels, title='Coefficient order', ncol=2, frameon=False, fontsize=6, bbox_to_anchor=(0.85,-1.5))
+#legend.get_title().set_fontsize('7')
+ 
+
+class HandlerCircle(HandlerPatch):
+    def create_artists(self, legend, orig_handle, xdescent, ydescent, width, height, fontsize, trans):
+        # Create a circle artist
+        center = (width / 2, height / 2)
+        p = mpatches.Circle(center, radius=min(width, height) / 2, color=orig_handle.get_facecolor())
+        self.update_prop(p, orig_handle, legend)
+        p.set_transform(trans)
+        return [p]
+
+# Define circular patches for each legend handle
+circle_handles = [mpatches.Circle((0, 0), radius=3, color=h.patches[0].get_facecolor()) for h in handles]
+
+# Set 'coef. order' as a pseudo-title inline with labels
+legend_labels = ['coef. order'] + labels
+blank_patch = mpatches.Circle((0, 0), radius=0, color='none')  # Invisible patch for title alignment
+circle_handles = [blank_patch] + circle_handles
+
+# Create the legend with custom circular handles and compact layout
+legend = ax['bottom right'].legend(circle_handles, legend_labels,
+                                   handler_map={mpatches.Circle: HandlerCircle()},  # Use custom circle handler
+                                   ncol=3,  # Layout in columns
+                                   frameon=False, fontsize=6,
+                                   loc='lower center',  # Align legend below the figure
+                                   bbox_to_anchor=(0.45, -7),  # Adjust if needed
+                                   handletextpad=0.2,  # Reduced spacing between handle and label
+                                   labelspacing=0.2,  # Reduced spacing between labels
+                                   handlelength=0.8,  # Shorten handle length
+                                   columnspacing=0.5)  # Reduced space between columns
+
+# Adjust font size of the "pseudo-title" if necessary
+legend.get_texts()[0].set_fontsize(7)
+
+
+for plot_name, df in zip(['top right', 'biophys right', 'middle right'],
+                         [full_models_terms_by_order.T.iloc[0:1],
+                          full_models_terms_by_order.T.iloc[1:],
+                          sparse_models_terms_by_order.T]):
+    totals = df[2]
+    
+    for i, total in enumerate(totals):
+        # Annotate total number of coefficients for all rows except the last row in the last plot
+        if not (plot_name == 'middle right' and i == len(totals) - 1):
+            try:
+                continue
+#                ax[plot_name].text(total +30, i, f"{int(total)}",  # Adjust 5 for spacing
+#                                   ha='left', va='center', fontsize=6, color='black')
+            except ValueError:
+                continue
+        
+    # Add combined total and percentage annotation for the last row of the last DataFrame
+    if plot_name == 'middle right':
+        # Calculate the total for the last row of the last and penultimate DataFrames
+        last_total = totals.iloc[-1]
+        penultimate_total = full_models_terms_by_order.T.iloc[1:].sum(axis=1).iloc[-1]
+        
+        # Calculate percentage based on the last row of the penultimate df
+        percentage = (last_total / penultimate_total) * 100 if penultimate_total != 0 else 0
+        
+        # Annotate with total and percentage for the last row only
+#        ax[plot_name].text(last_total +20, len(totals) - 1, f"{int(last_total)} ({percentage:.1f}%)",
+#                           ha='left', va='center', fontsize=6, color='black')
+
+
+
+fig.text(0.3, 1.09, 'Mutation order', ha='center', fontsize=7)
+fig.text(0.07, 0.89, 'Model\norder', ha='center', fontsize=7)
+fig.text(0.07, 0.8, 'Linear', va='center', ha='right', rotation='horizontal', fontsize=7)
+fig.text(0.07, 0.55, 'Thermo-\ndynamic', va='center', ha='right', rotation='horizontal', fontsize=7)
+fig.text(0.07, 0.25, 'Thermo.\nsparse', va='center', ha='right', rotation='horizontal', fontsize=7)
+
+plt.subplots_adjust(hspace=0.2, wspace= 0.06)
+
+plt.rcParams['svg.fonttype'] = 'none'
+#plt.savefig('FYN_DTScore_allmochimodelperformancesummary.svg', dpi=300, transparent=True, bbox_inches='tight')
+
+import pandas as pd
+
+rocklin = pd.read_csv(path+"Fig3/Tsuboyama2023_Dataset1_20230416.csv")
+
+# Definitions
+
+P06241 = 'ACGCTTTTCGTTGCATTGTATGATTATGAAGCAAGAACTGAAGATGATTTGTCTTTCCATAAAGGTGAAAAATTCCAAATCTTGAATTCTTCTGAAGGTGATTGGTGGGAAGCAAGATCTTTGACTACTGGTGAAACTGGTTATATCCCATCTAACTATGTCGCGCCTGTG'
+cores = {'P06241' : [2,16,18,24,26,48,53]}
+
+from Bio.Seq import Seq
+import math
+
+query_protein='P06241'
+pdb='1A0N'
+DTS = ['F', 'L', 'I', 'V', 'M']
+
+for index, row in rocklin[rocklin['name'].str.startswith(pdb)].iterrows():
+    if len(row['name'].split('_'))>1:
+        if row['name'].split('_')[1]=='scramble':
+            rocklin.at[index,'scramble']=True
+
+query_protein_wt = str(Seq(P06241).translate())
+rocklin_query_protein = rocklin[rocklin['name'].str.startswith(pdb)].loc[rocklin['scramble']!=True].copy()
+
+fyn_wt = str(Seq(rocklin_query_protein.loc[rocklin_query_protein['name']=='1A0N.pdb'].iloc[0]['dna_seq']).translate())[8:-7]
+
+def translate(sequence):
+    variant = str(Seq(sequence).translate())
+    if variant.find('SAGGSAGGSAG') > -1:
+        variant = variant[12:-11]
+    else:
+        variant = variant[8:-7]
+    return variant
+
+def find_mutations(sequence, wt_seq):
+    mutations = []
+    for i, (wt_res, seq_res) in enumerate(zip(wt_seq, sequence), start=1):
+        if wt_res != seq_res:
+            mutations.append(f"{wt_res}{i}{seq_res}")
+    return ",".join(mutations)
+
+def hamming_distance(str1, str2):
+    return sum(c1 != c2 for c1, c2 in zip(str1, str2))
+
+
+rocklin_query_protein['aa_seq'] = rocklin_query_protein['dna_seq'].apply(lambda seq: translate(seq))
+rocklin_query_protein['mutations'] = rocklin_query_protein['aa_seq'].apply(lambda seq: find_mutations(seq, fyn_wt))
+rocklin_query_protein['Nham'] = rocklin_query_protein['aa_seq'].apply(lambda seq: hamming_distance(seq, fyn_wt))
+rocklin_query_protein["redundant_single"] = pd.Series(dtype="object") 
+for index, row in rocklin_query_protein.iterrows():
+    if row.Nham==1 and len(row['name'].split('_'))>2:
+        rocklin_query_protein.at[index,'redundant_single']=True
+    else:
+        rocklin_query_protein.at[index,'redundant_single']=False
+rocklin_query_protein
+
+rocklin_query_protein.to_csv(path+'Fig3/FYN_Tsuboyama.txt',sep='\t')
+
+import pandas as pd
+import numpy as np
+
+thermomut = pd.read_csv(path+"Fig3/FYN-SH3_thermomutdb.csv",skipfooter=1,engine='python')
+for index, row in thermomut.iterrows():
+    for param in ['ΔΔG','ΔTm']:
+        if row[param]=="'-":
+            thermomut.at[index,param]=np.nan
+        elif row[param].startswith("'"):
+            thermomut.at[index,param]=float(row[param][1:])
+        else:
+            thermomut.at[index,param]=float(row[param])
+thermomut['ΔΔG']=-1*thermomut['ΔΔG']
+thermomut
+
+relative_positions = {'PMID: 9819209' : -1,
+                     'PMID: 11786916' : -1,
+                     'PMID: 14556750' : -1,
+                     'PMID: 12079394' : -1,
+                     'PMID: 18626019' : -1,
+                     'PMID: 16142914' : -84}
+thermomut["mutations"] = pd.Series(dtype="object")
+thermomut['Mut1'] = pd.Series(dtype="object")
+thermomut['Mut2'] = pd.Series(dtype="object")
+thermomut['Mut3'] = pd.Series(dtype="object")
+for index, row in thermomut.iterrows():
+    thermomut.at[index,'order']=len(row.Mutation.split(','))
+    if row.PDB == '1A0N' and row.Reference =='PMID: 11786916':
+        offset = -84
+    else:
+        offset = relative_positions[row.Reference]
+    for i in range(0,len(row.Mutation.split(','))):
+        thermomut.at[index,'Mut'+str(i+1)]=row.Mutation.split(',')[i].replace(' ','')[0]+str(int(row.Mutation.split(',')[i].replace(' ','')[1:-1])+offset)+row.Mutation.split(',')[i][-1]
+    thermomut.at[index,'mutations']=','.join(i.replace(' ','')[0]+str(int(i.replace(' ','')[1:-1])+offset)+i.replace(' ','')[-1] for i in row.Mutation.split(','))
+    #thermomut.at[index,'Mut'+str(i+1)]=row.Mutation.split(',')[i][0]+str(int(row.Mutation.split(',')[1].replace(' ','')[1:-1])+offset)+row.Mutation.split(',')[1].replace(' ','')[-1]
+
+thermomut
+
+thermomut.to_csv(path+'Fig3/FYN_thermomut.txt',sep='\t')
+
+import pandas as pd
+## LOAD ROCKLIN DATA ##
+
+rocklin_query_protein = pd.read_csv(path+'Fig3/FYN_Tsuboyama.txt',sep='\t',index_col=0)
+
+## LOAD THERMOMUT DATA ##
+
+thermomut = pd.read_csv(path+'Fig3/FYN_thermomut.txt',sep='\t', index_col=0)
+
+### SCALE VALUES ###
+
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+from scipy.stats import pearsonr
+from matplotlib.lines import Line2D  # For adding custom legend markers
+import math
+
+plt.rcParams['font.family'] = 'Arial'
+
+model_names = {'order2':'2'}
+tasks = {'order2':'1'}
+
+for mochi_model in model_names.keys():
+    ## LOAD MODEL COEFFICIENTS ##
+    coefs = pd.read_csv(path+'Fig3/FYN-SH3/FYN_mochi_'+mochi_model+'/task_'+tasks[mochi_model]+'/weights/weights_Folding.txt',
+                           sep='\t')
+    coefs.rename(columns={'ci95_kcal/mol': 'ci95_kcal_mol'}, inplace=True)
+    for index, row in coefs.iterrows():
+        if row.id_ref == 'WT':
+            coefs.at[index, 'order'] = 0
+        else:
+            coefs.at[index, 'order'] = len(row.id.split('_'))
+    
+    firstorderterms = coefs.loc[coefs['order'] == 1].copy()
+    
+    rocklin_merge = firstorderterms[['id', 'mean', 'std', 'order']].merge(
+        rocklin_query_protein.loc[rocklin_query_protein['redundant_single']==False][['mutations', 'deltaG', 'deltaG_95CI']], 
+        left_on='id', right_on='mutations'
+    )
+    rocklin_merge.set_index('id', inplace=True)
+    del rocklin_merge['mutations']
+    
+    rocklins_wt_dg = -1 * rocklin_query_protein.loc[rocklin_query_protein['name'] == '1A0N.pdb'].iloc[0]['deltaG']
+    rocklins_wt_dg_SE = (-1 * rocklin_query_protein.loc[rocklin_query_protein['name'] == '1A0N.pdb'].iloc[0]['deltaG_95CI']) / 1.96
+    alberts_wt_dg = float(coefs.loc[coefs['id'] == 'WT'].iloc[0]['mean'])
+    for index, row in rocklin_merge.iterrows():
+        variant_dg_SE = (-1 * row.deltaG_95CI) / 1.96
+        variant_ddg_SE = math.sqrt((rocklins_wt_dg_SE**2) + (variant_dg_SE**2))
+        rocklin_merge.at[index, 'rocklin_dGf'] = -1 * row.deltaG
+        rocklin_merge.at[index, 'rocklin_ddGf'] = (-1 * row.deltaG) - rocklins_wt_dg
+        rocklin_merge.at[index, 'rocklin_ddGf_SE'] = variant_ddg_SE
+        rocklin_merge.at[index, 'rocklin_ddGf_CI95'] = variant_ddg_SE * 1.96
+        rocklin_merge.at[index, 'albert_dGf'] = alberts_wt_dg + row['mean']
+    
+    thermomut_merge = firstorderterms[['id', 'mean', 'std', 'order']].merge(
+        thermomut.loc[(thermomut['order'] == 1) & (thermomut['ΔΔG'].notna())][['ΔΔG', 'Mut1', 'order']], 
+        left_on='id', right_on='Mut1'
+    ).drop_duplicates().set_index('Mut1').sort_values('mean').copy()
+    thermomut_core = thermomut_merge.copy()
+    thermomut_core['prev_SE']=thermomut_core['std']
+    thermomut_core = thermomut_core.rename(columns={'ΔΔG':'prev_ddG','order_x':'Nham'})
+    thermomut_core['Dataset']='ThermoMutDB'
+    rocklin_merge = rocklin_merge.rename(columns={'rocklin_ddGf': 'prev_ddG', 'rocklin_ddGf_SE': 'prev_SE', 'order': 'Nham'})
+    rocklin_merge['Dataset'] = 'cDNA display proteolysis'
+    all_core_ddGf_validations = pd.concat(
+        [thermomut_core[['prev_ddG', 'prev_SE', 'mean', 'std', 'Dataset', 'Nham']],
+         rocklin_merge[['prev_ddG', 'prev_SE', 'mean', 'std', 'Dataset', 'Nham']]],
+        axis=0
+    )
+    
+    x = all_core_ddGf_validations[['mean']].to_numpy()
+    y = all_core_ddGf_validations[['prev_ddG']].to_numpy()
+    model = LinearRegression()
+    model.fit(x, y)
+    slope = model.coef_[0][0]
+    intercept = model.intercept_[0]
+
+    y_scaled = y
+    x_scaled = slope * x + intercept
+
+    
+    all_core_ddGf_validations['actual_ddGs']=x_scaled
+    all_core_ddGf_validations['scaled_std']=all_core_ddGf_validations['std'].to_numpy() * slope
+
+
+
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+from matplotlib.patches import Rectangle
+import numpy as np
+import pandas as pd
+
+firstorderterms=all_core_ddGf_validations.drop_duplicates('actual_ddGs').copy()
+
+firstorderterms['mut_from'] = ''
+firstorderterms['mut_from'] = firstorderterms['mut_from'].astype('object')
+firstorderterms['mut_to'] = ''
+firstorderterms['mut_to'] = firstorderterms['mut_to'].astype('object')
+firstorderterms['mut_pos'] = 0
+firstorderterms['mut_pos'] = firstorderterms['mut_pos'].astype(int)
+for index, row in firstorderterms.iterrows():
+    firstorderterms.at[index,'mut_from']=index[0:-1]
+    firstorderterms.at[index,'mut_to']=index[-1]
+    firstorderterms.at[index,'mut_pos']=int(index[1:-1])
+
+firstorderterms=firstorderterms.sort_values(['mut_pos','mut_to'],ascending=[True,True])
+
+real_pos = [2,16,18,24,26,48,53]
+mutated_positions = []
+
+for index, row in firstorderterms.iterrows():
+    if index !='WT' and row.mut_from not in mutated_positions:
+        mutated_positions.append(row.mut_from)
+
+coefs_hm=pd.DataFrame(columns=mutated_positions)
+
+for index, row in firstorderterms.iterrows():
+    if index !='WT':
+        coefs_hm.at[row.mut_to,row.mut_from]=row.actual_ddGs
+
+coefs_sparse_model = pd.read_csv(path+'Fig3/FYN-SH3/FYN_mochi_order2_sparse_regularized/task_4/weights/weights_Folding.txt',
+                       sep='\t')
+coefs_sparse_model.rename(columns={'mean_kcal/mol':'mean_kcal_mol', 'std_kcal/mol':'std_kcal_mol', 'ci95_kcal/mol':'ci95_kcal_mol'}, inplace=True)
+for index, row in coefs_sparse_model.iterrows():
+    if row.id_ref == 'WT':
+        coefs_sparse_model.at[index,'order']=0
+    else:
+        coefs_sparse_model.at[index,'order']=len(row.id.split('_'))
+coefs_sparse_model=coefs_sparse_model.set_index('id')
+#coefs_sparse_model=coefs_sparse_model.loc[coefs_sparse_model['order']==1].copy()
+
+coefs_sparse_model['mut_from'] = ''
+coefs_sparse_model['mut_from'] = coefs_sparse_model['mut_from'].astype('object')
+coefs_sparse_model['mut_to'] = ''
+coefs_sparse_model['mut_to'] = coefs_sparse_model['mut_to'].astype('object')
+for index, row in coefs_sparse_model.iterrows():
+    coefs_sparse_model.at[index,'mut_from']=row.id_ref[0:-1]
+    coefs_sparse_model.at[index,'mut_to']=row.id_ref[-1]
+    
+coefs_hm_sparse_model = pd.DataFrame(columns=mutated_positions)
+
+for index, row in coefs_sparse_model.iterrows():
+    if row.id_ref !='WT' and row.order==1:
+        coefs_hm_sparse_model.at[row.mut_to,row.mut_from]='*'
+coefs_hm_sparse_model=coefs_hm_sparse_model.fillna('')
+
+fig, ax = plt.subplots(figsize=(1.4,1.6))
+
+#ax=sns.heatmap(coefs_hm.fillna(0), cmap='coolwarm', vmin=-1*max(coefs_hm.fillna(0).max()), vmax=max(coefs_hm.fillna(0).max()),cbar_kws={"orientation": "horizontal", "pad": 0.02, 'location':'bottom'}, xticklabels=True, yticklabels=True)
+singles_boundary=max(all_core_ddGf_validations.drop_duplicates('actual_ddGs')['actual_ddGs'])
+ax=sns.heatmap(coefs_hm.fillna(0), cmap='coolwarm', vmin=-1*singles_boundary, vmax=singles_boundary,cbar_kws={"orientation": "horizontal", "pad": 0.03, 'location':'bottom'}, xticklabels=True, yticklabels=True,
+               annot=coefs_hm_sparse_model.to_numpy().tolist(), fmt= '', annot_kws={'size':4})
+ax.figure.axes[-1].set_xticks(ticks=np.arange(-1*round(max(all_core_ddGf_validations.drop_duplicates('actual_ddGs')['actual_ddGs']),0),round(max(all_core_ddGf_validations.drop_duplicates('actual_ddGs')['actual_ddGs']),0)+1,1),labels=[int(i) for i in np.arange(-1*round(max(all_core_ddGf_validations.drop_duplicates('actual_ddGs')['actual_ddGs']),0),round(max(all_core_ddGf_validations.drop_duplicates('actual_ddGs')['actual_ddGs']),0)+1,1)], fontsize=7)
+ax.figure.axes[-1].set_xlabel(r'Inferred ΔΔGf \ kcal mol-1', rotation=0, labelpad=5, fontsize=7)
+plt.tick_params(axis='both', which='both', labelsize=7, labelbottom = False, bottom=False, top = True, labeltop=True)
+plt.yticks(fontsize=6)
+plt.xticks(fontsize=6, rotation=45)
+plt.xlabel('WT residue',  fontsize=7)
+ax.xaxis.set_label_position('top') 
+plt.ylabel('Substitution AA', fontsize=7)
+ax.spines[['right','top','left','bottom']].set_visible(True)
+#plt.title('Background-averaged\nmutational effects',fontsize=18)
+for spine in ax.figure.axes[-1].spines.values():
+    spine.set(visible=True,lw=1,edgecolor='black')
+
+for i in mutated_positions:
+    for j in mutated_positions:
+        if i[0]==j[0]:
+            col=coefs_hm.columns.get_loc(i)
+            row=coefs_hm.index.get_loc(j[0])
+            ax.add_patch(Rectangle((col, row), 1, 1, fill=True,edgecolor='black', lw=0.0001, facecolor='black'))
+plt.rcParams['svg.fonttype'] = 'none'
+#plt.savefig('FYN_Mochi_1storderterms_2ndordermodel_ddGs_scaled_to_iv_ddGs.svg', dpi=300, transparent=True, bbox_inches='tight')
+
+fig, ax = plt.subplots(figsize=(1, 1))
+
+palette = {'ThermoMutDB': '#BB202E', 'cDNA display proteolysis': 'black'}
+
+model_scaled = LinearRegression()
+model_scaled.fit(x_scaled, y_scaled)
+y_pred_scaled = model_scaled.predict(x_scaled)
+scatter=sns.scatterplot(
+    x=x_scaled.ravel(),
+    y=y_scaled.ravel(),
+    hue=all_core_ddGf_validations['Dataset'],
+    palette=palette,
+    ax=ax,
+    s=0,
+    edgecolor='k',
+    linewidth=0.1
+)
+for dataset in palette.keys():
+    mask = all_core_ddGf_validations['Dataset'] == dataset
+    plt.errorbar(
+        x_scaled[mask].ravel(), 
+        y_scaled[mask].ravel(),
+        yerr=all_core_ddGf_validations.loc[mask]['prev_SE'], 
+        xerr=all_core_ddGf_validations.loc[mask]['std'] * slope,
+        fmt='o',
+        elinewidth=0.3, 
+        capsize=1, 
+        capthick=0.5, 
+        markersize=1,
+        linewidth=0, 
+        color=palette[dataset], 
+        label=''
+    )
+plt.plot(x_scaled, y_pred_scaled, color='red', linewidth=1, linestyle='-')
+ax.axline((0, 0), slope=1, linestyle="dashed", color='gray', lw=0.5)
+ax.axhline(0, color='black', linewidth=0.5)
+ax.axvline(0, color='black', linewidth=0.5)
+r, p = pearsonr(y_scaled.ravel(), y_pred_scaled.ravel())
+ax.text(
+    0.5,2, 
+    f'All measurements | n = {len(x)}\nR = {round(r, 2)} | p-val = {p:.2e}', 
+    fontsize=7, color='black', ha='center', va='center', transform=ax.transAxes
+)
+plt.xlabel('ΔΔGf kcal mol-1\nThermodynamic model-inferred', fontsize=7)
+plt.ylabel('ΔΔGf kcal mol-1\nReported in literature', fontsize=7)
+ax.set_xticks(np.arange(-1, 4, 1))
+ax.set_xticklabels(np.arange(-1, 4, 1), fontsize=6)
+ax.set_yticks(np.arange(-1, 4, 1))
+ax.set_yticklabels(np.arange(-1, 4, 1), fontsize=6)
+ax.spines[['right', 'top']].set_visible(False)
+ax.set_ylim(-1, 3.85)
+ax.set_xlim(-1,3.85)
+handles, labels = scatter.get_legend_handles_labels()
+legend_labels = []
+for dataset in palette.keys():
+    subset = all_core_ddGf_validations[all_core_ddGf_validations['Dataset'] == dataset]
+    x_subset = subset[['mean']].to_numpy()
+    y_subset = subset[['prev_ddG']].to_numpy()
+    model.fit(x_subset, y_subset)
+    y_pred_subset = model.predict(x_subset)
+    r_subset, p_subset = pearsonr(y_subset.ravel(), y_pred_subset.ravel())
+    legend_labels.append(f"{dataset} | n = {len(x_subset)}\nR = {round(r_subset, 2)} | p-val = {p_subset:.2e}")
+custom_markers = [
+    Line2D([0], [0], marker='o', color=palette['ThermoMutDB'], markersize=5, linestyle=''),
+    Line2D([0], [0], marker='o', color=palette['cDNA display proteolysis'], markersize=5, linestyle='')
+]
+legend = ax.legend(
+    handles=custom_markers,
+    labels=legend_labels,
+    bbox_to_anchor=(0.5, 1.1),
+    loc='lower center',
+    fontsize=6,
+    frameon=False,
+    handletextpad=0.5,
+    title='',
+    title_fontsize=7
+)
+legend._legend_box.align = "center"
+#    plt.savefig('FYN_ddGs_scaled_from_additivetrait_with_legend_'+mochi_model+'.svg', dpi=300, transparent=True, bbox_inches='tight')
+#    plt.savefig('FYN_ddGs_scaled_from_additivetrait_with_legend_'+mochi_model+'.png', dpi=300, transparent=True, bbox_inches='tight')
+
+from matplotlib.patches import Rectangle
+import seaborn as sns
+import matplotlib.pyplot as plt
+import math
+from matplotlib.ticker import FuncFormatter
+
+model_names = {'order2':'2'}
+tasks = {'order2':'1'}
+
+
+def custom_tick_formatter(x, pos):
+    return int(x) if x.is_integer() else x
+
+plt.rcParams['font.family'] = 'Arial'
+
+coefs = pd.read_csv(path+'Fig3/FYN-SH3/FYN_mochi_'+mochi_model+'/task_'+tasks[mochi_model]+'/weights/weights_Folding.txt',
+                       sep='\t')
+coefs.rename(columns={'mean_kcal/mol':'mean_kcal_mol', 'std_kcal/mol':'std_kcal_mol', 'ci95_kcal/mol':'ci95_kcal_mol'}, inplace=True)
+for index, row in coefs.iterrows():
+    if row.id_ref == 'WT':
+        coefs.at[index,'order']=0
+    else:
+        coefs.at[index,'order']=len(row.id.split('_'))
+
+secondorderterms=coefs.loc[coefs['order']==2].copy()
+
+wt ='FLFFIIV'
+mut_pos_name = [2,16,18,24,26,48,53]
+
+
+secondorderterms['mutation1']='a'
+secondorderterms['mutation2']='a'
+for index,row in secondorderterms.iterrows():
+    secondorderterms.at[index,'mutation1']=row.id.split('_')[0]
+    secondorderterms.at[index,'mutation2']=row.id.split('_')[1]
+
+single_mutations=[]
+for index, row in secondorderterms.iterrows():
+    if row.mutation1 not in single_mutations:
+        single_mutations.append(row.mutation1)
+for index, row in secondorderterms.iterrows():
+    if row.mutation2 not in single_mutations:
+        single_mutations.append(row.mutation2)    
+
+custom_order = {char: index for index, char in enumerate("FLIMV")}
+
+single_mutations = sorted(
+    single_mutations, 
+    key=lambda x: (int(''.join(filter(str.isdigit, x[1:]))), custom_order[x[-1]])
+)
+
+pairwise_secondorderterms=pd.DataFrame(columns=single_mutations)
+
+for index, row in secondorderterms.iterrows():
+    pairwise_secondorderterms.at[row.mutation1,row.mutation2]=row['mean']
+
+for index, row in secondorderterms.iterrows():
+    pairwise_secondorderterms.at[row.mutation2,row.mutation1]=row['mean']
+
+pairwise_secondorderterms=pairwise_secondorderterms*slope
+pairwise_secondorderterms=pairwise_secondorderterms.fillna(0)
+pairwise_secondorderterms=pairwise_secondorderterms.reindex(single_mutations)
+
+fig, ax=plt.subplots(figsize=(3,3))
+for mutation_nr, mutation in enumerate(mutated_positions[1:]):
+    plt.text(-4.2, 2.5+4*mutation_nr, mutation, fontsize=8)
+for mutation_nr, mutation in enumerate(mutated_positions[:-1]):
+    plt.text(1+4*mutation_nr, 27.2, mutation, fontsize=8)
+
+
+# Create a custom mask
+mask = np.zeros_like(pairwise_secondorderterms.iloc[4:,:-4], dtype=bool)
+for i in range(len(pairwise_secondorderterms.iloc[4:,:-4].index)):
+    for j in range(i+1, len(pairwise_secondorderterms.iloc[4:,:-4].index)):  # Only mask rows and columns in the upper diagonal
+        if (i // 4) < (j // 4):  # Mask entire quadrants in the upper diagonal
+            mask[i, j] = True
+
+
+coefs_sparse_model = pd.read_csv(path+'Fig3/FYN-SH3/FYN_mochi_order2_sparse_regularized/task_4/weights/weights_Folding.txt',
+                       sep='\t')
+coefs_sparse_model.rename(columns={'mean_kcal/mol':'mean_kcal_mol', 'std_kcal/mol':'std_kcal_mol', 'ci95_kcal/mol':'ci95_kcal_mol'}, inplace=True)
+for index, row in coefs_sparse_model.iterrows():
+    coefs_sparse_model.at[index,'order']=len(row.id.split('_'))
+coefs_sparse_model=coefs_sparse_model.set_index('id')
+
+sparse_regularized_selected = pd.DataFrame(index=pairwise_secondorderterms.index, columns=pairwise_secondorderterms.columns)
+for coupling in list(coefs_sparse_model.loc[coefs_sparse_model['order']==2].index):
+    mutations=coupling.split('_')
+    sparse_regularized_selected.at[mutations[0],mutations[1]]='*'
+    sparse_regularized_selected.at[mutations[1],mutations[0]]='*'
+    
+sparse_regularized_selected=sparse_regularized_selected.fillna('')
+
+couplings_boundary=pairwise_secondorderterms.values.max()            
+cbar_ax=fig.add_axes([0.6,0.6,0.3,0.02])
+hmap=sns.heatmap(pairwise_secondorderterms.iloc[4:,:-4], cmap='coolwarm', center=0, xticklabels=True,yticklabels=True, mask=mask,vmin=-1*couplings_boundary, vmax=couplings_boundary,
+              cbar_kws={"orientation": "horizontal", "pad": 0.02, 'ticks':list(np.arange(-1*round(couplings_boundary * 2)/2,round(couplings_boundary * 2)/2+1,1))}, ax=ax, cbar_ax=cbar_ax, annot=sparse_regularized_selected.iloc[4:,:-4].mask(mask).to_numpy().tolist(), fmt= '', annot_kws={'size':4})
+
+
+#ax.figure.axes[-1].set_ylabel('ddG', rotation=270)
+cbar_ax.set_xlabel('Inferred ΔΔΔGf\nkcal mol-1', rotation=0, fontsize=8)
+cbar_ax.xaxis.set_label_position('top')
+cbar_ax.xaxis.set_major_formatter(FuncFormatter(custom_tick_formatter))
+for spine in cbar_ax.spines.values():
+    spine.set(visible=True,lw=1,edgecolor='black')
+plt.xticks(fontsize=6)
+plt.yticks(fontsize=6)
+    
+labels_x = [item.get_text() for item in ax.get_xticklabels()]
+for label_nr, label in enumerate(labels_x):
+    labels_x[label_nr]=label[-1]
+ax.set_xticklabels(labels_x, rotation=0,fontsize=6)
+labels_y = [item.get_text() for item in ax.get_yticklabels()]
+for label_nr, label in enumerate(labels_y):
+    labels_y[label_nr]=label[-1]
+ax.set_yticklabels(labels_y, rotation=0,fontsize=6)
+
+for i in range(0, len(pairwise_secondorderterms.iloc[4:,:-4].index), 4):
+    for j in range(0, len(pairwise_secondorderterms.iloc[4:,:-4].index), 4):
+        if not np.any(mask[i:i+4, j:j+4]):
+            rect = Rectangle((j, i), 4, 4, linewidth=1, edgecolor='black', facecolor='none')
+            ax.add_patch(rect)
+
+ax.axhline(y=len(pairwise_secondorderterms.iloc[4:,:-4].index), color='k',linewidth=2)
+ax.axhline(y=0,xmin=0,xmax=0.16, color='k',linewidth=2)
+ax.axvline(x=0, color='k',linewidth=2)
+ax.axvline(x=len(pairwise_secondorderterms.iloc[4:,:-4].index),ymin=0,ymax=0.16, color='k',linewidth=2)
+
+plt.rcParams['svg.fonttype'] = 'none'
+#plt.savefig('FYN_SH3_2or_pairwisecoup_scaled_to_iv_ddGs_withsparsecoefs.png', dpi=300, transparent=True, bbox_inches = "tight")
+            
+
+import pandas as pd
+from seaborn import kdeplot
+from Bio.Seq import Seq
+
+predicted_phenotypes = pd.read_csv(path+'Fig3/FYN-SH3/FYN_mochi_order2/task_1/predictions/predicted_phenotypes_supp.txt',
+                                  sep='\t', lineterminator='\n', low_memory=False)
+predicted_phenotypes["core"] = pd.Series(dtype="object") 
+for index, row in predicted_phenotypes.iterrows():
+    core=[]
+    for i in cores['P06241']:
+        core.append(row.aa_seq[i])
+    predicted_phenotypes.at[index,'core'] = ''.join(core)
+
+RT=303*0.001987
+predicted_phenotypes['mean_additive_trait']=predicted_phenotypes[['fold_1_additive_trait0','fold_2_additive_trait0','fold_3_additive_trait0','fold_4_additive_trait0','fold_5_additive_trait0','fold_6_additive_trait0','fold_7_additive_trait0','fold_8_additive_trait0','fold_9_additive_trait0','fold_10_additive_trait0']].mean(axis=1)
+predicted_phenotypes['std_additive_trait']=predicted_phenotypes[['fold_1_additive_trait0','fold_2_additive_trait0','fold_3_additive_trait0','fold_4_additive_trait0','fold_5_additive_trait0','fold_6_additive_trait0','fold_7_additive_trait0','fold_8_additive_trait0','fold_9_additive_trait0','fold_10_additive_trait0']].std(axis=1)
+
+predicted_phenotypes['mean']=predicted_phenotypes[['fold_1','fold_2','fold_3','fold_4','fold_5','fold_6','fold_7','fold_8','fold_9','fold_10']].mean(axis=1)
+predicted_phenotypes['std']=predicted_phenotypes[['fold_1','fold_2','fold_3','fold_4','fold_5','fold_6','fold_7','fold_8','fold_9','fold_10']].std(axis=1)
+
+predicted_phenotypes['mean_dG']= predicted_phenotypes['mean_additive_trait']*RT
+predicted_phenotypes['std_dG']= predicted_phenotypes['std_additive_trait']*RT
+
+# Normalize data in the -1 to 0 range
+
+def normalize(values, bounds):
+    return [bounds['desired']['lower'] + (x - bounds['actual']['lower']) * (bounds['desired']['upper'] - bounds['desired']['lower']) / (bounds['actual']['upper'] - bounds['actual']['lower']) for x in values]
+def normalize_errors(values, bounds):
+    return [x * (bounds['desired']['upper'] - bounds['desired']['lower']) / (bounds['actual']['upper'] - bounds['actual']['lower']) for x in values]
+
+predicted_phenotypes_scaled = predicted_phenotypes.copy()
+
+reference=predicted_phenotypes.loc[predicted_phenotypes['WT']==True].iloc[0]['core']
+
+fig = plt.figure(figsize=(0,0))
+lines = kdeplot(data=predicted_phenotypes,x='fitness',linewidth=0).get_lines()
+for line in lines:
+    x, y = line.get_data()
+    mode=(x[np.argmax(y)])
+plt.close()
+
+predicted_phenotypes_scaled['fitness']=normalize(list(predicted_phenotypes_scaled['fitness']),{'actual': {'lower': mode, 'upper': predicted_phenotypes_scaled.loc[predicted_phenotypes_scaled['core']==reference]['fitness'].iloc[0]}, 'desired': {'lower': -1, 'upper': 0}})
+
+
+fig = plt.figure(figsize=(0,0))
+lines = kdeplot(data=predicted_phenotypes,x='mean',linewidth=0).get_lines()
+for line in lines:
+    x, y = line.get_data()
+    mode=(x[np.argmax(y)])
+plt.close()
+
+predicted_phenotypes_scaled['mean']=normalize(list(predicted_phenotypes_scaled['mean']),{'actual': {'lower': mode, 'upper': predicted_phenotypes.loc[predicted_phenotypes['aa_seq']==str(Seq(P06241).translate())].iloc[0]['mean']}, 'desired': {'lower': -1, 'upper': 0}})
+predicted_phenotypes_scaled['std'] = normalize_errors(list(predicted_phenotypes_scaled['std']),{'actual': {'lower': mode, 'upper':predicted_phenotypes.loc[predicted_phenotypes['aa_seq']==str(Seq(P06241).translate())].iloc[0]['mean']}, 'desired': {'lower': -1, 'upper': 0}})
+
+
+
+# Define all variants separated by 1 mutation
+
+from tqdm import tqdm
+from itertools import product
+
+DTS = ['F','L','I','M','V']
+a=list(product(DTS,repeat=7))
+
+
+
+dod={}
+for variant in tqdm(a, total=len(a)):
+    iterator=0
+    positerator=0
+    singles=[]
+    for i in product(variant,DTS):
+        mutant = ''.join(''.join(variant[:positerator])+str(i[1])+''.join(variant[positerator+1:]))
+        if (iterator/5).is_integer() == True and iterator !=0:
+            positerator+=1
+        iterator+=1
+        if mutant != ''.join(variant):
+            singles.append(mutant)
+    dod[''.join(variant)]=singles
+
+
+import numpy as np
+import matplotlib.colors as mcolors
+
+def shiftedColorMap(cmap, start=0, midpoint=0.5, stop=1, name=None):
+    '''
+    Function to offset the "center" of a colormap. Useful for
+    data with a negative min and positive max and you want the
+    middle of the colormap's dynamic range to be at zero.
+
+    Input
+    -----
+      cmap : The matplotlib colormap to be altered
+      start : Offset from lowest point in the colormap's range.
+          Defaults to 0.0 (no lower offset). Should be between
+          0.0 and `midpoint`.
+      midpoint : The new center of the colormap. Defaults to 
+          0.5 (no shift). Should be between 0.0 and 1.0. In
+          general, this should be  1 - vmax / (vmax + abs(vmin))
+          For example if your data range from -15.0 to +5.0 and
+          you want the center of the colormap at 0.0, `midpoint`
+          should be set to  1 - 5/(5 + 15)) or 0.75
+      stop : Offset from highest point in the colormap's range.
+          Defaults to 1.0 (no upper offset). Should be between
+          `midpoint` and 1.0.
+      name : Optional name for the colormap. If provided, the colormap
+          will be registered under this name.
+
+    Returns
+    -------
+      A `LinearSegmentedColormap` object.
+    '''
+    cdict = {
+        'red': [],
+        'green': [],
+        'blue': [],
+        'alpha': []
+    }
+
+    # Regular index to compute the colors
+    reg_index = np.linspace(start, stop, 257)
+
+    # Shifted index to match the data
+    shift_index = np.hstack([
+        np.linspace(0.0, midpoint, 128, endpoint=False), 
+        np.linspace(midpoint, 1.0, 129, endpoint=True)
+    ])
+
+    for ri, si in zip(reg_index, shift_index):
+        r, g, b, a = cmap(ri)
+
+        cdict['red'].append((si, r, r))
+        cdict['green'].append((si, g, g))
+        cdict['blue'].append((si, b, b))
+        cdict['alpha'].append((si, a, a))
+
+    newcmap = mcolors.LinearSegmentedColormap(name if name else "shifted", cdict)
+
+    return newcmap
+iterator_cmap=0
+
+import seaborn as sns
+import networkx as nx
+from itertools import count
+from seaborn import kdeplot
+from itertools import groupby
+import matplotlib
+import numpy as np
+import warnings
+warnings.filterwarnings('ignore')
+
+protein='P06241'
+
+protein_variants_scaled = predicted_phenotypes_scaled.sort_values('mean', ascending=False)
+lowest_nham=int(protein_variants_scaled.sort_values('Nham_aa', ascending=True).iloc[0]['Nham_aa'])
+
+lines = kdeplot(data=protein_variants_scaled, x='mean').get_lines()
+    
+for line in lines:
+    x, y = line.get_data()
+    mode=x[np.argmax(y)]
+plt.close()
+
+G = nx.from_dict_of_lists(dod)
+G_val = nx.from_dict_of_lists(dod)
+
+pos={}
+for index, row in protein_variants_scaled.iterrows():
+    pos[row.core] = (row.Nham_aa, row['mean'])
+
+fig, (ax0,axviable,ax1,ax2) = plt.subplots(4,1,gridspec_kw={'height_ratios':[2,2,1,12],'hspace': 0.15},figsize=(2.3,2.5))
+plt.close()   
+fig, (ax0,axviable,ax1,ax2) = plt.subplots(4,1,gridspec_kw={'height_ratios':[2,2,1,12],'hspace': 0.15},figsize=(2.3,2.5),sharex=ax1)
+
+
+fig=sns.violinplot(x="Nham_aa", y="mean", data=protein_variants_scaled, inner=None, ax=ax2, color='#B4D689', linewidth=0.3)
+plt.axhline(y=-0.5, linestyle='--', color='gray', linewidth=0.5)
+
+remove=[i for i in dod.keys() if i not in pos.keys()]
+
+G.remove_nodes_from(remove)
+
+fitness_values=[]
+for i in pos:
+    fitness_values.append(pos[i][1])
+groups = []
+for _, g in groupby(fitness_values, lambda x: (x-1)//0.05):
+    groups.append(list(g))      # Store group iterator as a list
+
+fitness_attr={}
+for node in G.nodes:
+    iterator=0
+    for bin in groups:
+        if pos[node][1] in bin:
+            fitness_attr[node]=iterator
+            break
+        iterator+=1
+
+nx.set_node_attributes(G, fitness_attr, 'mean')
+groups = set(nx.get_node_attributes(G,'mean').values())
+mapping = dict(zip(sorted(groups),count()))
+nodes = G.nodes()
+colors = [mapping[G.nodes[n]['mean']] for n in nodes]
+
+total_viable=0
+nham_viability=pd.DataFrame(columns=['Number_of_variants','Fraction_50pc_folded'])
+for nham in range(0,8,1):
+    nham_viability.at[nham,'protein']=protein
+    nham_viability.at[nham,'nham']=nham
+    nham_viability.at[nham,'Number_of_variants']=len(protein_variants_scaled.loc[protein_variants_scaled['Nham_aa']==nham])
+    nham_viability.at[nham,'Fraction_50pc_folded']=round(100*(len(protein_variants_scaled.loc[protein_variants_scaled['Nham_aa']==nham].loc[protein_variants_scaled['mean']>=-0.5].index)/len(protein_variants_scaled.loc[protein_variants_scaled['Nham_aa']==nham])),1)
+    nham_viability.at[nham,'Number_of_50pc_folded_variants']=len(protein_variants_scaled.loc[protein_variants_scaled['Nham_aa']==nham].loc[protein_variants_scaled ['mean']>=-0.5].index)
+    nham_viability.at[nham,'Fraction_75pc_folded']=round(100*(len(protein_variants_scaled.loc[protein_variants_scaled['Nham_aa']==nham].loc[protein_variants_scaled['mean']>=-0.25].index)/len(protein_variants_scaled.loc[protein_variants_scaled['Nham_aa']==nham])),1)
+    nham_viability.at[nham,'Number_of_75pc_folded_variants']=len(protein_variants_scaled.loc[protein_variants_scaled['Nham_aa']==nham].loc[protein_variants_scaled ['mean']>=-0.25].index)
+    nham_viability.at[nham,'Fraction_90pc_folded']=round(100*(len(protein_variants_scaled.loc[protein_variants_scaled['Nham_aa']==nham].loc[protein_variants_scaled['mean']>=-0.1].index)/len(protein_variants_scaled.loc[protein_variants_scaled['Nham_aa']==nham])),1)
+    nham_viability.at[nham,'Number_of_90pc_folded_variants']=len(protein_variants_scaled.loc[protein_variants_scaled['Nham_aa']==nham].loc[protein_variants_scaled ['mean']>=-0.1].index)
+    total_viable=total_viable+len(protein_variants_scaled.loc[protein_variants_scaled['Nham_aa']==nham].loc[protein_variants_scaled['mean']>=-0.5].index)
+for index, row in nham_viability.iterrows():
+    nham_viability.at[index,'Fraction_of_total_50pc_viable_variants']= round(100*row['Number_of_50pc_folded_variants']/total_viable,1)
+
+total_core_viabilities = pd.DataFrame(columns=['protein', 'variants_above_01', 'variants_above_025', 'variants_above_05', 'variants_below_05'])
+total_core_viabilities.at[protein,'variants_above_01']=len(protein_variants_scaled.loc[protein_variants_scaled['fitness']>=-0.1].index)/len(protein_variants_scaled.index)*5**7
+total_core_viabilities.at[protein,'variants_above_025']=len(protein_variants_scaled.loc[protein_variants_scaled['fitness']>=-0.25].index)/len(protein_variants_scaled.index)*5**7
+total_core_viabilities.at[protein,'variants_below_05']=5**7-len(protein_variants_scaled.loc[protein_variants_scaled['fitness']>=-0.5].index)/len(protein_variants_scaled.index)*5**7
+total_core_viabilities.at[protein,'variants_above_05']=len(protein_variants_scaled.loc[protein_variants_scaled['fitness']>=-0.5].index)/len(protein_variants_scaled.index)*5**7
+
+
+    
+orig_cmap = plt.cm.coolwarm
+iterator_cmap+=1
+midpoint=(-0.5 - np.min(protein_variants_scaled['mean']))/ (np.max(protein_variants_scaled['mean']) - np.min(protein_variants_scaled['mean']))
+shifted_cmap = shiftedColorMap(orig_cmap, midpoint=1-midpoint, name='shifted'+str(iterator_cmap))
+    
+nx.draw_networkx(G, pos=pos, with_labels=False, node_size=0, ax=ax2, edge_color='gray', width=0.002)
+nodes=nx.draw_networkx_nodes(G, pos, nodelist=nodes, node_color=colors, node_size=0.3, cmap=shifted_cmap)
+ax2.tick_params(left=True, bottom=True, labelleft=True, labelbottom=True)
+ax2.set_xlabel('Number of amino acid substitutions', fontsize=7)
+ax2.set_ylabel("Abundance\nfitness", fontsize=7,rotation='horizontal', ha='right')
+ax2.spines['top'].set_visible(False)
+ax2.spines['right'].set_visible(False)
+ax2.tick_params(axis='both', which='major', labelsize=6)
+
+nham_viability['Fraction_50pc_folded'] = pd.to_numeric(nham_viability['Fraction_50pc_folded'], errors='coerce')
+#sns.scatterplot(x=[i-1 for i in nham_viability['nham']],y=[0]*len(nham_viability.index), hue=nham_viability['Fraction_50pc_folded'],palette='coolwarm_r', s=nham_viability['Fraction_50pc_folded']*0.5,ax=ax1,legend=False)
+sns.scatterplot(x=[i-lowest_nham for i in nham_viability['nham']],y=[0]*len(nham_viability.index), hue=nham_viability['Fraction_50pc_folded'],palette='coolwarm_r', s=nham_viability['Fraction_50pc_folded']*0.5, legend=False,ax=ax1)
+ax1.spines[['top','right','left','bottom']].set_visible(False)
+ax1.tick_params(left=False, bottom=False, labelleft=False, labelbottom=False,top=False, right=False)
+ax1.tick_params(axis='x', which='both', bottom=False, top=False, labelbottom=False)
+for index, row in nham_viability.iterrows():
+    if row.Fraction_50pc_folded == 100.0:
+        ax2.annotate(100, (row.nham-0.4,0.4), fontsize=6, color='black')
+    else:
+        ax2.annotate(row.Fraction_50pc_folded, (row.nham-0.3,0.4), fontsize=6, color='black')
+ax1.set_ylabel('% variants\nfitness > -0.5',fontsize=6,rotation='horizontal', ha='right')
+        
+ax2.annotate('n='+f"{len(protein_variants_scaled):,}", (-0.3,-1.2), fontsize=6)
+plt.subplots_adjust(hspace=0.05)
+
+nham_viability['Number_of_variants'].plot.bar(ax=ax0,fontsize=6,color='gray')
+ax0.spines[['top','right']].set_visible(False)
+ax0.tick_params(axis='x', which='both', bottom=False, top=False, labelbottom=False)
+ax0.set_ylabel('Total count',fontsize=6, rotation='horizontal', ha='right')
+labels = ax0.get_yticklabels()
+labels[0] = ""
+ax0.set_yticklabels(labels)
+
+nham_viability['Number_of_50pc_folded_variants'].plot.bar(ax=axviable,fontsize=6,color='gray')
+axviable.spines[['top','right']].set_visible(False)
+axviable.tick_params(axis='x', which='both', bottom=False, top=False, labelbottom=False)
+axviable.set_ylabel('Nr. variants\nfitness > -0.5',fontsize=6,rotation='horizontal', ha='right')
+
+ax0.get_yaxis().set_label_coords(-0.2,0)
+axviable.get_yaxis().set_label_coords(-0.2,0)
+ax1.get_yaxis().set_label_coords(-0.2,-1)
+ax2.get_yaxis().set_label_coords(-0.2,0.5)
+plt.ylim(-1.3,0.6)
+plt.xlim(-0.5,7.5)
+plt.rcParams['svg.fonttype'] = 'none'
+#plt.savefig('FYN_full_fitness_landscape.png', dpi=300, transparent=True, bbox_inches='tight')
+
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import random
+from scipy.interpolate import UnivariateSpline, InterpolatedUnivariateSpline
+import warnings
+import math
+
+# get Tecan machine data
+data=pd.read_csv(path+"Fig3/FYN-SH3_prediction_Tecan.txt", header=0, delim_whitespace=True)
+
+# remove columns without data
+data = data.iloc[:,0:269]
+
+final_cycle_col=len(data.columns)-1
+data2=data
+data2=data2.drop(data2.index[[0,1]])
+data2.index=data2.Cycle
+data2 = data2.drop('Cycle', axis=1)
+
+# get well information (randomization file)
+plasmid_info=pd.read_csv(path+"Fig3/FYN-SH3_prediction_Tecan_randomization.txt", header=0, delim_whitespace=True)
+#plasmid_info=pd.read_csv(path+"231102_Randomization_FYN_stability_validation.txt", header=0, delim_whitespace=True)
+plasmid_info.index=plasmid_info.well
+plasmid_info = plasmid_info.drop('well',axis=1)
+data2= pd.concat([data2, plasmid_info], axis=1)
+#data2 = data2.drop('rand', 1)
+
+blanks = data2.loc[data2['plasmid'] == 'blank']
+blanks = blanks.drop('plasmid', axis=1)
+blanks = pd.DataFrame(blanks.mean().to_dict(),index=[blanks.index.values[-1]])
+blanks = blanks.reset_index()
+del blanks['index']
+
+data2 = data2.drop('plasmid', axis=1)
+
+data3 = pd.DataFrame(columns=np.arange(1,final_cycle_col+1,1))
+for index, row in data2.iterrows():
+    a=list(row-blanks.loc[0])
+    data3.loc[index]=a
+
+
+data3= pd.concat([data3, plasmid_info], axis=1)   
+
+data.index=data.Cycle
+data = data.drop('Cycle', axis=1)
+
+cols=np.arange(1,final_cycle_col+1,1)
+time=[]
+for i,j in zip(data.iloc[0],cols):
+    time.append(int(j)*921.3/3600)
+
+to_plot = [i for i in list(plasmid_info['plasmid'].unique()) if i != 'blank']
+rows = pd.DataFrame(columns=np.arange(1,final_cycle_col+1,1))
+for i in to_plot:
+    rows = pd.concat([rows, data3.loc[data3['plasmid'] == i]], axis=0)
+    
+plt.figure(figsize=(4,8))
+plasmids=[]
+colors=[]
+for index,row in rows.iterrows():
+    if row['plasmid'] not in plasmids:
+        plasmids.append(row['plasmid'])
+        r = lambda: random.randint(0,255)
+        colors.append('#%02X%02X%02X' % (r(),r(),r()))
+    row = row.drop(['plasmid'])
+    row.index=time
+    x = time
+    y = row[:]
+    y_spl = UnivariateSpline(x,y, s=0.02)
+    l = final_cycle_col
+    x_range = np.linspace(x[0],x[l-1],1000)
+    plt.subplot(211)
+    plt.plot(x,y, 'o', markersize=3, c=colors[-1], label=plasmids[-1])
+    plt.plot(x_range, y_spl(x_range), '-', c=colors[-1], label=plasmids[-1])
+    plt.xlabel('time / h')
+    plt.ylabel('OD600')
+    #Derivative  
+    deriv = y_spl.derivative()(x_range)
+    #2nd Derivative  
+    secnd_deriv = y_spl.derivative(n=2)(x_range)
+    #Plot derivative
+    plt.subplot(212)
+    plt.plot(x_range, deriv, c=colors[-1], label=plasmids[-1])
+    plt.xlabel('time / h')
+    plt.ylabel('dOD600')
+    dmax = max(deriv)
+    if dmax > 0.005:
+        cp = x_range[np.argmax(deriv)]
+    else:
+        cp = np.nan
+    data3.at[index,'growth_t']=cp
+    try:
+        data3.at[index,'growthrate']=math.log(y_spl(x_range[np.argmax(deriv)])/y_spl(x_range)[0])/cp
+    except ValueError:
+        data3.at[index,'growthrate']=math.log(y_spl(x_range[np.argmax(deriv)])/(-1*y_spl(x_range)[0]))/cp
+
+handles, labels = plt.gca().get_legend_handles_labels()
+by_label = dict(zip(labels, handles))
+plt.legend(by_label.values(), by_label.keys(),bbox_to_anchor = (2, 3.2),ncol=10)
+plt.show()
+
+for index, row in data3.iterrows():
+    slope = 0
+    if max(row[:-4]) > 0.1:
+        b=max(row[:-4])
+        a = min(i for i in row[:row[row == b].index[0]] if i > 0.05)
+        odt1=row[row == a].index[0]
+        if max(row[:row[row == b].index[0]]) < 0.3:
+            a = max(row[:row[row == b].index[0]])
+            odt2=row[row == a].index[0]-1
+        else:
+            a = min(i for i in row[:row[row == b].index[0]] if i > 0.3)
+            odt2=row[row == a].index[0]-1
+        odt1=1
+        odt2=time.index(30.71)
+        delta_t=(data.loc['Time'][odt2]-data.loc['Time'][odt1-1])/3600
+        slope=math.log(row[odt2]/0.05)/delta_t
+    data3.at[index,'slope']=slope
+
+rows2 = pd.DataFrame()
+growth_t2 = pd.DataFrame()
+for i in to_plot:
+    rows = pd.DataFrame()
+    rows[i] = data3.loc[data3['plasmid'] == i]['slope']
+    rows=rows.reset_index()
+    rows2[i]=rows[i]
+    
+    growth_t = pd.DataFrame()
+    growth_t[i] = data3.loc[data3['plasmid'] == i]['growth_t']
+    growth_t=growth_t.reset_index()
+    growth_t2[i]=growth_t[i]
+
+rows2.plot.box(figsize=(16,6))
+plt.ylabel('growth rate')
+plt.xticks(rotation=90)
+growth_t2.plot.box(figsize=(16,6))
+plt.ylabel('growth time')
+plt.xticks(rotation=90)
+plt.show()
+
+
+validation_tecan=pd.DataFrame()
+for i in to_plot:
+    validation_tecan2=pd.DataFrame()
+    validation_tecan2[i]=data3.loc[data3['plasmid'] == i]['growthrate']
+    validation_tecan2=validation_tecan2.reset_index()
+    validation_tecan=pd.concat([validation_tecan, validation_tecan2[i]], axis=1)
+
+validation_tecan.columns=to_plot
+validation_tecan
+
+ids = pd.read_csv(path+"Fig3/FYN-SH3_prediction_Tecan_ids.csv", sep='\t', lineterminator='\n').drop('Unnamed: 0', axis=1)[['well','core','Nham_aa','predicted']]
+
+controls = ['pGJJ025', 'pGJJ034']
+
+for index, row in ids.iterrows():
+    ids.at[index,'predicted_fitness']=predicted_phenotypes_scaled.loc[predicted_phenotypes_scaled['core']==row.core].iloc[0]['mean']
+    ids.at[index,'predicted_fitness_std']=predicted_phenotypes_scaled.loc[predicted_phenotypes_scaled['core']==row.core].iloc[0]['std']
+    ids.at[index,'Nham_aa']=predicted_phenotypes_scaled.loc[predicted_phenotypes_scaled['core']==row.core].iloc[0]['Nham_aa']
+
+ids.head()
+
+DMS_tecan = pd.DataFrame(validation_tecan.mean(skipna=True))
+DMS_tecan = DMS_tecan.rename(columns={0: 'Tecan_Growth_T'})
+DMS_tecan['Tecan_Growth_T_std']=validation_tecan.std(skipna=True)
+DMS_tecan = DMS_tecan.reset_index()
+
+DMS_tecan = DMS_tecan.merge(ids, left_on=['index'], right_on=['well'], how='left').drop('index', axis=1)
+
+DMS_tecan = DMS_tecan.dropna()
+
+for index, row in DMS_tecan.iterrows():
+    if row.predicted == True:
+        DMS_tecan.at[index,'In training set']=False
+    else:
+        DMS_tecan.at[index,'In training set']=True
+
+from sklearn.linear_model import LinearRegression
+from scipy.stats import pearsonr
+import seaborn as sns
+import matplotlib.pyplot as plt
+import ast
+
+DMS_tecan=DMS_tecan.rename(columns={'Nham_aa': 'Number of mutations'})
+DMS_tecan=DMS_tecan.sort_values('predicted_fitness')
+
+symbols=['o','X','s','P','D']
+markers={}
+for status, symbol in zip([0,4,5,6,7], symbols):
+    markers[status]=symbol
+
+predicted_vs_measured=DMS_tecan.sort_values('predicted_fitness',ascending=True).copy()
+predicted_vs_measured=predicted_vs_measured.rename(columns={'Observed': 'In training set'})
+    
+fig, ax = plt.subplots(figsize=(1,1))
+
+sns.scatterplot(x='predicted_fitness', y='Tecan_Growth_T', data=predicted_vs_measured, hue='In training set', palette=['#BB202E','black'], ax=ax, s=0, markers=markers, edgecolor='k', linewidth=0.1)
+plt.errorbar('predicted_fitness', 'Tecan_Growth_T', 'Tecan_Growth_T_std','predicted_fitness_std', elinewidth=0.1, capsize=0.3, capthick=0.1, markersize=0, linewidth=0,data=predicted_vs_measured.loc[predicted_vs_measured['In training set']==False], color='#BB202E', label='')
+plt.errorbar('predicted_fitness', 'Tecan_Growth_T', 'Tecan_Growth_T_std','predicted_fitness_std', elinewidth=0.1, capsize=0.3, capthick=0.1, markersize=0, linewidth=0,data=predicted_vs_measured.loc[predicted_vs_measured['In training set']==True], color='black', label='')
+
+
+x = predicted_vs_measured[['predicted_fitness']].to_numpy()
+y = predicted_vs_measured[['Tecan_Growth_T']].to_numpy()
+
+#ax.annotate('n = '+f"{len(predicted_vs_measured.loc[predicted_vs_measured['permi_lib_gr'].notnull()].index):,}", (-0.3,-1.05), fontsize=6)
+
+model = LinearRegression()
+model.fit(x, y)
+
+y_pred = model.predict(x)
+r,p = pearsonr(y.ravel(),y_pred.ravel())
+
+plt.plot(x, y_pred, color='Gray', linewidth=1, linestyle='--')
+plt.text(-0.45,0.38,'All variants | n = '+str(len(x))+'\nR = '+str(round(r,2))+ ' | p-val = '+'{:0.2e}'.format(p), fontsize=7, color='black', horizontalalignment='center')
+bbox_to_anchor=(0.4,1.3)
+legend0=plt.legend(bbox_to_anchor=bbox_to_anchor,fontsize=6,frameon=False, handletextpad=0.1, title='In training set')
+plt.xlabel('Abundance fitness\n(predicted from core energy model)', fontsize=7)
+plt.ylabel('Individual measurement\nGrowth rate', fontsize=7)
+plt.yticks(ticks=np.arange(0.05,0.25,0.05), fontsize=6)
+ax.set_xticks(np.arange(-1,0.5,0.5))
+ax.set_xticklabels(np.arange(-1,0.5,0.5), fontsize=6)
+ax.spines[['right', 'top']].set_visible(False)
+
+def label_point(x, y, val1, val2, ax, colors):
+    a = pd.concat({'x': x, 'y': y, 'val1': val1, 'val2': val2}, axis=1)
+    col = a.iloc[0]['x']
+    counter=0
+    for index, row in a.iterrows():
+        if row.val2 == False:
+            ax.text(row['x'], row['y'], str(int(row['val1'])), fontsize=6, color=colors[0], ha='center', va='center')
+        else:
+            ax.text(row['x'], row['y'], str(int(row['val1'])), fontsize=6, color=colors[1], ha='center', va='center')
+
+#colors=list(sns.color_palette('ocean_r',2))
+colors=['#8B0000','black']
+
+
+label_point(pd.Series(x.ravel()).loc[pd.Series(y.ravel()).notnull()], pd.Series(y.ravel()).loc[pd.Series(y.ravel()).notnull()], predicted_vs_measured.reset_index()['Number of mutations'], predicted_vs_measured.reset_index()['In training set'], plt.gca(), colors)
+
+legend_labels=[]
+for i in legend0.get_texts():
+    x = predicted_vs_measured.loc[predicted_vs_measured['In training set']==ast.literal_eval(i.get_text())][['predicted_fitness']].to_numpy()
+    y = predicted_vs_measured.loc[predicted_vs_measured['In training set']==ast.literal_eval(i.get_text())][['Tecan_Growth_T']].to_numpy()
+    model.fit(x, y)
+
+    y_pred = model.predict(x)
+    r,p = pearsonr(y.ravel(),y_pred.ravel())
+    
+    legend_labels.append(i.get_text()+' | n = '+str(len(x))+'\nR = '+str(round(r,2))+ ' | p-val = '+'{:0.2e}'.format(p))
+    #legend_labels.append(i.get_text())
+
+handles, labels= ax.get_legend_handles_labels()
+labels=legend_labels
+legend=ax.legend(handles,labels,bbox_to_anchor=(1.3,2), fontsize=6,frameon=False, handletextpad=0.1, title='In training set')
+legend.get_title().set_fontsize('7')
+
+
+plt.rcParams['svg.fonttype'] = 'none'
+#plt.savefig('Fitness_measured_in_permilib_vs_predicted_from_coreDTSlib.svg', dpi=300, transparent=True, bbox_inches='tight')
+
+# Correct indels in suppressor sequences
+
+import ast
+import pandas as pd
+
+all_permissivity_seqs=pd.read_csv(path+'Fig6/Suppressor_library_allseqs.txt', sep='\t')
+
+for index, row in all_permissivity_seqs.iterrows():
+    if row.mutations.startswith('[')==True:
+        mutations = ast.literal_eval(row.mutations)
+        deletions=[]
+        for mutation in mutations:
+            if mutation[-1]=='-':
+                deletions.append(mutation[1:-1])
+        if len(deletions)>0:
+            all_permissivity_seqs.at[index,'deletions']=','.join(deletions)
+        full_variant=row.variant
+        for deletion in deletions:
+            full_variant = full_variant[:int(deletion)-1]+'-'+full_variant[int(deletion)-1:]
+        all_permissivity_seqs.at[index,'full_variant']=full_variant
+        all_permissivity_seqs.at[index,'full_variant_len']=len(full_variant)
+
+
+permi_variants = pd.read_csv(path+'Fig6/FYN_suppressor_fitness_replicates.txt', sep='\t')
+
+from seaborn import kdeplot
+import numpy as np
+import matplotlib.pyplot as plt
+
+def normalize(values, bounds):
+    return [bounds['desired']['lower'] + (x - bounds['actual']['lower']) * (bounds['desired']['upper'] - bounds['desired']['lower']) / (bounds['actual']['upper'] - bounds['actual']['lower']) for x in values]
+
+permi_variants_scaled = permi_variants.copy()
+
+arbitraryWT='FLFFVIV'
+
+fig, ax = plt.subplots()
+
+my_kde = kdeplot(data=permi_variants.loc[permi_variants['fitness']<-0.5], x='fitness', ax=ax)
+
+lines = my_kde.get_lines()
+plt.close()
+for line in lines:
+    x, y = line.get_data()
+    mode=(x[np.argmax(y)])
+    ax.axvline(x[np.argmax(y)], ls='--')
+
+permi_variants_scaled['fitness']=normalize(list(permi_variants_scaled['fitness']),{'actual': {'lower': mode, 'upper': permi_variants_scaled.loc[permi_variants_scaled['Nham_aa']==0]['fitness'].iloc[0]}, 'desired': {'lower': -1, 'upper': 0}})
+permi_variants_scaled['fitness1_uncorr']=normalize(list(permi_variants_scaled['fitness1_uncorr']),{'actual': {'lower': mode, 'upper': permi_variants_scaled.loc[permi_variants_scaled['Nham_aa']==0]['fitness1_uncorr'].iloc[0]}, 'desired': {'lower': -1, 'upper': 0}})
+permi_variants_scaled['fitness2_uncorr']=normalize(list(permi_variants_scaled['fitness2_uncorr']),{'actual': {'lower': mode, 'upper': permi_variants_scaled.loc[permi_variants_scaled['Nham_aa']==0]['fitness2_uncorr'].iloc[0]}, 'desired': {'lower': -1, 'upper': 0}})
+permi_variants_scaled['fitness3_uncorr']=normalize(list(permi_variants_scaled['fitness3_uncorr']),{'actual': {'lower': mode, 'upper': permi_variants_scaled.loc[permi_variants_scaled['Nham_aa']==0]['fitness3_uncorr'].iloc[0]}, 'desired': {'lower': -1, 'upper': 0}})
+
+
+fig, ax = plt.subplots()
+
+my_kde = kdeplot(data=permi_variants_scaled, x='fitness', ax=ax)
+
+lines = my_kde.get_lines()
+
+for line in lines:
+    x, y = line.get_data()
+
+plt.close()
+
+WTs_bearing_natural_DTS_core_queries=pd.read_csv(path+'Fig6/Structural_homologs_carrying_detrimental_cores_in_FYN.txt',sep='\t')
+
+for index, row in permi_variants_scaled.iterrows():
+    if row.aa_seq in list(WTs_bearing_natural_DTS_core_queries['DSSP_boundaries']) or row.aa_seq in list(WTs_bearing_natural_DTS_core_queries['Pro_mutant_1']) or row.aa_seq in list(WTs_bearing_natural_DTS_core_queries['Pro_mutant_2']) or row.aa_seq in list(WTs_bearing_natural_DTS_core_queries['Pro_mutant_3']):
+        permi_variants_scaled.at[index,'other_natural_SH3s']=True
+        if row.aa_seq in list(WTs_bearing_natural_DTS_core_queries['DSSP_boundaries']):
+            permi_variants_scaled.at[index,'Pro_mutant']=False
+        else:
+            permi_variants_scaled.at[index,'Pro_mutant']=True
+
+other_natural_SH3s = permi_variants_scaled.loc[permi_variants_scaled['other_natural_SH3s']==True].copy()
+
+# Find core and hamming distances
+
+fyn_core_pos = [2,16,18,24,26,48,53]
+fyn_wt_core = 'FLFFIIV'
+fyn_permi_variants = permi_variants_scaled.loc[permi_variants_scaled['other_natural_SH3s']!=True].copy()
+fyn_wt_seq = permi_variants_scaled.loc[permi_variants_scaled['Nham_aa']==0].iloc[0]['aa_seq']
+for index, row in fyn_permi_variants.iterrows():
+    fyn_permi_variants.at[index,'full_variant']=all_permissivity_seqs.loc[all_permissivity_seqs['variant']==row.aa_seq].iloc[0]['full_variant']
+    core=[]
+    for i in fyn_core_pos:
+        core.append(all_permissivity_seqs.loc[all_permissivity_seqs['variant']==row.aa_seq].iloc[0]['full_variant'][i])
+    fyn_permi_variants.at[index,'core'] = ''.join(core)
+    fyn_permi_variants.at[index, 'Nham_core'] = sum(1 for a,b in zip(core, fyn_wt_core) if a!=b)
+    fyn_permi_variants.at[index, 'Nham_aa'] = sum(1 for a,b in zip(all_permissivity_seqs.loc[all_permissivity_seqs['variant']==row.aa_seq].iloc[0]['full_variant'], fyn_wt_seq) if a!=b)
+    if len(row.aa_seq) != len(permi_variants.loc[permi_variants['Nham_aa']==0].iloc[0]['aa_seq']):
+        fyn_permi_variants.at[index,'indel']=True
+    fyn_permi_variants.at[index,'len']=len(row.aa_seq)
+
+for index, row in fyn_permi_variants.iterrows():
+    mutations=[]
+    iterator=1
+    for wt, mut in zip(fyn_wt_seq, row.full_variant):
+        if wt != mut:
+            mutations.append(wt+str(iterator)+mut)
+        iterator+=1
+    fyn_permi_variants.at[index,'all_mutations']=','.join(mutations)
+
+import math
+
+for index, row in predicted_phenotypes_scaled.iterrows():
+    try:
+        predicted_phenotypes_scaled.at[index,'permi_lib_fitness'] = fyn_permi_variants.loc[fyn_permi_variants['aa_seq']==row.aa_seq].iloc[0]['fitness']
+        predicted_phenotypes_scaled.at[index,'permi_lib_sigma']   = fyn_permi_variants.loc[fyn_permi_variants['aa_seq']==row.aa_seq].iloc[0]['sigma']
+        predicted_phenotypes_scaled.at[index,'permi_lib_gr']      = fyn_permi_variants.loc[fyn_permi_variants['aa_seq']==row.aa_seq].iloc[0]['growthrate']
+    except IndexError:
+        continue
+        
+for index, row in predicted_phenotypes_scaled.loc[predicted_phenotypes_scaled['permi_lib_gr'].notnull()].iterrows():
+    if math.isnan(row.fitness) == True:
+        predicted_phenotypes_scaled.at[index,'Observed']=False
+    else:
+        predicted_phenotypes_scaled.at[index,'Observed']=True
+
+from sklearn.linear_model import LinearRegression
+from scipy.stats import pearsonr
+import seaborn as sns
+import matplotlib.pyplot as plt
+import ast
+
+
+predicted_vs_measured=predicted_phenotypes_scaled.sort_values('mean',ascending=True).copy()
+predicted_vs_measured=predicted_vs_measured.rename(columns={'Observed': 'In training set'})
+    
+fig, ax = plt.subplots(figsize=(1,1))
+
+sns.scatterplot(x='mean', y='permi_lib_fitness', data=predicted_vs_measured.loc[predicted_vs_measured['permi_lib_gr'].notnull()], hue='In training set', palette=['#BB202E','black'], ax=ax, s=0, markers=markers, edgecolor='k', linewidth=0.1)
+plt.errorbar('mean', 'permi_lib_fitness', 'permi_lib_sigma','std', elinewidth=0.1, capsize=1, capthick=0.3, markersize=0.1, linewidth=0,data=predicted_vs_measured.loc[predicted_vs_measured['permi_lib_gr'].notnull()].loc[predicted_vs_measured['In training set']==False], color='#BB202E', label='')
+plt.errorbar('mean', 'permi_lib_fitness', 'permi_lib_sigma','std', elinewidth=0.1, capsize=1, capthick=0.3, markersize=0.1, linewidth=0,data=predicted_vs_measured.loc[predicted_vs_measured['permi_lib_gr'].notnull()].loc[predicted_vs_measured['In training set']==True], color='black', label='')
+
+
+x = predicted_vs_measured.loc[predicted_vs_measured['permi_lib_gr'].notnull()][['mean']].to_numpy()
+y = predicted_vs_measured.loc[predicted_vs_measured['permi_lib_gr'].notnull()][['permi_lib_fitness']].to_numpy()
+
+#ax.annotate('n = '+f"{len(predicted_vs_measured.loc[predicted_vs_measured['permi_lib_gr'].notnull()].index):,}", (-0.3,-1.05), fontsize=6)
+
+model = LinearRegression()
+model.fit(x, y)
+
+y_pred = model.predict(x)
+r,p = pearsonr(y.ravel(),y_pred.ravel())
+
+plt.plot(x, y_pred, color='Gray', linewidth=1, linestyle='--')
+plt.text(-0.45,1.4,'All variants | n = '+str(len(x))+'\nR = '+str(round(r,2))+ ' | p-val = '+'{:0.2e}'.format(p), fontsize=7, color='black', horizontalalignment='center')
+bbox_to_anchor=(0.4,1.3)
+legend0=plt.legend(bbox_to_anchor=bbox_to_anchor,fontsize=6,frameon=False, handletextpad=0.1, title='In training set')
+plt.xlabel('Abundance fitness\n(predicted from core energy model)', fontsize=7)
+plt.ylabel('Abundance fitness\n(observed in permissivity lib.)', fontsize=7)
+ax.set_xticks(np.arange(-1,0.5,0.5))
+ax.set_xticklabels(np.arange(-1,0.5,0.5), fontsize=6)
+ax.set_yticks(np.arange(-1,0.5,0.5))
+ax.set_yticklabels(np.arange(-1,0.5,0.5), fontsize=6)
+ax.spines[['right', 'top']].set_visible(False)
+
+def label_point(x, y, val1, val2, ax, colors):
+    a = pd.concat({'x': x, 'y': y, 'val1': val1, 'val2': val2}, axis=1)
+    col = a.iloc[0]['x']
+    counter=0
+    for index, row in a.iterrows():
+        if row.val2 == False:
+            ax.text(row['x'], row['y'], str(int(row['val1'])), fontsize=6, color=colors[0], ha='center', va='center')
+        else:
+            ax.text(row['x'], row['y'], str(int(row['val1'])), fontsize=6, color=colors[1], ha='center', va='center')
+
+#colors=list(sns.color_palette('ocean_r',2))
+colors=['#8B0000','black']
+
+
+label_point(pd.Series(x.ravel()).loc[pd.Series(y.ravel()).notnull()], pd.Series(y.ravel()).loc[pd.Series(y.ravel()).notnull()], predicted_vs_measured.loc[predicted_vs_measured['permi_lib_gr'].notnull()].reset_index()['Nham_aa'], predicted_vs_measured.loc[predicted_vs_measured['permi_lib_gr'].notnull()].reset_index()['In training set'], plt.gca(), colors)
+
+legend_labels=[]
+for i in legend0.get_texts():
+    x = predicted_vs_measured.loc[predicted_vs_measured['permi_lib_gr'].notnull()].loc[predicted_vs_measured['In training set']==ast.literal_eval(i.get_text())][['mean']].to_numpy()
+    y = predicted_vs_measured.loc[predicted_vs_measured['permi_lib_gr'].notnull()].loc[predicted_vs_measured['In training set']==ast.literal_eval(i.get_text())][['permi_lib_fitness']].to_numpy()
+    model.fit(x, y)
+
+    y_pred = model.predict(x)
+    r,p = pearsonr(y.ravel(),y_pred.ravel())
+    
+    legend_labels.append(i.get_text()+' | n = '+str(len(x))+'\nR = '+str(round(r,2))+ ' | p-val = '+'{:0.2e}'.format(p))
+    #legend_labels.append(i.get_text())
+
+handles, labels= ax.get_legend_handles_labels()
+labels=legend_labels
+legend=ax.legend(handles,labels,bbox_to_anchor=(1.3,2), fontsize=6,frameon=False, handletextpad=0.1, title='In training set')
+#legend=plt.legend()
+legend.get_title().set_fontsize('7')
+legend._legend_box.align = "center"
+
+
+plt.rcParams['svg.fonttype'] = 'none'
+#plt.savefig('Fitness_measured_in_permilib_vs_predicted_from_coreDTSlib_simplified.svg', dpi=300, transparent=True, bbox_inches='tight')

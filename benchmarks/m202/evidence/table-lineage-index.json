@@ -1,0 +1,44 @@
+[
+  {
+    "source": "benchmarks/m202/evidence/Fig2.source.txt",
+    "table_name_lines": [
+      32
+    ],
+    "scope": "Static text search only; inspect source for context, no code execution"
+  },
+  {
+    "source": "benchmarks/m202/evidence/Fig7.source.txt",
+    "table_name_lines": [
+      482
+    ],
+    "scope": "Static text search only; inspect source for context, no code execution"
+  },
+  {
+    "source": "benchmarks/m202/evidence/FigS1.source.txt",
+    "table_name_lines": [
+      32
+    ],
+    "scope": "Static text search only; inspect source for context, no code execution"
+  },
+  {
+    "source": "benchmarks/m202/evidence/FigS2.source.txt",
+    "table_name_lines": [
+      32
+    ],
+    "scope": "Static text search only; inspect source for context, no code execution"
+  },
+  {
+    "source": "benchmarks/m202/evidence/FigS23.source.txt",
+    "table_name_lines": [
+      88
+    ],
+    "scope": "Static text search only; inspect source for context, no code execution"
+  },
+  {
+    "source": "benchmarks/m202/evidence/pinned-author-Fig2.source.txt",
+    "table_name_lines": [
+      32
+    ],
+    "scope": "Static text search only; inspect source for context, no code execution"
+  }
+]

@@ -1,0 +1,798 @@
+# Configure Arial as the default font in all figures
+
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+
+
+arial_font_path = '/PATH/TO/ARIAL/FONT/arial.ttf'
+
+fm.fontManager.addfont(arial_font_path)
+
+plt.rcParams['font.family'] = 'Arial'
+
+path = 'PATH/TO/ZENODO/FILES/FOLDER'
+
+import pandas as pd
+from os import listdir
+from os.path import isfile, join
+
+columns = ['Query','Target','E-value','SeqId','QueryStart', 'QueryEnd','QueryLen', 'TargetStart',
+          'TargetEnd','TargetLen', 'Align_len', 'Score', 'QuerySeq', 'TargetSeq', 'mismatch',
+           'QueryCov','TargetCov', 'taxid','taxname','taxlineage','lddt','alntmscore','rmsd','prob']
+
+isofolds=pd.read_csv(path+'Fig4/fyn_aln1_AFUniprot',names=columns,sep='\t')
+
+reliable_isofolds = isofolds.loc[isofolds['alntmscore']>0.6].loc[isofolds['prob']==1].loc[isofolds['QueryStart']<3].loc[isofolds['QueryEnd']>53].loc[isofolds['rmsd']<2].drop_duplicates('TargetSeq').copy()
+
+#transplantable core finding
+
+DTS=['F','L','I','M','V']
+
+wt=reliable_isofolds.iloc[0]['QuerySeq']
+mut_pos = [2,16,18,24,26,48,53]
+wtcore=''.join([reliable_isofolds.iloc[0]['QuerySeq'][i] for i in mut_pos])
+
+aatype_pos=[]
+for i in mut_pos:
+    aatyperange=0
+    for res in wt[:i]:
+        if res == wt[i-1]:
+            aatyperange+=1
+    aatype_pos.append(aatyperange)
+reliable_isofolds['MutPosinlib']='a'
+reliable_isofolds["WTcore"] = pd.Series(dtype="object") 
+reliable_isofolds["MutCore"] = pd.Series(dtype="object") 
+reliable_isofolds["TransplantableAAs"] = pd.Series(dtype="object") 
+reliable_isofolds["allDTS"] = pd.Series(dtype="object") 
+reliable_isofolds["coreDels"] = pd.Series(dtype="object") 
+reliable_isofolds["MutPosTested"] = pd.Series(dtype="object") 
+totalerrors=0
+for index, row in reliable_isofolds.iterrows():
+    query=row.QuerySeq
+    target=row.TargetSeq
+    target_mut_pos=[]
+    query_hyphens=[]
+    iterator=0
+    for i in query:
+        if i=='-':
+            query_hyphens.append(iterator)
+        iterator+=1
+    aligned_target=list(target)
+    iterator=0
+    for i in query_hyphens:
+        del(aligned_target[i+iterator])
+        iterator-=1
+    aligned_target=''.join(aligned_target)
+    mut_pos_test = [x+1 - row.QueryStart for x in mut_pos]
+    mut_pos_test = [i - row.QueryStart +1 for i in mut_pos if i >= row.QueryStart-1 and i <= row.QueryEnd-1]
+    mut=[]
+    for pos in mut_pos_test:
+        try:
+            mut.append(aligned_target[pos])
+        except IndexError:
+            totalerrors+=1
+    if ''.join(mut) == wtcore:
+        reliable_isofolds.at[index,'WTcore']=True
+        reliable_isofolds.at[index,'Nham']=0
+    else:
+        reliable_isofolds.at[index,'WTcore']=False
+        nham=0
+        for mutres, wtres in zip(mut,wtcore):
+            if mutres != wtres:
+                nham+=1
+        reliable_isofolds.at[index,'Nham']=nham
+        
+    reliable_isofolds.at[index,'MutCore']=('').join(mut)
+    allDTS=True
+    coreDels=False
+    mutations_in_lib = []
+    transplantable_aas = []
+    for pos, res in zip([idx for idx, pos in enumerate(mut_pos) if pos >= row.QueryStart-1 and pos <= row.QueryEnd-1], mut):
+        if res not in DTS:
+            allDTS=False
+        else:
+            mutations_in_lib.append(mut_pos[pos])
+            transplantable_aas.append(res)
+        if res == '-':
+            coreDels=True
+    reliable_isofolds.at[index,'MutPosinlib']=str(mutations_in_lib)
+    reliable_isofolds.at[index,'TransplantableAAs']=''.join(transplantable_aas)
+    reliable_isofolds.at[index,'allDTS']=allDTS
+    reliable_isofolds.at[index,'coreDels']=coreDels 
+    reliable_isofolds.at[index,'MutPosTested']=str([i for i in mut_pos if i >= row.QueryStart-1 and i <= row.QueryEnd-1])
+
+
+import ast
+fyn_wt = 'TLFVALYDYEARTEDDLSFHKGEKFQILNSSEGDWWEARSLTTGETGYIPSNYVAPV'
+
+def integrate_variant_with_positions(wildtype_seq, variant_seq, mut_positions):
+    mut_positions = ast.literal_eval(mut_positions)
+    fyn_variant = list(wildtype_seq)
+
+    for i, pos in enumerate(mut_positions):
+        if i < len(variant_seq): 
+            fyn_variant[pos] = variant_seq[i]
+    
+    return ''.join(fyn_variant)
+
+def calculate_differences(variant, wildtype):
+    return sum(1 for a, b in zip(variant, wildtype) if a != b)
+
+real_variants = pd.DataFrame()
+
+reliable_isofolds['muts_in_fyn_seq'] = reliable_isofolds.apply(
+    lambda row: integrate_variant_with_positions(fyn_wt, row['TransplantableAAs'], row['MutPosinlib']),
+    axis=1
+)
+
+reliable_isofolds['muts_in_fyn_seq_Nham_aa'] = reliable_isofolds['muts_in_fyn_seq'].apply(lambda variant: calculate_differences(variant, fyn_wt))
+
+reliable_isofolds["core"] = pd.Series(dtype="object") 
+for index, row in reliable_isofolds.iterrows():
+    reliable_isofolds.at[index,'core']=''.join(row.muts_in_fyn_seq[i] for i in mut_pos)
+
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+from scipy.stats import gaussian_kde
+from scipy.stats import pearsonr
+import math
+import seaborn as sns
+
+plt.rcParams['font.family'] = 'Arial'
+
+xlim=(min(reliable_isofolds['SeqId'].values.astype(float)),max(reliable_isofolds['SeqId'].values.astype(float)))
+ylim=(min(reliable_isofolds['Score'].values.astype(float)),max(reliable_isofolds['Score'].values.astype(float)))
+
+fig, ax = plt.subplots(nrows=2, ncols=1, figsize=(1.3,2))
+coliterator=0
+rowiterator=0
+for panel in range(1,3,1):
+    
+    if panel == 1:
+        y = reliable_isofolds['Score'].values.astype(float)
+        x = reliable_isofolds['SeqId'].values.astype(float)
+        #ax[coliterator].set_title('Isofolds with a\nDTS-encoded core', fontsize=7)
+        ax[coliterator].annotate('All\nisofolds\nn='+f"{len(x):,}", (1.1,110), fontsize=6, ha='right')
+        ax[coliterator].set_xticklabels([])
+    elif panel == 2:
+        for i in np.arange(0,1,0.25):
+            ax[coliterator].axvline(i,ls='--',lw=0.5,color='gray')
+        #y = reliable_isofolds.loc[reliable_isofolds['allDTS']==True]['Score'].values.astype(float)
+        #x = reliable_isofolds.loc[reliable_isofolds['allDTS']==True]['SeqId'].values.astype(float)
+        y = reliable_isofolds.sort_values('SeqId',ascending=False).drop_duplicates('core',keep='first')['Score'].values.astype(float)
+        x = reliable_isofolds.sort_values('SeqId',ascending=False).drop_duplicates('core',keep='first')['SeqId'].values.astype(float)
+        #ax[coliterator].set_title('Isofolds with the same\ncore as FYN-SH3', fontsize=7)
+        #ax[coliterator].annotate('With\nDTS core\nn='+f"{len(x):,}", (1.1,110), fontsize=6, ha='right')
+        ax[coliterator].annotate('Transplantable\ncores', (0.05,330), fontsize=6, ha='left')
+        ax[coliterator].annotate('n='+f"{len(x):,}", (1.1,110), fontsize=6, ha='right')
+    
+    model = LinearRegression()
+    model.fit(x.reshape(-1, 1),y.reshape(-1, 1))
+    
+    y_pred = model.predict(x.reshape(-1, 1))
+    
+    ax[coliterator].set(xlim=xlim,ylim=ylim)
+    hbin=ax[coliterator].hexbin(x,y,gridsize=50,bins='log', vmax=1000, rasterized=True,linewidths=0, extent=[min(reliable_isofolds['SeqId'].values.astype(float)),max(reliable_isofolds['SeqId'].values.astype(float)),min(reliable_isofolds['Score'].values.astype(float)),max(reliable_isofolds['Score'].values.astype(float))])
+    #if panel == 2:
+    #    sns.kdeplot(data=reliable_isofolds.loc[reliable_isofolds['WTcore']==True], x='SeqId', y='Score', thresh=0.001,linewidths=0.4, fill=False, levels=3, alpha=1,ax=ax[coliterator], color='red')#, label='FYN WT core\nn='+f"{len(reliable_isofolds.loc[reliable_isofolds['WTcore']==True].index):,}")
+    ax[coliterator].axline((0, 0), slope=1,ls='dashed',color='k',lw=0.5)
+    ax[coliterator].set_ylim(min(reliable_isofolds['Score'].values.astype(float))*0.9,max(reliable_isofolds['Score'].values.astype(float))*1.1)
+    ax[coliterator].set_xlim(0,1.1)
+    ax[coliterator].spines[['right','top']].set_visible(False)
+    ax[coliterator].set_ylabel('')
+    ax[coliterator].set_xlabel('')
+    ax[coliterator].set_yticks(np.arange(100,500,100), labels=np.arange(100,500,100))
+    ax[coliterator].tick_params(axis='x', labelsize=6)
+    ax[coliterator].tick_params(axis='y', labelsize=6)
+    ax[coliterator].set_rasterization_zorder(0)
+    coliterator+=1
+
+
+fmt = '%1.f'
+cax=fig.add_axes([0.33,0.82,0.3,0.05])
+cb=fig.colorbar(hbin, ax=cax, shrink=0.7,format=fmt,location='top',cax=cax)
+cb.outline.set_visible(False)
+cb.ax.tick_params(axis='both', which='both',direction='in', color='white',width=0.15)
+cb.ax.xaxis.set_tick_params(pad=0)
+cb.set_ticks([1,10,100,1000])
+cb.set_ticklabels([1,10,100,1000], fontsize=6, rotation=35)
+ax1 = cb.ax
+ax1.text(1,-1,'count',rotation=0, fontsize=7)
+
+fig.text(0.57, 0.04, 'Sequence identity', ha='center', fontsize=7)
+fig.text(0.05, 0.55, 'Structural alignment score', va='center', rotation='vertical', fontsize=7)
+fig.tight_layout()
+fig.subplots_adjust(hspace=0.1)
+plt.rcParams['svg.fonttype'] = 'none'
+#plt.savefig('FYN_isofold_foldseek_overview_w_partial_transplants.svg', dpi=300, transparent=True, bbox_inches='tight')
+
+import pandas as pd
+
+predicted_phenotypes = pd.read_csv(path+'Fig3/FYN-SH3/FYN_mochi_order2/task_1/predictions/predicted_phenotypes_supp.txt',
+                                  sep='\t', lineterminator='\n', index_col=0, low_memory=False)
+
+cores = {'P06241' : [i for i in mut_pos]}
+
+predicted_phenotypes["core"] = pd.Series(dtype="object") 
+for index, row in predicted_phenotypes.iterrows():
+    core=[]
+    for i in cores['P06241']:
+        core.append(row.aa_seq[i])
+    predicted_phenotypes.at[index,'core'] = ''.join(core)
+
+RT=303*0.001987
+predicted_phenotypes['mean_additive_trait']=predicted_phenotypes[['fold_1_additive_trait0','fold_2_additive_trait0','fold_3_additive_trait0','fold_4_additive_trait0','fold_5_additive_trait0','fold_6_additive_trait0','fold_7_additive_trait0','fold_8_additive_trait0','fold_9_additive_trait0','fold_10_additive_trait0']].mean(axis=1)
+predicted_phenotypes['std_additive_trait']=predicted_phenotypes[['fold_1_additive_trait0','fold_2_additive_trait0','fold_3_additive_trait0','fold_4_additive_trait0','fold_5_additive_trait0','fold_6_additive_trait0','fold_7_additive_trait0','fold_8_additive_trait0','fold_9_additive_trait0','fold_10_additive_trait0']].std(axis=1)
+
+predicted_phenotypes['mean']=predicted_phenotypes[['fold_1','fold_2','fold_3','fold_4','fold_5','fold_6','fold_7','fold_8','fold_9','fold_10']].mean(axis=1)
+predicted_phenotypes['std']=predicted_phenotypes[['fold_1','fold_2','fold_3','fold_4','fold_5','fold_6','fold_7','fold_8','fold_9','fold_10']].std(axis=1)
+
+predicted_phenotypes['mean_dG']= predicted_phenotypes['mean_additive_trait']*RT
+predicted_phenotypes['std_dG']= predicted_phenotypes['std_additive_trait']*RT
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from itertools import combinations
+
+coefs_1storder = pd.read_csv(path+'FigS5/FYN_ddGs_scaled_from_additivetrait_order1.txt',
+                       sep='\t', index_col=0)
+coefs_2ndorder = pd.read_csv(path+'FigS5/FYN_ddGs_scaled_from_additivetrait_order2.txt',
+                       sep='\t', index_col=0)
+coefs_2ndorder_sprsreg = pd.read_csv(path+'FigS5/FYN_ddGs_scaled_from_additivetrait_order2_sparse_regularized.txt',
+                       sep='\t', index_col=0)
+
+secondorderterms_2ndorder = pd.read_csv(path+'FigS5/FYN_mochiorder2_secondorderterms_scaled_w_iv_values.txt',
+                       sep='\t', index_col=0)
+
+secondorderterms_2ndorder_sprsreg = pd.read_csv(path+'FigS5/FYN_mochiorder2_sparse_regularized_secondorderterms_scaled_w_iv_values.txt',
+                       sep='\t', index_col=0)
+
+folding_ddGs = coefs_2ndorder[['actual_ddGs']].copy().rename(columns={'actual_ddGs':'ddG'})
+folding_dddGs = secondorderterms_2ndorder[['id','scaled_ddGs']].copy().set_index('id',drop=True).rename(columns={'scaled_ddGs':'dddG'})
+
+fyn_wt = 'TLFVALYDYEARTEDDLSFHKGEKFQILNSSEGDWWEARSLTTGETGYIPSNYVAPV'
+
+mut_pos_name = mut_pos.copy()
+
+def find_mutations(wt, variant, positions):
+    mutations = []
+    for pos in positions:
+        if wt[pos] != variant[pos]:  # Mutation exists at this position
+            mutations.append(f"{wt[pos]}{pos + 1}{variant[pos]}")  # Format as F3M
+    return mutations
+
+predicted_phenotypes['mutations'] = predicted_phenotypes['aa_seq'].apply(lambda x: ','.join(find_mutations(fyn_wt, x, mut_pos_name)))
+
+def find_mutation_pairs(mutations):
+    mutation_list = mutations.split(',')
+    pairs = [f"{a}_{b}" for a, b in combinations(mutation_list, 2)]
+    return ','.join(pairs)
+
+def compute_iv_scaled_dddG(row, folding_ddGs, folding_dddGs):
+    single_mutations = row['mutations'].split(',') if row['mutations'] else []
+    mutation_pairs = row['mutation_pairs'].split(',') if row['mutation_pairs'] else []
+
+    ddG_sum = sum(folding_ddGs.loc[mut, 'ddG'] if mut in folding_ddGs.index else 0 for mut in single_mutations)
+
+    dddG_sum = sum(folding_dddGs.loc[pair, 'dddG'] if pair in folding_dddGs.index else 0 for pair in mutation_pairs)
+
+    return ddG_sum + dddG_sum
+
+predicted_phenotypes['mutation_pairs'] = predicted_phenotypes['mutations'].apply(lambda x: find_mutation_pairs(x) if x else '')
+predicted_phenotypes['iv_scaled_folding_ddG'] = predicted_phenotypes.apply(compute_iv_scaled_dddG, axis=1, folding_ddGs=folding_ddGs, folding_dddGs=folding_dddGs)
+
+
+from itertools import product
+
+DTS = ['F','L','I','M','V']
+a=list(product(DTS,repeat=7))
+
+isofold_exist_clasf = pd.DataFrame(index=[''.join(i) for i in a])
+
+isofold_exist_clasf = isofold_exist_clasf.join(predicted_phenotypes.set_index('core')[['iv_scaled_folding_ddG']])
+
+isofold_exist_clasf['in_nature_all']=isofold_exist_clasf.index.isin(list(reliable_isofolds.sort_values('SeqId',ascending=False).drop_duplicates('core',keep='first')['core']))
+isofold_exist_clasf['in_nature_all']=isofold_exist_clasf['in_nature_all'].astype(int)
+isofold_exist_clasf['in_nature_25_50']=isofold_exist_clasf.index.isin(list(reliable_isofolds.sort_values('SeqId',ascending=False).drop_duplicates('core',keep='first').loc[reliable_isofolds['SeqId']<0.5].loc[reliable_isofolds['SeqId']>0.25]['core']))
+isofold_exist_clasf['in_nature_25_50']=isofold_exist_clasf['in_nature_25_50'].astype(int)
+isofold_exist_clasf['in_nature_50_75']=isofold_exist_clasf.index.isin(list(reliable_isofolds.sort_values('SeqId',ascending=False).drop_duplicates('core',keep='first').loc[reliable_isofolds['SeqId']<0.75].loc[reliable_isofolds['SeqId']>0.50]['core']))
+isofold_exist_clasf['in_nature_50_75']=isofold_exist_clasf['in_nature_50_75'].astype(int)
+isofold_exist_clasf['in_nature_0_25']=isofold_exist_clasf.index.isin(list(reliable_isofolds.sort_values('SeqId',ascending=False).drop_duplicates('core',keep='first').loc[reliable_isofolds['SeqId']<0.25].loc[reliable_isofolds['SeqId']>0]['core']))
+isofold_exist_clasf['in_nature_0_25']=isofold_exist_clasf['in_nature_0_25'].astype(int)
+isofold_exist_clasf['in_nature_75']=isofold_exist_clasf.index.isin(list(reliable_isofolds.sort_values('SeqId',ascending=False).drop_duplicates('core',keep='first').loc[reliable_isofolds['SeqId']>0.75]['core']))
+isofold_exist_clasf['in_nature_75']=isofold_exist_clasf['in_nature_75'].astype(int)
+
+import matplotlib.pyplot as plt
+from decimal import Decimal
+from sklearn import metrics
+import numpy as np
+from sklearn.utils import shuffle
+
+plt.rcParams["font.family"] = "Arial"
+
+titles = {'in_nature_all':'All',
+         'in_nature_0_25':'0-25%',
+         'in_nature_25_50':'25-50%',
+         'in_nature_50_75':'50-75%',
+         'in_nature_75':'>75%'}
+
+cmap = plt.get_cmap('coolwarm_r')
+
+classifier_performances = pd.DataFrame()
+fig, ax = plt.subplots(nrows=1, ncols=5, figsize=(2.8*1.5,0.6*1.5), sharex=True, sharey=True)
+fig.subplots_adjust(wspace=0.15)
+
+coliterator = 0
+for threshold in reversed(['in_nature_all', 'in_nature_0_25', 'in_nature_25_50', 'in_nature_50_75', 'in_nature_75']):
+
+    # predictors (x): ddG
+    # target variable (y): exists in nature?
+    x = isofold_exist_clasf[['iv_scaled_folding_ddG']]
+    y = isofold_exist_clasf[[threshold]]
+
+    x, y = shuffle(x, y, random_state=3)
+    
+    # Compute ROC curve
+    fpr, tpr, thresholds = metrics.roc_curve(np.array(y).ravel(), np.array(-1*x).ravel())
+    roc_auc = metrics.auc(fpr, tpr)
+    
+    # Find the closest threshold to FPR = 0.05
+    target_fpr = 0.05
+    idx = (np.abs(fpr - target_fpr)).argmin()
+    threshold_at_target_fpr = thresholds[idx]
+    
+    # Apply threshold to classify predictions
+    predicted = (np.array(-1*x).ravel() >= threshold_at_target_fpr).astype(int)
+    
+    # Compute TP, FP, TN, FN
+    tp = np.sum((predicted == 1) & (np.array(y).ravel() == 1))  # True Positives
+    fp = np.sum((predicted == 1) & (np.array(y).ravel() == 0))  # False Positives
+    tn = np.sum((predicted == 0) & (np.array(y).ravel() == 0))  # True Negatives
+    fn = np.sum((predicted == 0) & (np.array(y).ravel() == 1))  # False Negatives
+    
+    # Plot ROC curve
+    ax[coliterator].plot(fpr, tpr, lw=1, alpha=1, color=cmap(roc_auc),
+                         label=r'(AUC=%0.2f)' % (roc_auc),zorder=2)
+
+    classifier_performances.at[threshold,'AUC']=roc_auc
+    
+    # Plot diagonal reference line
+    ax[coliterator].plot([0, 1], [0, 1], linestyle='--', lw=0.5, color='k', alpha=0.8,zorder=0)
+
+    # Plot vertical dashed line at FPR = 0.05
+    ax[coliterator].axvline(x=target_fpr, linestyle="dashed", color="gray", lw=0.8, alpha=0.8)
+    
+    # TP/FP/TN/FN box at bottom right corner
+    box_text = f"TP: {tp:,}\nFP: {fp:,}\nTN: {tn:,}\nFN: {fn:,}"
+    ax[coliterator].text(0.95, 0.05, box_text, fontsize=6, color='gray',
+                         ha='right', va='bottom', transform=ax[coliterator].transAxes,
+                         bbox=dict(facecolor='white', edgecolor='white', boxstyle='round,pad=0.3', alpha=0.9),zorder=1)
+    
+    ax[coliterator].set_title(titles[threshold], fontsize=6, pad=0)
+    ax[coliterator].set_xticks(np.arange(0, 1.2, 0.5), [Decimal(i).normalize() for i in np.arange(0, 1.2, 0.5)], fontsize=6)
+    ax[coliterator].set_yticks(np.arange(0, 1.2, 0.5), [Decimal(i).normalize() for i in np.arange(0, 1.2, 0.5)], fontsize=6)
+    
+    if coliterator > 0:
+        ax[coliterator].tick_params(axis='y', length=0)
+    
+    coliterator += 1
+
+fig.text(0.5, -0.25, 'FPR', ha='center', fontsize=7)
+fig.text(0.025, 0.5, 'TPR', va='center', rotation='vertical', fontsize=7)
+fig.text(0.5, 1.1, 'Sequence identity to FYN-SH3', ha='center', fontsize=7)
+plt.rcParams['svg.fonttype'] = 'none'
+plt.subplots_adjust(wspace=0.15)  # Ensure consistent spacing
+#fig.savefig('FYN_2ndordermodel_EBG_classifier_ROC-AUCs_curves_SeqIds_w_TP_FP_FN_TN.svg', dpi=300, transparent=True, bbox_inches='tight')
+
+
+fig, ax = plt.subplot_mosaic([['left','right']],
+                            width_ratios = [3.5,1],
+                            figsize = (1.1,1))
+axis=classifier_performances.iloc[:-1].plot.bar(y='AUC', color=cmap(list(classifier_performances['AUC'])), ax=ax['left'], legend=False, width=0.9, ylim=(0,1.05))
+ax['left'].set_xticklabels(reversed(['0-25%', '25-50%', '50-75%', '>75%']), fontsize=6, rotation=45)
+ax['left'].set_yticks(np.arange(0,1.2,0.25),[str(round(i,2)) for i in np.arange(0,1.2,0.25)], fontsize=6)
+ax['left'].set_ylim(0.5,1)
+ax['left'].set_xlabel('Seq. ID', fontsize=7)
+ax['left'].set_ylabel('ROC-AUC',fontsize=7)
+ax['left'].spines[['top','right']].set_visible(False)
+
+for bar in axis.patches:
+    height = bar.get_height()
+    axis.text(bar.get_x() + bar.get_width() / 2.0, height+0.01, f' {height:.2f}', fontsize=5,
+            ha='center', va='bottom', rotation=0)
+
+axis=classifier_performances.iloc[-1:].plot.bar(y='AUC', color=cmap(list(classifier_performances.iloc[-1:]['AUC'])), ax=ax['right'], legend=False, width=0.9, ylim=(0,1.05))
+ax['right'].spines[['top','right','left']].set_visible(False)
+ax['right'].set_yticks([])
+ax['right'].set_ylim(0.5,1)
+ax['right'].set_xticklabels(reversed(['All']), fontsize=6, rotation=45)
+
+for bar in axis.patches:
+    height = bar.get_height()
+    axis.text(bar.get_x() + bar.get_width() / 2.0, height+0.01, f' {height:.2f}', fontsize=5,
+            ha='center', va='bottom', rotation=0)
+
+plt.subplots_adjust(wspace=0.1)
+plt.rcParams['svg.fonttype'] = 'none'
+#plt.savefig('FYN_2ndordermodel_EBG_classifier_ROC-AUCs_SeqIds_w_partial_transplants_from_scaled_values.svg', dpi=300, transparent=True, bbox_inches='tight')
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+import scipy.stats as stats
+
+panel_width = 2.8 * 1.5 / 5.6
+panel_height = 0.6 * 1.5
+
+fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(panel_width, panel_height))
+
+threshold = 'in_nature_all'
+observed = isofold_exist_clasf[isofold_exist_clasf[threshold] == 1]['iv_scaled_folding_ddG']
+non_observed = isofold_exist_clasf[isofold_exist_clasf[threshold] == 0]['iv_scaled_folding_ddG']
+
+observed_color = "steelblue"
+non_observed_color = "black"
+
+observed_kde = stats.gaussian_kde(observed)
+non_observed_kde = stats.gaussian_kde(non_observed)
+
+x_vals = np.linspace(min(observed.min(), non_observed.min()),
+                     max(observed.max(), non_observed.max()), 100)
+observed_density = observed_kde(x_vals)
+non_observed_density = non_observed_kde(x_vals)
+
+observed_density /= observed_density.max()
+non_observed_density /= non_observed_density.max()
+
+ax.plot(x_vals, observed_density, color=observed_color, linewidth=1, label="True")
+ax.plot(x_vals, non_observed_density, color=non_observed_color, linewidth=1, label="False")
+
+hist_observed, bin_edges_observed = np.histogram(observed, bins=30, density=True)
+hist_non_observed, bin_edges_non_observed = np.histogram(non_observed, bins=30, density=True)
+
+hist_observed = hist_observed / hist_observed.max()
+hist_non_observed = hist_non_observed / hist_non_observed.max()
+
+bin_centers_observed = 0.5 * (bin_edges_observed[:-1] + bin_edges_observed[1:])
+bin_centers_non_observed = 0.5 * (bin_edges_non_observed[:-1] + bin_edges_non_observed[1:])
+
+ax.bar(bin_centers_observed, hist_observed, width=np.diff(bin_edges_observed),
+       alpha=0.4, color=observed_color, edgecolor=None)
+ax.bar(bin_centers_non_observed, hist_non_observed, width=np.diff(bin_edges_non_observed),
+       alpha=0.3, color=non_observed_color, edgecolor=None)
+
+ax.set_xticks(np.arange(0, 30, 10))
+ax.set_xlabel("")
+ax.set_ylabel("")
+ax.tick_params(axis='x', labelsize=6)
+ax.tick_params(axis='y', labelsize=6)
+
+n_observed = len(observed)
+n_non_observed = len(non_observed)
+ax.text(0.97, 0.95, f"{n_observed:,}", color=observed_color, fontsize=6,
+        ha='right', va='top', transform=ax.transAxes)
+ax.text(0.97, 0.82, f"{n_non_observed:,}", color=non_observed_color, fontsize=6,
+        ha='right', va='top', transform=ax.transAxes)
+
+
+ax.set_xlabel('ΔΔGf (kcal mol-1)', fontsize=6, labelpad=0)
+ax.set_ylabel('Normalized density', fontsize=6, labelpad=2)
+
+legend = plt.legend(loc='upper right', fontsize=6, title='In homolog set', bbox_to_anchor=(2.2,0.9), frameon=False)
+legend.get_title().set_fontsize('6')
+
+plt.rcParams['svg.fonttype'] = 'none'
+
+#fig.savefig('FYN_2ndordersparsemodel_EBG_core_energy_KDE_histograms_all_bin.svg',
+#            dpi=300, transparent=True, bbox_inches='tight')
+plt.show()
+
+
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+
+n_deciles = 10
+
+fig, ax = plt.subplots(nrows=1, ncols=1, figsize=((2.8*1.5)/5.6, 0.6*1.5))
+
+threshold = 'in_nature_all'
+df = isofold_exist_clasf[['iv_scaled_folding_ddG', threshold]].copy()
+df = df.rename(columns={threshold: 'observed'})
+
+df['score'] = -1 * df['iv_scaled_folding_ddG']
+
+df = df.sort_values(by='score', ascending=False).reset_index(drop=True)
+
+overall_rate = df['observed'].mean()
+
+df['decile'] = pd.qcut(np.arange(len(df)), q=n_deciles, labels=np.arange(1, n_deciles+1))
+
+lift_df = df.groupby('decile', observed=False)['observed'].agg(['mean', 'count']).reset_index()
+lift_df['lift'] = lift_df['mean'] / overall_rate
+lift_df = lift_df.sort_values(by='decile')
+
+ax.bar(lift_df['decile'].astype(str), lift_df['lift'],
+       color='steelblue', edgecolor='k', alpha=1, lw=0.5,width=1)
+ax.axhline(y=1, color='gray', linestyle='--', linewidth=0.8)
+
+ax.set_xlabel('Decile', fontsize=6, labelpad=0)
+ax.set_ylabel('Lift', fontsize=6, labelpad=2)
+ax.set_yticks(np.arange(0,6,1))
+ax.set_xticks(np.arange(0,11,2))
+ax.tick_params(axis='x', labelsize=6)
+ax.tick_params(axis='y', labelsize=6)
+
+#plt.savefig('FYN_2ndordersparsemodel_EBG_lift_chart_all_bin.svg', dpi=300, transparent=True, bbox_inches='tight')
+plt.show()
+
+
+from seaborn import kdeplot
+
+predicted_phenotypes_scaled = predicted_phenotypes.copy()
+
+def normalize(values, bounds):
+    return [bounds['desired']['lower'] + (x - bounds['actual']['lower']) * (bounds['desired']['upper'] - bounds['desired']['lower']) / (bounds['actual']['upper'] - bounds['actual']['lower']) for x in values]
+fig, ax = plt.subplots()
+
+my_kde = kdeplot(data=predicted_phenotypes_scaled, x='mean', ax=ax)
+
+lines = my_kde.get_lines()
+plt.close()
+for line in lines:
+    x, y = line.get_data()
+    mode=(x[np.argmax(y)])
+    ax.axvline(x[np.argmax(y)], ls='--')
+
+predicted_phenotypes_scaled['mean']=           normalize(list(predicted_phenotypes_scaled['mean']),{'actual': {'lower': mode, 'upper': predicted_phenotypes_scaled.loc[predicted_phenotypes_scaled['WT']==True].iloc[0]['mean']}, 'desired': {'lower': -1, 'upper': 0}})
+
+fig, ax = plt.subplots()
+
+my_kde = kdeplot(data=predicted_phenotypes_scaled, x='mean', ax=ax)
+
+lines = my_kde.get_lines()
+plt.close()
+for line in lines:
+    x, y = line.get_data()
+    #mode=(x[np.argmax(y)])
+    ax.axvline(x[np.argmax(y)], ls='--')
+ax.axvline(0, ls='--')
+plt.close()
+
+reliable_isofolds=reliable_isofolds.merge(predicted_phenotypes_scaled[['core', 'mean', 'mean_dG']], on='core',how='left')
+
+import numpy as np
+import matplotlib.colors as mcolors
+
+def shiftedColorMap(cmap, start=0, midpoint=0.5, stop=1, name=None):
+    '''
+    Function to offset the "center" of a colormap. Useful for
+    data with a negative min and positive max and you want the
+    middle of the colormap's dynamic range to be at zero.
+
+    Input
+    -----
+      cmap : The matplotlib colormap to be altered
+      start : Offset from lowest point in the colormap's range.
+          Defaults to 0.0 (no lower offset). Should be between
+          0.0 and `midpoint`.
+      midpoint : The new center of the colormap. Defaults to 
+          0.5 (no shift). Should be between 0.0 and 1.0. In
+          general, this should be  1 - vmax / (vmax + abs(vmin))
+          For example if your data range from -15.0 to +5.0 and
+          you want the center of the colormap at 0.0, `midpoint`
+          should be set to  1 - 5/(5 + 15)) or 0.75
+      stop : Offset from highest point in the colormap's range.
+          Defaults to 1.0 (no upper offset). Should be between
+          `midpoint` and 1.0.
+      name : Optional name for the colormap. If provided, the colormap
+          will be registered under this name.
+
+    Returns
+    -------
+      A `LinearSegmentedColormap` object.
+    '''
+    cdict = {
+        'red': [],
+        'green': [],
+        'blue': [],
+        'alpha': []
+    }
+
+    # Regular index to compute the colors
+    reg_index = np.linspace(start, stop, 257)
+
+    # Shifted index to match the data
+    shift_index = np.hstack([
+        np.linspace(0.0, midpoint, 128, endpoint=False), 
+        np.linspace(midpoint, 1.0, 129, endpoint=True)
+    ])
+
+    for ri, si in zip(reg_index, shift_index):
+        r, g, b, a = cmap(ri)
+
+        cdict['red'].append((si, r, r))
+        cdict['green'].append((si, g, g))
+        cdict['blue'].append((si, b, b))
+        cdict['alpha'].append((si, a, a))
+
+    newcmap = mcolors.LinearSegmentedColormap(name if name else "shifted", cdict)
+
+    return newcmap
+iterator_cmap=0
+
+from itertools import product
+
+DTS = ['F','L','I','M','V']
+a=list(product(DTS,repeat=7))
+
+from tqdm import tqdm
+
+dod={}
+for variant in tqdm(a, total=len(a)):
+    iterator=0
+    positerator=0
+    singles=[]
+    for i in product(variant,DTS):
+        mutant = ''.join(''.join(variant[:positerator])+str(i[1])+''.join(variant[positerator+1:]))
+        if (iterator/5).is_integer() == True and iterator !=0:
+            positerator+=1
+        iterator+=1
+        if mutant != ''.join(variant):
+            singles.append(mutant)
+    dod[''.join(variant)]=singles
+
+import seaborn as sns
+import networkx as nx
+from itertools import count
+from seaborn import kdeplot
+from itertools import groupby
+import matplotlib
+import numpy as np
+import matplotlib.colors as mcolors
+
+query_natural_DTS_cores = ['VLFIVFV', 'VLFIIFV', 'VLLIVFV', 'VLFILFV', 'VLLVVFV', 'VLFLVFV', 'VLIIVFV', 'FLLVVFV']
+detrimental_singles = ['LLFFIIV', 'ILFFIIV', 'FVFFIIV', 'FLLFIIV', 'FLIFIIV', 'FLVFIIV', 'FLFMIIV', 'FLFVIIV', 'FLFFFIV', 'FLFFLIV', 'FLFFMIV', 'FLFFIFV', 'FLFFILV', 'FLFFIMV']
+
+#natural_core_predictions= reliable_isofolds.loc[reliable_isofolds['allDTS']==True].drop_duplicates('MutCore').copy()
+#natural_core_predictions = reliable_isofolds.sort_values('fitness',ascending=False)
+#natural_core_predictions= natural_core_predictions.drop_duplicates('core',keep='first').copy()
+natural_core_predictions = reliable_isofolds.sort_values('mean',ascending=False).drop_duplicates('core',keep='first').copy()
+natural_core_predictions = natural_core_predictions.rename(columns={'mean':'fitness'})
+
+lines = kdeplot(data=natural_core_predictions, x='fitness').get_lines()
+plt.close()
+for line in lines:
+    x, y = line.get_data()
+    mode=x[np.argmax(y)]
+
+G = nx.from_dict_of_lists(dod)
+G_val = nx.from_dict_of_lists(dod)
+G_grb2 = nx.from_dict_of_lists(dod)
+
+pos={}
+for index, row in natural_core_predictions.iterrows():
+    pos[row.core] = (row.muts_in_fyn_seq_Nham_aa, row['fitness'])
+    
+validated = query_natural_DTS_cores+detrimental_singles
+pos_val={}
+for index, row in natural_core_predictions[natural_core_predictions['core'].isin(validated)].iterrows():
+    pos_val[row.core] = (row.muts_in_fyn_seq_Nham_aa, row.fitness)
+    
+validated_grb2 = ['VLFIVFV']
+pos_grb2={}
+for index, row in natural_core_predictions[natural_core_predictions['core'].isin(validated_grb2)].iterrows():
+    pos_grb2[row.core] = (row.muts_in_fyn_seq_Nham_aa, row.fitness)
+    
+fig, (ax0,axviable,ax1,ax2) = plt.subplots(4,1,gridspec_kw={'height_ratios':[2,2,1,12],'hspace': 0.15},figsize=(2.3,2.5))
+plt.close()
+fig, (ax0,axviable,ax1,ax2) = plt.subplots(4,1,gridspec_kw={'height_ratios':[2,2,1,12],'hspace': 0.15},figsize=(2.3,2.5),sharex=ax1)
+
+
+fig=sns.violinplot(x="muts_in_fyn_seq_Nham_aa", y="fitness", data=natural_core_predictions, inner=None, ax=ax2, color='#B4D689', linewidth=0.3)
+plt.axhline(y=-0.5, linestyle='--', color='gray', linewidth=0.5)
+
+remove=[i for i in dod.keys() if i not in pos.keys()]
+remove_val=[i for i in dod.keys() if i not in pos_val.keys()]
+remove_grb2=[i for i in dod.keys() if i not in pos_grb2.keys()]
+
+G.remove_nodes_from(remove)
+G_val.remove_nodes_from(remove_val)
+G_grb2.remove_nodes_from(remove_grb2)
+
+fitness_values=[]
+for i in pos:
+    fitness_values.append(pos[i][1])
+groups = []
+for _, g in groupby(fitness_values, lambda x: (x-1)//0.05):
+    groups.append(list(g))      # Store group iterator as a list
+
+fitness_attr={}
+for node in G.nodes:
+    iterator=0
+    for bin in groups:
+        if pos[node][1] in bin:
+            fitness_attr[node]=iterator
+            break
+        iterator+=1
+
+nx.set_node_attributes(G, fitness_attr, 'fitness')
+groups = set(nx.get_node_attributes(G,'fitness').values())
+mapping = dict(zip(sorted(groups),count()))
+nodes = G.nodes()
+colors = [mapping[G.nodes[n]['fitness']] for n in nodes]
+
+total_viable=0
+nham_viability=pd.DataFrame(columns=['Number_of_variants','Fraction_50pc_folded'])
+for nham in range(0,8,1):
+    nham_viability.at[nham,'nham']=nham
+    nham_viability.at[nham,'Fraction_50pc_folded']=round(100*(len(natural_core_predictions.loc[natural_core_predictions['muts_in_fyn_seq_Nham_aa']==nham].loc[natural_core_predictions['fitness']>=-0.5].index)/len(natural_core_predictions.loc[natural_core_predictions['muts_in_fyn_seq_Nham_aa']==nham])),1)
+    nham_viability.at[nham,'Number_of_variants']=len(natural_core_predictions.loc[natural_core_predictions['muts_in_fyn_seq_Nham_aa']==nham])
+    nham_viability.at[nham,'Number_of_viable_variants']=len(natural_core_predictions.loc[natural_core_predictions['muts_in_fyn_seq_Nham_aa']==nham].loc[natural_core_predictions['fitness']>=-0.5].index)
+    total_viable=total_viable+len(natural_core_predictions.loc[natural_core_predictions['muts_in_fyn_seq_Nham_aa']==nham].loc[natural_core_predictions['fitness']>=-0.5].index)
+for index, row in nham_viability.iterrows():
+    nham_viability.at[index,'Fraction_of_total_viable_variants']= round(100*row['Number_of_viable_variants']/total_viable,1)
+
+orig_cmap = plt.cm.coolwarm
+iterator_cmap+=1
+midpoint=(-0.5 - np.min(natural_core_predictions['fitness']))/ (np.max(natural_core_predictions['fitness']) - np.min(natural_core_predictions['fitness']))
+shifted_cmap = shiftedColorMap(orig_cmap, midpoint=1-midpoint, name='shifted'+str(iterator_cmap))
+    
+nx.draw_networkx(G, pos=pos, with_labels=False, node_size=0, ax=ax2, edge_color='gray', width=0.02)
+nodes=nx.draw_networkx_nodes(G, pos, nodelist=nodes, node_color=colors, node_size=0.3, cmap=shifted_cmap)
+nx.draw_networkx(G_val, pos=pos_val, with_labels=False, node_size=10, ax=ax2, width=0, node_shape=matplotlib.markers.MarkerStyle(marker='o', fillstyle='none'), node_color='k')
+nx.draw_networkx(G_grb2, pos=pos_grb2, with_labels=False, node_size=10, ax=ax2, width=0, node_shape=matplotlib.markers.MarkerStyle(marker='o', fillstyle='none'), node_color='yellow')
+ax2.tick_params(left=True, bottom=True, labelleft=True, labelbottom=True)
+ax2.set_xlabel('Number of amino acid substitutions', fontsize=7)
+ax2.set_ylabel("Abundance\nfitness", fontsize=7,rotation='horizontal', ha='right')
+ax2.spines['top'].set_visible(False)
+ax2.spines['right'].set_visible(False)
+ax2.tick_params(axis='both', which='major', labelsize=6)
+
+norm = mcolors.Normalize(vmin=0, vmax=100)
+cmap = plt.cm.coolwarm_r
+colors = [cmap(norm(value)) for value in nham_viability['Fraction_50pc_folded']]
+
+nham_viability['Fraction_50pc_folded'] = pd.to_numeric(nham_viability['Fraction_50pc_folded'], errors='coerce')
+#sns.scatterplot(x=[i for i in nham_viability['nham']],y=[0]*len(nham_viability.index), hue=nham_viability['Fraction_50pc_folded'],palette='coolwarm_r', s=nham_viability['Fraction_50pc_folded']*0.5,ax=ax1, legend=False, norm=norm)
+sns.scatterplot(x=[i for i in nham_viability['nham']],y=[0]*len(nham_viability.index), s=nham_viability['Fraction_50pc_folded']*0.5,ax=ax1, legend=False, color=colors)
+ax1.spines[['top','right','left','bottom']].set_visible(False)
+ax1.tick_params(left=False, bottom=False, labelleft=False, labelbottom=False,top=False, right=False)
+ax1.tick_params(axis='x', which='both', bottom=False, top=False, labelbottom=False)
+for index, row in nham_viability.iterrows():
+    if row.Fraction_50pc_folded == 100.0:
+        ax2.annotate(100, (row.nham-0.4,0.45), fontsize=6, color='black')
+    else:
+        ax2.annotate(row.Fraction_50pc_folded, (row.nham-0.3,0.45), fontsize=6, color='black')
+ax1.set_ylabel('% variants\nfitness > 0.5',fontsize=6,rotation='horizontal', ha='right')
+        
+ax2.annotate('n='+f"{len(natural_core_predictions):,}", (-0.3,-1.3), fontsize=6)
+plt.subplots_adjust(hspace=0.05)
+
+nham_viability['Number_of_variants'].plot.bar(ax=ax0,fontsize=6,color='gray')
+ax0.spines[['top','right']].set_visible(False)
+ax0.tick_params(axis='x', which='both', bottom=False, top=False, labelbottom=False)
+ax0.set_ylabel('Total count',fontsize=6, rotation='horizontal', ha='right')
+labels = ax0.get_yticklabels()
+labels[0] = ""
+ticks = ax0.get_yticks()
+ax0.set_yticks(ticks)
+ax0.set_yticklabels(labels)
+
+nham_viability['Number_of_viable_variants'].plot.bar(ax=axviable,fontsize=6,color='gray')
+axviable.spines[['top','right']].set_visible(False)
+axviable.tick_params(axis='x', which='both', bottom=False, top=False, labelbottom=False)
+axviable.set_ylabel('Nr. variants\nfitness > -0.5',fontsize=6,rotation='horizontal', ha='right')
+
+ax0.get_yaxis().set_label_coords(-0.2,0)
+axviable.get_yaxis().set_label_coords(-0.2,0)
+ax1.get_yaxis().set_label_coords(-0.2,-1)
+ax2.get_yaxis().set_label_coords(-0.2,0.5)
+plt.ylim(-1.4,0.5)
+plt.xlim(-0.5,7.5)
+plt.rcParams['svg.fonttype'] = 'none'

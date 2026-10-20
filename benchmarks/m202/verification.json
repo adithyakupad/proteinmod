@@ -1,0 +1,30 @@
+{
+  "base_commit": "9f0713d333410f1338d2b4f6b2cb6f4b91baa802",
+  "historical_files_byte_identical": 982,
+  "pytest": {
+    "passed": 254,
+    "seconds": 14.15
+  },
+  "ruff_check": "PASS",
+  "ruff_format": {
+    "status": "PASS",
+    "files": 295
+  },
+  "integrity_guards": {
+    "verify_readability_historical": "PASS",
+    "verify_sod1": "PASS",
+    "verify_m184": "PASS"
+  },
+  "pypdf_temporary_tool_version": "6.21.1",
+  "python": "3.12.15",
+  "model_runs": 0,
+  "outcome_evaluations": 0,
+  "no_manifest_or_execution_command": true,
+  "limitations": [
+    "No cold-source numerical model replay",
+    "Primary publisher supplement inaccessible; institutional primary Methods inspected instead",
+    "No full archive MD5 download",
+    "Exact deposited table export/censor bridge unresolved"
+  ],
+  "CI": "See exact-head draft PR checks; populated after push without rewriting evidence."
+}
