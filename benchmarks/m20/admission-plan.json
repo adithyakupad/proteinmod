@@ -1,0 +1,22 @@
+{
+  "base": "402bd8815dcd8857d416f47b1b41fdb922cf471d",
+  "scope": "M20 finite outcome-blind review and admission; not a final evaluation manifest",
+  "frozen_inputs": {
+    "benchmarks/m17/PREREGISTRATION.md": "26dde309517174ff4c0aa1e1d365725b146605c906a75676545ff5eec88af33f",
+    "configs/m17.json": "befdb69c9038fd9e4434bbee1b1cc8baad7b30814a4b2852539fa2ef04ea0893",
+    "benchmarks/m17/split-manifest.json": "ec3a4d6d2c34058aec093a8e3c78d76c953748c3039b0a223c48b7893297aecf",
+    "benchmarks/m19/PROTOCOL.md": "68bcd4b31882dd831ed62063cb5d05996c548eeb1609f715f7a59a051826c7be",
+    "benchmarks/m19/summary.json": "3bb1e1c19c8652c5ffc6bf7a6de4e58e7968dc40d93cd4eb96a19bd4fcea2508",
+    "benchmarks/m185/BLINDING_DEVIATION.md": "696fbeb9202cc42a2f8ae20efd6c354149d334277975a2d2bbf507a409750c21",
+    "benchmarks/m185/qualification.json": "e094343ca32aa14be3a66cfc8e0512deb0c1b072420aca87415bdc393d5afaab",
+    "benchmarks/m184/PERMISSION_REQUEST.md": "c8e24ab606798617db2ad8b256a48407bfdfa662723063abdbf4ed3b8f08a1f1"
+  },
+  "four_distinct_families_required": 4,
+  "minimum_positive_families": 3,
+  "rho_margin": 0.02,
+  "prospective_source_changes_selected": false,
+  "outcomes_authorized_now": false,
+  "external_confirmation_runs": 0,
+  "baseline": "Original M17 unscaled ESM mutation-site ridge; paired scaled comparator preserved; not expanded M19",
+  "stop": "Any unresolved permission, incident disposition, structural/reference/family/cohort/protocol gate => no final manifest or outcome access"
+}
