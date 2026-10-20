@@ -1,0 +1,523 @@
+[
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/data.py",
+    "function": "mutations",
+    "renames": {
+      "old": "reference_residue",
+      "new": "mutant_residue"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/admission_masks.py",
+    "function": "gfp_mutations",
+    "renames": {
+      "old": "reference_residue",
+      "new": "mutant_residue",
+      "index": "source_index"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/admission_masks.py",
+    "function": "compatible_positions",
+    "renames": {
+      "r": "residue"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/structure_mapping.py",
+    "function": "map_reference",
+    "renames": {
+      "polymer": "polymer_index",
+      "record": "residue_record",
+      "quality": "alignment_quality",
+      "allowed": "allowed_mismatches",
+      "span": "polymer_range",
+      "pairs": "aligned_positions"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/structure_features.py",
+    "function": "contact_graph",
+    "renames": {
+      "a": "left_record",
+      "b": "right_record",
+      "i": "left_index",
+      "j": "right_index"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/structural_graph.py",
+    "function": "load_graph",
+    "renames": {
+      "r": "residue",
+      "e": "contact",
+      "a": "source_index",
+      "b": "target_index",
+      "d": "distance",
+      "k": "descriptor_name",
+      "attrs": "edge_attributes",
+      "desc": "descriptors"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/structural_graph.py",
+    "function": "variant_inputs",
+    "renames": {
+      "i": "node_index",
+      "old": "reference_index",
+      "new": "mutant_index",
+      "n": "node_count",
+      "coords": "site_coordinates"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/edge_chemistry.py",
+    "function": "annotate",
+    "renames": {
+      "i": "source_index",
+      "j": "target_index"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/edge_chemistry.py",
+    "function": "controlled_graph",
+    "renames": {
+      "perm": "permutation"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/mutation_interactions.py",
+    "function": "geometry",
+    "renames": {
+      "out": "features",
+      "i": "left_index",
+      "j": "right_index",
+      "adj": "adjacency",
+      "paths": "path_lengths"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/mutation_interactions.py",
+    "function": "pair_features",
+    "renames": {
+      "geom": "pair_geometry",
+      "bio": "shuffled_alleles",
+      "l": "left_token",
+      "r": "right_token",
+      "x": "left_vector",
+      "y": "right_vector",
+      "seq": "sequence_features",
+      "geo": "geometry_features",
+      "h": "left_context",
+      "k": "right_context"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/family_data.py",
+    "function": "folds",
+    "renames": {
+      "pid": "protein_id",
+      "j": "family_index",
+      "k": "protein_index",
+      "s": "partition_name"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/stability_data.py",
+    "function": "mutant_sequence",
+    "renames": {
+      "result": "mutant_residues"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/stability_data.py",
+    "function": "merge_measurements",
+    "renames": {
+      "r": "measurement_row"
+    }
+  },
+  {
+    "stage": "data_geometry",
+    "path": "src/proteinmod/masked_structure.py",
+    "function": "extract",
+    "renames": {
+      "r": "residue",
+      "e": "contact",
+      "a": "source_index",
+      "b": "target_index",
+      "k": "descriptor_name",
+      "desc": "descriptors"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/models.py",
+    "function": "metrics",
+    "renames": {
+      "delta": "prediction_errors"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/models.py",
+    "function": "fit_ridge",
+    "renames": {
+      "rmse": "validation_rmse"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/structural_gnn.py",
+    "function": "ResidueGNN.encode",
+    "renames": {
+      "h": "node_hidden",
+      "m": "edge_messages"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/structural_gnn.py",
+    "function": "ResidueGNN.forward",
+    "renames": {
+      "h": "node_hidden",
+      "mask": "mutation_mask",
+      "count": "mutation_count",
+      "pooled": "mutation_sum"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/edge_gnn.py",
+    "function": "EdgeGNN.forward",
+    "renames": {
+      "h": "node_hidden",
+      "m": "edge_messages",
+      "count": "mutation_count",
+      "pooled": "mutation_sum"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/hybrid.py",
+    "function": "CrossAttention.forward",
+    "renames": {
+      "b": "batch_size",
+      "n": "query_count",
+      "d": "feature_width",
+      "keys": "valid_keys"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/hybrid.py",
+    "function": "HybridRegressor.forward",
+    "renames": {
+      "b": "batch_size",
+      "n": "node_count",
+      "sm": "sequence_valid",
+      "gm": "graph_valid",
+      "qm": "query_valid",
+      "ix": "mutation_indices",
+      "s": "sequence_hidden",
+      "sq": "sequence_queries",
+      "g": "graph_hidden",
+      "gq": "graph_queries",
+      "new_sq": "updated_sequence_queries",
+      "sp": "sequence_pooled",
+      "gp": "graph_pooled",
+      "w": "fusion_weight"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/lora_model.py",
+    "function": "tensor_digest",
+    "renames": {
+      "h": "digest",
+      "x": "tensor"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/lora_model.py",
+    "function": "site_representation",
+    "renames": {
+      "count": "mutation_count",
+      "mask": "site_mask"
+    },
+    "temporaries": [
+      "mutant_mean",
+      "delta_mean"
+    ]
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/lora_model.py",
+    "function": "AdaptedESM.load_selected",
+    "renames": {
+      "params": "parameters"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/multitask.py",
+    "function": "MultitaskModel.forward",
+    "renames": {
+      "h": "shared_features",
+      "t": "task"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/multitask.py",
+    "function": "masked_loss",
+    "renames": {
+      "w": "task_weights",
+      "j": "task_index",
+      "delta": "task_errors"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/multitask.py",
+    "function": "calibrate",
+    "renames": {
+      "y": "targets",
+      "r": "observation"
+    }
+  },
+  {
+    "stage": "model_kernels",
+    "path": "src/proteinmod/lora_model.py",
+    "function": "LowRank.forward",
+    "renames": {},
+    "temporaries": [
+      "dropped_inputs",
+      "rank_features",
+      "projected_features"
+    ]
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/mechanism.py",
+    "function": "balanced",
+    "renames": {
+      "pid": "protein_id",
+      "ix": "protein_indices"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/mechanism.py",
+    "function": "study_roles",
+    "renames": {
+      "pids": "protein_ids",
+      "train_pids": "train_proteins",
+      "val_family": "validation_family",
+      "pid": "protein_id",
+      "pp": "replacement_proteins",
+      "rr": "replacement_roles",
+      "j": "family_index"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/mechanism.py",
+    "function": "degree_null",
+    "renames": {
+      "ix": "selected_edges"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/mechanism_experiments.py",
+    "function": "probe_fit",
+    "renames": {
+      "x": "features"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/structural_gnn.py",
+    "function": "train_gnn",
+    "renames": {
+      "x": "mutation_inputs",
+      "y": "scaled_targets",
+      "mean": "target_mean",
+      "scale": "target_scale",
+      "ix": "batch_indices",
+      "rng": "random_generator",
+      "score": "validation_rmse",
+      "stale": "stale_epochs",
+      "total": "total_loss"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/assay_models.py",
+    "function": "ridge",
+    "renames": {
+      "val": "validation",
+      "z": "scaled_features",
+      "y": "targets",
+      "score": "validation_score"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/assay_models.py",
+    "function": "group_ridge",
+    "renames": {
+      "pred": "group_predictions",
+      "ix": "group_indices"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/uncertainty_calibration.py",
+    "function": "calibration_state",
+    "renames": {
+      "cal": "calibration_indices",
+      "val": "validation_indices",
+      "q": "quantile"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/uncertainty_calibration.py",
+    "function": "prediction_intervals",
+    "renames": {
+      "ix": "group_indices",
+      "q": "quantile",
+      "j": "group_offset",
+      "i": "row_index"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/uncertainty_models.py",
+    "function": "ridge_ensemble",
+    "renames": {
+      "y": "targets"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/lora_experiments.py",
+    "function": "fit",
+    "renames": {
+      "y": "targets",
+      "rng": "random_generator",
+      "stale": "stale_epochs",
+      "total": "total_loss",
+      "ix": "batch_indices",
+      "g": "protein_group",
+      "local": "local_indices",
+      "pid": "protein_id"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/hybrid_experiments.py",
+    "function": "fit",
+    "renames": {
+      "y": "targets",
+      "rng": "random_generator",
+      "stale": "stale_epochs",
+      "total": "total_loss",
+      "g": "protein_graph",
+      "local": "local_indices",
+      "score": "validation_score"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/multitask_experiments.py",
+    "function": "fit",
+    "renames": {
+      "y": "task_targets",
+      "rng": "task_generators",
+      "g": "protein_graph",
+      "local": "local_indices",
+      "pid": "protein_id",
+      "pred": "task_predictions",
+      "j": "task_index",
+      "total": "total_loss"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/multiprotein_experiments.py",
+    "function": "graph_fit",
+    "renames": {
+      "y": "target_tensor",
+      "rng": "random_generator",
+      "g": "protein_group",
+      "stale": "stale_epochs",
+      "local": "local_indices",
+      "score": "validation_score"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/edge_experiments.py",
+    "function": "fit",
+    "renames": {
+      "y": "scaled_targets",
+      "mean": "target_mean",
+      "scale": "target_scale",
+      "rng": "random_generator",
+      "stale": "stale_epochs",
+      "total": "total_loss",
+      "ix": "batch_indices",
+      "pred": "batch_predictions",
+      "local": "local_indices"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/reliability_experiments.py",
+    "function": "fit",
+    "renames": {
+      "x": "representations",
+      "q": "quality_tensor",
+      "y": "targets",
+      "rng": "random_generator",
+      "stale": "stale_epochs",
+      "total": "total_loss",
+      "ix": "batch_indices",
+      "pred": "validation_predictions",
+      "score": "validation_score"
+    }
+  },
+  {
+    "stage": "experiments_controls",
+    "path": "src/proteinmod/stability_conditioning.py",
+    "function": "neural_function",
+    "renames": {
+      "x": "representation_inputs",
+      "s": "stability_inputs",
+      "y": "scaled_targets",
+      "mean": "target_mean",
+      "scale": "target_scale",
+      "rng": "random_generator",
+      "stale": "stale_epochs",
+      "ix": "evaluation_indices",
+      "score": "validation_score"
+    }
+  }
+]

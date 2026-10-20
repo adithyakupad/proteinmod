@@ -349,16 +349,16 @@ def map_reference(parsed, reference, settings):
     candidates, successful = [], {}
     for chain_id, chain in parsed["chains"].items():
         try:
-            span = settings.get("reference_polymer_range")
-            if span is not None and chain_id == settings.get("chain"):
+            polymer_range = settings.get("reference_polymer_range")
+            if polymer_range is not None and chain_id == settings.get("chain"):
                 # Explicit construct bounds disambiguate repeated terminal cloning tags.
                 if (
-                    not isinstance(span, (list, tuple))
-                    or len(span) != 2
-                    or any(type(v) is not int for v in span)
+                    not isinstance(polymer_range, (list, tuple))
+                    or len(polymer_range) != 2
+                    or any(type(v) is not int for v in polymer_range)
                 ):
                     raise ValueError("Explicit polymer range requires two integer bounds")
-                start, end = span
+                start, end = polymer_range
                 if (
                     not (1 <= start <= end <= len(chain["sequence"]))
                     or chain["sequence"][start - 1 : end] != reference
@@ -366,24 +366,24 @@ def map_reference(parsed, reference, settings):
                     raise ValueError(
                         "Explicit polymer range must exactly match the complete reference"
                     )
-                pairs = {i: start - 1 + i for i in range(len(reference))}
+                aligned_positions = {i: start - 1 + i for i in range(len(reference))}
                 score, alignment = (
                     3 * len(reference),
                     f"Exact declared polymer range {start}..{end}",
                 )
             else:
-                pairs, score, alignment = unique_alignment(reference, chain["sequence"])
-            identity = sum(reference[i] == chain["sequence"][j] for i, j in pairs.items()) / max(
-                len(pairs), 1
-            )
+                aligned_positions, score, alignment = unique_alignment(reference, chain["sequence"])
+            identity = sum(
+                reference[i] == chain["sequence"][j] for i, j in aligned_positions.items()
+            ) / max(len(aligned_positions), 1)
             candidate = {
                 "chain": chain_id,
                 "identity": identity,
-                "aligned_coverage": len(pairs) / len(reference),
+                "aligned_coverage": len(aligned_positions) / len(reference),
                 "score": score,
                 "sequence_source": chain["sequence_source"],
             }
-            successful[chain_id] = (pairs, alignment, candidate)
+            successful[chain_id] = (aligned_positions, alignment, candidate)
         except ValueError as error:
             candidate = {"chain": chain_id, "error": str(error)}
         candidates.append(candidate)
@@ -406,28 +406,28 @@ def map_reference(parsed, reference, settings):
             "errors": ["Selected chain absent or alignment ambiguous"],
             "chains": candidates,
         }
-    pairs, alignment, quality = successful[selected]
+    aligned_positions, alignment, alignment_quality = successful[selected]
     chain = parsed["chains"][selected]
     errors, rows, differences = [], [], []
-    allowed = set(settings.get("allowed_mismatches", []))
+    allowed_mismatches = set(settings.get("allowed_mismatches", []))
     for index, amino_acid in enumerate(reference):
-        polymer = pairs.get(index)
-        record = chain["coordinates"].get(polymer)
-        structure_letter = chain["sequence"][polymer] if polymer is not None else None
+        polymer_index = aligned_positions.get(index)
+        residue_record = chain["coordinates"].get(polymer_index)
+        structure_letter = chain["sequence"][polymer_index] if polymer_index is not None else None
         mismatch = structure_letter is not None and structure_letter != amino_acid
         if mismatch:
             difference = f"{amino_acid}{index + 1}{structure_letter}"
             differences.append(difference)
-            if difference not in allowed:
+            if difference not in allowed_mismatches:
                 errors.append(f"Unapproved reference/construct difference: {difference}")
-        declared_key = chain.get("declared_keys", {}).get(polymer)
-        author_key = record["key"] if record else declared_key
-        has_ca = record is not None and "CA" in record["residue"]
+        declared_key = chain.get("declared_keys", {}).get(polymer_index)
+        author_key = residue_record["key"] if residue_record else declared_key
+        has_ca = residue_record is not None and "CA" in residue_record["residue"]
         status = (
             "absent_from_construct"
-            if polymer is None
+            if polymer_index is None
             else "missing_coordinates"
-            if record is None
+            if residue_record is None
             else "sequence_mismatch"
             if mismatch
             else "missing_ca"
@@ -443,15 +443,15 @@ def map_reference(parsed, reference, settings):
                 "status": status,
                 "author_number": author_key[0] if author_key else None,
                 "insertion_code": author_key[1] if author_key else None,
-                "resname": record["resname"] if record else None,
-                "noncanonical": record["noncanonical"] if record else False,
-                "polymer_position": polymer + 1 if polymer is not None else None,
-                "record": record,
+                "resname": residue_record["resname"] if residue_record else None,
+                "noncanonical": residue_record["noncanonical"] if residue_record else False,
+                "polymer_position": polymer_index + 1 if polymer_index is not None else None,
+                "record": residue_record,
                 "has_ca": has_ca,
             }
         )
     coverage = sum(row["has_ca"] for row in rows) / len(reference)
-    if quality["identity"] < settings.get("min_identity", 0.98):
+    if alignment_quality["identity"] < settings.get("min_identity", 0.98):
         errors.append("Aligned sequence identity below threshold")
     if coverage < settings.get("min_coverage", 0.8):
         errors.append("C-alpha reference coverage below threshold")
@@ -462,14 +462,14 @@ def map_reference(parsed, reference, settings):
         "selected_chain": selected,
         "reference_length": len(reference),
         "coordinate_coverage": coverage,
-        "aligned_coverage": quality["aligned_coverage"],
-        "aligned_identity": quality["identity"],
+        "aligned_coverage": alignment_quality["aligned_coverage"],
+        "aligned_identity": alignment_quality["identity"],
         "exact_compatible_positions": sum(row["status"] == "mapped" for row in rows),
         "differences": differences,
         "missing_positions": [r["reference_position"] for r in rows if not r["has_ca"]],
         "alignment": alignment,
         "construct_insertions": [
-            j + 1 for j in range(len(chain["sequence"])) if j not in pairs.values()
+            j + 1 for j in range(len(chain["sequence"])) if j not in aligned_positions.values()
         ],
     }
     return rows, audit

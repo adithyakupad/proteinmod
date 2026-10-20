@@ -111,7 +111,7 @@ def prepare():
 def probe_fit(matrix, rows, roles, alphas, seed, scaled=True, nonlinear=False):
     target = fit_targets(rows, roles["train"])
     scaler = StandardScaler().fit(matrix[roles["train"]]) if scaled else None
-    x = scaler.transform(matrix).astype(float) if scaler else matrix.astype(float)
+    features = scaler.transform(matrix).astype(float) if scaler else matrix.astype(float)
     best = None
     candidates = []
     for alpha in alphas:
@@ -127,8 +127,8 @@ def probe_fit(matrix, rows, roles, alphas, seed, scaled=True, nonlinear=False):
             else Ridge(alpha=alpha, solver="lsqr", tol=1e-8, max_iter=10000)
         )
         with warnings.catch_warnings(record=True) as caught:
-            model.fit(x[roles["train"]], target[roles["train"]])
-        score = macro_score(rows, roles["validation"], model.predict(x[roles["validation"]]))
+            model.fit(features[roles["train"]], target[roles["train"]])
+        score = macro_score(rows, roles["validation"], model.predict(features[roles["validation"]]))
         candidates.append(
             {"alpha": alpha, "validation_rho": score, "warnings": [str(w.message) for w in caught]}
         )
@@ -146,14 +146,16 @@ def probe_fit(matrix, rows, roles, alphas, seed, scaled=True, nonlinear=False):
         parameters = model.coef_.size + 1
     if scaler:
         state.update(mean=scaler.mean_, scale=scaler.scale_)
-    prediction = model.predict(x[roles["test"]])
-    assert np.array_equal(prediction, model.predict(x[roles["test"]]))
+    prediction = model.predict(features[roles["test"]])
+    assert np.array_equal(prediction, model.predict(features[roles["test"]]))
     return (
         prediction,
         {
             "alpha": best[2],
             "validation_score": best[0],
-            "train_score": macro_score(rows, roles["train"], model.predict(x[roles["train"]])),
+            "train_score": macro_score(
+                rows, roles["train"], model.predict(features[roles["train"]])
+            ),
             "parameters": parameters,
             "candidates": candidates,
             "scaled": scaled,

@@ -41,40 +41,49 @@ def topology(graph):
 
 
 def geometry(a, b, graph, precomputed):
-    out = np.zeros(GEOMETRY_WIDTH, np.float32)
+    features = np.zeros(GEOMETRY_WIDTH, np.float32)
     semantics = graph["audit"]["confidence_semantics"]
-    out[{"alphafold_plddt": 12, "experimental_bfactor": 13, "unknown": 14}[semantics]] = 1
+    features[{"alphafold_plddt": 12, "experimental_bfactor": 13, "unknown": 14}[semantics]] = 1
     if a not in graph["lookup"] or b not in graph["lookup"]:
-        return out
-    i, j = graph["lookup"][a], graph["lookup"][b]
-    adj, components, paths = precomputed
-    distance = np.linalg.norm(graph["xyz"][i] - graph["xyz"][j])
+        return features
+    left_index, right_index = graph["lookup"][a], graph["lookup"][b]
+    adjacency, components, path_lengths = precomputed
+    distance = np.linalg.norm(graph["xyz"][left_index] - graph["xyz"][right_index])
     if not np.isfinite(distance) or distance <= 0:
         raise ValueError("Invalid mapped pair distance")
-    neighbors_a, neighbors_b = set(np.flatnonzero(adj[i])), set(np.flatnonzero(adj[j]))
-    out[:8] = [
+    neighbors_a, neighbors_b = (
+        set(np.flatnonzero(adjacency[left_index])),
+        set(np.flatnonzero(adjacency[right_index])),
+    )
+    features[:8] = [
         distance / 30,
         1 / (1 + distance),
         distance <= 8,
         len(neighbors_a & neighbors_b) / max(len(neighbors_a | neighbors_b), 1),
-        components[i] == components[j],
-        paths[i, j] / 10 if np.isfinite(paths[i, j]) else 0,
+        components[left_index] == components[right_index],
+        path_lengths[left_index, right_index] / 10
+        if np.isfinite(path_lengths[left_index, right_index])
+        else 0,
         1,
-        np.isfinite(paths[i, j]),
+        np.isfinite(path_lengths[left_index, right_index]),
     ]
     for key, offset, expected in [
         ("plddt", 8, "alphafold_plddt"),
         ("bfactor_a2", 10, "experimental_bfactor"),
     ]:
-        values = [graph["nodes"][k][key] for k in (i, j) if graph["nodes"][k][key] is not None]
+        values = [
+            graph["nodes"][k][key]
+            for k in (left_index, right_index)
+            if graph["nodes"][k][key] is not None
+        ]
         if values and (
             semantics != expected
             or any(not np.isfinite(v) or v < 0 or (key == "plddt" and v > 100) for v in values)
         ):
             raise ValueError("Invalid typed pair confidence")
-        out[offset] = np.mean(values) / 100 if values else 0
-        out[offset + 1] = len(values) / 2
-    return out
+        features[offset] = np.mean(values) / 100 if values else 0
+        features[offset + 1] = len(values) / 2
+    return features
 
 
 def mutation_vector(token):
@@ -91,16 +100,18 @@ def pair_features(tokens, reference, graph, positions, control="real", seed=0, c
         raise ValueError("Unknown interaction control")
     physical = topology(graph)
     pairs = list(itertools.combinations(sorted(positions), 2))
-    geom = {p: geometry(*p, graph, physical) for p in pairs}
+    pair_geometry = {p: geometry(*p, graph, physical) for p in pairs}
     rng = np.random.default_rng(seed)
     if control == "shuffled_distance":
         order = rng.permutation(len(pairs))
-        geom = {p: geom[pairs[j]].copy() for p, j in zip(pairs, order, strict=True)}
-    bio = {}
+        pair_geometry = {
+            p: pair_geometry[pairs[j]].copy() for p, j in zip(pairs, order, strict=True)
+        }
+    shuffled_alleles = {}
     for p in sorted(positions):
         alleles = [a for a in AMINO_ACIDS if a != reference[p - 1]]
         shuffled = rng.permutation(alleles)
-        bio.update(
+        shuffled_alleles.update(
             {
                 f"{reference[p - 1]}{p}{a}": f"{reference[p - 1]}{p}{b}"
                 for a, b in zip(alleles, shuffled, strict=True)
@@ -110,26 +121,39 @@ def pair_features(tokens, reference, graph, positions, control="real", seed=0, c
     for left, right in itertools.combinations(tokens, 2):
         a, b = int(left[1:-1]), int(right[1:-1])
         key = tuple(sorted((a, b)))
-        if key not in geom:
+        if key not in pair_geometry:
             raise ValueError("Mutation position outside declared landscape")
-        l, r = (bio[left], bio[right]) if control == "shuffled_biochemical" else (left, right)
-        x, y = mutation_vector(l), mutation_vector(r)
-        outer = np.outer(IDENTITY[AA[l[-1]]], IDENTITY[AA[r[-1]]])
+        left_token, right_token = (
+            (shuffled_alleles[left], shuffled_alleles[right])
+            if control == "shuffled_biochemical"
+            else (left, right)
+        )
+        left_vector, right_vector = mutation_vector(left_token), mutation_vector(right_token)
+        outer = np.outer(IDENTITY[AA[left_token[-1]]], IDENTITY[AA[right_token[-1]]])
         outer = outer + outer.T - np.diag(np.diag(outer))
-        seq = np.r_[
+        sequence_features = np.r_[
             1,
-            x + y,
-            np.abs(x - y),
-            x * y,
+            left_vector + right_vector,
+            np.abs(left_vector - right_vector),
+            left_vector * right_vector,
             outer[np.triu_indices(20)],
             abs(a - b) / max(len(reference) - 1, 1),
             np.exp(-abs(a - b) / 10),
         ]
-        geo = np.zeros(GEOMETRY_WIDTH) if control == "zero3d" else geom[key]
-        row = np.r_[seq, geo, np.outer(x[-4:] * y[-4:], geo).ravel()]
+        geometry_features = np.zeros(GEOMETRY_WIDTH) if control == "zero3d" else pair_geometry[key]
+        row = np.r_[
+            sequence_features,
+            geometry_features,
+            np.outer(left_vector[-4:] * right_vector[-4:], geometry_features).ravel(),
+        ]
         if context is not None:
-            h, k = context[left], context[right]
-            row = np.r_[row, h + k, np.abs(h - k), h * k]
+            left_context, right_context = context[left], context[right]
+            row = np.r_[
+                row,
+                left_context + right_context,
+                np.abs(left_context - right_context),
+                left_context * right_context,
+            ]
         if not np.isfinite(row).all():
             raise ValueError("Nonfinite interaction feature")
         output.append(row)

@@ -9,13 +9,13 @@ from torch import nn
 
 
 def tensor_digest(values):
-    h = hashlib.sha256()
+    digest = hashlib.sha256()
     for name, value in sorted(values.items()):
-        x = value.detach().cpu().contiguous()
-        h.update(name.encode())
-        h.update(str((tuple(x.shape), x.dtype)).encode())
-        h.update(x.numpy().tobytes())
-    return h.hexdigest()
+        tensor = value.detach().cpu().contiguous()
+        digest.update(name.encode())
+        digest.update(str((tuple(tensor.shape), tensor.dtype)).encode())
+        digest.update(tensor.numpy().tobytes())
+    return digest.hexdigest()
 
 
 class LowRank(nn.Module):
@@ -31,7 +31,10 @@ class LowRank(nn.Module):
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x):
-        return self.b(self.a(self.dropout(x))) * self.scale
+        dropped_inputs = self.dropout(x)
+        rank_features = self.a(dropped_inputs)
+        projected_features = self.b(rank_features)
+        return projected_features * self.scale
 
 
 class LoRALinear(nn.Module):
@@ -49,13 +52,13 @@ class LoRALinear(nn.Module):
 def site_representation(mutant, wt, mutation_mask):
     if mutant.ndim != 3 or wt.shape != mutant.shape or mutation_mask.shape != mutant.shape[:2]:
         raise ValueError("Mutant/WT/mutation mask shape mismatch")
-    count = mutation_mask.sum(1, keepdim=True)
-    if torch.any(count < 1) or not torch.all((mutation_mask == 0) | (mutation_mask == 1)):
+    mutation_count = mutation_mask.sum(1, keepdim=True)
+    if torch.any(mutation_count < 1) or not torch.all((mutation_mask == 0) | (mutation_mask == 1)):
         raise ValueError("At least one valid unique mutation site required")
-    mask = mutation_mask[:, :, None]
-    return torch.cat(
-        [(mutant * mask).sum(1) / count, ((mutant - wt) * mask).sum(1) / count, count], -1
-    )
+    site_mask = mutation_mask[:, :, None]
+    mutant_mean = (mutant * site_mask).sum(1) / mutation_count
+    delta_mean = ((mutant - wt) * site_mask).sum(1) / mutation_count
+    return torch.cat([mutant_mean, delta_mean, mutation_count], -1)
 
 
 class MutationHead(nn.Module):
@@ -127,12 +130,12 @@ class AdaptedESM(nn.Module):
         expected = {n for n, p in self.named_parameters() if p.requires_grad}
         if set(state) != expected:
             raise ValueError("Adapter/head checkpoint schema mismatch")
-        params = dict(self.named_parameters())
+        parameters = dict(self.named_parameters())
         with torch.no_grad():
             for name, value in state.items():
-                if value.shape != params[name].shape or not torch.isfinite(value).all():
+                if value.shape != parameters[name].shape or not torch.isfinite(value).all():
                     raise ValueError("Invalid adapter/head checkpoint tensor")
-                params[name].copy_(value)
+                parameters[name].copy_(value)
 
     def features(self, prefix, extended_mask, mutation_mask):
         # Last row is WT, shared by this same-protein batch; gradients flow through both paths.

@@ -169,59 +169,59 @@ def fit(rows, groups, roles, settings, seed, mode, weight=1.0):
         model.heads[task].requires_grad_(task in active)
     target, calibration = {}, {}
     for task in TASKS:
-        y, calibration[task] = calibrate(rows[task], roles[task]["train"], task)
-        target[task] = torch.tensor(y, dtype=torch.float32)
+        task_targets, calibration[task] = calibrate(rows[task], roles[task]["train"], task)
+        target[task] = torch.tensor(task_targets, dtype=torch.float32)
     optimizer = torch.optim.AdamW(
         model.parameters(), lr=settings["learning_rate"], weight_decay=settings["weight_decay"]
     )
-    rng = {t: np.random.default_rng(seed) for t in TASKS}
+    task_generators = {t: np.random.default_rng(seed) for t in TASKS}
     prepared = {}
     for task in TASKS:
-        for pid, group in groups[task].items():
-            g = group["graph"]
-            edge = g["edge_index"]
+        for protein_id, group in groups[task].items():
+            protein_graph = group["graph"]
+            edge = protein_graph["edge_index"]
             topology = (
-                torch.as_tensor(g["static"]),
+                torch.as_tensor(protein_graph["static"]),
                 torch.as_tensor(edge[0]),
                 torch.as_tensor(edge[1]),
-                torch.as_tensor(g["edge_features"]),
+                torch.as_tensor(protein_graph["edge_features"]),
                 torch.tensor(
-                    np.maximum(np.bincount(edge[1], minlength=len(g["static"])), 1),
+                    np.maximum(np.bincount(edge[1], minlength=len(protein_graph["static"])), 1),
                     dtype=torch.float32,
                 )[None, :, None],
             )
             mutation = np.zeros(group["residues"].shape[:2], dtype=bool)
-            for local, index in enumerate(group["indices"]):
+            for local_indices, index in enumerate(group["indices"]):
                 for token in rows[task][index]["mutations"]:
-                    mutation[group["token_indices"][local], int(token[1:-1]) - 1] = True
-            prepared[task, pid] = (
+                    mutation[group["token_indices"][local_indices], int(token[1:-1]) - 1] = True
+            prepared[task, protein_id] = (
                 torch.as_tensor(group["dynamic"]),
                 topology,
-                torch.tensor([n["reference_position"] - 1 for n in g["nodes"]]),
+                torch.tensor([n["reference_position"] - 1 for n in protein_graph["nodes"]]),
                 mutation,
             )
 
     def batches(task, indices, shuffle=False):
         out = []
-        for pid, group in groups[task].items():
-            local = np.flatnonzero(np.isin(group["indices"], indices))
+        for protein_id, group in groups[task].items():
+            local_indices = np.flatnonzero(np.isin(group["indices"], indices))
             if shuffle:
-                local = rng[task].permutation(local)
+                local_indices = task_generators[task].permutation(local_indices)
             out.extend(
-                (pid, local[i : i + settings["batch_size"]])
-                for i in range(0, len(local), settings["batch_size"])
+                (protein_id, local_indices[i : i + settings["batch_size"]])
+                for i in range(0, len(local_indices), settings["batch_size"])
             )
         if shuffle:
-            rng[task].shuffle(out)
+            task_generators[task].shuffle(out)
         return out
 
-    def call(task, pid, local):
-        group = groups[task][pid]
-        dynamic, topology, positions, mutation = prepared[task, pid]
-        ix = group["token_indices"][local]
+    def call(task, protein_id, local_indices):
+        group = groups[task][protein_id]
+        dynamic, topology, positions, mutation = prepared[task, protein_id]
+        ix = group["token_indices"][local_indices]
         return model(
             torch.from_numpy(np.array(group["residues"][ix], copy=True)),
-            dynamic[local],
+            dynamic[local_indices],
             topology,
             positions,
             torch.tensor(mutation[ix]),
@@ -231,21 +231,26 @@ def fit(rows, groups, roles, settings, seed, mode, weight=1.0):
         model.eval()
         found = {}
         with torch.no_grad():
-            for pid, local in batches(task, indices):
-                values = call(task, pid, local)[:, TASKS.index(task)].double().numpy()
+            for protein_id, local_indices in batches(task, indices):
+                values = (
+                    call(task, protein_id, local_indices)[:, TASKS.index(task)].double().numpy()
+                )
                 values = values * calibration[task]["scale"] + calibration[task]["mean"]
-                found.update(zip(groups[task][pid]["indices"][local], values, strict=True))
+                found.update(
+                    zip(groups[task][protein_id]["indices"][local_indices], values, strict=True)
+                )
         return np.array([found[i] for i in indices])
 
     def validation():
         result = {}
         for task in active:
             ix = roles[task]["validation"]
-            pred = predict(task, ix)
+            task_predictions = predict(task, ix)
             result[task] = (
-                (1 - macro_score(rows[task], ix, pred)) / 2
+                (1 - macro_score(rows[task], ix, task_predictions)) / 2
                 if task == "function"
-                else scores(rows[task], ix, pred)["macro"]["rmse"] / calibration[task]["scale"]
+                else scores(rows[task], ix, task_predictions)["macro"]["rmse"]
+                / calibration[task]["scale"]
             )
         return float(np.mean(list(result.values()))), result
 
@@ -258,25 +263,32 @@ def fit(rows, groups, roles, settings, seed, mode, weight=1.0):
         model.encoder.backbone.requires_grad_(train_encoder)
         model.train()
         task_batches = {t: batches(t, roles[t]["train"], True) for t in active}
-        total = 0.0
+        total_loss = 0.0
         for step in range(steps):
             optimizer.zero_grad(set_to_none=True)
             losses = []
             for task in active:
-                pid, local = task_batches[task][step % len(task_batches[task])]
-                output = call(task, pid, local)
-                y = torch.full_like(output, float("nan"))
+                protein_id, local_indices = task_batches[task][step % len(task_batches[task])]
+                output = call(task, protein_id, local_indices)
+                task_targets = torch.full_like(output, float("nan"))
                 mask = torch.zeros_like(output, dtype=torch.bool)
-                j = TASKS.index(task)
-                y[:, j] = target[task][groups[task][pid]["indices"][local]]
-                mask[:, j] = True
-                losses.append(masked_loss(output, y, mask))
-                exposures[task] += len(local)
+                task_index = TASKS.index(task)
+                task_targets[:, task_index] = target[task][
+                    groups[task][protein_id]["indices"][local_indices]
+                ]
+                mask[:, task_index] = True
+                losses.append(masked_loss(output, task_targets, mask))
+                exposures[task] += len(local_indices)
             if train_encoder and len(active) == 2 and gradient is None:
                 common = list(model.encoder.backbone.parameters())
                 vectors = [
                     torch.cat(
-                        [g.flatten() for g in torch.autograd.grad(loss, common, retain_graph=True)]
+                        [
+                            protein_graph.flatten()
+                            for protein_graph in torch.autograd.grad(
+                                loss, common, retain_graph=True
+                            )
+                        ]
                     )
                     for loss in losses
                 ]
@@ -292,13 +304,13 @@ def fit(rows, groups, roles, settings, seed, mode, weight=1.0):
             loss.backward()
             norm = torch.nn.utils.clip_grad_norm_(model.parameters(), 5, error_if_nonfinite=True)
             optimizer.step()
-            total += float(loss.detach())
+            total_loss += float(loss.detach())
         score, task_scores = validation()
         trace.append(
             {
                 "epoch": epoch,
                 "encoder_trainable": train_encoder,
-                "online_normalized_loss": total / steps,
+                "online_normalized_loss": total_loss / steps,
                 "validation": task_scores,
                 "selection_score": score,
                 "last_gradient_norm": float(norm),

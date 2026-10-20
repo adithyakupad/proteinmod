@@ -143,37 +143,42 @@ def contact_graph(rows, features, cutoff=8.0, backbone_cutoff=1.8):
     if not np.isfinite(cutoff) or cutoff <= 0:
         raise ValueError("Contact cutoff must be finite and positive")
     edges = []
-    observed = [(i, row) for i, row in enumerate(rows) if row["has_ca"]]
-    for offset, (i, left) in enumerate(observed):
-        a = left["record"]
-        for j, right in observed[offset + 1 :]:
-            b = right["record"]
+    observed = [(left_index, row) for left_index, row in enumerate(rows) if row["has_ca"]]
+    for offset, (left_index, left) in enumerate(observed):
+        left_record = left["record"]
+        for right_index, right in observed[offset + 1 :]:
+            right_record = right["record"]
             distance = float(
                 np.linalg.norm(
-                    a["residue"]["CA"].coord.astype(float) - b["residue"]["CA"].coord.astype(float)
+                    left_record["residue"]["CA"].coord.astype(float)
+                    - right_record["residue"]["CA"].coord.astype(float)
                 )
             )
             sequential = right["reference_position"] - left["reference_position"] == 1
-            adjacent_polymer = b["polymer_index"] - a["polymer_index"] == 1
+            adjacent_polymer = right_record["polymer_index"] - left_record["polymer_index"] == 1
             backbone = (
                 adjacent_polymer
-                and a["segment"] == b["segment"]
-                and "C" in a["residue"]
-                and "N" in b["residue"]
-                and float(np.linalg.norm(a["residue"]["C"].coord - b["residue"]["N"].coord))
+                and left_record["segment"] == right_record["segment"]
+                and "C" in left_record["residue"]
+                and "N" in right_record["residue"]
+                and float(
+                    np.linalg.norm(
+                        left_record["residue"]["C"].coord - right_record["residue"]["N"].coord
+                    )
+                )
                 <= backbone_cutoff
             )
             spatial = distance <= cutoff
             if spatial or backbone:
                 edges.append(
                     {
-                        "source": i + 1,
-                        "target": j + 1,
+                        "source": left_index + 1,
+                        "target": right_index + 1,
                         "distance_a": distance,
                         "spatial": spatial,
                         "backbone": bool(backbone),
                         "sequence_neighbor": sequential,
-                        "nonlocal": abs(j - i) > 2,
+                        "nonlocal": abs(right_index - left_index) > 2,
                     }
                 )
     for feature in features:
@@ -192,13 +197,20 @@ def contact_graph(rows, features, cutoff=8.0, backbone_cutoff=1.8):
         )
     breaks = []
     for (_, left), (_, right) in itertools.pairwise(observed):
-        a, b = left["record"], right["record"]
-        if b["polymer_index"] - a["polymer_index"] != 1 or a["segment"] != b["segment"]:
+        left_record, right_record = left["record"], right["record"]
+        if (
+            right_record["polymer_index"] - left_record["polymer_index"] != 1
+            or left_record["segment"] != right_record["segment"]
+        ):
             reason = "missing polymer residues or TER boundary"
-        elif "C" not in a["residue"] or "N" not in b["residue"]:
+        elif "C" not in left_record["residue"] or "N" not in right_record["residue"]:
             reason = "missing peptide backbone atoms"
         elif (
-            float(np.linalg.norm(a["residue"]["C"].coord - b["residue"]["N"].coord))
+            float(
+                np.linalg.norm(
+                    left_record["residue"]["C"].coord - right_record["residue"]["N"].coord
+                )
+            )
             > backbone_cutoff
         ):
             reason = "C-N distance exceeds peptide-bond cutoff"

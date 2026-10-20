@@ -231,15 +231,15 @@ def fit(h, quality, missing, rows, roles, settings, seed, mode):
     torch.use_deterministic_algorithms(True)
     torch.manual_seed(seed)
     model = ReliabilityFusion(hidden=settings["hidden"])
-    x, q = torch.tensor(h), torch.tensor(quality)
-    y = torch.tensor(fit_targets(rows, roles["train"]), dtype=torch.float32)
+    representations, quality_tensor = torch.tensor(h), torch.tensor(quality)
+    targets = torch.tensor(fit_targets(rows, roles["train"]), dtype=torch.float32)
     optimizer = torch.optim.AdamW(
         model.parameters(), lr=settings["learning_rate"], weight_decay=settings["weight_decay"]
     )
-    rng = np.random.default_rng(seed)
-    best, stale, trace = None, 0, []
+    random_generator = np.random.default_rng(seed)
+    best, stale_epochs, trace = None, 0, []
 
-    def prediction(representation=x, context=q):
+    def prediction(representation=representations, context=quality_tensor):
         model.eval()
         with torch.no_grad():
             return tuple(
@@ -248,31 +248,44 @@ def fit(h, quality, missing, rows, roles, settings, seed, mode):
 
     for epoch in range(1, settings["max_epochs"] + 1):
         model.train()
-        order, total = rng.permutation(roles["train"]), 0.0
+        order, total_loss = random_generator.permutation(roles["train"]), 0.0
         for start in range(0, len(order), settings["batch_size"]):
-            ix = order[start : start + settings["batch_size"]]
+            batch_indices = order[start : start + settings["batch_size"]]
             optimizer.zero_grad(set_to_none=True)
-            loss = (model(x[ix], q[ix], mode) - y[ix]).square().mean()
+            loss = (
+                (
+                    model(representations[batch_indices], quality_tensor[batch_indices], mode)
+                    - targets[batch_indices]
+                )
+                .square()
+                .mean()
+            )
             if not torch.isfinite(loss):
                 raise ValueError("Nonfinite M10 loss")
             loss.backward()
             torch.nn.utils.clip_grad_norm_(model.parameters(), 5, error_if_nonfinite=True)
             optimizer.step()
-            total += float(loss.detach()) * len(ix)
-        pred = prediction()[0]
-        score = evaluate(rows, roles["validation"], pred[roles["validation"]])["macro"]
+            total_loss += float(loss.detach()) * len(batch_indices)
+        validation_predictions = prediction()[0]
+        validation_score = evaluate(
+            rows, roles["validation"], validation_predictions[roles["validation"]]
+        )["macro"]
         trace.append(
-            {"epoch": epoch, "training_mse_online": total / len(order), "validation_macro": score}
+            {
+                "epoch": epoch,
+                "training_mse_online": total_loss / len(order),
+                "validation_macro": validation_score,
+            }
         )
-        if best is None or score > best[0]:
-            best, stale = (score, epoch, copy.deepcopy(model.state_dict())), 0
+        if best is None or validation_score > best[0]:
+            best, stale_epochs = (validation_score, epoch, copy.deepcopy(model.state_dict())), 0
         else:
-            stale += 1
-        if stale >= settings["patience"]:
+            stale_epochs += 1
+        if stale_epochs >= settings["patience"]:
             break
     model.load_state_dict(best[2])
     prediction_values = prediction()
-    fallback = prediction(torch.tensor(missing), torch.zeros_like(q))
+    fallback = prediction(torch.tensor(missing), torch.zeros_like(quality_tensor))
     selection = {
         "epoch": best[1],
         "validation_macro": best[0],

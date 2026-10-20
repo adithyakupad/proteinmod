@@ -10,11 +10,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python scripts/audit_m16.py
-      - run: python scripts/verify_m18.py
-      - run: python scripts/verify_m181.py
-      - run: python scripts/verify_m182.py
-      - run: python scripts/verify_m183.py
+      - run: python scripts/verify_readability.py --historical --stdlib-only
   offline-tests:
     runs-on: ubuntu-latest
     strategy:
@@ -31,14 +27,14 @@ jobs:
       - run: ruff check .
       - run: ruff format --check .
       - run: pytest
-      - run: python scripts/verify_m16_1.py
-        if: matrix.python == '3.12'
-      - run: python scripts/verify_m17.py
+      - run: python scripts/verify_readability.py --historical
         if: matrix.python == '3.12'
   m3-neural-tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'

@@ -46,23 +46,27 @@ def scale_fit(x, train, floor=1e-6):
 
 
 def ridge(x, rows, roles, alphas, floor=1e-6):
-    train, val = roles["train"], roles["validation"]
+    train, validation = roles["train"], roles["validation"]
     scaler = scale_fit(x, train, floor)
-    z = scaler.transform(x)
-    y = fit_targets(rows, train)
+    scaled_features = scaler.transform(x)
+    targets = fit_targets(rows, train)
     best, candidates = None, []
     for alpha in sorted(alphas):
         if alpha <= 0 or not np.isfinite(alpha):
             raise ValueError("Positive alpha required")
-        model = Ridge(alpha=alpha, solver="lsqr", tol=1e-8, max_iter=10000).fit(z[train], y[train])
-        score = evaluate(rows, val, np.clip(model.predict(z[val]), 0, 1))["macro"]
-        candidates.append({"alpha": alpha, "validation_macro": score})
-        if best is None or score > best[0]:
-            best = score, alpha, model
+        model = Ridge(alpha=alpha, solver="lsqr", tol=1e-8, max_iter=10000).fit(
+            scaled_features[train], targets[train]
+        )
+        validation_score = evaluate(
+            rows, validation, np.clip(model.predict(scaled_features[validation]), 0, 1)
+        )["macro"]
+        candidates.append({"alpha": alpha, "validation_macro": validation_score})
+        if best is None or validation_score > best[0]:
+            best = validation_score, alpha, model
     if best is None:
         raise ValueError("Empty alpha grid")
     return (
-        np.clip(best[2].predict(z), 0, 1),
+        np.clip(best[2].predict(scaled_features), 0, 1),
         {
             "alpha": best[1],
             "validation_macro": best[0],
@@ -90,11 +94,11 @@ def group_ridge(x, rows, roles, alphas, key, floor=1e-6):
             grid = [selected["alpha"]]
         else:
             grid = alphas
-        pred, record, _, _ = ridge(
+        group_predictions, record, _, _ = ridge(
             x, rows, {"train": train, "validation": validation, "test": roles["test"]}, grid, floor
         )
-        ix = [i for i, r in enumerate(rows) if r[key] == group]
-        prediction[ix] = pred[ix]
+        group_indices = [i for i, r in enumerate(rows) if r[key] == group]
+        prediction[group_indices] = group_predictions[group_indices]
         records[group] = record
     return prediction, {
         "groups": records,

@@ -101,7 +101,7 @@ def fit(groups, rows, roles, settings, seed, mode, controls_seed, native=False):
         or settings["weight_decay"] < 0
     ):
         raise ValueError("Invalid architecture/optimizer")
-    if any(len(ix) == 0 for ix in roles.values()) or any(
+    if any(len(batch_indices) == 0 for batch_indices in roles.values()) or any(
         set(roles[a]) & set(roles[b])
         for a, b in (("train", "validation"), ("train", "test"), ("validation", "test"))
     ):
@@ -109,7 +109,7 @@ def fit(groups, rows, roles, settings, seed, mode, controls_seed, native=False):
     torch.set_num_threads(settings["cpu_threads"])
     torch.use_deterministic_algorithms(True)
     torch.manual_seed(seed)
-    rng = np.random.default_rng(seed)
+    random_generator = np.random.default_rng(seed)
     first = next(iter(groups.values()))
     model = make_model(first, mode, settings)
     graphs = {p: topology(g, mode, controls_seed) for p, g in groups.items()}
@@ -117,9 +117,9 @@ def fit(groups, rows, roles, settings, seed, mode, controls_seed, native=False):
     if native:
         validate_task(rows)
     targets = np.array([r["target"] for r in rows]) if native else fit_targets(rows, roles["train"])
-    mean = float(targets[roles["train"]].mean()) if native else 0.0
-    scale = max(float(targets[roles["train"]].std()), 1e-8) if native else 1.0
-    y = torch.tensor((targets - mean) / scale, dtype=torch.float32)
+    target_mean = float(targets[roles["train"]].mean()) if native else 0.0
+    target_scale = max(float(targets[roles["train"]].std()), 1e-8) if native else 1.0
+    scaled_targets = torch.tensor((targets - target_mean) / target_scale, dtype=torch.float32)
     optimizer = torch.optim.AdamW(
         model.parameters(), lr=settings["learning_rate"], weight_decay=settings["weight_decay"]
     )
@@ -127,61 +127,74 @@ def fit(groups, rows, roles, settings, seed, mode, controls_seed, native=False):
     def batches(indices, shuffle=False):
         result = []
         for p, group in groups.items():
-            local = np.flatnonzero(np.isin(group["indices"], indices))
+            local_indices = np.flatnonzero(np.isin(group["indices"], indices))
             if shuffle:
-                local = rng.permutation(local)
+                local_indices = random_generator.permutation(local_indices)
             result.extend(
-                (p, local[j : j + settings["batch_size"]])
-                for j in range(0, len(local), settings["batch_size"])
+                (p, local_indices[j : j + settings["batch_size"]])
+                for j in range(0, len(local_indices), settings["batch_size"])
             )
         if shuffle:
-            rng.shuffle(result)
+            random_generator.shuffle(result)
         return result
 
     def predict(indices):
         model.eval()
         values = {}
         with torch.no_grad():
-            for p, ix in batches(indices):
-                pred = model(dynamics[p][ix], graphs[p]).numpy().astype(float) * scale + mean
-                values.update(zip(groups[p]["indices"][ix], pred, strict=True))
+            for p, batch_indices in batches(indices):
+                batch_predictions = (
+                    model(dynamics[p][batch_indices], graphs[p]).numpy().astype(float)
+                    * target_scale
+                    + target_mean
+                )
+                values.update(
+                    zip(groups[p]["indices"][batch_indices], batch_predictions, strict=True)
+                )
         return np.array([values[i] for i in indices])
 
     def score(indices):
-        pred = predict(indices)
+        batch_predictions = predict(indices)
         return (
-            -scores(rows, indices, pred)["macro"]["rmse"]
+            -scores(rows, indices, batch_predictions)["macro"]["rmse"]
             if native
-            else macro_score(rows, indices, pred)
+            else macro_score(rows, indices, batch_predictions)
         )
 
-    best, stale, trace = None, 0, []
+    best, stale_epochs, trace = None, 0, []
     for epoch in range(1, settings["max_epochs"] + 1):
         model.train()
-        total = 0.0
-        for p, ix in batches(roles["train"], True):
+        total_loss = 0.0
+        for p, batch_indices in batches(roles["train"], True):
             optimizer.zero_grad(set_to_none=True)
-            loss = (model(dynamics[p][ix], graphs[p]) - y[groups[p]["indices"][ix]]).square().mean()
+            loss = (
+                (
+                    model(dynamics[p][batch_indices], graphs[p])
+                    - scaled_targets[groups[p]["indices"][batch_indices]]
+                )
+                .square()
+                .mean()
+            )
             if not torch.isfinite(loss):
                 raise ValueError("Nonfinite loss")
             loss.backward()
             torch.nn.utils.clip_grad_norm_(model.parameters(), 5.0)
             optimizer.step()
-            total += loss.item() * len(ix)
+            total_loss += loss.item() * len(batch_indices)
         validation = score(roles["validation"])
         trace.append(
             {
                 "epoch": epoch,
-                "online_training_mse": total / len(roles["train"]),
+                "online_training_mse": total_loss / len(roles["train"]),
                 "validation_score": validation,
             }
         )
         if best is None or validation > best[0]:
             best = validation, epoch, copy.deepcopy(model.state_dict())
-            stale = 0
+            stale_epochs = 0
         else:
-            stale += 1
-        if stale >= settings["patience"]:
+            stale_epochs += 1
+        if stale_epochs >= settings["patience"]:
             break
     model.load_state_dict(best[2])
     selection = {
@@ -191,8 +204,8 @@ def fit(groups, rows, roles, settings, seed, mode, controls_seed, native=False):
         "score_type": "negative_native_rmse" if native else "macro_spearman",
         "parameters": sum(p.numel() for p in model.parameters()),
         "trace": trace,
-        "target_mean": mean,
-        "target_scale": scale,
+        "target_mean": target_mean,
+        "target_scale": target_scale,
     }
     prediction = predict(roles["test"])
     # Reload the exact selected state and check actual held-out inference.

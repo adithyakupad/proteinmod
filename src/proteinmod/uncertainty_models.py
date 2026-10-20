@@ -12,7 +12,7 @@ def ridge_ensemble(features, rows, roles, alphas, members, seed, native=False):
     train = roles["train"]
     scaler = StandardScaler().fit(features[train])
     x = scaler.transform(features)
-    y = np.array([r["target"] for r in rows]) if native else fit_targets(rows, train)
+    targets = np.array([r["target"] for r in rows]) if native else fit_targets(rows, train)
 
     def score(pred):
         if not native:
@@ -30,7 +30,9 @@ def ridge_ensemble(features, rows, roles, alphas, members, seed, native=False):
                                         if rows[i]["protein_id"] == p
                                     ]
                                 ]
-                                - y[[i for i in roles["validation"] if rows[i]["protein_id"] == p]]
+                                - targets[
+                                    [i for i in roles["validation"] if rows[i]["protein_id"] == p]
+                                ]
                             )
                             ** 2
                         )
@@ -43,7 +45,9 @@ def ridge_ensemble(features, rows, roles, alphas, members, seed, native=False):
     best = None
     candidates = []
     for alpha in sorted(alphas):
-        model = Ridge(alpha=alpha, solver="lsqr", tol=1e-8, max_iter=10000).fit(x[train], y[train])
+        model = Ridge(alpha=alpha, solver="lsqr", tol=1e-8, max_iter=10000).fit(
+            x[train], targets[train]
+        )
         value = score(model.predict(x[roles["validation"]]))
         candidates.append({"alpha": alpha, "validation_score": value})
         if best is None or value > best[0]:
@@ -52,7 +56,7 @@ def ridge_ensemble(features, rows, roles, alphas, members, seed, native=False):
     for j in range(members):
         ix = bootstrap_indices(rows, train, seed + j)
         models.append(
-            Ridge(alpha=best[1], solver="lsqr", tol=1e-8, max_iter=10000).fit(x[ix], y[ix])
+            Ridge(alpha=best[1], solver="lsqr", tol=1e-8, max_iter=10000).fit(x[ix], targets[ix])
         )
     state = {
         "mean": scaler.mean_,

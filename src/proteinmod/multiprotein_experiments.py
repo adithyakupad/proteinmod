@@ -111,67 +111,79 @@ def graph_fit(groups, rows, roles, settings, seed, threads):
     )
     inputs, topologies = {}, {}
     for p, group in groups.items():
-        g = group["graph"]
+        protein_group = group["graph"]
         inputs[p] = torch.as_tensor(group["dynamic"], dtype=torch.float32)
         topologies[p] = (
-            torch.as_tensor(g["static"]),
-            torch.as_tensor(g["edge_index"][0]),
-            torch.as_tensor(g["edge_index"][1]),
-            torch.as_tensor(g["edge_features"]),
+            torch.as_tensor(protein_group["static"]),
+            torch.as_tensor(protein_group["edge_index"][0]),
+            torch.as_tensor(protein_group["edge_index"][1]),
+            torch.as_tensor(protein_group["edge_features"]),
             torch.as_tensor(
-                np.maximum(np.bincount(g["edge_index"][1], minlength=len(g["static"])), 1),
+                np.maximum(
+                    np.bincount(
+                        protein_group["edge_index"][1], minlength=len(protein_group["static"])
+                    ),
+                    1,
+                ),
                 dtype=torch.float32,
             )[None, :, None],
         )
     target = fit_targets(rows, roles["train"])
-    y = torch.as_tensor(target, dtype=torch.float32)
+    target_tensor = torch.as_tensor(target, dtype=torch.float32)
     optimizer = torch.optim.AdamW(
         model.parameters(), lr=settings["learning_rate"], weight_decay=settings["weight_decay"]
     )
-    rng = np.random.default_rng(seed)
+    random_generator = np.random.default_rng(seed)
     batch_size = settings["batch_size"]
 
     def batches(indices, shuffle=False):
         batches = []
-        for p, g in groups.items():
-            local = np.flatnonzero(np.isin(g["indices"], indices))
+        for p, protein_group in groups.items():
+            local_indices = np.flatnonzero(np.isin(protein_group["indices"], indices))
             if shuffle:
-                local = rng.permutation(local)
-            batches.extend((p, local[j : j + batch_size]) for j in range(0, len(local), batch_size))
+                local_indices = random_generator.permutation(local_indices)
+            batches.extend(
+                (p, local_indices[j : j + batch_size])
+                for j in range(0, len(local_indices), batch_size)
+            )
         if shuffle:
-            rng.shuffle(batches)
+            random_generator.shuffle(batches)
         return batches
 
     def predict(indices):
         model.eval()
         found = {}
         with torch.no_grad():
-            for p, local in batches(indices):
-                values = model(inputs[p][local], topologies[p]).numpy()
-                found.update(zip(groups[p]["indices"][local], values, strict=True))
+            for p, local_indices in batches(indices):
+                values = model(inputs[p][local_indices], topologies[p]).numpy()
+                found.update(zip(groups[p]["indices"][local_indices], values, strict=True))
         return np.array([found[i] for i in indices], dtype=float)
 
-    best, stale, trace = None, 0, []
+    best, stale_epochs, trace = None, 0, []
     for epoch in range(1, settings["max_epochs"] + 1):
         model.train()
-        for p, local in batches(roles["train"], shuffle=True):
+        for p, local_indices in batches(roles["train"], shuffle=True):
             optimizer.zero_grad(set_to_none=True)
             loss = torch.mean(
-                (model(inputs[p][local], topologies[p]) - y[groups[p]["indices"][local]]) ** 2
+                (
+                    model(inputs[p][local_indices], topologies[p])
+                    - target_tensor[groups[p]["indices"][local_indices]]
+                )
+                ** 2
             )
             if not torch.isfinite(loss):
                 raise ValueError("Nonfinite cross-protein training loss")
             loss.backward()
             torch.nn.utils.clip_grad_norm_(model.parameters(), 5)
             optimizer.step()
-        score = macro_score(rows, roles["validation"], predict(roles["validation"]))
-        trace.append({"epoch": epoch, "validation_macro_spearman": score})
-        if best is None or score > best[0]:
-            best = score, epoch, copy.deepcopy(model.state_dict())
-            stale = 0
+        validation_score = macro_score(rows, roles["validation"], predict(roles["validation"]))
+        trace.append({"epoch": epoch, "validation_macro_spearman": validation_score})
+        if best is None or validation_score > best[0]:
+            best = validation_score, epoch, copy.deepcopy(model.state_dict())
+            stale_epochs = 0
         else:
-            stale += 1
-        if stale >= settings["patience"]:
+            stale_epochs += 1
+        if stale_epochs >= settings["patience"]:
             break
     model.load_state_dict(best[2])
     return (

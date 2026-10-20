@@ -59,12 +59,12 @@ def fit(backbone, groups, rows, roles, config, seed, mode):
     settings = config["training"]
     torch.set_num_threads(settings["cpu_threads"])
     torch.use_deterministic_algorithms(True)
-    if any(len(ix) == 0 for ix in roles.values()) or any(
+    if any(len(batch_indices) == 0 for batch_indices in roles.values()) or any(
         set(roles[a]) & set(roles[b])
         for a, b in (("train", "validation"), ("train", "test"), ("validation", "test"))
     ):
         raise ValueError("Training roles must be nonempty and disjoint")
-    y = torch.tensor(fit_targets(rows, roles["train"]), dtype=torch.float32)
+    targets = torch.tensor(fit_targets(rows, roles["train"]), dtype=torch.float32)
     winner, candidates = None, []
     for rate in settings["learning_rates"]:
         model = AdaptedESM(backbone, config["lora"], settings["hidden"], mode, seed)
@@ -80,24 +80,31 @@ def fit(backbone, groups, rows, roles, config, seed, mode):
             ],
             weight_decay=settings["weight_decay"],
         )
-        rng = np.random.default_rng(seed)
-        best, stale, trace = None, 0, []
+        random_generator = np.random.default_rng(seed)
+        best, stale_epochs, trace = None, 0, []
         finite_gradients, nonzero_adapter_gradients = True, False
         for epoch in range(1, settings["max_epochs"] + 1):
             model.train()
             batches = []
-            for pid, g in groups.items():
-                local = rng.permutation(np.flatnonzero(np.isin(g["indices"], roles["train"])))
-                batches.extend(
-                    (pid, local[j : j + settings["batch_size"]])
-                    for j in range(0, len(local), settings["batch_size"])
+            for protein_id, protein_group in groups.items():
+                local_indices = random_generator.permutation(
+                    np.flatnonzero(np.isin(protein_group["indices"], roles["train"]))
                 )
-            rng.shuffle(batches)
-            total = 0.0
-            for pid, ix in batches:
+                batches.extend(
+                    (protein_id, local_indices[j : j + settings["batch_size"]])
+                    for j in range(0, len(local_indices), settings["batch_size"])
+                )
+            random_generator.shuffle(batches)
+            total_loss = 0.0
+            for protein_id, batch_indices in batches:
                 optimizer.zero_grad(set_to_none=True)
                 loss = (
-                    (call(model, groups[pid], ix) - y[groups[pid]["indices"][ix]]).square().mean()
+                    (
+                        call(model, groups[protein_id], batch_indices)
+                        - targets[groups[protein_id]["indices"][batch_indices]]
+                    )
+                    .square()
+                    .mean()
                 )
                 if not torch.isfinite(loss):
                     raise ValueError("Nonfinite M15 loss")
@@ -110,7 +117,7 @@ def fit(backbone, groups, rows, roles, config, seed, mode):
                         nonzero_adapter_gradients = True
                 torch.nn.utils.clip_grad_norm_([p for _, p in trainable], 5.0)
                 optimizer.step()
-                total += loss.item() * len(ix)
+                total_loss += loss.item() * len(batch_indices)
             validation = macro_score(
                 rows,
                 roles["validation"],
@@ -119,16 +126,16 @@ def fit(backbone, groups, rows, roles, config, seed, mode):
             trace.append(
                 {
                     "epoch": epoch,
-                    "online_training_mse": total / len(roles["train"]),
+                    "online_training_mse": total_loss / len(roles["train"]),
                     "validation_macro_spearman": validation,
                 }
             )
             if best is None or validation > best[0]:
                 best = validation, epoch, model.selected_state()
-                stale = 0
+                stale_epochs = 0
             else:
-                stale += 1
-            if stale >= settings["patience"]:
+                stale_epochs += 1
+            if stale_epochs >= settings["patience"]:
                 break
         if model.frozen_digest() != frozen_before:
             raise ValueError("Original PLM parameters changed")
