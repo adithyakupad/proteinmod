@@ -184,11 +184,11 @@ def main():
     gain = float(np.mean(primary))
     summary = {
         "primary_gain": gain,
-        "positive_families": sum(x > 0 for x in primary),
+        "positive_families": int(sum(x > 0 for x in primary)),
         "family_effects": primary,
         "family_sd": float(np.std(primary, ddof=1)),
         "leave_one_family_out": [float(np.mean(primary[:i] + primary[i + 1 :])) for i in range(4)],
-        "success": gain >= 0.02 and sum(x > 0 for x in primary) >= 3 and not scalar_failures,
+        "success": bool(gain >= 0.02 and sum(x > 0 for x in primary) >= 3 and not scalar_failures),
         "scalar_failures": scalar_failures,
         "historical_max_error": max_historical_error,
         "scalar_max_error": max_scalar_error,
