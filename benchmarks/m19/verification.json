@@ -1,0 +1,22 @@
+{
+  "prior_complete_fit_state_comparison": 400,
+  "state_tensor_max_error": 0,
+  "selection_and_family_tables_exact": true,
+  "baseline_tests": "242 passed, 1 preexisting warning,14.85s",
+  "historical_guard": "PASS:792 frozen readability baseline files; M16/M161/M17 evidence guards PASS",
+  "historical_files": 919,
+  "scope": "development only; failed scalar gate retained; no SOD1 access",
+  "artifact_hashes": {
+    "summary.json": "3bb1e1c19c8652c5ffc6bf7a6de4e58e7968dc40d93cd4eb96a19bd4fcea2508",
+    "predictions.csv": "5718ae00b5b47b0ae403863e1436de76a255fb33fa2559eb3854e2e0191d79a2",
+    "runs.json": "2e811c00a0aad6984ed1c5eee8c8ad65b94b0344a34fc2ee8c6cb4220964895f",
+    "family-effects.json": "240219d138020f72aa03ab0940c9007f8b5d3db0402db2b1c89cef2df157df63"
+  },
+  "final_tests": "246 passed,1 preexisting joblib warning,16.01s",
+  "ruff_check": "PASS",
+  "ruff_format": "278 files pass",
+  "historical_max_prediction_error": 0,
+  "complete_run_seconds": 31.02396375000035,
+  "scalar_gate": "FAIL:1/160 expanded checks, max1.210020597608441e-7 exceeds1e-7; no tolerance relaxation",
+  "CI": "Pending exact-head GitHub checks; query PR checks for live status"
+}
