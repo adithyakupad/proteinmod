@@ -69,9 +69,15 @@ def main():
                 for key in state:
                     np.testing.assert_array_equal(state[key], other[key])
                 if normalized:
-                    scalar, _ = fit(matrix * 7, rows, roles, penalties, scaled, normalized)
+                    exact_matrix = matrix.astype(float)
+                    reference, _ = fit(exact_matrix, rows, roles, penalties, scaled, normalized)
+                    scalar, _ = fit(exact_matrix * 7, rows, roles, penalties, scaled, normalized)
                     error = float(
-                        np.max(np.abs(predict(matrix, state) - predict(matrix * 7, scalar)))
+                        np.max(
+                            np.abs(
+                                predict(exact_matrix, reference) - predict(exact_matrix * 7, scalar)
+                            )
+                        )
                     )
                     max_scalar_error = max(max_scalar_error, error)
                     assert error < 1e-7
