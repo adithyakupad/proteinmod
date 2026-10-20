@@ -79,5 +79,6 @@
   ],
   "contains_only_code_metadata_and_licenses": true,
   "contains_third_party_notices": true,
-  "source_commit": "pending source freeze; wheel contains current source including release_integrity.py"
+  "source_commit": "a5e1140ac117c23b88ce1ff1435495b8ad7de391",
+  "isolated_install": "PASS fresh venv, pip check and CLI help; full pinned research dependencies also installed separately"
 }

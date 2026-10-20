@@ -9,7 +9,7 @@
   },
   "candidate_working_tests": {
     "tests": 247,
-    "seconds": 15.96,
+    "seconds": 14.05,
     "warning": "preexisting joblib core-count warning"
   },
   "history_guards": "PASS readability historical, M184 and SOD1; original admission HOLD and deviation retained",
@@ -24,6 +24,18 @@
   "full_cold_reproduction": "NOT RUN; historical M161 bounded evidence retained",
   "external_confirmation": "BLOCKED; no outcomes accessed",
   "release_tag": "NOT CREATED",
-  "candidate_clean_checkout": "pending final source freeze test",
-  "candidate_CI": "pending draft PR exact head"
+  "candidate_clean_checkout": {
+    "source_commit": "a5e1140ac117c23b88ce1ff1435495b8ad7de391",
+    "tests": 247,
+    "seconds": 21.19,
+    "research_caches_present": false,
+    "environment": "fresh temporary venv; wheel and pinned requirements independently installed; PYTHONPATH points to clean checkout src",
+    "ruff_check": "PASS",
+    "ruff_format": "286 files pass",
+    "historical_guards": "PASS",
+    "pip_check": "PASS"
+  },
+  "candidate_CI": "Exact final head must pass existing checks and added code-only-wheel workflow; live release-candidate PR carries final commit/check status",
+  "build_method": "pip wheel --no-deps --no-build-isolation; python -m build unavailable in old env, no source change needed",
+  "post_freeze_changes": "Only result documentation, new package CI and repository import-path wiring in new verify_release_candidate.py; no ML code changes"
 }

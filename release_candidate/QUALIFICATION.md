@@ -24,7 +24,8 @@ FAIL/HOLD reports are preserved. Final publication/release approval is still pen
 | External independent four-family confirmation | FAIL/BLOCKED | GEO permissions, SOD1 independent blinding review; no unblinding or confirmation |
 | Candidate-head CI and final review | PARTIAL | See live candidate PR and verification.json; publication not authorized |
 
-**Scoped code-only research candidate: PARTIAL pending exact-head candidate CI and
-owner review; eligible for review, not automatically published.**
+**Scoped code-only research candidate: PASS for the recorded local code/legal/safety
+checks; exact final-head CI must also be green at review. Publication remains
+PARTIAL/pending owner approval, not automatically authorized.**
 **Independent scientific confirmation: FAIL/BLOCKED.** Software verification cannot
 change that scientific status. Source release need not pretend this gate passed.

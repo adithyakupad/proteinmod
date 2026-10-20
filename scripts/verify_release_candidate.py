@@ -5,8 +5,10 @@ import csv
 import hashlib
 import json
 import subprocess
+import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from proteinmod.release_integrity import AMENDABLE, verify_digest
 
 BASE = "14fa4c37fbafda9fbc4bd7f5be482f632062c9d1"
