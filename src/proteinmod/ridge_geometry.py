@@ -36,6 +36,7 @@ def fit(matrix, rows, roles, penalties, scaled, normalized, shuffle_seed=None):
     state = {
         "mean": scaler.mean_ if scaled else np.zeros(matrix.shape[1]),
         "scale": scaler.scale_ if scaled else np.ones(matrix.shape[1]),
+        "scaled": np.asarray(scaled),
         "divisor": np.asarray(divisor),
         "coefficient": model.coef_,
         "intercept": np.asarray(model.intercept_),
@@ -54,6 +55,13 @@ def fit(matrix, rows, roles, penalties, scaled, normalized, shuffle_seed=None):
 
 
 def predict(matrix, state):
-    features = (matrix.astype(float) - state["mean"]) / state["scale"]
+    if bool(state["scaled"]):
+        # Preserve training float32 scaler rounding before float64 ridge arithmetic.
+        scaler = StandardScaler()
+        scaler.mean_, scaler.scale_ = state["mean"], state["scale"]
+        scaler.n_features_in_ = len(state["mean"])
+        features = scaler.transform(matrix).astype(float)
+    else:
+        features = matrix.astype(float)
     features = features / state["divisor"]
     return features @ state["coefficient"] + state["intercept"]
