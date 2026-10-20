@@ -1,0 +1,1971 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P0A9X9",
+  "secondaryAccessions": [
+    "P15277",
+    "P37410",
+    "Q2M7L7",
+    "Q54170"
+  ],
+  "uniProtkbId": "CSPA_ECOLI",
+  "entryAudit": {
+    "firstPublicDate": "2005-09-13",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "2007-01-23",
+    "entryVersion": 146,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 5.0,
+  "organism": {
+    "scientificName": "Escherichia coli (strain K12)",
+    "taxonId": 83333,
+    "lineage": [
+      "Bacteria",
+      "Pseudomonadati",
+      "Pseudomonadota",
+      "Gammaproteobacteria",
+      "Enterobacterales",
+      "Enterobacteriaceae",
+      "Escherichia"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Cold shock protein CspA"
+      },
+      "shortNames": [
+        {
+          "value": "CSP-A"
+        }
+      ]
+    },
+    "alternativeNames": [
+      {
+        "fullName": {
+          "value": "7.4 kDa cold shock protein"
+        }
+      },
+      {
+        "fullName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000303",
+              "source": "PubMed",
+              "id": "2404279"
+            }
+          ],
+          "value": "CS7.4"
+        }
+      }
+    ]
+  },
+  "genes": [
+    {
+      "geneName": {
+        "value": "cspA"
+      },
+      "synonyms": [
+        {
+          "value": "cspS"
+        }
+      ],
+      "orderedLocusNames": [
+        {
+          "value": "b3556"
+        },
+        {
+          "value": "JW3525"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "1961761"
+            }
+          ],
+          "value": "Binds to and stimulates the transcription of the CCAAT-containing, cold-shock-inducible promoters of the H-NS and GyrA proteins. Also binds to the inverted repeat 5'-ATTGG-3'"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "commentType": "SUBCELLULAR LOCATION",
+      "subcellularLocations": [
+        {
+          "location": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "2404279"
+              }
+            ],
+            "value": "Cytoplasm",
+            "id": "SL-0086"
+          }
+        }
+      ]
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "2404279"
+            },
+            {
+              "evidenceCode": "ECO:0000269",
+              "source": "PubMed",
+              "id": "8898389"
+            }
+          ],
+          "value": "In response to low temperature (at protein level) (PubMed:2404279, PubMed:8898389)"
+        }
+      ],
+      "commentType": "INDUCTION"
+    }
+  ],
+  "features": [
+    {
+      "type": "Initiator methionine",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Removed",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "2404279"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 2,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 70,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Cold shock protein CspA",
+      "featureId": "PRO_0000100233"
+    },
+    {
+      "type": "Domain",
+      "location": {
+        "start": {
+          "value": 7,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 67,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "CSD"
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 5,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 13,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MJC"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 14,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 17,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MJC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 18,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 23,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MJC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 24,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 26,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "8RXE"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 30,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 33,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MJC"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 34,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 36,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MJC"
+        }
+      ]
+    },
+    {
+      "type": "Turn",
+      "location": {
+        "start": {
+          "value": 40,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 42,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MJC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 50,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 56,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MJC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 59,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 61,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MJC"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 63,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 69,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1MJC"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0010",
+      "category": "Molecular function",
+      "name": "Activator"
+    },
+    {
+      "id": "KW-0963",
+      "category": "Cellular component",
+      "name": "Cytoplasm"
+    },
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-0238",
+      "category": "Molecular function",
+      "name": "DNA-binding"
+    },
+    {
+      "id": "KW-1185",
+      "category": "Technical term",
+      "name": "Reference proteome"
+    },
+    {
+      "id": "KW-0346",
+      "category": "Biological process",
+      "name": "Stress response"
+    },
+    {
+      "id": "KW-0804",
+      "category": "Biological process",
+      "name": "Transcription"
+    },
+    {
+      "id": "KW-0805",
+      "category": "Biological process",
+      "name": "Transcription regulation"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "2404279",
+        "citationType": "journal article",
+        "authors": [
+          "Goldstein J.",
+          "Pollitt N.S.",
+          "Inouye M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2404279"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.87.1.283"
+          }
+        ],
+        "title": "Major cold shock protein of Escherichia coli.",
+        "publicationDate": "1990",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "283",
+        "lastPage": "287",
+        "volume": "87"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "PROTEIN SEQUENCE OF 2-23",
+        "SUBCELLULAR LOCATION",
+        "INDUCTION BY COLD-SHOCK"
+      ],
+      "referenceComments": [
+        {
+          "value": "K12 / SB221",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "1597410",
+        "citationType": "journal article",
+        "authors": [
+          "Tanabe H.",
+          "Goldstein J.",
+          "Yang M.",
+          "Inouye M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1597410"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/jb.174.12.3867-3873.1992"
+          }
+        ],
+        "title": "Identification of the promoter region of the Escherichia coli major cold shock gene, cspA.",
+        "publicationDate": "1992",
+        "journal": "J. Bacteriol.",
+        "firstPage": "3867",
+        "lastPage": "3873",
+        "volume": "174"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]"
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "8041620",
+        "citationType": "journal article",
+        "authors": [
+          "Sofia H.J.",
+          "Burland V.",
+          "Daniels D.L.",
+          "Plunkett G. III",
+          "Blattner F.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8041620"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1093/nar/22.13.2576"
+          }
+        ],
+        "title": "Analysis of the Escherichia coli genome. V. DNA sequence of the region from 76.0 to 81.5 minutes.",
+        "publicationDate": "1994",
+        "journal": "Nucleic Acids Res.",
+        "firstPage": "2576",
+        "lastPage": "2586",
+        "volume": "22"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "K12 / MG1655 / ATCC 47076",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "9278503",
+        "citationType": "journal article",
+        "authors": [
+          "Blattner F.R.",
+          "Plunkett G. III",
+          "Bloch C.A.",
+          "Perna N.T.",
+          "Burland V.",
+          "Riley M.",
+          "Collado-Vides J.",
+          "Glasner J.D.",
+          "Rode C.K.",
+          "Mayhew G.F.",
+          "Gregor J.",
+          "Davis N.W.",
+          "Kirkpatrick H.A.",
+          "Goeden M.A.",
+          "Rose D.J.",
+          "Mau B.",
+          "Shao Y."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9278503"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1126/science.277.5331.1453"
+          }
+        ],
+        "title": "The complete genome sequence of Escherichia coli K-12.",
+        "publicationDate": "1997",
+        "journal": "Science",
+        "firstPage": "1453",
+        "lastPage": "1462",
+        "volume": "277"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "K12 / MG1655 / ATCC 47076",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "16738553",
+        "citationType": "journal article",
+        "authors": [
+          "Hayashi K.",
+          "Morooka N.",
+          "Yamamoto Y.",
+          "Fujita K.",
+          "Isono K.",
+          "Choi S.",
+          "Ohtsubo E.",
+          "Baba T.",
+          "Wanner B.L.",
+          "Mori H.",
+          "Horiuchi T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "16738553"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/msb4100049"
+          }
+        ],
+        "title": "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655 and W3110.",
+        "publicationDate": "2006",
+        "journal": "Mol. Syst. Biol.",
+        "firstPage": "E1",
+        "lastPage": "E5",
+        "volume": "2"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "K12 / W3110 / ATCC 27325 / DSM 5911",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "9439003",
+        "citationType": "journal article",
+        "authors": [
+          "Francis K.P.",
+          "Stewart G.S.A.B."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9439003"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1038/sj.jim.2900463"
+          }
+        ],
+        "title": "Detection and speciation of bacteria through PCR using universal major cold-shock protein primer oligomers.",
+        "publicationDate": "1997",
+        "journal": "J. Ind. Microbiol. Biotechnol.",
+        "firstPage": "286",
+        "lastPage": "293",
+        "volume": "19"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 15-60"
+      ],
+      "referenceComments": [
+        {
+          "value": "K12 / MC4100 / ATCC 35695 / DSM 6574",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "1961761",
+        "citationType": "journal article",
+        "authors": [
+          "la Teana A.",
+          "Brandi A.",
+          "Falconi M.",
+          "Spurio R.",
+          "Pon C.L.",
+          "Gualerzi C.O."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1961761"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.88.23.10907"
+          }
+        ],
+        "title": "Identification of a cold shock transcriptional enhancer of the Escherichia coli gene encoding nucleoid protein H-NS.",
+        "publicationDate": "1991",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "10907",
+        "lastPage": "10911",
+        "volume": "88"
+      },
+      "referencePositions": [
+        "FUNCTION"
+      ]
+    },
+    {
+      "referenceNumber": 8,
+      "citation": {
+        "id": "8898389",
+        "citationType": "journal article",
+        "authors": [
+          "Jones P.G.",
+          "Inouye M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8898389"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1365-2958.1996.tb02582.x"
+          }
+        ],
+        "title": "RbfA, a 30S ribosomal binding factor, is a cold-shock protein whose absence triggers the cold-shock response.",
+        "publicationDate": "1996",
+        "journal": "Mol. Microbiol.",
+        "firstPage": "1207",
+        "lastPage": "1218",
+        "volume": "21"
+      },
+      "referencePositions": [
+        "INDUCTION BY COLD-SHOCK"
+      ],
+      "referenceComments": [
+        {
+          "value": "CSH142",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 9,
+      "citation": {
+        "id": "9298644",
+        "citationType": "journal article",
+        "authors": [
+          "VanBogelen R.A.",
+          "Abshire K.Z.",
+          "Moldover B.",
+          "Olson E.R.",
+          "Neidhardt F.C."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9298644"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1002/elps.1150180805"
+          }
+        ],
+        "title": "Escherichia coli proteome analysis using the gene-protein database.",
+        "publicationDate": "1997",
+        "journal": "Electrophoresis",
+        "firstPage": "1243",
+        "lastPage": "1251",
+        "volume": "18"
+      },
+      "referencePositions": [
+        "IDENTIFICATION BY 2D-GEL"
+      ]
+    },
+    {
+      "referenceNumber": 10,
+      "citation": {
+        "id": "7515185",
+        "citationType": "journal article",
+        "authors": [
+          "Newkirk K.",
+          "Feng W.",
+          "Jiang W.",
+          "Tejero R.",
+          "Emerson S.D.",
+          "Inouye M.",
+          "Montelione G.T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "7515185"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.91.11.5114"
+          }
+        ],
+        "title": "Solution NMR structure of the major cold shock protein (CspA) from Escherichia coli: identification of a binding epitope for DNA.",
+        "publicationDate": "1994",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "5114",
+        "lastPage": "5118",
+        "volume": "91"
+      },
+      "referencePositions": [
+        "STRUCTURE BY NMR"
+      ]
+    },
+    {
+      "referenceNumber": 11,
+      "citation": {
+        "id": "9692981",
+        "citationType": "journal article",
+        "authors": [
+          "Feng W.",
+          "Tejero R.",
+          "Zimmerman D.E.",
+          "Inouye M.",
+          "Montelione G.T."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9692981"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1021/bi980269j"
+          }
+        ],
+        "title": "Solution NMR structure and backbone dynamics of the major cold-shock protein (CspA) from Escherichia coli: evidence for conformational dynamics in the single-stranded RNA-binding site.",
+        "publicationDate": "1998",
+        "journal": "Biochemistry",
+        "firstPage": "10881",
+        "lastPage": "10896",
+        "volume": "37"
+      },
+      "referencePositions": [
+        "STRUCTURE BY NMR"
+      ]
+    },
+    {
+      "referenceNumber": 12,
+      "citation": {
+        "id": "8197194",
+        "citationType": "journal article",
+        "authors": [
+          "Schindelin H.",
+          "Jiang W.",
+          "Inouye M.",
+          "Heinemann U."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8197194"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.91.11.5119"
+          }
+        ],
+        "title": "Crystal structure of CspA, the major cold shock protein of Escherichia coli.",
+        "publicationDate": "1994",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "5119",
+        "lastPage": "5123",
+        "volume": "91"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY (2.0 ANGSTROMS)"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "M30139",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAA23617.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "U00039",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAB18533.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "U00096",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC76580.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "AP009048",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "BAE77739.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "EMBL",
+      "id": "U60035",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC80239.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "Genomic_DNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "JH0201",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "OCECJ"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "NP_418012.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NC_000913.3"
+        }
+      ]
+    },
+    {
+      "database": "RefSeq",
+      "id": "WP_000014594.1",
+      "properties": [
+        {
+          "key": "NucleotideSequenceId",
+          "value": "NZ_CP009789.1"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1MJC",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=2-70"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2BH8",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.90 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=2-36"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2L15",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "NMR"
+        },
+        {
+          "key": "Resolution",
+          "value": "-"
+        },
+        {
+          "key": "Chains",
+          "value": "A=1-70"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3MEF",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "NMR"
+        },
+        {
+          "key": "Resolution",
+          "value": "-"
+        },
+        {
+          "key": "Chains",
+          "value": "A=2-70"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "8RXE",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "NMR"
+        },
+        {
+          "key": "Resolution",
+          "value": "-"
+        },
+        {
+          "key": "Chains",
+          "value": "A=2-70"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "1MJC",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "2BH8",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "2L15",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "3MEF",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "8RXE",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P0A9X9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BMRB",
+      "id": "P0A9X9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MDposit",
+      "id": "P0A9X9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P0A9X9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID",
+      "id": "4262533",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "220"
+        }
+      ]
+    },
+    {
+      "database": "BioGRID",
+      "id": "852378",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "database": "DIP",
+      "id": "DIP-31862N",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "FunCoup",
+      "id": "P0A9X9",
+      "properties": [
+        {
+          "key": "Number of interactors",
+          "value": "405"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "P0A9X9",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "42"
+        }
+      ]
+    },
+    {
+      "database": "STRING",
+      "id": "511145.b3556",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "jPOST",
+      "id": "P0A9X9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PaxDb",
+      "id": "511145-b3556",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblBacteria",
+      "id": "AAC76580",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "AAC76580"
+        },
+        {
+          "key": "GeneId",
+          "value": "b3556"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "67174505",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GeneID",
+      "id": "948070",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ecj:JW3525",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "eco:b3556",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "KEGG",
+      "id": "ecoc:C3026_19275",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PATRIC",
+      "id": "fig|1411691.4.peg.3158",
+      "properties": [
+        {
+          "key": "GeneDesignation",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EchoBASE",
+      "id": "EB0164",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "eggNOG",
+      "id": "COG1278",
+      "properties": [
+        {
+          "key": "ToxonomicScope",
+          "value": "Bacteria"
+        }
+      ]
+    },
+    {
+      "database": "HOGENOM",
+      "id": "CLU_117621_2_1_6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "InParanoid",
+      "id": "P0A9X9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "MDNKSQG",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "OrthoDB",
+      "id": "9810590at2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PhylomeDB",
+      "id": "P0A9X9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BioCyc",
+      "id": "EcoCyc:PD03695",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "P0A9X9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PRO",
+      "id": "PR:P0A9X9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "Proteomes",
+      "id": "UP000000625",
+      "properties": [
+        {
+          "key": "Component",
+          "value": "Chromosome"
+        }
+      ]
+    },
+    {
+      "database": "AbasyAtlas",
+      "id": "P0A9X9",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005737",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytoplasm"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "EXP:UniProtKB"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "PubMed",
+          "id": "2404279"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0005829",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "C:cytosol"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:EcoCyc"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "18304323"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0003677",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:DNA binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:EcoliWiki"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "7748932"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0003676",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:nucleic acid binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0003723",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:RNA binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:EcoliWiki"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "8995247"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0003697",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:single-stranded DNA binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:EcoliWiki"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "8995247"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0003727",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:single-stranded RNA binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:EcoliWiki"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "8995247"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0001072",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:transcription antitermination factor activity, RNA binding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:EcoliWiki"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "10884409"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0060567",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:negative regulation of termination of DNA-templated transcription"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:EcoliWiki"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "10884409"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0045893",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:positive regulation of DNA-templated transcription"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IDA:EcoCyc"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000314",
+          "source": "PubMed",
+          "id": "1961761"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0010468",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:regulation of gene expression"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IBA:GO_Central"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009409",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:response to cold"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEP:EcoliWiki"
+        }
+      ],
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000270",
+          "source": "PubMed",
+          "id": "3553157"
+        }
+      ]
+    },
+    {
+      "database": "CDD",
+      "id": "cd04458",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CSP_CDS"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "FunFam",
+      "id": "2.40.50.140:FF:000006",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cold shock protein CspC"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "2.40.50.140",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Nucleic acid-binding proteins"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR012156",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cold_shock_CspA"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR050181",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cold_shock_domain"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR011129",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CSD"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR019844",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CSD_CS"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR002059",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CSP_DNA-bd"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR012340",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "NA-bd_OB-fold"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF007679",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PRK10354.1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "NCBIfam",
+      "id": "NF049933",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "TransAntitermCspE"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR11544",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "COLD SHOCK DOMAIN CONTAINING PROTEINS"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00313",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CSD"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PIRSF",
+      "id": "PIRSF002599",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Cold_shock_A"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00050",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "COLDSHOCK"
+        }
+      ]
+    },
+    {
+      "database": "SMART",
+      "id": "SM00357",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CSP"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF50249",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Nucleic acid-binding proteins"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00352",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CSD_1"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS51857",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CSD_2"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MSGKMTGIVKWFNADKGFGFITPDDGSKDVFVHFSAIQNDGYKSLDEGQKVSFTIESGAKGPAAGNVTSL",
+    "length": 70,
+    "molWeight": 7403,
+    "crc64": "CED47F00BF18A49B",
+    "md5": "40785A8282413070FE126DFD41E458FF"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SUBCELLULAR LOCATION": 1,
+      "INDUCTION": 1
+    },
+    "countByFeatureType": {
+      "Initiator methionine": 1,
+      "Chain": 1,
+      "Domain": 1,
+      "Beta strand": 7,
+      "Turn": 2,
+      "Helix": 1
+    },
+    "uniParcId": "UPI000003FF29"
+  }
+}

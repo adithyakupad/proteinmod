@@ -1,0 +1,12 @@
+{
+  "baseline_commit": "73f0666a87560dadffa76f34f5255856d2ce7459",
+  "protocol_commit": "c83f2a7",
+  "admission": "BLOCKED",
+  "reason": "Four unresolved historical sequence-similarity review flags under unchanged M12 thresholds",
+  "targets_accessed": false,
+  "models_fit": 0,
+  "predictions_generated": 0,
+  "external_candidates": 192,
+  "independent_validation_claim": false,
+  "release": "NOT_QUALIFIED"
+}

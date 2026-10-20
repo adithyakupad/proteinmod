@@ -133,3 +133,5 @@ The original GNN and M12 `structure_only` wrapper are distinct comparators.
 
 The [historical README](HISTORICAL_README.md) preserves the original milestone narrative;
 all historical benchmark files and configurations remain unchanged.
+
+M18 external qualification is [blocked before label access](benchmarks/m18/REPORT.md): primary abundance-assay lineage is traced, but four historical sequence-similarity flags remain unresolved. No independent external performance is claimed.

@@ -1,0 +1,18 @@
+{
+  "ADMISSION_PROTOCOL.md": "ca2d76b8bebb934196ddba112046a1f37bb96d651d4810ef93a6a7ca9e48f6d0",
+  "DEFENSE.md": "212b61527d172385f8ef54166c91fc1a111434aea839a3e6cd67c102d30890b7",
+  "REPORT.md": "4f540335d964fe3b56becd043b89b745888d098ce641ef24b56250d5dd48bbde",
+  "evidence/1MJC-1-entity.json": "5a5e230adbd1e00e601d9ed3eda1c1d43763bd1f8279a5a7f6ce42033a833af3",
+  "evidence/3CI2-1-entity.json": "e496432a35043ba2f9ddda84277dfcde86b1365ce8a3fedcc0f4fc5e24b9e8fb",
+  "evidence/GSE266299-metadata.txt": "fa2d1b3092771cb3020efea7362ad7e64e345e6e51b61cdbb76ae6aeb43b7752",
+  "evidence/GSM8244559-metadata.txt": "f853bf2ea48b2e80f4e4b5e3c6fe1072021d939d8e5439d5aa5f9eed73c5e58e",
+  "evidence/P01053-uniprot.json": "6eeeb5ca7f8a6e122351255de2ddbc8be251bc4b1df2ac19822e0858e6cd9850",
+  "evidence/P0A9X9-uniprot.json": "1319f623cc46c6629dbe8a03bdf59cfbed4568a40c000f69de358320c7995860",
+  "evidence/author-WT-DNA.json": "85a4ee9b2b0b2c2037f1f6e4c2c1cfbc6be2974e0c1d8572a5de458a3c4690cc",
+  "evidence/author-references.json": "51d830f187ed7aac70e7f8d5745794f6a9e883f6e5c3741dbed1905e0b62c50e",
+  "evidence/blind-index.json": "d1142b147be88442a373f966aa3aafbe9a6e006489525a280212fa7eb369c76a",
+  "evidence/reference-overlap.json": "2c4db5cdeec154a7e0472564183e6baebeda408ba166c21b5d73b9b6f0421a34",
+  "historical_hashes.json": "4395496acdc242b5259751ecaecfb74fbb98c7cfb63714047b61ebfe38ac89de",
+  "qualification.json": "135b0c622fd2441c45b33ad6352a7cd8cef0d008a2834e7b8c5de6cfb8712318",
+  "verification.json": "279d058a139d11e85916495cf29ab71fa90031cb14efc3e32156d7045b6e5ad6"
+}

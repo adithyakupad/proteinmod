@@ -1,0 +1,3063 @@
+{
+  "entryType": "UniProtKB reviewed (Swiss-Prot)",
+  "primaryAccession": "P01053",
+  "uniProtkbId": "ICI2_HORVU",
+  "entryAudit": {
+    "firstPublicDate": "1986-07-21",
+    "lastAnnotationUpdateDate": "2026-09-02",
+    "lastSequenceUpdateDate": "2007-01-23",
+    "entryVersion": 142,
+    "sequenceVersion": 2
+  },
+  "annotationScore": 3.0,
+  "organism": {
+    "scientificName": "Hordeum vulgare",
+    "commonName": "Barley",
+    "taxonId": 4513,
+    "lineage": [
+      "Eukaryota",
+      "Viridiplantae",
+      "Streptophyta",
+      "Embryophyta",
+      "Tracheophyta",
+      "Spermatophyta",
+      "Magnoliopsida",
+      "Liliopsida",
+      "Poales",
+      "Poaceae",
+      "BOP clade",
+      "Pooideae",
+      "Triticodae",
+      "Triticeae",
+      "Hordeinae",
+      "Hordeum"
+    ]
+  },
+  "proteinExistence": "1: Evidence at protein level",
+  "proteinDescription": {
+    "recommendedName": {
+      "fullName": {
+        "value": "Subtilisin-chymotrypsin inhibitor-2A"
+      },
+      "shortNames": [
+        {
+          "value": "CI-2A"
+        }
+      ]
+    }
+  },
+  "comments": [
+    {
+      "texts": [
+        {
+          "value": "Inhibits both subtilisin and chymotrypsin"
+        }
+      ],
+      "commentType": "FUNCTION"
+    },
+    {
+      "texts": [
+        {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000305"
+            }
+          ],
+          "value": "Belongs to the protease inhibitor I13 (potato type I serine protease inhibitor) family"
+        }
+      ],
+      "commentType": "SIMILARITY"
+    }
+  ],
+  "features": [
+    {
+      "type": "Initiator methionine",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 1,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Removed",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "source": "Reference",
+          "id": "Ref.2"
+        }
+      ]
+    },
+    {
+      "type": "Chain",
+      "location": {
+        "start": {
+          "value": 2,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 84,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Subtilisin-chymotrypsin inhibitor-2A",
+      "featureId": "PRO_0000217649"
+    },
+    {
+      "type": "Region",
+      "location": {
+        "start": {
+          "value": 1,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 23,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Disordered",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000256",
+          "source": "SAM",
+          "id": "MobiDB-lite"
+        }
+      ]
+    },
+    {
+      "type": "Site",
+      "location": {
+        "start": {
+          "value": 60,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 61,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "Reactive bond"
+    },
+    {
+      "type": "Sequence conflict",
+      "location": {
+        "start": {
+          "value": 79,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 79,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "in Ref. 2; AA sequence",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "alternativeSequence": {
+        "originalSequence": "Q",
+        "alternativeSequences": [
+          "E"
+        ]
+      }
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 26,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 28,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7A3M"
+        }
+      ]
+    },
+    {
+      "type": "Helix",
+      "location": {
+        "start": {
+          "value": 33,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 43,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7A3M"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 48,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 53,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7A3M"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 57,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 59,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "1LW6"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 66,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 71,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7A3M"
+        }
+      ]
+    },
+    {
+      "type": "Beta strand",
+      "location": {
+        "start": {
+          "value": 75,
+          "modifier": "EXACT"
+        },
+        "end": {
+          "value": 77,
+          "modifier": "EXACT"
+        }
+      },
+      "description": "",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0007829",
+          "source": "PDB",
+          "id": "7A3M"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": "KW-0002",
+      "category": "Technical term",
+      "name": "3D-structure"
+    },
+    {
+      "id": "KW-0903",
+      "category": "Technical term",
+      "name": "Direct protein sequencing"
+    },
+    {
+      "id": "KW-0646",
+      "category": "Molecular function",
+      "name": "Protease inhibitor"
+    },
+    {
+      "id": "KW-0722",
+      "category": "Molecular function",
+      "name": "Serine protease inhibitor"
+    }
+  ],
+  "references": [
+    {
+      "referenceNumber": 1,
+      "citation": {
+        "id": "3106042",
+        "citationType": "journal article",
+        "authors": [
+          "Williamson M.S.",
+          "Forde J.",
+          "Buxton B.",
+          "Kreis M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "3106042"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1111/j.1432-1033.1987.tb11199.x"
+          }
+        ],
+        "title": "Nucleotide sequence of barley chymotrypsin inhibitor-2 (CI-2) and its expression in normal and high-lysine barley.",
+        "publicationDate": "1987",
+        "journal": "Eur. J. Biochem.",
+        "firstPage": "99",
+        "lastPage": "106",
+        "volume": "165"
+      },
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [MRNA]"
+      ],
+      "referenceComments": [
+        {
+          "value": "cv. Hiproly",
+          "type": "STRAIN"
+        },
+        {
+          "value": "cv. Sundance",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 2,
+      "citation": {
+        "id": "CI-C034B5ULGN41",
+        "citationType": "journal article",
+        "authors": [
+          "Svendsen I.",
+          "Martin B.",
+          "Jonassen I."
+        ],
+        "title": "Characteristics of Hiproly barley III. Amino acid sequences of two lysine-rich proteins.",
+        "publicationDate": "1980",
+        "journal": "Carlsberg Res. Commun.",
+        "firstPage": "79",
+        "lastPage": "85",
+        "volume": "45"
+      },
+      "referencePositions": [
+        "PROTEIN SEQUENCE OF 2-84"
+      ],
+      "referenceComments": [
+        {
+          "value": "cv. Hiproly",
+          "type": "STRAIN"
+        }
+      ]
+    },
+    {
+      "referenceNumber": 3,
+      "citation": {
+        "id": "CI-AVCOFGRSV3L66",
+        "citationType": "journal article",
+        "authors": [
+          "Jonassen I.",
+          "Svendsen I."
+        ],
+        "title": "Identification of the reactive sites in two homologous serine proteinase inhibitors isolated from barley.",
+        "publicationDate": "1982",
+        "journal": "Carlsberg Res. Commun.",
+        "firstPage": "199",
+        "lastPage": "203",
+        "volume": "47"
+      },
+      "referencePositions": [
+        "REACTIVE SITE"
+      ]
+    },
+    {
+      "referenceNumber": 4,
+      "citation": {
+        "id": "3828302",
+        "citationType": "journal article",
+        "authors": [
+          "McPhalen C.A.",
+          "James M.N.G."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "3828302"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1021/bi00375a036"
+          }
+        ],
+        "title": "Crystal and molecular structure of the serine proteinase inhibitor CI-2 from barley seeds.",
+        "publicationDate": "1987",
+        "journal": "Biochemistry",
+        "firstPage": "261",
+        "lastPage": "269",
+        "volume": "26"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY (2.0 ANGSTROMS)"
+      ]
+    },
+    {
+      "referenceNumber": 5,
+      "citation": {
+        "id": "8278384",
+        "citationType": "journal article",
+        "authors": [
+          "Harpaz Y.",
+          "Elmasry N.",
+          "Fersht A.R.",
+          "Henrick K."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "8278384"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1073/pnas.91.1.311"
+          }
+        ],
+        "title": "Direct observation of better hydration at the N terminus of an alpha-helix with glycine rather than alanine as the N-cap residue.",
+        "publicationDate": "1994",
+        "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+        "firstPage": "311",
+        "lastPage": "315",
+        "volume": "91"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY (1.7 ANGSTROMS) OF 22-84"
+      ]
+    },
+    {
+      "referenceNumber": 6,
+      "citation": {
+        "id": "9079381",
+        "citationType": "journal article",
+        "authors": [
+          "Neira J.L.",
+          "Davis B.",
+          "Ladurner A.G.",
+          "Buckle A.M.",
+          "de Prat G.",
+          "Fersht A.R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "9079381"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/s1359-0278(96)00031-4"
+          }
+        ],
+        "title": "Towards the complete structural characterization of a protein folding pathway: the structures of the denatured, transition and native states for the association/folding of two complementary fragments of cleaved chymotrypsin inhibitor. 2. Direct evidence for a nucleation-condensation mechanism.",
+        "publicationDate": "1996",
+        "journal": "Fold. Des.",
+        "firstPage": "189",
+        "lastPage": "208",
+        "volume": "1"
+      },
+      "referencePositions": [
+        "X-RAY CRYSTALLOGRAPHY (2.0 ANGSTROMS)"
+      ]
+    },
+    {
+      "referenceNumber": 7,
+      "citation": {
+        "id": "1748996",
+        "citationType": "journal article",
+        "authors": [
+          "Ludvigsen S.",
+          "Shen H.Y.",
+          "Kjaer M.",
+          "Madsen J.C.",
+          "Poulsen F.M."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1748996"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/0022-2836(91)90500-6"
+          }
+        ],
+        "title": "Refinement of the three-dimensional solution structure of barley serine proteinase inhibitor 2 and comparison with the structures in crystals.",
+        "publicationDate": "1991",
+        "journal": "J. Mol. Biol.",
+        "firstPage": "621",
+        "lastPage": "635",
+        "volume": "222"
+      },
+      "referencePositions": [
+        "STRUCTURE BY NMR"
+      ]
+    }
+  ],
+  "uniProtKBCrossReferences": [
+    {
+      "database": "EMBL",
+      "id": "X05404",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAA28988.1"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    {
+      "database": "PIR",
+      "id": "A01292",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "EIBH2A"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1CIQ",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.20 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=22-60, B=61-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1CIR",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "NMR"
+        },
+        {
+          "key": "Resolution",
+          "value": "-"
+        },
+        {
+          "key": "Chains",
+          "value": "A=22-59, B=61-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1CIS",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "NMR"
+        },
+        {
+          "key": "Resolution",
+          "value": "-"
+        },
+        {
+          "key": "Chains",
+          "value": "A=21-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1COA",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.20 A"
+        },
+        {
+          "key": "Chains",
+          "value": "I=21-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1CQ4",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.80 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=21-59, B=61-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1LW6",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.50 A"
+        },
+        {
+          "key": "Chains",
+          "value": "I=21-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1YPA",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "I=21-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1YPB",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "I=21-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "1YPC",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.70 A"
+        },
+        {
+          "key": "Chains",
+          "value": "I=21-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2CI2",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.00 A"
+        },
+        {
+          "key": "Chains",
+          "value": "I=2-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "2SNI",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.10 A"
+        },
+        {
+          "key": "Chains",
+          "value": "I=2-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3CI2",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "NMR"
+        },
+        {
+          "key": "Resolution",
+          "value": "-"
+        },
+        {
+          "key": "Chains",
+          "value": "A=19-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "5FBZ",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.90 A"
+        },
+        {
+          "key": "Chains",
+          "value": "B/D=13-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "5FFN",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.80 A"
+        },
+        {
+          "key": "Chains",
+          "value": "I=13-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6QIY",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.50 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=20-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "6QIZ",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.65 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=21-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "7A1H",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.90 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=21-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "7A3M",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.01 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=21-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "7AOK",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.87 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=21-84"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "7AON",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.30 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A=21-84"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "1CIQ",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "1CIR",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "1CIS",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "1COA",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "1CQ4",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "1LW6",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "1YPA",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "1YPB",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "1YPC",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "2CI2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "2SNI",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "3CI2",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "5FBZ",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "5FFN",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "6QIY",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "6QIZ",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "7A1H",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "7A3M",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "7AOK",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "PDBsum",
+      "id": "7AON",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "AlphaFoldDB",
+      "id": "P01053",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "BMRB",
+      "id": "P01053",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MDposit",
+      "id": "P01053",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "SMR",
+      "id": "P01053",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "IntAct",
+      "id": "P01053",
+      "properties": [
+        {
+          "key": "Interactions",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "MINT",
+      "id": "P01053",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "MEROPS",
+      "id": "I13.003",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.10TJ18.PROJ.1HG00008230.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.10TJ18.PROJ.1HG00008230.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.10TJ18.PROJ.1HG00008230"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.AIZU_6.PROJ.1HG00008280.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.AIZU_6.PROJ.1HG00008280.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.AIZU_6.PROJ.1HG00008280"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.B1K-04-12.PROJ.1HG00012900.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.B1K-04-12.PROJ.1HG00012900.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.B1K-04-12.PROJ.1HG00012900"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.B1K-33-13.PROJ.1HG00008200.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.B1K-33-13.PROJ.1HG00008200.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.B1K-33-13.PROJ.1HG00008200"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.BARKE.PROJ.1HG00011550.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.BARKE.PROJ.1HG00011550.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.BARKE.PROJ.1HG00011550"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.BONUS.PROJ.1HG00009340.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.BONUS.PROJ.1HG00009340.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.BONUS.PROJ.1HG00009340"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.BOWMAN.PROJ.1HG00008820.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.BOWMAN.PROJ.1HG00008820.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.BOWMAN.PROJ.1HG00008820"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.F2327.PROJ.1HG00007490.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.F2327.PROJ.1HG00007490.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.F2327.PROJ.1HG00007490"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.FOMA.PROJ.1HG00009480.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.FOMA.PROJ.1HG00009480.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.FOMA.PROJ.1HG00009480"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.GOLDEN_MELON.PROJ.1HG00008260.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.GOLDEN_MELON.PROJ.1HG00008260.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.GOLDEN_MELON.PROJ.1HG00008260"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.GOLDEN_PROMISE.PROJ.1HG00011680.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.GOLDEN_PROMISE.PROJ.1HG00011680.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.GOLDEN_PROMISE.PROJ.1HG00011680"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HID055.PROJ.1HG00007500.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HID055.PROJ.1HG00007500.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HID055.PROJ.1HG00007500"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HID101.PROJ.1HG00008350.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HID101.PROJ.1HG00008350.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HID101.PROJ.1HG00008350"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HID144.PROJ.1HG00008500.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HID144.PROJ.1HG00008500.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HID144.PROJ.1HG00008500"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HID357.PROJ.1HG00008000.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HID357.PROJ.1HG00008000.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HID357.PROJ.1HG00008000"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HID380.PROJ.1HG00008940.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HID380.PROJ.1HG00008940.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HID380.PROJ.1HG00008940"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HID84.PROJ.1HG00008550.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HID84.PROJ.1HG00008550.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HID84.PROJ.1HG00008550"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOCKETT.PROJ.1HG00011620.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOCKETT.PROJ.1HG00011620.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOCKETT.PROJ.1HG00011620"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_10096.PROJ.1HG00008710.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_10096.PROJ.1HG00008710.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_10096.PROJ.1HG00008710"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_10350.PROJ.1HG00011470.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_10350.PROJ.1HG00011470.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_10350.PROJ.1HG00011470"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_10892.PROJ.1HG00009510.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_10892.PROJ.1HG00009510.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_10892.PROJ.1HG00009510"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_1168.PROJ.1HG00010080.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_1168.PROJ.1HG00010080.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_1168.PROJ.1HG00010080"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_12184.PROJ.1HG00008170.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_12184.PROJ.1HG00008170.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_12184.PROJ.1HG00008170"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_12541.PROJ.1HG00008380.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_12541.PROJ.1HG00008380.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_12541.PROJ.1HG00008380"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_13594.PROJ.1HG00008610.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_13594.PROJ.1HG00008610.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_13594.PROJ.1HG00008610"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_13821.PROJ.1HG00012460.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_13821.PROJ.1HG00012460.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_13821.PROJ.1HG00012460"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_13942.PROJ.1HG00011890.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_13942.PROJ.1HG00011890.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_13942.PROJ.1HG00011890"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_14061.PROJ.1HG00008710.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_14061.PROJ.1HG00008710.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_14061.PROJ.1HG00008710"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_14121.PROJ.1HG00008740.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_14121.PROJ.1HG00008740.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_14121.PROJ.1HG00008740"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_14273.PROJ.1HG00008660.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_14273.PROJ.1HG00008660.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_14273.PROJ.1HG00008660"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_21256.PROJ.1HG00008780.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_21256.PROJ.1HG00008780.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_21256.PROJ.1HG00008780"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_21322.PROJ.1HG00009200.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_21322.PROJ.1HG00009200.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_21322.PROJ.1HG00009200"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_21595.PROJ.1HG00008830.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_21595.PROJ.1HG00008830.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_21595.PROJ.1HG00008830"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_2180.PROJ.1HG00008480.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_2180.PROJ.1HG00008480.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_2180.PROJ.1HG00008480"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_2779.PROJ.1HG00009180.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_2779.PROJ.1HG00009180.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_2779.PROJ.1HG00009180"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_2830.PROJ.1HG00008740.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_2830.PROJ.1HG00008740.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_2830.PROJ.1HG00008740"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_3081.PROJ.1HG00011770.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_3081.PROJ.1HG00011770.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_3081.PROJ.1HG00011770"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_3365.PROJ.1HG00011500.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_3365.PROJ.1HG00011500.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_3365.PROJ.1HG00011500"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_3474.PROJ.1HG00008610.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_3474.PROJ.1HG00008610.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_3474.PROJ.1HG00008610"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_4224.PROJ.1HG00008240.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_4224.PROJ.1HG00008240.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_4224.PROJ.1HG00008240"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_495.PROJ.1HG00008810.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_495.PROJ.1HG00008810.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_495.PROJ.1HG00008810"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_6220.PROJ.1HG00008490.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_6220.PROJ.1HG00008490.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_6220.PROJ.1HG00008490"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_7172.PROJ.1HG00008610.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_7172.PROJ.1HG00008610.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_7172.PROJ.1HG00008610"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_7385.PROJ.1HG00008750.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_7385.PROJ.1HG00008750.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_7385.PROJ.1HG00008750"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_7552.PROJ.1HG00012450.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_7552.PROJ.1HG00012450.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_7552.PROJ.1HG00012450"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_8117.PROJ.1HG00008750.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_8117.PROJ.1HG00008750.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_8117.PROJ.1HG00008750"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_8148.PROJ.1HG00011750.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_8148.PROJ.1HG00011750.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_8148.PROJ.1HG00011750"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_9043.PROJ.1HG00010650.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_9043.PROJ.1HG00010650.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_9043.PROJ.1HG00010650"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.HOR_9972.PROJ.1HG00008440.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_9972.PROJ.1HG00008440.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_9972.PROJ.1HG00008440"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.IGRI.PROJ.1HG00011010.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.IGRI.PROJ.1HG00011010.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.IGRI.PROJ.1HG00011010"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.MAXIMUS.PROJ.1HG00009000.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.MAXIMUS.PROJ.1HG00009000.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.MAXIMUS.PROJ.1HG00009000"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.RGT_PLANET.PROJ.1HG00012250.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.RGT_PLANET.PROJ.1HG00012250.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.RGT_PLANET.PROJ.1HG00012250"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.WBDC078.PROJ.1HG00008220.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.WBDC078.PROJ.1HG00008220.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.WBDC078.PROJ.1HG00008220"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.WBDC103.PROJ.1HG00007980.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.WBDC103.PROJ.1HG00007980.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.WBDC103.PROJ.1HG00007980"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.WBDC133.PROJ.1HG00008330.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.WBDC133.PROJ.1HG00008330.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.WBDC133.PROJ.1HG00008330"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.WBDC184.PROJ.1HG00007990.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.WBDC184.PROJ.1HG00007990.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.WBDC184.PROJ.1HG00007990"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.WBDC199.PROJ.1HG00008200.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.WBDC199.PROJ.1HG00008200.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.WBDC199.PROJ.1HG00008200"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.WBDC237.PROJ.1HG00008360.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.WBDC237.PROJ.1HG00008360.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.WBDC237.PROJ.1HG00008360"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.WBDC348.PROJ.1HG00007900.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.WBDC348.PROJ.1HG00007900.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.WBDC348.PROJ.1HG00007900"
+        }
+      ]
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "HORVU.WBDC349.PROJ.1HG00008640.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.WBDC349.PROJ.1HG00008640.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.WBDC349.PROJ.1HG00008640"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.10TJ18.PROJ.1HG00008230.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.10TJ18.PROJ.1HG00008230.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.10TJ18.PROJ.1HG00008230"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.AIZU_6.PROJ.1HG00008280.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.AIZU_6.PROJ.1HG00008280.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.AIZU_6.PROJ.1HG00008280"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.B1K-04-12.PROJ.1HG00012900.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.B1K-04-12.PROJ.1HG00012900.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.B1K-04-12.PROJ.1HG00012900"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.B1K-33-13.PROJ.1HG00008200.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.B1K-33-13.PROJ.1HG00008200.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.B1K-33-13.PROJ.1HG00008200"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.BARKE.PROJ.1HG00011550.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.BARKE.PROJ.1HG00011550.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.BARKE.PROJ.1HG00011550"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.BONUS.PROJ.1HG00009340.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.BONUS.PROJ.1HG00009340.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.BONUS.PROJ.1HG00009340"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.BOWMAN.PROJ.1HG00008820.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.BOWMAN.PROJ.1HG00008820.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.BOWMAN.PROJ.1HG00008820"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.F2327.PROJ.1HG00007490.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.F2327.PROJ.1HG00007490.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.F2327.PROJ.1HG00007490"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.FOMA.PROJ.1HG00009480.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.FOMA.PROJ.1HG00009480.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.FOMA.PROJ.1HG00009480"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.GOLDEN_MELON.PROJ.1HG00008260.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.GOLDEN_MELON.PROJ.1HG00008260.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.GOLDEN_MELON.PROJ.1HG00008260"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.GOLDEN_PROMISE.PROJ.1HG00011680.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.GOLDEN_PROMISE.PROJ.1HG00011680.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.GOLDEN_PROMISE.PROJ.1HG00011680"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HID055.PROJ.1HG00007500.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HID055.PROJ.1HG00007500.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HID055.PROJ.1HG00007500"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HID101.PROJ.1HG00008350.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HID101.PROJ.1HG00008350.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HID101.PROJ.1HG00008350"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HID144.PROJ.1HG00008500.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HID144.PROJ.1HG00008500.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HID144.PROJ.1HG00008500"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HID357.PROJ.1HG00008000.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HID357.PROJ.1HG00008000.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HID357.PROJ.1HG00008000"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HID380.PROJ.1HG00008940.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HID380.PROJ.1HG00008940.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HID380.PROJ.1HG00008940"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HID84.PROJ.1HG00008550.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HID84.PROJ.1HG00008550.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HID84.PROJ.1HG00008550"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOCKETT.PROJ.1HG00011620.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOCKETT.PROJ.1HG00011620.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOCKETT.PROJ.1HG00011620"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_10096.PROJ.1HG00008710.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_10096.PROJ.1HG00008710.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_10096.PROJ.1HG00008710"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_10350.PROJ.1HG00011470.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_10350.PROJ.1HG00011470.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_10350.PROJ.1HG00011470"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_10892.PROJ.1HG00009510.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_10892.PROJ.1HG00009510.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_10892.PROJ.1HG00009510"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_1168.PROJ.1HG00010080.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_1168.PROJ.1HG00010080.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_1168.PROJ.1HG00010080"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_12184.PROJ.1HG00008170.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_12184.PROJ.1HG00008170.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_12184.PROJ.1HG00008170"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_12541.PROJ.1HG00008380.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_12541.PROJ.1HG00008380.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_12541.PROJ.1HG00008380"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_13594.PROJ.1HG00008610.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_13594.PROJ.1HG00008610.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_13594.PROJ.1HG00008610"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_13821.PROJ.1HG00012460.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_13821.PROJ.1HG00012460.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_13821.PROJ.1HG00012460"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_13942.PROJ.1HG00011890.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_13942.PROJ.1HG00011890.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_13942.PROJ.1HG00011890"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_14061.PROJ.1HG00008710.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_14061.PROJ.1HG00008710.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_14061.PROJ.1HG00008710"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_14121.PROJ.1HG00008740.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_14121.PROJ.1HG00008740.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_14121.PROJ.1HG00008740"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_14273.PROJ.1HG00008660.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_14273.PROJ.1HG00008660.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_14273.PROJ.1HG00008660"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_21256.PROJ.1HG00008780.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_21256.PROJ.1HG00008780.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_21256.PROJ.1HG00008780"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_21322.PROJ.1HG00009200.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_21322.PROJ.1HG00009200.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_21322.PROJ.1HG00009200"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_21595.PROJ.1HG00008830.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_21595.PROJ.1HG00008830.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_21595.PROJ.1HG00008830"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_2180.PROJ.1HG00008480.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_2180.PROJ.1HG00008480.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_2180.PROJ.1HG00008480"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_2779.PROJ.1HG00009180.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_2779.PROJ.1HG00009180.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_2779.PROJ.1HG00009180"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_2830.PROJ.1HG00008740.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_2830.PROJ.1HG00008740.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_2830.PROJ.1HG00008740"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_3081.PROJ.1HG00011770.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_3081.PROJ.1HG00011770.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_3081.PROJ.1HG00011770"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_3365.PROJ.1HG00011500.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_3365.PROJ.1HG00011500.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_3365.PROJ.1HG00011500"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_3474.PROJ.1HG00008610.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_3474.PROJ.1HG00008610.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_3474.PROJ.1HG00008610"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_4224.PROJ.1HG00008240.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_4224.PROJ.1HG00008240.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_4224.PROJ.1HG00008240"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_495.PROJ.1HG00008810.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_495.PROJ.1HG00008810.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_495.PROJ.1HG00008810"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_6220.PROJ.1HG00008490.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_6220.PROJ.1HG00008490.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_6220.PROJ.1HG00008490"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_7172.PROJ.1HG00008610.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_7172.PROJ.1HG00008610.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_7172.PROJ.1HG00008610"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_7385.PROJ.1HG00008750.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_7385.PROJ.1HG00008750.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_7385.PROJ.1HG00008750"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_7552.PROJ.1HG00012450.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_7552.PROJ.1HG00012450.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_7552.PROJ.1HG00012450"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_8117.PROJ.1HG00008750.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_8117.PROJ.1HG00008750.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_8117.PROJ.1HG00008750"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_8148.PROJ.1HG00011750.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_8148.PROJ.1HG00011750.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_8148.PROJ.1HG00011750"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_9043.PROJ.1HG00010650.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_9043.PROJ.1HG00010650.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_9043.PROJ.1HG00010650"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.HOR_9972.PROJ.1HG00008440.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.HOR_9972.PROJ.1HG00008440.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.HOR_9972.PROJ.1HG00008440"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.IGRI.PROJ.1HG00011010.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.IGRI.PROJ.1HG00011010.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.IGRI.PROJ.1HG00011010"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.MAXIMUS.PROJ.1HG00009000.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.MAXIMUS.PROJ.1HG00009000.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.MAXIMUS.PROJ.1HG00009000"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.RGT_PLANET.PROJ.1HG00012250.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.RGT_PLANET.PROJ.1HG00012250.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.RGT_PLANET.PROJ.1HG00012250"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.WBDC078.PROJ.1HG00008220.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.WBDC078.PROJ.1HG00008220.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.WBDC078.PROJ.1HG00008220"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.WBDC103.PROJ.1HG00007980.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.WBDC103.PROJ.1HG00007980.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.WBDC103.PROJ.1HG00007980"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.WBDC133.PROJ.1HG00008330.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.WBDC133.PROJ.1HG00008330.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.WBDC133.PROJ.1HG00008330"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.WBDC184.PROJ.1HG00007990.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.WBDC184.PROJ.1HG00007990.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.WBDC184.PROJ.1HG00007990"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.WBDC199.PROJ.1HG00008200.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.WBDC199.PROJ.1HG00008200.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.WBDC199.PROJ.1HG00008200"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.WBDC237.PROJ.1HG00008360.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.WBDC237.PROJ.1HG00008360.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.WBDC237.PROJ.1HG00008360"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.WBDC348.PROJ.1HG00007900.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.WBDC348.PROJ.1HG00007900.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.WBDC348.PROJ.1HG00007900"
+        }
+      ]
+    },
+    {
+      "database": "Gramene",
+      "id": "HORVU.WBDC349.PROJ.1HG00008640.1",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "cds:HORVU.WBDC349.PROJ.1HG00008640.1"
+        },
+        {
+          "key": "GeneId",
+          "value": "HORVU.WBDC349.PROJ.1HG00008640"
+        }
+      ]
+    },
+    {
+      "database": "OMA",
+      "id": "FVEYSIV",
+      "properties": [
+        {
+          "key": "Fingerprint",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "EvolutionaryTrace",
+      "id": "P01053",
+      "properties": [
+        {
+          "key": "Description",
+          "value": "-"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0004867",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "F:serine-type endopeptidase inhibitor activity"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "GO",
+      "id": "GO:0009611",
+      "properties": [
+        {
+          "key": "GoTerm",
+          "value": "P:response to wounding"
+        },
+        {
+          "key": "GoEvidenceType",
+          "value": "IEA:InterPro"
+        }
+      ]
+    },
+    {
+      "database": "Gene3D",
+      "id": "3.30.10.10",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Trypsin Inhibitor V, subunit A"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR000864",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Prot_inh_pot1"
+        }
+      ]
+    },
+    {
+      "database": "InterPro",
+      "id": "IPR036354",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "Prot_inh_pot1_sf"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR33091",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "PROTEIN, PUTATIVE, EXPRESSED-RELATED"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PANTHER",
+      "id": "PTHR33091:SF55",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "SUBTILISIN-CHYMOTRYPSIN INHIBITOR WSCI"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "Pfam",
+      "id": "PF00280",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "potato_inhibit"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PRINTS",
+      "id": "PR00292",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "POTATOINHBTR"
+        }
+      ]
+    },
+    {
+      "database": "SUPFAM",
+      "id": "SSF54654",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "CI-2 family of serine protease inhibitors"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "database": "PROSITE",
+      "id": "PS00285",
+      "properties": [
+        {
+          "key": "EntryName",
+          "value": "POTATO_INHIBITOR"
+        },
+        {
+          "key": "MatchStatus",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "sequence": {
+    "value": "MSSVEKKPEGVNTGAGDRHNLKTEWPELVGKSVEEAKKVILQDKPEAQIIVLPVGTIVTMEYRIDRVRLFVDKLDNIAQVPRVG",
+    "length": 84,
+    "molWeight": 9381,
+    "crc64": "594849D2B837F0E4",
+    "md5": "6B14F820D0A5B9BE401920DE76F87C27"
+  },
+  "extraAttributes": {
+    "countByCommentType": {
+      "FUNCTION": 1,
+      "SIMILARITY": 1
+    },
+    "countByFeatureType": {
+      "Initiator methionine": 1,
+      "Chain": 1,
+      "Region": 1,
+      "Site": 1,
+      "Sequence conflict": 1,
+      "Helix": 2,
+      "Beta strand": 4
+    },
+    "uniParcId": "UPI000005E851"
+  }
+}

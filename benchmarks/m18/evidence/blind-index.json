@@ -1,0 +1,3224 @@
+{
+  "source_sha256": "4cd224d56a0004be70f1b33f055cb2a0d2846065497c94e4fcb8bb289a167b84",
+  "counts": {
+    "P06241": 9972,
+    "P01053": 6463,
+    "P0A9X9": 8500
+  },
+  "selected": [
+    {
+      "id": "GSE266299:P0A9X9:0bbeebdfe5ad9f26",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFMTPDDGSKDMFVHFSAIQNDGYKSLDEGQKVSMTIESGAKGPAAGNITS",
+      "mutations": [
+        "V5L",
+        "I17M",
+        "V26M",
+        "F49M",
+        "V63I"
+      ],
+      "source_row": 4142,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:cdfb4a1d605f0587",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFLTPDDGSKDVFLHFSAIQNDGYKSLDEGQKVSMTIESGAKGPAAGNVTS",
+      "mutations": [
+        "I17L",
+        "V28L",
+        "F49M"
+      ],
+      "source_row": 6256,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:1d2a33bee62ebf66",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIMKWFNADKGFGFVTPDDGSKDMFVHFSAIQNDGYKSLDEGQKMSLTIESGAKGPAAGNLTS",
+      "mutations": [
+        "V5M",
+        "I17V",
+        "V26M",
+        "V47M",
+        "F49L",
+        "V63L"
+      ],
+      "source_row": 2161,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:e8707305afdae6bc",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFMTPDDGSKDVFIHFSAIQNDGYKSLDEGQKMSITIESGAKGPAAGNVTS",
+      "mutations": [
+        "I17M",
+        "V28I",
+        "V47M",
+        "F49I"
+      ],
+      "source_row": 9375,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:6709a072ed59ef89",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIMKWFNADKGFGFITPDDGSKDMFVHFSAIQNDGYKSLDEGQKLSFTIESGAKGPAAGNLTS",
+      "mutations": [
+        "V5M",
+        "V26M",
+        "V47L",
+        "V63L"
+      ],
+      "source_row": 13111,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:b9ae6dbc7d528bed",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIFKWFNADKGFGFVTPDDGSKDIFVHFSAIQNDGYKSLDEGQKVSLTIESGAKGPAAGNMTS",
+      "mutations": [
+        "V5F",
+        "I17V",
+        "V26I",
+        "F49L",
+        "V63M"
+      ],
+      "source_row": 9157,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:362d31394b7d4968",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFFTPDDGSKDMFLHFSAIQNDGYKSLDEGQKVSVTIESGAKGPAAGNITS",
+      "mutations": [
+        "I17F",
+        "V26M",
+        "V28L",
+        "F49V",
+        "V63I"
+      ],
+      "source_row": 12287,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:7f2e8c5d574a9fa7",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFFTPDDGSKDVFLHFSAIQNDGYKSLDEGQKVSVTIESGAKGPAAGNMTS",
+      "mutations": [
+        "V5L",
+        "I17F",
+        "V28L",
+        "F49V",
+        "V63M"
+      ],
+      "source_row": 7229,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:21e170249c85dd9e",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFVTPDDGSKDLFFHFSAIQNDGYKSLDEGQKMSITIESGAKGPAAGNVTS",
+      "mutations": [
+        "I17V",
+        "V26L",
+        "V28F",
+        "V47M",
+        "F49I"
+      ],
+      "source_row": 8790,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:f00fdfc7b2f0eec2",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFLTPDDGSKDMFFHFSAIQNDGYKSLDEGQKMSLTIESGAKGPAAGNFTS",
+      "mutations": [
+        "V5L",
+        "I17L",
+        "V26M",
+        "V28F",
+        "V47M",
+        "F49L",
+        "V63F"
+      ],
+      "source_row": 11482,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:d8803946d292b916",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIMKWFNADKGFGFFTPDDGSKDLFVHFSAIQNDGYKSLDEGQKLSMTIESGAKGPAAGNFTS",
+      "mutations": [
+        "V5M",
+        "I17F",
+        "V26L",
+        "V47L",
+        "F49M",
+        "V63F"
+      ],
+      "source_row": 10662,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:bf0a7e2060e01b3b",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIFKWFNADKGFGFLTPDDGSKDLFMHFSAIQNDGYKSLDEGQKLSFTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5F",
+        "I17L",
+        "V26L",
+        "V28M",
+        "V47L"
+      ],
+      "source_row": 10274,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:780688670f18fbc4",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFVTPDDGSKDVFVHFSAIQNDGYKSLDEGQKVSLTIESGAKGPAAGNVTS",
+      "mutations": [
+        "I17V",
+        "F49L"
+      ],
+      "source_row": 3162,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:860e5f1764bce357",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFVTPDDGSKDLFMHFSAIQNDGYKSLDEGQKVSVTIESGAKGPAAGNITS",
+      "mutations": [
+        "I17V",
+        "V26L",
+        "V28M",
+        "F49V",
+        "V63I"
+      ],
+      "source_row": 5120,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:de27c9ae1bcd1f07",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIFKWFNADKGFGFVTPDDGSKDLFFHFSAIQNDGYKSLDEGQKISMTIESGAKGPAAGNFTS",
+      "mutations": [
+        "V5F",
+        "I17V",
+        "V26L",
+        "V28F",
+        "V47I",
+        "F49M",
+        "V63F"
+      ],
+      "source_row": 16099,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:3faea29a2107b9f7",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIMKWFNADKGFGFVTPDDGSKDLFMHFSAIQNDGYKSLDEGQKVSLTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5M",
+        "I17V",
+        "V26L",
+        "V28M",
+        "F49L"
+      ],
+      "source_row": 1922,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:9e4aec4bb6714232",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFVTPDDGSKDVFVHFSAIQNDGYKSLDEGQKISFTIESGAKGPAAGNLTS",
+      "mutations": [
+        "I17V",
+        "V47I",
+        "V63L"
+      ],
+      "source_row": 4077,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:b5d788862354c215",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIMKWFNADKGFGFVTPDDGSKDVFIHFSAIQNDGYKSLDEGQKVSITIESGAKGPAAGNITS",
+      "mutations": [
+        "V5M",
+        "I17V",
+        "V28I",
+        "F49I",
+        "V63I"
+      ],
+      "source_row": 5591,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:3e601c4cbda29c2d",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIMKWFNADKGFGFLTPDDGSKDFFMHFSAIQNDGYKSLDEGQKVSLTIESGAKGPAAGNMTS",
+      "mutations": [
+        "V5M",
+        "I17L",
+        "V26F",
+        "V28M",
+        "F49L",
+        "V63M"
+      ],
+      "source_row": 5508,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:c9719945122b1e01",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIIKWFNADKGFGFMTPDDGSKDVFVHFSAIQNDGYKSLDEGQKFSLTIESGAKGPAAGNMTS",
+      "mutations": [
+        "V5I",
+        "I17M",
+        "V47F",
+        "F49L",
+        "V63M"
+      ],
+      "source_row": 7770,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:21d9ea06cef94e36",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFLTPDDGSKDVFIHFSAIQNDGYKSLDEGQKLSVTIESGAKGPAAGNITS",
+      "mutations": [
+        "V5L",
+        "I17L",
+        "V28I",
+        "V47L",
+        "F49V",
+        "V63I"
+      ],
+      "source_row": 18007,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:e0026b12e1627fca",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFVTPDDGSKDVFMHFSAIQNDGYKSLDEGQKVSITIESGAKGPAAGNITS",
+      "mutations": [
+        "V5L",
+        "I17V",
+        "V28M",
+        "F49I",
+        "V63I"
+      ],
+      "source_row": 9098,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:3c8e7981694165b9",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIMKWFNADKGFGFMTPDDGSKDIFVHFSAIQNDGYKSLDEGQKVSMTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5M",
+        "I17M",
+        "V26I",
+        "F49M"
+      ],
+      "source_row": 2904,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:d5c2ab3316ea48d7",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFVTPDDGSKDFFLHFSAIQNDGYKSLDEGQKLSITIESGAKGPAAGNVTS",
+      "mutations": [
+        "I17V",
+        "V26F",
+        "V28L",
+        "V47L",
+        "F49I"
+      ],
+      "source_row": 3332,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:a6e8dfc24aeaeb92",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFLTPDDGSKDVFVHFSAIQNDGYKSLDEGQKLSVTIESGAKGPAAGNMTS",
+      "mutations": [
+        "V5L",
+        "I17L",
+        "V47L",
+        "F49V",
+        "V63M"
+      ],
+      "source_row": 10597,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:e858caeae6086764",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFITPDDGSKDMFLHFSAIQNDGYKSLDEGQKISMTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5L",
+        "V26M",
+        "V28L",
+        "V47I",
+        "F49M"
+      ],
+      "source_row": 7706,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:976958df88639705",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIMKWFNADKGFGFVTPDDGSKDVFIHFSAIQNDGYKSLDEGQKVSMTIESGAKGPAAGNLTS",
+      "mutations": [
+        "V5M",
+        "I17V",
+        "V28I",
+        "F49M",
+        "V63L"
+      ],
+      "source_row": 3128,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:1bb1a13edc761f47",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIFKWFNADKGFGFFTPDDGSKDIFFHFSAIQNDGYKSLDEGQKISLTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5F",
+        "I17F",
+        "V26I",
+        "V28F",
+        "V47I",
+        "F49L"
+      ],
+      "source_row": 17615,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:fab0139a8f9285ca",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIIKWFNADKGFGFFTPDDGSKDFFMHFSAIQNDGYKSLDEGQKLSMTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5I",
+        "I17F",
+        "V26F",
+        "V28M",
+        "V47L",
+        "F49M"
+      ],
+      "source_row": 8645,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:3e44e1cc1a1acb3a",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFVTPDDGSKDIFFHFSAIQNDGYKSLDEGQKVSVTIESGAKGPAAGNLTS",
+      "mutations": [
+        "I17V",
+        "V26I",
+        "V28F",
+        "F49V",
+        "V63L"
+      ],
+      "source_row": 10469,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:e0bebfc444443da4",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFVTPDDGSKDIFMHFSAIQNDGYKSLDEGQKVSVTIESGAKGPAAGNLTS",
+      "mutations": [
+        "I17V",
+        "V26I",
+        "V28M",
+        "F49V",
+        "V63L"
+      ],
+      "source_row": 10199,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:5df881ab26d5b955",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFMTPDDGSKDLFMHFSAIQNDGYKSLDEGQKVSVTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5L",
+        "I17M",
+        "V26L",
+        "V28M",
+        "F49V"
+      ],
+      "source_row": 3748,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:a906a5496943309e",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFVTPDDGSKDVFLHFSAIQNDGYKSLDEGQKISFTIESGAKGPAAGNVTS",
+      "mutations": [
+        "I17V",
+        "V28L",
+        "V47I"
+      ],
+      "source_row": 2295,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:8c4e5411536eaa07",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFITPDDGSKDIFLHFSAIQNDGYKSLDEGQKVSFTIESGAKGPAAGNLTS",
+      "mutations": [
+        "V26I",
+        "V28L",
+        "V63L"
+      ],
+      "source_row": 10557,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:3fbd8d5ea78175d0",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFMTPDDGSKDIFVHFSAIQNDGYKSLDEGQKVSMTIESGAKGPAAGNMTS",
+      "mutations": [
+        "V5L",
+        "I17M",
+        "V26I",
+        "F49M",
+        "V63M"
+      ],
+      "source_row": 10094,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:0d349c1428f1799a",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFMTPDDGSKDMFVHFSAIQNDGYKSLDEGQKFSMTIESGAKGPAAGNMTS",
+      "mutations": [
+        "V5L",
+        "I17M",
+        "V26M",
+        "V47F",
+        "F49M",
+        "V63M"
+      ],
+      "source_row": 12664,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:5e80014aeebb74e5",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFMTPDDGSKDMFLHFSAIQNDGYKSLDEGQKLSVTIESGAKGPAAGNMTS",
+      "mutations": [
+        "I17M",
+        "V26M",
+        "V28L",
+        "V47L",
+        "F49V",
+        "V63M"
+      ],
+      "source_row": 5074,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:b11efd370d0f1ffb",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIMKWFNADKGFGFITPDDGSKDVFIHFSAIQNDGYKSLDEGQKLSLTIESGAKGPAAGNFTS",
+      "mutations": [
+        "V5M",
+        "V28I",
+        "V47L",
+        "F49L",
+        "V63F"
+      ],
+      "source_row": 18555,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:d6c7655b7e14858a",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFLTPDDGSKDLFIHFSAIQNDGYKSLDEGQKMSLTIESGAKGPAAGNMTS",
+      "mutations": [
+        "I17L",
+        "V26L",
+        "V28I",
+        "V47M",
+        "F49L",
+        "V63M"
+      ],
+      "source_row": 13887,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:ada83432d8a8e119",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIIKWFNADKGFGFVTPDDGSKDMFLHFSAIQNDGYKSLDEGQKVSLTIESGAKGPAAGNFTS",
+      "mutations": [
+        "V5I",
+        "I17V",
+        "V26M",
+        "V28L",
+        "F49L",
+        "V63F"
+      ],
+      "source_row": 4711,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:8dc4c5795d80b59b",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFLTPDDGSKDMFIHFSAIQNDGYKSLDEGQKFSVTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5L",
+        "I17L",
+        "V26M",
+        "V28I",
+        "V47F",
+        "F49V"
+      ],
+      "source_row": 15165,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:751644cf583dc1dc",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFLTPDDGSKDIFFHFSAIQNDGYKSLDEGQKLSVTIESGAKGPAAGNVTS",
+      "mutations": [
+        "I17L",
+        "V26I",
+        "V28F",
+        "V47L",
+        "F49V"
+      ],
+      "source_row": 7213,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:497fa9dbe74b7500",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFLTPDDGSKDLFMHFSAIQNDGYKSLDEGQKISVTIESGAKGPAAGNLTS",
+      "mutations": [
+        "I17L",
+        "V26L",
+        "V28M",
+        "V47I",
+        "F49V",
+        "V63L"
+      ],
+      "source_row": 10133,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:658a8f90973013be",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFVTPDDGSKDLFLHFSAIQNDGYKSLDEGQKISFTIESGAKGPAAGNVTS",
+      "mutations": [
+        "I17V",
+        "V26L",
+        "V28L",
+        "V47I"
+      ],
+      "source_row": 9194,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:2f6ecdc1140061b8",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIIKWFNADKGFGFMTPDDGSKDLFLHFSAIQNDGYKSLDEGQKMSVTIESGAKGPAAGNLTS",
+      "mutations": [
+        "V5I",
+        "I17M",
+        "V26L",
+        "V28L",
+        "V47M",
+        "F49V",
+        "V63L"
+      ],
+      "source_row": 5363,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:77270a64b49208fe",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFFTPDDGSKDLFFHFSAIQNDGYKSLDEGQKVSFTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5L",
+        "I17F",
+        "V26L",
+        "V28F"
+      ],
+      "source_row": 19737,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:1cd79765234a88f3",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFVTPDDGSKDMFLHFSAIQNDGYKSLDEGQKLSVTIESGAKGPAAGNMTS",
+      "mutations": [
+        "I17V",
+        "V26M",
+        "V28L",
+        "V47L",
+        "F49V",
+        "V63M"
+      ],
+      "source_row": 4262,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:c246219b58135fa5",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFFTPDDGSKDLFIHFSAIQNDGYKSLDEGQKLSVTIESGAKGPAAGNVTS",
+      "mutations": [
+        "I17F",
+        "V26L",
+        "V28I",
+        "V47L",
+        "F49V"
+      ],
+      "source_row": 16899,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:356b95a484f7be34",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFLTPDDGSKDFFLHFSAIQNDGYKSLDEGQKVSVTIESGAKGPAAGNVTS",
+      "mutations": [
+        "I17L",
+        "V26F",
+        "V28L",
+        "F49V"
+      ],
+      "source_row": 7732,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:723958a18c892089",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIIKWFNADKGFGFLTPDDGSKDMFLHFSAIQNDGYKSLDEGQKVSVTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5I",
+        "I17L",
+        "V26M",
+        "V28L",
+        "F49V"
+      ],
+      "source_row": 2981,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:08e7e6b24e880b98",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIIKWFNADKGFGFMTPDDGSKDFFMHFSAIQNDGYKSLDEGQKVSMTIESGAKGPAAGNLTS",
+      "mutations": [
+        "V5I",
+        "I17M",
+        "V26F",
+        "V28M",
+        "F49M",
+        "V63L"
+      ],
+      "source_row": 6295,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:a93aa02e0b210c05",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIFKWFNADKGFGFVTPDDGSKDVFIHFSAIQNDGYKSLDEGQKVSVTIESGAKGPAAGNMTS",
+      "mutations": [
+        "V5F",
+        "I17V",
+        "V28I",
+        "F49V",
+        "V63M"
+      ],
+      "source_row": 16768,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:fdbca9dc8b033f37",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIMKWFNADKGFGFVTPDDGSKDLFMHFSAIQNDGYKSLDEGQKVSITIESGAKGPAAGNITS",
+      "mutations": [
+        "V5M",
+        "I17V",
+        "V26L",
+        "V28M",
+        "F49I",
+        "V63I"
+      ],
+      "source_row": 2955,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:49a6f92fd1288576",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFFTPDDGSKDIFVHFSAIQNDGYKSLDEGQKVSITIESGAKGPAAGNITS",
+      "mutations": [
+        "I17F",
+        "V26I",
+        "F49I",
+        "V63I"
+      ],
+      "source_row": 22100,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:7e09864e2666942c",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFMTPDDGSKDVFLHFSAIQNDGYKSLDEGQKVSVTIESGAKGPAAGNVTS",
+      "mutations": [
+        "I17M",
+        "V28L",
+        "F49V"
+      ],
+      "source_row": 3135,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:674f8fd250aca6a9",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFMTPDDGSKDFFVHFSAIQNDGYKSLDEGQKVSLTIESGAKGPAAGNVTS",
+      "mutations": [
+        "I17M",
+        "V26F",
+        "F49L"
+      ],
+      "source_row": 7824,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:976a56fa94464d8c",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIFKWFNADKGFGFLTPDDGSKDFFVHFSAIQNDGYKSLDEGQKVSVTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5F",
+        "I17L",
+        "V26F",
+        "F49V"
+      ],
+      "source_row": 8766,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:6ba62b9ef2f35fca",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIIKWFNADKGFGFFTPDDGSKDFFLHFSAIQNDGYKSLDEGQKMSVTIESGAKGPAAGNLTS",
+      "mutations": [
+        "V5I",
+        "I17F",
+        "V26F",
+        "V28L",
+        "V47M",
+        "F49V",
+        "V63L"
+      ],
+      "source_row": 5908,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:7c120a3a133935fb",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFVTPDDGSKDMFLHFSAIQNDGYKSLDEGQKVSLTIESGAKGPAAGNITS",
+      "mutations": [
+        "I17V",
+        "V26M",
+        "V28L",
+        "F49L",
+        "V63I"
+      ],
+      "source_row": 2146,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:1b72a5205575ced6",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFLTPDDGSKDVFVHFSAIQNDGYKSLDEGQKVSITIESGAKGPAAGNFTS",
+      "mutations": [
+        "I17L",
+        "F49I",
+        "V63F"
+      ],
+      "source_row": 14136,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:9149e14b334e66e9",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFLTPDDGSKDFFMHFSAIQNDGYKSLDEGQKLSVTIESGAKGPAAGNMTS",
+      "mutations": [
+        "I17L",
+        "V26F",
+        "V28M",
+        "V47L",
+        "F49V",
+        "V63M"
+      ],
+      "source_row": 8403,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:36370a2decadd07e",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIIKWFNADKGFGFMTPDDGSKDVFLHFSAIQNDGYKSLDEGQKLSVTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5I",
+        "I17M",
+        "V28L",
+        "V47L",
+        "F49V"
+      ],
+      "source_row": 7218,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:512028adb7d9a11d",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFFTPDDGSKDVFLHFSAIQNDGYKSLDEGQKFSMTIESGAKGPAAGNLTS",
+      "mutations": [
+        "I17F",
+        "V28L",
+        "V47F",
+        "F49M",
+        "V63L"
+      ],
+      "source_row": 18970,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:d038c81c8b513080",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIIKWFNADKGFGFFTPDDGSKDIFIHFSAIQNDGYKSLDEGQKISFTIESGAKGPAAGNITS",
+      "mutations": [
+        "V5I",
+        "I17F",
+        "V26I",
+        "V28I",
+        "V47I",
+        "V63I"
+      ],
+      "source_row": 16100,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:4f150f9e0f87d848",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFVTPDDGSKDVFMHFSAIQNDGYKSLDEGQKFSFTIESGAKGPAAGNMTS",
+      "mutations": [
+        "V5L",
+        "I17V",
+        "V28M",
+        "V47F",
+        "V63M"
+      ],
+      "source_row": 9543,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:88defdce8e779a43",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFVTPDDGSKDVFVHFSAIQNDGYKSLDEGQKMSVTIESGAKGPAAGNLTS",
+      "mutations": [
+        "I17V",
+        "V47M",
+        "F49V",
+        "V63L"
+      ],
+      "source_row": 5209,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:11f9a306c35fb4f2",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIIKWFNADKGFGFMTPDDGSKDFFVHFSAIQNDGYKSLDEGQKVSVTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5I",
+        "I17M",
+        "V26F",
+        "F49V"
+      ],
+      "source_row": 5166,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:cfc839be7c49cc80",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFMTPDDGSKDVFVHFSAIQNDGYKSLDEGQKVSLTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5L",
+        "I17M",
+        "F49L"
+      ],
+      "source_row": 3110,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:bd7ce1dcc5211289",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFVTPDDGSKDVFVHFSAIQNDGYKSLDEGQKISFTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5L",
+        "I17V",
+        "V47I"
+      ],
+      "source_row": 1912,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:ac39840109040936",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIIKWFNADKGFGFMTPDDGSKDIFLHFSAIQNDGYKSLDEGQKVSVTIESGAKGPAAGNFTS",
+      "mutations": [
+        "V5I",
+        "I17M",
+        "V26I",
+        "V28L",
+        "F49V",
+        "V63F"
+      ],
+      "source_row": 4516,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:eb405d63794efc59",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIFKWFNADKGFGFLTPDDGSKDLFVHFSAIQNDGYKSLDEGQKLSLTIESGAKGPAAGNITS",
+      "mutations": [
+        "V5F",
+        "I17L",
+        "V26L",
+        "V47L",
+        "F49L",
+        "V63I"
+      ],
+      "source_row": 9476,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:f050ea32d2f00122",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFVTPDDGSKDMFVHFSAIQNDGYKSLDEGQKLSLTIESGAKGPAAGNITS",
+      "mutations": [
+        "V5L",
+        "I17V",
+        "V26M",
+        "V47L",
+        "F49L",
+        "V63I"
+      ],
+      "source_row": 4875,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:60845aa95ac3bc7d",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFVTPDDGSKDIFFHFSAIQNDGYKSLDEGQKVSMTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5L",
+        "I17V",
+        "V26I",
+        "V28F",
+        "F49M"
+      ],
+      "source_row": 7987,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:e964a88b3e921eb5",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIFKWFNADKGFGFVTPDDGSKDVFVHFSAIQNDGYKSLDEGQKVSVTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5F",
+        "I17V",
+        "F49V"
+      ],
+      "source_row": 6700,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:1923dd97f3875d6e",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIFKWFNADKGFGFFTPDDGSKDMFMHFSAIQNDGYKSLDEGQKMSMTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5F",
+        "I17F",
+        "V26M",
+        "V28M",
+        "V47M",
+        "F49M"
+      ],
+      "source_row": 4498,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:7bd5268b9de2e967",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIIKWFNADKGFGFFTPDDGSKDLFVHFSAIQNDGYKSLDEGQKMSLTIESGAKGPAAGNLTS",
+      "mutations": [
+        "V5I",
+        "I17F",
+        "V26L",
+        "V47M",
+        "F49L",
+        "V63L"
+      ],
+      "source_row": 7815,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:7d65c1079069fa38",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFITPDDGSKDVFFHFSAIQNDGYKSLDEGQKVSVTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V28F",
+        "F49V"
+      ],
+      "source_row": 8621,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:11bfe12a9bcff512",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFMTPDDGSKDLFVHFSAIQNDGYKSLDEGQKVSMTIESGAKGPAAGNMTS",
+      "mutations": [
+        "I17M",
+        "V26L",
+        "F49M",
+        "V63M"
+      ],
+      "source_row": 2776,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:4c169ae81593717c",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFLTPDDGSKDMFLHFSAIQNDGYKSLDEGQKVSITIESGAKGPAAGNMTS",
+      "mutations": [
+        "I17L",
+        "V26M",
+        "V28L",
+        "F49I",
+        "V63M"
+      ],
+      "source_row": 5842,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:3dc2c78bec7726a0",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIIKWFNADKGFGFITPDDGSKDFFMHFSAIQNDGYKSLDEGQKMSVTIESGAKGPAAGNLTS",
+      "mutations": [
+        "V5I",
+        "V26F",
+        "V28M",
+        "V47M",
+        "F49V",
+        "V63L"
+      ],
+      "source_row": 17262,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:c2d1cccfb9084936",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIFKWFNADKGFGFMTPDDGSKDFFIHFSAIQNDGYKSLDEGQKVSMTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5F",
+        "I17M",
+        "V26F",
+        "V28I",
+        "F49M"
+      ],
+      "source_row": 6841,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:d305d606367083f4",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIMKWFNADKGFGFITPDDGSKDIFIHFSAIQNDGYKSLDEGQKVSFTIESGAKGPAAGNITS",
+      "mutations": [
+        "V5M",
+        "V26I",
+        "V28I",
+        "V63I"
+      ],
+      "source_row": 16243,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:4388ab88ea1e9577",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFVTPDDGSKDVFLHFSAIQNDGYKSLDEGQKISVTIESGAKGPAAGNFTS",
+      "mutations": [
+        "V5L",
+        "I17V",
+        "V28L",
+        "V47I",
+        "F49V",
+        "V63F"
+      ],
+      "source_row": 15006,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:82c3973d0dcc329a",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFVTPDDGSKDLFVHFSAIQNDGYKSLDEGQKFSMTIESGAKGPAAGNITS",
+      "mutations": [
+        "I17V",
+        "V26L",
+        "V47F",
+        "F49M",
+        "V63I"
+      ],
+      "source_row": 8173,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:cc1143921fa264e6",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFMTPDDGSKDLFLHFSAIQNDGYKSLDEGQKMSVTIESGAKGPAAGNVTS",
+      "mutations": [
+        "I17M",
+        "V26L",
+        "V28L",
+        "V47M",
+        "F49V"
+      ],
+      "source_row": 4433,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:f75e6dee2374d583",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFVTPDDGSKDMFMHFSAIQNDGYKSLDEGQKMSFTIESGAKGPAAGNVTS",
+      "mutations": [
+        "I17V",
+        "V26M",
+        "V28M",
+        "V47M"
+      ],
+      "source_row": 5200,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:5dff1d4e0a07c1fa",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFMTPDDGSKDMFMHFSAIQNDGYKSLDEGQKMSMTIESGAKGPAAGNVTS",
+      "mutations": [
+        "I17M",
+        "V26M",
+        "V28M",
+        "V47M",
+        "F49M"
+      ],
+      "source_row": 2138,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:32f202e122da54f9",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFVTPDDGSKDVFLHFSAIQNDGYKSLDEGQKVSMTIESGAKGPAAGNVTS",
+      "mutations": [
+        "I17V",
+        "V28L",
+        "F49M"
+      ],
+      "source_row": 2488,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:04495ad2318963b9",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIFKWFNADKGFGFLTPDDGSKDLFLHFSAIQNDGYKSLDEGQKVSVTIESGAKGPAAGNLTS",
+      "mutations": [
+        "V5F",
+        "I17L",
+        "V26L",
+        "V28L",
+        "F49V",
+        "V63L"
+      ],
+      "source_row": 6387,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:f74adb4adc4b40ac",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFMTPDDGSKDLFVHFSAIQNDGYKSLDEGQKMSVTIESGAKGPAAGNITS",
+      "mutations": [
+        "I17M",
+        "V26L",
+        "V47M",
+        "F49V",
+        "V63I"
+      ],
+      "source_row": 12358,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:7a004b1ec134d442",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIVKWFNADKGFGFVTPDDGSKDVFLHFSAIQNDGYKSLDEGQKISLTIESGAKGPAAGNVTS",
+      "mutations": [
+        "I17V",
+        "V28L",
+        "V47I",
+        "F49L"
+      ],
+      "source_row": 6547,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:4c1a812f92a06191",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIMKWFNADKGFGFITPDDGSKDMFMHFSAIQNDGYKSLDEGQKVSFTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5M",
+        "V26M",
+        "V28M"
+      ],
+      "source_row": 3603,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:7e7521539abb1815",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIFKWFNADKGFGFITPDDGSKDFFFHFSAIQNDGYKSLDEGQKFSLTIESGAKGPAAGNMTS",
+      "mutations": [
+        "V5F",
+        "V26F",
+        "V28F",
+        "V47F",
+        "F49L",
+        "V63M"
+      ],
+      "source_row": 17766,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:a173593b620a013a",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGILKWFNADKGFGFMTPDDGSKDVFMHFSAIQNDGYKSLDEGQKMSVTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5L",
+        "I17M",
+        "V28M",
+        "V47M",
+        "F49V"
+      ],
+      "source_row": 4382,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:4c44cb242e99898f",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIFKWFNADKGFGFLTPDDGSKDVFIHFSAIQNDGYKSLDEGQKLSLTIESGAKGPAAGNLTS",
+      "mutations": [
+        "V5F",
+        "I17L",
+        "V28I",
+        "V47L",
+        "F49L",
+        "V63L"
+      ],
+      "source_row": 21604,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P0A9X9:1e492b8bd3489ecd",
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "sequence": "MTGIFKWFNADKGFGFVTPDDGSKDMFLHFSAIQNDGYKSLDEGQKLSLTIESGAKGPAAGNVTS",
+      "mutations": [
+        "V5F",
+        "I17V",
+        "V26M",
+        "V28L",
+        "V47L",
+        "F49L"
+      ],
+      "source_row": 2369,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:063ec8bf5bba75b8",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVFLQDKPEAQVIVLPVGTIVTMEYRIDRLRVFLDKLDNMAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19F",
+        "I28V",
+        "V46L",
+        "L48V",
+        "V50L",
+        "I56M"
+      ],
+      "source_row": 16750,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:ffe00adc17ab7ed4",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVLLQDKPEAQLIVLPVGTIVTMEYRIDRMRMFMDKLDNMAQVPRVG",
+      "mutations": [
+        "I19L",
+        "I28L",
+        "V46M",
+        "L48M",
+        "V50M",
+        "I56M"
+      ],
+      "source_row": 5831,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:bc0a4a3a67734643",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVVLQDKPEAQVIVLPVGTIVTMEYRIDRFRMFFDKLDNVAQVPRVG",
+      "mutations": [
+        "I19V",
+        "I28V",
+        "V46F",
+        "L48M",
+        "V50F",
+        "I56V"
+      ],
+      "source_row": 9417,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:b8daf827851c53bf",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVVLQDKPEAQFIVLPVGTIVTMEYRIDRLRMFLDKLDNMAQVPRVG",
+      "mutations": [
+        "I19V",
+        "I28F",
+        "V46L",
+        "L48M",
+        "V50L",
+        "I56M"
+      ],
+      "source_row": 16665,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:1e3734cbc2e4059c",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSFEEAKKVILQDKPEAQVIVLPVGTIVTMEYRIDRLRFFMDKLDNFAQVPRVG",
+      "mutations": [
+        "V12F",
+        "I28V",
+        "V46L",
+        "L48F",
+        "V50M",
+        "I56F"
+      ],
+      "source_row": 22659,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:c47ab23c9f14e37d",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVVLQDKPEAQLIVLPVGTIVTMEYRIDRMRVFVDKLDNFAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19V",
+        "I28L",
+        "V46M",
+        "L48V",
+        "I56F"
+      ],
+      "source_row": 23585,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:3789501a1f5798aa",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVILQDKPEAQVIVLPVGTIVTMEYRIDRMRMFMDKLDNLAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I28V",
+        "V46M",
+        "L48M",
+        "V50M",
+        "I56L"
+      ],
+      "source_row": 15229,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:3d5672150a510d36",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVFLQDKPEAQVIVLPVGTIVTMEYRIDRLRIFVDKLDNMAQVPRVG",
+      "mutations": [
+        "I19F",
+        "I28V",
+        "V46L",
+        "L48I",
+        "I56M"
+      ],
+      "source_row": 18729,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:5dc86bed81df1eff",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSFEEAKKVVLQDKPEAQVIVLPVGTIVTMEYRIDRVRVFLDKLDNMAQVPRVG",
+      "mutations": [
+        "V12F",
+        "I19V",
+        "I28V",
+        "L48V",
+        "V50L",
+        "I56M"
+      ],
+      "source_row": 15443,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:e48d0980baab8018",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVFLQDKPEAQFIVLPVGTIVTMEYRIDRMRVFMDKLDNIAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19F",
+        "I28F",
+        "V46M",
+        "L48V",
+        "V50M"
+      ],
+      "source_row": 19896,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:2391249400b02111",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSFEEAKKVLLQDKPEAQIIVLPVGTIVTMEYRIDRVRFFIDKLDNLAQVPRVG",
+      "mutations": [
+        "V12F",
+        "I19L",
+        "L48F",
+        "V50I",
+        "I56L"
+      ],
+      "source_row": 22574,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:62aa296820bad187",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSIEEAKKVMLQDKPEAQIIVLPVGTIVTMEYRIDRFRMFMDKLDNIAQVPRVG",
+      "mutations": [
+        "V12I",
+        "I19M",
+        "V46F",
+        "L48M",
+        "V50M"
+      ],
+      "source_row": 9898,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:1c11fc648bc55da1",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSFEEAKKVVLQDKPEAQFIVLPVGTIVTMEYRIDRVRIFLDKLDNVAQVPRVG",
+      "mutations": [
+        "V12F",
+        "I19V",
+        "I28F",
+        "L48I",
+        "V50L",
+        "I56V"
+      ],
+      "source_row": 5704,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:0283ffc5a84543cb",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVILQDKPEAQMIVLPVGTIVTMEYRIDRMRVFLDKLDNMAQVPRVG",
+      "mutations": [
+        "I28M",
+        "V46M",
+        "L48V",
+        "V50L",
+        "I56M"
+      ],
+      "source_row": 16200,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:763b5ec23cf4a98d",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVMLQDKPEAQIIVLPVGTIVTMEYRIDRFRVFLDKLDNLAQVPRVG",
+      "mutations": [
+        "I19M",
+        "V46F",
+        "L48V",
+        "V50L",
+        "I56L"
+      ],
+      "source_row": 20203,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:483145c99aba37bc",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVVLQDKPEAQVIVLPVGTIVTMEYRIDRMRVFVDKLDNMAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19V",
+        "I28V",
+        "V46M",
+        "L48V",
+        "I56M"
+      ],
+      "source_row": 15781,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:fefceb750f2069cf",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVVLQDKPEAQVIVLPVGTIVTMEYRIDRFRVFVDKLDNLAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19V",
+        "I28V",
+        "V46F",
+        "L48V",
+        "I56L"
+      ],
+      "source_row": 16504,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:b7251c0a97935e9a",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVVLQDKPEAQVIVLPVGTIVTMEYRIDRMRMFIDKLDNFAQVPRVG",
+      "mutations": [
+        "I19V",
+        "I28V",
+        "V46M",
+        "L48M",
+        "V50I",
+        "I56F"
+      ],
+      "source_row": 12365,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:608857e6bc0a8f89",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVVLQDKPEAQVIVLPVGTIVTMEYRIDRMRMFFDKLDNFAQVPRVG",
+      "mutations": [
+        "I19V",
+        "I28V",
+        "V46M",
+        "L48M",
+        "V50F",
+        "I56F"
+      ],
+      "source_row": 23675,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:0d4f724731d8d83c",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVVLQDKPEAQFIVLPVGTIVTMEYRIDRFRIFVDKLDNVAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19V",
+        "I28F",
+        "V46F",
+        "L48I",
+        "I56V"
+      ],
+      "source_row": 19978,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:3e19d782395834c9",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVVLQDKPEAQVIVLPVGTIVTMEYRIDRVRIFMDKLDNMAQVPRVG",
+      "mutations": [
+        "I19V",
+        "I28V",
+        "L48I",
+        "V50M",
+        "I56M"
+      ],
+      "source_row": 14095,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:801e9f571a4bf8e3",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVFLQDKPEAQLIVLPVGTIVTMEYRIDRMRFFLDKLDNIAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19F",
+        "I28L",
+        "V46M",
+        "L48F",
+        "V50L"
+      ],
+      "source_row": 18764,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:b204b28061cda226",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVFLQDKPEAQLIVLPVGTIVTMEYRIDRLRVFFDKLDNVAQVPRVG",
+      "mutations": [
+        "I19F",
+        "I28L",
+        "V46L",
+        "L48V",
+        "V50F",
+        "I56V"
+      ],
+      "source_row": 18113,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:a8ede474e76cd3a7",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSIEEAKKVLLQDKPEAQIIVLPVGTIVTMEYRIDRVRLFFDKLDNVAQVPRVG",
+      "mutations": [
+        "V12I",
+        "I19L",
+        "V50F",
+        "I56V"
+      ],
+      "source_row": 10693,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:3936310c8c48150b",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVFLQDKPEAQMIVLPVGTIVTMEYRIDRLRFFVDKLDNMAQVPRVG",
+      "mutations": [
+        "I19F",
+        "I28M",
+        "V46L",
+        "L48F",
+        "I56M"
+      ],
+      "source_row": 22792,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:ec0c2c062928d126",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVVLQDKPEAQVIVLPVGTIVTMEYRIDRMRLFMDKLDNFAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19V",
+        "I28V",
+        "V46M",
+        "V50M",
+        "I56F"
+      ],
+      "source_row": 16109,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:6ace582fbbae0bae",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSIEEAKKVLLQDKPEAQVIVLPVGTIVTMEYRIDRVRIFLDKLDNFAQVPRVG",
+      "mutations": [
+        "V12I",
+        "I19L",
+        "I28V",
+        "L48I",
+        "V50L",
+        "I56F"
+      ],
+      "source_row": 12733,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:87e221fd52328fc4",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSIEEAKKVVLQDKPEAQLIVLPVGTIVTMEYRIDRLRIFVDKLDNIAQVPRVG",
+      "mutations": [
+        "V12I",
+        "I19V",
+        "I28L",
+        "V46L",
+        "L48I"
+      ],
+      "source_row": 16709,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:406f472c2b118f02",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVILQDKPEAQFIVLPVGTIVTMEYRIDRLRFFLDKLDNFAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I28F",
+        "V46L",
+        "L48F",
+        "V50L",
+        "I56F"
+      ],
+      "source_row": 20917,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:2569b2854c046999",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVVLQDKPEAQVIVLPVGTIVTMEYRIDRLRVFIDKLDNFAQVPRVG",
+      "mutations": [
+        "I19V",
+        "I28V",
+        "V46L",
+        "L48V",
+        "V50I",
+        "I56F"
+      ],
+      "source_row": 21705,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:cc91a6943514a797",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVFLQDKPEAQVIVLPVGTIVTMEYRIDRLRIFIDKLDNVAQVPRVG",
+      "mutations": [
+        "I19F",
+        "I28V",
+        "V46L",
+        "L48I",
+        "V50I",
+        "I56V"
+      ],
+      "source_row": 10684,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:b28be44b47fd6d04",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSFEEAKKVLLQDKPEAQVIVLPVGTIVTMEYRIDRMRLFLDKLDNMAQVPRVG",
+      "mutations": [
+        "V12F",
+        "I19L",
+        "I28V",
+        "V46M",
+        "V50L",
+        "I56M"
+      ],
+      "source_row": 22897,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:023d57d320ca3baa",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVMLQDKPEAQVIVLPVGTIVTMEYRIDRLRMFIDKLDNMAQVPRVG",
+      "mutations": [
+        "I19M",
+        "I28V",
+        "V46L",
+        "L48M",
+        "V50I",
+        "I56M"
+      ],
+      "source_row": 12570,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:428418c25f1d73e1",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSFEEAKKVVLQDKPEAQVIVLPVGTIVTMEYRIDRLRLFFDKLDNVAQVPRVG",
+      "mutations": [
+        "V12F",
+        "I19V",
+        "I28V",
+        "V46L",
+        "V50F",
+        "I56V"
+      ],
+      "source_row": 20503,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:7d67b1f2b305b3c0",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSMEEAKKVVLQDKPEAQLIVLPVGTIVTMEYRIDRVRMFVDKLDNMAQVPRVG",
+      "mutations": [
+        "V12M",
+        "I19V",
+        "I28L",
+        "L48M",
+        "I56M"
+      ],
+      "source_row": 8669,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:897d871f01d0e68d",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSMEEAKKVVLQDKPEAQFIVLPVGTIVTMEYRIDRIRVFMDKLDNVAQVPRVG",
+      "mutations": [
+        "V12M",
+        "I19V",
+        "I28F",
+        "V46I",
+        "L48V",
+        "V50M",
+        "I56V"
+      ],
+      "source_row": 22052,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:c658adfe1410d2f0",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVVLQDKPEAQVIVLPVGTIVTMEYRIDRVRMFMDKLDNFAQVPRVG",
+      "mutations": [
+        "I19V",
+        "I28V",
+        "L48M",
+        "V50M",
+        "I56F"
+      ],
+      "source_row": 9292,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:c6e3bf869c60e70f",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVLLQDKPEAQVIVLPVGTIVTMEYRIDRIRMFMDKLDNFAQVPRVG",
+      "mutations": [
+        "I19L",
+        "I28V",
+        "V46I",
+        "L48M",
+        "V50M",
+        "I56F"
+      ],
+      "source_row": 16850,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:98b6ee1e1a5e1c9f",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSFEEAKKVLLQDKPEAQIIVLPVGTIVTMEYRIDRVRVFMDKLDNVAQVPRVG",
+      "mutations": [
+        "V12F",
+        "I19L",
+        "L48V",
+        "V50M",
+        "I56V"
+      ],
+      "source_row": 13577,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:1e9cd77249d85264",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVVLQDKPEAQVIVLPVGTIVTMEYRIDRMRVFLDKLDNLAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19V",
+        "I28V",
+        "V46M",
+        "L48V",
+        "V50L",
+        "I56L"
+      ],
+      "source_row": 18531,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:dbb5f250ecc5143a",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSMEEAKKVLLQDKPEAQVIVLPVGTIVTMEYRIDRIRVFFDKLDNMAQVPRVG",
+      "mutations": [
+        "V12M",
+        "I19L",
+        "I28V",
+        "V46I",
+        "L48V",
+        "V50F",
+        "I56M"
+      ],
+      "source_row": 20921,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:cfb2118a7ea1ca5a",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVMLQDKPEAQVIVLPVGTIVTMEYRIDRMRFFVDKLDNMAQVPRVG",
+      "mutations": [
+        "I19M",
+        "I28V",
+        "V46M",
+        "L48F",
+        "I56M"
+      ],
+      "source_row": 18298,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:baaf1128064dda2f",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVILQDKPEAQVIVLPVGTIVTMEYRIDRLRVFMDKLDNMAQVPRVG",
+      "mutations": [
+        "I28V",
+        "V46L",
+        "L48V",
+        "V50M",
+        "I56M"
+      ],
+      "source_row": 10664,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:57b34f0f879e04a4",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSFEEAKKVVLQDKPEAQVIVLPVGTIVTMEYRIDRVRIFIDKLDNVAQVPRVG",
+      "mutations": [
+        "V12F",
+        "I19V",
+        "I28V",
+        "L48I",
+        "V50I",
+        "I56V"
+      ],
+      "source_row": 16710,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:88b3998b549ae120",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVVLQDKPEAQVIVLPVGTIVTMEYRIDRIRLFMDKLDNVAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19V",
+        "I28V",
+        "V46I",
+        "V50M",
+        "I56V"
+      ],
+      "source_row": 4546,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:f00992f493687f96",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVVLQDKPEAQFIVLPVGTIVTMEYRIDRVRLFVDKLDNMAQVPRVG",
+      "mutations": [
+        "I19V",
+        "I28F",
+        "I56M"
+      ],
+      "source_row": 7817,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:a2549a55d5eac3c4",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVFLQDKPEAQVIVLPVGTIVTMEYRIDRLRIFLDKLDNVAQVPRVG",
+      "mutations": [
+        "I19F",
+        "I28V",
+        "V46L",
+        "L48I",
+        "V50L",
+        "I56V"
+      ],
+      "source_row": 19508,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:acc8615c5e84b0be",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVFLQDKPEAQVIVLPVGTIVTMEYRIDRVRMFMDKLDNMAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19F",
+        "I28V",
+        "L48M",
+        "V50M",
+        "I56M"
+      ],
+      "source_row": 20296,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:418f00ab0234bc25",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSIEEAKKVLLQDKPEAQVIVLPVGTIVTMEYRIDRLRLFMDKLDNLAQVPRVG",
+      "mutations": [
+        "V12I",
+        "I19L",
+        "I28V",
+        "V46L",
+        "V50M",
+        "I56L"
+      ],
+      "source_row": 15834,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:c66173e916a4cdc7",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSMEEAKKVFLQDKPEAQVIVLPVGTIVTMEYRIDRLRVFVDKLDNLAQVPRVG",
+      "mutations": [
+        "V12M",
+        "I19F",
+        "I28V",
+        "V46L",
+        "L48V",
+        "I56L"
+      ],
+      "source_row": 14601,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:55f796a1160fafbb",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVILQDKPEAQFIVLPVGTIVTMEYRIDRMRMFVDKLDNVAQVPRVG",
+      "mutations": [
+        "I28F",
+        "V46M",
+        "L48M",
+        "I56V"
+      ],
+      "source_row": 1542,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:5b46e7db227b5165",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVLLQDKPEAQIIVLPVGTIVTMEYRIDRVRVFMDKLDNLAQVPRVG",
+      "mutations": [
+        "I19L",
+        "L48V",
+        "V50M",
+        "I56L"
+      ],
+      "source_row": 12260,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:7130d34f22d044cd",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSMEEAKKVILQDKPEAQLIVLPVGTIVTMEYRIDRMRVFVDKLDNMAQVPRVG",
+      "mutations": [
+        "V12M",
+        "I28L",
+        "V46M",
+        "L48V",
+        "I56M"
+      ],
+      "source_row": 19589,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:180d10cd5d66dd0d",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVVLQDKPEAQMIVLPVGTIVTMEYRIDRLRIFVDKLDNMAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19V",
+        "I28M",
+        "V46L",
+        "L48I",
+        "I56M"
+      ],
+      "source_row": 18957,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:4548b5dfb52f3a9d",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVLLQDKPEAQIIVLPVGTIVTMEYRIDRMRIFLDKLDNMAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19L",
+        "V46M",
+        "L48I",
+        "V50L",
+        "I56M"
+      ],
+      "source_row": 20530,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:09c6886b121a3952",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVILQDKPEAQVIVLPVGTIVTMEYRIDRVRMFLDKLDNLAQVPRVG",
+      "mutations": [
+        "I28V",
+        "L48M",
+        "V50L",
+        "I56L"
+      ],
+      "source_row": 15422,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:ab493912680f9532",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVFLQDKPEAQVIVLPVGTIVTMEYRIDRFRVFVDKLDNFAQVPRVG",
+      "mutations": [
+        "I19F",
+        "I28V",
+        "V46F",
+        "L48V",
+        "I56F"
+      ],
+      "source_row": 22535,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:1e84a7daf72485a6",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSIEEAKKVMLQDKPEAQFIVLPVGTIVTMEYRIDRVRVFVDKLDNMAQVPRVG",
+      "mutations": [
+        "V12I",
+        "I19M",
+        "I28F",
+        "L48V",
+        "I56M"
+      ],
+      "source_row": 21105,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:500ef2db06e0b82e",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVVLQDKPEAQVIVLPVGTIVTMEYRIDRMRLFVDKLDNLAQVPRVG",
+      "mutations": [
+        "I19V",
+        "I28V",
+        "V46M",
+        "I56L"
+      ],
+      "source_row": 10355,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:850b62cc533a1a8c",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVVLQDKPEAQVIVLPVGTIVTMEYRIDRIRLFVDKLDNVAQVPRVG",
+      "mutations": [
+        "I19V",
+        "I28V",
+        "V46I",
+        "I56V"
+      ],
+      "source_row": 600,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:ceff8a37d0847a06",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVVLQDKPEAQIIVLPVGTIVTMEYRIDRLRVFVDKLDNMAQVPRVG",
+      "mutations": [
+        "I19V",
+        "V46L",
+        "L48V",
+        "I56M"
+      ],
+      "source_row": 14907,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:b06982513097086d",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSFEEAKKVVLQDKPEAQMIVLPVGTIVTMEYRIDRVRMFVDKLDNMAQVPRVG",
+      "mutations": [
+        "V12F",
+        "I19V",
+        "I28M",
+        "L48M",
+        "I56M"
+      ],
+      "source_row": 14850,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:4125e95fcf37c4c3",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSIEEAKKVILQDKPEAQVIVLPVGTIVTMEYRIDRVRIFFDKLDNFAQVPRVG",
+      "mutations": [
+        "V12I",
+        "I28V",
+        "L48I",
+        "V50F",
+        "I56F"
+      ],
+      "source_row": 16804,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:e3d6890b748e44d6",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSMEEAKKVILQDKPEAQVIVLPVGTIVTMEYRIDRLRMFVDKLDNVAQVPRVG",
+      "mutations": [
+        "V12M",
+        "I28V",
+        "V46L",
+        "L48M",
+        "I56V"
+      ],
+      "source_row": 7791,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:f1283ce8c630f091",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVVLQDKPEAQIIVLPVGTIVTMEYRIDRLRLFVDKLDNLAQVPRVG",
+      "mutations": [
+        "I19V",
+        "V46L",
+        "I56L"
+      ],
+      "source_row": 10210,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:ff6107a82b6759d7",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVFLQDKPEAQMIVLPVGTIVTMEYRIDRVRVFIDKLDNMAQVPRVG",
+      "mutations": [
+        "I19F",
+        "I28M",
+        "L48V",
+        "V50I",
+        "I56M"
+      ],
+      "source_row": 12834,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:e0fe2a03f53ee9ab",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVFLQDKPEAQVIVLPVGTIVTMEYRIDRLRIFMDKLDNLAQVPRVG",
+      "mutations": [
+        "I19F",
+        "I28V",
+        "V46L",
+        "L48I",
+        "V50M",
+        "I56L"
+      ],
+      "source_row": 12772,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:bf98a1836cbe9cbd",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVMLQDKPEAQVIVLPVGTIVTMEYRIDRIRFFVDKLDNMAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19M",
+        "I28V",
+        "V46I",
+        "L48F",
+        "I56M"
+      ],
+      "source_row": 24537,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:b3c2f1fcb08084f0",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSMEEAKKVLLQDKPEAQMIVLPVGTIVTMEYRIDRLRVFVDKLDNVAQVPRVG",
+      "mutations": [
+        "V12M",
+        "I19L",
+        "I28M",
+        "V46L",
+        "L48V",
+        "I56V"
+      ],
+      "source_row": 16762,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:eec20f97249beb8b",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVILQDKPEAQFIVLPVGTIVTMEYRIDRVRMFIDKLDNVAQVPRVG",
+      "mutations": [
+        "I28F",
+        "L48M",
+        "V50I",
+        "I56V"
+      ],
+      "source_row": 434,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:007af371d0ae6530",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVVLQDKPEAQVIVLPVGTIVTMEYRIDRVRVFVDKLDNIAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19V",
+        "I28V",
+        "L48V"
+      ],
+      "source_row": 16104,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:188923eaabd2c6c0",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSMEEAKKVLLQDKPEAQLIVLPVGTIVTMEYRIDRIRFFVDKLDNLAQVPRVG",
+      "mutations": [
+        "V12M",
+        "I19L",
+        "I28L",
+        "V46I",
+        "L48F",
+        "I56L"
+      ],
+      "source_row": 21509,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:b57dc17bb3a9cbff",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVLLQDKPEAQVIVLPVGTIVTMEYRIDRMRLFLDKLDNFAQVPRVG",
+      "mutations": [
+        "I19L",
+        "I28V",
+        "V46M",
+        "V50L",
+        "I56F"
+      ],
+      "source_row": 12591,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:c3d5a964f53e000f",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSMEEAKKVLLQDKPEAQFIVLPVGTIVTMEYRIDRFRVFLDKLDNFAQVPRVG",
+      "mutations": [
+        "V12M",
+        "I19L",
+        "I28F",
+        "V46F",
+        "L48V",
+        "V50L",
+        "I56F"
+      ],
+      "source_row": 20612,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:16d9822f631e9c84",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVMLQDKPEAQIIVLPVGTIVTMEYRIDRFRMFVDKLDNVAQVPRVG",
+      "mutations": [
+        "I19M",
+        "V46F",
+        "L48M",
+        "I56V"
+      ],
+      "source_row": 21865,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:3513d2786cdcd765",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVILQDKPEAQMIVLPVGTIVTMEYRIDRVRLFVDKLDNVAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I28M",
+        "I56V"
+      ],
+      "source_row": 508,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:dbdbcc51b589c807",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVMLQDKPEAQFIVLPVGTIVTMEYRIDRFRVFIDKLDNLAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19M",
+        "I28F",
+        "V46F",
+        "L48V",
+        "V50I",
+        "I56L"
+      ],
+      "source_row": 21838,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:c18a79ad3a46ab6d",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSFEEAKKVMLQDKPEAQVIVLPVGTIVTMEYRIDRVRFFFDKLDNFAQVPRVG",
+      "mutations": [
+        "V12F",
+        "I19M",
+        "I28V",
+        "L48F",
+        "V50F",
+        "I56F"
+      ],
+      "source_row": 22863,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:58c122f67af3f5f6",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSMEEAKKVFLQDKPEAQMIVLPVGTIVTMEYRIDRLRVFFDKLDNVAQVPRVG",
+      "mutations": [
+        "V12M",
+        "I19F",
+        "I28M",
+        "V46L",
+        "L48V",
+        "V50F",
+        "I56V"
+      ],
+      "source_row": 18268,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:92d2006af5c5d479",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSIEEAKKVILQDKPEAQIIVLPVGTIVTMEYRIDRLRFFMDKLDNMAQVPRVG",
+      "mutations": [
+        "V12I",
+        "V46L",
+        "L48F",
+        "V50M",
+        "I56M"
+      ],
+      "source_row": 14486,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:e37043dad9eb7ea0",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSIEEAKKVFLQDKPEAQMIVLPVGTIVTMEYRIDRVRVFVDKLDNFAQVPRVG",
+      "mutations": [
+        "V12I",
+        "I19F",
+        "I28M",
+        "L48V",
+        "I56F"
+      ],
+      "source_row": 18854,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:ae6ef8b28d2b51ca",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVVLQDKPEAQMIVLPVGTIVTMEYRIDRLRMFVDKLDNVAQVPRVG",
+      "mutations": [
+        "I19V",
+        "I28M",
+        "V46L",
+        "L48M",
+        "I56V"
+      ],
+      "source_row": 9512,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:eeeec26845f658b7",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVFLQDKPEAQFIVLPVGTIVTMEYRIDRIRVFMDKLDNVAQVPRVG",
+      "mutations": [
+        "I19F",
+        "I28F",
+        "V46I",
+        "L48V",
+        "V50M",
+        "I56V"
+      ],
+      "source_row": 22958,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:2223c58d195184e4",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVFLQDKPEAQVIVLPVGTIVTMEYRIDRMRVFVDKLDNLAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19F",
+        "I28V",
+        "V46M",
+        "L48V",
+        "I56L"
+      ],
+      "source_row": 24348,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:6e14a84b97830bb0",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVMLQDKPEAQMIVLPVGTIVTMEYRIDRMRVFVDKLDNVAQVPRVG",
+      "mutations": [
+        "I19M",
+        "I28M",
+        "V46M",
+        "L48V",
+        "I56V"
+      ],
+      "source_row": 12009,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:110723627c09f071",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSFEEAKKVVLQDKPEAQVIVLPVGTIVTMEYRIDRLRMFVDKLDNFAQVPRVG",
+      "mutations": [
+        "V12F",
+        "I19V",
+        "I28V",
+        "V46L",
+        "L48M",
+        "I56F"
+      ],
+      "source_row": 18176,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:bf9cd7b4142f23ae",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSMEEAKKVLLQDKPEAQVIVLPVGTIVTMEYRIDRMRIFVDKLDNMAQVPRVG",
+      "mutations": [
+        "V12M",
+        "I19L",
+        "I28V",
+        "V46M",
+        "L48I",
+        "I56M"
+      ],
+      "source_row": 19423,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:e5047709c87bb578",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVVLQDKPEAQFIVLPVGTIVTMEYRIDRVRLFMDKLDNMAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19V",
+        "I28F",
+        "V50M",
+        "I56M"
+      ],
+      "source_row": 19016,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:d58928c672a36671",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSIEEAKKVVLQDKPEAQMIVLPVGTIVTMEYRIDRLRMFLDKLDNFAQVPRVG",
+      "mutations": [
+        "V12I",
+        "I19V",
+        "I28M",
+        "V46L",
+        "L48M",
+        "V50L",
+        "I56F"
+      ],
+      "source_row": 16034,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:df2673d84e9224f8",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVVLQDKPEAQFIVLPVGTIVTMEYRIDRIRVFVDKLDNVAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19V",
+        "I28F",
+        "V46I",
+        "L48V",
+        "I56V"
+      ],
+      "source_row": 2297,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:d05f0245e0611992",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVFLQDKPEAQMIVLPVGTIVTMEYRIDRIRLFVDKLDNVAQVPRVG",
+      "mutations": [
+        "I19F",
+        "I28M",
+        "V46I",
+        "I56V"
+      ],
+      "source_row": 16167,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:ec277d7bd48cb941",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSMEEAKKVVLQDKPEAQFIVLPVGTIVTMEYRIDRFRVFMDKLDNLAQVPRVG",
+      "mutations": [
+        "V12M",
+        "I19V",
+        "I28F",
+        "V46F",
+        "L48V",
+        "V50M",
+        "I56L"
+      ],
+      "source_row": 14868,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:cf4f16fc07b51f65",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSLEEAKKVVLQDKPEAQMIVLPVGTIVTMEYRIDRVRVFVDKLDNVAQVPRVG",
+      "mutations": [
+        "V12L",
+        "I19V",
+        "I28M",
+        "L48V",
+        "I56V"
+      ],
+      "source_row": 8648,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:359afff7eac5a071",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVVLQDKPEAQFIVLPVGTIVTMEYRIDRVRVFLDKLDNLAQVPRVG",
+      "mutations": [
+        "I19V",
+        "I28F",
+        "L48V",
+        "V50L",
+        "I56L"
+      ],
+      "source_row": 15561,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:68fb476e2ddbd77c",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSVEEAKKVVLQDKPEAQLIVLPVGTIVTMEYRIDRVRMFVDKLDNVAQVPRVG",
+      "mutations": [
+        "I19V",
+        "I28L",
+        "L48M",
+        "I56V"
+      ],
+      "source_row": 2058,
+      "role": "test"
+    },
+    {
+      "id": "GSE266299:P01053:a07deea6f6a3a6c3",
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "sequence": "KTEWPELVGKSMEEAKKVILQDKPEAQVIVLPVGTIVTMEYRIDRVRVFLDKLDNMAQVPRVG",
+      "mutations": [
+        "V12M",
+        "I28V",
+        "L48V",
+        "V50L",
+        "I56M"
+      ],
+      "source_row": 21763,
+      "role": "test"
+    }
+  ],
+  "specs": [
+    {
+      "protein_id": "P0A9X9",
+      "family": "PF00313",
+      "assay_id": "GSE266299_sparse_DTS_abundancePCA",
+      "reference": {
+        "sequence": "MTGIVKWFNADKGFGFITPDDGSKDVFVHFSAIQNDGYKSLDEGQKVSFTIESGAKGPAAGNVTS",
+        "sha256": "b969267b954bad343a488f0af8a68c5a097ee3ae9fdf96d48897b217362bad77",
+        "source": "https://github.com/lehner-lab/combinatorialcores/blob/f978897ef3a278796acc0e87e5cd82d4d0d10082/MainFigures/Fig2.ipynb (translated author WT DNA)"
+      },
+      "structure": {
+        "name": "P0A9X9 reference 1MJC",
+        "sha256": "2ce3a3b1694eb4a07930bcd4350892066ce6b064dffb495435427e645013d9f4",
+        "id": "1MJC",
+        "kind": "pdb",
+        "format": "cif",
+        "path": "data/cache/m18/source/1MJC.cif",
+        "confidence": "experimental_bfactor",
+        "source": "https://www.rcsb.org/structure/1MJC",
+        "license": "wwPDB CC0"
+      },
+      "mapping": {
+        "chain": "A",
+        "model_index": 0,
+        "min_coverage": 1.0,
+        "min_identity": 1.0,
+        "allowed_mismatches": []
+      },
+      "structure_artifacts": "data/cache/m18/graphs/P0A9X9",
+      "dataset": {
+        "path": "data/cache/m18/source/primary-scores.csv.gz",
+        "sha256": "4cd224d56a0004be70f1b33f055cb2a0d2846065497c94e4fcb8bb289a167b84"
+      }
+    },
+    {
+      "protein_id": "P01053",
+      "family": "PF00280",
+      "assay_id": "GSE266299_sparse_DTS_abundancePCA",
+      "reference": {
+        "sequence": "KTEWPELVGKSVEEAKKVILQDKPEAQIIVLPVGTIVTMEYRIDRVRLFVDKLDNIAQVPRVG",
+        "sha256": "dd005937bdc1ad8fef672c3d610baae1fa6d395a7d9e0aa8459537d5af07838d",
+        "source": "https://github.com/lehner-lab/combinatorialcores/blob/f978897ef3a278796acc0e87e5cd82d4d0d10082/MainFigures/Fig2.ipynb (translated author WT DNA)"
+      },
+      "structure": {
+        "name": "P01053 reference 3CI2",
+        "sha256": "bf5e06fc219ebce54da5ab1d7b252694e1fd41e6655f78c0bd72e251521f3100",
+        "id": "3CI2",
+        "kind": "pdb",
+        "format": "cif",
+        "path": "data/cache/m18/source/3CI2.cif",
+        "confidence": "experimental_bfactor",
+        "source": "https://www.rcsb.org/structure/3CI2",
+        "license": "wwPDB CC0"
+      },
+      "mapping": {
+        "chain": "A",
+        "model_index": 0,
+        "min_coverage": 1.0,
+        "min_identity": 1.0,
+        "allowed_mismatches": []
+      },
+      "structure_artifacts": "data/cache/m18/graphs/P01053",
+      "dataset": {
+        "path": "data/cache/m18/source/primary-scores.csv.gz",
+        "sha256": "4cd224d56a0004be70f1b33f055cb2a0d2846065497c94e4fcb8bb289a167b84"
+      }
+    }
+  ],
+  "graphs": {
+    "P0A9X9": {
+      "mapping": {
+        "accepted": true,
+        "errors": [],
+        "chains": [
+          {
+            "chain": "A",
+            "identity": 1.0,
+            "aligned_coverage": 1.0,
+            "score": 182.0,
+            "sequence_source": "mmCIF polymer scheme + atom_site label/auth mapping"
+          }
+        ],
+        "selected_chain": "A",
+        "reference_length": 65,
+        "coordinate_coverage": 1.0,
+        "aligned_coverage": 1.0,
+        "aligned_identity": 1.0,
+        "exact_compatible_positions": 65,
+        "differences": [],
+        "missing_positions": [],
+        "alignment": "target            0 ---MTGIVKWFNADKGFGFITPDDGSKDVFVHFSAIQNDGYKSLDEGQKVSFTIESGAKG\n                  0 ---|||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery             0 SGKMTGIVKWFNADKGFGFITPDDGSKDVFVHFSAIQNDGYKSLDEGQKVSFTIESGAKG\n\ntarget           57 PAAGNVTS- 65\n                 60 ||||||||- 69\nquery            60 PAAGNVTSL 69\n",
+        "construct_insertions": [
+          1,
+          2,
+          3,
+          69
+        ],
+        "parser_warnings": [],
+        "altlocs": [],
+        "skipped": [],
+        "model_count": 1,
+        "model_index": 0,
+        "format": "mmCIF",
+        "deposition": {
+          "_entry.id": [
+            "1MJC"
+          ],
+          "_exptl.method": [
+            "X-RAY DIFFRACTION"
+          ],
+          "_refine.ls_d_res_high": [
+            "2.0"
+          ],
+          "_pdbx_audit_revision_history.revision_date": [
+            "1994-06-22",
+            "2008-03-24",
+            "2011-07-13",
+            "2017-11-29",
+            "2019-07-17",
+            "2019-08-14",
+            "2024-02-14"
+          ]
+        },
+        "chain_breaks": [],
+        "spatial_contact_cutoff_a": 8.0,
+        "sasa": {
+          "algorithm": "Biopython Shrake-Rupley",
+          "probe_radius_a": 1.4,
+          "sphere_points": 960,
+          "environment": "entire selected deposited model, occupied heavy atoms including ligands/other chains; no waters/H/D; no symmetry mates",
+          "rsa_table": "Tien et al. 2013 theoretical maxima (Wilke), doi:10.1371/journal.pone.0080635",
+          "max_asa_a2": {
+            "A": 129,
+            "C": 167,
+            "D": 193,
+            "E": 223,
+            "F": 240,
+            "G": 104,
+            "H": 224,
+            "I": 197,
+            "K": 236,
+            "L": 201,
+            "M": 224,
+            "N": 195,
+            "P": 159,
+            "Q": 225,
+            "R": 274,
+            "S": 155,
+            "T": 172,
+            "V": 174,
+            "W": 285,
+            "Y": 263
+          },
+          "rsa_clipped": false,
+          "secondary_structure": {
+            "status": "disabled"
+          }
+        },
+        "confidence_summary": {
+          "field": "bfactor_a2",
+          "n_available": 65,
+          "mean": 26.77476923076923,
+          "min": 10.12,
+          "max": 77.5,
+          "n_low_plddt": null
+        },
+        "pipeline_status": "complete"
+      },
+      "confidence_semantics": "experimental_bfactor",
+      "nodes": 65,
+      "undirected_edges": 298,
+      "connected_components": 1,
+      "isolated_nodes": 0,
+      "removed_positions": [],
+      "descriptor_missing_nodes": {
+        "rsa": 0,
+        "contact_degree": 0,
+        "nonlocal_contact_degree": 0,
+        "bfactor_a2": 0,
+        "plddt": 65
+      },
+      "m2_manifest_sha256": "49a6dbf189392e25bd9d9dbf0fd6afac02cb4a214c6cb9e2c869c9beaaf79700",
+      "geometry": "reference construct only; not mutant rearrangements",
+      "neighborhood": "identity-compatible induced M2 graph; M2 degree/RSA descriptors retain deposited context"
+    },
+    "P01053": {
+      "mapping": {
+        "accepted": true,
+        "errors": [],
+        "chains": [
+          {
+            "chain": "A",
+            "identity": 1.0,
+            "aligned_coverage": 1.0,
+            "score": 182.0,
+            "sequence_source": "mmCIF polymer scheme + atom_site label/auth mapping"
+          }
+        ],
+        "selected_chain": "A",
+        "reference_length": 63,
+        "coordinate_coverage": 1.0,
+        "aligned_coverage": 1.0,
+        "aligned_identity": 1.0,
+        "exact_compatible_positions": 63,
+        "differences": [],
+        "missing_positions": [],
+        "alignment": "target            0 ---KTEWPELVGKSVEEAKKVILQDKPEAQIIVLPVGTIVTMEYRIDRVRLFVDKLDNIA\n                  0 ---|||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery             0 HNLKTEWPELVGKSVEEAKKVILQDKPEAQIIVLPVGTIVTMEYRIDRVRLFVDKLDNIA\n\ntarget           57 QVPRVG 63\n                 60 |||||| 66\nquery            60 QVPRVG 66\n",
+        "construct_insertions": [
+          1,
+          2,
+          3
+        ],
+        "parser_warnings": [],
+        "altlocs": [],
+        "skipped": [],
+        "model_count": 20,
+        "model_index": 0,
+        "format": "mmCIF",
+        "deposition": {
+          "_entry.id": [
+            "3CI2"
+          ],
+          "_exptl.method": [
+            "SOLUTION NMR"
+          ],
+          "_refine.ls_d_res_high": null,
+          "_pdbx_audit_revision_history.revision_date": [
+            "1993-10-31",
+            "2008-03-25",
+            "2011-07-13",
+            "2017-11-29",
+            "2024-05-01"
+          ]
+        },
+        "chain_breaks": [],
+        "spatial_contact_cutoff_a": 8.0,
+        "sasa": {
+          "algorithm": "Biopython Shrake-Rupley",
+          "probe_radius_a": 1.4,
+          "sphere_points": 960,
+          "environment": "entire selected deposited model, occupied heavy atoms including ligands/other chains; no waters/H/D; no symmetry mates",
+          "rsa_table": "Tien et al. 2013 theoretical maxima (Wilke), doi:10.1371/journal.pone.0080635",
+          "max_asa_a2": {
+            "A": 129,
+            "C": 167,
+            "D": 193,
+            "E": 223,
+            "F": 240,
+            "G": 104,
+            "H": 224,
+            "I": 197,
+            "K": 236,
+            "L": 201,
+            "M": 224,
+            "N": 195,
+            "P": 159,
+            "Q": 225,
+            "R": 274,
+            "S": 155,
+            "T": 172,
+            "V": 174,
+            "W": 285,
+            "Y": 263
+          },
+          "rsa_clipped": false,
+          "secondary_structure": {
+            "status": "disabled"
+          }
+        },
+        "confidence_summary": {
+          "field": "bfactor_a2",
+          "n_available": 63,
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n_low_plddt": null
+        },
+        "pipeline_status": "complete"
+      },
+      "confidence_semantics": "experimental_bfactor",
+      "nodes": 63,
+      "undirected_edges": 288,
+      "connected_components": 1,
+      "isolated_nodes": 0,
+      "removed_positions": [],
+      "descriptor_missing_nodes": {
+        "rsa": 0,
+        "contact_degree": 0,
+        "nonlocal_contact_degree": 0,
+        "bfactor_a2": 0,
+        "plddt": 63
+      },
+      "m2_manifest_sha256": "cfe010a081c91739968189f40bd35611e6b00b11dc9f7bfa4b863b210d5ecf10",
+      "geometry": "reference construct only; not mutant rearrangements",
+      "neighborhood": "identity-compatible induced M2 graph; M2 degree/RSA descriptors retain deposited context"
+    }
+  },
+  "excluded": [],
+  "target_fields_accessed": false
+}
