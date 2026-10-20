@@ -29,7 +29,7 @@ def main():
     started = time.perf_counter()
     rows, matrices, mask, _, evidence = inputs(json.loads(Path("configs/m12.json").read_text()))
     assert mask.all()
-    assert rows == json.loads(Path("benchmarks/m12/rows.json").read_text())
+    assert json.loads(json.dumps(rows)) == json.loads(Path("benchmarks/m12/rows.json").read_text())
     matrix = matrices["esm_sites"]
     lookup = {r["id"]: i for i, r in enumerate(rows)}
     cases = json.loads(Path("benchmarks/m17/split-manifest.json").read_text())["folds"]
