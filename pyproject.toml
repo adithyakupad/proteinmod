@@ -6,6 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "proteinmod"
 version = "0.1.0"
 description = "Reproducible protein mutation-effect research benchmarks"
+license = {file = "LICENSE"}
 requires-python = ">=3.11,<3.15"
 dependencies = ["numpy>=2.0,<3", "scipy>=1.14,<2", "scikit-learn>=1.5,<2"]
 
@@ -18,6 +19,9 @@ esm = ["torch>=2.6,<3", "transformers>=4.48,<5", "matplotlib>=3.9,<4"]
 [project.scripts]
 proteinmod = "proteinmod.cli:main"
 proteinmod-stability = "proteinmod.stability_inference:main"
+
+[tool.setuptools]
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

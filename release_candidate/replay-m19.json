@@ -1,0 +1,19 @@
+{
+  "base": "14fa4c37fbafda9fbc4bd7f5be482f632062c9d1",
+  "unamended_original_files": 926,
+  "amendments": [
+    "README.md",
+    "pyproject.toml",
+    "scripts/run_m19.py",
+    "scripts/verify_m184.py",
+    "scripts/verify_readability.py",
+    "scripts/verify_sod1.py",
+    "tests/test_m19_evidence.py"
+  ],
+  "m19": {
+    "records": 480,
+    "prediction_rows": 15360,
+    "max_error": 0.0,
+    "fits": 0
+  }
+}

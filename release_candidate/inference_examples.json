@@ -1,0 +1,76 @@
+{
+  "single": {
+    "protein_id": "BBC1",
+    "assay_id": "BBC1_YEAST_Tsuboyama_2023_1TG0",
+    "variant_id": "BBC1_YEAST_Tsuboyama_2023_1TG0:P56N",
+    "mutations": [
+      "P56N"
+    ],
+    "protocol": "G3",
+    "fold": "PF00018",
+    "model": "M15 last-block LoRA, seed 0",
+    "prediction": 0.05477935075759888,
+    "unit": "training-assay rank prediction (unbounded regression), not kcal/mol",
+    "task": "stability mutation-effect ranking",
+    "checkpoint_sha256": "ce9c93d404dcfa7180162c4950110837b5f36f1fea4636e569ecab6c72145bd2",
+    "test_family_supervised_training": false,
+    "structural_inputs_used": false,
+    "structure_confidence_type": null,
+    "predictive_uncertainty": null,
+    "interval": null,
+    "interval_eligibility": false,
+    "interval_reason": "M13 calibration is not valid for this separately fitted M15 model",
+    "geometry": "reference structure only; this sequence model does not infer mutant rearrangement"
+  },
+  "multiple": {
+    "protein_id": "BBC1",
+    "assay_id": "BBC1_YEAST_Tsuboyama_2023_1TG0",
+    "variant_id": "BBC1_YEAST_Tsuboyama_2023_1TG0:D45S:N47R",
+    "mutations": [
+      "D45S",
+      "N47R"
+    ],
+    "protocol": "G3",
+    "fold": "PF00018",
+    "model": "M15 last-block LoRA, seed 0",
+    "prediction": 0.5626708269119263,
+    "unit": "training-assay rank prediction (unbounded regression), not kcal/mol",
+    "task": "stability mutation-effect ranking",
+    "checkpoint_sha256": "ce9c93d404dcfa7180162c4950110837b5f36f1fea4636e569ecab6c72145bd2",
+    "test_family_supervised_training": false,
+    "structural_inputs_used": false,
+    "structure_confidence_type": null,
+    "predictive_uncertainty": null,
+    "interval": null,
+    "interval_eligibility": false,
+    "interval_reason": "M13 calibration is not valid for this separately fitted M15 model",
+    "geometry": "reference structure only; this sequence model does not infer mutant rearrangement"
+  },
+  "provenance": {
+    "reference": {
+      "sequence": "EVPFKVVAQFPYKSDYEDDLNFEKDQEIIVTSVEDAEWYFGEYQDSNGDVIEGIFPKSFVAVQG",
+      "sha256": "2525c4c880a947f46b4d75c90e17d85e653fcf632fc7dc9d0c64a75625d36e61",
+      "source": "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/144fe22b07dfaeec2b366f2346203a9838a55b4c/reference_files/DMS_substitutions.csv"
+    },
+    "experimental_structure": {
+      "path": "data/cache/m12/source/1TG0.cif",
+      "sha256": "974ca8eb2ed169728cfefbfdd6ff8820fecf006ba3cb5dcec1dba07c5e272249",
+      "url": "https://files.rcsb.org/download/1TG0.cif",
+      "kind": "local",
+      "format": "cif",
+      "confidence": "unknown",
+      "source": "https://www.rcsb.org/structure/1TG0",
+      "license": "wwPDB CC0",
+      "id": "1TG0",
+      "name": "BBC1 experimental NMR model 0"
+    },
+    "mapping": {
+      "chain": "A",
+      "model_index": 0,
+      "min_coverage": 0.7,
+      "min_identity": 1.0,
+      "allowed_mismatches": []
+    },
+    "note": "M15 LoRA examples use sequence only; structure provenance identifies benchmark construct, not structure use or mutant geometry."
+  }
+}

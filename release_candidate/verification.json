@@ -1,0 +1,41 @@
+{
+  "integrated_main": "14fa4c37fbafda9fbc4bd7f5be482f632062c9d1",
+  "all_eight_merge_CI": "PASS; dependencies.json",
+  "clean_main_tests": {
+    "tests": 246,
+    "seconds": 13.53,
+    "no_research_cache": true,
+    "dependencies": "existing pinned full environment; separate isolated wheel environment also verified"
+  },
+  "candidate_working_tests": {
+    "tests": 247,
+    "seconds": 14.05,
+    "warning": "preexisting joblib core-count warning"
+  },
+  "history_guards": "PASS readability historical, M184 and SOD1; original admission HOLD and deviation retained",
+  "selected_replays": {
+    "M17": "1096 states /34304 predictions, max0",
+    "M15": "one G3 fold,192 predictions,max0",
+    "M19": "480 records /15360 predictions,max0; no fits"
+  },
+  "inference": "actual single/multiple outputs in inference_examples.json",
+  "safe_OOD": "13848 null predictions/units; all thermodynamic_eligible false",
+  "wheel": "wheel.json; source/metadata/licenses only; isolated core install and pip check PASS",
+  "full_cold_reproduction": "NOT RUN; historical M161 bounded evidence retained",
+  "external_confirmation": "BLOCKED; no outcomes accessed",
+  "release_tag": "NOT CREATED",
+  "candidate_clean_checkout": {
+    "source_commit": "a5e1140ac117c23b88ce1ff1435495b8ad7de391",
+    "tests": 247,
+    "seconds": 21.19,
+    "research_caches_present": false,
+    "environment": "fresh temporary venv; wheel and pinned requirements independently installed; PYTHONPATH points to clean checkout src",
+    "ruff_check": "PASS",
+    "ruff_format": "286 files pass",
+    "historical_guards": "PASS",
+    "pip_check": "PASS"
+  },
+  "candidate_CI": "Exact final head must pass existing checks and added code-only-wheel workflow; live release-candidate PR carries final commit/check status",
+  "build_method": "pip wheel --no-deps --no-build-isolation; python -m build unavailable in old env, no source change needed",
+  "post_freeze_changes": "Only result documentation, new package CI and repository import-path wiring in new verify_release_candidate.py; no ML code changes"
+}

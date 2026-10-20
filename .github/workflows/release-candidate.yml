@@ -1,0 +1,29 @@
+name: research-package
+on: [push, pull_request]
+jobs:
+  code-only-wheel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install build
+      - run: python -m build --wheel
+      - run: |
+          python - <<'PY'
+          import zipfile
+          from pathlib import Path
+          wheel = next(Path('dist').glob('*.whl'))
+          with zipfile.ZipFile(wheel) as archive:
+              names = archive.namelist()
+              assert all(n.startswith(('proteinmod/', 'proteinmod-0.1.0.dist-info/')) for n in names)
+              assert not any(n.endswith(('.pt', '.npz', '.npy', '.xlsx', '.safetensors', '.csv')) for n in names)
+              assert any('THIRD_PARTY_NOTICES' in n for n in names)
+          PY
+      - run: python -m pip install dist/*.whl
+      - run: python -m pip check
+      - run: proteinmod --help
+      - run: python scripts/verify_release_candidate.py --output /tmp/qualification.json

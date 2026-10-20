@@ -3,7 +3,6 @@
 import argparse
 import ast
 import copy
-import hashlib
 import json
 import os
 import subprocess
@@ -13,6 +12,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / "docs/readability"
+sys.path.insert(0, str(ROOT / "src"))
+from proteinmod.release_integrity import verify_digest
 
 
 def function_node(tree, qualified_name):
@@ -81,7 +82,7 @@ def verify():
     for record in baseline["files"]:
         path = ROOT / record["path"]
         if record["path"] not in changed:
-            assert hashlib.sha256(path.read_bytes()).hexdigest() == record["sha256"], record["path"]
+            verify_digest(path, record["sha256"])
             preserved += 1
     for path in sorted(changed - {".github/workflows/ci.yml"}):
         original = subprocess.check_output(
