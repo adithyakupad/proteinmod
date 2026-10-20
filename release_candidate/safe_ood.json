@@ -1,0 +1,17 @@
+{
+  "source_sha256": "f2d96ade6b4fd6e5b5471ebacf58315d209f20d5816ad230bb2327529408d5dd",
+  "rows": 13848,
+  "all_predictions_null": true,
+  "all_units_null": true,
+  "all_thermodynamic_eligible_false": true,
+  "example": {
+    "id": "FLIP2_amylase_by_mutation_v3:3",
+    "protein_id": "amylase",
+    "model": "esm_sites_ridge",
+    "source_weights_sha256": "5ca180ff758336766c7971ecdd32618a4b33b37d1c863b935a1356c17137a96c",
+    "prediction": null,
+    "unit": null,
+    "thermodynamic_eligible": false,
+    "reason": "No qualified native stability inference contract for this prediction"
+  }
+}

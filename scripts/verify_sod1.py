@@ -1,15 +1,18 @@
 """Stdlib-only immutable history and blinded-candidate evidence checks; no raw data reads."""
 
-import hashlib
 import json
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+from proteinmod.release_integrity import verify_digest
 
 
 def verify():
     root = Path("benchmarks/m185")
     for name in ["historical_hashes.json", "artifact_hashes.json"]:
         for path, expected in json.loads((root / name).read_text()).items():
-            assert hashlib.sha256(Path(path).read_bytes()).hexdigest() == expected, path
+            verify_digest(path, expected)
     metadata = json.loads((root / "evidence/abundance-metadata.json").read_text())
     assert "scoreDistribution" not in metadata and "scoreCalibrations" not in metadata
     assert (

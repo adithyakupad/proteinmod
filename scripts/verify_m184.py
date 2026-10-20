@@ -1,15 +1,18 @@
 """Offline evidence/integrity checks; never open external outcome tables or coordinate caches."""
 
-import hashlib
 import json
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+from proteinmod.release_integrity import verify_digest
 
 
 def verify():
     root = Path("benchmarks/m184")
     for name in ("historical_hashes.json", "artifact_hashes.json"):
         for path, expected in json.loads((root / name).read_text()).items():
-            assert hashlib.sha256(Path(path).read_bytes()).hexdigest() == expected, path
+            verify_digest(path, expected)
     query = json.loads((root / "evidence/GFP-exact-sequence-audit.json").read_text())
     assert query["entities"] == 732 and not query["exact_segment_entities"]
     assert not query["candidate_target_cells_accessed"]

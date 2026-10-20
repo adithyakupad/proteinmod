@@ -16,6 +16,7 @@ from scipy.stats import rankdata
 from proteinmod.data import checksum, write_json
 from proteinmod.family_experiments import inputs
 from proteinmod.multiprotein_experiments import per_protein
+from proteinmod.release_integrity import verify_digest
 from proteinmod.ridge_geometry import fit, predict
 
 
@@ -215,7 +216,7 @@ def main():
         writer.writeheader()
         writer.writerows(predictions)
     for path, digest in json.loads((root / "historical_hashes.json").read_text()).items():
-        assert checksum(path) == digest, path
+        verify_digest(path, digest)
     print(json.dumps({k: v for k, v in summary.items() if k != "evidence"}, indent=2))
 
 

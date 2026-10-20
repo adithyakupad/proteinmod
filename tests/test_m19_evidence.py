@@ -1,13 +1,14 @@
 """Offline reconstruction of archived M19 metrics; no external outcomes or caches."""
 
 import csv
-import hashlib
 import json
 from collections import defaultdict
 from pathlib import Path
 
 import numpy as np
 from scipy.stats import spearmanr
+
+from proteinmod.release_integrity import verify_digest
 
 
 def test_m19_archive():
@@ -17,7 +18,7 @@ def test_m19_archive():
 
         pytest.skip("Study not yet archived")
     for path, digest in json.loads((root / "historical_hashes.json").read_text()).items():
-        assert hashlib.sha256(Path(path).read_bytes()).hexdigest() == digest, path
+        verify_digest(path, digest)
     grouped = defaultdict(list)
     with (root / "predictions.csv").open() as handle:
         for row in csv.DictReader(handle):

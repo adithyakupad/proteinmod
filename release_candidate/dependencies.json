@@ -1,0 +1,178 @@
+[
+  {
+    "pr": 38,
+    "head": "3eb51fbb25325d6a9a20bccf48211cc834aa5113",
+    "parent_ancestor": "origin/main",
+    "protected_blobs_preserved": 501,
+    "exact_head_CI": "all success",
+    "baseRefName": "main",
+    "headRefOid": "3eb51fbb25325d6a9a20bccf48211cc834aa5113",
+    "mergeCommit": {
+      "oid": "c2fae1ff4f7b68c7aff3ebf598fb5e253269ad7c"
+    },
+    "state": "MERGED",
+    "merge_CI": [
+      {
+        "conclusion": "success",
+        "databaseId": 39479329123,
+        "headSha": "c2fae1ff4f7b68c7aff3ebf598fb5e253269ad7c",
+        "status": "completed",
+        "url": "https://github.com/adithyakupad/proteinmod/actions/runs/39479329123"
+      }
+    ]
+  },
+  {
+    "pr": 40,
+    "head": "256c2518bda891e5037376cfff351a852ec22010",
+    "parent_ancestor": "3eb51fbb",
+    "protected_blobs_preserved": 545,
+    "exact_head_CI": "all success",
+    "baseRefName": "main",
+    "headRefOid": "256c2518bda891e5037376cfff351a852ec22010",
+    "mergeCommit": {
+      "oid": "f1c8e361b995ca2003d21a7969bce3fadc8f023d"
+    },
+    "state": "MERGED",
+    "merge_CI": [
+      {
+        "conclusion": "success",
+        "databaseId": 39479384161,
+        "headSha": "f1c8e361b995ca2003d21a7969bce3fadc8f023d",
+        "status": "completed",
+        "url": "https://github.com/adithyakupad/proteinmod/actions/runs/39479384161"
+      }
+    ]
+  },
+  {
+    "pr": 42,
+    "head": "d9579d6a51eaf200558d6a932e6072cff4cdab32",
+    "parent_ancestor": "256c2518",
+    "protected_blobs_preserved": 612,
+    "exact_head_CI": "all success",
+    "baseRefName": "main",
+    "headRefOid": "d9579d6a51eaf200558d6a932e6072cff4cdab32",
+    "mergeCommit": {
+      "oid": "3541683ee9c3989408332a3f356e2495177fd743"
+    },
+    "state": "MERGED",
+    "merge_CI": [
+      {
+        "conclusion": "success",
+        "databaseId": 39479404793,
+        "headSha": "3541683ee9c3989408332a3f356e2495177fd743",
+        "status": "completed",
+        "url": "https://github.com/adithyakupad/proteinmod/actions/runs/39479404793"
+      }
+    ]
+  },
+  {
+    "pr": 44,
+    "head": "8a07008ba427cb9cd82c84b5508a1326b562afa0",
+    "parent_ancestor": "d9579d6a",
+    "protected_blobs_preserved": 627,
+    "exact_head_CI": "all success",
+    "baseRefName": "main",
+    "headRefOid": "8a07008ba427cb9cd82c84b5508a1326b562afa0",
+    "mergeCommit": {
+      "oid": "0aa098d7526b3ad8004af429756d6a23af3ab04d"
+    },
+    "state": "MERGED",
+    "merge_CI": [
+      {
+        "conclusion": "success",
+        "databaseId": 39479428687,
+        "headSha": "0aa098d7526b3ad8004af429756d6a23af3ab04d",
+        "status": "completed",
+        "url": "https://github.com/adithyakupad/proteinmod/actions/runs/39479428687"
+      }
+    ]
+  },
+  {
+    "pr": 46,
+    "head": "f7df45bfc94cbbeadfeaf2538f4a85ca88d37c2f",
+    "parent_ancestor": "8a07008b",
+    "protected_blobs_preserved": 627,
+    "exact_head_CI": "all success",
+    "baseRefName": "main",
+    "headRefOid": "f7df45bfc94cbbeadfeaf2538f4a85ca88d37c2f",
+    "mergeCommit": {
+      "oid": "ed145d24e4b455eb4d1911ba98ee9ba5bad8991d"
+    },
+    "state": "MERGED",
+    "merge_CI": [
+      {
+        "conclusion": "success",
+        "databaseId": 39479468228,
+        "headSha": "ed145d24e4b455eb4d1911ba98ee9ba5bad8991d",
+        "status": "completed",
+        "url": "https://github.com/adithyakupad/proteinmod/actions/runs/39479468228"
+      }
+    ]
+  },
+  {
+    "pr": 47,
+    "head": "5a98c6d8661acfa48b2436c748f934f0b164221f",
+    "parent_ancestor": "f7df45bf",
+    "protected_blobs_preserved": 666,
+    "exact_head_CI": "all success",
+    "baseRefName": "main",
+    "headRefOid": "5a98c6d8661acfa48b2436c748f934f0b164221f",
+    "mergeCommit": {
+      "oid": "3cf61df2f2e04ef82324997ca105293bf8f8cdf7"
+    },
+    "state": "MERGED",
+    "merge_CI": [
+      {
+        "conclusion": "success",
+        "databaseId": 39479492309,
+        "headSha": "3cf61df2f2e04ef82324997ca105293bf8f8cdf7",
+        "status": "completed",
+        "url": "https://github.com/adithyakupad/proteinmod/actions/runs/39479492309"
+      }
+    ]
+  },
+  {
+    "pr": 49,
+    "head": "56be251b938b9cb8e9ef454893931eecaa2538c4",
+    "parent_ancestor": "5a98c6d8",
+    "protected_blobs_preserved": 699,
+    "exact_head_CI": "all success",
+    "baseRefName": "main",
+    "headRefOid": "56be251b938b9cb8e9ef454893931eecaa2538c4",
+    "mergeCommit": {
+      "oid": "10da9366464add2e558c8b643992a3cefdc189c6"
+    },
+    "state": "MERGED",
+    "merge_CI": [
+      {
+        "conclusion": "success",
+        "databaseId": 39479512775,
+        "headSha": "10da9366464add2e558c8b643992a3cefdc189c6",
+        "status": "completed",
+        "url": "https://github.com/adithyakupad/proteinmod/actions/runs/39479512775"
+      }
+    ]
+  },
+  {
+    "pr": 51,
+    "head": "4b0441b092aa141479d10855206dd34c4997434b",
+    "parent_ancestor": "56be251b",
+    "protected_blobs_preserved": 709,
+    "exact_head_CI": "all success",
+    "baseRefName": "main",
+    "headRefOid": "4b0441b092aa141479d10855206dd34c4997434b",
+    "mergeCommit": {
+      "oid": "14fa4c37fbafda9fbc4bd7f5be482f632062c9d1"
+    },
+    "state": "MERGED",
+    "merge_CI": [
+      {
+        "conclusion": "success",
+        "databaseId": 39479533051,
+        "headSha": "14fa4c37fbafda9fbc4bd7f5be482f632062c9d1",
+        "status": "completed",
+        "url": "https://github.com/adithyakupad/proteinmod/actions/runs/39479533051"
+      }
+    ]
+  }
+]

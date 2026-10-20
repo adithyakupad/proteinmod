@@ -1,0 +1,91 @@
+{
+  "README.md": {
+    "after_sha256": "d3e582d2622293b3cd8da5910da39b56ccb15429be231bb92469e95c63e7e29c",
+    "prior_blobs": {
+      "f26d39ca1f9c2c4c21eddb902484a40f7452cc0c4169931aeb0e50af08877920": "62c8d82f456508e25812fb24bdd2186d418ddf3d",
+      "0ffc8287a03572cf2ba2a7b9f77bfcab947a96db4727ec508014f65b513092db": "9e3f7e46e43818c66f09708021fc85d9a4bcd677",
+      "427e720da2da650efc65d106c9f9ae9f4d07586824b384d79a6f18d7da690910": "75301907797d879d730a58123eef5e73bb7b11a1",
+      "fa442229e4437aa35c80551df60af041aa9e851fc9be65492413f4e38f3dfb36": "14f1c1abbfca0f97cab1f0c1340caae7555f7461",
+      "73c28b29f91bb1e5b748827e01401fa2650e4983b7ab9c3308ee4eb48cec5982": "aae8b97dbf33edc2c5815558200b89d4389825f4",
+      "65f692f8e95d866bae55b839907fc13975b9bf52d101556cb9091c2bc01ebb58": "37c71c5d711ef2ff2759a3be9db38eb9acd4c43f",
+      "379f326c71af523fe1f307adb4f14fc3b2172ce560cf9a35f3fe100a74628547": "eb90c71553f6973bad129783e0e54ed7203b4e2d",
+      "d33ad83a4e5d61fb181a2c08dbd9348af8a184a4507746816e01c618b4600b76": "fb4b985cc1fac80daaf2fccb5ac241edb8078029",
+      "498530a055392fd40236242be01ba9cb9fb2c2c6e3b30c25ba7e84243e4f5781": "aaf221389de7138eed962108203bd87260e04a35",
+      "ae4ea6216beb044b1cdc4c18f2f9b7c82026c8752b3b4840adcc35f4c41076c8": "aa5c8357acf5ba9d480a6444c04176eb6ab87a87",
+      "e50e363f862996e54d82eb6dde11e42934e881b79b4cf0bce2dc326a9cc765ca": "2a1817eb9268f0f6ae48051b6c3f08d78b0b723e",
+      "1aa2db731bba525026a93fd2961e3d080a3a9b9f0a87b20f0f51dc7ef8559be4": "da992f8de89fb88e325967cad1d9409d23f75822",
+      "aa569c1f711c58c7e4ea70c11f0572ccd2b992a085478a4de0a5ff0eb88f4014": "cf179ff7d483873a4ebe0dd2d0b0af3c8bbb8587",
+      "bf335a87dc4a01cc1a2941297ee7b93d1f6baa0b36c62d988a05959df16d1297": "987c3842a64e7fb4e321e68aefebaf3a9fc597d0",
+      "36c7841cb04863b34ad154876f817e6486a042b9c8941a638dad9486bfcb99ab": "a47f9bc68f2ccca69c712b8f990275ad94b86f44",
+      "64e36c915470f5548aae6f6714175ead8228ea1e102ae71ca1aad6e40fd5e50b": "b18efe9cdd3c5540dac13dc16b604a661381c6b2",
+      "6be869522fdaf967d2306078e807259ba0ad8221fe65c69007557098ef360a0b": "0fb69ccc2abb87b07acd758a5fe6e87324a398ce",
+      "1d78febcd716ab5519219be2407e1b06445cfb0acd801e8da572d1b66ac50989": "f4fbebc63be37f7395782223ca452cd9983bf961",
+      "fc4e36aa5ab958ff1f87c004d9bfe4a44d5dbf8a41d9558306a3d4f40d629efc": "b15052ba4791b6456f3556d1f45ceebf096bd1a4",
+      "aa0a31181a2907e3348840966a1580f3aa3fd0387a8c9f9e06b450f2b218c4d6": "75037c5cc532b08ef1786f8a2f7dc7c7b97b0b23",
+      "8fcb7b8d0b1df6b3d85a9ef124881d011577cbbcd833fc6db1e94207d011a354": "7cd62909898bbc54c74886d935973d774fb7aba9",
+      "3045637147a2708b73e1008abbb03693714d173a37262c0ca968cee2dddf1b28": "9f605e76dd6b6fb739de56df1d58659b4a992b63",
+      "4e2170336fa94bb8c5f14989ae5bd57fdd96f497ba73d48419eec6c799cfa5b0": "32213cd443c6da4a2f9853985d45d1c242eb86be",
+      "d9bb0fc2c5bcdcf443594d40380b01fc64a1acbc9f4d4988f6266c0ce4af21e7": "5bcb20b2194f663d39012f5a95e309b3022be77e",
+      "4e57b0dd866e34723d20739408b9cc219a6dffff34b9cd04bdda52dabbe7bc30": "e4a8cb553ee4b118f619452a5a58c46d5b3adc7d",
+      "160fe38e1a8f1cb80fdd340252f64047a588885626286b88fab28c5627d82d60": "55e7fc575349bebd46562c01be08a4d2e449d139",
+      "e47688bf23552abc0f3609337e26183a452cf6263265d0d28ce40ad46f08e925": "4b2a7e1d165f99a8e2459ba793308315c1742bc8",
+      "07ab136a3b89a7d957c3c977245a592be0a7299ea006a63e0d653b0b2c50a839": "d1201a94058716673ce52ddc7ee13e4ef4a22568",
+      "8d2948501e6269b487a77679dc03f44333f896aa9f8c65b05c85e905d896d1dc": "557a42edbcb4206d7694b9e081357da1eb1b3a17"
+    },
+    "reason": "Issue52: documentation/package metadata or explicit hash-guard wiring only; scientific artifacts and mathematical model operations unchanged"
+  },
+  "pyproject.toml": {
+    "after_sha256": "e8e937379cbf7184a84235b3bf4219c406f08c17a0600528dfe03cb5f09c132f",
+    "prior_blobs": {
+      "bc5c540cef1aa220c92caecd353f74773ecc0a435b96ae8928ff68ca05f126b5": "de85737b563ff5ffdaf30b8205dd7d546d32d4f5",
+      "99334d53138c54985d8d6f00036033f24a5951f7248d19ab79e80d1fa50a5d93": "9a5f25a9ef9e857f2e882c90949e9c12f4d24b0e",
+      "8379e40fb3e6fd44aa4af667f38444b0ca2cde942019bef6ab3a88f94185fb17": "23083d1ae786ea5cf2df9efc03bc01a2f2de8bbd",
+      "6694a4607a81ff38d0ec519e3e58ae82ea8f51a91fdbdc9605488602654f8e5c": "ab52a4a63e674e5bc98ecd8338496731b99488e9",
+      "3d16f67333d93aa02c30ad728a8cc411a96fb3656e3ee6757432d511cd47ad38": "50f380cb69c338313d98186b8ebe8f9071c39b07",
+      "4b3817e86efd0c9dc8fda7968b65e09e006583b349bec2250e6a0e5966d55420": "1ec2d5086a6e53c61028a45d2bcd5cf59f93b854"
+    },
+    "reason": "Issue52: documentation/package metadata or explicit hash-guard wiring only; scientific artifacts and mathematical model operations unchanged"
+  },
+  "scripts/verify_readability.py": {
+    "after_sha256": "deec6ac8672e4a571ec8003ada08d603456724cbe4c8e144ff78cdb1b4e8d8bf",
+    "prior_blobs": {
+      "1f1f6b632ae233c6d2e120907b38aadb35b255316621aab457fe6667ac298434": "e31f1516c04954a120d3b56e26eed9ed939da90b",
+      "90a7da59674c3d6e671e2a1dd92b820ca530b14c3866403a2af47256f2dc6765": "df086020e10ab2d06737881ac8a5d6380c5e91c7"
+    },
+    "reason": "Issue52: documentation/package metadata or explicit hash-guard wiring only; scientific artifacts and mathematical model operations unchanged"
+  },
+  "scripts/verify_m184.py": {
+    "after_sha256": "395273b401df026a256bb797c340c962d19d5389d4a67b2a27dd90a5cd8cd0e1",
+    "prior_blobs": {
+      "689bac7cf76f40cbea28ac32c609c292f31e1a76dfafd8d9da3f41f57a2a9b79": "107755b6ea5b9a9f01eeb540ec4d319560ffd87d",
+      "88e25c40a72e5665b022447b64d0e8fa818187c249688bf6b135da5cf062ea20": "23b360ce5c4f45ca3db065ebd426e23f00dd1476"
+    },
+    "reason": "Issue52: documentation/package metadata or explicit hash-guard wiring only; scientific artifacts and mathematical model operations unchanged"
+  },
+  "scripts/verify_sod1.py": {
+    "after_sha256": "f5c63821501a63a6251fc7ca8b7af11010fdf015ca2b622868f012877114e7dd",
+    "prior_blobs": {
+      "0f06fe82a26be08aa699c28e16da211a25f4856e307f3c4807270bfdaf08cb3e": "3c5ed58ee0888abcac02a7a2041f32cc4ca86190",
+      "a2dd20d780c32e41c3f20cc8260913dd47bcbdef518bbfeda41d72ca1c7ab5f4": "0f40e156e8f84b5d7fa4693c3cd9df36267dd8ad"
+    },
+    "reason": "Issue52: documentation/package metadata or explicit hash-guard wiring only; scientific artifacts and mathematical model operations unchanged"
+  },
+  "scripts/run_m19.py": {
+    "after_sha256": "18a5602a5340c9350f9360bfa67df64454e36298cd3f05408ef093954d063c52",
+    "prior_blobs": {
+      "68686251768b067d7e79206f6dd5470602951149e9d49f7566f211d96a51b074": "be22b53c0be7496dc07473cacbe52e3d56dbc202",
+      "7563dccb375a07b1f9c40fff8b45f0f158e6efca01588428e948accf4ab76b02": "1f0c9ed0ce9753416142d08c1730f72112f9a0fa",
+      "c1e6d0eb6154f5979561115b44566755797a60f343fb1e2222f42cc414754022": "31783c6ab4e06b9a74040d54ccb77882ecd98870",
+      "309d058c47b3d607c02762db68b06b218edc58c87a773cb7b7bea94b09bbc655": "926f5ea032cab22a9cde9fb807c637907723df89",
+      "87ffd20e16a6dea94382ba36a6697bc552de636368adbcf6a0fff471aab191fb": "6233faa0ca1beb63c7d7f756ddfd3fdc93f100d1"
+    },
+    "reason": "Issue52: documentation/package metadata or explicit hash-guard wiring only; scientific artifacts and mathematical model operations unchanged"
+  },
+  "tests/test_m19_evidence.py": {
+    "after_sha256": "4ba6865f52891414af0230fb347e273552b63bed28a65995b7d4ddc9179425b0",
+    "prior_blobs": {
+      "a346b65de70cef14ae9223546236e1e2ca7389ed60033d4d41e38db07e034a48": "84fafffffda096820a4f752344995c9a7f2e6701"
+    },
+    "reason": "Issue52: documentation/package metadata or explicit hash-guard wiring only; scientific artifacts and mathematical model operations unchanged"
+  }
+}

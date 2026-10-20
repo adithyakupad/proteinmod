@@ -11,22 +11,27 @@ source-matched substitution experiments, not a universally validated predictor.
 
 ## Qualification and evidence
 
-**Release qualification: FAIL / HOLD.** The owner's M16.1 branch now includes
-an MIT source-code license; independent scientific confirmation and other release
-gates remain unmet. M17 preregistered H1–H5 and ran 1,096 controlled development fits:
-preprocessing changes the mean ordering, and physical graph topology does not
-consistently beat a degree-preserving null. No independent validation is claimed.
-See the [mechanistic report](docs/M17.md), [qualification matrix](benchmarks/m17/QUALIFICATION.md),
-and [ML evidence/defense questions](docs/M17_DEFENSE.md). Historical M16/M16.1
-license and portability failures remain unchanged in their dated reports.
+**Scoped research-code release candidate; not deployment-ready.** M0–M19 are
+integrated on main at `14fa4c37fbafda9fbc4bd7f5be482f632062c9d1` after merging
+PRs #38/#40/#42/#44/#46/#47/#49/#51 in order. Original source is [MIT](LICENSE).
+[Third-party notices](THIRD_PARTY_NOTICES.md) keep data/model terms separate.
+The candidate is a code-only wheel, not a cleared dataset/checkpoint bundle.
 
-M0–M15 are consolidated at `7cc4dbbe9c47355d1afa46f6f46f502394e9e999`.
-All ten dependency heads and all ten merge commits passed CI (150 jobs total).
-M16 adds full-suite neural checks, formatting and an immutable-history artifact CI gate.
-See the [M16 technical report](docs/M16.md), [qualification matrix](benchmarks/m16/QUALIFICATION.md),
-[execution evidence](benchmarks/m16/), and [proposed release notes](docs/RELEASE_NOTES_PROPOSED.md).
-No release/tag has been published. Third-party bundle clearance, independent science
-and final review remain gates.
+**Independent four-family confirmation remains BLOCKED.** SOD1 individual labels
+remain blinded, but an aggregate-metadata decoding deviation requires independent
+review. CspA/CI2 GEO item permissions and GFP structural-background questions remain
+explicit blockers; candidate counts are not independent validation results.
+
+M17's unscaled ESM ridge improved mean family contrast by0.1404 over scaled ESM;
+physical topology did not establish an advantage over degree-preserving rewiring.
+M19's expanded ridge search failed: validation-selected rho0.1471 versus historical
+unscaled0.3449, difference−0.1978, negative in4/4 families. Its scalar-equivalence
+control also failed (1.21e-7 vs unchanged1e-7 tolerance). No result was replaced.
+See the [M19 report](benchmarks/m19/REPORT.md), [closeout technical report](release_candidate/REPORT.md),
+[qualification matrix](release_candidate/QUALIFICATION.md), and
+[proposed release notes](release_candidate/RELEASE_NOTES.md).
+Historical M16/M16.1 FAIL/HOLD records remain dated evidence, not current license claims.
+No tag, release or publication is authorized before final review.
 
 ## Install and test
 
@@ -45,7 +50,9 @@ python -m pip check
 
 For the small core alone: `python -m pip install -e '.[dev]'`.
 Tests use synthetic fixtures and do not download models or experimental datasets.
-The full pinned install was independently exercised from a clean main checkout.
+See [closeout verification](release_candidate/verification.json) for actual clean-checkout
+installation, wheel contents, final-main CI, inference and replay results. Full
+M0–M19 cold-source reproduction is not claimed.
 
 ## Start with the measured benchmark
 
@@ -114,6 +121,14 @@ These are stability-effect ranking assays, not general biochemical function scor
 [M14 controls](benchmarks/m14/REPORT.md), [M15 capacity/cost controls](benchmarks/m15/REPORT.md).
 The original GNN and M12 `structure_only` wrapper are distinct comparators.
 
+## M17/M19 controlled development cohort
+
+These results use original16 test variants per protein (32/family), not M12
+all96/protein. Four families, training-only transformations and validation-only
+selection are retained. At full labels M17 unscaled/scaled ESM ridge rho is
+0.3449/0.2044; M19 expanded unscaled/selected rho is0.2904/0.1471. These are
+reused development outcomes, not new independent validation.
+
 ## Scientific limits
 
 - Reference structures describe WT geometry; mutant rearrangements are not observed.
@@ -141,3 +156,7 @@ M18.1 adds [blinded homology/profile adjudication and a primary TEM-1 lineage au
 M18.2 traces a [fourth primary family and TEM-1 workbook permissions](benchmarks/m182/REPORT.md). Genotype-only common masks are recorded; strict structural admission remains blocked, so no confirmatory performance is claimed.
 
 M18.3 implements [versioned masked extraction and a four-family blinded cohort audit](benchmarks/m183/REPORT.md): 384/384 candidate inputs pass, with original M2 rejections preserved. Confirmation remains blocked by GFP background compatibility and unverified GEO raw-item license linkage; no external outcomes were unblinded.
+
+For exact single/multiple-mutation example outputs and fail-closed OOD export, see
+[reproduction and inference](release_candidate/REPRODUCTION.md). All historical
+negative results, M19 numerical failure and SOD1 deviation remain immutable.
