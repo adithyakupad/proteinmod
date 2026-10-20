@@ -1,0 +1,9 @@
+{
+  "pairs": 25,
+  "exact_scores_and_domains": true,
+  "max_absolute_score_difference": 0.0,
+  "seconds": 0.048763208091259,
+  "device": "CPU",
+  "pyhmmer": "0.12.1",
+  "platform": "macOS-26.5.2-arm64-arm-64bit"
+}

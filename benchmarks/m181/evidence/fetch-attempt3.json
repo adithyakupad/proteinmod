@@ -1,0 +1,44 @@
+[
+  {
+    "name": "PF00312-hmm",
+    "url": "https://www.ebi.ac.uk/interpro/wwwapi/entry/pfam/PF00312/?annotation=hmm",
+    "bytes": 8365,
+    "sha256": "3c7bc0c8b41f394fb53232e4f603bc78c56216cf1c0f52f4ac70f854f74e8a2a",
+    "status": "OK"
+  },
+  {
+    "name": "PF00312-entry.json",
+    "url": "https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00312/",
+    "bytes": 883,
+    "sha256": "c40849b836dfc143b6ad51a3c810af9dc07d10c7e370217b9943909d5c70a9c7",
+    "status": "OK"
+  },
+  {
+    "name": "PF02216-hmm",
+    "url": "https://www.ebi.ac.uk/interpro/wwwapi/entry/pfam/PF02216/?annotation=hmm",
+    "bytes": 5313,
+    "sha256": "86b9a9b361b5cf55dc4b102012d39871ebfc394bfad94d880faafd8a26cf386a",
+    "status": "OK"
+  },
+  {
+    "name": "PF02216-entry.json",
+    "url": "https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02216/",
+    "bytes": 1757,
+    "sha256": "283e87b1a209e72eb59343b5c836a2aa72778a1fb5a72555820bb37faf4349f3",
+    "status": "OK"
+  },
+  {
+    "name": "PF00240-hmm",
+    "url": "https://www.ebi.ac.uk/interpro/wwwapi/entry/pfam/PF00240/?annotation=hmm",
+    "bytes": 8071,
+    "sha256": "e3b192b90648acfb5d21457043e506baec1cec4addf8b87f3527b5dbc0520ce2",
+    "status": "OK"
+  },
+  {
+    "name": "PF00240-entry.json",
+    "url": "https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00240/",
+    "bytes": 4613,
+    "sha256": "a23859466fa90cad43bdb98d4efe2860d5713f4a8ecac0fb368bb332bdeb2630",
+    "status": "OK"
+  }
+]

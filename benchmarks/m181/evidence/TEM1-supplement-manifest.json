@@ -1,0 +1,32 @@
+{
+  "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4032126/supplementaryFiles",
+  "sha256": "5534885cc700dd25ddac68504c9b1c182702c5b65d60e2cd9dc88aeec261d330",
+  "bytes": 6494931,
+  "files": [
+    "msu081i1.jpg",
+    "msu081m1.jpg",
+    "msu081m7.jpg",
+    "supp_msu081_SupplementalMaterialsMethods.pdf",
+    "msu081f3.jpg",
+    "msu081f2.gif",
+    "msu081f5.jpg",
+    "msu081f3.gif",
+    "msu081m5.jpg",
+    "msu081m6.jpg",
+    "msu081f4.jpg",
+    "msu081f2.jpg",
+    "msu081f4.gif",
+    "supp_msu081_SupplementalFigsS1-S15.pdf",
+    "msu081m2.jpg",
+    "msu081f1.jpg",
+    "msu081i3.jpg",
+    "msu081m4.jpg",
+    "msu081m8.jpg",
+    "msu081i2.jpg",
+    "supp_31_6_1581__index.html",
+    "msu081f1.gif",
+    "msu081m3.jpg",
+    "supp_msu081_Data_S1-S4.xlsx",
+    "msu081f5.gif"
+  ]
+}

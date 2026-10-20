@@ -1,0 +1,8 @@
+{
+  "CspA_CI2": "No phenotype fields accessed; M18 candidate labels remain blinded",
+  "TEM1": "Quarantined primary workbook; shared text headers and genotype A/B/C projected; no numerical fitness/error R/S cells decoded or displayed",
+  "ubiquitin_Mavor2016": "Primary methods JSON contained inline illustrative barcode scores and an example matrix. These appeared during methods inspection, without variant-linked dataset selection. Excluded from fully blinded confirmatory qualification; no source-data target table opened, no scores used for eligibility or training.",
+  "paper_context": "Primary TEM1 paper methods/summary inspected; no per-variant supplement target cells inspected",
+  "models_fit": 0,
+  "predictions_generated": 0
+}
