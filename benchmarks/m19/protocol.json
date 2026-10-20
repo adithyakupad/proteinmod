@@ -1,0 +1,42 @@
+{
+  "schema": "m19-ridge-v1",
+  "base": "56be251b938b9cb8e9ef454893931eecaa2538c4",
+  "inputs": {
+    "benchmarks/m17/split-manifest.json": "ec3a4d6d2c34058aec093a8e3c78d76c953748c3039b0a223c48b7893297aecf",
+    "benchmarks/m12/rows.json": "3fbd4f30f3d0ae5f3dc554f2f5bb5ac05ef059e62146a74e69dbfcb3a8a05bda",
+    "configs/m12.json": "2cc1e0caeced858e805189bda4c963dd952784283e268666aa935e4c79a28184",
+    "configs/m17.json": "befdb69c9038fd9e4434bbee1b1cc8baad7b30814a4b2852539fa2ef04ea0893"
+  },
+  "penalties": [
+    1e-06,
+    1e-05,
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "historical_alphas": [
+    0.1,
+    10.0,
+    100.0
+  ],
+  "fractions": [
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "controls_seed": 314159,
+  "minimum_gain": 0.02,
+  "minimum_positive_families": 3
+}
