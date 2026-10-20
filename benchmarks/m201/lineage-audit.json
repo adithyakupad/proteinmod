@@ -1,0 +1,35 @@
+{
+  "source": "Previously cached author Fig2 source-only projection, not a notebook-output decode",
+  "author_revision": "f978897ef3a278796acc0e87e5cd82d4d0d10082",
+  "source_projection_sha256": "daf6dd3daf11e84b483c7bd72f76294d95292e12803de007346b6c69c425bfde",
+  "excerpt_lines": [
+    20,
+    77
+  ],
+  "input_table": "Fig2/Sparse_DTS_Cores_fitness_replicates.txt",
+  "protein_rule": {
+    "MT": "P0A9X9",
+    "KT": "P01053",
+    "TL": "P06241"
+  },
+  "core_position_frame": "zero-based in code, one-based in M201 genotype audit",
+  "observed_source_operations": [
+    "Read processed table",
+    "Sort by fitness (not executed here and not used for genotype eligibility or set selection)",
+    "Demultiplex by aa_seq prefix",
+    "Extract seven core residues from translated reference constructs"
+  ],
+  "no_source_output_values_read": true,
+  "primary_assay": "Escobedo author processed-data analysis of randomized cores; prior GEO methods link abundancePCA yeast-growth proxy",
+  "processed_fitness_definition": "Column name traced to author input; exact replicate combination, correction/normalization and log base not established from the inspected source excerpt",
+  "sigma_definition": "Separate uncertainty column exists, but exact estimator/unit relation not established; not model predictive uncertainty",
+  "directionality": "Prior abundancePCA biology supports higher abundance/growth as favorable; exact processed-column transformation must be explicitly established before final outcome protocol",
+  "upstream_censoring": "Not established. Do not read WT/count/indel/STOP/score-derived flags or use them for new eligibility; source presence may reflect upstream filtering",
+  "genotype_missingness": "nt_seq is NA for all targeted rows; AA mapping verified, per-allele codon lineage unavailable",
+  "GEO_column_equivalence": "NOT ESTABLISHED; no outcome comparison performed",
+  "member_identity_across_Zenodo_versions": "PASS identical full uncompressed bytes, not merely matching CRC",
+  "new_final_cohort_selected": false,
+  "exact_archived_notebooks": "Pinned16266645 MainFigures/Fig2.ipynb and15302825 Fig1.ipynb; full member CRC/SHA, source cells only, outputs/markdown excluded before JSON decoding",
+  "downstream_source_operations": "Analysis code sorts fitness and applies affine scaling using empirical cohort mode plus reference chosen via Nham/fitness sorting. No code executed, empirical mode/distribution/reference-choice values not read, and none of these transformations/flags adopted.",
+  "upstream_estimator_status": "Both inspected notebooks consume the existing processed table; its original fitness/sigma producer and complete upstream censoring transform were not established by this bounded audit."
+}

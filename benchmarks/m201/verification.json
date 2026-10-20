@@ -1,0 +1,23 @@
+{
+  "base_commit": "402bd8815dcd8857d416f47b1b41fdb922cf471d",
+  "historical_files_byte_identical": 953,
+  "pytest": {
+    "passed": 251,
+    "seconds": 14.58
+  },
+  "ruff_check": "PASS",
+  "ruff_format": {
+    "status": "PASS",
+    "files": 291
+  },
+  "guards": {
+    "verify_readability_historical": "PASS",
+    "verify_sod1": "PASS",
+    "verify_m184": "PASS"
+  },
+  "python": "3.12.15",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "scope": "Software and evidence integrity, not independent ML confirmation. Genotype replay requires ignored M18 graph and genotype caches. No new model fits or predictions. Whole archive MD5 not verified.",
+  "qualification": "NO_GO: upstream processed target/error/censoring lineage incomplete",
+  "ci": "Pending exact-head GitHub checks; see draft PR for final status."
+}

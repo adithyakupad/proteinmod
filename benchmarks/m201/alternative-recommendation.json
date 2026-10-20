@@ -1,0 +1,9 @@
+{
+  "candidate": "HIV envelope family",
+  "recommendation": "Metadata-only next-family audit candidate, NOT an admitted replacement and not a claim of cleared data contents",
+  "primary": "Haddox et al. doi10.7554/eLife.34420, version3",
+  "article_grant": "CC-BY4.0 verified from primary eLife API copyright metadata",
+  "exact_supplementary_items": "elife-34420-supp1-v3.zip etc linked in primary article metadata; no download of supplementary content",
+  "novelty": "Not one of the historical reference proteins enumerated in M182; full Pfam/homology/structure independence must still be audited before admission",
+  "limits": "Article grant/linked filenames are not a completed member-specific rights/phenotype/structure qualification. Do not claim a fully qualified new family without it; no test-outcome fishing. Different functional endpoint would require new prospective scope."
+}

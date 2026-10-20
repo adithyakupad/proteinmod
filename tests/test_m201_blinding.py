@@ -48,3 +48,33 @@ def test_notebook_outputs_never_decoded(monkeypatch):
         '"outputs":[{"text":"POISON"}]},{"cell_type":"markdown","source":"POISON"}]}'
     )
     assert sources == ["x=1"]
+
+
+def test_archived_m201_identity_and_stop_state():
+    import hashlib
+    from pathlib import Path
+
+    root = Path("benchmarks/m201")
+    for path, digest in json.loads((root / "historical_hashes.json").read_text()).items():
+        assert hashlib.sha256(Path(path).read_bytes()).hexdigest() == digest
+    members = json.loads((root / "evidence/member-audit.json").read_text())
+    tables = [r for r in members if "genotype_projection" in r]
+    assert len(tables) == 3 and len({r["member_sha256"] for r in tables}) == 1
+    assert all(r["member_CRC_verified"] and not r["whole_archive_MD5_verified"] for r in tables)
+    assert all(
+        not r["experimental_values_decoded"] and not r["score_flags_decoded"] for r in tables
+    )
+    for record in [16266645, 11175470, 15302825]:
+        metadata = json.loads((root / f"evidence/{record}-metadata.json").read_text())
+        assert metadata["metadata"]["license"]["id"] == "cc-by-4.0"
+        assert "stats" not in metadata and "description" not in metadata["metadata"]
+    audit = json.loads((root / "genotype-structure-audit.json").read_text())
+    assert [r["eligible_unique_nonWT"] for r in audit["families"]] == [8499, 6463]
+    assert all(r["prior_selected_genotypes_present"] == 96 for r in audit["families"])
+    status = json.loads((root / "qualification.json").read_text())
+    assert status["status"] == "NO_GO" and not status["four_family_manifest_issued"]
+    assert not status["outcome_values_decoded"] and not status["score_flags_decoded"]
+    assert status["models_fit"] == status["predictions"] == status["author_emails"] == 0
+    assert not (root / "final_manifest.json").exists()
+    owner = json.loads((root / "SOD1-owner-disposition.json").read_text())
+    assert owner["decision"] == "ACCEPT_FOR_NEW_PROSPECTIVE_CONSIDERATION"

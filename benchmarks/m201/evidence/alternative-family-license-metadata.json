@@ -1,0 +1,51 @@
+{
+  "id": "34420",
+  "version": 3,
+  "doi": "10.7554/eLife.34420",
+  "title": "Mapping mutational effects along the evolutionary landscape of HIV envelope",
+  "copyright": {
+    "license": "CC-BY-4.0",
+    "holder": "Haddox et al.",
+    "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+  },
+  "url": "https://api.elifesciences.org/articles/34420",
+  "scope": "Article bibliographic/license metadata only; no abstract, outcomes, preferences, scores or figures decoded",
+  "additionalFiles": [
+    {
+      "filename": "elife-34420-supp1-v3.zip",
+      "id": "supp1",
+      "label": "Supplementary file 1",
+      "uri": "https://cdn.elifesciences.org/articles/34420/elife-34420-supp1-v3.zip"
+    },
+    {
+      "filename": "elife-34420-supp2-v3.zip",
+      "id": "supp2",
+      "label": "Supplementary file 2",
+      "uri": "https://cdn.elifesciences.org/articles/34420/elife-34420-supp2-v3.zip"
+    },
+    {
+      "filename": "elife-34420-supp3-v3.zip",
+      "id": "supp3",
+      "label": "Supplementary file 3",
+      "uri": "https://cdn.elifesciences.org/articles/34420/elife-34420-supp3-v3.zip"
+    },
+    {
+      "filename": "elife-34420-supp4-v3.txt",
+      "id": "supp4",
+      "label": "Supplementary file 4",
+      "uri": "https://cdn.elifesciences.org/articles/34420/elife-34420-supp4-v3.txt"
+    },
+    {
+      "filename": "elife-34420-supp5-v3.txt",
+      "id": "supp5",
+      "label": "Supplementary file 5",
+      "uri": "https://cdn.elifesciences.org/articles/34420/elife-34420-supp5-v3.txt"
+    },
+    {
+      "filename": "elife-34420-transrepform-v3.docx",
+      "id": "transrepform",
+      "label": "Transparent reporting form",
+      "uri": "https://cdn.elifesciences.org/articles/34420/elife-34420-transrepform-v3.docx"
+    }
+  ]
+}
