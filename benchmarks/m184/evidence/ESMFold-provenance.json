@@ -1,0 +1,49 @@
+{
+  "endpoint": "https://api.esmatlas.com/foldSequence/v1/pdb/",
+  "official_usage": "https://github.com/facebookresearch/esm#esmfold",
+  "request": "POST exact 237aa assay reference as plain body; no labels or mutant sequences",
+  "request_reference_sha256": "dd295bd4496d5e13da909a2c59492f00f923f7957a774feeaafaf8c5c235828c",
+  "response_coordinate_sha256": "39bc266a5726afe082704ae714a9b463a18eb8869ea6d5eae052a3b7335eb462",
+  "response_bytes": 154104,
+  "response_UTC": "2026-10-19T05:25:17Z",
+  "PDB_TITLE": "ESMFOLD V1 PREDICTION FOR INPUT",
+  "served_weight_revision": "not exposed or independently verified",
+  "confidence_status": "API CA field0.20-0.86; do not infer 0-100 normalization from local code or relabel as B-factor",
+  "license_header": "ESM METAGENOMIC ATLAS DATA IS AVAILABLE UNDER A CC-BY-4.0 LICENSE FOR ACADEMIC AND COMMERCIAL USE.",
+  "license_scope": "Returned structure header claim, not source-code relicensing or proof of training-data license",
+  "official_source": {
+    "esmfold-core.py": {
+      "revision": "2b369911bb5b4b0dda914521b9475cad1656b2ac",
+      "sha256": "8a26b5814e5ba96e0a915a8d7cdcbd9cc168e2823c84e061b4169041490df982",
+      "excerpts": [
+        {
+          "line": 16,
+          "text": "from esm.esmfold.v1.categorical_mixture import categorical_lddt"
+        },
+        {
+          "line": 253,
+          "text": "plddt = categorical_lddt(lddt_head[-1], bins=self.lddt_bins)"
+        },
+        {
+          "line": 254,
+          "text": "structure[\"plddt\"] = ("
+        },
+        {
+          "line": 255,
+          "text": "100 * plddt"
+        }
+      ]
+    },
+    "esmfold-misc.py": {
+      "revision": "2b369911bb5b4b0dda914521b9475cad1656b2ac",
+      "sha256": "549484dc90dec7b23d7ca35a69f150aed822a3bfca96c7c9fa6697fb42e7960c",
+      "excerpts": [
+        {
+          "line": 112,
+          "text": "b_factors=output[\"plddt\"][i],"
+        }
+      ]
+    }
+  },
+  "prediction_is_diagnostic_not_confirmation": true
+}

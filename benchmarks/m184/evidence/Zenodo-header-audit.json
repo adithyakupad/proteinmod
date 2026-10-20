@@ -1,0 +1,19 @@
+{
+  "archive": {
+    "id": "931f25f0-430f-4b6c-9a05-9b7ea885e011",
+    "key": "Escobedo_et_al_protein_randomization_data_files.zip",
+    "size": 2226162297,
+    "checksum": "md5:e7d6433bf7cca53071836a097ca63069",
+    "links": {
+      "self": "https://zenodo.org/api/records/16266645/files/Escobedo_et_al_protein_randomization_data_files.zip/content"
+    }
+  },
+  "member": "zenodo/Fig2/Sparse_DTS_Cores_fitness_replicates.txt",
+  "header": "nt_seq\taa_seq\tNham_nt\tNham_aa\tNmut_codons\tWT\tindel\tSTOP\tSTOP_readthrough\tcount_e1_s0\tcount_e2_s0\tcount_e1_s1\tcount_e2_s1\tmean_count\tfitness1_uncorr\tfitness2_uncorr\tsigma1_uncorr\tsigma2_uncorr\tfitness\tsigma\tgrowthrate1\tgrowthrate1_sigma\tgrowthrate2\tgrowthrate2_sigma\tgrowthrate\tgrowthrate_sigma",
+  "header_sha256": "a571f91b01c86434ad1af01b7b46ef0cc3431856e001cff07c20be93646a0ef0",
+  "downloaded_range_bytes": 487803,
+  "whole_member_CRC_verified": false,
+  "whole_archive_MD5_verified": false,
+  "outcome_values_decoded": false,
+  "scope": "Only first header line decoded. Same uncompressed length/CRC as old Fig1 processed table; neither byte nor documented column transformation establishes identity to GEO raw-score item."
+}

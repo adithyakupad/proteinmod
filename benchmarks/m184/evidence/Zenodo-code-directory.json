@@ -1,0 +1,665 @@
+{
+  "source": {
+    "id": "6f449871-75c5-45f4-a2fc-ebc61dabdec6",
+    "key": "combinatorialcores_github_repo.zip",
+    "size": 19726227,
+    "checksum": "md5:6f0626ae43afba3b03087593197dc3a3",
+    "links": {
+      "self": "https://zenodo.org/api/records/16266645/files/combinatorialcores_github_repo.zip/content"
+    }
+  },
+  "downloaded_bytes": 11557,
+  "entries": [
+    {
+      "name": "combinatorialcores/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 0
+    },
+    {
+      "name": "combinatorialcores/README.md",
+      "bytes": 1223,
+      "crc32": 489371282,
+      "compressed_bytes": 684,
+      "offset": 81
+    },
+    {
+      "name": "combinatorialcores/LibDesignScripts/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 871
+    },
+    {
+      "name": "combinatorialcores/Environments/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 969
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 1063
+    },
+    {
+      "name": "combinatorialcores/MainFigures/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 1165
+    },
+    {
+      "name": "combinatorialcores/.git/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 1258
+    },
+    {
+      "name": "combinatorialcores/LibDesignScripts/DegenerateCodons.py",
+      "bytes": 2089,
+      "crc32": 309024569,
+      "compressed_bytes": 781,
+      "offset": 1344
+    },
+    {
+      "name": "combinatorialcores/LibDesignScripts/CoreFinder.py",
+      "bytes": 13618,
+      "crc32": 1374216508,
+      "compressed_bytes": 3598,
+      "offset": 2258
+    },
+    {
+      "name": "combinatorialcores/LibDesignScripts/DegenerateCodonMapSCerevisiaeUsage.py",
+      "bytes": 5102,
+      "crc32": 2989808737,
+      "compressed_bytes": 1690,
+      "offset": 5983
+    },
+    {
+      "name": "combinatorialcores/LibDesignScripts/FindSuppressors_logregs.py",
+      "bytes": 12452,
+      "crc32": 650740178,
+      "compressed_bytes": 3513,
+      "offset": 7824
+    },
+    {
+      "name": "combinatorialcores/Environments/dimsum_env_full.yml",
+      "bytes": 7861,
+      "crc32": 3081305769,
+      "compressed_bytes": 2696,
+      "offset": 11477
+    },
+    {
+      "name": "combinatorialcores/Environments/pymochi-env.yml",
+      "bytes": 351,
+      "crc32": 4085821087,
+      "compressed_bytes": 207,
+      "offset": 14302
+    },
+    {
+      "name": "combinatorialcores/Environments/foldseek_env.yml",
+      "bytes": 103,
+      "crc32": 749267604,
+      "compressed_bytes": 75,
+      "offset": 14634
+    },
+    {
+      "name": "combinatorialcores/Environments/bio-env.yml",
+      "bytes": 422,
+      "crc32": 2282965160,
+      "compressed_bytes": 200,
+      "offset": 14835
+    },
+    {
+      "name": "combinatorialcores/Environments/foldseek_env_full.yml",
+      "bytes": 2751,
+      "crc32": 2839485273,
+      "compressed_bytes": 1171,
+      "offset": 15156
+    },
+    {
+      "name": "combinatorialcores/Environments/pymochi_env_full.yml",
+      "bytes": 8358,
+      "crc32": 4053788419,
+      "compressed_bytes": 3162,
+      "offset": 16458
+    },
+    {
+      "name": "combinatorialcores/Environments/bio_env_full.yml",
+      "bytes": 9285,
+      "crc32": 1309030439,
+      "compressed_bytes": 3575,
+      "offset": 19750
+    },
+    {
+      "name": "combinatorialcores/Environments/dimsum-env.yml",
+      "bytes": 110,
+      "crc32": 704567897,
+      "compressed_bytes": 84,
+      "offset": 23451
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS18.ipynb",
+      "bytes": 246154,
+      "crc32": 530090988,
+      "compressed_bytes": 172225,
+      "offset": 23659
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS23.ipynb",
+      "bytes": 358628,
+      "crc32": 2840426134,
+      "compressed_bytes": 215334,
+      "offset": 196014
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS9.ipynb",
+      "bytes": 273653,
+      "crc32": 940175425,
+      "compressed_bytes": 173042,
+      "offset": 411478
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS21.ipynb",
+      "bytes": 377041,
+      "crc32": 1842369340,
+      "compressed_bytes": 259839,
+      "offset": 584649
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS22.ipynb",
+      "bytes": 543558,
+      "crc32": 3964105690,
+      "compressed_bytes": 368984,
+      "offset": 844618
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS20.ipynb",
+      "bytes": 201777,
+      "crc32": 1543718200,
+      "compressed_bytes": 132832,
+      "offset": 1213732
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS11.ipynb",
+      "bytes": 461675,
+      "crc32": 540013546,
+      "compressed_bytes": 310039,
+      "offset": 1346694
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS4.ipynb",
+      "bytes": 573800,
+      "crc32": 3778706924,
+      "compressed_bytes": 351164,
+      "offset": 1656863
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS17.ipynb",
+      "bytes": 125273,
+      "crc32": 4185742283,
+      "compressed_bytes": 86593,
+      "offset": 2008156
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS25.ipynb",
+      "bytes": 891730,
+      "crc32": 3234442099,
+      "compressed_bytes": 581188,
+      "offset": 2094879
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS16.ipynb",
+      "bytes": 194630,
+      "crc32": 2767330191,
+      "compressed_bytes": 121372,
+      "offset": 2676197
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS3.ipynb",
+      "bytes": 507451,
+      "crc32": 2623919757,
+      "compressed_bytes": 344708,
+      "offset": 2797699
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS12.ipynb",
+      "bytes": 460311,
+      "crc32": 20379496,
+      "compressed_bytes": 318954,
+      "offset": 3142536
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS24.ipynb",
+      "bytes": 513036,
+      "crc32": 1421765550,
+      "compressed_bytes": 338488,
+      "offset": 3461620
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS13.ipynb",
+      "bytes": 405180,
+      "crc32": 2940160217,
+      "compressed_bytes": 219832,
+      "offset": 3800238
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS14.ipynb",
+      "bytes": 338332,
+      "crc32": 728547586,
+      "compressed_bytes": 224416,
+      "offset": 4020200
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS7.ipynb",
+      "bytes": 363982,
+      "crc32": 349864326,
+      "compressed_bytes": 173091,
+      "offset": 4244746
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS5.ipynb",
+      "bytes": 243731,
+      "crc32": 3412532549,
+      "compressed_bytes": 155602,
+      "offset": 4417966
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS10.ipynb",
+      "bytes": 265295,
+      "crc32": 2282875821,
+      "compressed_bytes": 189778,
+      "offset": 4573697
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS15.ipynb",
+      "bytes": 281881,
+      "crc32": 284745832,
+      "compressed_bytes": 177967,
+      "offset": 4763605
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS2.ipynb",
+      "bytes": 429975,
+      "crc32": 2827417590,
+      "compressed_bytes": 236639,
+      "offset": 4941702
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS1.ipynb",
+      "bytes": 352864,
+      "crc32": 1497966628,
+      "compressed_bytes": 204377,
+      "offset": 5178470
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS6.ipynb",
+      "bytes": 365559,
+      "crc32": 884754726,
+      "compressed_bytes": 173990,
+      "offset": 5382976
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS19.ipynb",
+      "bytes": 414524,
+      "crc32": 3105735704,
+      "compressed_bytes": 294558,
+      "offset": 5557095
+    },
+    {
+      "name": "combinatorialcores/MainFigures/Fig5.ipynb",
+      "bytes": 568883,
+      "crc32": 2271359427,
+      "compressed_bytes": 336377,
+      "offset": 5851783
+    },
+    {
+      "name": "combinatorialcores/MainFigures/Fig7.ipynb",
+      "bytes": 463345,
+      "crc32": 1039741747,
+      "compressed_bytes": 274921,
+      "offset": 6188279
+    },
+    {
+      "name": "combinatorialcores/MainFigures/Fig4.ipynb",
+      "bytes": 172279,
+      "crc32": 2085384257,
+      "compressed_bytes": 106544,
+      "offset": 6463319
+    },
+    {
+      "name": "combinatorialcores/MainFigures/Fig6.ipynb",
+      "bytes": 410264,
+      "crc32": 4133997335,
+      "compressed_bytes": 249245,
+      "offset": 6569982
+    },
+    {
+      "name": "combinatorialcores/MainFigures/Fig3.ipynb",
+      "bytes": 682700,
+      "crc32": 2488837834,
+      "compressed_bytes": 415458,
+      "offset": 6819346
+    },
+    {
+      "name": "combinatorialcores/MainFigures/Fig2.ipynb",
+      "bytes": 552486,
+      "crc32": 1566978875,
+      "compressed_bytes": 348939,
+      "offset": 7234923
+    },
+    {
+      "name": "combinatorialcores/.git/branches/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 7583981
+    },
+    {
+      "name": "combinatorialcores/.git/packed-refs",
+      "bytes": 112,
+      "crc32": 2268604804,
+      "compressed_bytes": 102,
+      "offset": 7584076
+    },
+    {
+      "name": "combinatorialcores/.git/HEAD",
+      "bytes": 21,
+      "crc32": 1466196917,
+      "compressed_bytes": 23,
+      "offset": 7584291
+    },
+    {
+      "name": "combinatorialcores/.git/description",
+      "bytes": 73,
+      "crc32": 520588087,
+      "compressed_bytes": 63,
+      "offset": 7584420
+    },
+    {
+      "name": "combinatorialcores/.git/info/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 7584596
+    },
+    {
+      "name": "combinatorialcores/.git/refs/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 7584687
+    },
+    {
+      "name": "combinatorialcores/.git/index",
+      "bytes": 4330,
+      "crc32": 3341313316,
+      "compressed_bytes": 2146,
+      "offset": 7584778
+    },
+    {
+      "name": "combinatorialcores/.git/logs/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 7587031
+    },
+    {
+      "name": "combinatorialcores/.git/config",
+      "bytes": 274,
+      "crc32": 2863392566,
+      "compressed_bytes": 180,
+      "offset": 7587122
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 7587410
+    },
+    {
+      "name": "combinatorialcores/.git/objects/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 7587502
+    },
+    {
+      "name": "combinatorialcores/.git/info/exclude",
+      "bytes": 240,
+      "crc32": 567098743,
+      "compressed_bytes": 173,
+      "offset": 7587596
+    },
+    {
+      "name": "combinatorialcores/.git/refs/heads/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 7587883
+    },
+    {
+      "name": "combinatorialcores/.git/refs/remotes/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 7587980
+    },
+    {
+      "name": "combinatorialcores/.git/refs/tags/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 7588079
+    },
+    {
+      "name": "combinatorialcores/.git/logs/HEAD",
+      "bytes": 218,
+      "crc32": 1396632238,
+      "compressed_bytes": 153,
+      "offset": 7588175
+    },
+    {
+      "name": "combinatorialcores/.git/logs/refs/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 7588439
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/update.sample",
+      "bytes": 3654,
+      "crc32": 3036038501,
+      "compressed_bytes": 1176,
+      "offset": 7588535
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/pre-commit.sample",
+      "bytes": 1653,
+      "crc32": 1511071270,
+      "compressed_bytes": 907,
+      "offset": 7589832
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/pre-push.sample",
+      "bytes": 1378,
+      "crc32": 1678100802,
+      "compressed_bytes": 704,
+      "offset": 7590864
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/applypatch-msg.sample",
+      "bytes": 482,
+      "crc32": 2790439374,
+      "compressed_bytes": 282,
+      "offset": 7591691
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/pre-merge-commit.sample",
+      "bytes": 420,
+      "crc32": 1258580430,
+      "compressed_bytes": 258,
+      "offset": 7592102
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/pre-applypatch.sample",
+      "bytes": 428,
+      "crc32": 539341827,
+      "compressed_bytes": 267,
+      "offset": 7592491
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/pre-receive.sample",
+      "bytes": 548,
+      "crc32": 693502911,
+      "compressed_bytes": 333,
+      "offset": 7592887
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/post-update.sample",
+      "bytes": 193,
+      "crc32": 1687533875,
+      "compressed_bytes": 140,
+      "offset": 7593346
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/pre-rebase.sample",
+      "bytes": 4902,
+      "crc32": 2680091518,
+      "compressed_bytes": 2015,
+      "offset": 7593612
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/commit-msg.sample",
+      "bytes": 900,
+      "crc32": 1202292485,
+      "compressed_bytes": 506,
+      "offset": 7595752
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/fsmonitor-watchman.sample",
+      "bytes": 4726,
+      "crc32": 2034007279,
+      "compressed_bytes": 1814,
+      "offset": 7596383
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/sendemail-validate.sample",
+      "bytes": 2312,
+      "crc32": 4062086765,
+      "compressed_bytes": 978,
+      "offset": 7598330
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/prepare-commit-msg.sample",
+      "bytes": 1496,
+      "crc32": 3288647019,
+      "compressed_bytes": 744,
+      "offset": 7599441
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/push-to-checkout.sample",
+      "bytes": 2787,
+      "crc32": 1571350444,
+      "compressed_bytes": 1257,
+      "offset": 7600318
+    },
+    {
+      "name": "combinatorialcores/.git/objects/pack/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 7601706
+    },
+    {
+      "name": "combinatorialcores/.git/objects/info/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 7601805
+    },
+    {
+      "name": "combinatorialcores/.git/refs/heads/main",
+      "bytes": 41,
+      "crc32": 1331475912,
+      "compressed_bytes": 42,
+      "offset": 7601904
+    },
+    {
+      "name": "combinatorialcores/.git/refs/remotes/origin/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 7602063
+    },
+    {
+      "name": "combinatorialcores/.git/logs/refs/heads/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 7602169
+    },
+    {
+      "name": "combinatorialcores/.git/logs/refs/remotes/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 7602271
+    },
+    {
+      "name": "combinatorialcores/.git/objects/pack/pack-2cc34cd3156501258b6a71ea7be8db593605e209.pack",
+      "bytes": 12100791,
+      "crc32": 297851302,
+      "compressed_bytes": 12104267,
+      "offset": 7602375
+    },
+    {
+      "name": "combinatorialcores/.git/objects/pack/pack-2cc34cd3156501258b6a71ea7be8db593605e209.rev",
+      "bytes": 912,
+      "crc32": 1934766678,
+      "compressed_bytes": 404,
+      "offset": 19706807
+    },
+    {
+      "name": "combinatorialcores/.git/objects/pack/pack-2cc34cd3156501258b6a71ea7be8db593605e209.idx",
+      "bytes": 7092,
+      "crc32": 945707564,
+      "compressed_bytes": 6323,
+      "offset": 19707375
+    },
+    {
+      "name": "combinatorialcores/.git/refs/remotes/origin/HEAD",
+      "bytes": 30,
+      "crc32": 1698884932,
+      "compressed_bytes": 32,
+      "offset": 19713862
+    },
+    {
+      "name": "combinatorialcores/.git/logs/refs/heads/main",
+      "bytes": 218,
+      "crc32": 1396632238,
+      "compressed_bytes": 153,
+      "offset": 19714020
+    },
+    {
+      "name": "combinatorialcores/.git/logs/refs/remotes/origin/",
+      "bytes": 0,
+      "crc32": 0,
+      "compressed_bytes": 0,
+      "offset": 19714295
+    },
+    {
+      "name": "combinatorialcores/.git/logs/refs/remotes/origin/HEAD",
+      "bytes": 218,
+      "crc32": 1396632238,
+      "compressed_bytes": 153,
+      "offset": 19714406
+    }
+  ]
+}

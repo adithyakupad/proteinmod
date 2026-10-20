@@ -1,0 +1,10 @@
+{
+  "search_endpoint": "https://search.rcsb.org/rcsbsearch/v2/query",
+  "metadata_endpoint": "https://data.rcsb.org/graphql",
+  "reference": "SKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTLSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK",
+  "entities": 732,
+  "exact_segment_entities": [],
+  "inventory_sha256": "327fc7c301c4679e3b76558c1fa5727e9233d5dab6e28c619c4b6da4885eef46",
+  "candidate_target_cells_accessed": false,
+  "scope": "All returned95%-identity sequence hits, not an exhaustive proof over every structure database. Exact polymer candidates still require coordinate/chemical mapping."
+}

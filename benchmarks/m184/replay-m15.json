@@ -1,0 +1,14 @@
+{
+  "fold": "PF00018",
+  "predictions": 192,
+  "prediction_array": {
+    "shape": [
+      192
+    ],
+    "dtype": "float64",
+    "sha256": "9a0f744096a9177b337e02becf86b0fc5744a70c52c09d1d4047eb0f0cfced23"
+  },
+  "maximum_historical_error": 0.0,
+  "checkpoint_sha256": "ce9c93d404dcfa7180162c4950110837b5f36f1fea4636e569ecab6c72145bd2",
+  "original_batch_size": 32
+}

@@ -11,6 +11,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/verify_readability.py --historical --stdlib-only
+      - run: python scripts/verify_m184.py
   offline-tests:
     runs-on: ubuntu-latest
     strategy:

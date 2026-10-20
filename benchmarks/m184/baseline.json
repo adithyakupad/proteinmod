@@ -1,0 +1,10 @@
+{
+  "parent_head": "f7df45bfc94cbbeadfeaf2538f4a85ca88d37c2f",
+  "initial_branch": "codex/readability-refactor",
+  "initial_working_tree": "clean",
+  "parent_CI_successes": 12,
+  "dedicated_branch": "codex/m18-4-wt-background-permissions",
+  "protected_parent_files": 833,
+  "only_permitted_parent_change": ".github/workflows/ci.yml adds new offline guard; existing CI checks retained",
+  "target_values_read": 0
+}

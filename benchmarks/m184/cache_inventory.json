@@ -1,0 +1,38 @@
+{
+  "data/cache/m184/source/ESMFold-response-headers.txt": {
+    "sha256": "6804f53572fb90f0613ab77ce3e04c1802b56e0da8d6fd020e0b54232b451864",
+    "bytes": 486
+  },
+  "data/cache/m184/source/ESMFold-response.txt": {
+    "sha256": "39bc266a5726afe082704ae714a9b463a18eb8869ea6d5eae052a3b7335eb462",
+    "bytes": 154104
+  },
+  "data/cache/m184/source/author-tree.json": {
+    "sha256": "07f5beae736141ffd24c321a8dac0211acda4593dee509309151256987a29ceb",
+    "bytes": 11975
+  },
+  "data/cache/m184/source/Zenodo-concept.json": {
+    "sha256": "d3eb0d7c3629a47f46df8944a29446acc2d52bb87cca99557b96c5c3403470b4",
+    "bytes": 5299
+  },
+  "data/cache/m184/source/GFP-all-hits.json": {
+    "sha256": "79e469cd28cda5f13e66a62de2b041a1babc53139cdb6c6349032726620631f5",
+    "bytes": 50082
+  },
+  "data/cache/m184/source/AF-P42212-metadata.json": {
+    "sha256": "3882b87df875a9cdd61f8eecc528043ee29d9f6000efd6b2e2e387157f009f35",
+    "bytes": 1935
+  },
+  "data/cache/m184/source/GFP-ESMFold-v1.pdb": {
+    "sha256": "39bc266a5726afe082704ae714a9b463a18eb8869ea6d5eae052a3b7335eb462",
+    "bytes": 154104
+  },
+  "data/cache/m184/source/esmfold-core.py": {
+    "sha256": "8a26b5814e5ba96e0a915a8d7cdcbd9cc168e2823c84e061b4169041490df982",
+    "bytes": 13948
+  },
+  "data/cache/m184/source/esmfold-misc.py": {
+    "sha256": "549484dc90dec7b23d7ca35a69f150aed822a3bfca96c7c9fa6697fb42e7960c",
+    "bytes": 10194
+  }
+}

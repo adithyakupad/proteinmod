@@ -1,0 +1,45 @@
+{
+  "admission": "BLOCKED",
+  "parent_PR": 46,
+  "parent_head": "f7df45bfc94cbbeadfeaf2538f4a85ca88d37c2f",
+  "preregistration_commit": "35a744f8bece849da6224c0c40554a40a6a9b025",
+  "families": {
+    "P0A9X9": {
+      "family": "PF00313",
+      "geometry": "PASS original masked cohort",
+      "file_specific_permission": "PARTIAL"
+    },
+    "P01053": {
+      "family": "PF00280",
+      "geometry": "PASS original masked cohort",
+      "file_specific_permission": "PARTIAL"
+    },
+    "TEM1": {
+      "family": "PF13354",
+      "geometry": "PASS mature-reference mask",
+      "noncommercial_permission": "PASS preserved M182 item linkage"
+    },
+    "GFP": {
+      "family": "PF01353",
+      "dataset_permission": "PASS preserved Figshare item linkage",
+      "original_1GFL_masked_geometry": "PASS extraction, background not admitted",
+      "exact_WT_prediction_mapping": "PASS237/237",
+      "WT_structure_background_qualification": "PARTIAL; predicted alternate source not admitted"
+    }
+  },
+  "blockers": [
+    "No complete exact assay segment in732 returned RCSB polymer entities. New exact-sequence ESMFold prediction passes strict M2 but served weight revision/confidence normalization and mature chromophore geometry are not verified. Large geometry differences are diagnostic, not a new rejection threshold. No prospective final-source amendment/final confirmation manifest issued. Original1GFL L63F/Q79R background remains unqualified.",
+    "GEO GSE266299 exact raw-score item/fitness_raw/sigma_raw lacks explicit file-specific permission or documented export lineage to CC-BY Zenodo16266645. Full GEO disclaimer and latest licensed archive metadata/header/author README were inspected; generic accessibility and common experiment provenance do not establish the required item-specific grant under the preserved gate."
+  ],
+  "common_candidate_count": 384,
+  "four_family_denominator_retained": true,
+  "original_similarity_flags_retained": 4,
+  "M17_H1_H5_and_budgets_unchanged": true,
+  "final_manifest_issued": false,
+  "candidate_target_cells_accessed": false,
+  "confirmation_runs": 0,
+  "models_fit_on_external_outcomes": 0,
+  "permission_request": "draft_only_unsent",
+  "release_tag_created": false,
+  "source_code_license": "Existing parent MIT LICENSE preserved byte-identically; separate from upstream dataset/model permissions"
+}
