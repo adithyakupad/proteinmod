@@ -1,0 +1,2739 @@
+{
+  "coordinate_sha256": "378722d38fea43812a185c331bb35e2fa2fd456d4e74d93bc7ab945698088145",
+  "reference": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+  "reference_sha256": "c56903dca972575883387736442f68a5206604d08604ddeb8dbc2e3f25a9f76d",
+  "strict_full_reference": [
+    {
+      "chain": "A",
+      "audit": {
+        "accepted": false,
+        "errors": [
+          "C-alpha reference coverage below threshold"
+        ],
+        "chains": [
+          {
+            "chain": "A",
+            "identity": 1.0,
+            "aligned_coverage": 0.9935064935064936,
+            "score": 453.0,
+            "sequence_source": "mmCIF polymer scheme + atom_site label/auth mapping"
+          },
+          {
+            "chain": "F",
+            "identity": 1.0,
+            "aligned_coverage": 0.9935064935064936,
+            "score": 453.0,
+            "sequence_source": "mmCIF polymer scheme + atom_site label/auth mapping"
+          }
+        ],
+        "selected_chain": "A",
+        "reference_length": 154,
+        "coordinate_coverage": 0.9935064935064936,
+        "aligned_coverage": 0.9935064935064936,
+        "aligned_identity": 1.0,
+        "exact_compatible_positions": 153,
+        "differences": [],
+        "missing_positions": [
+          1
+        ],
+        "alignment": "target            0 MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTS\n                  0 -|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery             0 -ATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTS\n\ntarget           60 AGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVV\n                 60 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery            59 AGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVV\n\ntarget          120 HEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ 154\n                120 |||||||||||||||||||||||||||||||||| 154\nquery           119 HEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ 153\n",
+        "construct_insertions": []
+      }
+    },
+    {
+      "chain": "F",
+      "audit": {
+        "accepted": false,
+        "errors": [
+          "C-alpha reference coverage below threshold"
+        ],
+        "chains": [
+          {
+            "chain": "A",
+            "identity": 1.0,
+            "aligned_coverage": 0.9935064935064936,
+            "score": 453.0,
+            "sequence_source": "mmCIF polymer scheme + atom_site label/auth mapping"
+          },
+          {
+            "chain": "F",
+            "identity": 1.0,
+            "aligned_coverage": 0.9935064935064936,
+            "score": 453.0,
+            "sequence_source": "mmCIF polymer scheme + atom_site label/auth mapping"
+          }
+        ],
+        "selected_chain": "F",
+        "reference_length": 154,
+        "coordinate_coverage": 0.9935064935064936,
+        "aligned_coverage": 0.9935064935064936,
+        "aligned_identity": 1.0,
+        "exact_compatible_positions": 153,
+        "differences": [],
+        "missing_positions": [
+          1
+        ],
+        "alignment": "target            0 MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTS\n                  0 -|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery             0 -ATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTS\n\ntarget           60 AGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVV\n                 60 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery            59 AGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVV\n\ntarget          120 HEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ 154\n                120 |||||||||||||||||||||||||||||||||| 154\nquery           119 HEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ 153\n",
+        "construct_insertions": []
+      }
+    }
+  ],
+  "selected_chain": "A",
+  "masked": {
+    "scope": "masked-reference-v1",
+    "masked_accepted": true,
+    "full_reference_M2_audit": {
+      "accepted": false,
+      "errors": [
+        "C-alpha reference coverage below threshold"
+      ],
+      "chains": [
+        {
+          "chain": "A",
+          "identity": 1.0,
+          "aligned_coverage": 0.9935064935064936,
+          "score": 453.0,
+          "sequence_source": "mmCIF polymer scheme + atom_site label/auth mapping"
+        },
+        {
+          "chain": "F",
+          "identity": 1.0,
+          "aligned_coverage": 0.9935064935064936,
+          "score": 453.0,
+          "sequence_source": "mmCIF polymer scheme + atom_site label/auth mapping"
+        }
+      ],
+      "selected_chain": "A",
+      "reference_length": 154,
+      "coordinate_coverage": 0.9935064935064936,
+      "aligned_coverage": 0.9935064935064936,
+      "aligned_identity": 1.0,
+      "exact_compatible_positions": 153,
+      "differences": [],
+      "missing_positions": [
+        1
+      ],
+      "alignment": "target            0 MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTS\n                  0 -|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery             0 -ATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTS\n\ntarget           60 AGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVV\n                 60 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\nquery            59 AGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVV\n\ntarget          120 HEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ 154\n                120 |||||||||||||||||||||||||||||||||| 154\nquery           119 HEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ 153\n",
+      "construct_insertions": []
+    },
+    "reference": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+    "coordinate_sha256": "378722d38fea43812a185c331bb35e2fa2fd456d4e74d93bc7ab945698088145",
+    "eligible_positions": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154
+    ],
+    "eligible_identity": 1.0,
+    "eligible_CA_coverage": 1.0,
+    "excluded_positions": [
+      1
+    ],
+    "nodes": 153,
+    "undirected_edges": 827,
+    "connected_components": 1,
+    "isolated_nodes": 0,
+    "descriptor_missing_nodes": {
+      "rsa": 0,
+      "contact_degree": 0,
+      "nonlocal_contact_degree": 0,
+      "bfactor_a2": 0,
+      "plddt": 153
+    },
+    "confidence_semantics": "experimental_bfactor",
+    "ASA": {
+      "algorithm": "Biopython Shrake-Rupley",
+      "probe_radius_a": 1.4,
+      "sphere_points": 960,
+      "environment": "entire selected deposited model, occupied heavy atoms including ligands/other chains; no waters/H/D; no symmetry mates",
+      "rsa_table": "Tien et al. 2013 theoretical maxima (Wilke), doi:10.1371/journal.pone.0080635",
+      "max_asa_a2": {
+        "A": 129,
+        "C": 167,
+        "D": 193,
+        "E": 223,
+        "F": 240,
+        "G": 104,
+        "H": 224,
+        "I": 197,
+        "K": 236,
+        "L": 201,
+        "M": 224,
+        "N": 195,
+        "P": 159,
+        "Q": 225,
+        "R": 274,
+        "S": 155,
+        "T": 172,
+        "V": 174,
+        "W": 285,
+        "Y": 263
+      },
+      "rsa_clipped": false,
+      "secondary_structure": {
+        "status": "disabled"
+      }
+    },
+    "contacts": "eligible induced graph; no invented WT atoms; deposited context ASA",
+    "backbone_breaks": [],
+    "reference_construct_sequence_compatible": true
+  },
+  "independent_8a_spatial_edges_verified": true,
+  "model_input_dimensions": {
+    "static": 34,
+    "dynamic": 25,
+    "ridge": 270,
+    "edge": 29
+  },
+  "finite_chemical_edge_rows": 1654,
+  "synthetic_multi_mutation_order_invariance": true,
+  "genotypes": 2906,
+  "assay_and_RefSeq_HGVS_agreement": 2906,
+  "canonical_structurally_eligible": 2632,
+  "exclusion_counts": {
+    "synonymous_or_WT": 135,
+    "stop": 139
+  },
+  "exclusions": [
+    {
+      "id": "urn:mavedb:00001217-a-3#1",
+      "hgvs_pro": "p.Ala124=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#17",
+      "hgvs_pro": "p.Ala124Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#22",
+      "hgvs_pro": "p.Ala141=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#38",
+      "hgvs_pro": "p.Ala141Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#43",
+      "hgvs_pro": "p.Ala146=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#57",
+      "hgvs_pro": "p.Ala153=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#71",
+      "hgvs_pro": "p.Ala153Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#76",
+      "hgvs_pro": "p.Ala2=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#89",
+      "hgvs_pro": "p.Ala2Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#94",
+      "hgvs_pro": "p.Ala5=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#95",
+      "hgvs_pro": "p.Ala56=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#111",
+      "hgvs_pro": "p.Ala56Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#131",
+      "hgvs_pro": "p.Ala5Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#136",
+      "hgvs_pro": "p.Ala61=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#149",
+      "hgvs_pro": "p.Ala61Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#154",
+      "hgvs_pro": "p.Ala90=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#170",
+      "hgvs_pro": "p.Ala90Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#175",
+      "hgvs_pro": "p.Ala96=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#188",
+      "hgvs_pro": "p.Arg116=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#204",
+      "hgvs_pro": "p.Arg116Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#209",
+      "hgvs_pro": "p.Arg144=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#225",
+      "hgvs_pro": "p.Arg144Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#230",
+      "hgvs_pro": "p.Arg70=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#244",
+      "hgvs_pro": "p.Arg70Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#249",
+      "hgvs_pro": "p.Arg80=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#265",
+      "hgvs_pro": "p.Arg80Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#285",
+      "hgvs_pro": "p.Asn132Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#290",
+      "hgvs_pro": "p.Asn140=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#305",
+      "hgvs_pro": "p.Asn140Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#310",
+      "hgvs_pro": "p.Asn20=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#319",
+      "hgvs_pro": "p.Asn20Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#322",
+      "hgvs_pro": "p.Asn27=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#336",
+      "hgvs_pro": "p.Asn27Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#341",
+      "hgvs_pro": "p.Asn54=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#357",
+      "hgvs_pro": "p.Asn54Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#362",
+      "hgvs_pro": "p.Asn66=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#378",
+      "hgvs_pro": "p.Asn66Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#383",
+      "hgvs_pro": "p.Asn87=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#399",
+      "hgvs_pro": "p.Asn87Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#419",
+      "hgvs_pro": "p.Asp102Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#424",
+      "hgvs_pro": "p.Asp110=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#442",
+      "hgvs_pro": "p.Asp125=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#458",
+      "hgvs_pro": "p.Asp125Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#463",
+      "hgvs_pro": "p.Asp126=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#478",
+      "hgvs_pro": "p.Asp126Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#498",
+      "hgvs_pro": "p.Asp12Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#527",
+      "hgvs_pro": "p.Asp77Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#532",
+      "hgvs_pro": "p.Asp84=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#548",
+      "hgvs_pro": "p.Asp84Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#553",
+      "hgvs_pro": "p.Asp91=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#564",
+      "hgvs_pro": "p.Asp91Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#568",
+      "hgvs_pro": "p.Asp93=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#584",
+      "hgvs_pro": "p.Asp93Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#589",
+      "hgvs_pro": "p.Asp97=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#604",
+      "hgvs_pro": "p.Asp97Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#609",
+      "hgvs_pro": "p.Cys112=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#625",
+      "hgvs_pro": "p.Cys112Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#630",
+      "hgvs_pro": "p.Cys147=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#646",
+      "hgvs_pro": "p.Cys147Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#651",
+      "hgvs_pro": "p.Cys58=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#661",
+      "hgvs_pro": "p.Cys58Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#665",
+      "hgvs_pro": "p.Cys7=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#680",
+      "hgvs_pro": "p.Cys7Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#685",
+      "hgvs_pro": "p.Gln16=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#700",
+      "hgvs_pro": "p.Gln16Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#718",
+      "hgvs_pro": "p.Gln23Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#723",
+      "hgvs_pro": "p.Glu101=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#736",
+      "hgvs_pro": "p.Glu101Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#741",
+      "hgvs_pro": "p.Glu122=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#757",
+      "hgvs_pro": "p.Glu122Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#762",
+      "hgvs_pro": "p.Glu133=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#778",
+      "hgvs_pro": "p.Glu133Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#783",
+      "hgvs_pro": "p.Glu134=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#806",
+      "hgvs_pro": "p.Glu22Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#811",
+      "hgvs_pro": "p.Glu25=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#821",
+      "hgvs_pro": "p.Glu25Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#825",
+      "hgvs_pro": "p.Glu41=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#839",
+      "hgvs_pro": "p.Glu41Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#852",
+      "hgvs_pro": "p.Glu50Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#855",
+      "hgvs_pro": "p.Glu78=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#870",
+      "hgvs_pro": "p.Glu78Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#890",
+      "hgvs_pro": "p.Glu79Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#895",
+      "hgvs_pro": "p.Gly109=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#911",
+      "hgvs_pro": "p.Gly109Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#915",
+      "hgvs_pro": "p.Gly11=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#916",
+      "hgvs_pro": "p.Gly115=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#932",
+      "hgvs_pro": "p.Gly115Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#950",
+      "hgvs_pro": "p.Gly11Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#955",
+      "hgvs_pro": "p.Gly128=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#966",
+      "hgvs_pro": "p.Gly128Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#969",
+      "hgvs_pro": "p.Gly13=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#970",
+      "hgvs_pro": "p.Gly130=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#986",
+      "hgvs_pro": "p.Gly130Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#991",
+      "hgvs_pro": "p.Gly131=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1002",
+      "hgvs_pro": "p.Gly131Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1007",
+      "hgvs_pro": "p.Gly139=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1023",
+      "hgvs_pro": "p.Gly139Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1042",
+      "hgvs_pro": "p.Gly13Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1046",
+      "hgvs_pro": "p.Gly142=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1059",
+      "hgvs_pro": "p.Gly142Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1064",
+      "hgvs_pro": "p.Gly148=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1080",
+      "hgvs_pro": "p.Gly148Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1085",
+      "hgvs_pro": "p.Gly151=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1102",
+      "hgvs_pro": "p.Gly17=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1116",
+      "hgvs_pro": "p.Gly17Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1121",
+      "hgvs_pro": "p.Gly28=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1128",
+      "hgvs_pro": "p.Gly34=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1143",
+      "hgvs_pro": "p.Gly34Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1148",
+      "hgvs_pro": "p.Gly38=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1162",
+      "hgvs_pro": "p.Gly38Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1167",
+      "hgvs_pro": "p.Gly42=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1183",
+      "hgvs_pro": "p.Gly45=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1195",
+      "hgvs_pro": "p.Gly45Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1199",
+      "hgvs_pro": "p.Gly52=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1205",
+      "hgvs_pro": "p.Gly52Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1209",
+      "hgvs_pro": "p.Gly57=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1219",
+      "hgvs_pro": "p.Gly62=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1231",
+      "hgvs_pro": "p.Gly73=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1242",
+      "hgvs_pro": "p.Gly73Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1245",
+      "hgvs_pro": "p.Gly74=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1256",
+      "hgvs_pro": "p.Gly83=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1270",
+      "hgvs_pro": "p.Gly83Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1275",
+      "hgvs_pro": "p.Gly86=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1290",
+      "hgvs_pro": "p.Gly86Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1295",
+      "hgvs_pro": "p.Gly94=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1311",
+      "hgvs_pro": "p.Gly94Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1331",
+      "hgvs_pro": "p.His111Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1336",
+      "hgvs_pro": "p.His121=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1352",
+      "hgvs_pro": "p.His121Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1357",
+      "hgvs_pro": "p.His44=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1382",
+      "hgvs_pro": "p.His47Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1406",
+      "hgvs_pro": "p.His64Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1409",
+      "hgvs_pro": "p.His72=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1423",
+      "hgvs_pro": "p.His72Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1434",
+      "hgvs_pro": "p.His81Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1436",
+      "hgvs_pro": "p.Ile100=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1452",
+      "hgvs_pro": "p.Ile100Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1457",
+      "hgvs_pro": "p.Ile105=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1468",
+      "hgvs_pro": "p.Ile113=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1484",
+      "hgvs_pro": "p.Ile113Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1489",
+      "hgvs_pro": "p.Ile114=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1505",
+      "hgvs_pro": "p.Ile114Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1510",
+      "hgvs_pro": "p.Ile150=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1526",
+      "hgvs_pro": "p.Ile150Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1531",
+      "hgvs_pro": "p.Ile152=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1540",
+      "hgvs_pro": "p.Ile152Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1543",
+      "hgvs_pro": "p.Ile18=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1555",
+      "hgvs_pro": "p.Ile18Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1560",
+      "hgvs_pro": "p.Ile19=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1576",
+      "hgvs_pro": "p.Ile19Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1581",
+      "hgvs_pro": "p.Ile36=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1597",
+      "hgvs_pro": "p.Ile36Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1602",
+      "hgvs_pro": "p.Leu107=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1615",
+      "hgvs_pro": "p.Leu107Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1619",
+      "hgvs_pro": "p.Leu118=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1635",
+      "hgvs_pro": "p.Leu118Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1640",
+      "hgvs_pro": "p.Leu127=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1656",
+      "hgvs_pro": "p.Leu127Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1661",
+      "hgvs_pro": "p.Leu145=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1677",
+      "hgvs_pro": "p.Leu145Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1682",
+      "hgvs_pro": "p.Leu39=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1698",
+      "hgvs_pro": "p.Leu39Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1702",
+      "hgvs_pro": "p.Leu43=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1714",
+      "hgvs_pro": "p.Leu43Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1718",
+      "hgvs_pro": "p.Leu68=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1727",
+      "hgvs_pro": "p.Leu68Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1732",
+      "hgvs_pro": "p.Leu85=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1748",
+      "hgvs_pro": "p.Leu85Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1753",
+      "hgvs_pro": "p.Leu9=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1769",
+      "hgvs_pro": "p.Leu9Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1789",
+      "hgvs_pro": "p.Lys10Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1794",
+      "hgvs_pro": "p.Lys123=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1810",
+      "hgvs_pro": "p.Lys123Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1815",
+      "hgvs_pro": "p.Lys129=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1831",
+      "hgvs_pro": "p.Lys129Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1836",
+      "hgvs_pro": "p.Lys137=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1861",
+      "hgvs_pro": "p.Lys24Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1866",
+      "hgvs_pro": "p.Lys31=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1880",
+      "hgvs_pro": "p.Lys31Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1884",
+      "hgvs_pro": "p.Lys37=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1900",
+      "hgvs_pro": "p.Lys37Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1919",
+      "hgvs_pro": "p.Lys4Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1924",
+      "hgvs_pro": "p.Lys71=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1938",
+      "hgvs_pro": "p.Lys71Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1943",
+      "hgvs_pro": "p.Lys76=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1959",
+      "hgvs_pro": "p.Lys76Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1964",
+      "hgvs_pro": "p.Lys92=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1979",
+      "hgvs_pro": "p.Lys92Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1984",
+      "hgvs_pro": "p.Phe21=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1994",
+      "hgvs_pro": "p.Phe21Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1997",
+      "hgvs_pro": "p.Phe46=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2012",
+      "hgvs_pro": "p.Phe46Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2017",
+      "hgvs_pro": "p.Phe51=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2044",
+      "hgvs_pro": "p.Phe65Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2049",
+      "hgvs_pro": "p.Pro14=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2058",
+      "hgvs_pro": "p.Pro14Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2061",
+      "hgvs_pro": "p.Pro29=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2068",
+      "hgvs_pro": "p.Pro29Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2071",
+      "hgvs_pro": "p.Pro63=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2081",
+      "hgvs_pro": "p.Pro63Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2084",
+      "hgvs_pro": "p.Pro67=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2093",
+      "hgvs_pro": "p.Pro75=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2106",
+      "hgvs_pro": "p.Pro75Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2111",
+      "hgvs_pro": "p.Ser103=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2125",
+      "hgvs_pro": "p.Ser103Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2130",
+      "hgvs_pro": "p.Ser106=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2145",
+      "hgvs_pro": "p.Ser106Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2150",
+      "hgvs_pro": "p.Ser108=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2166",
+      "hgvs_pro": "p.Ser108Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2171",
+      "hgvs_pro": "p.Ser135=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2185",
+      "hgvs_pro": "p.Ser135Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2189",
+      "hgvs_pro": "p.Ser143=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2219",
+      "hgvs_pro": "p.Ser35=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2235",
+      "hgvs_pro": "p.Ser35Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2240",
+      "hgvs_pro": "p.Ser60=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2256",
+      "hgvs_pro": "p.Ser60Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2261",
+      "hgvs_pro": "p.Ser69=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2272",
+      "hgvs_pro": "p.Ser99=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2288",
+      "hgvs_pro": "p.Ser99Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2293",
+      "hgvs_pro": "p.Thr117=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2310",
+      "hgvs_pro": "p.Thr117Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2314",
+      "hgvs_pro": "p.Thr136=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2327",
+      "hgvs_pro": "p.Thr136Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2330",
+      "hgvs_pro": "p.Thr138=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2344",
+      "hgvs_pro": "p.Thr138Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2348",
+      "hgvs_pro": "p.Thr3=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2364",
+      "hgvs_pro": "p.Thr3Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2368",
+      "hgvs_pro": "p.Thr40=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2385",
+      "hgvs_pro": "p.Thr40Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2389",
+      "hgvs_pro": "p.Thr55=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2405",
+      "hgvs_pro": "p.Thr55Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2408",
+      "hgvs_pro": "p.Thr59=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2425",
+      "hgvs_pro": "p.Thr59Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2429",
+      "hgvs_pro": "p.Thr89=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2444",
+      "hgvs_pro": "p.Thr89Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2463",
+      "hgvs_pro": "p.Trp33Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2467",
+      "hgvs_pro": "p.Val104=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2481",
+      "hgvs_pro": "p.Val104Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2484",
+      "hgvs_pro": "p.Val119=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2501",
+      "hgvs_pro": "p.Val119Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2505",
+      "hgvs_pro": "p.Val120=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2522",
+      "hgvs_pro": "p.Val120Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2526",
+      "hgvs_pro": "p.Val149=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2543",
+      "hgvs_pro": "p.Val149Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2547",
+      "hgvs_pro": "p.Val15=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2564",
+      "hgvs_pro": "p.Val15Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2568",
+      "hgvs_pro": "p.Val30=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2582",
+      "hgvs_pro": "p.Val30Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2586",
+      "hgvs_pro": "p.Val32=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2600",
+      "hgvs_pro": "p.Val32Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2604",
+      "hgvs_pro": "p.Val48=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2621",
+      "hgvs_pro": "p.Val6=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2638",
+      "hgvs_pro": "p.Val6Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2642",
+      "hgvs_pro": "p.Val8=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2643",
+      "hgvs_pro": "p.Val82=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2660",
+      "hgvs_pro": "p.Val82Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2664",
+      "hgvs_pro": "p.Val88=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2680",
+      "hgvs_pro": "p.Val88Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2700",
+      "hgvs_pro": "p.Val8Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2704",
+      "hgvs_pro": "p.Val95=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2721",
+      "hgvs_pro": "p.Val95Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2725",
+      "hgvs_pro": "p.Val98=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2740",
+      "hgvs_pro": "p.Val98Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2753",
+      "hgvs_pro": "p.Ala96Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2779",
+      "hgvs_pro": "p.Glu134Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2780",
+      "hgvs_pro": "p.Glu22=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2799",
+      "hgvs_pro": "p.Gly151Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2805",
+      "hgvs_pro": "p.Gly28Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2819",
+      "hgvs_pro": "p.Gly74Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2834",
+      "hgvs_pro": "p.His64=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2837",
+      "hgvs_pro": "p.His81=",
+      "reason": "synonymous_or_WT"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2857",
+      "hgvs_pro": "p.Lys137Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2866",
+      "hgvs_pro": "p.Phe51Ter",
+      "reason": "stop"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2885",
+      "hgvs_pro": "p.Ser26Ter",
+      "reason": "stop"
+    }
+  ],
+  "selected_candidates": [
+    {
+      "id": "urn:mavedb:00001217-a-3#361",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDVTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "N54V"
+      ],
+      "rank_sha256": "00316c3d08bf3d0966d79bde6f8ce59ff6d51939c5a7c32766c1fbc537f63cce",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2809",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHYFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "G45Y"
+      ],
+      "rank_sha256": "00330de59d5e1968893bf8a7f36fc82e27313f8cc893b4e23aaa7948f48404aa",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1217",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAWCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "G57W"
+      ],
+      "rank_sha256": "005d3325a44d2b51ea88f02162b5a8ad551f2f9f40e339b25e6c79e9378c1bb8",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1655",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDSGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "L127S"
+      ],
+      "rank_sha256": "006e6036f294d9f17b515645b3152196b842be627492235cbaf5f45de77373e9",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2078",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGIHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "P63I"
+      ],
+      "rank_sha256": "00c87d266ee22763859f3c810de9e9813b45b8e85105dcfc634ca5967502c50a",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2618",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHSHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "V48S"
+      ],
+      "rank_sha256": "00f4db1491de56b0e09b9646ef376c7577aa95ea6dd01de0d93ac226f8124c3b",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#612",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHNIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "C112N"
+      ],
+      "rank_sha256": "012168b473d8e7b099134593ef6faa4034b88fb6ed1b8a6f1aa2904315c868f3",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2221",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGRIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "S35R"
+      ],
+      "rank_sha256": "012a526aea5647823263c1f8ac684c1ef26697949f1c7b9c5e332328ec67f0c4",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1206",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFTDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "G52T"
+      ],
+      "rank_sha256": "013f7ac6a741deb147f35ca962712f59cadf20e6c8c8dd5ecb45954c02a7f354",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#656",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGITSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "C58I"
+      ],
+      "rank_sha256": "01429747cdcff6fbce13ddffe9295a4fd75c1880fa547725e70a7f6f9b590c28",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#371",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFIPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "N66I"
+      ],
+      "rank_sha256": "01499c220ba2a9e3d6f65004afaa97dde82afa82f06fb856efd1d9690a85f0cd",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#863",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDHERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "E78H"
+      ],
+      "rank_sha256": "015aeaddf57deff0305082f5465589a3fedd9f6bb125ff82349e4706bc82d2bd",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1324",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDICIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "H111I"
+      ],
+      "rank_sha256": "0193f8ab3794fb1ad9d4415fff67c17b2d3214f9949813c5aaa05efe78999e9b",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2417",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCHSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "T59H"
+      ],
+      "rank_sha256": "0201ddbb2b66d94691addab7099d406b24dcb12ad2ae8c79820cb14208835e6a",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1844",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTSTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "K137S"
+      ],
+      "rank_sha256": "021b6bb8e80593eba3d433ab550964c731956cd3860a1c8cb6113d7355922181",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2004",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGGHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "F46G"
+      ],
+      "rank_sha256": "021b70e89f7d467a6b46589617020c846cf9e6734fd953573ad5c18b0ad1557e",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2559",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPKQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "V15K"
+      ],
+      "rank_sha256": "023efad3607a12b108c705a1c0bcb3a908fe6442cbfa6370355d95b306f3d733",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1376",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFDVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "H47D"
+      ],
+      "rank_sha256": "024a4ecf092cd277a26628e519334c994e341fa332ec13a3c4e0bb140091d067",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#954",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKVDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "G11V"
+      ],
+      "rank_sha256": "025b607db98f6e7ec8c3e2b53e3f2f5d6044b25d31d4c1b966e93946b78150dc",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1123",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNNPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "G28N"
+      ],
+      "rank_sha256": "0293a91fbac530ae863f1fb9f64bfc9ac9f587187d4aab709ed6304212b7b188",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1858",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQFESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "K24F"
+      ],
+      "rank_sha256": "02980793389f326506a9604b562f0721698c0b276c4d6189d863a28c97cfa049",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1942",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRVHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "K71V"
+      ],
+      "rank_sha256": "02b6dfebbcefdf1f5fcadf3c8fb3c75adbc905389ca2c4eb3e01c7a54ebbf161",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2514",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVHHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "V120H"
+      ],
+      "rank_sha256": "02d2d17925c62cbd3589d5368f9b609360c8469df040707f340a1c319b750f57",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#396",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGFVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "N87F"
+      ],
+      "rank_sha256": "02fe5399ba7f6495872a075a11ac16788c2d35ef857b1e41850f4b5d1dbcb3ad",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#740",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIVDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "E101V"
+      ],
+      "rank_sha256": "030283caeee563a117260d64c477cbd0e4321d8797bc77750c600f94bc86a07e",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#620",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHKIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "C112K"
+      ],
+      "rank_sha256": "035e0779bdf4fef16fc6e6fe3c2cb6a97e95a5de76b7d81d2b98aef2dc7c320b",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#391",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGHVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "N87H"
+      ],
+      "rank_sha256": "0384d47afbe5b92b148ba6d69b3b1b5c472437e82994682d11b0d0343d3013f9",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2357",
+      "protein_id": "SOD1",
+      "sequence": "MAIKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "T3I"
+      ],
+      "rank_sha256": "03a47c8cce9846ce3d4a1a32c7c47d67bb3079f62f31fd5888c28705b50db200",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1672",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRKACGVIGIAQ",
+      "mutations": [
+        "L145K"
+      ],
+      "rank_sha256": "03bed5c294c400ae57bcf67923d12dcb3dff7b58803c9003ca38e10ad1559428",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#384",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGAVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "N87A"
+      ],
+      "rank_sha256": "03ed78ccee19c469905d49d940d2d5631d801133b0536f50aba10a90f1877aaf",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1313",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDWVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "G94W"
+      ],
+      "rank_sha256": "043abfe1b75a16f949af637f32c136bfe4ddeca4464ae1532ecb9ef2f09e5fa3",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2034",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHQNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "F65Q"
+      ],
+      "rank_sha256": "0444268aa89943db09b55250049a24d8366ab8ba2d8abf113af30589391def88",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2224",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGCIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "S35C"
+      ],
+      "rank_sha256": "0450779d62b9c021909fdb393ae60ab37f373257b04fabf4e250a9ed5debd001",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2450",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVDGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "W33D"
+      ],
+      "rank_sha256": "04549c988004c2930d315c2da6de444192b89a876d4cb893c1e32da3c18dfeef",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2008",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGKHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "F46K"
+      ],
+      "rank_sha256": "0484c7073f80b109c513c909d46706b3dbef7b588277d6d39a0a05d1235067c7",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1599",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSWKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "I36W"
+      ],
+      "rank_sha256": "04858c10f22bfa16d4f1bba47897a4094f93dcb0e9acc3bb935d9b9ae3e34f5f",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#418",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIESSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "D102S"
+      ],
+      "rank_sha256": "04879defa62e9bd5a04ad7dadafce979c4e79dddf153d43412a788be6e0fda54",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1577",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGITNFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "I19T"
+      ],
+      "rank_sha256": "04ab9c2d7c1d700b12b25c3c6babcdd382b2d392d5811f6d507d5cffd1561623",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2695",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCKLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "V8K"
+      ],
+      "rank_sha256": "04b3fb893d86a13622d571031bfdd8e99c4c1d1fcb50e241382cba92ad2aec44",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#643",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLAFGVIGIAQ",
+      "mutations": [
+        "C147F"
+      ],
+      "rank_sha256": "04d49b5e7f30e6de22b13dc24ab6d1b2edd3003d889a106c16e53c4a5db91933",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2088",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNGLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "P67G"
+      ],
+      "rank_sha256": "04deac1c2b42f6504efd8fe01d27e0c3c441b6e02002547056c17467adc1aea9",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#615",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHEIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "C112E"
+      ],
+      "rank_sha256": "04f730035dd43bca8d6be179ffef20380d904b3f00c57e62352e801b92111710",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1926",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRNHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "K71N"
+      ],
+      "rank_sha256": "0540c4c523ef58941fa080099630a898d77f64e411bd4348e7686cc0ba77b2bb",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1730",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPYSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "L68Y"
+      ],
+      "rank_sha256": "0552f1f0c2fd07f574651d1ab0d76aa5ac30d9f8ad067935bd5838c41686eed3",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#472",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADLLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "D126L"
+      ],
+      "rank_sha256": "05540deda3a19b3cff9d126152f1ad537e9c0d1831c1f14d922a7d402d724fae",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1584",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSNKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "I36N"
+      ],
+      "rank_sha256": "0554de9948045a4bd910b6a2abbd8f7a0be3c04831ce1c78924a8d7d9edb2c6f",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#8",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKGDDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "A124G"
+      ],
+      "rank_sha256": "0563637b12d0a0f07f3608a14c924a80f756e46b215214c9616d8b913c8d2412",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1459",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVRSLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "I105R"
+      ],
+      "rank_sha256": "05789bd316548df21b66e2e611406cc37c0c21b4494d0bfa73d15f4694e1621b",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1887",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSINGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "K37N"
+      ],
+      "rank_sha256": "057a2c19cac54b6fa5cef0284ea588eafb57cc47862a48d3df5521c636b5f30a",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2718",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGFADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "V95F"
+      ],
+      "rank_sha256": "059e9d0febe0b597a20cafbb78d20ff20facd389f65c185b99570025c7c6c006",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2003",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGEHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "F46E"
+      ],
+      "rank_sha256": "05b8f3e12f6fc0750037e3f6482d68ac96d76841d614498b9fcdfcb0e535d642",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2465",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVYGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "W33Y"
+      ],
+      "rank_sha256": "05bf4168933e385415829d555c12871abf2b808a23157f78723f257f042dc83b",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#595",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVAGVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "D97G"
+      ],
+      "rank_sha256": "06422a8cce814faf782f362086b615bf0d827f22f0d9e84f8964b85e1e950a76",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1093",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVILIAQ",
+      "mutations": [
+        "G151L"
+      ],
+      "rank_sha256": "065f6f058cbc76b893a5ae2eb2328d3289b6b8e3c0a4e6e712ad1fd8e8f1a854",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1845",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTTTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "K137T"
+      ],
+      "rank_sha256": "066d7d7ca7298abc852dd63e8ed94811c680442f70ec6cd61e58bbde77710fb6",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1060",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNATSRLACGVIGIAQ",
+      "mutations": [
+        "G142T"
+      ],
+      "rank_sha256": "068d93cb6f17b47020af37b775c21be750413353de358f948cb0030b1d1ce78d",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#599",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVAKVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "D97K"
+      ],
+      "rank_sha256": "069832b4a5c11e3c470bdcbf6f5777c7d168532be212f2ac583df0389332c17a",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1580",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIVNFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "I19V"
+      ],
+      "rank_sha256": "069fc7837f8f7b2c5a231ac09102afc80f3066c28782a7719938c227e31a4288",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2735",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADLSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "V98L"
+      ],
+      "rank_sha256": "06cb4a46886f15ba34193397e8dfbc948a2aa1df717af02f0d5b7d7cfbc82411",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#439",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGTHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "D110T"
+      ],
+      "rank_sha256": "06d1595cf4cb42b2bf1b4b28d101211a426d26282c7318cfa8d13d18948f97a1",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1780",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLEGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "K10E"
+      ],
+      "rank_sha256": "06f464a82622083228e27ca36c96ccd40e266f7f1e12af60491d14f6fbcfdac2",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2535",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGHIGIAQ",
+      "mutations": [
+        "V149H"
+      ],
+      "rank_sha256": "0700ab78f2c5902e59b2adaf40e66035a1a131907dce6000860620aadfb5e5a2",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#822",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKWSNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "E25W"
+      ],
+      "rank_sha256": "070a5301669b0f0588c8150955c63db78369144ea9e40f885dcc746a88b2780e",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#802",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFKQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "E22K"
+      ],
+      "rank_sha256": "0734f83e8aa8c3957a483fd6801c6479d6c8a4fc377eb00a770afa95901ab796",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2898",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNYAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "T55Y"
+      ],
+      "rank_sha256": "0741b97ae3c6d29a12831249170093a1b29421f1bb6c2fdd5cea4e8e0a97e122",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1683",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGATEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "L39A"
+      ],
+      "rank_sha256": "07655be1af83bbafb237930f5f574c5f021d76b72f92a2aad1e8b3d5087de245",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#562",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTAFKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "D91F"
+      ],
+      "rank_sha256": "07bbeba9fee78fdd5b8e833a972b908f6be9bcbeb9c2ba9f9d5b789fff74f79e",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2873",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGYHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "P63Y"
+      ],
+      "rank_sha256": "07e3f100ca2434474b459c3b38b1ca12165c0eb87cf00bb9e119b1dbafce1e70",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1992",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINKEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "F21K"
+      ],
+      "rank_sha256": "07f35cea319554521f66c7aa0241bf171660833983b77cd8c9e3bafd5367c963",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2241",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTAAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "S60A"
+      ],
+      "rank_sha256": "07f3767e5b84c8be9ec6b070b5d74bbd3eb12bf8e6b69072be83c899f1ea4400",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2011",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGSHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "F46S"
+      ],
+      "rank_sha256": "0826489d903a1fe2e41165c65e696759fcdcc60d1b00bb22da777599b01fb46d",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#791",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEKSTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "E134K"
+      ],
+      "rank_sha256": "082df84f995094935fcf934d8af3bba07974a3b6ca23c5f1b2f71b4e8eab136f",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1579",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIYNFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "I19Y"
+      ],
+      "rank_sha256": "0833172a1ba2ab7440fce545c78e5571780ed1736039a3cd624fed1c02760c0d",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2146",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVITLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "S106T"
+      ],
+      "rank_sha256": "0840e0ec97378c68782264cd882bcf824af3712f2e659561781d02edfa307074",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1019",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTMNAGSRLACGVIGIAQ",
+      "mutations": [
+        "G139M"
+      ],
+      "rank_sha256": "08567464ebce5d6f0f9645fcae892c8f8b716e8883ea1f053fa7b9aa4811fc20",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2867",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGMVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "P29M"
+      ],
+      "rank_sha256": "08580c6e2703e459f03302576ae36c8db496a4e5734d1efefdc6be07c1b29f23",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1364",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLGGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "H44G"
+      ],
+      "rank_sha256": "086a395183c3a228c2faa772c596f874f7634a95a279b6fa7fa708c64941bcd9",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#407",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIECSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "D102C"
+      ],
+      "rank_sha256": "088614c4dddc6770e092f2099469fca6fde413df2d1b96cd4bf4d23ba0f19de0",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2251",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTLAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "S60L"
+      ],
+      "rank_sha256": "08977b70b68df387ac44a1cdc0cc0fb95e9c9d0b0b48ef1d2b69de2ca51a45d9",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#370",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFHPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "N66H"
+      ],
+      "rank_sha256": "08e34de86dafbd4ef46a1f0c970304666ada48e27414046ddcc62ba9c5aee684",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2006",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGIHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "F46I"
+      ],
+      "rank_sha256": "08ea159a55dc72ba35bf37c188edd79e4a74af0eff449d7fdcd6cce62d1e25de",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1204",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFIDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "G52I"
+      ],
+      "rank_sha256": "08f60875f2b21e1457be69baa0924a12eb25226f9e6a7ef33f6581171d356a98",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1754",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVAKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "L9A"
+      ],
+      "rank_sha256": "08f8e7dcf7f9a44663ab56bb4e68234e125ad19951e3c0aef1972e18414bee0d",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2637",
+      "protein_id": "SOD1",
+      "sequence": "MATKASCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "V6S"
+      ],
+      "rank_sha256": "090fb5acdca619b298caac2092deed8d689ba49121aca25b40f93582542dd7c6",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2378",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLIEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "T40I"
+      ],
+      "rank_sha256": "091412f52ee520ebba772353692b99fce961982072b08bed01858e80617ff66e",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#129",
+      "protein_id": "SOD1",
+      "sequence": "MATKPVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "A5P"
+      ],
+      "rank_sha256": "0928a7d4bb1abcf105cc15a9873a0103592dd9306ee5daf5f241e784aa5bc23f",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#769",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNGESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "E133G"
+      ],
+      "rank_sha256": "09293703529d7d73966db7013a68c081235b5d61b679d3db4c5e0637c9917188",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#2276",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVDIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "S99D"
+      ],
+      "rank_sha256": "094501322cf916398c89f3f710727da135c86f5a7d230febcb34f947c364a194",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1456",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSVEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "I100V"
+      ],
+      "rank_sha256": "09581c94289e25b61d3b3cdd424ea2fac6a7f7d0bcd2641a3994c41f9f9bf327",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1674",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRFACGVIGIAQ",
+      "mutations": [
+        "L145F"
+      ],
+      "rank_sha256": "0967fc1ae470c5cb823981ba4438dbba9ffb3d790f632fcc97d79da710a5a9e6",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1850",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQNESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "K24N"
+      ],
+      "rank_sha256": "09700050aaee039212c584e5692846630814656fb2aa82e0490dc976c22b5b66",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1793",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLVGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "K10V"
+      ],
+      "rank_sha256": "0978459f1e1f7092bb0154d3d4e045adc4cafea5bcdd6e01beed1b4383c70a63",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1709",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGIHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "L43I"
+      ],
+      "rank_sha256": "098f0d011f94aef287ebb1e980a19b8e48cc309c3c4b4772036902b1aa1607d0",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1127",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNVPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "G28V"
+      ],
+      "rank_sha256": "09dd96b1f7c4016311f3ca104d35cc3f83f7e7251af75d8de8770e1872a12b57",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#792",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEWSTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "E134W"
+      ],
+      "rank_sha256": "09e70a22287cf412713e007c9158f35cf80ef70361ab0ace1d341bc0a4f67a9c",
+      "candidate_role": "test_only_if_admitted"
+    },
+    {
+      "id": "urn:mavedb:00001217-a-3#1157",
+      "protein_id": "SOD1",
+      "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKLLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+      "mutations": [
+        "G38L"
+      ],
+      "rank_sha256": "0a1275c7cc7e59ae48d239b9153dcc41f89a89ea54bf8933bf1915212f10c457",
+      "candidate_role": "test_only_if_admitted"
+    }
+  ],
+  "metals_deposited": [
+    {
+      "component": "CU",
+      "chain": "A",
+      "author_number": "154",
+      "altloc": "A",
+      "occupancy": "0.90"
+    },
+    {
+      "component": "CU",
+      "chain": "A",
+      "author_number": "154",
+      "altloc": "B",
+      "occupancy": "0.10"
+    },
+    {
+      "component": "ZN",
+      "chain": "A",
+      "author_number": "155",
+      "altloc": ".",
+      "occupancy": "1.00"
+    },
+    {
+      "component": "CU",
+      "chain": "F",
+      "author_number": "154",
+      "altloc": "A",
+      "occupancy": "0.90"
+    },
+    {
+      "component": "CU",
+      "chain": "F",
+      "author_number": "154",
+      "altloc": "B",
+      "occupancy": "0.10"
+    },
+    {
+      "component": "ZN",
+      "chain": "F",
+      "author_number": "155",
+      "altloc": ".",
+      "occupancy": "1.00"
+    }
+  ],
+  "disulfide": {
+    "assay_positions": [
+      58,
+      147
+    ],
+    "author_positions": [
+      57,
+      146
+    ],
+    "SG_distance_a": 2.176576852798462
+  },
+  "context": "Experimental metallated, disulfide-bonded deposition; deposited other-chain/ligand context ASA. Not mutant rearrangements or proof of identical assay maturation/metallation.",
+  "variant_outcome_values_accessed": false,
+  "models_fit": 0,
+  "predictions_generated": 0
+}

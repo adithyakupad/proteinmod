@@ -1,0 +1,63 @@
+{
+  "title": "SOD1 abundance map score set",
+  "methodText": "Scores were generated from raw data using the tileseqMut and tileseqMave pipelines. For a variant to be included in the score set, a minimum of 10 reads per variant were necessary in the non-select condition. The scores were scaled to 0 and 1 based on the centered distributions of the nonsense and synonymous scores, respectively. Biological replicate scores were averaged and error calculated using an inverse-variance weighted average of scores, with weights proportional to the combined standard deviation computed from the weighted variances and degrees of freedom. Use of inverse-variance weighted averages provided greater weights for scores with lower uncertainty. For variants with no replicate, the standard error and \u2018degrees of freedom\u2019 were taken directly from the existing biological replicate. Score columns include the variant (hgvs_pro), the functional score, standard error of score (se), degrees of freedom (df), log-likelihood ratios of pathogenicity (LLRp), and the conversion of LLRps to ACMG-compatible evidence strengths (evidence_weight). LLRp confidence intervals can be found in the supplemental manuscript files.",
+  "recordType": "ScoreSet",
+  "urn": "urn:mavedb:00001217-a-3",
+  "numVariants": 2906,
+  "license": {
+    "longName": "CC0 (Public domain)",
+    "shortName": "CC0",
+    "active": true,
+    "link": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "version": "1.0",
+    "id": 1,
+    "recordType": "ShortLicense"
+  },
+  "doiIdentifiers": [],
+  "primaryPublicationIdentifiers": [],
+  "publishedDate": "2025-06-16",
+  "modificationDate": "2025-06-16",
+  "targetGenes": [
+    {
+      "name": "SOD1",
+      "category": "protein_coding",
+      "externalIdentifiers": [],
+      "id": 7689,
+      "recordType": "TargetGene",
+      "targetSequence": {
+        "sequenceType": "protein",
+        "sequence": "MATKAVCVLKGDGPVQGIINFEQKESNGPVKVWGSIKGLTEGLHGFHVHEFGDNTAGCTSAGPHFNPLSRKHGGPKDEERHVGDLGNVTADKDGVADVSIEDSVISLSGDHCIIGRTLVVHEKADDLGKGGNEESTKTGNAGSRLACGVIGIAQ",
+        "label": "SOD1",
+        "recordType": "TargetSequence",
+        "taxonomy": {
+          "code": 9606,
+          "organismName": "Homo sapiens",
+          "commonName": "human",
+          "rank": "SPECIES",
+          "hasDescribedSpeciesName": true,
+          "articleReference": "NCBI:txid9606",
+          "genomeIdentifierId": 5,
+          "id": 15,
+          "recordType": "Taxonomy",
+          "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=info&id=9606"
+        }
+      },
+      "uniprotIdFromMappedMetadata": "P00441"
+    }
+  ],
+  "datasetColumns": {
+    "scoreColumns": [
+      "score",
+      "se",
+      "df",
+      "llr",
+      "llrCI_lower",
+      "llrCI_upper",
+      "evidence_weight",
+      "pos"
+    ],
+    "countColumns": [],
+    "recordType": "DatasetColumns"
+  },
+  "externalLinks": {}
+}

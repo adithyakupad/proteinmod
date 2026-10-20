@@ -1,0 +1,25 @@
+{
+  "url": "https://ars.els-cdn.com/content/image/1-s2.0-S0002929725003519-mmc2.xlsx",
+  "HEAD_via_curl": "200 application/excel 768010bytes, accept-ranges advertised",
+  "header_only_RangeZipReader_attempts": [
+    {
+      "query": "range-specific cache key",
+      "result": "403 at HEAD; no ZIP member acquired"
+    },
+    {
+      "query": "none",
+      "result": "403 at HEAD; no ZIP member acquired"
+    },
+    {
+      "user_agent": "ProteinMod/0.1 (outcome-blind metadata audit)",
+      "result": "Public metadata ranges accessible; inherited Excel namespace triggered parse error at first row before body parsing"
+    },
+    {
+      "user_agent": "same honest research identifier",
+      "result": "PASS after tested namespace/header-type fix;12 sheet headers,68846 range bytes;zero data rows parsed"
+    }
+  ],
+  "worksheet_data_rows_parsed": 0,
+  "whole_workbook_downloaded": false,
+  "conclusion": "Named-column lineage now PASS: abundance_map_scores_LLRps header equals hgvs_pro plus exact MaveDB scoreColumn names in order. Paper-to-deposit linkage retained; no outcome/row or numerical-equivalence claim."
+}

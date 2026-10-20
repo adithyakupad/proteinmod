@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/adithyaupad/Developer/proteinmod/scripts/sod1_supplement.py", line 119, in <module>
+    acquire(parser.parse_args().output)
+  File "/Users/adithyaupad/Developer/proteinmod/scripts/sod1_supplement.py", line 82, in acquire
+    header = first_row(handle)
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/adithyaupad/Developer/proteinmod/scripts/sod1_supplement.py", line 30, in first_row
+    element = ET.fromstring(wrapper)[0]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.15/Frameworks/Python.framework/Versions/3.12/lib/python3.12/xml/etree/ElementTree.py", line 1335, in XML
+    parser.feed(text)
+xml.etree.ElementTree.ParseError: unbound prefix: line 1, column 72

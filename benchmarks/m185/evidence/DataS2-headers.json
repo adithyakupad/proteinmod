@@ -1,0 +1,738 @@
+{
+  "url": "https://ars.els-cdn.com/content/image/1-s2.0-S0002929725003519-mmc2.xlsx",
+  "archive_bytes": 768010,
+  "etag": null,
+  "range_bytes_transferred": 68846,
+  "directory": [
+    {
+      "name": "[Content_Types].xml",
+      "bytes": 2667,
+      "crc32": 3485208856
+    },
+    {
+      "name": "_rels/.rels",
+      "bytes": 588,
+      "crc32": 590370229
+    },
+    {
+      "name": "xl/workbook.xml",
+      "bytes": 3306,
+      "crc32": 2466879624
+    },
+    {
+      "name": "xl/_rels/workbook.xml.rels",
+      "bytes": 2258,
+      "crc32": 1624156190
+    },
+    {
+      "name": "xl/worksheets/sheet1.xml",
+      "bytes": 2893,
+      "crc32": 3865956247
+    },
+    {
+      "name": "xl/worksheets/sheet2.xml",
+      "bytes": 1092219,
+      "crc32": 658890445
+    },
+    {
+      "name": "xl/worksheets/sheet3.xml",
+      "bytes": 650423,
+      "crc32": 4151551359
+    },
+    {
+      "name": "xl/worksheets/sheet4.xml",
+      "bytes": 103049,
+      "crc32": 207630854
+    },
+    {
+      "name": "xl/worksheets/sheet5.xml",
+      "bytes": 66038,
+      "crc32": 124408950
+    },
+    {
+      "name": "xl/worksheets/sheet6.xml",
+      "bytes": 92157,
+      "crc32": 522619431
+    },
+    {
+      "name": "xl/worksheets/sheet7.xml",
+      "bytes": 874955,
+      "crc32": 3824191528
+    },
+    {
+      "name": "xl/worksheets/sheet8.xml",
+      "bytes": 40229,
+      "crc32": 1778488947
+    },
+    {
+      "name": "xl/worksheets/sheet9.xml",
+      "bytes": 35367,
+      "crc32": 3001290660
+    },
+    {
+      "name": "xl/worksheets/sheet10.xml",
+      "bytes": 635725,
+      "crc32": 1955812854
+    },
+    {
+      "name": "xl/worksheets/sheet11.xml",
+      "bytes": 24633,
+      "crc32": 1601481128
+    },
+    {
+      "name": "xl/worksheets/sheet12.xml",
+      "bytes": 52053,
+      "crc32": 628834408
+    },
+    {
+      "name": "xl/theme/theme1.xml",
+      "bytes": 8721,
+      "crc32": 1102340342
+    },
+    {
+      "name": "xl/styles.xml",
+      "bytes": 3158,
+      "crc32": 2046291427
+    },
+    {
+      "name": "xl/sharedStrings.xml",
+      "bytes": 114442,
+      "crc32": 1220519383
+    },
+    {
+      "name": "docProps/core.xml",
+      "bytes": 617,
+      "crc32": 763956725
+    },
+    {
+      "name": "docProps/app.xml",
+      "bytes": 1242,
+      "crc32": 140444473
+    }
+  ],
+  "sheets": [
+    {
+      "sheet": "ReadMe",
+      "member": "xl/worksheets/sheet1.xml",
+      "first_row": [
+        {
+          "coordinate": "A1",
+          "type": "s",
+          "value": "4043",
+          "inline": null,
+          "header": "Table of Contents"
+        }
+      ]
+    },
+    {
+      "sheet": "abundance_map_scores_LLRps",
+      "member": "xl/worksheets/sheet2.xml",
+      "first_row": [
+        {
+          "coordinate": "A1",
+          "type": "s",
+          "value": "619",
+          "inline": null,
+          "header": "hgvs_pro"
+        },
+        {
+          "coordinate": "B1",
+          "type": "s",
+          "value": "3270",
+          "inline": null,
+          "header": "score"
+        },
+        {
+          "coordinate": "C1",
+          "type": "s",
+          "value": "3271",
+          "inline": null,
+          "header": "se"
+        },
+        {
+          "coordinate": "D1",
+          "type": "s",
+          "value": "3272",
+          "inline": null,
+          "header": "df"
+        },
+        {
+          "coordinate": "E1",
+          "type": "s",
+          "value": "3711",
+          "inline": null,
+          "header": "llr"
+        },
+        {
+          "coordinate": "F1",
+          "type": "s",
+          "value": "3718",
+          "inline": null,
+          "header": "llrCI_lower"
+        },
+        {
+          "coordinate": "G1",
+          "type": "s",
+          "value": "3719",
+          "inline": null,
+          "header": "llrCI_upper"
+        },
+        {
+          "coordinate": "H1",
+          "type": "s",
+          "value": "3712",
+          "inline": null,
+          "header": "evidence_weight"
+        },
+        {
+          "coordinate": "I1",
+          "type": "s",
+          "value": "3547",
+          "inline": null,
+          "header": "pos"
+        }
+      ]
+    },
+    {
+      "sheet": "activity_map_scores",
+      "member": "xl/worksheets/sheet3.xml",
+      "first_row": [
+        {
+          "coordinate": "A1",
+          "type": "s",
+          "value": "619",
+          "inline": null,
+          "header": "hgvs_pro"
+        },
+        {
+          "coordinate": "B1",
+          "type": "s",
+          "value": "3270",
+          "inline": null,
+          "header": "score"
+        },
+        {
+          "coordinate": "C1",
+          "type": "s",
+          "value": "3271",
+          "inline": null,
+          "header": "se"
+        },
+        {
+          "coordinate": "D1",
+          "type": "s",
+          "value": "3272",
+          "inline": null,
+          "header": "df"
+        },
+        {
+          "coordinate": "E1",
+          "type": "s",
+          "value": "3547",
+          "inline": null,
+          "header": "pos"
+        }
+      ]
+    },
+    {
+      "sheet": "ClinVarVariants_LLRps",
+      "member": "xl/worksheets/sheet4.xml",
+      "first_row": [
+        {
+          "coordinate": "A1",
+          "type": "s",
+          "value": "619",
+          "inline": null,
+          "header": "hgvs_pro"
+        },
+        {
+          "coordinate": "B1",
+          "type": "s",
+          "value": "3784",
+          "inline": null,
+          "header": "type"
+        },
+        {
+          "coordinate": "C1",
+          "type": "s",
+          "value": "4033",
+          "inline": null,
+          "header": "abundance map score"
+        },
+        {
+          "coordinate": "D1",
+          "type": "s",
+          "value": "4034",
+          "inline": null,
+          "header": "abundance map se"
+        },
+        {
+          "coordinate": "E1",
+          "type": "s",
+          "value": "3272",
+          "inline": null,
+          "header": "df"
+        },
+        {
+          "coordinate": "F1",
+          "type": "s",
+          "value": "3711",
+          "inline": null,
+          "header": "llr"
+        },
+        {
+          "coordinate": "G1",
+          "type": "s",
+          "value": "3785",
+          "inline": null,
+          "header": "llrCI"
+        },
+        {
+          "coordinate": "H1",
+          "type": "s",
+          "value": "3712",
+          "inline": null,
+          "header": "evidence_weight"
+        },
+        {
+          "coordinate": "I1",
+          "type": "s",
+          "value": "3547",
+          "inline": null,
+          "header": "pos"
+        }
+      ]
+    },
+    {
+      "sheet": "ClinVar_ReferenceSet",
+      "member": "xl/worksheets/sheet5.xml",
+      "first_row": [
+        {
+          "coordinate": "A1",
+          "type": "s",
+          "value": "619",
+          "inline": null,
+          "header": "hgvs_pro"
+        },
+        {
+          "coordinate": "B1",
+          "type": "s",
+          "value": "3705",
+          "inline": null,
+          "header": "referenceSet"
+        },
+        {
+          "coordinate": "C1",
+          "type": "s",
+          "value": "3774",
+          "inline": null,
+          "header": "Source"
+        },
+        {
+          "coordinate": "D1",
+          "type": "s",
+          "value": "3775",
+          "inline": null,
+          "header": "abundance_score"
+        },
+        {
+          "coordinate": "E1",
+          "type": "s",
+          "value": "3772",
+          "inline": null,
+          "header": "abundance_se"
+        },
+        {
+          "coordinate": "F1",
+          "type": "s",
+          "value": "3776",
+          "inline": null,
+          "header": "abundance_df"
+        },
+        {
+          "coordinate": "G1",
+          "type": "s",
+          "value": "3777",
+          "inline": null,
+          "header": "activity_score"
+        },
+        {
+          "coordinate": "H1",
+          "type": "s",
+          "value": "3773",
+          "inline": null,
+          "header": "activity_se"
+        },
+        {
+          "coordinate": "I1",
+          "type": "s",
+          "value": "3778",
+          "inline": null,
+          "header": "activity_df"
+        },
+        {
+          "coordinate": "J1",
+          "type": "s",
+          "value": "3547",
+          "inline": null,
+          "header": "pos"
+        },
+        {
+          "coordinate": "K1",
+          "type": "s",
+          "value": "3779",
+          "inline": null,
+          "header": "abundance_impact"
+        },
+        {
+          "coordinate": "L1",
+          "type": "s",
+          "value": "3780",
+          "inline": null,
+          "header": "activity_impact"
+        }
+      ]
+    },
+    {
+      "sheet": "Labcorp_ReferenceSet",
+      "member": "xl/worksheets/sheet6.xml",
+      "first_row": [
+        {
+          "coordinate": "A1",
+          "type": "s",
+          "value": "619",
+          "inline": null,
+          "header": "hgvs_pro"
+        },
+        {
+          "coordinate": "B1",
+          "type": "s",
+          "value": "3705",
+          "inline": null,
+          "header": "referenceSet"
+        },
+        {
+          "coordinate": "C1",
+          "type": "s",
+          "value": "3774",
+          "inline": null,
+          "header": "Source"
+        },
+        {
+          "coordinate": "D1",
+          "type": "s",
+          "value": "3775",
+          "inline": null,
+          "header": "abundance_score"
+        },
+        {
+          "coordinate": "E1",
+          "type": "s",
+          "value": "3772",
+          "inline": null,
+          "header": "abundance_se"
+        },
+        {
+          "coordinate": "F1",
+          "type": "s",
+          "value": "3776",
+          "inline": null,
+          "header": "abundance_df"
+        },
+        {
+          "coordinate": "G1",
+          "type": "s",
+          "value": "3777",
+          "inline": null,
+          "header": "activity_score"
+        },
+        {
+          "coordinate": "H1",
+          "type": "s",
+          "value": "3773",
+          "inline": null,
+          "header": "activity_se"
+        },
+        {
+          "coordinate": "I1",
+          "type": "s",
+          "value": "3778",
+          "inline": null,
+          "header": "activity_df"
+        },
+        {
+          "coordinate": "J1",
+          "type": "s",
+          "value": "3547",
+          "inline": null,
+          "header": "pos"
+        },
+        {
+          "coordinate": "K1",
+          "type": "s",
+          "value": "3779",
+          "inline": null,
+          "header": "abundance_impact"
+        },
+        {
+          "coordinate": "L1",
+          "type": "s",
+          "value": "3780",
+          "inline": null,
+          "header": "activity_impact"
+        },
+        {
+          "coordinate": "M1",
+          "type": "s",
+          "value": "3783",
+          "inline": null,
+          "header": "evidence_weight_based_on_abundance_LLRp_and_LabCorp_as_RefSet"
+        }
+      ]
+    },
+    {
+      "sheet": "QuadrantID_aminoacidlevel",
+      "member": "xl/worksheets/sheet7.xml",
+      "first_row": [
+        {
+          "coordinate": "A1",
+          "type": "s",
+          "value": "619",
+          "inline": null,
+          "header": "hgvs_pro"
+        },
+        {
+          "coordinate": "B1",
+          "type": "s",
+          "value": "447",
+          "inline": null,
+          "header": "abundance"
+        },
+        {
+          "coordinate": "C1",
+          "type": "s",
+          "value": "3772",
+          "inline": null,
+          "header": "abundance_se"
+        },
+        {
+          "coordinate": "D1",
+          "type": "s",
+          "value": "465",
+          "inline": null,
+          "header": "activity"
+        },
+        {
+          "coordinate": "E1",
+          "type": "s",
+          "value": "3773",
+          "inline": null,
+          "header": "activity_se"
+        },
+        {
+          "coordinate": "F1",
+          "type": "s",
+          "value": "3721",
+          "inline": null,
+          "header": "quadrant"
+        },
+        {
+          "coordinate": "G1",
+          "type": "s",
+          "value": "3547",
+          "inline": null,
+          "header": "pos"
+        },
+        {
+          "coordinate": "H1",
+          "type": "s",
+          "value": "3722",
+          "inline": null,
+          "header": "associated"
+        }
+      ]
+    },
+    {
+      "sheet": "QuadrantID_positional",
+      "member": "xl/worksheets/sheet8.xml",
+      "first_row": [
+        {
+          "coordinate": "A1",
+          "type": "s",
+          "value": "3547",
+          "inline": null,
+          "header": "pos"
+        },
+        {
+          "coordinate": "B1",
+          "type": "s",
+          "value": "3720",
+          "inline": null,
+          "header": "ref_aa"
+        },
+        {
+          "coordinate": "C1",
+          "type": "s",
+          "value": "3751",
+          "inline": null,
+          "header": "abundance_score_mean"
+        },
+        {
+          "coordinate": "D1",
+          "type": "s",
+          "value": "3752",
+          "inline": null,
+          "header": "activity_score_mean"
+        },
+        {
+          "coordinate": "E1",
+          "type": "s",
+          "value": "3721",
+          "inline": null,
+          "header": "quadrant"
+        },
+        {
+          "coordinate": "F1",
+          "type": "s",
+          "value": "3722",
+          "inline": null,
+          "header": "associated"
+        }
+      ]
+    },
+    {
+      "sheet": "Primers",
+      "member": "xl/worksheets/sheet9.xml",
+      "first_row": [
+        {
+          "coordinate": "A1",
+          "type": "s",
+          "value": "0",
+          "inline": null,
+          "header": "Primer name"
+        },
+        {
+          "coordinate": "B1",
+          "type": "s",
+          "value": "1",
+          "inline": null,
+          "header": "Sequence"
+        },
+        {
+          "coordinate": "C1",
+          "type": "s",
+          "value": "2",
+          "inline": null,
+          "header": "Notes"
+        }
+      ]
+    },
+    {
+      "sheet": "ddGun_scores",
+      "member": "xl/worksheets/sheet10.xml",
+      "first_row": [
+        {
+          "coordinate": "A1",
+          "type": "s",
+          "value": "429",
+          "inline": null,
+          "header": "PDBFILE"
+        },
+        {
+          "coordinate": "B1",
+          "type": "s",
+          "value": "430",
+          "inline": null,
+          "header": "CHAIN"
+        },
+        {
+          "coordinate": "C1",
+          "type": "s",
+          "value": "619",
+          "inline": null,
+          "header": "hgvs_pro"
+        },
+        {
+          "coordinate": "D1",
+          "type": "s",
+          "value": "620",
+          "inline": null,
+          "header": "S_DDG.3D."
+        },
+        {
+          "coordinate": "E1",
+          "type": "s",
+          "value": "621",
+          "inline": null,
+          "header": "T_DDG.3D."
+        },
+        {
+          "coordinate": "F1",
+          "type": "s",
+          "value": "622",
+          "inline": null,
+          "header": "STABILITY.3D."
+        }
+      ]
+    },
+    {
+      "sheet": "freeSASA_scores",
+      "member": "xl/worksheets/sheet11.xml",
+      "first_row": [
+        {
+          "coordinate": "A1",
+          "type": "s",
+          "value": "598",
+          "inline": null,
+          "header": "from_aa_code"
+        },
+        {
+          "coordinate": "B1",
+          "type": "s",
+          "value": "599",
+          "inline": null,
+          "header": "from_aa"
+        },
+        {
+          "coordinate": "C1",
+          "type": "s",
+          "value": "600",
+          "inline": null,
+          "header": "sasa"
+        }
+      ]
+    },
+    {
+      "sheet": "Huang2024_ClinicalPhenotypes",
+      "member": "xl/worksheets/sheet12.xml",
+      "first_row": [
+        {
+          "coordinate": "A1",
+          "type": "s",
+          "value": "597",
+          "inline": null,
+          "header": "variant"
+        },
+        {
+          "coordinate": "B1",
+          "type": "s",
+          "value": "596",
+          "inline": null,
+          "header": "%"
+        },
+        {
+          "coordinate": "C1",
+          "type": "s",
+          "value": "445",
+          "inline": null,
+          "header": "category"
+        }
+      ]
+    }
+  ],
+  "sheet_data_rows_parsed": 0,
+  "whole_archive_sha256_verified": false,
+  "whole_sheet_CRC_verified": false,
+  "shared_strings_CRC_verified": true,
+  "scope": "Only first row per sheet and selected shared-string headers decoded; no worksheet data rows parsed"
+}
