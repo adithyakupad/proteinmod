@@ -108,6 +108,18 @@ def project_tsv(handle):
     return names, rows
 
 
+def notebook_code(text):
+    cells = raw_fields(text, {"cells"})["cells"]
+    sources = []
+    for raw in array_values(cells):
+        fields = raw_fields(raw, {"cell_type", "source"})
+        if json.loads(fields["cell_type"]) != "code":
+            continue
+        source = json.loads(fields["source"])
+        sources.append("".join(source) if isinstance(source, list) else source)
+    return sources
+
+
 def opener(request, timeout):
     separator = "&" if "?" in request.full_url else "?"
     query = request.get_header("Range") or "head"
@@ -171,6 +183,12 @@ def acquire_members(plan_path):
                 "zenodo/Fig2/Sparse_DTS_Cores_fitness_replicates.txt",
             }:
                 raise ValueError("Unregistered data member")
+        elif plan["mode"] == "notebook_source_only":
+            if name not in {
+                "combinatorialcores/MainFigures/Fig2.ipynb",
+                "combinatorialcores-main/Fig1.ipynb",
+            }:
+                raise ValueError("Unregistered notebook")
         elif plan["mode"] != "README_only" or not name.endswith("/README.md"):
             raise ValueError("Only pinned genotype tables and README permitted")
         if member["bytes"] > 20 * 1024**2 or member["compressed_bytes"] > 8 * 1024**2:
@@ -208,13 +226,26 @@ def acquire_members(plan_path):
                 genotype_projection=str(destination),
                 projection_sha256=hashlib.sha256(destination.read_bytes()).hexdigest(),
             )
+        elif plan["mode"] == "notebook_source_only":
+            sources = notebook_code(body.decode("utf-8"))
+            destination.write_text(json.dumps({"code_cells": sources}) + "\n")
+            result["source_projection"] = str(destination)
+            result["source_projection_sha256"] = hashlib.sha256(
+                destination.read_bytes()
+            ).hexdigest()
+            result["notebook_outputs_decoded"] = False
         else:
             text = body.decode("utf-8")
             destination.write_text(json.dumps({"README": text}) + "\n")
             result["README"] = text
         records.append(result)
         print(record, plan["mode"], len(body), result.get("genotype_rows"))
-    output = Path("benchmarks/m201/evidence/member-audit.json")
+    filename = (
+        "code-member-audit.json"
+        if all(r["member"]["name"].endswith(".ipynb") for r in records)
+        else "member-audit.json"
+    )
+    output = Path("benchmarks/m201/evidence") / filename
     with output.open("x") as handle:
         json.dump(records, handle, indent=2)
         handle.write("\n")

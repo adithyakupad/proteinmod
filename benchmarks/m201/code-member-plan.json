@@ -1,0 +1,40 @@
+[
+  {
+    "record": 16266645,
+    "archive": {
+      "id": "6f449871-75c5-45f4-a2fc-ebc61dabdec6",
+      "key": "combinatorialcores_github_repo.zip",
+      "size": 19726227,
+      "checksum": "md5:6f0626ae43afba3b03087593197dc3a3",
+      "links": {
+        "self": "https://zenodo.org/api/records/16266645/files/combinatorialcores_github_repo.zip/content"
+      }
+    },
+    "member": {
+      "name": "combinatorialcores/MainFigures/Fig2.ipynb",
+      "bytes": 552486,
+      "compressed_bytes": 348939,
+      "CRC": 1566978875
+    },
+    "mode": "notebook_source_only"
+  },
+  {
+    "record": 15302825,
+    "archive": {
+      "id": "fd2a362a-adf3-43a4-b0b3-ae7a02e59e37",
+      "key": "combinatorialcores-main.zip",
+      "size": 4467231,
+      "checksum": "md5:c447df03062100cdbcf36bcd3794e656",
+      "links": {
+        "self": "https://zenodo.org/api/records/15302825/files/combinatorialcores-main.zip/content"
+      }
+    },
+    "member": {
+      "name": "combinatorialcores-main/Fig1.ipynb",
+      "bytes": 586619,
+      "compressed_bytes": 356660,
+      "CRC": 3083849314
+    },
+    "mode": "notebook_source_only"
+  }
+]

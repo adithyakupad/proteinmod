@@ -33,3 +33,18 @@ def test_only_genotype_cells_decoded():
         m201.project_tsv(io.BytesIO(b"nt_seq\taa_seq\tfitness\nATG\tM\n"))
     with pytest.raises(ValueError, match="Unique"):
         m201.project_tsv(io.BytesIO(b"nt_seq\taa_seq\taa_seq\n"))
+
+
+def test_notebook_outputs_never_decoded(monkeypatch):
+    original = json.loads
+
+    def guarded(text, *args, **kwargs):
+        assert "POISON" not in text
+        return original(text, *args, **kwargs)
+
+    monkeypatch.setattr(json, "loads", guarded)
+    sources = m201.notebook_code(
+        '{"cells":[{"cell_type":"code","source":["x=1"],'
+        '"outputs":[{"text":"POISON"}]},{"cell_type":"markdown","source":"POISON"}]}'
+    )
+    assert sources == ["x=1"]
