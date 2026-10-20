@@ -45,6 +45,7 @@ def main():
     records, predictions = [], []
     max_historical_error = 0.0
     max_scalar_error = 0.0
+    scalar_failures = []
     for case_index, case in enumerate(cases):
         roles = {k: np.array([lookup[x] for x in ids]) for k, ids in case["roles"].items()}
         families = [{rows[i]["family"] for i in indices} for indices in roles.values()]
@@ -80,7 +81,8 @@ def main():
                         )
                     )
                     max_scalar_error = max(max_scalar_error, error)
-                    assert error < 1e-7
+                    if error >= 1e-7:
+                        scalar_failures.append({"case": case_index, "model": name, "error": error})
                 path = output / f"{case_index:03d}_{name}.npz"
                 np.savez_compressed(path, **state)
                 with np.load(path) as restored:
@@ -186,7 +188,8 @@ def main():
         "family_effects": primary,
         "family_sd": float(np.std(primary, ddof=1)),
         "leave_one_family_out": [float(np.mean(primary[:i] + primary[i + 1 :])) for i in range(4)],
-        "success": gain >= 0.02 and sum(x > 0 for x in primary) >= 3,
+        "success": gain >= 0.02 and sum(x > 0 for x in primary) >= 3 and not scalar_failures,
+        "scalar_failures": scalar_failures,
         "historical_max_error": max_historical_error,
         "scalar_max_error": max_scalar_error,
         "exact_refits": 320,

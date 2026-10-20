@@ -42,3 +42,20 @@ def test_tie_and_invalid_energy(monkeypatch):
     assert selection["penalty"] == 0.1
     with pytest.raises(ValueError, match="energy"):
         fit(np.ones_like(matrix), rows, roles, [1], False, True)
+
+
+def test_float32_historical_replay():
+    from sklearn.linear_model import Ridge
+    from sklearn.preprocessing import StandardScaler
+
+    from proteinmod.multiprotein_experiments import fit_targets
+
+    matrix, rows, roles = example()
+    matrix = matrix.astype(np.float32)
+    state, _ = fit(matrix, rows, roles, [0.1], True, False)
+    scaler = StandardScaler().fit(matrix[roles["train"]])
+    features = scaler.transform(matrix).astype(float)
+    target = fit_targets(rows, roles["train"])
+    model = Ridge(alpha=0.1, solver="lsqr", tol=1e-8, max_iter=10000)
+    model.fit(features[roles["train"]], target[roles["train"]])
+    np.testing.assert_array_equal(predict(matrix, state), model.predict(features))
