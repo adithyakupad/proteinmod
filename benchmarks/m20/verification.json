@@ -1,0 +1,34 @@
+{
+  "base": "402bd8815dcd8857d416f47b1b41fdb922cf471d",
+  "admission_commit": "1e3edf2",
+  "tests": {
+    "passed": 249,
+    "seconds": 13.83,
+    "warnings": 0
+  },
+  "ruff_check": "PASS",
+  "ruff_format": "PASS",
+  "readability_historical_guards": "PASS; original M16/M161/M17/M18/M181/M182/M183 evidence retained",
+  "M184_and_SOD1_guards": "PASS; admission BLOCKED and deviation retained",
+  "preexisting_tracked_files_exact": 953,
+  "new_external_fits": 0,
+  "new_external_predictions": 0,
+  "new_outcome_access": false,
+  "source_cohort_changed": false,
+  "final_manifest_issued": false,
+  "source_permissions": "UNRESOLVED exact GEO columns",
+  "incident_disposition": "CONDITIONAL_NEW_STUDY_ONLY, separate AI review, owner acceptance pending",
+  "contacts_sent": 0,
+  "CI": "See exact draft PR head checks; pending at commit creation",
+  "artifact_hashes": {
+    "ADMISSION_PLAN.md": "85db692733ffb32c7b66a5db5d61433c35f470a07fc1eba98ae3cfaf973ede79",
+    "admission-plan.json": "1be221c1896c37a677377d3e45f7b710361b927ebd7b157987ef1e1947f394e6",
+    "INCIDENT_REVIEW.md": "375887a8c48476a9c3339ed23ea4cf6c368834cf7636273670870cf46aa08e64",
+    "incident-review.json": "a089cdadcbd45e4a6af4a2ed2811400fd7ae0b0dbe4c3e0bd7589ba5850f6ac6",
+    "PERMISSION_REQUEST.md": "c8e24ab606798617db2ad8b256a48407bfdfa662723063abdbf4ed3b8f08a1f1",
+    "permission-review.json": "6c6d0cd792e00a15514963012b7f0b036c1a2b2adcc3f9bd18c09f293fd04ab0",
+    "alternatives.json": "09d3d0367485155b39d152e3111f3c99b471af25a2345e32acd46f6edf43ed6b",
+    "qualification.json": "262d4f3af5516bc7c021846becff297a73294381a8271eb404a4c0cee97960d9",
+    "REPORT.md": "8abff06b95752dea59d7ae5b0a2a8902a75d39fd492e249af23a8c0577935b70"
+  }
+}
