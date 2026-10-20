@@ -1,0 +1,14 @@
+[
+  {
+    "name": "GFP-reference.fa",
+    "url": "https://ndownloader.figshare.com/files/4820653?cache_bust=1792371153",
+    "status": "ERROR",
+    "error": "HTTP Error 500: Internal Server Error"
+  },
+  {
+    "name": "GFP-primary.tsv",
+    "url": "https://ndownloader.figshare.com/files/4820647?cache_bust=1792371153",
+    "status": "ERROR",
+    "error": "HTTP Error 500: Internal Server Error"
+  }
+]

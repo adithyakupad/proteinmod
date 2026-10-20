@@ -1,0 +1,85 @@
+[
+  {
+    "name": "figshare3102154.json",
+    "url": "https://api.figshare.com/v2/articles/3102154/versions/1",
+    "sha256": "a5e9bbe4ed2ec502b83edcafbfe9c285d8502cb281d07347d0aec1ef9504ae13",
+    "bytes": 13935,
+    "status": "OK"
+  },
+  {
+    "name": "OUP-supplement-policy.html",
+    "url": "https://academic.oup.com/pages/authoring/journals/preparing_your_manuscript/supplementary_data",
+    "status": "ERROR",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "name": "PMC-copyright.html",
+    "url": "https://pmc.ncbi.nlm.nih.gov/about/copyright/",
+    "sha256": "53bf37b4641fb23fe26333c6bce89c2b665a6d3f7ed0efeb1924e0d493749751",
+    "bytes": 85464,
+    "status": "OK"
+  },
+  {
+    "name": "NCBI-disclaimer.html",
+    "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+    "sha256": "8ad8f6f186ca51ec73a5fb8935ecfa17b8cbaad300b7025b381898ab72621869",
+    "bytes": 38936,
+    "status": "OK"
+  },
+  {
+    "name": "TEM1-PMC-record.xml",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4032126/fullTextXML",
+    "sha256": "6a6e5264fd4f753387f9f540bca4c5a569a74be8c4312a622f310c974f7640fa",
+    "bytes": 151735,
+    "status": "OK"
+  },
+  {
+    "name": "1ZG4-entity.json",
+    "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/1ZG4/1",
+    "sha256": "65453ae2964fec5860398de79236bbfff376f4d43c5f68461daffbf253f930bc",
+    "bytes": 47863,
+    "status": "OK"
+  },
+  {
+    "name": "1XPB-entity.json",
+    "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/1XPB/1",
+    "sha256": "496b29e6bb3c2241f17aad766f0981242a6ca49d132a19dc39f051b13166a23d",
+    "bytes": 44594,
+    "status": "OK"
+  },
+  {
+    "name": "1AXB-entity.json",
+    "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/1AXB/1",
+    "sha256": "a9e0aebfc890fc3c1050288a4aba662884062f23615530a0542de68312282c46",
+    "bytes": 47100,
+    "status": "OK"
+  },
+  {
+    "name": "1FQG-entity.json",
+    "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/1FQG/1",
+    "sha256": "d34607598259f569ef046f49451f478aa9e34521dec9691c468fd37ef7d211db",
+    "bytes": 46626,
+    "status": "OK"
+  },
+  {
+    "name": "2B3P-entity.json",
+    "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/2B3P/1",
+    "sha256": "1af89ddd9389232f7b2dd02389e6499fb000cfede69d35a4e99acfdce4dad650",
+    "bytes": 17812,
+    "status": "OK"
+  },
+  {
+    "name": "1GFL-entity.json",
+    "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/1GFL/1",
+    "sha256": "f06593f8ec5f69ce4a85a838039e66303bb1b43d62520a114fc7bbdfc976b967",
+    "bytes": 13811,
+    "status": "OK"
+  },
+  {
+    "name": "2WUR-entity.json",
+    "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/2WUR/1",
+    "sha256": "10ee1a9bbd18c33696764a4193bbf1094c43f7e70d1f058147d455cdf045ed07",
+    "bytes": 15192,
+    "status": "OK"
+  }
+]

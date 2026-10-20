@@ -1,0 +1,28 @@
+{
+  "baseline_commit": "256c2518bda891e5037376cfff351a852ec22010",
+  "protocol_commit": "4e20e52",
+  "admission": "BLOCKED",
+  "potential_families": [
+    "PF00313",
+    "PF00280",
+    "PF13354",
+    "PF01353"
+  ],
+  "fully_admitted_four_family_experiment": false,
+  "original_M17_directional_criterion": ">=3 of4 families; effect criterion0.02rho unchanged",
+  "models_fit": 0,
+  "predictions_generated": 0,
+  "candidate_target_cells_accessed": false,
+  "final_folds_issued": false,
+  "checkpoints_for_confirmation_frozen": false,
+  "reasons": [
+    "The unchanged strict full-reference M2 checks reject proposed TEM1 and GFP graphs. Prospective common masks exist but have not been passed off as accepted full-reference extractions.",
+    "CspA/CI2 exact GEO item-to-licensed archive identity remains a carried-forward permission qualification. No new blanket license is inferred."
+  ],
+  "resolved": [
+    "Fourth independently measured family GFP traced to primary phenotype column, validated genotype-only and source checksums",
+    "TEM1 mature sequence differences resolved via1XPB; exact263-site mask defined",
+    "TEM1 noncommercial research permission linked to exact workbook in current PMC OA metadata"
+  ],
+  "external_validation_claim": false
+}

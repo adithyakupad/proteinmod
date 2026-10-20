@@ -1,0 +1,15 @@
+{
+  "article_metadata_url": "https://pmc-oa-opendata.s3.amazonaws.com/metadata/PMC4032126.1.json",
+  "license_code": "CC BY-NC",
+  "is_pmc_openaccess": true,
+  "is_manuscript": false,
+  "supplement_media_url": "s3://pmc-oa-opendata/PMC4032126.1/supp_msu081_Data_S1-S4.xlsx?md5=abc10a058a2adaba6ec7672fdda76ea7",
+  "supplement_md5": "abc10a058a2adaba6ec7672fdda76ea7",
+  "cached_workbook_md5": "abc10a058a2adaba6ec7672fdda76ea7",
+  "cached_workbook_sha256": "bcdd031301113ede74652d4e2eba3f03cf48eb46222d92ccab5c8787950aa5d3",
+  "exact_item_linkage_verified": true,
+  "research_use_decision": "Noncommercial research under CC-BY-NC3.0 with attribution; exact workbook linked in licensed OA version media inventory and publisher-permitted-media distribution documented by current PMC README. This is additional evidence beyond article text alone.",
+  "redistribution_decision": "Do not redistribute workbook in this PR. Any later noncommercial redistribution must retain attribution/license and NLM source/version notice.",
+  "commercial_use_decision": "Not granted by CC-BY-NC; separate permission required.",
+  "outputs": "Not generated; no automatic relicensing of predictions or model weights asserted."
+}

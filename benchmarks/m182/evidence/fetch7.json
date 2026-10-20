@@ -1,0 +1,15 @@
+[
+  {
+    "name": "TEM1-OA-record.xml",
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC4032126",
+    "status": "ERROR",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "PMC-OA-subset.html",
+    "url": "https://pmc.ncbi.nlm.nih.gov/tools/openftlist/",
+    "status": "OK",
+    "sha256": "fa4141c1c05675c6437ac14475ea67b06dae2c8a9b187b95c04f2d17504b5a01",
+    "bytes": 82989
+  }
+]

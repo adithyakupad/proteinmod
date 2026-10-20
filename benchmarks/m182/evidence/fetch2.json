@@ -1,0 +1,112 @@
+[
+  {
+    "name": "GFP-reference.fa",
+    "url": "https://ndownloader.figshare.com/files/4820653",
+    "status": "ERROR",
+    "error": "HTTP Error 500: Internal Server Error"
+  },
+  {
+    "name": "GFP-primary.tsv",
+    "url": "https://ndownloader.figshare.com/files/4820647",
+    "status": "ERROR",
+    "error": "HTTP Error 500: Internal Server Error"
+  },
+  {
+    "name": "1ZG4.cif",
+    "url": "https://files.rcsb.org/download/1ZG4.cif",
+    "sha256": "9acb733746d76b45790356e1445102a911f5c3d0d7517e131c6087e2a0cba2c4",
+    "bytes": 276902,
+    "status": "OK"
+  },
+  {
+    "name": "1ZG4-pdbe.json",
+    "url": "https://www.ebi.ac.uk/pdbe/api/mappings/1zg4",
+    "sha256": "9056f45e42c93cd760a352358641343f74138370a4fff98094e44618bc09077a",
+    "bytes": 7982,
+    "status": "OK"
+  },
+  {
+    "name": "1XPB.cif",
+    "url": "https://files.rcsb.org/download/1XPB.cif",
+    "sha256": "99145e8616a9aafffa7a26b543f5de5bcc623fa03d18fc3695dba385b8d4d763",
+    "bytes": 265173,
+    "status": "OK"
+  },
+  {
+    "name": "1XPB-pdbe.json",
+    "url": "https://www.ebi.ac.uk/pdbe/api/mappings/1xpb",
+    "sha256": "82ff9eedb104de3793df2376f00ef9afd1716f704d66108e08f05e8404547d41",
+    "bytes": 7823,
+    "status": "OK"
+  },
+  {
+    "name": "1GFL.cif",
+    "url": "https://files.rcsb.org/download/1GFL.cif",
+    "sha256": "5d5a7ce2dd7be9228907902d5cd41ec162c569234bb8bd119eb48874e1dac90b",
+    "bytes": 439739,
+    "status": "OK"
+  },
+  {
+    "name": "1GFL-pdbe.json",
+    "url": "https://www.ebi.ac.uk/pdbe/api/mappings/1gfl",
+    "sha256": "0a49ab8f0ebf87bfa74f685bb081f0f0a5834131d199ba0452f13a1589108a57",
+    "bytes": 11378,
+    "status": "OK"
+  },
+  {
+    "name": "2WUR.cif",
+    "url": "https://files.rcsb.org/download/2WUR.cif",
+    "sha256": "a1f7086c61bcf66261bf51a07c6a42b11e7604b88bce9fde613752e7e3a308b8",
+    "bytes": 687347,
+    "status": "OK"
+  },
+  {
+    "name": "2WUR-pdbe.json",
+    "url": "https://www.ebi.ac.uk/pdbe/api/mappings/2wur",
+    "sha256": "33a4df2d900811df38c69db3a3df627ae2a9be2d77d662676f0b77d8c6a47628",
+    "bytes": 5725,
+    "status": "OK"
+  },
+  {
+    "name": "2B3P.cif",
+    "url": "https://files.rcsb.org/download/2B3P.cif",
+    "sha256": "88db7abf8afdf94f165e671d72d0ccc73e8161d7f06cf89362ddb11aa6615b9f",
+    "bytes": 309580,
+    "status": "OK"
+  },
+  {
+    "name": "2B3P-pdbe.json",
+    "url": "https://www.ebi.ac.uk/pdbe/api/mappings/2b3p",
+    "sha256": "17b4caeae096eeb71f7e6a8ca4b805b1df000e8b5efea9b806d99fdb9e407086",
+    "bytes": 5897,
+    "status": "OK"
+  },
+  {
+    "name": "PF01353-entry.json",
+    "url": "https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01353/",
+    "sha256": "041f0824c71c036bbc5a3ab150e33eb3338fe05847a421a80efb177b87e9596f",
+    "bytes": 1313,
+    "status": "OK"
+  },
+  {
+    "name": "PF01353-hmm",
+    "url": "https://www.ebi.ac.uk/interpro/wwwapi/entry/pfam/PF01353/?annotation=hmm",
+    "sha256": "853be1387887f7e7e4d48ab6a4be1fba1560a47ba50569accea530dba5b3f4c3",
+    "bytes": 20473,
+    "status": "OK"
+  },
+  {
+    "name": "PF13354-entry.json",
+    "url": "https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13354/",
+    "sha256": "a009fc85732536e93ad62396f6506c325fe081d76767e54812d3b40bad82c07d",
+    "bytes": 1675,
+    "status": "OK"
+  },
+  {
+    "name": "PF13354-hmm",
+    "url": "https://www.ebi.ac.uk/interpro/wwwapi/entry/pfam/PF13354/?annotation=hmm",
+    "sha256": "19502fe89cdaf68c8af4c1901723a801e62e07b6abf632f2f7baf57f995968ea",
+    "bytes": 26810,
+    "status": "OK"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "query_id" : "7e6519ba-e60a-4cd1-aed6-57223985aee3",
+  "result_type" : "polymer_entity",
+  "total_count" : 4,
+  "result_set" : [ {
+    "identifier" : "2G2S_1",
+    "score" : 1.0
+  }, {
+    "identifier" : "2G3D_1",
+    "score" : 1.0
+  }, {
+    "identifier" : "2G16_1",
+    "score" : 0.0
+  }, {
+    "identifier" : "2G5Z_1",
+    "score" : 0.0
+  } ]
+}

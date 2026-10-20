@@ -1,0 +1,128 @@
+[
+  {
+    "name": "2G2S-entity.json",
+    "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/2G2S/1",
+    "sha256": "26f8343424edc6d156a271ff7b9ce1116c9d333ac4684d27ee9fe92fb38aed10",
+    "bytes": 11907,
+    "status": "OK"
+  },
+  {
+    "name": "2G2S-pdbe.json",
+    "url": "https://www.ebi.ac.uk/pdbe/api/mappings/2g2s",
+    "sha256": "037f94b916b768401775fe6c929f71075b13b80a900b4d234cac1d74d161344a",
+    "bytes": 8313,
+    "status": "OK"
+  },
+  {
+    "name": "2G2S.cif",
+    "url": "https://files.rcsb.org/download/2G2S.cif",
+    "sha256": "66fdb4d0b85e72eab6812fdbbd8810a0d2df9c4213f283ae7a618efe7483a272",
+    "bytes": 278900,
+    "status": "OK"
+  },
+  {
+    "name": "2G3D-entity.json",
+    "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/2G3D/1",
+    "sha256": "9dd55aba61785a2f2d16f0bf507af24cfefa522f747fd004bc36952db0a23c64",
+    "bytes": 11907,
+    "status": "OK"
+  },
+  {
+    "name": "2G3D-pdbe.json",
+    "url": "https://www.ebi.ac.uk/pdbe/api/mappings/2g3d",
+    "sha256": "5cf071453f17fe5051ce702b04629e3770e9335abf73e781c1348fc63038aa5c",
+    "bytes": 8313,
+    "status": "OK"
+  },
+  {
+    "name": "2G3D.cif",
+    "url": "https://files.rcsb.org/download/2G3D.cif",
+    "sha256": "a484f8acf369cbc978b5fb79b0458f34143d66d6116e5c00d1fe69324076ad1b",
+    "bytes": 281308,
+    "status": "OK"
+  },
+  {
+    "name": "2G16-entity.json",
+    "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/2G16/1",
+    "sha256": "44e572d13fedaa8cccd8ee040d441b33c2a2ccc7433d2ac88103f490b6a9b062",
+    "bytes": 11803,
+    "status": "OK"
+  },
+  {
+    "name": "2G16-pdbe.json",
+    "url": "https://www.ebi.ac.uk/pdbe/api/mappings/2g16",
+    "sha256": "3442d82caf38926e1b7febaa5db4eeb0a47bc4beddeec4075ca37b452edc7bc0",
+    "bytes": 8392,
+    "status": "OK"
+  },
+  {
+    "name": "2G16.cif",
+    "url": "https://files.rcsb.org/download/2G16.cif",
+    "sha256": "99b20f7680ddd5e4a70697416655f658434d3fc50133cc331a28df337add2b8e",
+    "bytes": 249779,
+    "status": "OK"
+  },
+  {
+    "name": "2G5Z-entity.json",
+    "url": "https://data.rcsb.org/rest/v1/core/polymer_entity/2G5Z/1",
+    "sha256": "b1a78075ba6e0e87172d9e7f5c6f4d73be3e2aeaf24e0c3e5e7e1b025611da4d",
+    "bytes": 11793,
+    "status": "OK"
+  },
+  {
+    "name": "2G5Z-pdbe.json",
+    "url": "https://www.ebi.ac.uk/pdbe/api/mappings/2g5z",
+    "sha256": "ee670278a89339aac041faf44cad0f32e453bd8fa7101431a27a6dfbc401d55c",
+    "bytes": 8318,
+    "status": "OK"
+  },
+  {
+    "name": "2G5Z.cif",
+    "url": "https://files.rcsb.org/download/2G5Z.cif",
+    "sha256": "a46f1f71c58d1ff27d199d2f1eb2e165b5adf71303388ec0c6665ae9599a360b",
+    "bytes": 277561,
+    "status": "OK"
+  },
+  {
+    "name": "PF00385-entry.json",
+    "url": "https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00385/",
+    "sha256": "982694b6e42290fae09b7e48cd9297525b3b9ae65d13eaaff831159b24834e43",
+    "bytes": 1628,
+    "status": "OK"
+  },
+  {
+    "name": "PF00385-hmm",
+    "url": "https://www.ebi.ac.uk/interpro/wwwapi/entry/pfam/PF00385/?annotation=hmm",
+    "sha256": "09e265251d1ba55576ab6e39f934db949e12f2fe4c994229b762bff9e5fb01a0",
+    "bytes": 6448,
+    "status": "OK"
+  },
+  {
+    "name": "PF00046-entry.json",
+    "url": "https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00046/",
+    "sha256": "e36036298c658f17250c7af86d7dc9354945b824272541c8118c52a01624551c",
+    "bytes": 1147,
+    "status": "OK"
+  },
+  {
+    "name": "PF00046-hmm",
+    "url": "https://www.ebi.ac.uk/interpro/wwwapi/entry/pfam/PF00046/?annotation=hmm",
+    "sha256": "ed5ebafd37b2c83e03a64f690d12d1588fb13e466e08a3221714953d94c6026f",
+    "bytes": 6004,
+    "status": "OK"
+  },
+  {
+    "name": "PF00397-entry.json",
+    "url": "https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00397/",
+    "sha256": "6d1a7d51d3e8dc798f34d9758a71874fc3b40108b33ed878645ccab0e6d4361c",
+    "bytes": 5827,
+    "status": "OK"
+  },
+  {
+    "name": "PF00397-hmm",
+    "url": "https://www.ebi.ac.uk/interpro/wwwapi/entry/pfam/PF00397/?annotation=hmm",
+    "sha256": "2df433b529b264705f0de38235f4072b7134882f6183dda4b4495d522795c933",
+    "bytes": 4119,
+    "status": "OK"
+  }
+]

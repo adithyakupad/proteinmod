@@ -1,0 +1,24 @@
+[
+  {
+    "name": "GFP-reference.fa",
+    "repo": "jackievaleri/BioAutoMATED",
+    "revision": "63e7b52c3b61435080d5e6449a3f6ae32dc6ce5d",
+    "path": "clean_data/raw/avgfp/3102154/avGFP_reference_sequence.fa",
+    "bytes": 740,
+    "md5": "c1af632d736837b1d1518cb9aae53859",
+    "expected_md5": "c1af632d736837b1d1518cb9aae53859",
+    "sha256": "2559ee1afe9d0f41e03ea75db96448a34178c2dd597c78e08f01b1ee4ab5e248",
+    "matches_primary": true
+  },
+  {
+    "name": "GFP-primary.tsv",
+    "repo": "jackievaleri/BioAutoMATED",
+    "revision": "63e7b52c3b61435080d5e6449a3f6ae32dc6ce5d",
+    "path": "clean_data/raw/avgfp/3102154/amino_acid_genotypes_to_brightness.tsv",
+    "bytes": 2334128,
+    "md5": "bfff10393b2bedd687738885de79d76d",
+    "expected_md5": "bfff10393b2bedd687738885de79d76d",
+    "sha256": "5581230b9888f9960708a4769ce1c9b4453561f0b5f0374525445b4a984d54d5",
+    "matches_primary": true
+  }
+]

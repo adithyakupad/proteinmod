@@ -1,0 +1,30 @@
+[
+  {
+    "name": "GFP-reference.fa",
+    "url": "https://figshare.com/ndownloader/files/4820653",
+    "status": "NON_FILE_METADATA",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "name": "GFP-reference.fa",
+    "url": "https://api.figshare.com/v2/articles/3102154/files/4820653",
+    "status": "NON_FILE_METADATA",
+    "sha256": "e49a0f8ad9e63bd82cad3c12b8928a7bd0d58c129b8e41cccd94d35c913315c7",
+    "bytes": 286
+  },
+  {
+    "name": "GFP-primary.tsv",
+    "url": "https://figshare.com/ndownloader/files/4820647",
+    "status": "NON_FILE_METADATA",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "name": "GFP-primary.tsv",
+    "url": "https://api.figshare.com/v2/articles/3102154/files/4820647",
+    "status": "NON_FILE_METADATA",
+    "sha256": "7eb0fda42fb25dfe7b95b383b234fe558ef3fc7fc93b872fb7a0e0ae57464463",
+    "bytes": 301
+  }
+]
