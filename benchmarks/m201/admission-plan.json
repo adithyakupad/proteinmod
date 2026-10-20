@@ -1,0 +1,18 @@
+{
+  "base": "402bd8815dcd8857d416f47b1b41fdb922cf471d",
+  "M20_review_reference": "10a59d0c3e94a1cf8c49791696200293801ff528",
+  "record_ids": [
+    16266645,
+    11175470,
+    15302825
+  ],
+  "table_cell_allowlist": [
+    "aa_seq",
+    "nt_seq"
+  ],
+  "score_flags_allowed": false,
+  "individual_outcomes_allowed": false,
+  "SOD1_owner_disposition": "NOT_RECEIVED",
+  "author_email_authorized": false,
+  "final_manifest_authorized": false
+}
