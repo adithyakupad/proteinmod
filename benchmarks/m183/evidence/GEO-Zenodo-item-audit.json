@@ -1,0 +1,24 @@
+{
+  "GEO_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE266nnn/GSE266299/suppl/GSE266299_sparse_DTS_core_mutagenesis_scores.csv.gz",
+  "GEO_sha256": "4cd224d56a0004be70f1b33f055cb2a0d2846065497c94e4fcb8bb289a167b84",
+  "uncompressed_bytes": 4091026,
+  "uncompressed_sha256": "f258588a62a9616b93aff55efa2f869bc97587e4e547cb926b3bf37c0c0580ec",
+  "uncompressed_crc32": 3681033130,
+  "header": "Protein,UniprotCode,aa_seq,core,Nham_aa,WT,fitness_scaled,sigma_scaled,fitness_raw,sigma_raw",
+  "archive": {
+    "id": "7d620054-1f23-475f-adf3-b0fbcc127433",
+    "key": "Escobedo_cores_24_zenodo.zip",
+    "size": 1331618368,
+    "checksum": "md5:716ab20afae843c6db145bbb72063453",
+    "links": {
+      "self": "https://zenodo.org/api/records/11175470/files/Escobedo_cores_24_zenodo.zip/content"
+    }
+  },
+  "archive_directory_entries": 3638,
+  "range_downloaded_bytes": 487341,
+  "equal_size_and_crc_members": [],
+  "raw_filename_members": [],
+  "outcome_values_decoded": false,
+  "archive_whole_MD5_verified": false,
+  "conclusion": "No byte-identical uncompressed GEO member exists in this directory. Derived/column-level equivalence is NOT established by filenames or shared publication. Archive MD5 is publisher-declared, not a verified full download."
+}

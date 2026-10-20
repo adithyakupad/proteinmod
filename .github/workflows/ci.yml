@@ -14,6 +14,7 @@ jobs:
       - run: python scripts/verify_m18.py
       - run: python scripts/verify_m181.py
       - run: python scripts/verify_m182.py
+      - run: python scripts/verify_m183.py
   offline-tests:
     runs-on: ubuntu-latest
     strategy:

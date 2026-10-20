@@ -1,0 +1,37 @@
+{
+  "pytest": "215 passed, 1 joblib physical-core detection warning in29.67s",
+  "clean_PR42_tests": "203 passed, 1 same warning in30.94s; clean Git checkout at exact parent, baseline src first on PYTHONPATH, same installed dependencies",
+  "baseline_setup_failure": "Initial archive-only snapshot lacked Git metadata: 201 passed/2 failed solely on git rev-parse; replaced with clean exact-parent Git checkout and all203 passed. First source-only baseline also passed203 from repository cwd; not counted as clean-checkout evidence.",
+  "ruff_check": "PASS",
+  "ruff_format": "241 files PASS",
+  "pip_check": "PASS",
+  "parent_files_preserved_exact": 799,
+  "M16_historical_original_files_exact": 379,
+  "M16_1": "PASS",
+  "M17": {
+    "fits": 1096,
+    "predictions": 34304,
+    "roles_and_metrics": "PASS",
+    "training_repeated": false
+  },
+  "M18": "PASS",
+  "M18_1": "PASS",
+  "M18_2": "PASS",
+  "M18_3": "Four real masked graphs;384 same candidate IDs; exact deterministic geometry replay; no new fits or outcomes",
+  "python": "3.12.15",
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "biopython": "1.88",
+    "torch": "2.14.1",
+    "transformers": "4.57.6",
+    "ruff": "0.17.0",
+    "pytest": "9.1.1"
+  },
+  "CI": "Run exact-head GitHub checks after push; linked in PR description, not an assertion of passing before they complete",
+  "limitations": [
+    "Same operator/environment and existing coordinate/M2 caches; not independent cold-source reproduction.",
+    "No new CPU/MPS comparison, PLM feature extraction, historical training rerun or external outcome evaluation.",
+    "Scientific and source-item permission gates remain unresolved."
+  ]
+}

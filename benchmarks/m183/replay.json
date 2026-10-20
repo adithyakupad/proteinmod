@@ -1,0 +1,9 @@
+{
+  "families_exact": 4,
+  "max_tensor_hash_differences": 0,
+  "original_runtime_seconds": 23.11224208306521,
+  "replay_runtime_seconds": 22.884881084086373,
+  "compared": "All family records exact, including tensor hashes, atom/edge checks, cohorts and GFP sensitivity. Only observational top-level runtime differs.",
+  "operator_independent": false,
+  "device": "CPU"
+}
