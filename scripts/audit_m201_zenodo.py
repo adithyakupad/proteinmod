@@ -1,6 +1,8 @@
 """Blinded metadata/schema projection. Never JSON-decode unknown record fields."""
 
 import argparse
+import hashlib
+import io
 import json
 import sys
 import urllib.request
@@ -156,7 +158,75 @@ def acquire_metadata(output):
         )
 
 
+def acquire_members(plan_path):
+    records = []
+    cache = Path("data/cache/m201")
+    cache.mkdir(parents=True, exist_ok=True)
+    for plan in json.loads(Path(plan_path).read_text()):
+        record, file, member = plan["record"], plan["archive"], plan["member"]
+        name = member["name"]
+        if plan["mode"] == "genotype_only":
+            if name not in {
+                "zenodo/Fig1/Sparse_DTS_Cores_fitness_replicates.txt",
+                "zenodo/Fig2/Sparse_DTS_Cores_fitness_replicates.txt",
+            }:
+                raise ValueError("Unregistered data member")
+        elif plan["mode"] != "README_only" or not name.endswith("/README.md"):
+            raise ValueError("Only pinned genotype tables and README permitted")
+        if member["bytes"] > 20 * 1024**2 or member["compressed_bytes"] > 8 * 1024**2:
+            raise ValueError("Member exceeds acquisition bound")
+        destination = cache / f"{record}-{plan['mode']}.json"
+        if destination.exists():
+            raise FileExistsError(destination)
+        reader = RangeZipReader(file["links"]["self"], opener)
+        assert reader.length == file["size"]
+        with zipfile.ZipFile(reader) as archive:
+            info = archive.getinfo(name)
+            assert (info.file_size, info.compress_size, info.CRC) == (
+                member["bytes"],
+                member["compressed_bytes"],
+                member["CRC"],
+            )
+            body = archive.read(info)  # Opaque bytes; ZipFile validates full member CRC.
+        result = {
+            "record": record,
+            "archive": file,
+            "member": member,
+            "member_sha256": hashlib.sha256(body).hexdigest(),
+            "member_CRC_verified": True,
+            "whole_archive_MD5_verified": False,
+            "range_bytes": reader.transferred,
+            "experimental_values_decoded": False,
+            "score_flags_decoded": False,
+        }
+        if plan["mode"] == "genotype_only":
+            header, rows = project_tsv(io.BytesIO(body))
+            destination.write_text(json.dumps(rows) + "\n")
+            result.update(
+                header=header,
+                genotype_rows=len(rows),
+                genotype_projection=str(destination),
+                projection_sha256=hashlib.sha256(destination.read_bytes()).hexdigest(),
+            )
+        else:
+            text = body.decode("utf-8")
+            destination.write_text(json.dumps({"README": text}) + "\n")
+            result["README"] = text
+        records.append(result)
+        print(record, plan["mode"], len(body), result.get("genotype_rows"))
+    output = Path("benchmarks/m201/evidence/member-audit.json")
+    with output.open("x") as handle:
+        json.dump(records, handle, indent=2)
+        handle.write("\n")
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(__doc__)
-    parser.add_argument("--metadata-output", type=Path, required=True)
-    acquire_metadata(parser.parse_args().metadata_output)
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument("--metadata-output", type=Path)
+    group.add_argument("--member-plan", type=Path)
+    args = parser.parse_args()
+    if args.metadata_output:
+        acquire_metadata(args.metadata_output)
+    else:
+        acquire_members(args.member_plan)
