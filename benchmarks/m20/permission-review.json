@@ -1,0 +1,55 @@
+{
+  "review_date": "2026-10-20",
+  "GEO_disclaimer": {
+    "url": "https://www.ncbi.nlm.nih.gov/geo/info/disclaimer.html",
+    "direct_fetch": "recaptcha; no text archive claimed",
+    "primary_indexed_text": "NCBI imposes no restrictions itself; submitters may retain rights. This supports access, not exact-item author grant under frozen protocol."
+  },
+  "NCBI_policy": {
+    "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+    "finding": "NCBI cannot transfer submitter rights it does not hold."
+  },
+  "author_repository": {
+    "url": "https://github.com/lehner-lab/combinatorialcores",
+    "head": "f978897ef3a278796acc0e87e5cd82d4d0d10082",
+    "api_license": null,
+    "top_level": [
+      "Environments",
+      "LibDesignScripts",
+      "MainFigures",
+      "README.md",
+      "SupplementaryFigures"
+    ],
+    "scope": "Repository/license/filename metadata only; no notebook outputs or phenotype rows inspected"
+  },
+  "recipient": {
+    "name": "Albert Escobedo Pascual",
+    "email": "albert.escobedo@crg.eu",
+    "verified_sources": [
+      "https://www.crg.eu/directory",
+      "https://www.crg.eu/en/programmes-groups/lehner-lab"
+    ],
+    "optional_cc": "ben.lehner@crg.eu"
+  },
+  "request": {
+    "path": "benchmarks/m20/PERMISSION_REQUEST.md",
+    "sha256": "c8e24ab606798617db2ad8b256a48407bfdfa662723063abdbf4ed3b8f08a1f1",
+    "identical_to": "benchmarks/m184/PERMISSION_REQUEST.md",
+    "sent": false,
+    "email_service_draft_created": false,
+    "owner_send_authorization": false,
+    "author_reply_obtained": false
+  },
+  "GEO_item": {
+    "name": "GSE266299_sparse_DTS_core_mutagenesis_scores.csv.gz",
+    "sha256": "4cd224d56a0004be70f1b33f055cb2a0d2846065497c94e4fcb8bb289a167b84",
+    "columns": [
+      "fitness_raw",
+      "sigma_raw"
+    ],
+    "item_grant_or_exact_licensed_derivation_found": false,
+    "verdict": "UNRESOLVED under unchanged scientific admission rule; not a legal determination that research use is prohibited"
+  },
+  "new_phenotype_downloads": 0,
+  "new_outcome_values_accessed": 0
+}

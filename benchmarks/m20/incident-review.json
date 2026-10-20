@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "review_baseline_commit": "402bd8815dcd8857d416f47b1b41fdb922cf471d",
+  "history_commits_inspected": [
+    "d4a0ef2ef3df895e926d733abd242e81190ceeeb",
+    "f6ec52e59aca24b25428b6c26ee90195b8d2e0d3",
+    "56be251b938b9cb8e9ef454893931eecaa2538c4"
+  ],
+  "reviewer": {
+    "kind": "separate context-isolated AI reviewer",
+    "selected_sod1_candidates": false,
+    "external_human_independent_auditor": false,
+    "can_certify_unseen_past_memory": false
+  },
+  "scope": "Only eight committed incident, protocol, qualification, configuration and source/control-flow evidence files; no raw data or outcomes",
+  "decision": "CONDITIONAL_CONSIDERATION_FOR_NEW_PROSPECTIVE_STUDY_ONLY",
+  "pristine_blinded_replication_allowed": false,
+  "dataset_admission_granted": false,
+  "external_run_authorized": false,
+  "initial_predecode_exclusion": "FAILED_BY_DISCLOSED_HISTORY",
+  "decision_logic_consumption": {
+    "affirmative_evidence_in_inspected_sources": false,
+    "non_consumption_consistent_with_evidence": true,
+    "historical_non_consumption_proved": false,
+    "historical_claims_are_self_report": true
+  },
+  "remaining_blockers": [
+    "Responsible scientific owner must explicitly accept or reject residual blinding uncertainty and adequacy of AI review before proceeding.",
+    "External human independent review remains required if applicable policy demands it; this AI review does not fulfill that requirement.",
+    "New prospective protocol must disclose and accept the deviation before further selection, prediction or unblinding.",
+    "All-family admission and rights gates remain; inspected qualification reports unresolved CspA/CI2 item permissions."
+  ],
+  "original_m17_preserved": {
+    "hypotheses": "H1-H5",
+    "family_denominator": 4,
+    "directional_agreement_required": ">=3/4",
+    "other_frozen_criteria": "source folds, budgets, seeds, controls and native assay semantics unchanged"
+  },
+  "tests": "Source inspected; not executed by this reviewer",
+  "evidence": [
+    {
+      "path": "benchmarks/m185/BLINDING_DEVIATION.md",
+      "commit": "402bd8815dcd8857d416f47b1b41fdb922cf471d",
+      "git_blob": "4f71eef47aba05da935eb6a35c0fd53c586eb7b2",
+      "sha256": "696fbeb9202cc42a2f8ae20efd6c354149d334277975a2d2bbf507a409750c21"
+    },
+    {
+      "path": "benchmarks/m185/ADMISSION_PROTOCOL.md",
+      "commit": "402bd8815dcd8857d416f47b1b41fdb922cf471d",
+      "git_blob": "553d31db923a4934a0da670db69350e38764dc30",
+      "sha256": "58f6e52736cc162fc97a81740300872805d3e08ccfcd0299c58bfab540aa0f38"
+    },
+    {
+      "path": "benchmarks/m185/qualification.json",
+      "commit": "402bd8815dcd8857d416f47b1b41fdb922cf471d",
+      "git_blob": "02478074e7f8f94aa2455aac6bd2de370e426fff",
+      "sha256": "e094343ca32aa14be3a66cfc8e0512deb0c1b072420aca87415bdc393d5afaab"
+    },
+    {
+      "path": "scripts/sod1_sources.py",
+      "commit": "402bd8815dcd8857d416f47b1b41fdb922cf471d",
+      "git_blob": "edb2cbc05cc1b8c6e62e21937c4c05e167506356",
+      "sha256": "8b623525da617496b345c6207be2b250ccb3228885419172b1cfb4bdcd56078a"
+    },
+    {
+      "path": "tests/test_sod1_sources.py",
+      "commit": "402bd8815dcd8857d416f47b1b41fdb922cf471d",
+      "git_blob": "ab958fbc64e0bbd151cedf620828131d6d529f1f",
+      "sha256": "473ac244f23088ff6a5a7ff9d593eb1a10e09e8775d0d2d727bbce31698ab746"
+    },
+    {
+      "path": "docs/SOD1_BLINDED_ADMISSION.md",
+      "commit": "402bd8815dcd8857d416f47b1b41fdb922cf471d",
+      "git_blob": "1dba5b58e8658cd405cf3558b782d801d58d0f3d",
+      "sha256": "ae9f468004619878f48d78537279635ffafc78a3e89c51ec1d8908b1b373cead"
+    },
+    {
+      "path": "scripts/audit_sod1.py",
+      "commit": "402bd8815dcd8857d416f47b1b41fdb922cf471d",
+      "git_blob": "8b36d52e6071089509302f308140d9951b12be44",
+      "sha256": "694c6cd8c7b2cc4803d793886b96001f3064321c812d72bbad49d83a677d0edf"
+    },
+    {
+      "path": "configs/m185.json",
+      "commit": "402bd8815dcd8857d416f47b1b41fdb922cf471d",
+      "git_blob": "ca3e28578ec6d4ea9521e8a620bf9d51deeefa64",
+      "sha256": "927656a24744fa03cfbb1e1ecc95c80da963c6de87b2ad5f65d959efc6f091eb"
+    }
+  ],
+  "candidate_selection_control_flow": {
+    "inspected": true,
+    "distribution_values_used_by_visible_selection_path": false,
+    "ranking": "SHA256 of literal m18:external:SOD1 concatenated with canonical mutant sequence; ascending hex digest; first 96",
+    "eligibility": "HGVS/reference identity, canonical non-WT single substitutions, initiator-Met exclusion, duplicate sequence rejection and structural input assertions",
+    "genotype_identifiers": "accession is carried into selected rows; it is not the ranking input",
+    "config_consistency": "selection_prefix and max_candidates agree with hardcoded source literals, but source does not read these two configuration keys",
+    "limits": "No candidate output or data was read or recomputed; imported helper implementations outside the bounded scope were not audited; unseen transient historical commands, memory and actual execution remain unproved"
+  }
+}

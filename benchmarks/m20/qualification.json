@@ -1,0 +1,97 @@
+{
+  "status": "BLOCKED",
+  "base": "402bd8815dcd8857d416f47b1b41fdb922cf471d",
+  "admission_plan_commit": "1e3edf2",
+  "family_denominator": 4,
+  "directional_gate": ">=3/4",
+  "effect_margin_rho": 0.02,
+  "families": [
+    {
+      "protein": "CspA",
+      "family": "PF00313",
+      "source": "GEO GSE266299 sparse_DTS processed score item",
+      "endpoint": "abundancePCA fitness_raw; sigma_raw measurement uncertainty, not predictive uncertainty",
+      "mapping": "M183 masked geometry PASS, original strict admissions/flags preserved",
+      "rights": "UNRESOLVED exact-item grant/derivation",
+      "admitted": false
+    },
+    {
+      "protein": "CI2",
+      "family": "PF00280",
+      "source": "same exact GEO item; distinct protein family, shared primary study with CspA",
+      "endpoint": "abundancePCA fitness_raw; no thermodynamic unit relabeling",
+      "mapping": "M183 masked geometry PASS, original strict admissions/flags preserved",
+      "rights": "UNRESOLVED exact-item grant/derivation",
+      "admitted": false
+    },
+    {
+      "protein": "TEM1",
+      "family": "PF13354",
+      "source": "Primary R phenotype workbook; exact item provenance M182",
+      "endpoint": "antibiotic-resistance phenotype; not native folding ddG",
+      "mapping": "M183 mature263-position masked geometry PASS; source construct and exclusions retained",
+      "rights": "PASS noncommercial research only with attribution, source/version and CC-BY-NC conditions; not unrestricted MIT data",
+      "admitted": false,
+      "local_subchecks": "Previously qualified, not a final M20 admission"
+    },
+    {
+      "protein": "SOD1",
+      "family": "PF00080",
+      "source": "CC0 MaveDB urn:mavedb:00001217-a-3",
+      "endpoint": "VAMP-seq abundance; native abundance effect, not ddG",
+      "mapping": "M185153-position2C9V mask PASS; strict missing-Met FAIL retained;96 genotype candidates fixed previously",
+      "rights": "CC0 exact item PASS",
+      "incident": "Conditional new-study consideration; owner disposition pending; no pristine replication",
+      "admitted": false
+    }
+  ],
+  "distinct_declared_Pfam_families": 4,
+  "interpretation": "Four distinct candidate annotations are not four admitted independent families; CspA/CI2 share a source study, and bounded homology audit is not exhaustive/pretraining independence.",
+  "blockers": [
+    "Exact GEO fitness_raw/sigma_raw reuse grant or authoritative licensed derivation for CspA/CI2 not established; author request unsent without owner authorization.",
+    "SOD1 separate-AI review cannot establish pristine or prove historical non-consumption; responsible owner must accept/reject residual uncertainty and prospective-study disposition.",
+    "SOD1 replacement/any Zenodo endpoint substitution requires NEW prospective preregistration and final fixed outcome-blind manifest; none issued."
+  ],
+  "source_cohort_changed": false,
+  "new_prospective_study_selected": false,
+  "final_evaluation_manifest_issued": false,
+  "outcome_labels_accessed": false,
+  "aggregate_distribution_values_accessed": false,
+  "external_models_fit": 0,
+  "external_predictions": 0,
+  "external_confirmations": 0,
+  "contacts_sent": 0,
+  "release_created": false,
+  "hypotheses": {
+    "H1": {
+      "status": "NOT_TESTED",
+      "conclusion": "INCONCLUSIVE_ADMISSION_BLOCKED",
+      "per_family_effects": null,
+      "per_family_uncertainty": null
+    },
+    "H2": {
+      "status": "NOT_TESTED",
+      "conclusion": "INCONCLUSIVE_ADMISSION_BLOCKED",
+      "per_family_effects": null,
+      "per_family_uncertainty": null
+    },
+    "H3": {
+      "status": "NOT_TESTED",
+      "conclusion": "INCONCLUSIVE_ADMISSION_BLOCKED",
+      "per_family_effects": null,
+      "per_family_uncertainty": null
+    },
+    "H4": {
+      "status": "NOT_TESTED",
+      "conclusion": "INCONCLUSIVE_ADMISSION_BLOCKED",
+      "per_family_effects": null,
+      "per_family_uncertainty": null
+    },
+    "H5": {
+      "status": "NOT_TESTED",
+      "conclusion": "INCONCLUSIVE_ADMISSION_BLOCKED",
+      "per_family_effects": null,
+      "per_family_uncertainty": null
+    }
+  }
+}

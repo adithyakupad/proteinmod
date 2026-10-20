@@ -1,0 +1,38 @@
+{
+  "scope": "Finite prior-named source review; no new cohort selected, no label downloads",
+  "candidates": [
+    {
+      "candidate": "Zenodo16266645 Fig2/Sparse_DTS_Cores_fitness_replicates.txt",
+      "license": "CC-BY4.0 for deposited item",
+      "evidence": "benchmarks/m184/evidence/Zenodo-header-audit.json",
+      "known_columns": [
+        "fitness1_uncorr",
+        "fitness2_uncorr",
+        "fitness",
+        "sigma"
+      ],
+      "decision": "NOT SELECTED; possible new source/endpoint cohort, not exact GEO fitness_raw/sigma_raw replacement",
+      "missing": "Outcome-blind protein/construct/genotype and target-transform lineage, new prospective registration and fixed IDs before any outcome access; SOD1 review acceptance also unresolved"
+    },
+    {
+      "candidate": "Nisthal2019 GB1",
+      "decision": "REJECT unseen-family substitution: GB1 historically supervised in M4/M11",
+      "evidence": "benchmarks/m17/ELIGIBILITY.md"
+    },
+    {
+      "candidate": "Nutschel2020 BsLipA",
+      "decision": "DEFER: T50 thermal inactivation, not folding delta-delta-G; one family, primary rights unresolved; new rank-only endpoint study needed",
+      "evidence": "benchmarks/m17/ELIGIBILITY.md"
+    },
+    {
+      "candidate": "Jacquier2013 / McLaughlin2012 / Starita2013",
+      "decision": "DEFER: functional resistance/binding/ligase endpoints; construct/family/rights qualification and new prospective scope required; no phenotype lookup",
+      "evidence": "benchmarks/m17/ELIGIBILITY.md"
+    },
+    {
+      "candidate": "Additional Tsuboyama/ProteinGym stability assays",
+      "decision": "REJECT as independent measurement-generation confirmation; same study as development",
+      "evidence": "benchmarks/m17/ELIGIBILITY.md"
+    }
+  ]
+}
