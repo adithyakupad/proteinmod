@@ -1,0 +1,41 @@
+name: m221-synthetic
+on:
+  push:
+    paths:
+      - 'benchmarks/m221/**'
+      - 'configs/m221_synthetic.json'
+      - 'src/proteinmod/synthetic_regression.py'
+      - 'scripts/*m221.py'
+      - 'tests/test_m221_synthetic.py'
+      - 'conftest.py'
+      - '.github/workflows/m221-synthetic.yml'
+  pull_request:
+    paths:
+      - 'benchmarks/m221/**'
+      - 'configs/m221_synthetic.json'
+      - 'src/proteinmod/synthetic_regression.py'
+      - 'scripts/*m221.py'
+      - 'tests/test_m221_synthetic.py'
+      - 'conftest.py'
+      - '.github/workflows/m221-synthetic.yml'
+jobs:
+  synthetic-replay:
+    runs-on: ubuntu-latest
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      VECLIB_MAXIMUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e '.[dev]'
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: pytest -q tests/test_m221_synthetic.py
+      - run: python scripts/run_m221.py --output runs/m221/ci
+      - run: python scripts/verify_m221.py --compare runs/m221/ci/results.json
