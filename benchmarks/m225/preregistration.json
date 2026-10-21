@@ -1,0 +1,28 @@
+{
+  "cases": 20,
+  "config_sha256": "8c5a97563a8f13e5dbd80c88095ced96af28f8fc9ec5fce6e2cdd2670d66c231",
+  "decision": "all exact local comparisons and controls must pass",
+  "epochs": [
+    12,
+    120
+  ],
+  "parent": "3482d76961115078e97a1489c0d80f3325da8402",
+  "plan_sha256": "5271635a40bc0cc8e0248b9dea14b991fb8ee2894a2b52b8ddfb12d1f3aa90ec",
+  "scenarios": [
+    "ample_clean",
+    "scarce_noisy"
+  ],
+  "schema": 1,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
+}
