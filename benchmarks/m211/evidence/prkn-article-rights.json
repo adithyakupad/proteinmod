@@ -1,0 +1,77 @@
+{
+  "url": "https://api.crossref.org/works/10.1038/s41467-024-45829-4",
+  "retrieved_date": "2026-10-21",
+  "scope": "Metadata only; no linked file or score endpoint fetched",
+  "http_status": 200,
+  "final_url": "https://api.crossref.org/works/10.1038/s41467-024-45829-4",
+  "metadata": {
+    "publisher": "Springer Science and Business Media LLC",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              2,
+              20
+            ]
+          ],
+          "date-time": "2024-02-20T00:00:00Z",
+          "timestamp": 1708387200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              2,
+              20
+            ]
+          ],
+          "date-time": "2024-02-20T00:00:00Z",
+          "timestamp": 1708387200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0"
+      }
+    ],
+    "DOI": "10.1038/s41467-024-45829-4",
+    "title": [
+      "A mutational atlas for Parkin proteostasis"
+    ],
+    "link": [
+      {
+        "URL": "https://www.nature.com/articles/s41467-024-45829-4.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://www.nature.com/articles/s41467-024-45829-4",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://www.nature.com/articles/s41467-024-45829-4.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          2,
+          20
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "url": "https://rest.uniprot.org/uniprotkb/search?query=accession:O60260&format=tsv&fields=accession,id,protein_name,length,xref_pfam,xref_interpro,xref_pdb",
+  "retrieved_date": "2026-10-21",
+  "scope": "Metadata only; no linked file or score endpoint fetched",
+  "http_status": 200,
+  "final_url": "https://rest.uniprot.org/uniprotkb/search?query=accession:O60260&format=tsv&fields=accession,id,protein_name,length,xref_pfam,xref_interpro,xref_pdb",
+  "annotation_tsv": "Entry\tEntry Name\tProtein names\tLength\tPfam\tInterPro\tPDB\nO60260\tPRKN_HUMAN\tE3 ubiquitin-protein ligase parkin (Parkin) (EC 2.3.2.31) (Parkin RBR E3 ubiquitin-protein ligase) (Parkinson juvenile disease protein 2) (Parkinson disease protein 2)\t465\tPF22605;PF00240;PF17976;PF17978;\tIPR047534;IPR002867;IPR003977;IPR054694;IPR041565;IPR047536;IPR047535;IPR044066;IPR015496;IPR000626;IPR029071;IPR041170;\t1IYF;2JMO;4BM9;4I1F;4I1H;5C1Z;5C23;5C9V;5N2W;5N38;5TR5;6GLC;6HUE;6N13;8IK6;8IKM;8IKT;8IKV;8JWV;8WZN;8WZO;\n"
+}

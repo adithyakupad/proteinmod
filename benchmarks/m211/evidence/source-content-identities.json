@@ -1,0 +1,42 @@
+[
+  {
+    "candidate": "ASPA",
+    "source_basename": "abundance.r",
+    "git_blob": "fc73d0ada68040f3209c8a94dc71a82c7f6da0fc",
+    "bytes": 26228,
+    "sha256": "5e1b92fffe9c511640dd1e31545ffa4dcc5f634fe79c1d40e65b524d70994a37",
+    "temporary_patch_transport_trailing_LF_removed": true,
+    "payload_committed": false,
+    "source_executed": false
+  },
+  {
+    "candidate": "ASPA",
+    "source_basename": "aspa_ref_bwa.fasta",
+    "git_blob": "ba0179b67061f5c088ad2c92b38214069663263b",
+    "bytes": 2045,
+    "sha256": "56be5ddc82f6c331cf86d75c91f919662791da8421df16641881679893d05f2e",
+    "temporary_patch_transport_trailing_LF_removed": false,
+    "payload_committed": false,
+    "source_executed": false
+  },
+  {
+    "candidate": "PRKN",
+    "source_basename": "abundance.r",
+    "git_blob": "f4c04b6fc25798113d441c07e2e0ba62551b9d10",
+    "bytes": 15062,
+    "sha256": "0f3ebb97299a1d68c8a9979ae5b12bf9753270467e1b8636302fbfcea93c0401",
+    "temporary_patch_transport_trailing_LF_removed": false,
+    "payload_committed": false,
+    "source_executed": false
+  },
+  {
+    "candidate": "PRKN",
+    "source_basename": "park2_ref_bwa.fasta",
+    "git_blob": "b3ff2ae0749bbe02de6325af207d7543171b3280",
+    "bytes": 2501,
+    "sha256": "e2c9581ab5b0c394a9a43ebfbd709fe01f92eade10f86c9ba3bb4362fc4afb63",
+    "temporary_patch_transport_trailing_LF_removed": true,
+    "payload_committed": false,
+    "source_executed": false
+  }
+]

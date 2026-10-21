@@ -1,0 +1,17 @@
+{
+  "scope": "Software/document checks only; no outcomes, models or biological runner",
+  "date": "2026-10-21",
+  "status": "PASS_SCOPED_SOFTWARE_CHECKS",
+  "checks": {
+    "metadata_contract_unit_tests": "4 passed",
+    "ruff_check": "PASS repository-wide",
+    "ruff_format": "PASS 292 files",
+    "diff_whitespace": "PASS",
+    "offline_packet_validator": "PASS: JSON, local document/evidence references, no-go boundary, artifact hashes; 953 main working files and 1038 immutable archive blobs; all prior local branch refs unchanged",
+    "python_static_syntax": "PASS: AST parsing of source/scripts and new test; no research imports",
+    "payload_screen": "PASS: no private-key/token/credential-URL pattern hits; 38 small UTF-8 md/json/py files, no tables or archives"
+  },
+  "initial_failure": "Offline document validator initially reported missing verification.json; receipt added before final recheck. No research check was run.",
+  "historical_suite": "NOT RUN: includes outcome replay and model tests",
+  "CI": "SKIPPED_BY_SCOPE: commit [skip ci] prevents preexisting push/PR research workflows. No workflow edited; no green CI claim."
+}

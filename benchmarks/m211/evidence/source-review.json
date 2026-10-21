@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-21",
+  "scope": "Author source text and metadata only; no author code execution, notebook body, table, distribution, clinical classification or model input acquired",
+  "records": [
+    {
+      "candidate": "GCK",
+      "repository": "KULL-Centre/_2024_Gersing_GCKabundance",
+      "tree_sha": "e77eeb3a3a3ec89baf4ac0e4196a041f7d5d32ae",
+      "readme_blob": "a4857257086cea05b9298838c7cbf0b4842d8574",
+      "readme_review": "Source repository identifies publication, directory roles and linked deposits; no tables or notebooks opened",
+      "software_license": "MIT at LICENSE blob 80f5a7fbfbc3c090006e9724a4ec2b6bc852d562",
+      "methods": {
+        "finding": "README explicitly describes notebooks/input data for plotting; inventory shows no abundance-processing/export script outside notebooks. Notebook bodies and outputs were not fetched. Exact upstream production and supplementary-to-CSV bridge remain unverified.",
+        "target_file": "data/abundance.csv",
+        "target_blob": "e91a922f3b1b987a661a0027a2302226ad67c029",
+        "supplement_blob": "582f6f5885ba1c30c350d66c206fc52f440d9c19"
+      }
+    },
+    {
+      "candidate": "ASPA",
+      "repository": "KULL-Centre/_2023_Groenbaek-Thygesen_ASPA_MAVE",
+      "tree_sha": "ceeb5801c881c45a6ca016fd4dfd40772cc39b0d",
+      "readme_blob": "48a6c772026f506e01c3a3a9efff0e79c4f4dd6b",
+      "readme_review": "Source repository identifies publication, directory roles and linked deposits; no tables or notebooks opened",
+      "software_license": "No LICENSE/COPYING file in the retrieved main and v1.0 recursive trees; absence is not a legal prohibition, and article licensing is not inherited",
+      "methods": {
+        "source_path": "illumina/abundance.r",
+        "blob": "fc73d0ada68040f3209c8a94dc71a82c7f6da0fc",
+        "review": "Read as text, never executed; source contains data-dependent diagnostics but no generated outputs were fetched",
+        "algorithm": "Four-bin weighted protein-stability index; reads threshold 20; replicate mean and SD; normalization to WT and median nonsense index.",
+        "line_ranges": {
+          "bin_weighting": [
+            108,
+            117
+          ],
+          "read_filter": [
+            240,
+            260
+          ],
+          "replicate_and_normalization": [
+            278,
+            287
+          ],
+          "export_selection": [
+            333,
+            344
+          ],
+          "output": [
+            419,
+            420
+          ]
+        },
+        "target_file": "abundance.csv",
+        "target_blob": "0561b8a1399f0270273318c77301f3a51072a0b2",
+        "unresolved": "Reviewed script writes aspa_abundance.csv, while release tree contains abundance.csv. Rename/export identity, complete archive linkage and construct mapping were not proven.",
+        "incidental_exposure": "An inline comment concerning genotype-specific missingness surfaced during initial broad source-line filtering; not repeated or used for selection."
+      }
+    },
+    {
+      "candidate": "PRKN",
+      "repository": "KULL-Centre/_2023_Clausen_parkin_MAVE",
+      "tree_sha": "f36539b55e8327019d88c9b49d1f8894de7dec02",
+      "readme_blob": "302c9e5ab2ecd73887ce91fc2833fb71eacbb94e",
+      "readme_review": "Source repository identifies publication, directory roles and linked deposits; no tables or notebooks opened",
+      "software_license": "No LICENSE/COPYING file in the retrieved main and v1.0 recursive trees; absence is not a legal prohibition, and article licensing is not inherited",
+      "methods": {
+        "source_path": "illumina/abundance.r",
+        "blob": "f4c04b6fc25798113d441c07e2e0ba62551b9d10",
+        "review": "Read as text, never executed",
+        "algorithm": "Four-bin weighted index; barcode averaging by amino-acid identity; replicate mean and SD; WT/nonsense normalization; export with fewer than two substitutions including WT.",
+        "line_ranges": {
+          "index": [
+            103,
+            112
+          ],
+          "barcode_average": [
+            133,
+            146
+          ],
+          "replicate_normalization": [
+            150,
+            158
+          ],
+          "output": [
+            259,
+            263
+          ]
+        },
+        "target_file": "abundance.csv",
+        "target_blob": "476341beee5ecfb5fbae4c23107fcf001144d58d",
+        "unresolved": "Same output basename gives a documented producer lead, not empirical equality with the released table or archived member. Exact input-filter chain, construct equivalence and variant-level structural mapping remain incomplete."
+      }
+    }
+  ]
+}

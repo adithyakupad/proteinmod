@@ -1,0 +1,20 @@
+{
+  "commit": "65cb04736583f0ec3ae449db2c8f8148e5038665",
+  "path": "benchmarks/m201/SOD1-owner-disposition.json",
+  "sha256": "28abd3c5b13869a4c89bcfe76403c88f1828f43b5fd679380cf8f53948690b7d",
+  "disposition": {
+    "decision": "ACCEPT_FOR_NEW_PROSPECTIVE_CONSIDERATION",
+    "date": "2026-10-20",
+    "authority": "Direct owner reply in this chat to the explicit SOD1 disposition question",
+    "owner_answer": "Accept for new prospective consideration",
+    "accepted": "Residual aggregate-metadata blinding uncertainty and adequacy of separate AI review for prospective consideration",
+    "not_authorized": [
+      "Outcome access",
+      "External fitting or prediction before all gates pass",
+      "Pristine-replication claim",
+      "Author email",
+      "New models/tuning or release"
+    ],
+    "incident_reference_commit": "10a59d0c3e94a1cf8c49791696200293801ff528"
+  }
+}

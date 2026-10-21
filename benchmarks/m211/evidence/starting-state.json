@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-21",
+  "initial_branch": "archive/m203-interrupted",
+  "initial_head": "808441a80488cb4a633bc4329a096929df5cd521",
+  "working_tree": "clean",
+  "local_and_remote_main": "402bd8815dcd8857d416f47b1b41fdb922cf471d",
+  "work_branch": "codex/m211-final-dataset-qualification",
+  "open_prs": [
+    {
+      "number": 55,
+      "url": "https://github.com/adithyakupad/proteinmod/pull/55",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "codex/m20-blinded-scientific-closeout",
+      "head_sha": "10a59d0c3e94a1cf8c49791696200293801ff528",
+      "base": "main",
+      "base_sha": "402bd8815dcd8857d416f47b1b41fdb922cf471d",
+      "title": "M20: review SOD1 incident and preserve blocked external admission"
+    },
+    {
+      "number": 57,
+      "url": "https://github.com/adithyakupad/proteinmod/pull/57",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "codex/m201-zenodo-processed-admission",
+      "head_sha": "9f0713d333410f1338d2b4f6b2cb6f4b91baa802",
+      "base": "main",
+      "base_sha": "402bd8815dcd8857d416f47b1b41fdb922cf471d",
+      "title": "M20.1: audit versioned Zenodo genotype provenance and retain confirmation gate"
+    },
+    {
+      "number": 59,
+      "url": "https://github.com/adithyakupad/proteinmod/pull/59",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": "codex/m202-endpoint-adjudication",
+      "head_sha": "5f13cde106d4b4a07645257e55aa5a2d97e5a3ff",
+      "base": "codex/m201-zenodo-processed-admission",
+      "base_sha": "9f0713d333410f1338d2b4f6b2cb6f4b91baa802",
+      "title": "M20.2: adjudicate assay-local rank endpoint and stop at export-lineage gate"
+    }
+  ],
+  "changes_to_existing_prs": false
+}

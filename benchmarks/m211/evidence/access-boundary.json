@@ -1,0 +1,26 @@
+{
+  "scope": "Only four owner-specified candidates; bounded metadata/source review",
+  "allowed_retrievals": [
+    "Git tree and blob metadata, README, license and published processing-source text",
+    "Figshare/Zenodo deposit descriptors; Crossref article license metadata",
+    "UniProt explicitly requested domain/Pfam/accession fields; RCSB polymer-entity metadata"
+  ],
+  "excluded_retrievals": [
+    "Measurement tables/workbooks/archives",
+    "Notebook bodies or outputs",
+    "Whole MaveDB score-set JSON, score endpoints, clinical values and distributions",
+    "Predictive checkpoints and biological runners"
+  ],
+  "json_projection": "Deposit/article top-level whitelist selected lexically before decoding excluded descriptions; only selected license/file-descriptor fields retained. No outcome endpoints queried.",
+  "metadata_transport": "Raw descriptor HTTP responses transit memory; excluded description strings not semantically decoded or persisted. No linked payload fetched.",
+  "method_source_review": "Author scripts read as text, not executed. Source statements are not result outputs; incidental inline missingness comment separately disclosed.",
+  "incidental_annotation_exposure": true,
+  "pristine_blinding": false,
+  "independent_blinded_auditor_used": false,
+  "network_errors": [
+    "Initial sandbox urllib DNS failure; retried through approved network escalation",
+    "web open of three known metadata/landing URLs failed; direct approved metadata endpoints succeeded; no label fallback"
+  ],
+  "no_outcome_access_manifest": true,
+  "CI": "Commit skip marker used so preexisting push/PR workflows do not replay outcome data or run model tests. No workflow file modified."
+}
