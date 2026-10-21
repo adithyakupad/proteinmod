@@ -1,0 +1,11 @@
+{
+  "sha256": {
+    ".github/workflows/m223-synthetic.yml": "19cae3719c7407eaf0125fa1c59b1e2dc5d129603b2aafc355c6d188e51a3635",
+    "benchmarks/m223/PROTOCOL.md": "2c428f46f4b746a49b46d660121577c6552ec81fcf127d9186304a906d9a5096",
+    "conftest.py": "0a5dea992ef1e9d0e1c3673af55a90ee0e477019260b7ace2fd3c3863a3bda4a",
+    "scripts/check_m223_preservation.py": "42b972200ae262cd5e844d823bcb91412875b8923331ac4ef926925f12d73959",
+    "scripts/run_m223.py": "294f736815277feff81c06ca5706cdf4bc52c2241835757346f19088c04ee5ff",
+    "src/proteinmod/synthetic_checkpoint.py": "e673780f540c2c5c183bdd8baa09ac15b090412ef07f0cddd797c03de5e06780",
+    "tests/test_m223_checkpoint.py": "351c61f9e78e45e6a4b41d99cb14b8384a0ef472f4c63c47ae84a1a2054a6a2d"
+  }
+}
