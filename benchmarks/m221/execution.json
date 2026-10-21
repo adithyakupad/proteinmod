@@ -1,0 +1,14 @@
+{
+  "implementation_commit_before_first_run": "034a6e684b784693def39f0fccf94bfd3cc7a091",
+  "registered_run_path": "runs/m221/registered-run",
+  "results_sha256": "3ab574a49129c91f26099572a7e37a26bc4a1cb74527f60b82d83f217ac597a5",
+  "checkpoint_files_ignored": 40,
+  "completed_primary_trajectories": 20,
+  "independent_full_reruns": 20,
+  "independent_12_epoch_prefixes": 20,
+  "resumes_from_disk_epoch12": 20,
+  "failure_count": 0,
+  "scenario_or_setting_changes_after_results": false,
+  "pre_execution_static_correction": "Ruff found import ordering and an unused import; corrected and implementation-freeze hashes updated before the first synthetic trajectory.",
+  "leakage_scope": "Focused adversarial held-out data/label test plus training API accepts only training arrays; held-out evaluation occurs after complete trajectory."
+}

@@ -1,0 +1,27 @@
+{
+  "local": {
+    "focused_tests": "9 passed",
+    "ruff_check": "PASS repository-wide",
+    "ruff_format": "PASS 293 files",
+    "evidence_verifier": "PASS: all 20 pairs, effects, intervals, frozen sources and 953 historical main files",
+    "historical_readability_guard": "PASS stdlib-only historical mode",
+    "M184_integrity_guard": "PASS; evidence checks only, no scientific runner",
+    "CI_scope_collection": "PASS: simulated dedicated-branch CI collected only the 9 synthetic tests"
+  },
+  "replay": {
+    "full_trajectories": 20,
+    "prefixes": 20,
+    "disk_roundtrips": 40,
+    "resumes": 20,
+    "bitwise_same_environment": true
+  },
+  "CI": {
+    "status": "Receipt recorded before remote execution; live status is reported on the draft PR checks",
+    "scope": "dedicated synthetic tests and synthetic full rerun; historical workflows unchanged; no biological test collection on this isolated branch"
+  },
+  "limitations": [
+    "Nominal per-metric paired seed intervals, not population/biological uncertainty",
+    "Scarce-noisy rank effect inconclusive",
+    "Cross-platform tolerance differs from local exact replay"
+  ]
+}
