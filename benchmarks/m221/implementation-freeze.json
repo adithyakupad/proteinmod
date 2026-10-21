@@ -1,0 +1,14 @@
+{
+  "scope": "Synthetic-only implementation frozen before first trajectory/test execution",
+  "protocol_commit": "6413046918ce1104c4582e59947efb52f489553d",
+  "files": {
+    "configs/m221_synthetic.json": "8c5a97563a8f13e5dbd80c88095ced96af28f8fc9ec5fce6e2cdd2670d66c231",
+    "src/proteinmod/synthetic_regression.py": "ea3b5b96ddb805f232c754f5634dfe5971f7d827c370d906444a135a46e3f7c8",
+    "scripts/run_m221.py": "2d18fdaae71f8c9dd9efa7a202faea4f2e004127df3224a64de6aed52008e0c6",
+    "scripts/verify_m221.py": "cd9faaad60406f7bf9b1638c3943f74b2e29639eab5d255c000d5f18300e790b",
+    "tests/test_m221_synthetic.py": "5ba0dd35a819584b5dc9ed88f8628e44096092b6d2540c8419a8f6424482617e",
+    "conftest.py": "d4668a59e667f9f8d273c255062c70b87f9d8d5b91f2e2d1cdd446a391e51b9e",
+    ".github/workflows/m221-synthetic.yml": "0d1d89f499165e06945097a8ac7fa031130795a15c6d247107a7141052d6f158"
+  },
+  "pre_execution_correction": "Removed unused stdlib import flagged by Ruff; no numerical run had started."
+}

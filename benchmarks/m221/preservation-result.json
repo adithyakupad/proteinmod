@@ -1,0 +1,9 @@
+{
+  "historical_main_files": 953,
+  "main_file_hashes_match": true,
+  "M211_immutable_files": 991,
+  "M211_file_hashes_match": true,
+  "all_prior_local_branch_refs_match": true,
+  "archive_commit_unchanged": "808441a80488cb4a633bc4329a096929df5cd521",
+  "method": "Opaque SHA256 and Git-object verification only; no historical outcome parsing"
+}
