@@ -1,0 +1,18 @@
+{
+  "registration_commits": [
+    "d71fdbc",
+    "c7ee08c"
+  ],
+  "sha256": {
+    ".github/workflows/m225-bridge.yml": "d07cf433cba62276ce54859caf70f4439ce430f291d70f73395ddc5da642bd48",
+    "benchmarks/m225/PREREGISTRATION.md": "5271635a40bc0cc8e0248b9dea14b991fb8ee2894a2b52b8ddfb12d1f3aa90ec",
+    "benchmarks/m225/preregistration.json": "81a8c959a20f6c0c5a3cea243f9f2608a242f11116e5b8c5699c4720b6103331",
+    "benchmarks/m225/preservation.json": "898e13de31f164058bddb6b322a56a60d702d15f11bc30723a40d9fed68b3ce0",
+    "pytest.ini": "9ce98d8184f857815815fb786637ace59eb9c24bc484a9dec555b03278eb14ab",
+    "scripts/run_m225.py": "70374b071659ede9826fe280f1bd04e5da22e6df5d03fd1e09dc2a4730627db4",
+    "scripts/verify_m225.py": "bd0bbaa1199e5a3c5e6a10929a21b0529bae06ac5a86d5587dac302a019728db",
+    "src/proteinmod/m225_collection.py": "8b0eeee00f38193ac775bfd016942439408c2e3837086f79ce0f61e96df864d4",
+    "src/proteinmod/synthetic_bridge.py": "c23bd8bd414c0342e0713bce4b1fa7ca8edd1425898adb83559571382f7bbbe1",
+    "tests/test_m225_bridge.py": "56dca1bdd5b470ca87cf269dc2b61759e6e302a0b349556701e14f84719b5f56"
+  }
+}
