@@ -1,0 +1,30 @@
+{
+  "schema": "m221-synthetic-regression-v1",
+  "data_kind": "independent artificial real-valued arrays; no biological inputs",
+  "input_width": 16,
+  "hidden_width": 64,
+  "activation": "tanh",
+  "output": "linear scalar",
+  "dtype": "float64",
+  "initialization": "Glorot uniform weights; zero biases",
+  "optimizer": {"name": "Adam", "learning_rate": 0.003, "beta1": 0.9, "beta2": 0.999, "epsilon": 1e-8},
+  "batch_size": 32,
+  "epochs": [12, 120],
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  "preprocessing": "training-only feature mean and population SD; no target scaling",
+  "target": "sin(x[0]) + 0.5*x[1] + independent normal noise",
+  "splits": "independently generated train/validation/test arrays; fixed within each paired trajectory",
+  "selection": "fixed epochs only; no early stopping or validation/test selection",
+  "scenarios": [
+    {"id": "ample_clean", "n_train": 512, "n_validation": 256, "n_test": 2048, "noise_sd": 0.05, "expected": "longer training improves test MSE"},
+    {"id": "scarce_noisy", "n_train": 32, "n_validation": 256, "n_test": 2048, "noise_sd": 3.0, "expected": "longer training lowers train MSE but worsens test MSE"}
+  ],
+  "seed_namespaces": {"data": 100, "initialization": 200, "batch_order": 300},
+  "root_seed": 221,
+  "primary": "paired epoch120 minus epoch12 test MSE, separately per scenario",
+  "secondary": "train/validation MSE and train/validation/test Spearman; positive rank delta is better",
+  "uncertainty": "sample SD, SE and nominal 95% paired Student-t interval over 10 independent seeds; no biological inference",
+  "directional_contract": "expected MSE direction in >=8/10 seeds and paired mean 95% interval excluding zero; overfit also requires negative mean train-MSE delta",
+  "replay": "bitwise same-environment parameter/optimizer/batch-RNG/checkpoint replay; independent complete rerun",
+  "failure_policy": "retain all seeds/scenarios; no replacements, scenario tuning, architecture search or outcome-driven reruns"
+}
