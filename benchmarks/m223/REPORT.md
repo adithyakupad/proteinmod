@@ -5,12 +5,12 @@ M12/M17 trainer has been changed or qualified for resumable training by this wor
 No biological arrays, phenotypes, variant generation, protein fitting or optimization
 were used. The fixed architecture is a numeric engineering fixture, not architecture search.
 
-Implementation/protocol freeze: `894fb7ce65d27c12fbd651ef3cf090f34b56c1ac`. Results were recorded only after that
+Implementation/protocol freeze: `dde94d7be0096a39a967f78da8cf18783b45df2a`. Results were recorded only after that
 commit; the source hash map in [implementation-freeze.json](implementation-freeze.json)
 remains unchanged. [PROTOCOL.md](PROTOCOL.md) defines the design and tolerance policy.
 [execution.json](execution.json) records local checks; [results.json](results.json)
 contains full identities, state/file SHA256s and train/validation/test MSE and Spearman.
-The three small checkpoint files remain ignored under `runs/m223/frozen-run/` and can
+The three small checkpoint files remain ignored under `runs/m223/portable-freeze/` and can
 be recreated with the commands below. No checkpoint or research dataset is packaged.
 
 | Seed | Updates at epoch 120 | Full / disk-resumed / fresh repeat state | Epoch-12 test MSE | Epoch-120 test MSE | Epoch-120 test Spearman |
@@ -43,13 +43,26 @@ no biological or scientific generalization interpretation.
 | Cross-platform exact resume | Unsupported | Environment identity mismatch is rejected; fresh-run metrics have separately declared rtol 1e-8 / atol 1e-9 |
 | Historical trainer resumability | Not evaluated | M12/M17 unchanged; no historical training test was run |
 
-All **34** focused tests pass, including **34** through the dedicated-branch default
+All **35** focused tests pass, including **35** through the dedicated-branch default
 CI collection route, and **22** under optimized Python. Ruff check and format pass.
 The usual pytest warning under -O describes disabled ordinary assertions; production
 validation uses explicit exceptions, and the dedicated subprocess confirms rejection.
 A separate local fresh-run comparison has maximum metric difference **0**. Remote
 CI runs the same exact replay locally and separately compares fresh-run endpoints
 with this committed reference. Remote job outcomes are available on the draft PR.
+
+The original synthetic CI runs passed all exact replay, rejection and preservation
+checks but failed the portable comparator's byte-identical numeric metadata gate
+([initial run](https://github.com/adithyakupad/proteinmod/actions/runs/39548054030)).
+The clarification in PROTOCOL.md separates portable fixture/preprocessing rounding
+(rtol=0, atol=1e-14) from exact checkpoint identity. Raw artificial arrays are now
+recorded and checked, including each array set's own input SHA256. Source, config,
+seed, groups and schedules remain exact; endpoint thresholds are unchanged.
+A new test accepts only tiny portable rounding while rejecting that same input
+change for checkpoint resume, and rejects larger portable input changes.
+The training module, generated values, state digests and all recorded metrics are
+unchanged from the initial run. Original evidence is retained in Git history.
+
 
 All **953** historical main files remain byte-identical by SHA256, and all
 **36** pre-existing local branch refs remain unchanged, including archive/m203-interrupted

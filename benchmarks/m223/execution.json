@@ -1,20 +1,24 @@
 {
-  "implementation_commit": "894fb7ce65d27c12fbd651ef3cf090f34b56c1ac",
+  "implementation_commit": "dde94d7be0096a39a967f78da8cf18783b45df2a",
+  "initial_ci_result": "Exact replay/rejections/preservation passed; strict portable numeric identity gate failed",
+  "initial_ci_run": "https://github.com/adithyakupad/proteinmod/actions/runs/39548054030",
   "limitations": [
     "No biological data or historical trainer execution",
     "Same-environment exact replay only; cross-platform policy applies to fresh-run metrics",
     "Checkpoint SHA256 must come from trusted storage; not a signature",
     "Three artificial fixtures are engineering checks, not population inference"
   ],
-  "results_sha256": "e4f34988463d5c165ffb1435eee2db8a8a4fd85a4d0400e4f8595efa8bbe0bc1",
+  "original_implementation_commit": "894fb7c",
+  "portable_comparison_amendment": "dde94d7",
+  "results_sha256": "0bdc9877d0135f6979b088c36908e92eaa31fb56276c421d8be6b2689ccdf681",
   "verification": {
-    "dedicated_ci_collection_tests": 34,
+    "dedicated_ci_collection_tests": 35,
     "exact_disk_resume_seeds": [
       0,
       1,
       2
     ],
-    "focused_tests": 34,
+    "focused_tests": 35,
     "historical_integrity_checks": [
       "verify_readability.py --historical --stdlib-only",
       "verify_m184.py"
