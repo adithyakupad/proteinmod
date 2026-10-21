@@ -1,0 +1,12 @@
+{
+  "sha256": {
+    ".github/workflows/m221-synthetic.yml": "b7aa7236347191b43f1a4317b8d2ad721f6b4a6e222c3e71b6ed894da755750c",
+    ".github/workflows/m223-synthetic.yml": "6c087789c1acd9081c5e882e8c77b29cd0b24ae64c52ab8601477fca1af7c966",
+    ".github/workflows/m224-integration.yml": "51736cf35ea61192bc18a316e0d78f890978d77094041ee195ec30d2344067c5",
+    "benchmarks/m224/PLAN.md": "50881595825fd0602ab1759d759b8709bdcb6e7a69ef40ce2a447256e23c396c",
+    "benchmarks/m224/preservation.json": "e66cfeffd26e17e7d7147b78a739f0e5fc857a75513c2db32c349f8f9508fe47",
+    "conftest.py": "4fb64889829ced5a6ef52b51ea8bff20b979bb009eee1639d2377f8b8d2df387",
+    "scripts/verify_m224.py": "3ec7125a27c77a0f4835530f86daeacd4555de40302d1404d2c3d97bb4ebaf6b",
+    "tests/test_m224_integration.py": "bdc04abcd1cf0d3de480520d0de2bd41dade16dc3c37c639e89c267e11988966"
+  }
+}

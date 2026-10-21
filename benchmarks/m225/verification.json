@@ -1,0 +1,21 @@
+{
+  "bridge_tests": 30,
+  "combined_tests": 77,
+  "decision": "PASS",
+  "implementation_commit": "40f97a57b4cf660b880b5dcdc37c222cefdf9be1",
+  "local_portable_max_metric_difference": 0.0,
+  "local_refs_unchanged": 38,
+  "optimized_rejection_tests": 24,
+  "original_integrity_verifiers": [
+    "verify_m224.py --local-refs",
+    "verify_release_candidate.py"
+  ],
+  "parent_files_unchanged": 994,
+  "registration_commits": [
+    "d71fdbc",
+    "c7ee08c"
+  ],
+  "results_sha256": "f02cfdcad88c01062327d2b86b17de3e970f286dcdccffd82f3ea6f4e35a436b",
+  "ruff_check": "PASS",
+  "ruff_format": "PASS"
+}
