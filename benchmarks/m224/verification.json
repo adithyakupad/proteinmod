@@ -1,0 +1,39 @@
+{
+  "focused_tests": 47,
+  "historical_main_files": 953,
+  "implementation_commit": "7cd15f980227173bd969ee8313782190a4fa5505",
+  "local_refs_checked": 37,
+  "m221_max_metric_difference": 0.0,
+  "m221_pairs": 20,
+  "m223_exact_replay_seeds": 3,
+  "m223_local_max_metric_difference": 0.0,
+  "optimized_rejection_controls": 22,
+  "packaging_integrity": {
+    "amendments": [
+      "README.md",
+      "pyproject.toml",
+      "scripts/run_m19.py",
+      "scripts/verify_m184.py",
+      "scripts/verify_readability.py",
+      "scripts/verify_sod1.py",
+      "tests/test_m19_evidence.py"
+    ],
+    "base": "14fa4c37fbafda9fbc4bd7f5be482f632062c9d1",
+    "unamended_original_files": 926
+  },
+  "replay_sha256": {
+    "m221-replay.json": "ec92b0de0d8738f4f307dd0db48bb13f7ebd3e8cbd4354f1a67f66b816e8dc79",
+    "m223-replay.json": "0bdc9877d0135f6979b088c36908e92eaa31fb56276c421d8be6b2689ccdf681"
+  },
+  "ruff_check": "PASS",
+  "ruff_format": "PASS",
+  "source_snapshot_files": {
+    "62": 16,
+    "63": 12
+  },
+  "wheel": {
+    "both_numeric_modules_present": true,
+    "no_arrays_or_weights": true,
+    "sha256": "c8827e4d4e7ad11c6897318772ec43fa45f2044460cce2987a86f9fecc1a3cbc"
+  }
+}
