@@ -1,0 +1,29 @@
+{
+  "implementation_commit": "894fb7ce65d27c12fbd651ef3cf090f34b56c1ac",
+  "limitations": [
+    "No biological data or historical trainer execution",
+    "Same-environment exact replay only; cross-platform policy applies to fresh-run metrics",
+    "Checkpoint SHA256 must come from trusted storage; not a signature",
+    "Three artificial fixtures are engineering checks, not population inference"
+  ],
+  "results_sha256": "e4f34988463d5c165ffb1435eee2db8a8a4fd85a4d0400e4f8595efa8bbe0bc1",
+  "verification": {
+    "dedicated_ci_collection_tests": 34,
+    "exact_disk_resume_seeds": [
+      0,
+      1,
+      2
+    ],
+    "focused_tests": 34,
+    "historical_integrity_checks": [
+      "verify_readability.py --historical --stdlib-only",
+      "verify_m184.py"
+    ],
+    "independent_local_reproduction_max_abs_metric_difference": 0,
+    "local_refs_unchanged": 36,
+    "main_files_unchanged": 953,
+    "optimized_rejection_tests": 22,
+    "ruff_check": "PASS",
+    "ruff_format": "PASS"
+  }
+}
