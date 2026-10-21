@@ -1,0 +1,13 @@
+{
+  "amendment": "Portable fresh-run comparison only; original training module unchanged",
+  "previous_freeze_commit": "894fb7c",
+  "sha256": {
+    ".github/workflows/m223-synthetic.yml": "19cae3719c7407eaf0125fa1c59b1e2dc5d129603b2aafc355c6d188e51a3635",
+    "benchmarks/m223/PROTOCOL.md": "92a496b8af42bcdd3629353b6a9469e2484c18f5da7ea40abe7826edb3169a38",
+    "conftest.py": "0a5dea992ef1e9d0e1c3673af55a90ee0e477019260b7ace2fd3c3863a3bda4a",
+    "scripts/check_m223_preservation.py": "42b972200ae262cd5e844d823bcb91412875b8923331ac4ef926925f12d73959",
+    "scripts/run_m223.py": "746890f188a7b6cf78315eaa8b873cff9a4fe7982bce14ccc5e4b210416a670d",
+    "src/proteinmod/synthetic_checkpoint.py": "e673780f540c2c5c183bdd8baa09ac15b090412ef07f0cddd797c03de5e06780",
+    "tests/test_m223_checkpoint.py": "1e9c7cbe33265ced96e27119f272c42755a5044b64f0827309aad24cb15bc8d7"
+  }
+}
