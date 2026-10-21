@@ -16,6 +16,7 @@ from proteinmod.synthetic_checkpoint import (
     canonical,
     digest,
     evaluate,
+    initial,
     load,
     numeric_data,
     pack,
@@ -300,3 +301,62 @@ print(digest(train(c,120,load(sys.argv[1],c,sys.argv[2]))))
         [sys.executable, "-c", code, str(path), trusted], capture_output=True, text=True, check=True
     )
     assert result.stdout.strip() == digest(train(c, 120))
+
+
+def test_portable_rounding_is_separate_from_checkpoint_identity(monkeypatch):
+    import importlib.util
+    from pathlib import Path
+
+    for variable in (
+        "OPENBLAS_NUM_THREADS",
+        "OMP_NUM_THREADS",
+        "MKL_NUM_THREADS",
+        "VECLIB_MAXIMUM_THREADS",
+    ):
+        monkeypatch.setenv(variable, os.environ.get(variable, "1"))
+    spec = importlib.util.spec_from_file_location(
+        "m223_runner", Path(__file__).parents[1] / "scripts/run_m223.py"
+    )
+    runner = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(runner)
+    c = contract()
+    _, _, groups, held, target = numeric_data(0)
+    metrics = {
+        h: {s: {"mse": 1.0, "spearman": 0.5} for s in ("train", "validation", "test")}
+        for h in ("epoch12", "full120", "resumed120")
+    }
+    case = {
+        "seed": 0,
+        "identity": c.identity,
+        "metrics": metrics,
+        "fixtures": {
+            "x": pack(c.x),
+            "y": pack(c.y),
+            "held": pack(held),
+            "target": pack(target),
+            "groups": groups,
+        },
+    }
+    actual = {"seeds": [case]}
+    rounded = copy.deepcopy(actual)
+    rounded["seeds"][0]["fixtures"]["y"]["values"][0] += 1e-15
+    rounded_case = rounded["seeds"][0]
+    rounded_case["identity"]["input_sha256"] = digest(
+        {k: rounded_case["fixtures"][k] for k in ("x", "y", "groups")}
+    )
+    assert runner.compare(actual, rounded) == 0
+    # The same numeric alteration remains forbidden for checkpoint continuation.
+    with pytest.raises(CheckpointError):
+        bad = initial(c)
+        bad["identity"] = rounded_case["identity"]
+        train(c, 1, bad)
+    rounded_case["fixtures"]["y"]["values"][0] += 0.1
+    rounded_case["identity"]["input_sha256"] = digest(
+        {k: rounded_case["fixtures"][k] for k in ("x", "y", "groups")}
+    )
+    with pytest.raises(ValueError, match="rounding"):
+        runner.compare(actual, rounded)
+    changed = copy.deepcopy(actual)
+    changed["seeds"][0]["identity"]["config"]["learning_rate"] = 1.0
+    with pytest.raises(ValueError, match="identity"):
+        runner.compare(actual, changed)

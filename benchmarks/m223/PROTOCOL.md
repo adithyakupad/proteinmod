@@ -58,3 +58,17 @@ this milestone before dedicated-branch CI can exclude historical test collection
 any modification/deletion of an old main file aborts collection. No old trainer test,
 research replay, acquisition or outcome analysis is authorized here. CI also runs
 the unchanged static historical-integrity and code-only packaging checks.
+
+## Portable-run clarification after initial CI
+
+The initial CI runs passed all exact replay and rejection tests but stopped at the
+fresh-run identity gate before comparing endpoints. That gate required byte-identical
+floating-point input/preprocessing metadata across macOS and Linux, conflating the two
+policies. The portable comparator now records all artificial input arrays and checks
+them, plus preprocessing mean/scale, with **rtol=0, atol=1e-14**. It first verifies each
+input hash against its recorded arrays. Source/config/seed/group/order/schedule identity
+remains exact, and endpoint tolerance is unchanged (rtol=1e-8, atol=1e-9). Local checkpoint
+loading still rejects any input/preprocessing hash change, including differences within
+the portable tolerance. A dedicated test distinguishes these policies. No training code,
+architecture, optimization setting, input generation formula, scenario or endpoint
+threshold changed. The original freeze/run remains preserved in commits 894fb7c/80b98e2.

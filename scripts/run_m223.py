@@ -24,8 +24,10 @@ from proteinmod.synthetic_checkpoint import (
     evaluate,
     load,
     numeric_data,
+    pack,
     save,
     train,
+    unpack,
 )
 
 
@@ -60,6 +62,13 @@ def run(output):
             {
                 "seed": seed,
                 "identity": contract.identity,
+                "fixtures": {
+                    "x": pack(x),
+                    "y": pack(y),
+                    "held": pack(held),
+                    "target": pack(target),
+                    "groups": groups,
+                },
                 "checkpoint_file_sha256": trusted,
                 "prefix_state_sha256": digest(prefix),
                 "full_state_sha256": digest(full),
@@ -85,6 +94,8 @@ def run(output):
             "rtol": 1e-8,
             "atol": 1e-9,
             "scope": "fresh-run endpoint metrics only; not checkpoint resume",
+            "fixture_rtol": 0.0,
+            "fixture_atol": 1e-14,
         },
     }
     (output / "results.json").write_bytes(canonical(result) + b"\n")
@@ -98,10 +109,47 @@ def compare(result, reference):
     for actual, expected in zip(result["seeds"], reference["seeds"], strict=True):
         if actual["seed"] != expected["seed"]:
             raise ValueError("Seed identity mismatch")
-        actual_identity = {k: v for k, v in actual["identity"].items() if k != "environment"}
-        expected_identity = {k: v for k, v in expected["identity"].items() if k != "environment"}
+        portable_fields = {"environment", "input_sha256", "preprocessing"}
+        actual_identity = {k: v for k, v in actual["identity"].items() if k not in portable_fields}
+        expected_identity = {
+            k: v for k, v in expected["identity"].items() if k not in portable_fields
+        }
         if canonical(actual_identity) != canonical(expected_identity):
-            raise ValueError("Fresh-run protocol/input/implementation identity differs")
+            different = [
+                k for k in actual_identity if actual_identity.get(k) != expected_identity.get(k)
+            ]
+            raise ValueError(f"Fresh-run protocol/implementation identity differs: {different}")
+        different = [
+            k
+            for k in ("input_sha256", "preprocessing")
+            if actual["identity"][k] != expected["identity"][k]
+        ]
+        if different:
+            print(f"Seed {actual['seed']} portable numeric identity differences: {different}")
+        for case in (actual, expected):
+            fixtures = case["fixtures"]
+            hashed = digest({k: fixtures[k] for k in ("x", "y", "groups")})
+            if hashed != case["identity"]["input_sha256"]:
+                raise ValueError("Fixture/input hash mismatch")
+        if actual["fixtures"]["groups"] != expected["fixtures"]["groups"]:
+            raise ValueError("Fixture group membership differs")
+        maximum_fixture = 0.0
+        components = [
+            (actual["fixtures"][k], expected["fixtures"][k]) for k in ("x", "y", "held", "target")
+        ]
+        components += [
+            (actual["identity"]["preprocessing"][k], expected["identity"]["preprocessing"][k])
+            for k in ("mean", "scale")
+        ]
+        for a_pack, b_pack in components:
+            if a_pack["shape"] != b_pack["shape"]:
+                raise ValueError("Portable numeric shape mismatch")
+            shape = tuple(a_pack["shape"])
+            a, b = unpack(a_pack, shape), unpack(b_pack, shape)
+            if not np.allclose(a, b, rtol=0, atol=1e-14):
+                raise ValueError("Portable fixture/preprocessing rounding tolerance failed")
+            maximum_fixture = max(maximum_fixture, float(np.max(np.abs(a - b))))
+        print(f"Seed {actual['seed']} max fixture/preprocessing difference={maximum_fixture:.17g}")
         for horizon in ("epoch12", "full120", "resumed120"):
             for split in ("train", "validation", "test"):
                 for metric in ("mse", "spearman"):
