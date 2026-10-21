@@ -1,0 +1,39 @@
+{
+  "decision": "PASS",
+  "new_experiment_or_training_configuration": false,
+  "non_candidate_local_refs_verified": 38,
+  "optimized_rejection_controls": {
+    "m223": 22,
+    "m225": 24
+  },
+  "original_source_files_verified": 1008,
+  "packaging": {
+    "built": true,
+    "data_or_weights_present": false,
+    "source_modules_present": true,
+    "wheel_sha256": "2e371e4008580f7665ee68b82385b2b23f78ae09093b6fc3d7c3b15be2e3c09e"
+  },
+  "registered_replays": {
+    "m221": {
+      "exact_pairs": 20,
+      "path": "runs/m221/m226-final/results.json",
+      "sha256": "9dabcd51a62db2325579d38372aa1527a410fb58187d23fa6ba4b3493bf38a9a"
+    },
+    "m223": {
+      "exact_seeds": 3,
+      "path": "runs/m223/m226-final/results.json",
+      "sha256": "0bdc9877d0135f6979b088c36908e92eaa31fb56276c421d8be6b2689ccdf681"
+    },
+    "m225": {
+      "exact_substitution_pairs": 20,
+      "path": "runs/m225/m226-final/results.json",
+      "sha256": "f02cfdcad88c01062327d2b86b17de3e970f286dcdccffd82f3ea6f4e35a436b"
+    }
+  },
+  "ruff_check": "PASS",
+  "ruff_format": "PASS",
+  "scientific_claim": "none",
+  "scope": "verification only; no trainer/config/test/infrastructure changes",
+  "source_head": "5f69fbf3450aaf993e8f0c6955ef7161d2af7924",
+  "synthetic_tests": 77
+}
