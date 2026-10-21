@@ -1,0 +1,33 @@
+{
+  "url": "https://zenodo.org/api/records/8382504",
+  "retrieved_date": "2026-10-21",
+  "scope": "Metadata only; no linked file or score endpoint fetched",
+  "http_status": 200,
+  "final_url": "https://zenodo.org/api/records/8382504",
+  "metadata": {
+    "title": "KULL-Centre/_2022_Groenbaek-Thygesen_ASPA_MAVE: Publication release",
+    "doi": "10.5281/zenodo.8382504",
+    "publication_date": "2023-09-27",
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/KULL-Centre/_2022_Groenbaek-Thygesen_ASPA_MAVE/tree/v1.0",
+        "relation": "isSupplementTo",
+        "scheme": "url"
+      }
+    ],
+    "version": "v1.0",
+    "license": {
+      "id": "other-open"
+    }
+  },
+  "id": 8382504,
+  "doi": "10.5281/zenodo.8382504",
+  "files": [
+    {
+      "id": "17c8f23f-f0c3-449b-b182-7059aa3fed38",
+      "key": "KULL-Centre/_2022_Groenbaek-Thygesen_ASPA_MAVE-v1.0.zip",
+      "size": 565,
+      "checksum": "md5:eb7603c2fc405e97d175b35cb1be0bae"
+    }
+  ]
+}

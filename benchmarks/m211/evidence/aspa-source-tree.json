@@ -1,0 +1,119 @@
+{
+  "url": "https://api.github.com/repos/KULL-Centre/_2023_Groenbaek-Thygesen_ASPA_MAVE/git/trees/main?recursive=1",
+  "tree_sha": "ceeb5801c881c45a6ca016fd4dfd40772cc39b0d",
+  "truncated": false,
+  "entries": [
+    {
+      "path": "README.md",
+      "type": "blob",
+      "sha": "48a6c772026f506e01c3a3a9efff0e79c4f4dd6b",
+      "bytes": 1366
+    },
+    {
+      "path": "abundance.csv",
+      "type": "blob",
+      "sha": "0561b8a1399f0270273318c77301f3a51072a0b2",
+      "bytes": 316496
+    },
+    {
+      "path": "illumina",
+      "type": "tree",
+      "sha": "92d7057fa4c7584814dd2760fe01bbbd89a6747e"
+    },
+    {
+      "path": "illumina/abundance.r",
+      "type": "blob",
+      "sha": "fc73d0ada68040f3209c8a94dc71a82c7f6da0fc",
+      "bytes": 26228
+    },
+    {
+      "path": "illumina/call_zerotol_paired.sh",
+      "type": "blob",
+      "sha": "f48fbbd91220ec0bcb7eefc6ac2ddc37974b3bc9",
+      "bytes": 2930
+    },
+    {
+      "path": "illumina/merge_counts.r",
+      "type": "blob",
+      "sha": "b2bdb23e4531d8d1d817288cc3f05f98340ce8f0",
+      "bytes": 969
+    },
+    {
+      "path": "illumina/numbers.r",
+      "type": "blob",
+      "sha": "b9f459f2a8426eb6fb9bcab31742510105cdce7c",
+      "bytes": 6382
+    },
+    {
+      "path": "illumina/run_tox_call.sh",
+      "type": "blob",
+      "sha": "9641b22a445ae5f5fd603ced4c52d1f01f73e9e1",
+      "bytes": 234
+    },
+    {
+      "path": "illumina/run_vamp_call.sh",
+      "type": "blob",
+      "sha": "98a4371ed0e2b71fa440e76ba34e1e1b683e1216",
+      "bytes": 232
+    },
+    {
+      "path": "illumina/toxicity.r",
+      "type": "blob",
+      "sha": "1f0bdc65711dfa1248551e1e95a83418b1e2ad3f",
+      "bytes": 46330
+    },
+    {
+      "path": "pacbio",
+      "type": "tree",
+      "sha": "1a5338e6c4b56baa552e39c6ecb72d581f444e80"
+    },
+    {
+      "path": "pacbio/aspa_ref_bwa.fasta",
+      "type": "blob",
+      "sha": "ba0179b67061f5c088ad2c92b38214069663263b",
+      "bytes": 2045
+    },
+    {
+      "path": "pacbio/barcode_map.csv.gz",
+      "type": "blob",
+      "sha": "236fd92aea5c6bdc208a1e74a509a0a8692695de",
+      "bytes": 1484581
+    },
+    {
+      "path": "pacbio/barcode_map.r",
+      "type": "blob",
+      "sha": "0f2e951f33a1aed11c5365f9ac83bf130c9ccc6e",
+      "bytes": 8830
+    },
+    {
+      "path": "pacbio/pacbio_align.sh",
+      "type": "blob",
+      "sha": "b2c5a78236a876de6fa7f4f84ad946c7bf410588",
+      "bytes": 2115
+    },
+    {
+      "path": "plots",
+      "type": "tree",
+      "sha": "cf717979b397aa7ff1988aa3030d09aed9c8f4cd"
+    },
+    {
+      "path": "plots/ASPA_plots.ipynb",
+      "type": "blob",
+      "sha": "ce04be06161102d1b66e95fe2759e382c1c67557",
+      "bytes": 4615086
+    },
+    {
+      "path": "tile_stability.csv",
+      "type": "blob",
+      "sha": "cce8b1a3f0c0b7d61c51f934b5977d8fccefaa83",
+      "bytes": 2131
+    },
+    {
+      "path": "toxicity.csv",
+      "type": "blob",
+      "sha": "3c72b40cf576c9fb815cfdce7fe590372cafe720",
+      "bytes": 313972
+    }
+  ],
+  "scope": "Git directory metadata only; no file payloads"
+}

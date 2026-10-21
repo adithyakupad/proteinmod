@@ -1,0 +1,129 @@
+{
+  "schema": "m211-metadata-qualification-v1",
+  "date": "2026-10-21",
+  "decision": "NO_GO",
+  "cohort_admitted": false,
+  "outcome_access_authorized": false,
+  "outcome_manifest_issued": false,
+  "new_variants_generated": false,
+  "models_executed": false,
+  "candidate_search_closed": true,
+  "four_family_denominator": 4,
+  "candidates": [
+    {
+      "id": "GCK",
+      "overall": "PARTIAL",
+      "gates": {
+        "source_identity": "PASS",
+        "article_rights": "PASS",
+        "dataset_rights": "PASS",
+        "production_lineage": "PARTIAL",
+        "construct_structure": "PARTIAL",
+        "family_independence": "PARTIAL",
+        "exposure_disposition": "PARTIAL"
+      },
+      "evidence": [
+        "evidence/gck-figshare.json",
+        "evidence/gck-article-rights.json",
+        "evidence/gck-source-tree.json",
+        "evidence/source-review.json",
+        "evidence/gck-annotations.json",
+        "evidence/gck-structure.json"
+      ],
+      "blockers": [
+        "Complete abundance production/filtering/export bridge not verified; notebooks deliberately not fetched",
+        "Experimental construct/isoform and compatible observed-residue map not verified",
+        "Broader family independence and exposure adjudication incomplete"
+      ]
+    },
+    {
+      "id": "ASPA",
+      "overall": "PARTIAL",
+      "gates": {
+        "source_identity": "PARTIAL",
+        "article_rights": "PASS",
+        "dataset_rights": "PARTIAL",
+        "production_lineage": "PARTIAL",
+        "construct_structure": "PARTIAL",
+        "family_independence": "PARTIAL",
+        "exposure_disposition": "PARTIAL"
+      },
+      "evidence": [
+        "evidence/aspa-zenodo.json",
+        "evidence/aspa-article-rights.json",
+        "evidence/aspa-release-tree.json",
+        "evidence/source-review.json",
+        "evidence/aspa-annotations.json",
+        "evidence/aspa-structure.json"
+      ],
+      "blockers": [
+        "Exact reusable archive grant not established: other-open",
+        "Cited archive naming/size differs from current source release; no byte linkage asserted",
+        "aspa_abundance.csv-to-abundance.csv export bridge unresolved",
+        "Fusion/experimental construct to observed coordinates unverified",
+        "Family and both prior/current exposure adjudication incomplete"
+      ]
+    },
+    {
+      "id": "PRKN",
+      "overall": "PARTIAL",
+      "gates": {
+        "source_identity": "PARTIAL",
+        "article_rights": "PASS",
+        "dataset_rights": "PARTIAL",
+        "production_lineage": "PARTIAL",
+        "construct_structure": "PARTIAL",
+        "family_independence": "PARTIAL",
+        "exposure_disposition": "PARTIAL"
+      },
+      "evidence": [
+        "evidence/prkn-zenodo.json",
+        "evidence/prkn-article-rights.json",
+        "evidence/prkn-release-tree.json",
+        "evidence/source-review.json",
+        "evidence/prkn-domains.json",
+        "evidence/prkn-human-structure.json",
+        "evidence/historical-human-domains.json"
+      ],
+      "blockers": [
+        "Exact reusable archive grant not established: other-open",
+        "Complete upstream filtering/export/archive correspondence incomplete",
+        "4K95 is rat; checked human 5C1Z entity is truncated; no cohort mask issued",
+        "Ubiquitin-like domain requires historical exposure/ancestry adjudication; reference-only exposure is not automatically supervised leakage",
+        "Prior narrative exposure remains disclosed"
+      ]
+    },
+    {
+      "id": "SOD1",
+      "overall": "PARTIAL",
+      "gates": {
+        "source_identity": "PASS",
+        "article_rights": "PASS",
+        "dataset_rights": "PASS",
+        "production_lineage": "PASS",
+        "construct_structure": "PASS",
+        "family_independence": "PASS",
+        "exposure_disposition": "PARTIAL"
+      },
+      "evidence": [
+        "evidence/sod1-owner-receipt.json",
+        "evidence/sod1-annotations.json",
+        "EXPOSURE_REVIEW.md"
+      ],
+      "blockers": [
+        "Inherited conditional consideration is not final new-study exposure adjudication",
+        "No pristine-blinding claim; no outcome permission inherited from owner consideration"
+      ]
+    }
+  ],
+  "retained_failures": {
+    "SOD1_strict_full_reference": "FAIL inherited; mature-reference PASS is conditional and separately defined",
+    "pristine_blinding": "FAIL; prior/current exposure disclosed",
+    "PRKN_4K95_human_identity": "FAIL for that specific lead, not a global no-structure claim"
+  },
+  "scope_limits": [
+    "PASS statuses for SOD1 are inherited bounded evidence, not new numerical audit",
+    "Distinct Pfam IDs do not certify evolutionary independence",
+    "No outcome-derived eligibility flags or clinical values are used"
+  ]
+}

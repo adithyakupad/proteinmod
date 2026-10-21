@@ -1,0 +1,54 @@
+{
+  "scope": "Published annotations plus existing configuration/reference roles; no new alignments, profiles, variants or effects",
+  "historical_M17_supervised_families": [
+    "PF00018",
+    "PF00385",
+    "PF00046",
+    "PF00397"
+  ],
+  "historical_supervised_reference_count": 17,
+  "historical_reference_only": [
+    "1UBQ ubiquitin; configs/ubiquitin_m2.toml explicitly reference protein, not a fitness assay"
+  ],
+  "historical_supervised_inventory": [
+    "amylase",
+    "GB1",
+    "NucB",
+    "1LP1",
+    "1A32",
+    "1TUD",
+    "BBC1",
+    "MYO3",
+    "CBX4",
+    "SR43C",
+    "NKX31",
+    "PITX2",
+    "PIN1",
+    "SAV1",
+    "PTEN",
+    "CYP2C9",
+    "VKOR1"
+  ],
+  "candidate_annotations": {
+    "GCK": [
+      "PF00349",
+      "PF03727"
+    ],
+    "ASPA": [
+      "PF24827",
+      "PF04952"
+    ],
+    "PRKN": [
+      "PF22605",
+      "PF00240",
+      "PF17976",
+      "PF17978"
+    ],
+    "SOD1": [
+      "PF00080"
+    ]
+  },
+  "PRKN_domain": "UniProt O60260 domain 1..76 ubiquitin-like; shared PF00240 with ubiquitin reference",
+  "interpretation": "Domain sharing supports adjudication requirement. The reference-only role corrects prior implied supervised overlap; no broad independent-family PASS or FAIL follows from gene names alone.",
+  "SOD1": "Inherited PF00080 bounded profile PASS; scope and historical deviations preserved"
+}

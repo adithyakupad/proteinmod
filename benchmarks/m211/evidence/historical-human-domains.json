@@ -1,0 +1,7 @@
+{
+  "url": "https://rest.uniprot.org/uniprotkb/search?query=%28accession:P60484%20OR%20accession:P11712%20OR%20accession:Q9BQB6%20OR%20accession:P0CG47%29&format=tsv&fields=accession,id,protein_name,length,xref_pfam",
+  "retrieved_date": "2026-10-21",
+  "scope": "Domain/structure metadata only",
+  "http_status": 200,
+  "annotation_tsv": "Entry\tEntry Name\tProtein names\tLength\tPfam\nP0CG47\tUBB_HUMAN\tPolyubiquitin-B [Cleaved into: Ubiquitin]\t229\tPF00240;\nP60484\tPTEN_HUMAN\tPhosphatidylinositol 3,4,5-trisphosphate 3-phosphatase and dual-specificity protein phosphatase PTEN (EC 3.1.3.16) (EC 3.1.3.48) (EC 3.1.3.67) (Inositol polyphosphate 3-phosphatase) (EC 3.1.3.-) (Mutated in multiple advanced cancers 1) (Phosphatase and tensin homolog)\t403\tPF10409;PF22785;\nP11712\tCP2C9_HUMAN\tCytochrome P450 2C9 (EC 1.14.14.1) ((R)-limonene 6-monooxygenase) (EC 1.14.14.53) ((S)-limonene 6-monooxygenase) (EC 1.14.14.51) ((S)-limonene 7-monooxygenase) (EC 1.14.14.52) (CYPIIC9) (Cholesterol 25-hydroxylase) (Cytochrome P-450MP) (Cytochrome P450 MP-4) (Cytochrome P450 MP-8) (Cytochrome P450 PB-1) (S-mephenytoin 4-hydroxylase)\t490\tPF00067;\nQ9BQB6\tVKOR1_HUMAN\tVitamin K epoxide reductase complex subunit 1 (EC 1.17.4.4) (Vitamin K1 2,3-epoxide reductase subunit 1)\t163\tPF07884;\n"
+}

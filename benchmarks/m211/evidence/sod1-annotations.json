@@ -1,0 +1,8 @@
+{
+  "url": "https://rest.uniprot.org/uniprotkb/search?query=accession:P00441&format=tsv&fields=accession,id,protein_name,length,xref_pfam,xref_interpro,xref_pdb",
+  "retrieved_date": "2026-10-21",
+  "scope": "Metadata only; no linked file or score endpoint fetched",
+  "http_status": 200,
+  "final_url": "https://rest.uniprot.org/uniprotkb/search?query=accession:P00441&format=tsv&fields=accession,id,protein_name,length,xref_pfam,xref_interpro,xref_pdb",
+  "annotation_tsv": "Entry\tEntry Name\tProtein names\tLength\tPfam\tInterPro\tPDB\nP00441\tSODC_HUMAN\tSuperoxide dismutase [Cu-Zn] (EC 1.15.1.1) (EC 1.8.-.-) (Hydrogen sulfide oxidase) (Superoxide dismutase 1) (hSod1)\t154\tPF00080;\tIPR036423;IPR024134;IPR018152;IPR001424;\t1AZV;1BA9;1DSW;1FUN;1HL4;1HL5;1KMG;1L3N;1MFM;1N18;1N19;1OEZ;1OZT;1OZU;1P1V;1PTZ;1PU0;1RK7;1SOS;1SPD;1UXL;1UXM;2AF2;2C9S;2C9U;2C9V;2GBT;2GBU;2GBV;2LU5;2MP3;2NAM;2NNX;2R27;2V0A;2VR6;2VR7;2VR8;2WKO;2WYT;2WYZ;2WZ0;2WZ5;2WZ6;2XJK;2XJL;2ZKW;2ZKX;2ZKY;3CQP;3CQQ;3ECU;3ECV;3ECW;3GQF;3GTV;3GZO;3GZP;3GZQ;3H2P;3H2Q;3HFF;3K91;3KH3;3KH4;3LTV;3QQD;3RE0;3T5W;4A7G;4A7Q;4A7S;4A7T;4A7U;4A7V;4B3E;4BCY;4BCZ;4BD4;4FF9;4MCM;4MCN;4NIN;4NIO;4NIP;4OH2;4XCR;5DLI;5IIW;5J07;5J0C;5J0F;5J0G;5K02;5O3Y;5O40;5U9M;5WMJ;5WOR;5YTO;5YTU;5YUL;6A9O;6B79;6DTK;6FFK;6FLH;6FOI;6FOL;6FON;6FP6;6SPA;6SPH;6SPI;6SPJ;6SPK;6Z3V;6Z4G;6Z4H;6Z4I;6Z4J;6Z4K;6Z4L;6Z4M;6Z4O;7CJV;7CJW;7FB6;7FB9;7NXX;7T8E;7T8F;7T8G;7T8H;7VZF;7XX3;8CCX;8GSQ;8IHU;8IHV;8K33;8K3A;8K3L;8Q6M;8YAF;8YAT;8YD3;9IYD;9IYJ;9IYK;9JBO;9JBP;9LI1;9MIL;9XJ0;9XJI;\n"
+}

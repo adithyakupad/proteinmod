@@ -1,0 +1,8 @@
+{
+  "url": "https://rest.uniprot.org/uniprotkb/search?query=accession:P35557&format=tsv&fields=accession,id,protein_name,length,xref_pfam,xref_interpro,xref_pdb",
+  "retrieved_date": "2026-10-21",
+  "scope": "Metadata only; no linked file or score endpoint fetched",
+  "http_status": 200,
+  "final_url": "https://rest.uniprot.org/uniprotkb/search?query=accession:P35557&format=tsv&fields=accession,id,protein_name,length,xref_pfam,xref_interpro,xref_pdb",
+  "annotation_tsv": "Entry\tEntry Name\tProtein names\tLength\tPfam\tInterPro\tPDB\nP35557\tHXK4_HUMAN\tHexokinase-4 (HK4) (EC 2.7.1.1) (Glucokinase) (Hexokinase type IV) (HK IV) (Hexokinase-D)\t465\tPF00349;PF03727;\tIPR043129;IPR001312;IPR019807;IPR022673;IPR022672;\t1V4S;1V4T;3A0I;3F9M;3FGU;3FR0;3GOI;3H1V;3ID8;3IDH;3IMX;3QIC;3S41;3VEV;3VEY;3VF6;4DCH;4DHY;4ISE;4ISF;4ISG;4IWV;4IXC;4L3Q;4LC9;4MLE;4MLH;4NO7;4RCH;5V4W;5V4X;6E0E;6E0I;7T78;7T79;\n"
+}

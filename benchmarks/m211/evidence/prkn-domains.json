@@ -1,0 +1,7 @@
+{
+  "url": "https://rest.uniprot.org/uniprotkb/search?query=accession:O60260&format=tsv&fields=accession,ft_domain,xref_pfam",
+  "retrieved_date": "2026-10-21",
+  "scope": "Domain/structure metadata only",
+  "http_status": 200,
+  "annotation_tsv": "Entry\tDomain [FT]\tPfam\nO60260\tDOMAIN 1..76; /note=\"Ubiquitin-like\"; /evidence=\"ECO:0000255|PROSITE-ProRule:PRU00214\"\tPF22605;PF00240;PF17976;PF17978;\n"
+}

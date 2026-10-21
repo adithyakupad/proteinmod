@@ -1,0 +1,8 @@
+{
+  "url": "https://rest.uniprot.org/uniprotkb/search?query=accession:P45381&format=tsv&fields=accession,id,protein_name,length,xref_pfam,xref_interpro,xref_pdb",
+  "retrieved_date": "2026-10-21",
+  "scope": "Metadata only; no linked file or score endpoint fetched",
+  "http_status": 200,
+  "final_url": "https://rest.uniprot.org/uniprotkb/search?query=accession:P45381&format=tsv&fields=accession,id,protein_name,length,xref_pfam,xref_interpro,xref_pdb",
+  "annotation_tsv": "Entry\tEntry Name\tProtein names\tLength\tPfam\tInterPro\tPDB\nP45381\tACY2_HUMAN\tAspartoacylase (EC 3.5.1.15) (Aminoacylase-2) (ACY-2)\t313\tPF24827;PF04952;\tIPR050178;IPR016708;IPR055438;IPR007036;\t2I3C;2O4H;2O53;2Q51;4MRI;4MXU;4NFR;4TNU;\n"
+}

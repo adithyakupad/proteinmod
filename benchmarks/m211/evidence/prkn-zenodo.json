@@ -1,0 +1,33 @@
+{
+  "url": "https://zenodo.org/api/records/8009574",
+  "retrieved_date": "2026-10-21",
+  "scope": "Metadata only; no linked file or score endpoint fetched",
+  "http_status": 200,
+  "final_url": "https://zenodo.org/api/records/8009575",
+  "metadata": {
+    "title": "KULL-Centre/_2023_Clausen_parkin_MAVE: v1.0 - publication release",
+    "doi": "10.5281/zenodo.8009575",
+    "publication_date": "2023-06-06",
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/KULL-Centre/_2023_Clausen_parkin_MAVE/tree/v1.0",
+        "relation": "isSupplementTo",
+        "scheme": "url"
+      }
+    ],
+    "version": "v1.0",
+    "license": {
+      "id": "other-open"
+    }
+  },
+  "id": 8009575,
+  "doi": "10.5281/zenodo.8009575",
+  "files": [
+    {
+      "id": "50f31334-728f-43fc-a6eb-16d898905f25",
+      "key": "KULL-Centre/_2023_Clausen_parkin_MAVE-v1.0.zip",
+      "size": 5085927,
+      "checksum": "md5:713088e4a46956252e99404d085928da"
+    }
+  ]
+}

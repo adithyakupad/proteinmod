@@ -1,0 +1,143 @@
+{
+  "url": "https://api.github.com/repos/KULL-Centre/_2023_Clausen_parkin_MAVE/git/trees/v1.0?recursive=1",
+  "tree_sha": "e62dd5b8184d8173321e6ba1bcb32b60eeef3b7a",
+  "truncated": false,
+  "entries": [
+    {
+      "path": "README.md",
+      "type": "blob",
+      "sha": "5296d487d41218f2088ea9094ad76a842b80a244",
+      "bytes": 1021
+    },
+    {
+      "path": "abundance.csv",
+      "type": "blob",
+      "sha": "476341beee5ecfb5fbae4c23107fcf001144d58d",
+      "bytes": 420345
+    },
+    {
+      "path": "illumina",
+      "type": "tree",
+      "sha": "c2c54f07d87b12eebb8accf05e611497d6c73d2b"
+    },
+    {
+      "path": "illumina/abundance.r",
+      "type": "blob",
+      "sha": "f4c04b6fc25798113d441c07e2e0ba62551b9d10",
+      "bytes": 15062
+    },
+    {
+      "path": "illumina/call_zerotol_paired.sh",
+      "type": "blob",
+      "sha": "c368e8e7e1fff765e97547dfe8b519c9d1d19b1f",
+      "bytes": 2929
+    },
+    {
+      "path": "illumina/merge_counts.r",
+      "type": "blob",
+      "sha": "84fce84021ef7e0828909b76993d73ac3c9ecab7",
+      "bytes": 2091
+    },
+    {
+      "path": "illumina/run.sh",
+      "type": "blob",
+      "sha": "018f449ee832040d635f4f4fec73b9618ac4382b",
+      "bytes": 124
+    },
+    {
+      "path": "illumina_degron",
+      "type": "tree",
+      "sha": "dcb5bd105397a528bafa3ab4a423e72d7a989cbe"
+    },
+    {
+      "path": "illumina_degron/call_zerotol_paired.sh",
+      "type": "blob",
+      "sha": "4c22f2ca16c5aeb375885450cd459fbf259040e6",
+      "bytes": 4123
+    },
+    {
+      "path": "illumina_degron/lane_merge.r",
+      "type": "blob",
+      "sha": "f0960564e6e3963b6456040088a02991ce72323e",
+      "bytes": 2211
+    },
+    {
+      "path": "illumina_degron/library.r",
+      "type": "blob",
+      "sha": "f32ce798a8dcee887c8b3efdfc72607954f80564",
+      "bytes": 5429
+    },
+    {
+      "path": "illumina_degron/merge_counts.r",
+      "type": "blob",
+      "sha": "a227c974ea5b3c881e406d6f090df012f493e2c6",
+      "bytes": 2578
+    },
+    {
+      "path": "illumina_degron/ref.seq",
+      "type": "blob",
+      "sha": "8812ca4349e6b93a92bf340931c83261adc582f8",
+      "bytes": 19928
+    },
+    {
+      "path": "illumina_degron/run.sh",
+      "type": "blob",
+      "sha": "759581fc6fb0a0b7252a71e8be42931d04470567",
+      "bytes": 549
+    },
+    {
+      "path": "illumina_degron/samples.r",
+      "type": "blob",
+      "sha": "84b47b3b205633d1f14db858562adc4d7f0f1cd3",
+      "bytes": 2315
+    },
+    {
+      "path": "illumina_degron/tile_stability.r",
+      "type": "blob",
+      "sha": "47a9aef935b3fff586bf69419008941d23ef7b46",
+      "bytes": 14391
+    },
+    {
+      "path": "pacbio",
+      "type": "tree",
+      "sha": "82a08d4ceece1557f14205c6f41bc684519c5113"
+    },
+    {
+      "path": "pacbio/barcode_map.csv.gz",
+      "type": "blob",
+      "sha": "794d07361c7c2aa259af584803856bbf056553e2",
+      "bytes": 2805307
+    },
+    {
+      "path": "pacbio/barcode_map.r",
+      "type": "blob",
+      "sha": "07f9a80cd8df8ac2d807411ba69a57d677e2a999",
+      "bytes": 10133
+    },
+    {
+      "path": "pacbio/pacbio_align.sh",
+      "type": "blob",
+      "sha": "45cd780f67717ecb8daee01fdae28f267bf7ab99",
+      "bytes": 1833
+    },
+    {
+      "path": "pacbio/park2_ref_bwa.fasta",
+      "type": "blob",
+      "sha": "b3ff2ae0749bbe02de6325af207d7543171b3280",
+      "bytes": 2501
+    },
+    {
+      "path": "plots.ipynb",
+      "type": "blob",
+      "sha": "e04578d4a9048c6b37cf089329cf11de6704e2e2",
+      "bytes": 2905167
+    },
+    {
+      "path": "tile_stability.csv",
+      "type": "blob",
+      "sha": "c44dfc5848ad497540c0549b048787bd787b78e0",
+      "bytes": 3046
+    }
+  ],
+  "scope": "Release tree metadata only; no archive downloaded"
+}
