@@ -1,4 +1,8 @@
 {
+  "archived_paths": {
+    ".github/workflows/m225-bridge.yml": "benchmarks/m23/source-routing/m225-bridge.yml.txt",
+    "src/proteinmod/m225_collection.py": "benchmarks/m23/source-routing/m225_collection.py.txt"
+  },
   "base": "9f3fc9b6d158539e5758fe88c04d5af4f5b39b64",
   "files": {
     ".github/workflows/ci.yml": "31ec86908df8052a3881b8fd16250f2a72cd5009d113ee6abdef0598512123f4",
