@@ -35,6 +35,11 @@ def validate_changes(lines):
 
 def pytest_configure(config):
     branch = os.environ.get("GITHUB_HEAD_REF") or os.environ.get("GITHUB_REF_NAME")
+    if os.environ.get("GITHUB_ACTIONS") == "true" and branch == "codex/m23-representation-geometry":
+        from proteinmod.m23_collection import configure
+
+        configure(config)
+        return
     config.m225_only = (
         os.environ.get("GITHUB_ACTIONS") == "true" and branch == "codex/m225-checkpoint-bridge"
     )
@@ -51,6 +56,10 @@ def pytest_configure(config):
 
 
 def pytest_ignore_collect(collection_path, config):
+    if getattr(config, "m23_only", False):
+        from proteinmod.m23_collection import ignore
+
+        return ignore(collection_path)
     if (
         config.m225_only
         and collection_path.name.startswith("test_")

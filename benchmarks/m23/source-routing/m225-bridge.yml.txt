@@ -1,0 +1,20 @@
+name: m225-bridge
+on: [push, pull_request]
+jobs:
+  exact-substitution:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e '.[dev]'
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: pytest -q
+      - run: python -O -m pytest -q tests/test_m225_bridge.py -k 'rejection or changed_identity or corruption or optimizer_reset'
+      - run: python scripts/verify_m225.py
+      - run: python scripts/run_m225.py --output runs/m225/ci --compare benchmarks/m221/results.json
+      - run: python scripts/verify_m225.py --result runs/m225/ci/results.json

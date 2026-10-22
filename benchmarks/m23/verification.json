@@ -1,0 +1,39 @@
+{
+  "artifact_sha256": {
+    "candidates.csv": "988dc8020ce1350fb582e32a955786ca0ae9784114dce628a80218cb377d289b",
+    "decomposition.csv": "a2d4aeb83a84ded65a30e3115c261c206e00c696130d3b9dfc48c63a7be2ed85",
+    "geometry.svg": "4962b71b83f43e9d56c48346c176fc3deaab7f43b161e09e76e9efa6649b9f77",
+    "identities.json": "a5f4b37993ff861b8283aee3fa355af703427aa37089f7606ab19066ae949321",
+    "primary.svg": "35cb004ee8334b61c7b4e6f23dac02043b57e6feb770cbff06624de5dbe2bd83",
+    "recovery.svg": "1a565d25eb856c9fc750b4cddb772adcfb4e4cdfea8ec140b8c02f5ab0f465da",
+    "results.json": "a5dec0d3da57593c4d2c1687c72f8a1f6d1af9d3f0fd580047e8fea960d17695",
+    "selection.svg": "64d094818f57c68b524a129150f0cc428c9df9487f5ec8d65f33974fb1276731",
+    "selections.csv": "bf752869006b8231fb0a835157cee77da5278d63a685746e6805c2e3e64a09a2"
+  },
+  "candidate_rows": 7680,
+  "ci_addendum_commit": "eabaef0",
+  "ci_overlay_originals_archived": 2,
+  "combined_synthetic_tests": 86,
+  "csv_checksums_and_counts": "PASS",
+  "decomposition_rows": 640,
+  "engineering": "PASS",
+  "focused_tests": 9,
+  "historical_files_preserved": 1011,
+  "implementation_commit": "e0e15333cd2ebe10bd65cced0d2ee97114f09ce0",
+  "independent_units": 40,
+  "input_seed_schedule_identity": "PASS",
+  "local_refs_preserved": 39,
+  "maximum_equivalence_error": 3.602673714908633e-14,
+  "new_biological_inputs": false,
+  "registration_commit": "d6f5266",
+  "ruff_check": "PASS",
+  "ruff_format": "PASS",
+  "scientific_library_versions": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1"
+  },
+  "selection_rows": 1920,
+  "svg_xml": "PASS"
+}
