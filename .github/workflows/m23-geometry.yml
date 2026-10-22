@@ -1,0 +1,20 @@
+name: m23-geometry
+on: [push, pull_request]
+jobs:
+  registered-synthetic-study:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e '.[dev]' 'matplotlib>=3.9,<4'
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: pytest -q
+      - run: python scripts/verify_m23.py
+      - run: python scripts/run_m23.py --output runs/m23/ci
+      - run: python scripts/verify_m23.py --result runs/m23/ci/results.json
+      - run: python scripts/report_m23.py --source runs/m23/ci --output runs/m23/ci/plots

@@ -1,0 +1,19 @@
+{
+  "pre_execution_ci_addendum": "eabaef0",
+  "registration_commit": "d6f5266",
+  "sha256": {
+    ".github/workflows/m225-bridge.yml": "295d603097854b280a889d23230dc93f834066dfc003af81cd4b259fb1bcb84d",
+    ".github/workflows/m23-geometry.yml": "bb26c07e639e3b852143c14c187f339e887ceb22387a614758e46164a51debc7",
+    "benchmarks/m23/CI_ADDENDUM.md": "26246a0c1e47b2b9e5fdd351488a5142e70973cbfff7f68dac14ddc35d3d2847",
+    "benchmarks/m23/PREREGISTRATION.md": "9c0b2ab5190cadd3b2e71f78ea5559f33bef3134e302c8c3aba439eaa29988d7",
+    "benchmarks/m23/config.json": "12a56288fbc6e1db54038bc26b9fe7e46caaa0a060eecc18521029bcb12ab696",
+    "benchmarks/m23/preservation.json": "6adc4fb1015269c8f25409f72abd52cf302deee0d2a0b8fe6e6eb61d830856ff",
+    "scripts/report_m23.py": "15e74d437f6759c7fab38a39245a549feb3267ca96593da9ad4de776158eca27",
+    "scripts/run_m23.py": "440b2b6b5fbeea5d5acec62021df418aeb1a4c38f78519d4994c0738658b338e",
+    "scripts/verify_m23.py": "6074b3ebeb568918e2963e35b3c11ba39d7a21bbc2a25adb963a74110ce50421",
+    "src/proteinmod/geometry_study.py": "eeb23b8fee136aef048565e7142fadc0d0d2208b64d7b72cec9801c22f87d417",
+    "src/proteinmod/m225_collection.py": "14489203d8fbe855795db4943252686a6069ae87d0ac3eb425295477485119b3",
+    "src/proteinmod/m23_collection.py": "2633b4c6df9030da269333d7424883c4c01c4c36e3661f97327618e5aad11d11",
+    "tests/test_m23_geometry.py": "3551f822776205ef10d015a9697e9bd259ef62c7022d6ff7460723f0e712a188"
+  }
+}
