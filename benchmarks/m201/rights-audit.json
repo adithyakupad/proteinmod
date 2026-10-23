@@ -1,0 +1,24 @@
+{
+  "scope": "Author-declared versioned-record license and engineering reuse boundary, not independent legal opinion",
+  "records": [
+    16266645,
+    11175470,
+    15302825
+  ],
+  "record_grant": "CC-BY-4.0 in authoritative API metadata for every record",
+  "file_overrides": "No file-level license/access overrides in inspected metadata; no separate LICENSE/COPYING/NOTICE filenames in ZIP directories. Individual text of every member not audited.",
+  "processed_data_item_rights": "PASS author-declared deposited archive grant, with attribution/license/modification notices; not GEO rights",
+  "internal_noncommercial_analysis": "Permitted under declared CC-BY terms",
+  "derived_metrics_predictions": "Permitted adaptation/reuse under terms; retain attribution and distinguish new outputs from measurements",
+  "weights": "No model weights trained or redistributed; do not assert every trained-weight copyright/third-party right is automatically settled by dataset license",
+  "raw_processed_redistribution": "CC-BY permits sharing with conditions; no phenotype file redistributed in this PR",
+  "commercial_reuse": "Declared CC-BY permits commercial reuse subject to terms/other rights; TEM1 remains separately NC",
+  "author_code": "Versioned code ZIPs fall under their Zenodo record CC-BY declaration; no MIT assumption. Live GitHub repository license separately unverified in this audit; prior null-license observation remains. No author code executed or vendored.",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "prohibited_inferences": [
+    "Record grant does not prove all tables experimental or exact column semantics",
+    "No blanket extension to GEO fitness_raw/sigma_raw",
+    "No unrestricted MIT label for external datasets",
+    "No independent performance claim"
+  ]
+}

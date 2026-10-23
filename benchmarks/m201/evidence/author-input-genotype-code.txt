@@ -1,0 +1,58 @@
+
+P0A9X9 = 'ATGACTGGTATTGTCAAATGGTTTAATGCAGATAAAGGTTTTGGTTTTATCACTCCAGATGATGGTTCTAAAGATGTCTTTGTCCATTTTTCTGCAATTCAAAATGATGGTTATAAATCTTTGGATGAAGGTCAAAAAGTCTCTTTCACTATTGAATCTGGTGCAAAAGGTCCAGCAGCAGGTAATGTCACTTCT'
+P01053 = 'AAAACTGAATGGCCAGAATTGGTTGGTAAATCTGTCGAAGAAGCAAAAAAAGTTATCTTGCAAGATAAACCAGAAGCACAAATCATTGTTTTGCCAGTTGGTACTATTGTTACTATGGAATATAGAATTGATAGAGTCAGATTGTTTGTCGATAAATTGGATAATATCGCACAAGTTCCAAGAGTTGGT'
+P06241 = 'ACGCTTTTCGTTGCATTGTATGATTATGAAGCAAGAACTGAAGATGATTTGTCTTTCCATAAAGGTGAAAAATTCCAAATCTTGAATTCTTCTGAAGGTGATTGGTGGGAAGCAAGATCTTTGACTACTGGTGAAACTGGTTATATCCCATCTAACTATGTCGCGCCTGTG'
+
+prots=[P0A9X9,P01053,P06241]
+
+
+# Load data
+
+import pandas as pd
+
+allvariants = pd.read_csv(path+"Fig2/Sparse_DTS_Cores_fitness_replicates.txt",
+                         sep='\t', lineterminator='\n', low_memory = False)
+
+allvariants = allvariants.sort_values('fitness', ascending = False)
+
+# De-multiplex each protein's variants
+
+ID_dict =  {'MT' : 'P0A9X9',
+           'KT' : 'P01053',
+           'TL' : 'P06241'}
+
+allvariants["Protein"] = pd.Series(dtype="object") 
+for index, row in allvariants.iterrows():
+    try:
+        allvariants.at[index,'Protein']=ID_dict[row.aa_seq[:2]]
+    except KeyError:
+        continue
+
+allvariants = allvariants.loc[allvariants['Protein'].notnull()].copy()
+allvariants
+
+# Find core sequences
+
+cores = {'P0A9X9' : [4,16,25,27,46,48,62],
+        'P01053' : [11,18,27,45,47,49,55],
+        'P06241' : [2,16,18,24,26,48,53]}
+
+allvariants["core"] = pd.Series(dtype="object") 
+for index, row in allvariants.iterrows():
+    core=[]
+    for i in cores[row.Protein]:
+        core.append(row.aa_seq[i])
+    allvariants.at[index,'core'] = ''.join(core)
+
+# Define WT cores
+
+from Bio.Seq import Seq
+
+wt_cores = {}
+for (prot_seq, prot_nam) in zip(prots, proteins.keys()):
+    aa_seq=str(Seq(prot_seq).translate())
+    wt_core=[]
+    for i in cores[prot_nam]:
+        wt_core.append(aa_seq[i])
+    wt_cores[prot_nam]= ''.join(wt_core)
+wt_cores

@@ -1,0 +1,90 @@
+{
+  "scope": "Source compatibility audit, not final study admission or score equivalence",
+  "all_three_processed_member_bytes_identical": true,
+  "genotype_rows_total": 58105,
+  "families": [
+    {
+      "protein": "P0A9X9",
+      "reference": "MTGIVKWFNADKGFGFITPDDGSKDVFVHFSAIQNDGYKSLDEGQKVSFTIESGAKGPAAGNVTS",
+      "reference_sha256": "b969267b954bad343a488f0af8a68c5a097ee3ae9fdf96d48897b217362bad77",
+      "author_core_positions_one_based": [
+        5,
+        17,
+        26,
+        28,
+        47,
+        49,
+        63
+      ],
+      "source_genotypes_prefix": 8500,
+      "eligible_unique_nonWT": 8499,
+      "exclusions": {
+        "WT": 1
+      },
+      "mutation_burden": {
+        "4": 1958,
+        "5": 2877,
+        "6": 2125,
+        "3": 782,
+        "2": 159,
+        "7": 582,
+        "1": 16
+      },
+      "missing_nt_seq": 8500,
+      "prior_selected_ids": 96,
+      "prior_selected_genotypes_present": 96,
+      "feature_widths": [
+        [
+          25,
+          270
+        ]
+      ],
+      "mutation_order_exact": true,
+      "mapped_reference_residues": 65,
+      "new_selected_set_issued": false,
+      "genotype_set_sha256": "1f5868bef95b5ca7d1a26d4f9abc5cbbb2b8c1c144fc2968a13e693b3aec3195"
+    },
+    {
+      "protein": "P01053",
+      "reference": "KTEWPELVGKSVEEAKKVILQDKPEAQIIVLPVGTIVTMEYRIDRVRLFVDKLDNIAQVPRVG",
+      "reference_sha256": "dd005937bdc1ad8fef672c3d610baae1fa6d395a7d9e0aa8459537d5af07838d",
+      "author_core_positions_one_based": [
+        12,
+        19,
+        28,
+        46,
+        48,
+        50,
+        56
+      ],
+      "source_genotypes_prefix": 6463,
+      "eligible_unique_nonWT": 6463,
+      "exclusions": {},
+      "mutation_burden": {
+        "4": 998,
+        "5": 2047,
+        "6": 2180,
+        "3": 255,
+        "7": 944,
+        "2": 35,
+        "1": 4
+      },
+      "missing_nt_seq": 6463,
+      "prior_selected_ids": 96,
+      "prior_selected_genotypes_present": 96,
+      "feature_widths": [
+        [
+          25,
+          270
+        ]
+      ],
+      "mutation_order_exact": true,
+      "mapped_reference_residues": 63,
+      "new_selected_set_issued": false,
+      "genotype_set_sha256": "b4d79f0c0073b0d65d973b25c84ea2578ea42f0b37f94acebedc2835c91422d3"
+    }
+  ],
+  "outcome_or_flag_values_decoded": false,
+  "models_fit": 0,
+  "predictions": 0
+}

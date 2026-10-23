@@ -1,0 +1,35 @@
+{
+  "status": "NO_GO",
+  "four_family_manifest_issued": false,
+  "new_prospective_study_registered": false,
+  "source_replacement": "PROPOSED Zenodo processed fitness, not adopted as GEO raw-equivalent",
+  "gates": {
+    "exact_version_metadata_license": "PASS declared CC-BY for all3 records",
+    "exact_processed_member_identity": "PASS full CRC and SHA256 across3 versions",
+    "genotype_reference_and_old_selected_compatibility": "PASS 96/96 each, reference65/63 residues, 25/270 features",
+    "genotype_nucleotide_lineage": "PARTIAL all targeted nt_seq missing; no codon-level reconstruction",
+    "processed_fitness_sigma_definition_normalization_censoring": "PARTIAL source input traced but complete upstream estimator/filter chain not established",
+    "GEO_raw_numerical_equivalence": "NOT_ESTABLISHED_AND_NOT_ASSUMED",
+    "four_family_distinctness": "Previously bounded PF00313/PF00280/PF13354/PF00080 evidence retained; no pretraining/independent-lab claim",
+    "SOD1_owner_disposition": "PASS conditional prospective consideration accepted by owner; deviation retained; not outcome authorization",
+    "TEM1": "Existing noncommercial primary/masked263-residue subchecks retained, not readmitted here"
+  },
+  "blockers": [
+    "Complete exact processed fitness/sigma assay/normalization/censoring lineage not established; no assumption that header implies GEO raw equivalence.",
+    "New prospective endpoint/cohort protocol and final96-ID-per-family manifest cannot be issued until all gates pass."
+  ],
+  "frozen_m17": {
+    "family_denominator": 4,
+    "directional_requirement": ">=3/4",
+    "effect_margin": 0.02,
+    "hypotheses": "Original H1-H5; no model/grid/threshold changes"
+  },
+  "outcome_values_decoded": false,
+  "score_flags_decoded": false,
+  "distribution_statistics_accessed": false,
+  "models_fit": 0,
+  "predictions": 0,
+  "author_emails": 0,
+  "release_tags": 0,
+  "owner_disposition_record": "SOD1-owner-disposition.json"
+}

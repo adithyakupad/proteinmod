@@ -1,0 +1,572 @@
+{
+  "archive": {
+    "id": "6f449871-75c5-45f4-a2fc-ebc61dabdec6",
+    "key": "combinatorialcores_github_repo.zip",
+    "size": 19726227,
+    "checksum": "md5:6f0626ae43afba3b03087593197dc3a3",
+    "links": {
+      "self": "https://zenodo.org/api/records/16266645/files/combinatorialcores_github_repo.zip/content"
+    }
+  },
+  "range_bytes": 11557,
+  "members": [
+    {
+      "name": "combinatorialcores/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/README.md",
+      "bytes": 1223,
+      "compressed_bytes": 684,
+      "CRC": 489371282
+    },
+    {
+      "name": "combinatorialcores/LibDesignScripts/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/Environments/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/MainFigures/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/.git/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/LibDesignScripts/DegenerateCodons.py",
+      "bytes": 2089,
+      "compressed_bytes": 781,
+      "CRC": 309024569
+    },
+    {
+      "name": "combinatorialcores/LibDesignScripts/CoreFinder.py",
+      "bytes": 13618,
+      "compressed_bytes": 3598,
+      "CRC": 1374216508
+    },
+    {
+      "name": "combinatorialcores/LibDesignScripts/DegenerateCodonMapSCerevisiaeUsage.py",
+      "bytes": 5102,
+      "compressed_bytes": 1690,
+      "CRC": 2989808737
+    },
+    {
+      "name": "combinatorialcores/LibDesignScripts/FindSuppressors_logregs.py",
+      "bytes": 12452,
+      "compressed_bytes": 3513,
+      "CRC": 650740178
+    },
+    {
+      "name": "combinatorialcores/Environments/dimsum_env_full.yml",
+      "bytes": 7861,
+      "compressed_bytes": 2696,
+      "CRC": 3081305769
+    },
+    {
+      "name": "combinatorialcores/Environments/pymochi-env.yml",
+      "bytes": 351,
+      "compressed_bytes": 207,
+      "CRC": 4085821087
+    },
+    {
+      "name": "combinatorialcores/Environments/foldseek_env.yml",
+      "bytes": 103,
+      "compressed_bytes": 75,
+      "CRC": 749267604
+    },
+    {
+      "name": "combinatorialcores/Environments/bio-env.yml",
+      "bytes": 422,
+      "compressed_bytes": 200,
+      "CRC": 2282965160
+    },
+    {
+      "name": "combinatorialcores/Environments/foldseek_env_full.yml",
+      "bytes": 2751,
+      "compressed_bytes": 1171,
+      "CRC": 2839485273
+    },
+    {
+      "name": "combinatorialcores/Environments/pymochi_env_full.yml",
+      "bytes": 8358,
+      "compressed_bytes": 3162,
+      "CRC": 4053788419
+    },
+    {
+      "name": "combinatorialcores/Environments/bio_env_full.yml",
+      "bytes": 9285,
+      "compressed_bytes": 3575,
+      "CRC": 1309030439
+    },
+    {
+      "name": "combinatorialcores/Environments/dimsum-env.yml",
+      "bytes": 110,
+      "compressed_bytes": 84,
+      "CRC": 704567897
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS18.ipynb",
+      "bytes": 246154,
+      "compressed_bytes": 172225,
+      "CRC": 530090988
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS23.ipynb",
+      "bytes": 358628,
+      "compressed_bytes": 215334,
+      "CRC": 2840426134
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS9.ipynb",
+      "bytes": 273653,
+      "compressed_bytes": 173042,
+      "CRC": 940175425
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS21.ipynb",
+      "bytes": 377041,
+      "compressed_bytes": 259839,
+      "CRC": 1842369340
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS22.ipynb",
+      "bytes": 543558,
+      "compressed_bytes": 368984,
+      "CRC": 3964105690
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS20.ipynb",
+      "bytes": 201777,
+      "compressed_bytes": 132832,
+      "CRC": 1543718200
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS11.ipynb",
+      "bytes": 461675,
+      "compressed_bytes": 310039,
+      "CRC": 540013546
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS4.ipynb",
+      "bytes": 573800,
+      "compressed_bytes": 351164,
+      "CRC": 3778706924
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS17.ipynb",
+      "bytes": 125273,
+      "compressed_bytes": 86593,
+      "CRC": 4185742283
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS25.ipynb",
+      "bytes": 891730,
+      "compressed_bytes": 581188,
+      "CRC": 3234442099
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS16.ipynb",
+      "bytes": 194630,
+      "compressed_bytes": 121372,
+      "CRC": 2767330191
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS3.ipynb",
+      "bytes": 507451,
+      "compressed_bytes": 344708,
+      "CRC": 2623919757
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS12.ipynb",
+      "bytes": 460311,
+      "compressed_bytes": 318954,
+      "CRC": 20379496
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS24.ipynb",
+      "bytes": 513036,
+      "compressed_bytes": 338488,
+      "CRC": 1421765550
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS13.ipynb",
+      "bytes": 405180,
+      "compressed_bytes": 219832,
+      "CRC": 2940160217
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS14.ipynb",
+      "bytes": 338332,
+      "compressed_bytes": 224416,
+      "CRC": 728547586
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS7.ipynb",
+      "bytes": 363982,
+      "compressed_bytes": 173091,
+      "CRC": 349864326
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS5.ipynb",
+      "bytes": 243731,
+      "compressed_bytes": 155602,
+      "CRC": 3412532549
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS10.ipynb",
+      "bytes": 265295,
+      "compressed_bytes": 189778,
+      "CRC": 2282875821
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS15.ipynb",
+      "bytes": 281881,
+      "compressed_bytes": 177967,
+      "CRC": 284745832
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS2.ipynb",
+      "bytes": 429975,
+      "compressed_bytes": 236639,
+      "CRC": 2827417590
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS1.ipynb",
+      "bytes": 352864,
+      "compressed_bytes": 204377,
+      "CRC": 1497966628
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS6.ipynb",
+      "bytes": 365559,
+      "compressed_bytes": 173990,
+      "CRC": 884754726
+    },
+    {
+      "name": "combinatorialcores/SupplementaryFigures/FigS19.ipynb",
+      "bytes": 414524,
+      "compressed_bytes": 294558,
+      "CRC": 3105735704
+    },
+    {
+      "name": "combinatorialcores/MainFigures/Fig5.ipynb",
+      "bytes": 568883,
+      "compressed_bytes": 336377,
+      "CRC": 2271359427
+    },
+    {
+      "name": "combinatorialcores/MainFigures/Fig7.ipynb",
+      "bytes": 463345,
+      "compressed_bytes": 274921,
+      "CRC": 1039741747
+    },
+    {
+      "name": "combinatorialcores/MainFigures/Fig4.ipynb",
+      "bytes": 172279,
+      "compressed_bytes": 106544,
+      "CRC": 2085384257
+    },
+    {
+      "name": "combinatorialcores/MainFigures/Fig6.ipynb",
+      "bytes": 410264,
+      "compressed_bytes": 249245,
+      "CRC": 4133997335
+    },
+    {
+      "name": "combinatorialcores/MainFigures/Fig3.ipynb",
+      "bytes": 682700,
+      "compressed_bytes": 415458,
+      "CRC": 2488837834
+    },
+    {
+      "name": "combinatorialcores/MainFigures/Fig2.ipynb",
+      "bytes": 552486,
+      "compressed_bytes": 348939,
+      "CRC": 1566978875
+    },
+    {
+      "name": "combinatorialcores/.git/branches/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/.git/packed-refs",
+      "bytes": 112,
+      "compressed_bytes": 102,
+      "CRC": 2268604804
+    },
+    {
+      "name": "combinatorialcores/.git/HEAD",
+      "bytes": 21,
+      "compressed_bytes": 23,
+      "CRC": 1466196917
+    },
+    {
+      "name": "combinatorialcores/.git/description",
+      "bytes": 73,
+      "compressed_bytes": 63,
+      "CRC": 520588087
+    },
+    {
+      "name": "combinatorialcores/.git/info/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/.git/refs/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/.git/index",
+      "bytes": 4330,
+      "compressed_bytes": 2146,
+      "CRC": 3341313316
+    },
+    {
+      "name": "combinatorialcores/.git/logs/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/.git/config",
+      "bytes": 274,
+      "compressed_bytes": 180,
+      "CRC": 2863392566
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/.git/objects/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/.git/info/exclude",
+      "bytes": 240,
+      "compressed_bytes": 173,
+      "CRC": 567098743
+    },
+    {
+      "name": "combinatorialcores/.git/refs/heads/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/.git/refs/remotes/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/.git/refs/tags/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/.git/logs/HEAD",
+      "bytes": 218,
+      "compressed_bytes": 153,
+      "CRC": 1396632238
+    },
+    {
+      "name": "combinatorialcores/.git/logs/refs/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/update.sample",
+      "bytes": 3654,
+      "compressed_bytes": 1176,
+      "CRC": 3036038501
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/pre-commit.sample",
+      "bytes": 1653,
+      "compressed_bytes": 907,
+      "CRC": 1511071270
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/pre-push.sample",
+      "bytes": 1378,
+      "compressed_bytes": 704,
+      "CRC": 1678100802
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/applypatch-msg.sample",
+      "bytes": 482,
+      "compressed_bytes": 282,
+      "CRC": 2790439374
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/pre-merge-commit.sample",
+      "bytes": 420,
+      "compressed_bytes": 258,
+      "CRC": 1258580430
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/pre-applypatch.sample",
+      "bytes": 428,
+      "compressed_bytes": 267,
+      "CRC": 539341827
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/pre-receive.sample",
+      "bytes": 548,
+      "compressed_bytes": 333,
+      "CRC": 693502911
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/post-update.sample",
+      "bytes": 193,
+      "compressed_bytes": 140,
+      "CRC": 1687533875
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/pre-rebase.sample",
+      "bytes": 4902,
+      "compressed_bytes": 2015,
+      "CRC": 2680091518
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/commit-msg.sample",
+      "bytes": 900,
+      "compressed_bytes": 506,
+      "CRC": 1202292485
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/fsmonitor-watchman.sample",
+      "bytes": 4726,
+      "compressed_bytes": 1814,
+      "CRC": 2034007279
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/sendemail-validate.sample",
+      "bytes": 2312,
+      "compressed_bytes": 978,
+      "CRC": 4062086765
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/prepare-commit-msg.sample",
+      "bytes": 1496,
+      "compressed_bytes": 744,
+      "CRC": 3288647019
+    },
+    {
+      "name": "combinatorialcores/.git/hooks/push-to-checkout.sample",
+      "bytes": 2787,
+      "compressed_bytes": 1257,
+      "CRC": 1571350444
+    },
+    {
+      "name": "combinatorialcores/.git/objects/pack/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/.git/objects/info/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/.git/refs/heads/main",
+      "bytes": 41,
+      "compressed_bytes": 42,
+      "CRC": 1331475912
+    },
+    {
+      "name": "combinatorialcores/.git/refs/remotes/origin/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/.git/logs/refs/heads/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/.git/logs/refs/remotes/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/.git/objects/pack/pack-2cc34cd3156501258b6a71ea7be8db593605e209.pack",
+      "bytes": 12100791,
+      "compressed_bytes": 12104267,
+      "CRC": 297851302
+    },
+    {
+      "name": "combinatorialcores/.git/objects/pack/pack-2cc34cd3156501258b6a71ea7be8db593605e209.rev",
+      "bytes": 912,
+      "compressed_bytes": 404,
+      "CRC": 1934766678
+    },
+    {
+      "name": "combinatorialcores/.git/objects/pack/pack-2cc34cd3156501258b6a71ea7be8db593605e209.idx",
+      "bytes": 7092,
+      "compressed_bytes": 6323,
+      "CRC": 945707564
+    },
+    {
+      "name": "combinatorialcores/.git/refs/remotes/origin/HEAD",
+      "bytes": 30,
+      "compressed_bytes": 32,
+      "CRC": 1698884932
+    },
+    {
+      "name": "combinatorialcores/.git/logs/refs/heads/main",
+      "bytes": 218,
+      "compressed_bytes": 153,
+      "CRC": 1396632238
+    },
+    {
+      "name": "combinatorialcores/.git/logs/refs/remotes/origin/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores/.git/logs/refs/remotes/origin/HEAD",
+      "bytes": 218,
+      "compressed_bytes": 153,
+      "CRC": 1396632238
+    }
+  ]
+}

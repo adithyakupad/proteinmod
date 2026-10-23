@@ -1,0 +1,34 @@
+{
+  "created": "2025-04-29T12:28:35.483801+00:00",
+  "id": 15302825,
+  "doi": "10.5281/zenodo.15302825",
+  "updated": "2025-04-29T12:34:29.891728+00:00",
+  "metadata": {
+    "title": "Files and code to replicate the analyses and figures in the manuscript \"Genetics, energetics, and allostery in proteins with randomized cores and surfaces\"",
+    "publication_date": "2025-04-29",
+    "access_right": "open",
+    "license": {
+      "id": "cc-by-4.0"
+    }
+  },
+  "files": [
+    {
+      "id": "7d620054-1f23-475f-adf3-b0fbcc127433",
+      "key": "Escobedo_cores_24_zenodo.zip",
+      "size": 1331618368,
+      "checksum": "md5:716ab20afae843c6db145bbb72063453",
+      "links": {
+        "self": "https://zenodo.org/api/records/15302825/files/Escobedo_cores_24_zenodo.zip/content"
+      }
+    },
+    {
+      "id": "fd2a362a-adf3-43a4-b0b3-ae7a02e59e37",
+      "key": "combinatorialcores-main.zip",
+      "size": 4467231,
+      "checksum": "md5:c447df03062100cdbcf36bcd3794e656",
+      "links": {
+        "self": "https://zenodo.org/api/records/15302825/files/combinatorialcores-main.zip/content"
+      }
+    }
+  ]
+}

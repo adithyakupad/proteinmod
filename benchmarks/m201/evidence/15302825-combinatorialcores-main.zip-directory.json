@@ -1,0 +1,158 @@
+{
+  "archive": {
+    "id": "fd2a362a-adf3-43a4-b0b3-ae7a02e59e37",
+    "key": "combinatorialcores-main.zip",
+    "size": 4467231,
+    "checksum": "md5:c447df03062100cdbcf36bcd3794e656",
+    "links": {
+      "self": "https://zenodo.org/api/records/15302825/files/combinatorialcores-main.zip/content"
+    }
+  },
+  "range_bytes": 67837,
+  "members": [
+    {
+      "name": "combinatorialcores-main/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores-main/Fig1.ipynb",
+      "bytes": 586619,
+      "compressed_bytes": 356660,
+      "CRC": 3083849314
+    },
+    {
+      "name": "combinatorialcores-main/Fig2.ipynb",
+      "bytes": 209694,
+      "compressed_bytes": 142348,
+      "CRC": 750531758
+    },
+    {
+      "name": "combinatorialcores-main/Fig3.ipynb",
+      "bytes": 688750,
+      "compressed_bytes": 397044,
+      "CRC": 3450031272
+    },
+    {
+      "name": "combinatorialcores-main/Fig4.ipynb",
+      "bytes": 633019,
+      "compressed_bytes": 409108,
+      "CRC": 3762490703
+    },
+    {
+      "name": "combinatorialcores-main/Fig5.ipynb",
+      "bytes": 135283,
+      "compressed_bytes": 81919,
+      "CRC": 2999228740
+    },
+    {
+      "name": "combinatorialcores-main/Fig6.ipynb",
+      "bytes": 393039,
+      "compressed_bytes": 250370,
+      "CRC": 3183286629
+    },
+    {
+      "name": "combinatorialcores-main/Fig7.ipynb",
+      "bytes": 412302,
+      "compressed_bytes": 249283,
+      "CRC": 686020972
+    },
+    {
+      "name": "combinatorialcores-main/FigS10.ipynb",
+      "bytes": 366570,
+      "compressed_bytes": 252875,
+      "CRC": 3310686458
+    },
+    {
+      "name": "combinatorialcores-main/FigS11.ipynb",
+      "bytes": 462176,
+      "compressed_bytes": 318068,
+      "CRC": 2780005095
+    },
+    {
+      "name": "combinatorialcores-main/FigS12.ipynb",
+      "bytes": 238228,
+      "compressed_bytes": 163591,
+      "CRC": 4076630374
+    },
+    {
+      "name": "combinatorialcores-main/FigS13.ipynb",
+      "bytes": 435692,
+      "compressed_bytes": 294577,
+      "CRC": 379778167
+    },
+    {
+      "name": "combinatorialcores-main/FigS14.ipynb",
+      "bytes": 625917,
+      "compressed_bytes": 419119,
+      "CRC": 1383578521
+    },
+    {
+      "name": "combinatorialcores-main/FigS3.ipynb",
+      "bytes": 346354,
+      "compressed_bytes": 243035,
+      "CRC": 1707954568
+    },
+    {
+      "name": "combinatorialcores-main/FigS4.ipynb",
+      "bytes": 251519,
+      "compressed_bytes": 161671,
+      "CRC": 684768285
+    },
+    {
+      "name": "combinatorialcores-main/FigS6.ipynb",
+      "bytes": 260802,
+      "compressed_bytes": 158867,
+      "CRC": 4060221561
+    },
+    {
+      "name": "combinatorialcores-main/FigS7.ipynb",
+      "bytes": 248540,
+      "compressed_bytes": 174865,
+      "CRC": 2943294100
+    },
+    {
+      "name": "combinatorialcores-main/FigS8.ipynb",
+      "bytes": 417781,
+      "compressed_bytes": 298036,
+      "CRC": 2174090404
+    },
+    {
+      "name": "combinatorialcores-main/FigS9.ipynb",
+      "bytes": 126531,
+      "compressed_bytes": 85012,
+      "CRC": 1137222575
+    },
+    {
+      "name": "combinatorialcores-main/LibDesignScripts/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC": 0
+    },
+    {
+      "name": "combinatorialcores-main/LibDesignScripts/CoreFinder.py",
+      "bytes": 13618,
+      "compressed_bytes": 3598,
+      "CRC": 1374216508
+    },
+    {
+      "name": "combinatorialcores-main/LibDesignScripts/DegenerateCodonMapSCerevisiaeUsage.py",
+      "bytes": 5102,
+      "compressed_bytes": 1690,
+      "CRC": 2989808737
+    },
+    {
+      "name": "combinatorialcores-main/LibDesignScripts/DegenerateCodons.py",
+      "bytes": 2089,
+      "compressed_bytes": 781,
+      "CRC": 309024569
+    },
+    {
+      "name": "combinatorialcores-main/README.md",
+      "bytes": 1019,
+      "compressed_bytes": 560,
+      "CRC": 3440502708
+    }
+  ]
+}

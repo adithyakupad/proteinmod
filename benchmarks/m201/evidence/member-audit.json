@@ -1,0 +1,217 @@
+[
+  {
+    "record": 16266645,
+    "archive": {
+      "id": "6f449871-75c5-45f4-a2fc-ebc61dabdec6",
+      "key": "combinatorialcores_github_repo.zip",
+      "size": 19726227,
+      "checksum": "md5:6f0626ae43afba3b03087593197dc3a3",
+      "links": {
+        "self": "https://zenodo.org/api/records/16266645/files/combinatorialcores_github_repo.zip/content"
+      }
+    },
+    "member": {
+      "name": "combinatorialcores/README.md",
+      "bytes": 1223,
+      "compressed_bytes": 684,
+      "CRC": 489371282
+    },
+    "member_sha256": "7b074223d6964e9d4e7f44f7485c4fc124257fb378d30cc3ae5b46b241733be5",
+    "member_CRC_verified": true,
+    "whole_archive_MD5_verified": false,
+    "range_bytes": 12299,
+    "experimental_values_decoded": false,
+    "score_flags_decoded": false,
+    "README": "[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11175469.svg)](https://zenodo.org/records/11175469)\n\n# Genetics, energetics, and allostery in proteins with randomized cores and surfaces\n\nWelcome to the GitHub repository for the following publication: Genetics, energetics, and allostery in proteins with randomized cores and surfaces by Escobedo, Voigt, Faure and Lehner, Science 2025\n\n<img width=\"1000\" height=\"838\" alt=\"Fig0_whitebgd\" src=\"https://github.com/user-attachments/assets/60af722d-8f87-4fc4-a039-a52c2374190b\" />\n\nHere you'll find the code to reproduce the figures and results from the computational analyses described in the paper.\nAll required processed files can be found in the related Zenodo entry. Raw NGS fastq files are available at Gene Expression Omnibus [GEO: GSE266299] (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE266299)\n\nThe code is organized in Jupyter Notebooks, one per figure in the paper. To execute the code, please paste your path to the Zenodo files folder at the top of each notebook.\nAll Jupyter Notebooks can be executed using the BIO environment in the Environments folder. Other environments in the folder used for data processing as explained in the methods section.\n"
+  },
+  {
+    "record": 16266645,
+    "archive": {
+      "id": "931f25f0-430f-4b6c-9a05-9b7ea885e011",
+      "key": "Escobedo_et_al_protein_randomization_data_files.zip",
+      "size": 2226162297,
+      "checksum": "md5:e7d6433bf7cca53071836a097ca63069",
+      "links": {
+        "self": "https://zenodo.org/api/records/16266645/files/Escobedo_et_al_protein_randomization_data_files.zip/content"
+      }
+    },
+    "member": {
+      "name": "zenodo/Fig2/Sparse_DTS_Cores_fitness_replicates.txt",
+      "bytes": 19073162,
+      "compressed_bytes": 6678813,
+      "CRC": 1319611062
+    },
+    "member_sha256": "9281d7edafe812b537062bbfb0cb9d4b2fb1d4e69725defb0092da9cea99ebe0",
+    "member_CRC_verified": true,
+    "whole_archive_MD5_verified": false,
+    "range_bytes": 7162520,
+    "experimental_values_decoded": false,
+    "score_flags_decoded": false,
+    "header": [
+      "nt_seq",
+      "aa_seq",
+      "Nham_nt",
+      "Nham_aa",
+      "Nmut_codons",
+      "WT",
+      "indel",
+      "STOP",
+      "STOP_readthrough",
+      "count_e1_s0",
+      "count_e2_s0",
+      "count_e1_s1",
+      "count_e2_s1",
+      "mean_count",
+      "fitness1_uncorr",
+      "fitness2_uncorr",
+      "sigma1_uncorr",
+      "sigma2_uncorr",
+      "fitness",
+      "sigma",
+      "growthrate1",
+      "growthrate1_sigma",
+      "growthrate2",
+      "growthrate2_sigma",
+      "growthrate",
+      "growthrate_sigma"
+    ],
+    "genotype_rows": 58105,
+    "genotype_projection": "data/cache/m201/16266645-genotype_only.json",
+    "projection_sha256": "dd7b9e2c61222e5b27cdc1516ff7b578748b2a8547fb72999821d10df367ea08"
+  },
+  {
+    "record": 11175470,
+    "archive": {
+      "id": "7d620054-1f23-475f-adf3-b0fbcc127433",
+      "key": "Escobedo_cores_24_zenodo.zip",
+      "size": 1331618368,
+      "checksum": "md5:716ab20afae843c6db145bbb72063453",
+      "links": {
+        "self": "https://zenodo.org/api/records/11175470/files/Escobedo_cores_24_zenodo.zip/content"
+      }
+    },
+    "member": {
+      "name": "zenodo/Fig1/Sparse_DTS_Cores_fitness_replicates.txt",
+      "bytes": 19073162,
+      "compressed_bytes": 6678813,
+      "CRC": 1319611062
+    },
+    "member_sha256": "9281d7edafe812b537062bbfb0cb9d4b2fb1d4e69725defb0092da9cea99ebe0",
+    "member_CRC_verified": true,
+    "whole_archive_MD5_verified": false,
+    "range_bytes": 7166235,
+    "experimental_values_decoded": false,
+    "score_flags_decoded": false,
+    "header": [
+      "nt_seq",
+      "aa_seq",
+      "Nham_nt",
+      "Nham_aa",
+      "Nmut_codons",
+      "WT",
+      "indel",
+      "STOP",
+      "STOP_readthrough",
+      "count_e1_s0",
+      "count_e2_s0",
+      "count_e1_s1",
+      "count_e2_s1",
+      "mean_count",
+      "fitness1_uncorr",
+      "fitness2_uncorr",
+      "sigma1_uncorr",
+      "sigma2_uncorr",
+      "fitness",
+      "sigma",
+      "growthrate1",
+      "growthrate1_sigma",
+      "growthrate2",
+      "growthrate2_sigma",
+      "growthrate",
+      "growthrate_sigma"
+    ],
+    "genotype_rows": 58105,
+    "genotype_projection": "data/cache/m201/11175470-genotype_only.json",
+    "projection_sha256": "dd7b9e2c61222e5b27cdc1516ff7b578748b2a8547fb72999821d10df367ea08"
+  },
+  {
+    "record": 15302825,
+    "archive": {
+      "id": "7d620054-1f23-475f-adf3-b0fbcc127433",
+      "key": "Escobedo_cores_24_zenodo.zip",
+      "size": 1331618368,
+      "checksum": "md5:716ab20afae843c6db145bbb72063453",
+      "links": {
+        "self": "https://zenodo.org/api/records/15302825/files/Escobedo_cores_24_zenodo.zip/content"
+      }
+    },
+    "member": {
+      "name": "zenodo/Fig1/Sparse_DTS_Cores_fitness_replicates.txt",
+      "bytes": 19073162,
+      "compressed_bytes": 6678813,
+      "CRC": 1319611062
+    },
+    "member_sha256": "9281d7edafe812b537062bbfb0cb9d4b2fb1d4e69725defb0092da9cea99ebe0",
+    "member_CRC_verified": true,
+    "whole_archive_MD5_verified": false,
+    "range_bytes": 7166235,
+    "experimental_values_decoded": false,
+    "score_flags_decoded": false,
+    "header": [
+      "nt_seq",
+      "aa_seq",
+      "Nham_nt",
+      "Nham_aa",
+      "Nmut_codons",
+      "WT",
+      "indel",
+      "STOP",
+      "STOP_readthrough",
+      "count_e1_s0",
+      "count_e2_s0",
+      "count_e1_s1",
+      "count_e2_s1",
+      "mean_count",
+      "fitness1_uncorr",
+      "fitness2_uncorr",
+      "sigma1_uncorr",
+      "sigma2_uncorr",
+      "fitness",
+      "sigma",
+      "growthrate1",
+      "growthrate1_sigma",
+      "growthrate2",
+      "growthrate2_sigma",
+      "growthrate",
+      "growthrate_sigma"
+    ],
+    "genotype_rows": 58105,
+    "genotype_projection": "data/cache/m201/15302825-genotype_only.json",
+    "projection_sha256": "dd7b9e2c61222e5b27cdc1516ff7b578748b2a8547fb72999821d10df367ea08"
+  },
+  {
+    "record": 15302825,
+    "archive": {
+      "id": "fd2a362a-adf3-43a4-b0b3-ae7a02e59e37",
+      "key": "combinatorialcores-main.zip",
+      "size": 4467231,
+      "checksum": "md5:c447df03062100cdbcf36bcd3794e656",
+      "links": {
+        "self": "https://zenodo.org/api/records/15302825/files/combinatorialcores-main.zip/content"
+      }
+    },
+    "member": {
+      "name": "combinatorialcores-main/README.md",
+      "bytes": 1019,
+      "compressed_bytes": 560,
+      "CRC": 3440502708
+    },
+    "member_sha256": "940aeec85e43ee25f68187c427334dbaefb9522ae3911b767112c30626ab9126",
+    "member_CRC_verified": true,
+    "whole_archive_MD5_verified": false,
+    "range_bytes": 68460,
+    "experimental_values_decoded": false,
+    "score_flags_decoded": false,
+    "README": "[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11175470.svg)](https://zenodo.org/records/11175470)\n\n# Genetics, energetics and allostery during a billion years of hydrophobic protein core evolution\n\nWelcome to the GitHub repository for the following publication: Genetics, energetics and allostery during a billion years of hydrophobic protein core evolution by Escobedo, Voigt, Faure and Lehner 2024 https://www.biorxiv.org/content/10.1101/2024.05.11.593672v1\n\nHere you'll find the code to reproduce the figures and results from the computational analyses described in the paper. All required files can be found in the related Zenodo entry.\n\nThe code is organized in Jupyter Notebooks, one per figure in the paper. To execute the code, please paste your path to the Zenodo files folder in the first notebook box.\n\nDependencies:\n- biopython 1.78\n- jupyterlab 4.0.3\n- matplotlib 3.7.1\n- networkx 2.7.1\n- numpy 1.24.4\n- pandas 1.5.3\n- python 3.11.4\n- scikit-learn 1.2.2\n- scipy 1.10.1\n- seaborn 0.12.2\n- tqdm 4.66.1\n"
+  }
+]

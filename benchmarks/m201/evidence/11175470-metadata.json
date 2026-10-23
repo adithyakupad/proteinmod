@@ -1,0 +1,25 @@
+{
+  "created": "2024-08-01T09:52:16.220082+00:00",
+  "id": 11175470,
+  "doi": "10.5281/zenodo.11175470",
+  "updated": "2024-08-01T09:52:16.462381+00:00",
+  "metadata": {
+    "title": "Files to replicate the figures in the manuscript \"Genetics, energetics and allostery during a billion years of hydrophobic protein core evolution\"",
+    "publication_date": "2024-05-12",
+    "access_right": "open",
+    "license": {
+      "id": "cc-by-4.0"
+    }
+  },
+  "files": [
+    {
+      "id": "7d620054-1f23-475f-adf3-b0fbcc127433",
+      "key": "Escobedo_cores_24_zenodo.zip",
+      "size": 1331618368,
+      "checksum": "md5:716ab20afae843c6db145bbb72063453",
+      "links": {
+        "self": "https://zenodo.org/api/records/11175470/files/Escobedo_cores_24_zenodo.zip/content"
+      }
+    }
+  ]
+}
